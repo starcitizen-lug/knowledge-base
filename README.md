@@ -2,6 +2,10 @@
 
 Information about running Star Citizen on Linux, tips, tricks, and how-to's. See the [wiki](https://github.com/starcitizen-lug/information-howtos/wiki) for all the content!
 
+## News
+
+* **Easy Anti-Cheat:** We are currently waiting for more info from CIG
+
 ## Contributing
 
 If you find anything we could improve in the wiki, feel free to open an issue in this repo!
