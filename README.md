@@ -1,6 +1,7 @@
 # Information and How-To's
 
-For information about installing and running Star Citizen on Linux, tips, tricks, and how-to's, [-> See the wiki by clicking HERE <-](https://github.com/starcitizen-lug/information-howtos/wiki) 
+For information about installing and running Star Citizen on Linux, tips, tricks, and howto's:
+[-> See the wiki by clicking HERE <-](https://github.com/starcitizen-lug/information-howtos/wiki) 
 
 ## Contributing
 
