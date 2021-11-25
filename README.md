@@ -12,7 +12,7 @@ We have an organization on Spectrum for any interested Linux users, mostly dedic
 https://robertsspaceindustries.com/orgs/LUG/ 
 
 Also check by our Discord:
-https://discord.gg/meCFYP
+https://discord.gg/meCFYPj 
 
 And Matrix organization:
 https://matrix.to/#/#SCLUG:matrix.org
