@@ -67,3 +67,4 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > - CIG is aware of the problem but there is still no ETA. There are currently no consequences that we are aware of for using the workaround, but CIG has suggested that eventually people will be kicked for tripping EAC. To apply the workaround, use the [LUG Helper](https://github.com/starcitizen-lug/lug-helper).
 
 test
+test
