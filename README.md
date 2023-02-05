@@ -1,10 +1,11 @@
-# Information and How-To's
+# Star Citizen Linux Users Group Knowledge Base
 
-[-> SEE the WIKI click HERE <-](https://github.com/starcitizen-lug/information-howtos/wiki)  
+[-> Click here to go to the wiki <-](https://github.com/starcitizen-lug/knowledge-base/wiki)  
 For information about installing and running Star Citizen on Linux, tips, tricks, and howto's. 
 ## Contributing
 
-If you find anything we could improve in the wiki, feel free to open an issue in this repo!
+If you find anything we could improve in the wiki, feel free to open an issue!  
+To submit a pull request, fork this repo and modify the markdown files within in the wiki directory.
 
 ## Socials
 
