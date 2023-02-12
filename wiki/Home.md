@@ -8,12 +8,12 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 😎 Matrix space: https://matrix.to/#/#SCLUG:matrix.org  
 
 ## Contents
-* [Quick-Start Guide](https://github.com/starcitizen-lug/information-howtos/wiki/Quick-Start-Guide)
-* [Manual Installation](https://github.com/starcitizen-lug/information-howtos/wiki/Manual-Installation)
-* [LUG Wine Builds](https://github.com/starcitizen-lug/information-howtos/wiki/Wine-Builds-for-Star-Citizen)
-* [Performance Tuning](https://github.com/starcitizen-lug/information-howtos/wiki/Performance-Tuning)
-* [Tips and Tricks](https://github.com/starcitizen-lug/information-howtos/wiki/Tips-and-Tricks)
-* [Common Issues and Solutions](https://github.com/starcitizen-lug/information-howtos/wiki/Common-Issues-and-Solutions)
+* [Quick-Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide)
+* [Manual Installation](https://github.com/starcitizen-lug/knowledge-base/wiki/Manual-Installation)
+* [LUG Wine Builds](https://github.com/starcitizen-lug/knowledge-base/wiki/Wine-Builds-for-Star-Citizen)
+* [Performance Tuning](https://github.com/starcitizen-lug/knowledge-base/wiki/Performance-Tuning)
+* [Tips and Tricks](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks)
+* [Common Issues and Solutions](https://github.com/starcitizen-lug/knowledge-base/wiki/Common-Issues-and-Solutions)
 
 ## News
 
@@ -41,6 +41,10 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > - The 3.18 update may cause mouse issues for some people using Wayland. Using Gamescope with the game is a workaround, and can be easily enabled through Lutris or manually.
 
 **General News**
+
+> (Feb 11, 2023) **Lutris install script**
+> - The Star Citizen install script on the Lutris website is currently broken. We recommend using the installer we bundle with our [Helper](https://github.com/starcitizen-lug/lug-helper) instead.
+> - To fix broken installs after using the Lutris website's script, enable DXVK in Lutris then install a recommended DXVK and runner based on our [Quick Start Guide ](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide).
 
 > (Jan 22, 2023) **Game install hangs**
 > - Some Penguins are reporting hangs during installation. In Lutris, setting `Prefer system libraries` to `Off` globally before installation fixes the problem. After installation, this can be reset and configured only for Star Citizen if desired.
