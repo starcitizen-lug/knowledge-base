@@ -58,7 +58,7 @@ Add the following line to your /etc/hosts file:
 * Then you can run the RSI installer as normal.
 * You may need to create directory paths if the RSI installer is unable to do so:
 ```
-mkdir -p "/home/$USER/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/"{LIVE,PTU}
+mkdir -p "/path/to/prefix/drive_c/Program Files/Roberts Space Industries/StarCitizen/"{LIVE,PTU}
 ```
 * ONLY if you have black textures ingame, copy **d3dcompiler_47.dll** from the launcher directory to the games bin64/ directory, replacing the game's version.
 
