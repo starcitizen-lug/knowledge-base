@@ -19,6 +19,10 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 **Game Updates**
 
+> (Feb 14, 2023) **3.18 PTU**  
+> - The 3.18 update may cause mouse issues for some people using Wayland. Using Gamescope with the game is a workaround, and can be easily enabled through Lutris or manually.
+> - The PTU directory may fail to be created by the launcher. See *Fresh installs fail to create needed directories* below.
+
 > (Jan 27, 2023) **RSI Launcher v1.6.2**  
 >
 > Special configuration is needed in Lutris or you will receive a java error. See [CIG's announcement in Spectrum](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/upcoming-launcher-update-for-linux-users/5693728  )
@@ -32,13 +36,11 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > - **If this does not fix the problem**, revert the above changes and install the latest GloriousEggroll runner, available in our Helper
 
 > (Jan 27, 2023) **Fresh installs fail to create needed directories**
-> - This has been resolved in the latest version of our [Helper](https://github.com/starcitizen-lug/lug-helper/releases). For other install methods, manually run the following command to create the necessary directory structure for both the LIVE and PTU environments. Adjust the wine prefix path if installing to a non-default location:  
+> - This has been resolved in the latest version of our [Helper](https://github.com/starcitizen-lug/lug-helper/releases) for new installs.
+> - For existing or manual installs, run the following command to create the necessary directory structure for both the LIVE and PTU environments. Adjust the wine prefix path if installing to a non-default location:  
 > ```
 > mkdir -p "/home/$USER/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/"{LIVE,PTU}
 > ```
-
-> (Dec 23, 2022) **3.18 PTU**  
-> - The 3.18 update may cause mouse issues for some people using Wayland. Using Gamescope with the game is a workaround, and can be easily enabled through Lutris or manually.
 
 **General News**
 
