@@ -36,13 +36,16 @@ Right click the game -> Configure -> System options -> Vulkan ICD loader
 This could have many causes. Your best bet is to check the Wine output and/or "game.log" file. See common causes below:
 
 ### Possible cause 1:
+If there are no errors in your logs, it's likely an Out Of Memory situation. Create a larger [swap file](https://github.com/starcitizen-lug/knowledge-base/wiki/Performance-Tuning#swap).
+
+### Possible cause 2:
 Some people report changing their DXVK version fixes this. Try using our [Helper](https://github.com/starcitizen-lug/lug-helper) to download an async DXVK.
 
 Nvidia users, check our [news](https://github.com/starcitizen-lug/information-howtos/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 
 DXVK installation instructions are available on our wiki [here](https://github.com/starcitizen-lug/information-howtos/wiki/Performance-Tuning#dxvk-async).
 
-### Possible cause 2:
+### Possible cause 3:
 Many keyboards and mice can also have a "joystick" part in Linux, which Wine can detect. Unfortunately, Wine may be confused about it, as they are not real joysticks. In this case, the game could crash. Try running the Wine joystick control panel "wine control" (in Lutris: right click -> Joystick configuration) and disable your keyboard and/or mice.
 This will not affect how your keyboard and mice work in the game.
 
