@@ -52,6 +52,10 @@ An fsync-enabled Kernel can help improve smoothness while shaders are being comp
 
 Depending on your system hardware, a larger swap file may be needed. For systems with 16gb RAM, we recommend at least a 16gb swap file. Less swap space may be needed for systems with 32gb or more of RAM.
 
+## Steam Deck
+
+We recommend a 16gb swap file for the Steam Deck. Create it under `/home` instead of `/` to protect it from being wiped out by SteamOS updates.
+
 ## Changing CPU scaling behavior via the Linux kernel and System Management BIOS
 
 To achieve a more stable framerate in Star Citizen, ideally you will want a stable CPU frequency. There are [several schedulers](https://www.kernel.org/doc/Documentation/cpu-freq/governors.txt) provided by the Linux kernel. Start with the `Performance` scheduler to hint that the CPU should always run at the maximum frequency before trying the demand-based schedulers.
