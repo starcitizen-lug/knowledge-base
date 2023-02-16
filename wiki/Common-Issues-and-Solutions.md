@@ -31,6 +31,8 @@ You are likely missing 32bit drivers. Make sure the following packages are insta
 Additionally, explicitly set the Vulkan ICD loader in Lutris to either `Nvidia Proprietary` or `AMD RADV Open Source`
 Right click the game -> Configure -> System options -> Vulkan ICD loader
 
+If you are using the Flatpak Lutris, you may need to resync it with your system after installing the 32bit drivers. Run: `flatpak update`
+
 
 ## Game crashes after clicking 'Launch'
 This could have many causes. Your best bet is to check the Wine output and/or "game.log" file. See common causes below:
