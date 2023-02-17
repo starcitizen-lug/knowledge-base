@@ -23,9 +23,9 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > - The 3.18 update may cause mouse issues for some people using Wayland. We recommend installing Gamescope as a workaround. To enable it in Lutris: `Right click the game->Configure->System options->Enable Gamescope`
 > - The PTU directory may fail to be created by the launcher. See *Fresh installs fail to create needed directories* below.
 
-> (Jan 27, 2023) **RSI Launcher v1.6.2 java error**  
+> (Jan 27, 2023) **RSI Launcher v1.6.2 JavaScript error**  
 >
-> Special configuration is needed in Lutris or you will receive a java error. See [CIG's announcement in Spectrum](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/upcoming-launcher-update-for-linux-users/5693728  )
+> Special configuration is needed in Lutris or you will receive a JavaScript error. See [CIG's announcement in Spectrum](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/upcoming-launcher-update-for-linux-users/5693728  )
 >
 > **Solution 1:**
 > - **After the launcher updates,** all Penguins must configure the following:
