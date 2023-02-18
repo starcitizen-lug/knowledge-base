@@ -8,12 +8,12 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 😎 Matrix space: https://matrix.to/#/#SCLUG:matrix.org  
 
 ## Contents
-* [Quick-Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide)
-* [Manual Installation](https://github.com/starcitizen-lug/knowledge-base/wiki/Manual-Installation)
-* [Performance Tuning](https://github.com/starcitizen-lug/knowledge-base/wiki/Performance-Tuning)
-* [Tips and Tricks](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks)
+* [Quick-Start Guide](Quick-Start-Guide)
+* [Manual Installation](Manual-Installation)
+* [Performance Tuning](Performance-Tuning)
+* [Tips and Tricks](Tips-and-Tricks)
 * [Sticks, Throttles, & Pedals](Sticks,-Throttles,-&-Pedals)
-* [Common Issues and Solutions](https://github.com/starcitizen-lug/knowledge-base/wiki/Common-Issues-and-Solutions)
+* [Common Issues and Solutions](Common-Issues-and-Solutions)
 
 ## News
 
