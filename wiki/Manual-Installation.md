@@ -54,6 +54,7 @@ _Distributions that use /etc/security/limits.conf_
 mkdir -p "/path/to/prefix/drive_c/Program Files/Roberts Space Industries/StarCitizen/"{LIVE,PTU}
 ```
 7. ONLY if you have black textures ingame, copy **d3dcompiler_47.dll** from the launcher directory to the games bin64/ directory, replacing the game's version.
+8. To use a custom wine runner, start the game/installer with `WINE=/path/to/runner/bin/wine`
 
 If you have trouble installing recent Wine versions on a Debian-based distro due to missing faudio, see [this link](https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html).
 
