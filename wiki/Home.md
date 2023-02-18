@@ -22,6 +22,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > (Feb 14, 2023) **3.18 PTU Issues**  
 > - The 3.18 update may cause mouse and view snapping issues for some people using Wayland. We recommend installing Gamescope as a workaround or using Xorg. To enable Gamescope in Lutris: `Right click the game->Configure->System options->Enable Gamescope`
 > - The PTU directory may fail to be created by the launcher. See *Fresh installs fail to create needed directories* below.
+> - Using the GE 7-15-SC runner may result in a page fault error. A newer GE runner is required.
 
 > (Jan 27, 2023) **RSI Launcher v1.6.2 JavaScript error**  
 >
