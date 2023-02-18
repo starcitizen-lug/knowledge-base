@@ -1,7 +1,9 @@
-# > Troubleshooting Steps
+# Recent news/issues
+- Check our [latest news](https://github.com/starcitizen-lug/information-howtos/wiki#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
+
+# Troubleshooting Steps
 
 - Make sure our [LUG Helper](https://github.com/starcitizen-lug/lug-helper)'s Preflight Check passes all checks
-- Check our [latest news](https://github.com/starcitizen-lug/information-howtos/wiki#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
 - Run Lutris in debug mode to see more verbose logging. Native: `lutris -d` Flatpak: `flatpak run net.lutris.Lutris -d`
 
 ### Important Settings
