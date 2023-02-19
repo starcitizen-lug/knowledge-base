@@ -38,6 +38,14 @@ Requires a windows-only software for calibration and configuration. [Link; scrol
 
 ## Configuration Tips
 
+### Installing Evdev-joystick
+
+The `evdev-joystick` utility is provided by different packages depeding on your distribution.  See the list below for your distribution.
+
+* Arch - `linuxconsole`
+* Debian/Ubuntu - `joystick`
+* Fedora - `linuxconsoletools`
+
 ### Evdev Deadzones
 
 On Linux, evdev adds deadzones to every axis for each controller you plug into your system.  This is good for inexpensive controllers that don't have any form of internal calibration or programming.  However, with higher end programmable sticks like those from VKB and Virpil, evdev's deadzone adds to the programmed deadzone for those devices.  This can also impact throttle devices, where you can get a "hitch" at 50% throttle when it passes through the middle of the axis.
