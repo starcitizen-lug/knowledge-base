@@ -2,8 +2,6 @@
 
 In general, you can expect any hardware to work on linux but third-party software tied to the device can be an issue. In some cases, a VM may be required for configuring the device.
 
-A collection of mappings used by our members can be found [here](https://github.com/starcitizen-lug/mappings).
-
 **Troubleshooting**: See the section [at the end of this page](#troubleshooting) for specific issues and workarounds.
 
 ## Recommendations
@@ -38,19 +36,24 @@ Requires a windows-only software for calibration and configuration. [Link; scrol
 
 ## Configuration Tips
 
-### Installing Evdev-joystick
+### Mappings
 
-The `evdev-joystick` utility is provided by different packages depeding on your distribution.  See the list below for your distribution.
-
-* Arch - `linuxconsole`
-* Debian/Ubuntu - `joystick`
-* Fedora - `linuxconsoletools`
+A collection of mappings used by our members can be found [here](https://github.com/starcitizen-lug/mappings).
 
 ### Evdev Deadzones
 
 On Linux, evdev adds deadzones to every axis for each controller you plug into your system.  This is good for inexpensive controllers that don't have any form of internal calibration or programming.  However, with higher end programmable sticks like those from VKB and Virpil, evdev's deadzone adds to the programmed deadzone for those devices.  This can also impact throttle devices, where you can get a "hitch" at 50% throttle when it passes through the middle of the axis.
 
-To eliminate this problem, you want to create a udev rule that removes the evdev deadzone from your devices when they're plugged in.  To start with, you will need the Vendor ID, Model Name, and Model ID that the device reports to the system.  You can get this information with `udevadm`
+To eliminate this problem, you want to create a udev rule that removes the evdev deadzone from your devices when they're plugged in.
+
+First, install `evdev-joystick`. This utility is provided by different packages depending on your distribution.  
+See the list below for your distribution:
+* Arch - `linuxconsole`
+* Debian/Ubuntu - `joystick`
+* Fedora - `linuxconsoletools`
+
+Then, you will need the Vendor ID, Model Name, and Model ID that the device reports to the system.  
+You can get this information with `udevadm`
 
 ```bash
 udevadm info -n /dev/input/by-id/usb-your-joystick-name | grep 'ID_VENDOR_ID|ID_MODEL_ID|ID_MODEL'
@@ -65,7 +68,8 @@ E: ID_MODEL_ENC=\x20VKBsim\x20Space\x20Gunfighter\x20
 E: ID_MODEL_ID=0126
 ```
 
-With this information for each device you have that you want to eliminate the evdev deadzone for, create a udev rules file in `/etc/udev/rules.d/` and plug in the information into the following template:
+With this information for each device you have that you want to eliminate the evdev deadzone for, create a udev rules file in  
+`/etc/udev/rules.d/` and plug in the information into the following template:
 
 ```
 # Custom Joystick Udev Rules
@@ -83,7 +87,7 @@ LABEL="c_joystick_rules_end"
 This will keep things very specific to just the devices you want to change, and not impact any other devices you use.
 
 
-Here is an example rules file for 3 VKB devices and one Virpil device:
+Here is an example rules file for 3 VKB devices and one Virpil device:  
 `/etc/udev/rules.d/99-evdev-joystick.rules`
 ```
 # Custom Joystick Udev Rules
@@ -114,6 +118,7 @@ LABEL="c_joystick_rules_end"
 ```
 
 # Troubleshooting
+
 ### Rudder pedals
 If your pedals aren't being recognized by Star Citizen but work on Linux, it may be that it has been classified as something else than rudder pedals. This often happens because there are no buttons, and various OS functions assume it might be an accelerometer or similar.
 
