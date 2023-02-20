@@ -1,5 +1,5 @@
 ## ⚠️ Recent news/issues
-- Check our [latest news](https://github.com/starcitizen-lug/information-howtos/wiki#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
+- Check our [latest news](/wiki#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
 
 ## Troubleshooting Steps
 
@@ -17,7 +17,7 @@
 ## 🚀 Install & Launch Problems
 
 #### Error: *utf-8 codec can't decode byte 0x_ in position ___: invalid continuation byte*
-- Re-check your EAC workaround. Our [Helper](https://github.com/starcitizen-lug/lug-helper) can check it for you, or see the [manual instructions](https://github.com/starcitizen-lug/information-howtos/wiki/Tips-and-Tricks#easy-anti-cheat-workaround) on our wiki.
+- Re-check your EAC workaround. Our [Helper](https://github.com/starcitizen-lug/lug-helper) can check it for you, or see the [manual instructions](Tips-and-Tricks#easy-anti-cheat-workaround) on our wiki.
 
 #### Install button does nothing / Launch Game stuck at "launching..."
 - ⚠️ Launching Lutris in debug mode (`lutris -d`) will show a `KeyError: 'contentstatsid'` error.
@@ -38,8 +38,8 @@
 
 - Possible cause 1: DXVK
   - Some people report changing their DXVK version fixes this. Try using our [Helper](https://github.com/starcitizen-lug/lug-helper) to download an async DXVK.
-  - Nvidia users, check our [news](https://github.com/starcitizen-lug/information-howtos/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
-  - DXVK installation instructions are available on our wiki [here](https://github.com/starcitizen-lug/information-howtos/wiki/Performance-Tuning#dxvk-async).
+  - Nvidia users, check our [news](/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
+  - DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
 
 - Possible cause 2: Phantom joystick
   - Many keyboards and mice can also have a "joystick" part in Linux, which Wine can detect. Unfortunately, Wine may be confused about it, as they are not real joysticks. In this case, the game could crash. Try running the Wine joystick control panel "wine control" (in Lutris: right click -> Joystick configuration) and disable your keyboard and/or mice.
@@ -74,8 +74,8 @@
 
 #### Game hangs at splash screen or black/transparent window after clicking 'Launch'
 - Try changing to a different DXVK version in the Lutris settings.  Alternate DXVKs can be quickly installed using our [LUG Helper](https://github.com/starcitizen-lug/lug-helper).
-- Nvidia users, check our [news](https://github.com/starcitizen-lug/information-howtos/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
-- DXVK installation instructions are available on our wiki [here](https://github.com/starcitizen-lug/information-howtos/wiki/Performance-Tuning#dxvk-async).
+- Nvidia users, check our [news](/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
+- DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
 
 
 #### Launcher freezes within a few seconds of opening
