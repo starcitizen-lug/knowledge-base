@@ -28,6 +28,9 @@ script:
     prefix: $GAMEDIR
 ```
 
+A tutorial for using Opentrack with the ArUco paper method is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr).
+
+
 ## Automatically Disable/Re-Enable Mouse Acceleration
 Lutris can automatically toggle on/off a flat mouse acceleration profile with the following configuration.
 
