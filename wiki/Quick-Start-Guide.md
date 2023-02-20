@@ -21,7 +21,7 @@
 Video guides of the above are available for [AMD](https://www.youtube.com/watch?v=cHGtwIH5ocI) and [Nvidia](https://www.youtube.com/watch?v=QVVPv12RGtk) by Grumpy
 
 ## Important Information
-> Questions or Problems? Check our [Common Issues and Solutions](https://github.com/starcitizen-lug/information-howtos/wiki/Common-Issues-and-Solutions) or ask for help in one of our [social channels](https://github.com/starcitizen-lug/information-howtos/wiki#welcome-space-penguins)!
+> Questions or Problems? Check our [Troubleshooting Guide](Troubleshooting) or ask for help in one of our [social channels](https://github.com/starcitizen-lug/information-howtos/wiki#welcome-space-penguins)!
 
 > On first launch, the game will stutter with low FPS while shaders are compiled and caches are filled. As you run/fly around and travel to different places, performance will increase.
 > This can also occur after updating Star Citizen, your graphics driver, Wine, or DXVK.
