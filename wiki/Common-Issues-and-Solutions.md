@@ -1,5 +1,5 @@
 ## ⚠️ Recent news/issues
-- Check our [latest news](Home#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
+- Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
 
 ## Troubleshooting Steps
 
@@ -38,7 +38,7 @@
 
 - Possible cause 1: DXVK
   - Some people report changing their DXVK version fixes this. Try using our [Helper](https://github.com/starcitizen-lug/lug-helper) to download an async DXVK.
-  - Nvidia users, check our [news](Home#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
+  - Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
   - DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
 
 - Possible cause 2: Phantom joystick
@@ -74,7 +74,7 @@
 
 #### Game hangs at splash screen or black/transparent window after clicking 'Launch'
 - Try changing to a different DXVK version in the Lutris settings.  Alternate DXVKs can be quickly installed using our [LUG Helper](https://github.com/starcitizen-lug/lug-helper).
-- Nvidia users, check our [news](Home#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
+- Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 - DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
 
 
