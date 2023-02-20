@@ -8,6 +8,18 @@
 - Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) and the list of common issues below
 - Ask for help on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)
 
+#### Contents
+🚀 [Install & Launch Problems](#-install--launch-problems)  
+🧊 [Freezes](#-freezes)  
+💥 [Crashes](#-crashes)  
+🤪 [Unexpected Behavior (also crashes)](#-unexpected-behavior-also-crashes)  
+💚 [Nvidia](#-nvidia)  
+❤️ [AMD](#-amd)  
+🕹️ [Controller Issues](#-controller-issues)  
+🦦 [Lutris Issues](#-lutris-issues)  
+❔ [Other Issues](#-other-issues)  
+
+
 #### Important Settings
 
 - Make sure the `SDL_VIDEODRIVER` environment variable is **NOT** set globally to `wayland` on your system. This causes incompatibilities with many games. If it is, simply unset it.
