@@ -153,7 +153,7 @@
 
 
 
-## ❤️ AMD
+## ♥ AMD
 
 #### Everything just works
 - Congrats on choosing AMD
@@ -162,7 +162,7 @@
 
 
 
-## 🕹️ Controller Issues
+## 🕹 Controller Issues
 
 #### Some of your joysticks disappear / aren't recognized in the game
 - If you are using Lutris, make sure "Autoconfigure joypads" is turned off in the game settings for Lutris (right-click -> Configure).
