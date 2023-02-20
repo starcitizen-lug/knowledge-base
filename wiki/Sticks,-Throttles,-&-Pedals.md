@@ -36,6 +36,82 @@ Requires a windows-only software for calibration and configuration. [Link](https
     
 Requires a windows-only software for calibration and configuration. [Link; scroll down](https://support.virpil.com/en/support/solutions)
 
+## Configuration Tips
+
+### Installing Evdev-joystick
+
+The `evdev-joystick` utility is provided by different packages depeding on your distribution.  See the list below for your distribution.
+
+* Arch - `linuxconsole`
+* Debian/Ubuntu - `joystick`
+* Fedora - `linuxconsoletools`
+
+### Evdev Deadzones
+
+On Linux, evdev adds deadzones to every axis for each controller you plug into your system.  This is good for inexpensive controllers that don't have any form of internal calibration or programming.  However, with higher end programmable sticks like those from VKB and Virpil, evdev's deadzone adds to the programmed deadzone for those devices.  This can also impact throttle devices, where you can get a "hitch" at 50% throttle when it passes through the middle of the axis.
+
+To eliminate this problem, you want to create a udev rule that removes the evdev deadzone from your devices when they're plugged in.  To start with, you will need the Vendor ID, Model Name, and Model ID that the device reports to the system.  You can get this information with `udevadm`
+
+```bash
+udevadm info -n /dev/input/by-id/usb-your-joystick-name | grep 'ID_VENDOR_ID|ID_MODEL_ID|ID_MODEL'
+```
+
+Example:
+```bash
+$ udevadm info -n /dev/input/by-id/usb-VKB-Sim_©_Alex_Oz_2021_VKBsim_Space_Gunfighter-event-joystick | grep -E 'ID_VENDOR_ID|ID_MODEL_ID|ID_MODEL'
+E: ID_VENDOR_ID=231d
+E: ID_MODEL=VKBsim_Space_Gunfighter
+E: ID_MODEL_ENC=\x20VKBsim\x20Space\x20Gunfighter\x20
+E: ID_MODEL_ID=0126
+```
+
+With this information for each device you have that you want to eliminate the evdev deadzone for, create a udev rules file in `/etc/udev/rules.d/` and plug in the information into the following template:
+
+```
+# Custom Joystick Udev Rules
+
+ACTION!="add", GOTO="c_joystick_rules_end"
+
+# Sample
+ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*",\
+  ENV{ID_VENDOR_ID}=="<Vendor ID>", ENV{ID_MODEL_ID}=="<Model ID>", ENV{ID_MODEL}=="<Model Name>", \
+  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
+
+LABEL="c_joystick_rules_end"
+```
+
+This will keep things very specific to just the devices you want to change, and not impact any other devices you use.
+
+
+Here is an example rules file for 3 VKB devices and one Virpil device:
+`/etc/udev/rules.d/99-evdev-joystick.rules`
+```
+# Custom Joystick Udev Rules
+
+ACTION!="add", GOTO="c_joystick_rules_end"
+
+# VKB SEM
+ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*",\
+  ENV{ID_VENDOR_ID}=="231d", ENV{ID_MODEL_ID}=="2204", ENV{ID_MODEL}=="VKBSim_NXT_SEM", \
+  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
+
+# VKB Gunfighter L
+ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*",\
+  ENV{ID_VENDOR_ID}=="231d", ENV{ID_MODEL_ID}=="0127", ENV{ID_MODEL}=="VKBsim_Space_Gunfighter_L", \
+  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
+
+# VKB Gunfighter R
+ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*",\
+  ENV{ID_VENDOR_ID}=="231d", ENV{ID_MODEL_ID}=="0126", ENV{ID_MODEL}=="VKBsim_Space_Gunfighter", \
+  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
+
+# Virpil Rudder Pedals
+ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*",\
+  ENV{ID_VENDOR_ID}=="3344", ENV{ID_MODEL_ID}=="01f8", ENV{ID_MODEL}=="VPC_Rudder_Pedals", \
+  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
+
+LABEL="c_joystick_rules_end"
+```
 
 # Troubleshooting
 ### Rudder pedals
