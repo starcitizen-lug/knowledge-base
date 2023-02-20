@@ -13,7 +13,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 * [Performance Tuning](Performance-Tuning)
 * [Tips and Tricks](Tips-and-Tricks)
 * [Sticks, Throttles, & Pedals](Sticks,-Throttles,-&-Pedals)
-* [Common Issues and Solutions](Common-Issues-and-Solutions)
+* [Troubleshooting](Troubleshooting)
 
 ## News
 
