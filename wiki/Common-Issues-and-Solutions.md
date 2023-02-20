@@ -115,7 +115,7 @@
 #### Empty launcher
 - Log out log back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
 
-### Semi-transparent lines everywhere, possibly random crashes
+#### Semi-transparent lines everywhere, possibly random crashes
 - DXVK is likely disabled in Lutris, or your game shader cache needs to be cleared. Our [Helper](https://github.com/starcitizen-lug/lug-helper) can quickly clear your game shaders.
 ![](https://media.discordapp.net/attachments/608349808956276737/1070664567425871960/SC_Lines.jpg)
 
