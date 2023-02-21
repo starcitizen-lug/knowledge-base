@@ -39,6 +39,15 @@
 #### Launcher hangs during installation
 - In Lutris, try setting `Prefer system libraries` to `Off` globally before installation. After installation, this can be reset and configured only for Star Citizen if desired.
 
+#### RSI Launcher v1.6.2+ JavaScript error
+- For more information, see [CIG's announcement in Spectrum](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/upcoming-launcher-update-for-linux-users/5693728)
+- Solution 1:
+   - `Right click the game->Configure->Game options` add `--no-sandbox` to the Arguments
+   - In `System options`, make sure Advanced options is on then enable `CLI mode`
+- Solution 2:
+  - If this does not fix the problem, revert the above changes and install the latest GloriousEggroll runner, available in our [Helper](https://github.com/starcitizen-lug/lug-helper)
+
+
 #### Crash with Lutris error: *Star Citizen process exited abnormally (code: 3) : Command failed*
 - You are likely missing 32bit drivers. Make sure the following packages are installed (names may vary depending on your distro)
   - Nvidia: `lib32-nvidia-utils`
