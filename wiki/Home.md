@@ -43,6 +43,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > mkdir -p "/home/$USER/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/"{LIVE,PTU}
 > ```
 
+
 **General News**
 
 > (Feb 11, 2023) **Lutris install script**
@@ -52,8 +53,6 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > (Jan 22, 2023) **Game install hangs**
 > - Some Penguins are reporting hangs during installation. In Lutris, setting `Prefer system libraries` to `Off` globally before installation fixes the problem. After installation, this can be reset and configured only for Star Citizen if desired.
 
-> (Oct 14, 2022) **No sound in game**
-> - Penguins on rolling release distributions (ie. Arch, Manjaro) are reporting issues with no sound in-game. The solution is to set `Prefer System Libraries` in Lutris to `ON`.
 
 **Nvidia News**
 
@@ -67,6 +66,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 > (Oct 20, 2022) **Graphics driver out of date**
 > - You may see a popup that your graphics driver is out of date. This is a warning that can be ignored. To remove this warning, disable `DXVK-NVAPI/DLSS` in your Lutris runner options.
+
 
 **Easy Anti-Cheat**
 
