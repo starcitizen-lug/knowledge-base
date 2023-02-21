@@ -68,3 +68,13 @@ We have discovered that Dell laptops with Intel CPUs (and possibly other mobile 
 
 If changing the kernel scheduler between `Performance` and the various demand-based schedulers doesn't affect CPU frequency scaling for your laptop, try setting the SMBIOS thermal mode to `cool-bottom`. This mode behaves similarly to the `Conservative` kernel governor, gradually incrementing/decrementing the CPU frequency to stabilize the framerate.
 - Using the SMBIOS utility on Ubuntu, the command is `sudo smbios-thermal-ctl --set-thermal-mode=cool-bottom`
+
+## Increased performance for cpus with multiple dies
+### Affected cpu generations
+- Amd Threadripper
+### Steps
+1. Verify you have a cpu with multiple dies by running `lstopo` like shown in the first image below you can proceed. However if you cpu is like the second image where the dies are not shown, this will probably not improve your performace.![image](https://user-images.githubusercontent.com/39007301/220378862-d4b9bbd7-15b3-4e1e-b77d-6b19f0908ba8.png) ![Image2](https://user-images.githubusercontent.com/39007301/220378475-160e9091-3b2c-407b-acff-d606892d21c5.png)
+2. .....
+3. Modify the following and place it in you launch arguments `WINE_CPU_TOPOLOGY=16:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15`, `WINE_CPU_TOPOLOGY=Number_of_Threads:List_of_threads_indexes`. The `Number_of_threads` is pretty self explanitory, its the number of threads you want to run starcitizen with. The `List_of_thread_indexes` can be determined by looking at the `lstopo` output, you can see the threads highlighted in the image below. ![image](https://user-images.githubusercontent.com/39007301/220380665-5378ccc5-474e-4db2-8a4a-e893bb4ab347.png) So a cpu like in the image below, would end up with the arguements `WINE_CPU_TOPOLOGY=16:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15` ![image](https://user-images.githubusercontent.com/39007301/220382182-3525c3e8-4466-4489-8e85-7c1319ac3a1b.png)
+
+
