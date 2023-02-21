@@ -8,7 +8,7 @@
 - Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) and the list of common issues below
 - Ask for help on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)
 
-#### Important Settings
+#### Important System Settings
 
 - Make sure the `SDL_VIDEODRIVER` environment variable is **NOT** set globally to `wayland` on your system. This causes incompatibilities with many games. If it is, simply unset it.
 
@@ -50,6 +50,7 @@
 - Start by checking the Wine output and/or "game.log" file
 
 - Possible cause 1: DXVK
+  - Make sure DXVK is enabled in Lutris' Runner options.
   - Some people report changing their DXVK version fixes this. Try using our [Helper](https://github.com/starcitizen-lug/lug-helper) to download an async DXVK.
   - Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
   - DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
@@ -86,6 +87,7 @@
 ## 🧊 Freezes
 
 #### Game hangs at splash screen or black/transparent window after clicking 'Launch'
+- Make sure DXVK is enabled in Lutris' Runner options.
 - Try changing to a different DXVK version in the Lutris settings.  Alternate DXVKs can be quickly installed using our [LUG Helper](https://github.com/starcitizen-lug/lug-helper).
 - Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 - DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
@@ -129,7 +131,8 @@
 - Log out log back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
 
 #### Semi-transparent lines everywhere, possibly random crashes
-- DXVK is likely disabled in Lutris, or your game shader cache needs to be cleared. Our [Helper](https://github.com/starcitizen-lug/lug-helper) can quickly clear your game shaders.
+- DXVK is likely disabled in Lutris's Runner options. Make sure it is enabled.
+- Your game shader cache may need to be cleared. Our [Helper](https://github.com/starcitizen-lug/lug-helper) can quickly clear your game shaders.
 ![](https://media.discordapp.net/attachments/608349808956276737/1070664567425871960/SC_Lines.jpg)
 
 
