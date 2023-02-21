@@ -135,6 +135,10 @@
 - Your game shader cache may need to be cleared. Our [Helper](https://github.com/starcitizen-lug/lug-helper) can quickly clear your game shaders.
 ![](https://media.discordapp.net/attachments/608349808956276737/1070664567425871960/SC_Lines.jpg)
 
+#### No sound in game
+- Penguins on rolling release distributions (ie. Arch, Manjaro) may need to set `Prefer System Libraries` in Lutris to `ON`.
+- If you have sound in the launcher but not in the game, launch the game and go to your audio settings, then enable "Play sound while game is in background".
+
 
 #### Black or flickering window, possible crash with errors 15006 or 30007
 - Check for larger resolutions and scaling settings.  See CIG's [support article](https://support.robertsspaceindustries.com/hc/en-us/articles/360000081887-Guide-to-Graphic-Issues#large-res)
