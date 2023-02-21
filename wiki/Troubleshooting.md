@@ -36,6 +36,8 @@
 - ⚠️ Launching Lutris in debug mode (`lutris -d`) will show a `KeyError: 'contentstatsid'` error.
 - Check your Lutris version. This is fixed in v0.5.11. https://lutris.net/downloads
 
+#### Launcher hangs during installation
+- In Lutris, try setting `Prefer system libraries` to `Off` globally before installation. After installation, this can be reset and configured only for Star Citizen if desired.
 
 #### Crash with Lutris error: *Star Citizen process exited abnormally (code: 3) : Command failed*
 - You are likely missing 32bit drivers. Make sure the following packages are installed (names may vary depending on your distro)
