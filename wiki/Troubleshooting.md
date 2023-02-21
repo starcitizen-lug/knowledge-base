@@ -13,10 +13,10 @@
 - Make sure the `SDL_VIDEODRIVER` environment variable is **NOT** set globally to `wayland` on your system. This causes incompatibilities with many games. If it is, simply unset it.
 
 ### Contents
-🚀 [Install & Launch Problems](#-install--launch-problems)  
-🧊 [Freezes](#-freezes)  
+💾 [Install & Update Problems](#-install--update-problems)  
 💥 [Crashes](#-crashes)  
-🤪 [Unexpected Behavior (also crashes)](#-unexpected-behavior-also-crashes)  
+🧊 [Freezes](#-freezes)  
+🤪 [Unexpected Behavior (sometimes also crashes)](#-unexpected-behavior-sometimes-also-crashes))  
 💚 [Nvidia](#-nvidia)  
 ❤️ [AMD](#-amd)  
 🕹️ [Controller Issues](#-controller-issues)  
@@ -27,17 +27,30 @@
 
 
 
-## 🚀 Install & Launch Problems
+## 💾 Install & Update Problems
+
+#### Launcher hangs during installation
+- In Lutris, try setting `Prefer system libraries` to `Off` globally before installation. After installation, this can be reset and configured only for Star Citizen if desired.
+
+
+#### Install button does nothing
+- ⚠️ Launch Lutris in debug mode (`lutris -d`) and look for a `KeyError: 'contentstatsid'` error.
+- If the error is present, check your Lutris version. This is fixed in v0.5.11. https://lutris.net/downloads
+
 
 #### Error: *utf-8 codec can't decode byte 0x_ in position ___: invalid continuation byte*
 - Re-check your EAC workaround. Our [Helper](https://github.com/starcitizen-lug/lug-helper) can check it for you, or see the [manual instructions](Tips-and-Tricks#easy-anti-cheat-workaround) on our wiki.
 
-#### Install button does nothing / Launch Game stuck at "launching..."
-- ⚠️ Launching Lutris in debug mode (`lutris -d`) will show a `KeyError: 'contentstatsid'` error.
-- Check your Lutris version. This is fixed in v0.5.11. https://lutris.net/downloads
 
-#### Launcher hangs during installation
-- In Lutris, try setting `Prefer system libraries` to `Off` globally before installation. After installation, this can be reset and configured only for Star Citizen if desired.
+#### Installing Star Citizen on an NTFS-formatted drive
+- See: https://github.com/ValveSoftware/Proton/wiki/Using-a-NTFS-disk-with-Linux-and-Windows
+
+***
+
+
+
+
+## 💥 Crashes
 
 #### RSI Launcher v1.6.2+ JavaScript error
 - For more information, see [CIG's announcement in Spectrum](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/upcoming-launcher-update-for-linux-users/5693728)
@@ -77,21 +90,25 @@
 - Additionally, make sure the wine prefix is not installed on an NTFS formatted partition.
 
 
-#### Launcher crashes on load / white screen / error DCompositionCreateDevice
-- In Lutris, configure Star Citizen (right-click->Configure->Game options) and add `"--use-gl=osmesa"` to the Arguments field.
-- If launching manually: `wine "RSI Launcher.exe" "--use-gl=osmesa"`
-
-
 #### Game crashes with "STATUS_CRYENGINE_FATAL_ERROR" in game.log
 - Some penguins have had success changing the Windows compatibility from Win10 to Win8.1 in the Wine configuration. Select Star Citizen in Lutris, then click the Wine button at the bottom and select `Wine configuration`:  
 ![](https://matrix-client.matrix.org/_matrix/media/r0/download/matrix.org/zKGOXxMOsktqYKqevqeSvYSw)  
 - In the Wine configuration, under the `Applications` tab, change `Windows version` to `Windows 8.1`
 
 
-#### Installing Star Citizen on an NTFS-formatted drive
-- See: https://github.com/ValveSoftware/Proton/wiki/Using-a-NTFS-disk-with-Linux-and-Windows
+#### Game crashes with " 00adntdll:FILE_GetNtStatus Converting errno 12 to STATUS_UNSUCCESSFUL "
+- Make sure you have set your vm.max_map_count as described in the installation section.
+
+
+#### After playing for a while, game/lutris/wine crash, no errors
+  - If there are no errors in your game logs, check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](Performance-Tuning#swap).
+
+
+#### Game crashes when going to Lorville / ArcCorp or crashes often when launching
+- Make sure you followed the guide to install Wine's dependencies and set your vm.max_map_count as described in the installation section.
 
 ***
+
 
 
 
@@ -110,6 +127,11 @@
   - Right click the game -> Configure -> System options -> Prefer system libraries
 
 
+#### Launch Game stuck at "launching..."
+- ⚠️ Launch Lutris in debug mode (`lutris -d`) and look for a `KeyError: 'contentstatsid'` error.
+- If the error is present, check your Lutris version. This is fixed in v0.5.11. https://lutris.net/downloads
+
+
 #### Launcher hangs / stops responding / crashes with an "ASAR" error
 - Some people report the launcher hanging in combination with the Lutris runtime. If you are on Lutris, try toggling "Disable Lutris runtime" under "System options" of the Lutris game options.
 - If you do need to disable the Lutris runtime, the Lutris guys would like to have a log file to debug the issue. You can run lutris -d from the terminal after enabling Wine debugging as per this image:  
@@ -120,31 +142,18 @@
 
 
 
-## 💥 Crashes
 
-#### After playing for a while, game/lutris/wine crash, no errors
-  - If there are no errors in your game logs, check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](Performance-Tuning#swap).
-
-#### Game crashes with " 00adntdll:FILE_GetNtStatus Converting errno 12 to STATUS_UNSUCCESSFUL "
-- Make sure you have set your vm.max_map_count as described in the installation section.
-
-
-#### Game crashes when going to Lorville / ArcCorp or crashes often when launching
-- Make sure you followed the guide to install Wine's dependencies and set your vm.max_map_count as described in the installation section.
-
-***
-
-
-
-## 🤪 Unexpected Behavior (also crashes)
+## 🤪 Unexpected Behavior (sometimes also crashes)
 
 #### Empty launcher
 - Log out log back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
 
-#### Semi-transparent lines everywhere, possibly random crashes
+
+#### Visual glitches or semi-transparent lines, poor performance, possibly random crashes
 - DXVK is likely disabled in Lutris's Runner options. Make sure it is enabled.
 - Your game shader cache may need to be cleared. Our [Helper](https://github.com/starcitizen-lug/lug-helper) can quickly clear your game shaders.
 ![](https://media.discordapp.net/attachments/608349808956276737/1070664567425871960/SC_Lines.jpg)
+
 
 #### No sound in game
 - Penguins on rolling release distributions (ie. Arch, Manjaro) may need to set `Prefer System Libraries` in Lutris to `ON`.
@@ -153,6 +162,18 @@
 
 #### Black or flickering window, possible crash with errors 15006 or 30007
 - Check for larger resolutions and scaling settings.  See CIG's [support article](https://support.robertsspaceindustries.com/hc/en-us/articles/360000081887-Guide-to-Graphic-Issues#large-res)
+
+
+#### Black/transparent window after clicking 'Launch'
+- Make sure DXVK is enabled in Lutris' Runner options.
+- Try changing to a different DXVK version in the Lutris settings.  Alternate DXVKs can be quickly installed using our [LUG Helper](https://github.com/starcitizen-lug/lug-helper).
+- Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
+- DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
+
+
+#### Launcher white screen / error DCompositionCreateDevice
+- In Lutris, configure Star Citizen (right-click->Configure->Game options) and add `"--use-gl=osmesa"` to the Arguments field.
+- If launching manually: `wine "RSI Launcher.exe" "--use-gl=osmesa"`
 
 ***
 
