@@ -5,7 +5,7 @@
 4. In Lutris' `Preferences->Global options`, `Prefer system libraries` may have to be toggled to either `Off` or `On` depending on your system. Start with `Off`. If you get library version errors during installation, try `On`. After installation is successful, this may be reset and configured on a per-game basis if desired.
 
 ## Installation Steps
-1. Download our LUG Helper from: https://github.com/starcitizen-lug/lug-helper (distro packages listed [here](https://github.com/starcitizen-lug/lug-helper#installation))
+1. Download our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) (distro packages listed [here](https://github.com/starcitizen-lug/lug-helper#installation))
 2. Launch the LUG Helper and run the `Pre-flight Check` to optimize your system settings
 3. In the LUG Helper, select `Install Star Citizen` and install the launcher to an SSD (we do not recommend an HDD)
 4. Run the launcher from Lutris and finish installing the game
