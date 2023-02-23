@@ -10,18 +10,17 @@
 3. In the LUG Helper, select `Install Star Citizen` and install the launcher to an SSD (we do not recommend an HDD)
 4. Run the launcher from Lutris and finish installing the game
 5. In the LUG Helper, select `Deploy Easy Anti-Cheat Workaround`
-6. In the LUG Helper, select `Manage Lutris Runners`, and install the latest runner from GloriousEggroll (or ask us on our [social channels](https://github.com/starcitizen-lug/information-howtos#socials) which runner is currently recommended)
-7. Configure Lutris to use the installed runner. `Right click the game->Configure->Runner Options->Wine version`
-8. In the LUG Helper, select `Manage DXVK Versions`. **AMD:** Install the latest dxvk from Sporif Async. Follow the instructions [on our wiki](https://github.com/starcitizen-lug/information-howtos/wiki/Performance-Tuning#dxvk-async) to enable it in Lutris. **Nvidia:** Install the latest dxvk from gnusenpai
-9. In Lutris, make sure `Prefer system libraries` is `Off` either globally or just for Star Citizen. If you have no sound in-game, set this instead to `On`
-10. Check our [latest news](https://github.com/starcitizen-lug/information-howtos/wiki#news) for important updates. Especially Nvidia gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
-11. Run the launcher again and start the game. See you in the 'verse!
+6. In the LUG Helper, select `Manage Lutris Runners`, and install the latest runner from GloriousEggroll (or ask us on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins) which runner is currently recommended)
+7. In the LUG Helper, select `Manage DXVK Versions`. **AMD:** Install the latest dxvk from Sporif Async. Follow the instructions [on our wiki](Performance-Tuning#dxvk-async) to enable the async environment variable. **Nvidia:** Install the latest dxvk from gnusenpai
+8. In Lutris, make sure `Prefer system libraries` is `Off` either globally or just for Star Citizen. If you have no sound in-game, set this instead to `On`
+9. Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for important updates. Especially Nvidia gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
+10. Run the launcher again and start the game. See you in the 'verse!
 
 ## Video Guide
 Video guides of the above are available for [AMD](https://www.youtube.com/watch?v=cHGtwIH5ocI) and [Nvidia](https://www.youtube.com/watch?v=QVVPv12RGtk) by Grumpy
 
 ## Important Information
-> Questions or Problems? Check our [Troubleshooting Guide](Troubleshooting) or ask for help in one of our [social channels](https://github.com/starcitizen-lug/information-howtos/wiki#welcome-space-penguins)!
+> Questions or Problems? Check our [Troubleshooting Guide](Troubleshooting) or ask for help in one of our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)!
 
 > On first launch, the game will stutter with low FPS while shaders are compiled and caches are filled. As you run/fly around and travel to different places, performance will increase.
 > This can also occur after updating Star Citizen, your graphics driver, Wine, or DXVK.
