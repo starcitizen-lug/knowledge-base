@@ -11,6 +11,10 @@ After installing it, use the following configuration:
 4. Click `Browse Prefix` and select your Star Citizen Wine prefix (Lutris Default: ~/Games/star-citizen)
 5. Next to `Protocol`, make sure `Both` is selected
 
+Launch Star Citizen and configure its head tracking options under `Comms, FOIP & Head Tracking`
+1. Set `Head Tracking - General - Source` to `TrackIR`
+2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`
+
 _ArUco Paper Method_
 
 A tutorial for using Opentrack with the ArUco paper method is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). You may ignore the installation steps in that thread if you've instead followed the ones listed above.
