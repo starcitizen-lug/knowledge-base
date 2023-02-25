@@ -2,33 +2,18 @@
 In the Lutris `Runner options` tab, enable `AMD FidelityFX Super Resolution` or set the environment variable `WINE_FULLSCREEN_FSR=1`. Then, in the Star Citizen graphics settings, set the game to fullscreen and your desired resolution and it will be FSR scaled up. We recommend restarting the game after changing its resolution for better performance.
 
 ## Head tracking using Opentrack
-At the moment, the simplest method to use Opentrack with Star Citizen is to install the Windows version of Opentrack within Lutris then select "Freetrack 2.0 enhanced" as the output. Save the following to a .yml file and use the Lutris option `Install from a local install script`
+We have a custom build of Opentrack designed to work natively with Star Citizen. It is available [here](https://github.com/Priton-CE/opentrack-StarCitizen).
 
-**Important**: Make sure `game_slug` matches your Star Citizen install in Lutris. `Right click the game->Configure` and look at the `Identifier` field.
-```yml
-name: "Opentrack for Star Citizen"
-game_slug: star-citizen
-version: Opentrack v2022.3.2
-slug: star-citizen
-description: "Opentrack for Star Citizen"
-runner: wine
-script:
-  requires: star-citizen
-  files:
-    - opentrack-setup: https://github.com/opentrack/opentrack/releases/download/opentrack-2022.3.2/opentrack-2022.3.2-win32-setup.exe
-  installer:
-    - task:
-        description: Installing Opentrack...
-        executable: opentrack-setup
-        name: wineexec
-        prefix: $GAMEDIR
+After installing it, use the following configuration:
+1. Select `Wine` in the Output dropdown
+2. Click the `Configure` button next to it
+3. Select the Wine version or Lutris Runner you're using with Star Citizen under `Wine variant`
+4. Click `Browse Prefix` and select your Star Citizen Wine prefix (Lutris Default: ~/Games/star-citizen)
+5. Under `Protocol`, make sure `Both` is selected
 
-  game:
-    exe: drive_c/Program Files (x86)/opentrack/opentrack.exe
-    prefix: $GAMEDIR
-```
+_ArUco Paper Method_
 
-A tutorial for using Opentrack with the ArUco paper method is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr).
+A tutorial for using Opentrack with the ArUco paper method is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). You may ignore the installation steps in that thread if you've instead followed the ones listed above.
 
 
 ## Automatically Disable/Re-Enable Mouse Acceleration
