@@ -1,5 +1,5 @@
 ## Head tracking using Opentrack
-We have a custom build of Opentrack designed to work natively with Star Citizen. It is available [here](https://github.com/Priton-CE/opentrack-StarCitizen).
+We have a custom build of Opentrack designed to work natively with Star Citizen and Lutris. It is available [here](https://github.com/Priton-CE/opentrack-StarCitizen).
 
 After installing it, use the following configuration:
 1. Select `Wine` in the Output dropdown
