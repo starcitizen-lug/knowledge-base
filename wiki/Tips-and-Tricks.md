@@ -1,6 +1,3 @@
-## AMD FidelityFX Super Resolution (FSR) upscaling
-In the Lutris `Runner options` tab, enable `AMD FidelityFX Super Resolution` or set the environment variable `WINE_FULLSCREEN_FSR=1`. Then, in the Star Citizen graphics settings, set the game to fullscreen and your desired resolution and it will be FSR scaled up. We recommend restarting the game after changing its resolution for better performance.
-
 ## Head tracking using Opentrack
 We have a custom build of Opentrack designed to work natively with Star Citizen. It is available [here](https://github.com/Priton-CE/opentrack-StarCitizen).
 
@@ -18,6 +15,10 @@ Launch Star Citizen and configure its head tracking options under `Comms, FOIP &
 _ArUco Paper Method_
 
 A tutorial for using Opentrack with the ArUco paper method is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). You may ignore the installation steps in that thread if you've instead followed the ones listed above.
+
+
+## AMD FidelityFX Super Resolution (FSR) upscaling
+In the Lutris `Runner options` tab, enable `AMD FidelityFX Super Resolution` or set the environment variable `WINE_FULLSCREEN_FSR=1`. Then, in the Star Citizen graphics settings, set the game to fullscreen and your desired resolution and it will be FSR scaled up. We recommend restarting the game after changing its resolution for better performance.
 
 
 ## Automatically Disable/Re-Enable Mouse Acceleration
