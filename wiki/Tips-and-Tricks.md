@@ -9,7 +9,7 @@ After installing it, use the following configuration:
 2. Click the `Configure` button next to it
 3. Select the Wine version or Lutris Runner you're using with Star Citizen under `Wine variant`
 4. Click `Browse Prefix` and select your Star Citizen Wine prefix (Lutris Default: ~/Games/star-citizen)
-5. Under `Protocol`, make sure `Both` is selected
+5. Next to `Protocol`, make sure `Both` is selected
 
 _ArUco Paper Method_
 
