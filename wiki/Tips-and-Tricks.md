@@ -7,7 +7,7 @@ We have a custom build of Opentrack designed to work natively with Star Citizen.
 After installing it, use the following configuration:
 1. Select `Wine` in the Output dropdown
 2. Click the `Configure` button next to it
-3. Select the Wine version or Lutris Runner you're using with Star Citizen under `Wine variant`
+3. Under `Wine variant`, select the `Wine` radio button and then choose the Wine version or Lutris Runner you're using with Star Citizen
 4. Click `Browse Prefix` and select your Star Citizen Wine prefix (Lutris Default: ~/Games/star-citizen)
 5. Next to `Protocol`, make sure `Both` is selected
 
