@@ -12,9 +12,11 @@ Launch Star Citizen and configure its head tracking options under `Comms, FOIP &
 1. Set `Head Tracking - General - Source` to `TrackIR`
 2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`
 
-_ArUco Paper Method_
-
-A tutorial for using Opentrack with the ArUco paper method is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). You may ignore the installation steps in that thread if you've instead followed the ones listed above.
+#### Head Tracking Hardware
+- Use your iPhone: Our Penguins tend to prefer the [Head Tracker app by John Yu](https://apps.apple.com/us/app/head-tracker/id1527710071). It works on iPhone X or later using the FaceID IR sensors and has a trial period to test it out
+- Use your Android Phone: Our Penguins tend to like the [SmoothTrack app by John Goering](https://play.google.com/store/apps/details?id=com.epaga.smoothtrack&gl=US)
+- Use your PS3 camera: Remove the IR filter. Some people place a visible light filter there instead to reduce noise
+- Use your webcam with the ArUco Paper Method: A tutorial is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). (Note: Ignore the outdated Opentrack installation steps in that thread)
 
 
 ## AMD FidelityFX Super Resolution (FSR) upscaling
