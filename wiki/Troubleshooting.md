@@ -61,7 +61,7 @@
   - If this does not fix the problem, revert the above changes and install the latest GloriousEggroll runner, available in our [Helper](https://github.com/starcitizen-lug/lug-helper)
 
 
-#### Crash with Lutris error: *Star Citizen process exited abnormally (code: 3) : Command failed*
+#### Code 3 crash with error: *Star Citizen process exited abnormally (code: 3) : Command failed*
 - You are likely missing 32bit drivers. Make sure the following packages are installed (names may vary depending on your distro)
   - Nvidia: `lib32-nvidia-utils`
   - AMD: `lib32-mesa` and `lib32-vulkan-radeon`
