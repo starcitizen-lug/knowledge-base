@@ -13,9 +13,9 @@ Launch Star Citizen and configure its head tracking options under `Comms, FOIP &
 2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`
 
 #### Head Tracking Hardware
-- Use your iPhone: Our Penguins tend to prefer the [Head Tracker app by John Yu](https://apps.apple.com/us/app/head-tracker/id1527710071). It works on iPhone X or later using the FaceID IR sensors and has a trial period to test it out
-- Use your Android Phone: Our Penguins tend to like the [SmoothTrack app by John Goering](https://play.google.com/store/apps/details?id=com.epaga.smoothtrack&gl=US)
-- Use your PS3 camera: Remove the IR filter. Some people place a visible light filter there instead to reduce noise
+- Use your iPhone: Our Penguins tend to prefer the [Head Tracker app by John Yu](https://apps.apple.com/us/app/head-tracker/id1527710071). It works on iPhone X or later using the FaceID IR sensors and has a trial period to test it out. It costs $2.
+- Use your Android Phone: Our Penguins tend to like the [SmoothTrack app by John Goering](https://play.google.com/store/apps/details?id=com.epaga.smoothtrack&gl=US). It costs $10.
+- Use your PS3 camera: Remove the IR filter. Some people place a visible light filter there instead to reduce noise.
 - Use your webcam with the ArUco Paper Method: A tutorial is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). (Note: Ignore the outdated Opentrack installation steps in that thread)
 
 
