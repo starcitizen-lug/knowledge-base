@@ -79,7 +79,11 @@
   - Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
   - DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
 
-- Possible cause 2: Phantom joystick
+- Possible cause 2: Incorrect Vulkan ICD Loader
+  - If you have Intel integrated graphics and see `VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json` in your log, then change the Vulkan ICD Loader in Lutris to use your discrete GPU:
+  ![image](https://user-images.githubusercontent.com/3657071/221420185-c1f1e346-b67f-4cd9-ba14-748668a266ed.png)
+
+- Possible cause 3: Phantom joystick
   - Many keyboards and mice can also have a "joystick" part in Linux, which Wine can detect. Unfortunately, Wine may be confused about it, as they are not real joysticks. In this case, the game could crash. Try running the Wine joystick control panel "wine control" (in Lutris: right click -> Joystick configuration) and disable your keyboard and/or mice.
   - This will not affect how your keyboard and mice work in the game.
 
