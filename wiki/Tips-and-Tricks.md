@@ -1,6 +1,6 @@
 ## Recommended Distros
 We strongly recommend choosing a distro that has up-to-date packages and a solid maintenance reputation.  
-The following distributions make our 👍 list:
+The following distributions make our 👍 list and generally work well with Star Citizen:
 - EndeavourOS
 - Fedora
 - Arch
