@@ -1,5 +1,5 @@
 ## Prerequisites
-New to Linux? See our [Recommended Distributions](Tips-and-Tricks.md#recommended-distros) for a list of the distros most compatible with Star Citizen.
+New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 
 1. Install wine-staging following the instructions for your distro on the [WineHQ website](https://wiki.winehq.org/Category:Distributions).
 2. Install 32bit drivers for your graphics card. Steam typically pulls these in, otherwise some guidance is provided on the [Lutris Github](https://github.com/lutris/docs/blob/master/InstallingDrivers.md).
