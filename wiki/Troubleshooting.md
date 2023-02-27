@@ -21,6 +21,7 @@
 ❤️ [AMD](#-amd)  
 🕹️ [Controller Issues](#-controller-issues)  
 🦦 [Lutris Issues](#-lutris-issues)  
+👾 [32bit Drivers](#-32bit-drivers)  
 ❔ [Other Issues](#-other-issues)  
 
 ***
@@ -224,6 +225,37 @@ Then execute the wine joystick control panel (in Lutris: right-click -> Joystick
 - Completely close Lutris with `kill lutris`, delete everything inside the Lutris cache directory `~/.cache/lutris`, and relaunch Lutris.
 
 ***
+
+
+## 👾 32bit Drivers
+
+#### Arch-based Distributions (Arch, EndeavourOS, Manjarno, etc)
+1. Enable the [multilib repo](https://wiki.archlinux.org/title/Official_repositories#Enabling_multilib)
+2. Install drivers
+- AMD
+  ```
+  sudo pacman -S --needed lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
+  ```
+- Nvidia
+  ```
+  sudo pacman -S --needed nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
+  ```
+
+#### Ubuntu & Friends (Ubuntu, Mint, PopOS, etc)
+- AMD
+  ```
+  sudo dpkg --add-architecture i386 && sudo apt update && sudo apt upgrade && sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386
+  ```
+- Nvidia
+  ```
+  sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y nvidia-driver-525 libvulkan1 libvulkan1:i386
+  ```
+
+#### Fedora & Derivatives (Fedora, Nobara, etc)
+- TBA
+
+#### Gentoo 💪
+- We defer to your expertise
 
 
 
