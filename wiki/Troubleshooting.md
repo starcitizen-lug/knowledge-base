@@ -254,6 +254,19 @@ Then execute the wine joystick control panel (in Lutris: right-click -> Joystick
 #### Fedora & Derivatives (Fedora, Nobara, etc)
 - TBA
 
+#### OpenSUSE
+- AMD
+  ```
+  sudo zypper in kernel-firmware-amdgpu libdrm_amdgpu1 libdrm_amdgpu1-32bit libdrm_radeon1 libdrm_radeon1-32bit libvulkan_radeon libvulkan_radeon-32bit libvulkan1 libvulkan1-32bit
+  ```
+- Nvidia
+   1. Follow the instructions here https://en.opensuse.org/SDB:NVIDIA_drivers
+   2. Install 32bit drivers by appending the `-32bit` suffix to the driver package names
+   3. Install vulkan libraries:
+      ```
+      sudo zypper in libvulkan1 libvulkan1-32bit
+      ```
+
 #### Gentoo 💪
 - We defer to your expertise
 
