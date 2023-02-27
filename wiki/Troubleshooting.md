@@ -254,7 +254,7 @@ Then execute the wine joystick control panel (in Lutris: right-click -> Joystick
 #### Fedora & Derivatives (Fedora, Nobara, etc)
 - TBA
 
-#### OpenSUSE
+#### OpenSUSE Tumbleweed
 - AMD
   ```
   sudo zypper in kernel-firmware-amdgpu libdrm_amdgpu1 libdrm_amdgpu1-32bit libdrm_radeon1 libdrm_radeon1-32bit libvulkan_radeon libvulkan_radeon-32bit libvulkan1 libvulkan1-32bit
