@@ -231,7 +231,7 @@ Then execute the wine joystick control panel (in Lutris: right-click -> Joystick
 
 #### Arch-based Distributions (Arch, EndeavourOS, Manjarno, etc)
 1. Enable the [multilib repo](https://wiki.archlinux.org/title/Official_repositories#Enabling_multilib)
-2. Install drivers
+2. Install 32bit drivers
 - AMD
   ```
   sudo pacman -S --needed lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
