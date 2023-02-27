@@ -1,3 +1,19 @@
+## Recommended Distros
+We strongly recommend choosing a distro that has up-to-date packages and a solid maintenance reputation.  
+The following distributions make our 👍 list:
+- EndeavourOS
+- Fedora
+- Arch
+- Nobara
+- Gentoo
+- Ubuntu (usually okay, but *only* the very latest release)
+
+We do not recommend 👎 most gaming-focused distributions as many of our Penguins have had issues installing the required dependencies to make Star Citizen run. They generally have only an individual or a very small team backing them and, at least where Star Citizen is concerned, do not live up to the promise.  
+We especially suggest avoiding PopOS and Drauger OS due to irresolvable compatibility issues with the required 32bit packages in their repos.
+
+Other distributions we suggest avoiding due to frequent package/dependency/update issues are: Manjarno, and Mint.
+
+
 ## Head tracking using Opentrack
 We have a custom build of Opentrack designed to work natively with Star Citizen and Lutris. It is available [here](https://github.com/Priton-CE/opentrack-StarCitizen).
 
