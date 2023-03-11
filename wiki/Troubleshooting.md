@@ -165,6 +165,12 @@
 - If you have sound in the launcher but not in the game, launch the game and go to your audio settings, then enable "Play sound while game is in background".
 
 
+#### DirectX feature level requirement error message
+- Error may read "Star Citizen requires DirectX feature level of 11.1 as a minimum which is not supported at present on this machine"
+- Check that the `Vulkan ICD loader` is not set to an integrated gpu (ie, Intel)
+   - Right click the game -> Configure -> System options -> Vulkan ICD loader
+
+
 #### Black or flickering window, possible crash with errors 15006 or 30007
 - Check for larger resolutions and scaling settings.  See CIG's [support article](https://support.robertsspaceindustries.com/hc/en-us/articles/360000081887-Guide-to-Graphic-Issues#large-res)
 
