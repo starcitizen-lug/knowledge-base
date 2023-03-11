@@ -56,7 +56,7 @@ Then, you will need the Vendor ID, Model Name, and Model ID that the device repo
 You can get this information with `udevadm`
 
 ```bash
-udevadm info -n /dev/input/by-id/usb-your-joystick-name | grep 'ID_VENDOR_ID|ID_MODEL_ID|ID_MODEL'
+udevadm info -n /dev/input/by-id/usb-your-joystick-name | grep -E 'ID_VENDOR_ID|ID_MODEL_ID|ID_MODEL'
 ```
 
 Example:
