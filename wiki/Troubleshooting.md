@@ -193,6 +193,9 @@
 
 ## 💚 Nvidia
 
+#### Current known issues
+- See the Nvidia section of our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for the ways in which Nvidia is being special today.
+
 #### Popup saying your Nvidia graphics driver is out of date
 - Ignore or Disable DXVK NVAPI in Lutris.
   - Right click the game -> Configure -> Runner options -> Enable DXVK-NVAPI/DLSS (set to off)
