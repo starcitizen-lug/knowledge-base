@@ -27,6 +27,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 >   gamescope --force-grab-cursor -W 1920 -H 1080
 >   ```
 > - Other arguments that may be required depending on your system: `-f` if it doesn't launch fullscreen, `-g` to grab keyboard
+> - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
 
 > (Jan 27, 2023) **RSI Launcher v1.6.2 JavaScript error**  
 >
