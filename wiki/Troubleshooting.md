@@ -166,7 +166,7 @@
 
 
 #### DirectX error message
-- Error may read "Star Citizen requires DirectX feature level of 11.1 as a minimum which is not supported at present on this machine"
+- Error may read "Star Citizen requires DirectX feature level of 11.1 as a minimum which is not supported at present on this machine"  
   ![image](https://user-images.githubusercontent.com/3657071/224719841-ba1e831b-4ace-4f14-b423-3e49528154c6.png)
 - Check that the `Vulkan ICD loader` is not set to an integrated gpu (ie, Intel)
    - Right click the game -> Configure -> System options -> Vulkan ICD loader
