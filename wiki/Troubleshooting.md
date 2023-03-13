@@ -200,6 +200,9 @@
 - Ignore or Disable DXVK NVAPI in Lutris.
   - Right click the game -> Configure -> Runner options -> Enable DXVK-NVAPI/DLSS (set to off)
 
+#### Severe frame drops near stations when IOMMU is enabled
+- You  may need to disable IOMMU. See [Allocating DMA Buffers on 64-bit Platforms](https://download.nvidia.com/XFree86/Linux-x86_64/525.85.05/README/dma_issues.html) for more information.
+
 ***
 
 
