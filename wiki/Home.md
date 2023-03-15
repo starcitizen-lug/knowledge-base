@@ -59,6 +59,9 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 **Nvidia News**
 
+> (March 15, 2023) **Severe frame drops on 3.18**
+> - We're currently tracking VRAM exhaustion problems on nvidia cards and 3.18. Keep an eye on our Discord tech support channel, but no solutions have been found just yet besides switching to AMD.
+
 > (Jan 27, 2023) **Required DXVK version**
 > - DXVK 2.1 may resolve issues Penguins had with previous versions of DXVK and may perform better without async.
 > - For DXVK 2.0 and prior, Penguins with RTX cards should use [gnusenpai DXVK v1.10.1 or later](https://github.com/gnusenpai/dxvk/releases) to fix the `corrupted size vs. prev_size` error/crash. Can be installed manually or from the LUG helper.
