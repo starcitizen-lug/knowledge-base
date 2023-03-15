@@ -28,6 +28,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 >   ```
 > - Other arguments that may be required depending on your system: `-f` if it doesn't launch fullscreen, `-g` to grab keyboard
 > - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
+> - If this doesn't work, you may need to switch to Xorg and reboot.
 
 > (Jan 27, 2023) **RSI Launcher v1.6.2 JavaScript error**  
 >
