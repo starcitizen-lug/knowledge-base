@@ -68,3 +68,36 @@ We have discovered that Dell laptops with Intel CPUs (and possibly other mobile 
 
 If changing the kernel scheduler between `Performance` and the various demand-based schedulers doesn't affect CPU frequency scaling for your laptop, try setting the SMBIOS thermal mode to `cool-bottom`. This mode behaves similarly to the `Conservative` kernel governor, gradually incrementing/decrementing the CPU frequency to stabilize the framerate.
 - Using the SMBIOS utility on Ubuntu, the command is `sudo smbios-thermal-ctl --set-thermal-mode=cool-bottom`
+
+## Increased performance for CPUs with multiple dies
+### Affected CPU generations
+- Amd Threadripper
+### Steps
+1. Verify you have a CPU with multiple dies by running `lstopo`. If the results appear similar to the first image below, you can proceed:  
+    ![image](https://user-images.githubusercontent.com/39007301/220378862-d4b9bbd7-15b3-4e1e-b77d-6b19f0908ba8.png)  
+    
+    If, on the other hand, your CPU is like this image where the dies are not shown, this will not improve your performace:  
+    <img src="https://user-images.githubusercontent.com/39007301/220378475-160e9091-3b2c-407b-acff-d606892d21c5.png" width=60% height=60%>  
+
+2. Modify the following environment variable to match your system:  
+    ```
+    WINE_CPU_TOPOLOGY=Number_of_Threads:List_of_threads_indexes
+    ```
+    The `Number_of_threads` is the number of threads you want to run Star Citizen with.  
+    The `List_of_thread_indexes` can be determined by looking at the `lstopo` output.  
+    You can see the threads highlighted in the image below:  
+    <img src="https://user-images.githubusercontent.com/39007301/220380665-5378ccc5-474e-4db2-8a4a-e893bb4ab347.png" width=50% height=50%>  
+
+    As an exmaple, the CPU shown below would end up with the arguements  
+    ```
+    WINE_CPU_TOPOLOGY=16:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+    ```
+    ![image](https://user-images.githubusercontent.com/39007301/220382182-3525c3e8-4466-4489-8e85-7c1319ac3a1b.png)
+
+3. Run the game with the modified environment variable. If using Lutris, add the modified environment variable as shown in the image below:
+    `Right click the game->Configure->System options->Environment variables`
+
+    ![220531210-be82dc26-696f-4748-83ce-7161c362fe0b](https://user-images.githubusercontent.com/3657071/225932793-2f46c08b-47f1-4087-8f13-4e5cfd976837.png)
+
+
+    
