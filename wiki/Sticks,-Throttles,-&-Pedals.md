@@ -74,14 +74,10 @@ With this information for each device you have that you want to eliminate the ev
 ```
 # Custom Joystick Udev Rules
 
-ACTION!="add", GOTO="c_joystick_rules_end"
-
 # Sample
-ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*",\
-  ENV{ID_VENDOR_ID}=="<Vendor ID>", ENV{ID_MODEL_ID}=="<Model ID>", ENV{ID_MODEL}=="<Model Name>", \
+ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
+  ENV{ID_VENDOR_ID}=="<Vendor ID>", ENV{ID_MODEL_ID}=="<Model ID>", \
   RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
-
-LABEL="c_joystick_rules_end"
 ```
 
 This will keep things very specific to just the devices you want to change, and not impact any other devices you use.
@@ -92,29 +88,25 @@ Here is an example rules file for 3 VKB devices and one Virpil device:
 ```
 # Custom Joystick Udev Rules
 
-ACTION!="add", GOTO="c_joystick_rules_end"
-
 # VKB SEM
-ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*",\
-  ENV{ID_VENDOR_ID}=="231d", ENV{ID_MODEL_ID}=="2204", ENV{ID_MODEL}=="VKBSim_NXT_SEM", \
+ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
+  ENV{ID_VENDOR_ID}=="231d", ENV{ID_MODEL_ID}=="2204", \
   RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
 
 # VKB Gunfighter L
-ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*",\
-  ENV{ID_VENDOR_ID}=="231d", ENV{ID_MODEL_ID}=="0127", ENV{ID_MODEL}=="VKBsim_Space_Gunfighter_L", \
+ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
+  ENV{ID_VENDOR_ID}=="231d", ENV{ID_MODEL_ID}=="0127", \
   RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
 
 # VKB Gunfighter R
-ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*",\
-  ENV{ID_VENDOR_ID}=="231d", ENV{ID_MODEL_ID}=="0126", ENV{ID_MODEL}=="VKBsim_Space_Gunfighter", \
+ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
+  ENV{ID_VENDOR_ID}=="231d", ENV{ID_MODEL_ID}=="0126", \
   RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
 
 # Virpil Rudder Pedals
-ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*",\
-  ENV{ID_VENDOR_ID}=="3344", ENV{ID_MODEL_ID}=="01f8", ENV{ID_MODEL}=="VPC_Rudder_Pedals", \
+ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
+  ENV{ID_VENDOR_ID}=="3344", ENV{ID_MODEL_ID}=="01f8", \
   RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
-
-LABEL="c_joystick_rules_end"
 ```
 
 # Troubleshooting
