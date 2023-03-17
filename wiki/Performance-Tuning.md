@@ -86,7 +86,7 @@ If changing the kernel scheduler between `Performance` and the various demand-ba
     The `Number_of_threads` is the number of threads you want to run Star Citizen with.  
     The `List_of_thread_indexes` can be determined by looking at the `lstopo` output.  
     You can see the threads highlighted in the image below:  
-    <img src="https://user-images.githubusercontent.com/39007301/220380665-5378ccc5-474e-4db2-8a4a-e893bb4ab347.png" width=50% height=50%>  
+    <img src="https://user-images.githubusercontent.com/39007301/220380665-5378ccc5-474e-4db2-8a4a-e893bb4ab347.png" width=60% height=60%>  
 
     As an exmaple, the CPU shown below would end up with the arguements  
     ```
