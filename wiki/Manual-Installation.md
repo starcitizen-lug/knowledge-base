@@ -18,10 +18,8 @@ sudo sysctl -w vm.max_map_count=16777216 => To set it temporarily
 
 _Distributions using systemd: Manjaro / Antergos / Arch / Arch-based (probably) / Ubuntu (and probably derivatives) / Fedora_
 
-* Create a new file in `/etc/sysctl.d/`
-* To name the file, the leading number is the priority of the file and the ending is `.conf`. For example, `"/etc/sysctl.d/20-max_map_count.conf"`.
-* Add the following line to the file:
-`vm.max_map_count = 16777216`
+* Create a new drop-in config file: `/etc/sysctl.d/20-max_map_count.conf`
+* Add the following line to the file: `vm.max_map_count = 16777216`
 
 * To reload it, run `sudo sysctl --system`
 
@@ -35,7 +33,8 @@ _Distributions that use sysctl.conf_
 
 _Distributions using systemd: Manjaro / Antergos / Arch / Arch-based (probably) / Ubuntu (and probably derivatives) / Fedora_
 
-* Add the following line to /etc/systemd/system.conf: `DefaultLimitNOFILE=524288`
+* Create a new drop-in config file: `/etc/systemd/systemd.conf.d/filelimit.conf`
+* Add the following line to the file: `DefaultLimitNOFILE=524288`
 
 _Distributions that use /etc/security/limits.conf_
 
