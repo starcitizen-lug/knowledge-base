@@ -222,8 +222,10 @@
 ## 🕹 Controller Issues
 
 #### Some of your joysticks disappear / aren't recognized in the game
-- If you are using Lutris, make sure "Autoconfigure joypads" is turned off in the game settings for Lutris (right-click -> Configure).
-Then execute the wine joystick control panel (in Lutris: right-click -> Joystick configuration) and set your joysticks there.
+- If you are using Lutris, make sure "Autoconfigure joypads" is turned off in the game settings for Lutris
+    - Right click the game -> Configure -> Runner options -> Autoconfigure joypads
+- Joysticks can be configured manually in the wine joystick control panel
+    - Click the arrow next to the wine glass button -> Wine Control Panel -> Game Controllers
 
 
 #### Some of your joystick axis aren't recognized / don't map
