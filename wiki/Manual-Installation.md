@@ -20,14 +20,13 @@ _Distributions using systemd: Manjaro / Antergos / Arch / Arch-based (probably) 
 
 * Create a new drop-in config file: `/etc/sysctl.d/20-max_map_count.conf`
 * Add the following line to the file: `vm.max_map_count = 16777216`
-
 * To reload it, run `sudo sysctl --system`
 
 
 _Distributions that use sysctl.conf_
 
 * Append the same line to `/etc/sysctl.conf`
-* To reload it, run `sudo sysctl -p`
+* To reload it, run `sudo sysctl --system`
 
 **To set your system's hard open file descriptors limit**
 
@@ -35,6 +34,7 @@ _Distributions using systemd: Manjaro / Antergos / Arch / Arch-based (probably) 
 
 * Create a new drop-in config file: `/etc/systemd/systemd.conf.d/filelimit.conf`
 * Add the following line to the file: `DefaultLimitNOFILE=524288`
+* To reload it, run `sudo systemctl daemon-reexec`
 
 _Distributions that use /etc/security/limits.conf_
 
