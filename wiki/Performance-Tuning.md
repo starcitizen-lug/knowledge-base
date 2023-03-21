@@ -58,7 +58,7 @@ See the [Arch Wiki](https://wiki.archlinux.org/title/Zram) for configuration ins
 
 If you prefer not to use zram, swap files will need to be configured. We recommend configuring at least a combined 40GB RAM + swap:
 - For 16GB RAM: 24GB swap
-- For 32GB RAM: 16GB swap
+- For 32GB RAM: 8GB swap
 
 More swap should be configured if you intend to run a few background applications while playing the game.
 
