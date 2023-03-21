@@ -48,9 +48,19 @@ Gamemode can help improve performance by applying OS-level performance tweaks as
 
 An fsync-enabled Kernel can help improve smoothness while shaders are being compiled in the game. Enable fsync in Lutris under Runner Options.
 
-## Swap
+## Zram & Swap
 
-Depending on your system hardware, a larger swap file may be needed. For systems with 16gb RAM, we recommend at least a 16gb swap file. Less swap space may be needed for systems with 32gb or more of RAM.
+Zram stores swap in RAM using on-the-fly compression which can improve game performance when memory utilization gets high.
+- For systems with 16GB RAM, we recommend all 16GB configured for zram with at least an 8GB swap file.
+- For systems with 32GB RAM or more, zram can be used in place of a swap file as long as there is at least a total of 40GB combined RAM + swap.
+
+See the [Arch Wiki](https://wiki.archlinux.org/title/Zram) for configuration instructions that should work for most distros.
+
+If you prefer not to use zram, swap files will need to be configured. We recommend configuring at least a combined 40GB RAM + swap:
+- For 16GB RAM: 24GB swap
+- For 32GB RAM: 16GB swap
+
+More swap should be configured if you intend to run a few background applications while playing the game.
 
 ## Steam Deck
 
