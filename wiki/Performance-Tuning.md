@@ -88,7 +88,7 @@ If changing the kernel scheduler between `Performance` and the various demand-ba
     You can see the threads highlighted in the image below:  
     <img src="https://user-images.githubusercontent.com/39007301/220380665-5378ccc5-474e-4db2-8a4a-e893bb4ab347.png" width=50% height=50%>  
 
-    As an exmaple, the CPU shown below would end up with the arguements  
+    As an example, the CPU shown below would end up with the arguments  
     ```
     WINE_CPU_TOPOLOGY=16:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
     ```
