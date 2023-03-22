@@ -63,9 +63,7 @@
 
 
 #### Code 3 crash with error: *Star Citizen process exited abnormally (code: 3) : Command failed*
-- You are likely missing 32bit drivers. Make sure the following packages are installed (names may vary depending on your distro)
-  - Nvidia: `lib32-nvidia-utils`
-  - AMD: `lib32-mesa` and `lib32-vulkan-radeon`
+- You are likely missing 32bit drivers. See [32bit Drivers](#-32bit-drivers) below for more information
 - Additionally, explicitly set the Vulkan ICD loader in Lutris to either `Nvidia Proprietary` or `AMD RADV Open Source`
   - Right click the game -> Configure -> System options -> Vulkan ICD loader
 - If you are using the Flatpak Lutris, you may need to resync it with your system after installing the 32bit drivers. Run: `flatpak update`
