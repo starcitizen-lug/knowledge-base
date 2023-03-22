@@ -14,7 +14,7 @@ New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-di
 5. Run the launcher from Lutris and finish installing the game
 6. In the LUG Helper, select `Manage Lutris Runners`, and install the latest runner from GloriousEggroll (or ask us on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins) which runner is currently recommended)
 7. In the LUG Helper, select `Manage DXVK Versions`. **AMD:** Install the latest dxvk from Sporif Async. Follow the instructions [on our wiki](Performance-Tuning#dxvk-async) to enable the async environment variable. **Nvidia:** Install the latest dxvk from gnusenpai
-8. In Lutris, if you had to enable `Prefer system libraries` during installation, most distros will need this switched `Off`. If you have no sound in-game or are on a rolling release distro, you may need to set this instead to `On`
+8. In Lutris, if you had to enable `Prefer system libraries` during installation, most distros will need this switched `Off` at this point. If you have no sound in-game or are on a rolling release distro, you may need to set this instead to `On`
 9. Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for important updates. Especially Nvidia gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 10. Run the launcher again and start the game. See you in the 'verse!
 
