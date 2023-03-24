@@ -67,6 +67,18 @@ Alternatively, see [below](https://github.com/starcitizen-lug/information-howtos
 ## Easy Anti-Cheat Workaround
 **Automatic Configuration**
 
+_Using a GloriousEggroll runner_
+
+GE runners since **Wine-GE-Proton7-41** include an EAC workaround by default. It will be enabled automatically for new installs. To enable it for existing installs:
+* Set the following environment variable `Right click the game->Configure->System Options->Environment variables`:
+  ```
+  SteamGameId=starcitizen
+  ```
+* Add the following pre-launch script in Lutris `Right click the game->Configure->System Options->Pre-launch script`:
+  ```sh
+  /usr/bin/sh -c 'if [ -d \"$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat\" ]; then rm -rf \"$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat\"; fi'
+  ```
+
 _/etc/hosts method:_
 
 This applies the workaround globally at the system level by modifying /etc/hosts
@@ -77,9 +89,9 @@ _json config method:_
 If you prefer not to apply the workaround globally, a json file can be modified each time the game starts. Launcher updates/verifies will revert this change. Close and re-launch the game to re-apply it.
 * In Lutris, navigate to `Right click the game->Configure->System Options->Pre-launch script`. Make sure `Show advanced options` is checked.
 * Add the following. Alternatively, see [below](https://github.com/starcitizen-lug/information-howtos/wiki/Tips-and-Tricks#lutris-pre-launch-and-post-exit-scripts) for a sample script file that incorporates this and other pre-launch tweaks.
-```sh
-/usr/bin/sh -c "sed -i 's|\"productid\":.*|\"productid\": \"linux-eac-workaround\",|' \"$WINEPREFIX/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/EasyAntiCheat/Settings.json\""
-```
+  ```sh
+  /usr/bin/sh -c "sed -i 's|\"productid\":.*|\"productid\": \"linux-eac-workaround\",|' \"$WINEPREFIX/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/EasyAntiCheat/Settings.json\""
+  ```
 * Enable `Wait for pre-launch script completion`
 * Additional pre-launch script commands can be run using semicolons: `/usr/bin/sh -c "command1; command2; etc"`
 
