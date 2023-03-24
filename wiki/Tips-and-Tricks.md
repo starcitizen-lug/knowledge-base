@@ -49,7 +49,7 @@ Lutris can automatically toggle on/off a flat mouse acceleration profile with th
 
 Configure the game within Lutris and go to `System options`. Make sure `Show advanced options` is checked.  
 Add the following to the `Pre-launch script` and `Post-exit script` fields.  
-Alternatively, see [below](https://github.com/starcitizen-lug/information-howtos/wiki/Tips-and-Tricks#lutris-pre-launch-and-post-exit-scripts) for a sample script file that incorporates this and other pre-launch tweaks.
+Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sample script file that incorporates this and other pre-launch tweaks.
 
 **Gnome**
 
