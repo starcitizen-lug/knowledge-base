@@ -17,7 +17,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 ## News
 
-**Game Updates**
+#### Game Updates
 
 > (Mar 11, 2023) **3.18 Mouse/Cursor Issues**  
 > - The 3.18 update may cause **mouse and view snapping issues** for some people using Wayland. We recommend installing Gamescope as a workaround or using Xorg.
@@ -50,7 +50,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > ```
 
 
-**Nvidia News**
+#### Nvidia News
 
 > (March 15, 2023) **Severe frame drops on 3.18**
 > - We're currently tracking VRAM exhaustion problems on nvidia cards and 3.18. Keep an eye on our Discord tech support channel, but no solutions have been found just yet besides switching to AMD.
@@ -64,7 +64,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > - DXVK 2.0 requires Nvidia driver **v510.47.03** or later, but **v520.56.06** or later is recommended.
 
 
-**Easy Anti-Cheat**
+#### Easy Anti-Cheat
 
 > (March 24, 2023) **GlorousEggroll Runners**
 > - GE runners since Wine-GE-Proton7-41 include an EAC workaround by default for Star Citizen. It will be enabled automatically for new installs. To enable it for existing installs, see our EAC workaround [wiki section](Tips-and-Tricks#easy-anti-cheat-workaround).
