@@ -139,6 +139,7 @@ EACDIR="$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat"
 GAMEDIR="$WINEPREFIX/drive_c/Program Files/Roberts Space Industries/StarCitizen"
 
 ## Remove EAC Cache
+## This is a necessary component of any EAC workaround method
 if [ -d "$EACDIR" ]; then
     rm -rf "$EACDIR"
 fi
