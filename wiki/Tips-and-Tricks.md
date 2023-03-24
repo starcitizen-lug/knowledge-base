@@ -74,7 +74,7 @@ GE runners since **Wine-GE-Proton7-41** include an EAC workaround by default. It
   ```
   SteamGameId=starcitizen
   ```
-* Add the following pre-launch script in Lutris `Right click the game->Configure->System Options->Pre-launch script`:
+* Add the following pre-launch command in Lutris `Right click the game->Configure->System Options->Pre-launch script`. Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a script file that incorporates this.
   ```sh
   /usr/bin/sh -c 'if [ -d \"$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat\" ]; then rm -rf \"$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat\"; fi'
   ```
@@ -88,7 +88,7 @@ _json config method:_
 
 If you prefer not to apply the workaround globally, a json file can be modified each time the game starts. Launcher updates/verifies will revert this change. Close and re-launch the game to re-apply it.
 * In Lutris, navigate to `Right click the game->Configure->System Options->Pre-launch script`. Make sure `Show advanced options` is checked.
-* Add the following. Alternatively, see [below](https://github.com/starcitizen-lug/information-howtos/wiki/Tips-and-Tricks#lutris-pre-launch-and-post-exit-scripts) for a sample script file that incorporates this and other pre-launch tweaks.
+* Add the following. Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sample script file that incorporates this and other pre-launch tweaks.
   ```sh
   /usr/bin/sh -c "sed -i 's|\"productid\":.*|\"productid\": \"linux-eac-workaround\",|' \"$WINEPREFIX/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/EasyAntiCheat/Settings.json\""
   ```
@@ -112,13 +112,13 @@ _json config method:_
 
 
 ## Lutris Pre-launch and Post-exit Scripts
-Below are sample pre-launch and post-exit scripts that incorporate the mouse acceleration and EAC settings.json workaround described above.  
-To use them, create `sc-pre-launch.sh` and `sc-post-exit.sh` in your wine prefix, uncomment the appropriate mouse acceleration lines based on your desktop environment, then configure Lutris to use the scripts:
+Below are sample pre-launch and post-exit scripts that incorporate the mouse acceleration and EAC workarounds described above.  
+To use them, create `sc-prelaunch.sh` and `sc-postexit.sh` in your wine prefix, uncomment the appropriate mouse acceleration lines based on your desktop environment, then configure Lutris to use the scripts:
 - `Right click the game->Configure->System options` and set `Pre-launch script` to `/path/to/wine/prefix/sc-pre-launch.sh`
 - `Right click the game->Configure->System options` and set `Post-exit script` to `/path/to/wine/prefix/sc-post-exit.sh`
 - Enable `Wait for pre-launch script completion`
 
-_sc-pre-launch.sh_
+_sc-prelaunch.sh_
 ```bash
 #!/bin/bash
 ############################################
@@ -146,6 +146,7 @@ if [ -d "$EACDIR" ]; then
 fi
 
 ## Mangle EAC settings.json
+## This section is not needed if using a newer GE runner
 for SCENV in LIVE PTU EPTU; do
   SETTINGS="$GAMEDIR/$SCENV/EasyAntiCheat/Settings.json"
   if [ -f "$SETTINGS" ]; then
@@ -156,7 +157,7 @@ done
 ## End EAC Workaround
 ```
 
-_sc-post-exit.sh_
+_sc-postexit.sh_
 ```bash
 #!/bin/bash
 ###########################################
