@@ -50,13 +50,6 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > ```
 
 
-**General News**
-
-> (Feb 11, 2023) **Lutris install script**
-> - The Star Citizen install script on the Lutris website is currently broken. We recommend using the installer we bundle with our [Helper](https://github.com/starcitizen-lug/lug-helper) instead.
-> - To fix broken installs after using the Lutris website's script, enable DXVK in Lutris then install a recommended DXVK and runner based on our [Quick Start Guide ](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide). You may also need to disable `Prefer System Libraries` and `Use System Winetricks` and manually create missing directory paths for the install to complete.
-
-
 **Nvidia News**
 
 > (March 15, 2023) **Severe frame drops on 3.18**
