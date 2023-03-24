@@ -125,9 +125,7 @@ _sc-prelaunch.sh_
 ## Lutris pre-launch script for Star Citizen
 ############################################
 
-## Disable Mouse Acceleration 
-## https://github.com/starcitizen-lug/information-howtos/wiki/Tips-and-Tricks#automatically-disablere-enable-mouse-acceleration
-
+## Disable Mouse Acceleration
 ## GNOME
 #gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
 
@@ -164,9 +162,7 @@ _sc-postexit.sh_
 ## Lutris post-exit script for Star Citizen
 ###########################################
 
-## Reset Mouse Acceleration 
-## https://github.com/starcitizen-lug/information-howtos/wiki/Tips-and-Tricks#automatically-disablere-enable-mouse-acceleration
-
+## Reset Mouse Acceleration
 ## Gnome
 #gsettings set org.gnome.desktop.peripherals.mouse accel-profile default
 
