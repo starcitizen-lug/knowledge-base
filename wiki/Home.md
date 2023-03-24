@@ -66,5 +66,8 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 **Easy Anti-Cheat**
 
+> (March 24, 2023) **GlorousEggroll Runners**
+> - GE runners since Wine-GE-Proton7-41 include an EAC workaround by default for Star Citizen. It will be enabled automatically for new installs. To enable it for existing installs, see our EAC workaround [wiki section](Tips-and-Tricks#easy-anti-cheat-workaround).
+
 > (Feb 12, 2022) **Easy Anti-Cheat is live.**
 > - CIG is aware of the problem but there is still no ETA. There are currently no consequences that we are aware of for using the workaround, but CIG has suggested that eventually people will be kicked for tripping EAC. To apply the workaround, use the [LUG Helper](https://github.com/starcitizen-lug/lug-helper).
