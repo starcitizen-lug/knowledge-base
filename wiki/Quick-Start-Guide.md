@@ -4,7 +4,7 @@ New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-di
 1. Install wine-staging following the instructions for your distro on the [WineHQ website](https://wiki.winehq.org/Category:Distributions).
 2. Install [32 bit drivers](Troubleshooting#-32bit-drivers) for your graphics card.
 3. Install [Lutris **v0.5.11**](https://lutris.net/downloads/) or newer and launch it once before installing Star Citizen to trigger its automatic winetricks dependency download. **Note**: We do not recommend running git builds of Lutris.
-4. In Lutris' `Preferences->Global options`, `Prefer system libraries` may have to be toggled to either `Off` or `On` depending on your system. Start with `Off`. If you get library version errors during installation, try `On`. After installation is successful, this may be reset and configured on a per-game basis if desired.
+4. In Lutris' `Preferences->Global options`, `Prefer system libraries` may have to be toggled to either `Off` or `On` depending on your system. For most distros, start with `Off`. If you get library version errors during installation or you are on a rolling release distro, try `On`. After installation is successful, this may be reset and configured on a per-game basis if desired.
 
 ## Installation Steps
 1. Download our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) (distro packages listed [here](https://github.com/starcitizen-lug/lug-helper#installation))
