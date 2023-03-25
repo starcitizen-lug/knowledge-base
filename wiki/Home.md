@@ -22,7 +22,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > (Mar 11, 2023) **3.18 Mouse/Cursor Issues**  
 > - The 3.18 update may cause **mouse and view snapping issues** for some people using Wayland. We recommend installing Gamescope as a workaround or using Xorg.
 > - After installing Gamescope, enable it in Lutris: `Right click the game->Configure->System options->Enable Gamescope`. Then, set `Gamescope output resolution` to your monitor's native resolution, ie `1920x1080`.
-> - If it doesn't work, manual configuration may be required. Undo the above settings, then `Right click the game->Configure->System options->Command prefix`. Add the following to the text box, changing the width and height to match your desired resolution:
+> - If you're using a git version of gamescope newer than **3.11.51**, a new parameter is required. Undo the above settings, then `Right click the game->Configure->System options->Command prefix`. Add the following to the text box, changing the width and height to match your desired resolution:
 >   ```
 >   gamescope --force-grab-cursor -W 1920 -H 1080
 >   ```
