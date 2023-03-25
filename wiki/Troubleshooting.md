@@ -103,6 +103,10 @@
 - Make sure you have set your vm.max_map_count as described in the installation section.
 
 
+#### Game crashes with "Failed to initialize dependencies" error
+- Make sure the `SDL_VIDEODRIVER` environment variable is **NOT** set globally to `wayland` on your system.
+
+
 #### After playing for a while, game/lutris/wine crash, no errors
   - If there are no errors in your game logs, check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](Performance-Tuning#swap).
 
