@@ -59,7 +59,8 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > - The 530 series of drivers appears to make this problem worse. Switching to 525 may help, see [this thread](https://forums.developer.nvidia.com/t/vram-allocation-issues/239678).
 > - Other workarounds that some Penguins have had some success with:
 >   - Set `d3d11.cachedDynamicResources = "a"` in a `dxvk.conf` and export `DXVK_CONFIG_FILE=your/dxvk/config/location/dxvk.conf` when running the game.
->   - Limit the vram the game sees to free up some for other applications like OBS to use: `dxgi.maxDeviceMemory = 6144`
+>   - Limit the vram the game sees to free up some for other applications like OBS to use:  
+>     `dxgi.maxDeviceMemory = 6144`
 
 > (Jan 27, 2023) **Required DXVK version**
 > - DXVK 2.1 may resolve issues Penguins had with previous versions of DXVK and may perform better without async.
