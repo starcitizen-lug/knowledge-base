@@ -54,13 +54,9 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 #### Nvidia News
 
-> (March 28, 2023) **Severe frame drops on 3.18**
+> (March 31, 2023) **Severe frame drops on 3.18**
 > - Some Penguins are seeing VRAM exhaustion problems on nvidia cards and 3.18. CIG has released a hotfix that fixes a vram leak, but some are still experiencing issues. Keep an eye on our Discord tech support channel, but no complete solutions have been found just yet besides switching to AMD.
-> - The 530 series of drivers appears to make this problem worse. Switching to 525 may help, see [this thread](https://forums.developer.nvidia.com/t/vram-allocation-issues/239678).
-> - Other workarounds that some Penguins have had some success with:
->   - Set `d3d11.cachedDynamicResources = "a"` in a `dxvk.conf` and export `DXVK_CONFIG_FILE=your/dxvk/config/location/dxvk.conf` when running the game.
->   - Limit the vram the game sees to free up some for other applications like OBS to use:  
->     `dxgi.maxDeviceMemory = 6144`
+> - See our [troubleshooting page](Troubleshooting#severe-frame-drops) for possible workarounds.
 
 > (Jan 27, 2023) **Required DXVK version**
 > - DXVK 2.1 may resolve issues Penguins had with previous versions of DXVK and may perform better without async.
