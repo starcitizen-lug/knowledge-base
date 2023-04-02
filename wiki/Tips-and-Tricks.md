@@ -17,10 +17,8 @@ Other distributions we suggest avoiding due to frequent package incompatibilitie
 
 
 ## Head tracking using Opentrack
-We have a custom build of Opentrack designed to work natively with Star Citizen and Lutris. It is available [here](https://github.com/Priton-CE/opentrack-StarCitizen).  
-Note: Our patches have been merged upstream and will be available in the next full release of Opentrack! 🎉
+As of v2023.1.0, Opentrack contains the fixes needed to work with Star Citizen. After installing it, use the following configuration:
 
-After installing it, use the following configuration:
 1. Select `Wine` in the Output dropdown
 2. Click the `Configure` button next to it
 3. Under `Wine variant`, select the `Wine` radio button and then choose the Wine version or Lutris Runner you're using with Star Citizen
