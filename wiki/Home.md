@@ -52,6 +52,10 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > ```
 
 
+#### General News
+> (April 13, 2023) **Retro Graphics**
+> - MangoHud v0.6.8+r140 has a bug that can cause retro-looking graphics. To fix, upgrade to v0.6.9 or later.
+
 #### Nvidia News
 
 > (March 31, 2023) **Severe frame drops on 3.18**
