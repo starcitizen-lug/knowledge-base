@@ -4,6 +4,7 @@
 ## Troubleshooting Steps
 
 - Make sure our [LUG Helper](https://github.com/starcitizen-lug/lug-helper)'s Preflight Check passes all checks
+- Make sure all prerequisites from the [Quick Start Guide](Quick-Start-Guide) are satisfied on your system
 - Check Lutris logs by clicking the arrow beside the play button:  
   ![Screenshot from 2023-04-15 14-09-40](https://user-images.githubusercontent.com/3657071/232246219-8d713782-2d22-474c-a350-921e4af430af.png)
 - Run Lutris in debug mode to see more verbose logging. Native: `lutris -d` Flatpak: `flatpak run net.lutris.Lutris -d`
