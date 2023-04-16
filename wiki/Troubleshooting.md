@@ -233,7 +233,7 @@
 
 ## 🕹 Controller Issues
 
-- See our sticks, throttles, and pedals [Troubleshooting Page](Sticks,-Throttles,-&-Pedals.md#troubleshooting)
+- See our sticks, throttles, and pedals [Troubleshooting Page](Sticks,-Throttles,-&-Pedals#troubleshooting)
 
 ***
 
