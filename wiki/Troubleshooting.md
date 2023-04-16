@@ -238,6 +238,8 @@
     - Right click the game -> Configure -> Runner options -> Autoconfigure joypads
 - Joysticks can be configured manually in the wine joystick control panel
     - Click the arrow next to the wine glass button -> Wine Control Panel -> Game Controllers
+- Try disabling the Lutris Runtime
+    - Right click the game -> Configure -> System options -> Disable Lutris Runtime
 
 
 #### Some of your joystick axis aren't recognized / don't map
