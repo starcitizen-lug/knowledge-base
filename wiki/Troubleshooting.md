@@ -11,9 +11,6 @@
 - Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) and the list of common issues below
 - Ask for help on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)
 
-#### Important System Settings
-
-- Make sure the `SDL_VIDEODRIVER` environment variable is **NOT** set globally to `wayland` on your system. This causes incompatibilities with many games. If it is, simply unset it.
 
 ### Contents
 💾 [Install & Update Problems](#-install--update-problems)  
@@ -176,6 +173,10 @@
 - Check that the `Vulkan ICD loader` is not set to an integrated gpu (ie, Intel)
    - Right click the game -> Configure -> System options -> Vulkan ICD loader
 - Also make sure your GPU drivers (Mesa/nvidia) are up to date and DXVK is enabled/updated.
+
+
+#### Failed to initialize dependencies error
+- Make sure the `SDL_VIDEODRIVER` environment variable is **NOT** set globally to `wayland` on your system. This causes incompatibilities with many games. If it is, simply unset it.
 
 
 #### Black or flickering window, possible crash with errors 15006 or 30007
