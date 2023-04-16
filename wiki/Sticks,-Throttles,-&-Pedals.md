@@ -111,7 +111,18 @@ ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
 
 # Troubleshooting
 
-### Rudder pedals
+### Some of your joysticks disappear / aren't recognized in the game
+- If you are using Lutris, make sure "Autoconfigure joypads" is turned off in the game settings for Lutris
+    - Right click the game -> Configure -> Runner options -> Autoconfigure joypads
+- Joysticks can be configured manually in the wine joystick control panel
+    - Click the arrow next to the wine glass button -> Wine Control Panel -> Game Controllers
+- Try disabling the Lutris Runtime
+    - Right click the game -> Configure -> System options -> Disable Lutris Runtime
+
+### Some of your joystick axis aren't recognized / don't map
+- Check that the game has not set the deadzone for this axis to 100%
+
+### Rudder pedals not recognized
 If your pedals aren't being recognized by Star Citizen but work on Linux, it may be that it has been classified as something else than rudder pedals. This often happens because there are no buttons, and various OS functions assume it might be an accelerometer or similar.
 
 There are two possible workarounds for this:
