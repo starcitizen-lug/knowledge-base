@@ -16,7 +16,7 @@
 💾 [Install & Update Problems](#-install--update-problems)  
 💥 [Crashes](#-crashes)  
 🧊 [Freezes](#-freezes)  
-🤪 [Unexpected Behavior (sometimes also crashes)](#-unexpected-behavior-sometimes-also-crashes))  
+🤪 [Unexpected Behavior (sometimes also crashes)](#-unexpected-behavior-sometimes-also-crashes)  
 💚 [Nvidia](#-nvidia)  
 ❤️ [AMD](#-amd)  
 🕹️ [Controller Issues](#-controller-issues)  
