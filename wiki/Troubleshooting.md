@@ -43,6 +43,10 @@
 - Re-check your EAC workaround. Our [Helper](https://github.com/starcitizen-lug/lug-helper) can check it for you, or see the [manual instructions](Tips-and-Tricks#easy-anti-cheat-workaround) on our wiki.
 
 
+#### Warning: Downloading [exe file] failed
+- If you get download failed errors during installation for components such as `arial32.exe`, try toggling `Prefer system libraries` in Lutris to `On`.
+
+
 #### Installing Star Citizen on an NTFS-formatted drive
 - See: https://github.com/ValveSoftware/Proton/wiki/Using-a-NTFS-disk-with-Linux-and-Windows
 
