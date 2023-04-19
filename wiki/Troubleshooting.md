@@ -212,7 +212,7 @@
 - Some Penguins are seeing VRAM exhaustion problems on nvidia cards. It appears to be driver related and does not seem to affect AMD cards.
 - The 530 series of drivers appears to make this problem worse. Switching to 525 may help, see [this thread](https://forums.developer.nvidia.com/t/vram-allocation-issues/239678/20).
 - Other workarounds that some Penguins have had some success with:
-   - Set `d3d11.cachedDynamicResources = "a"` in a `dxvk.conf` and export `DXVK_CONFIG_FILE=your/dxvk/config/location/dxvk.conf` when running the game. If using Lutris, configure it as a new environment variable in the game's settings.
+   - Set `d3d11.cachedDynamicResources = "a"` in a `dxvk.conf` file then export `DXVK_CONFIG_FILE=your/dxvk/config/location/dxvk.conf` when running the game. If using Lutris, configure it as a new environment variable in the game's settings.
    - If you still have issues or are running applications like OBS, you may also have to limit the vram the game sees to free up some vram for other applications:
      `dxgi.maxDeviceMemory = 6144`
 
