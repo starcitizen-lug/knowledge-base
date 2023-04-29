@@ -1,7 +1,7 @@
 ## Prerequisites
 New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 
-1. Install wine following the instructions for your distro on the [WineHQ website](https://wiki.winehq.org/Category:Distributions). If your distro provides an up to date version of wine, you may install from its repos instead. See the [WineHQ Main Page](https://www.winehq.org/) for current versions.
+1. Install wine following the instructions for your distro on the [WineHQ website](https://wiki.winehq.org/Category:Distributions). **If your distro provides an up to date version of wine** (ie. Arch), you may install from its repos instead. See the [WineHQ Main Page](https://www.winehq.org/) for current versions.
 2. Install [32 bit drivers](Troubleshooting#-32bit-drivers) for your graphics card.
 3. Install [Lutris **v0.5.11**](https://lutris.net/downloads/) or newer and launch it once before installing Star Citizen to trigger its automatic winetricks dependency download. **Note**: We do not recommend running git builds of Lutris.
 4. In Lutris' `Preferences->Global options`, `Prefer system libraries` may have to be toggled to either `Off` or `On` depending on your system. For most distros, start with `Off`. If you get library version errors during installation or you are on a rolling release distro, try `On`. After installation is successful, this may be reset and configured on a per-game basis if desired.
