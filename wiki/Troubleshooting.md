@@ -167,7 +167,7 @@
 
 
 #### No sound in game
-- Penguins on rolling release distributions (ie. Arch, Manjaro) may need to set `Prefer System Libraries` in Lutris to `ON`.
+- Depending on your distribution, you may need to set `Prefer System Libraries` in Lutris to `ON`.
 - If you have sound in the launcher but not in the game, launch the game and go to your audio settings, then enable "Play sound while game is in background".
 
 
