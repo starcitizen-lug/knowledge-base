@@ -54,6 +54,9 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 
 #### General News
+> (May 8, 2023) **Wine 8**
+> - Wine 7.x runners may not be compatible with Wine 8.x runners. If you experience inexplicable frame drops, crashes, or other issues after switching to an 8.x runner, try re-creating your wine prefix. You may copy out the `data.p4k` file beforehand to avoid a complete game redownload.
+
 > (April 13, 2023) **Retro Graphics**
 > - MangoHud v0.6.8+r140 has a bug that can cause retro-looking graphics. To fix, upgrade to v0.6.9 or later.
 
