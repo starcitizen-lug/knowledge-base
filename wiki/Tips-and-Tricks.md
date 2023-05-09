@@ -13,7 +13,7 @@ We do not recommend 👎 most gaming-focused distributions as many of our Pengui
 - We especially suggest avoiding PopOS and Drauger OS due to irresolvable compatibility issues with the required 32bit packages in their repos.
 - Nobara generally works fine, except it packages the git release of Lutris and some other packages by default which can be unstable and potentially crashy. Some of our Penguins have also experienced issues upgrading to new major releases.
 
-Other distributions we suggest avoiding 👎 due to frequent package incompatibilities, old dependencies, and update issues are: Manjarno, Mint, Debian Stable, and openSUSE Leap.
+Other distributions we suggest avoiding 👎 due to frequent package incompatibilities, old dependencies, and update issues are: Manjarno, Ubuntu LTS, Mint, Debian Stable, and openSUSE Leap.
 
 
 ## Head tracking using Opentrack
