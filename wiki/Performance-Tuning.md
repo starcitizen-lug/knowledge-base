@@ -52,7 +52,7 @@ An fsync-enabled Kernel can help improve smoothness while shaders are being comp
 
 Zram stores swap in RAM using on-the-fly compression which can improve game performance when memory utilization gets high.
 - For systems with 16GB RAM, we recommend all 16GB configured for zram with at least an 8GB swap file.
-- For systems with 32GB RAM or more, zram can be used in place of a swap file as long as there is at least a total of 40GB combined RAM + swap.
+- For systems with 32GB RAM or more, zram can be used in place of a swap file by configuring all 32GB for zram.
 
 See the [Arch Wiki](https://wiki.archlinux.org/title/Zram) for configuration instructions that should work for most distros.
 
