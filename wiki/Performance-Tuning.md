@@ -58,11 +58,11 @@ Zram stores swap in RAM using on-the-fly compression which can improve game perf
 
 See the [Arch Wiki](https://wiki.archlinux.org/title/Zram) for configuration instructions that should work for most distros.
 
-If you prefer not to use zram, swap files will need to be [configured](https://wiki.archlinux.org/title/Swap#Swap_file). We recommend configuring at least a combined 40GB RAM + swap:
+If you prefer not to use zram, a swap file will need to be [configured](https://wiki.archlinux.org/title/Swap#Swap_file). We recommend configuring at least a combined 40GB RAM + swap:
 - For 16GB RAM: 24GB swap
 - For 32GB RAM: 8GB swap
 
-More swap should be configured if you intend to run a few background applications while playing the game.
+More swap should be configured if you intend to run background applications while playing the game.
 
 ## Steam Deck
 
