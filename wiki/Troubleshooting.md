@@ -109,6 +109,8 @@
 ![](https://matrix-client.matrix.org/_matrix/media/r0/download/matrix.org/zKGOXxMOsktqYKqevqeSvYSw)  
 - In the Wine configuration, under the `Applications` tab, change `Windows version` to `Windows 8.1`
 
+#### Game crashes with "create_view: Assertion `!((UINT_PTR)base & page_mask)' failed."
+- Make sure you have set your vm.max_map_count as described in the installation section.
 
 #### Game crashes with " 00adntdll:FILE_GetNtStatus Converting errno 12 to STATUS_UNSUCCESSFUL "
 - Make sure you have set your vm.max_map_count as described in the installation section.
@@ -124,10 +126,6 @@
 
 #### Game crashes when going to Lorville / ArcCorp or crashes often when launching
 - Make sure you followed the guide to install Wine's dependencies and set your vm.max_map_count as described in the installation section.
-
-
-#### Game crashes with "create_view:  l'assertion « !((UINT_PTR)base & page_mask) » a échoué."
-  - Make sure you have set your vm.max_map_count as described in the installation section.
 
 ***
 
