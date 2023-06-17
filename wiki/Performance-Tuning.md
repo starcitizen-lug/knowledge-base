@@ -4,8 +4,8 @@ We have a helper script which can help you manage and optimize Star Citizen on L
 https://github.com/starcitizen-lug/lug-helper
 
 ## DXVK Async
-Using an async DXVK can greatly reduce stuttering.  
-We recommend https://github.com/Sporif/dxvk-async/ (Nvidia users, see our [latest news](https://github.com/starcitizen-lug/information-howtos/wiki#news))  
+Using an async DXVK can greatly reduce stuttering for some hardware configurations.  
+For AMD users, we recommend https://gitlab.com/Ph42oN/dxvk-gplasync (Nvidia users, see our [latest news](https://github.com/starcitizen-lug/information-howtos/wiki#news))  
 You can manually download it into the Lutris dxvk directory or use the Helper to automatically install it  
 After downloading, be sure to set the environment variable `DXVK_ASYNC=1` and enable the downloaded version in the Lutris runner options.
 1. `Right click the game->Configure->System options->Environment variables`. Add `DXVK_ASYNC` as the key and `1` as the value.
