@@ -1,5 +1,7 @@
 ## Recommended Distros
 We strongly recommend choosing a distro that has up-to-date packages and a solid maintenance reputation.  
+*LTS releases and out of date distros are likely to cause many headaches.*  
+
 The following distributions make our 👍 list and generally work well with Star Citizen:
 - Arch
 - EndeavourOS
@@ -7,13 +9,13 @@ The following distributions make our 👍 list and generally work well with Star
 - openSUSE Tumbleweed
 - Gentoo
 - Debian Testing
-- Ubuntu (usually okay, but *only* the very latest release)
+- Ubuntu *(only the latest non-LTS release)*
 
 We do not recommend 👎 most gaming-focused distributions as many of our Penguins have had issues installing the required dependencies to make Star Citizen run. They generally have only an individual or a very small team backing them and, at least where Star Citizen is concerned, do not live up to the promise.  
 - We especially suggest avoiding PopOS and Drauger OS due to irresolvable compatibility issues with the required 32bit packages in their repos.
 - Nobara generally works fine, except it packages the git release of Lutris and some other packages by default which can be unstable and potentially crashy. Some of our Penguins have also experienced issues upgrading to new major releases.
 
-Other distributions we suggest avoiding 👎 due to frequent package incompatibilities, old dependencies, and update issues are: Manjarno, Ubuntu LTS, Mint, Debian Stable, and openSUSE Leap.
+Other distributions we suggest avoiding 👎 due to frequent package incompatibilities, old dependencies, and update issues are: Manjarno, Ubuntu LTS, Mint (based on Ubuntu LTS), Debian Stable, and openSUSE Leap.
 
 
 ## Head tracking using Opentrack
