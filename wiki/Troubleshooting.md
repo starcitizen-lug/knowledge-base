@@ -165,6 +165,21 @@
 
 ## 🤪 Unexpected Behavior (sometimes also crashes)
 
+#### Mouse/Cursor issues and view snapping in interaction mode
+- The 3.18 update caused mouse and view snapping issues for mose Penguins using Wayland. We recommend installing Gamescope as a workaround or using Xorg.
+- **Note for Nvidia users:** Gamescope may not work on your hardware. See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
+- After installing Gamescope, enable it in Lutris: `Right click the game->Configure->System options->Enable Gamescope`. Then, set `Gamescope output resolution` to your monitor's native resolution, ie `1920x1080`.
+- If you're using a version of gamescope newer than **3.11.51**, an additional parameter is required.  
+  Undo the above settings, then `Right click the game->Configure->System options->Command prefix`.  
+  Add the following to the text box, changing the width and height to match your desired resolution:
+  ```
+  gamescope --force-grab-cursor -W 1920 -H 1080
+  ```
+- Other arguments that may be required depending on your system: `-f` if it doesn't launch fullscreen, `-g` to grab keyboard
+- Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
+- If this doesn't work, you will need to switch to Xorg instead of Wayland.
+
+
 #### Empty launcher
 - Log out log back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
 
