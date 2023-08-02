@@ -33,7 +33,6 @@
 #### Launcher hangs during installation
 - In Lutris, try setting `Prefer system libraries` to `Off` globally before installation. After installation, this can be reset and configured only for Star Citizen if desired.
 
-
 #### Install button does nothing
 - ⚠️ Launch Lutris in debug mode (`lutris -d`) and look for a `KeyError: 'contentstatsid'` error.
 - If the error is present, check your Lutris version. This is fixed in v0.5.11. https://lutris.net/downloads
@@ -45,6 +44,10 @@
 
 #### Warning: Downloading [exe file] failed
 - If you get download failed errors during installation for components such as `arial32.exe`, try toggling `Prefer system libraries` in Lutris to `On`.
+
+
+#### Library version errors during installation
+- If using a rolling release or bleeding edge distro, try toggling `Prefer system libraries` in Lutris to `On`.
 
 
 #### RSI Launcher doesn't auto-update
