@@ -65,7 +65,7 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
 
 
 ## Easy Anti-Cheat Workaround
-**Automatic Configuration**
+#### Automatic Configuration
 
 _Using a GloriousEggroll runner_
 
@@ -95,7 +95,7 @@ If you prefer not to apply the workaround globally, a json file can be modified 
 * Enable `Wait for pre-launch script completion`
 * Additional pre-launch script commands can be run using semicolons: `/usr/bin/sh -c "command1; command2; etc"`
 
-**Manual Configuration**
+#### Manual Configuration
 
 _/etc/hosts method:_
 
