@@ -61,6 +61,8 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > - MangoHud v0.6.8+r140 has a bug that can cause retro-looking graphics. To fix, upgrade to v0.6.9 or later.
 
 #### Nvidia News
+> (Aug 10, 2023) **Driver v535.98 breaks vulkan, steam, and/or everything**
+> - Downgrade to v535.86 to fix.
 
 > (March 31, 2023) **Severe frame drops on 3.18**
 > - Some Penguins are seeing VRAM exhaustion problems on nvidia cards and 3.18. CIG has released a hotfix that fixes a vram leak, but some are still experiencing issues. Keep an eye on our Discord tech support channel, but no complete solutions have been found just yet besides switching to AMD.
