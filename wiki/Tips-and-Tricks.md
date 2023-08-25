@@ -17,6 +17,18 @@ We do not recommend 👎 most gaming-focused distributions as many of our Pengui
 
 Other distributions we suggest avoiding 👎 due to frequent package incompatibilities, old dependencies, and update issues are: Manjarno, Ubuntu LTS, Mint (based on Ubuntu LTS), Debian Stable, and openSUSE Leap.
 
+## NixOS tweaks
+To set `vm.max_map_count` and `fs.file-max` set
+
+```nix
+# ... your NixOS Config ...
+boot.kernel.sysctl = {
+  "vm.max_map_count" = 16777216;
+  "fs.file-max" = 524288;
+};
+```
+EAC configuration can be found [below](#easy-anti-cheat-workaround).
+
 
 ## Head tracking using Opentrack
 As of v2023.1.0, Opentrack contains the fixes needed to work with Star Citizen. After installing it, use the following configuration:
@@ -83,7 +95,6 @@ _/etc/hosts method:_
 
 This applies the workaround globally at the system level by modifying /etc/hosts
 * Launch the [LUG Helper](https://github.com/starcitizen-lug/lug-helper) and select `Deploy Easy Anti-cheat Workaround`
-
 _json config method:_
 
 If you prefer not to apply the workaround globally, a json file can be modified each time the game starts. Launcher updates/verifies will revert this change. Close and re-launch the game to re-apply it.
@@ -103,6 +114,10 @@ _/etc/hosts method:_
 `127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround`
 * Delete the following directory:
 `$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat`
+
+_NixOS method:_
+`"127.0.0.1 modules-cdn.eac-prod.on.epicgames.com"` to [`networking.extraHosts`](https://search.nixos.org/options?channel=unstable&show=networking.extraHosts&from=0&size=50&sort=relevance&type=packages&query=networking.extraHosts)
+
 
 _json config method:_
 
