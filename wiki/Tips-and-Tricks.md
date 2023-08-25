@@ -27,7 +27,7 @@ boot.kernel.sysctl = {
   "fs.file-max" = 524288;
 };
 ```
-EAC configuration can be found [below](#easy-anti-cheat-workaround).
+EAC configuration can be found [below](#manual-configuration).
 
 
 ## Head tracking using Opentrack
@@ -115,15 +115,15 @@ _/etc/hosts method:_
 * Delete the following directory:
 `$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat`
 
-_NixOS method:_
-`"127.0.0.1 modules-cdn.eac-prod.on.epicgames.com"` to [`networking.extraHosts`](https://search.nixos.org/options?channel=unstable&show=networking.extraHosts&from=0&size=50&sort=relevance&type=packages&query=networking.extraHosts)
-
-
 _json config method:_
 
 * Edit `$WINEPREFIX/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/EasyAntiCheat/Settings.json` and modify the value of `productid`, `sandboxid`, `clientid`, or `deploymentid` to any invalid string, ie `linux-eac-workaround`.
 * Delete the following directory:
 `$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat`
+
+_NixOS method:_
+
+* Add `"127.0.0.1 modules-cdn.eac-prod.on.epicgames.com"` to [`networking.extraHosts`](https://search.nixos.org/options?channel=unstable&show=networking.extraHosts&from=0&size=50&sort=relevance&type=packages&query=networking.extraHosts)
 
 
 ## Lutris Pre-launch and Post-exit Scripts
