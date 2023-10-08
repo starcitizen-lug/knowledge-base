@@ -27,7 +27,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 >   Undo the above settings, then `Right click the game->Configure->System options->Command prefix`.  
 >   Add the following to the text box, changing the width and height to match your desired resolution:
 >   ```
->   gamescope --force-grab-cursor -W 1920 -H 1080
+>   gamescope --force-grab-cursor -W 1920 -H 1080 --
 >   ```
 > - Other arguments that may be required depending on your system: `-f` if it doesn't launch fullscreen, `-g` to grab keyboard
 > - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
