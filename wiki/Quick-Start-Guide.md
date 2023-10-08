@@ -18,9 +18,6 @@ New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-di
 9. Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for important updates. Especially, Nvidia gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 10. Run the launcher again and start the game. See you in the 'verse!
 
-## Video Guide
-Video guides of the above are available for [AMD](https://www.youtube.com/watch?v=cHGtwIH5ocI) and [Nvidia](https://www.youtube.com/watch?v=QVVPv12RGtk) by Grumpy
-
 ## Important Information
 > Questions or Problems? Check our [Troubleshooting Guide](Troubleshooting) or ask for help in one of our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)!
 
