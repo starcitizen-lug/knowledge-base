@@ -62,6 +62,10 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > - MangoHud v0.6.8+r140 has a bug that can cause retro-looking graphics. To fix, upgrade to v0.6.9 or later.
 
 #### Nvidia News
+> (Oct 9, 2023) **Crash when taking shield damage in-game***
+> - There is a shield rendering bug that causes the game to crash. It seems to affect 1000 series cards.
+> - There is currently no known workaround other than switching cards. We recommend AMD.
+
 > (Aug 10, 2023) **Driver v535.98 may break vulkan, steam, and/or everything**
 > - If you are affected by this, downgrade to v535.86 to fix.
 
