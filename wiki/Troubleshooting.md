@@ -173,8 +173,8 @@
 - **Note for Nvidia users:** Gamescope may not work on your hardware. See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
 - A possible fix to get Gamescope working on Nvidia: `Right click the game->Configure->System options->Game execution->Environment variables` then select `__GL_THREADED_OPTIMIZATIONS` and click `Delete` located beneath the `Environment variables` table.
 - After installing Gamescope, enable it in Lutris: `Right click the game->Configure->System options->Enable Gamescope`. Then, set `Gamescope output resolution` to your monitor's native resolution, ie `1920x1080`.
-- If you're using a version of gamescope newer than **3.11.51**, an additional setting is required. Set `Relative Mouse Mode` to on
-- Other settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
+- If you're using a version of gamescope newer than **3.11.51**, an additional Gamescope setting is required. Set `Relative Mouse Mode` to on
+- Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
 - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
 - If this doesn't work, you will need to switch to Xorg instead of Wayland.
 
