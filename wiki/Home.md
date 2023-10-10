@@ -20,19 +20,14 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 #### Game Updates
 
 > (Mar 11, 2023) **3.18 Mouse/Cursor Issues**  
-> - The 3.18 update may cause **mouse and view snapping issues** for some people using Wayland. We recommend installing Gamescope as a workaround or using Xorg.
-> - Note for Nvidia users: Gamescope may not work on your hardware. See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
+> - The 3.18 update caused mouse and view snapping issues for most Penguins using Wayland. We recommend installing Gamescope as a workaround or using Xorg.
+> - **Note for Nvidia users:** Gamescope may not work on your hardware. See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
 > - A possible fix to get Gamescope working on Nvidia: `Right click the game->Configure->System options->Game execution->Environment variables` then select `__GL_THREADED_OPTIMIZATIONS` and click `Delete` located beneath the `Environment variables` table.
-> - After installing Gamescope, enable it in Lutris: `Right click the game->Configure->System options->Enable Gamescope`. Then, set `Gamescope output resolution` to your monitor's native resolution, ie `1920x1080`.
-> - If you're using a git version of gamescope newer than **3.11.51**, an additional parameter is required.  
->   Undo the above settings, then `Right click the game->Configure->System options->Command prefix`.  
->   Add the following to the text box, changing the width and height to match your desired resolution:
->   ```
->   gamescope --force-grab-cursor -W 1920 -H 1080 --
->   ```
-> - Other arguments that may be required depending on your system: `-f` if it doesn't launch fullscreen, `-g` to grab keyboard
+> - After installing Gamescope, enable it in Lutris: `Right click the game->Configure->System options->Gamescope->Enable Gamescope`. Then, set `Output Resolution` to your monitor's native resolution, ie `1920x1080`.
+> - If you're using a version of gamescope newer than **3.11.51**, an additional Gamescope setting is required. Set `Relative Mouse Mode` to on
+> - Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
 > - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
-> - If this doesn't work, you may need to switch to Xorg and reboot.
+> - If this doesn't work, you will need to switch to Xorg instead of Wayland.
 
 > (Jan 27, 2023) **RSI Launcher v1.6.2 JavaScript error**  
 >
