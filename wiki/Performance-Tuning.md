@@ -64,11 +64,11 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 
 More swap should be configured if you intend to run background applications while playing the game.
 
-## Picom Compositor
+## Picom/Compton Compositors
 
-If you use the Picom compositor, it may cause a laggy experience despite having high framerates. We recommend disabling the compositor. In Lutris:
+If you use the Picom or Compton compositor, it may cause a laggy experience despite having high framerates. We recommend disabling the compositor. In Lutris:
 1. `Right click the game->Configure->System options`. Turn on the option to `Disable desktop effects`.
-2. If this doesn't work, it may be due to a [bug in Lutris](https://github.com/lutris/agora/issues/35). You can use the `Pre-launch` and `Post-exit` script fields in the `System options` tab to run a script that kills picom and then restarts it.
+2. If this doesn't work, it may be due to a [bug in Lutris](https://github.com/lutris/agora/issues/35). You can use the `Pre-launch` and `Post-exit` script fields in the `System options` tab to run a script that kills picom/compton and then restarts it.
 
 ## Steam Deck
 
