@@ -19,6 +19,12 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 #### Game Updates
 
+> (Oct 24, 2023) **Installer Error Code 256**  
+> - Inspect install log for failed winetricks downloads or sha256 mismatch and note the URL of the files being downloaded and its destination in winetricks' cache
+> - Download each file manually to its destination in winetricks' cache
+> - Use winetricks to ensure that the prefix is set to Win10 mode
+> - Proceed with lug-helper installer
+
 > (Mar 11, 2023) **3.18 Mouse/Cursor Issues**  
 > - The 3.18 update caused mouse and view snapping issues for most Penguins using Wayland. We recommend installing Gamescope as a workaround or using Xorg.
 > - **Note for Nvidia users:** Gamescope may not work on your hardware. See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
