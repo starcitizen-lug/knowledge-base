@@ -63,9 +63,6 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > (May 8, 2023) **Wine 8**
 > - Wine 8.x runners may not be compatible with prefixes created by previous Wine 7.x runners. If you experience inexplicable frame drops, crashes, or other issues after switching to an 8.x runner, try re-creating your wine prefix. You may copy out the `data.p4k` file beforehand to avoid a complete game redownload.
 
-> (April 13, 2023) **Retro Graphics**
-> - MangoHud v0.6.8+r140 has a bug that can cause retro-looking graphics. To fix, upgrade to v0.6.9 or later.
-
 #### Nvidia News
 > (Oct 9, 2023) **Crash when taking shield damage in-game***
 > - There is a shield rendering bug that causes the game to crash. It seems to affect 1000 series cards.
@@ -73,10 +70,6 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 > (Aug 10, 2023) **Driver v535.98 may break vulkan, steam, and/or everything**
 > - If you are affected by this, downgrade to v535.86 to fix.
-
-> (March 31, 2023) **Severe frame drops on 3.18**
-> - Some Penguins are seeing VRAM exhaustion problems on nvidia cards and 3.18. CIG has released a hotfix that fixes a vram leak, but some are still experiencing issues. Keep an eye on our Discord tech support channel, but no complete solutions have been found just yet besides switching to AMD.
-> - See our [troubleshooting page](Troubleshooting#severe-frame-drops) for possible workarounds.
 
 > (Jan 27, 2023) **Required DXVK version**
 > - DXVK 2.1 may resolve issues Penguins had with previous versions of DXVK and may perform better without async.
