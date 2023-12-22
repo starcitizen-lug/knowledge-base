@@ -44,7 +44,8 @@ Launch Star Citizen and configure its head tracking options under `Comms, FOIP &
 1. Set `Head Tracking - General - Source` to `TrackIR`
 2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`
 
-*Note: May not work with Flatpak Lutris*  
+*Notes:*  
+*May not work with Flatpak Lutris*  
 *If compiling from source, make sure `SDK_WINE` is set*
 
 #### Head Tracking Hardware
