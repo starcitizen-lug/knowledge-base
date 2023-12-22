@@ -44,7 +44,8 @@ Launch Star Citizen and configure its head tracking options under `Comms, FOIP &
 1. Set `Head Tracking - General - Source` to `TrackIR`
 2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`
 
-*Note: May not work with Flatpak Lutris*
+*Note: May not work with Flatpak Lutris*  
+*If compiling from source, make sure `SDK_WINE` is set*
 
 #### Head Tracking Hardware
 - Use your iPhone: Our Penguins tend to prefer the [Head Tracker app by John Yu](https://apps.apple.com/us/app/head-tracker/id1527710071). It works on iPhone X or later using the FaceID IR sensors and has a trial period to test it out. It costs $2.
