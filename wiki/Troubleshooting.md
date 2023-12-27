@@ -231,6 +231,10 @@
 #### Current known issues
 - See the Nvidia section of our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for the ways in which Nvidia is being special today.
 
+#### Crash when taking shield damage in-game
+- There is a shield rendering bug that causes the game to crash. It seems to affect 1000 series cards.
+- There is currently no known workaround other than switching cards. We recommend AMD.
+
 #### Popup saying your Nvidia graphics driver is out of date
 - Ignore or Disable DXVK NVAPI in Lutris.
   - Right click the game -> Configure -> Runner options -> Enable DXVK-NVAPI/DLSS (set to off)
