@@ -50,6 +50,12 @@
 - If using a rolling release or bleeding edge distro, try toggling `Prefer system libraries` in Lutris to `On`.
 
 
+#### Lutris error: *Command exited with code 512*
+- We suspect this is a Lutris bug and fixes seem inconsistent.
+- Try going to Lutris Preferences -> Sources, and toggle either `Lutris` or `Local` and then toggle it back again.
+- If you have an old install, try importing that into Lutris.
+
+
 #### RSI Launcher doesn't auto-update
 - GE runners seem to prevent auto-updates. Temporarily switching to standard wine may allow the update to install
 - Alternatively, [download](https://robertsspaceindustries.com/download) the latest launcher and install it by selecting `Run EXE inside Wine prefix` in Lutris:  
