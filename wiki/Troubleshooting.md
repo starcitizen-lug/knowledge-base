@@ -245,6 +245,10 @@
 - Ignore or Disable DXVK NVAPI in Lutris.
   - Right click the game -> Configure -> Runner options -> Enable DXVK-NVAPI/DLSS (set to off)
 
+#### Game fails to start after clicking Launch Game on laptops with Nvidia GPU + intel graphics
+- Errors may include `DXVAVDA fatal error: could not LoadLibrary: msvproc.dll` or `Major opcode of failed request:  156 (NV-GLX)`
+- Try removing all optimus/prime env vars for render offload and set the Vulkan ICD Loader to the Nvidia GPU.
+
 #### Severe frame drops
 - Some Penguins are seeing VRAM exhaustion problems on nvidia cards. It appears to be driver related and does not seem to affect AMD cards.
 - The 530 series of drivers appears to make this problem worse. Switching to 525 may help, see [this thread](https://forums.developer.nvidia.com/t/vram-allocation-issues/239678/20).
