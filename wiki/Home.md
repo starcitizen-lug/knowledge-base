@@ -25,16 +25,6 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > - Use winetricks to ensure that the prefix is set to Win10 mode
 > - Proceed with lug-helper installer
 
-> (Mar 11, 2023) **3.18+ Mouse/Cursor Issues**  
-> - The 3.18 update caused mouse and view snapping issues for most Penguins using Wayland. We recommend installing Gamescope as a workaround or using Xorg.
-> - **Note for Nvidia users:** Gamescope may not work on your hardware. See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
-> - A possible fix to get Gamescope working on Nvidia: `Right click the game->Configure->System options->Game execution->Environment variables` then find or create `__GL_THREADED_OPTIMIZATIONS` in the left column and change/set it to `0` in the right column.
-> - After installing Gamescope, enable it in Lutris: `Right click the game->Configure->System options->Gamescope->Enable Gamescope`. Then, set `Output Resolution` to your monitor's native resolution, ie `1920x1080`.
-> - If you're using a version of gamescope newer than **3.11.51**, an additional Gamescope setting is required. Set `Relative Mouse Mode` to on
-> - Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
-> - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
-> - If this doesn't work, you will need to switch to Xorg instead of Wayland.
-
 > (Jan 27, 2023) **Fresh installs fail to create needed directories**
 > - This has been resolved in the latest version of our [Helper](https://github.com/starcitizen-lug/lug-helper/releases) for new installs.
 > - For existing or manual installs, run the following command to create the necessary directory structure for both the LIVE and PTU environments. Adjust the wine prefix path if installing to a non-default location:  
