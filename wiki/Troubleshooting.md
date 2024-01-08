@@ -175,7 +175,7 @@
 ## 🤪 Unexpected Behavior (sometimes also crashes)
 
 #### Mouse/Cursor issues and view snapping in interaction mode
-- The 3.18 update caused mouse and view snapping issues for most Penguins using Wayland. We recommend installing Gamescope as a workaround or using Xorg.
+- The 3.18 update caused mouse and view snapping issues for most Penguins using Wayland + KDE. As a workaround, we recommend installing Gamescope, using Xorg, or switching to an alternate desktop environment.
 - **Note for Nvidia users:** Gamescope may not work on your hardware. See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
 - A possible fix to get Gamescope working on Nvidia: `Right click the game->Configure->System options->Game execution->Environment variables` then find or create `__GL_THREADED_OPTIMIZATIONS` in the left column and change/set it to `0` in the right column.
 - After installing Gamescope, enable it in Lutris: `Right click the game->Configure->System options->Gamescope->Enable Gamescope`. Then, set `Output Resolution` to your monitor's native resolution, ie `1920x1080`.
