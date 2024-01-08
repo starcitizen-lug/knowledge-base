@@ -1,12 +1,11 @@
 ## Prerequisites
+New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 
-1. A minimum of 16GB of RAM + 16GB swap. 32GB+ RAM recommended with less swap required the more RAM you have.
-2. A CPU that supports the AVX instruction set
-3. wine 8.1 or newer. Follow the instructions on the [WineHQ website](https://wiki.winehq.org/Category:Distributions)
-4. winetricks v20220411 or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
-5. dxvk-2.1 [or newer](https://github.com/doitsujin/dxvk)
-6. vm.max_map_count set to at least 16777216
-7. Hard open file descriptors limit set to at least 524288
+1. Install wine following the instructions for your distro on the [WineHQ website](https://wiki.winehq.org/Category:Distributions). **If your distro provides an up to date version of wine** (ie. Arch), you may install from its repos instead. See the [WineHQ Main Page](https://www.winehq.org/) for current versions.
+2. Install winetricks v20220411 or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
+3. Install dxvk-2.1 [or newer](https://github.com/doitsujin/dxvk) and configure it for your distribution
+4. Set `vm.max_map_count` on your system to at least `16777216`
+5. Set the Hard open file descriptors limit on your system to at least `524288`
 
 **To check and set vm.max_map_count temporarily**
 ```
@@ -18,7 +17,7 @@ sudo sysctl -w vm.max_map_count=16777216 => To set it temporarily
 
 _Distributions using systemd: Manjaro / Antergos / Arch / Arch-based (probably) / Ubuntu (and probably derivatives) / Fedora_
 
-* Create a new drop-in config file: `/etc/sysctl.d/20-max_map_count.conf`
+* Create a new drop-in config file: `/etc/sysctl.d/20-starcitizen-max_map_count.conf`
 * Add the following line to the file: `vm.max_map_count = 16777216`
 * To reload it, run `sudo sysctl --system`
 
@@ -32,7 +31,7 @@ _Distributions that use sysctl.conf_
 
 _Distributions using systemd: Manjaro / Antergos / Arch / Arch-based (probably) / Ubuntu (and probably derivatives) / Fedora_
 
-* Create a new drop-in config file: `/etc/systemd/systemd.conf.d/filelimit.conf`
+* Create a new drop-in config file: `/etc/systemd/systemd.conf.d/20-starcitizen-filelimit.conf`
 * Add the following line to the file: `DefaultLimitNOFILE=524288`
 * To reload it, run `sudo systemctl daemon-reexec`
 
@@ -43,14 +42,14 @@ _Distributions that use /etc/security/limits.conf_
 
 ## Installing
 
-1. Install the necessary prerequisites
-2. Create your wine prefix: `WINEPREFIX=~/path/you/want/to/Star-Citizen winecfg`
+1. Install and configure the necessary prerequisites
+2. Create your wine prefix: `WINEPREFIX=~/path/you/want/to/starcitizen winecfg`
 3. In the window that pops up, select **Windows 10** as Windows version and click OK
 4. Run: `winetricks corefonts dxvk vcrun2017 win10`
-5. Then you can run the RSI installer as normal.
+5. Download and run the RSI installer
 6. You may need to create directory paths if the RSI installer is unable to do so:
 ```
-mkdir -p "/path/to/prefix/drive_c/Program Files/Roberts Space Industries/StarCitizen/"{LIVE,PTU}
+mkdir -p "/path/to/prefix/drive_c/Program Files/Roberts Space Industries/StarCitizen/"{LIVE,PTU,EPTU,TECH-PREVIEW}
 ```
 7. ONLY if you have black textures ingame, copy **d3dcompiler_47.dll** from the launcher directory to the games bin64/ directory, replacing the game's version.
 8. To use a custom wine runner, start the game/installer with `WINE=/path/to/runner/bin/wine`
