@@ -19,12 +19,6 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 #### Game Updates
 
-> (Oct 24, 2023) **Installer Error Code 256**  
-> - Inspect install log for failed winetricks downloads or sha256 mismatch and note the URL of the files being downloaded and its destination in winetricks' cache
-> - Download each file manually to its destination in winetricks' cache
-> - Use winetricks to ensure that the prefix is set to Win10 mode
-> - Proceed with lug-helper installer
-
 > (Jan 27, 2023) **Fresh installs fail to create needed directories**
 > - This has been resolved in the latest version of our [Helper](https://github.com/starcitizen-lug/lug-helper/releases) for new installs.
 > - For existing or manual installs, run the following command to create the necessary directory structure for both the LIVE and PTU environments. Adjust the wine prefix path if installing to a non-default location:  
@@ -34,9 +28,17 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 
 #### General News
+
 > (Nov 11, 2023) **Failed to Initialize Dependencies**
 > - If you are on a rolling release distro and using Gamescope, you may receive this error due to a bug in Gamescope v3.12.7. See [this Github issue](https://github.com/ValveSoftware/gamescope/issues/984) for more info.
 > - To fix: Install the git release of Gamescope or downgrade to 3.12.5 until the fix is released to stable.
+
+> (Oct 24, 2023) **Installer Error Code 256**
+> - Set "Prefer system libraries" to enabled in global lutris options
+> - Inspect install log for failed winetricks downloads or sha256 mismatch and note the URL of the files being downloaded and its destination in winetricks' cache
+> - Download each file manually to its destination in winetricks' cache
+> - Use winetricks to ensure that the prefix is set to Win10 mode
+> - Proceed with lug-helper installer
 
 > (May 8, 2023) **Wine 8**
 > - Wine 8.x runners may not be compatible with prefixes created by previous Wine 7.x runners. If you experience inexplicable frame drops, crashes, or other issues after switching to an 8.x runner, try re-creating your wine prefix. You may copy out the `data.p4k` file beforehand to avoid a complete game redownload.
