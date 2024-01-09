@@ -20,7 +20,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 #### Game Updates
 
 > (Jan 27, 2023) **Fresh installs fail to create needed directories**
-> - This has been resolved in the latest version of our [Helper](https://github.com/starcitizen-lug/lug-helper/releases) for new installs.
+> - This has been resolved in the latest version of our [Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) for new installs.
 > - For existing or manual installs, run the following command to create the necessary directory structure for both the LIVE and PTU environments. Adjust the wine prefix path if installing to a non-default location:  
 > ```
 > mkdir -p "/home/$USER/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/"{LIVE,PTU}
@@ -59,4 +59,4 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 #### Easy Anti-Cheat
 
 > (Feb 12, 2022) **Easy Anti-Cheat is live.**
-> - CIG is aware of the problem but there is still no ETA. There are currently no consequences that we are aware of for using the workaround, but CIG has suggested that eventually people will be kicked for tripping EAC. To apply the workaround, use the [LUG Helper](https://github.com/starcitizen-lug/lug-helper).
+> - CIG is aware of the problem but there is still no ETA. There are currently no consequences that we are aware of for using the workaround, but CIG has suggested that eventually people will be kicked for tripping EAC. The workaround is automatically configured for new installs through Lutris.
