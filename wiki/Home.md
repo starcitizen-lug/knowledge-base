@@ -29,6 +29,10 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 #### General News
 
+> (Jan 15, 2024) **Installer Error Code 256**
+> - Lutris version [5.15 had a critical bug](https://github.com/lutris/lutris/releases/tag/v0.5.16)  preventing successful installations of games
+> - To fix: update to Lutris 5.16
+
 > (Nov 11, 2023) **Failed to Initialize Dependencies**
 > - If you are on a rolling release distro and using Gamescope, you may receive this error due to a bug in Gamescope v3.12.7. See [this Github issue](https://github.com/ValveSoftware/gamescope/issues/984) for more info.
 > - To fix: Install the git release of Gamescope or downgrade to 3.12.5 until the fix is released to stable.
