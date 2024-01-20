@@ -32,7 +32,7 @@ EAC configuration can be found [below](#manual-configuration).
 
 
 ## Head tracking using Opentrack
-As of v2023.1.0, Opentrack contains the fixes needed to work with Star Citizen. After installing it, use the following configuration:
+Opentrack versions 2023.1.0 and later contain the fixes needed to work with Star Citizen. After installing it, use the following configuration:
 
 1. Select `Wine` in the Output dropdown
 2. Click the `Configure` button next to it
