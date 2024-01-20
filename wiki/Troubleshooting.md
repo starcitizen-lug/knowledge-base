@@ -57,7 +57,7 @@
 
 
 #### RSI Launcher doesn't auto-update
-- GE runners seem to prevent auto-updates. Temporarily switching to standard wine may allow the update to install
+- GE runners seem to prevent auto-updates. Open configuration to the runner tab and add a DLL override to set powershell.exe to disabled
 - Alternatively, [download](https://robertsspaceindustries.com/download) the latest launcher and install it by selecting `Run EXE inside Wine prefix` in Lutris:  
   ![Screenshot from 2023-05-11 10-33-19](https://github.com/starcitizen-lug/knowledge-base/assets/3657071/d146e9cc-e0a2-4327-acfb-ba5538ddefe4)
 
