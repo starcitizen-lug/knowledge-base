@@ -53,6 +53,7 @@ Launch Star Citizen and configure its head tracking options under `Comms, FOIP &
 - Use your Android Phone: Our Penguins tend to like the [SmoothTrack app by John Goering](https://play.google.com/store/apps/details?id=com.epaga.smoothtrack&gl=US). It costs $10.
 - Use your PS3 camera: Remove the IR filter. Some people place a visible light filter there instead to reduce noise.
 - Use your webcam with the ArUco Paper Method: A tutorial is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). (Note: Ignore the outdated Opentrack installation steps in that thread)
+- If you want to use any webcam for tracking, consulte [this guide](./Headtracking-Opentrack-Neuralnet.md) to build Opentrack with neuralnet input support.
 
 
 ## AMD FidelityFX Super Resolution (FSR) upscaling
