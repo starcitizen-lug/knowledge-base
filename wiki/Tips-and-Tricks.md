@@ -54,6 +54,19 @@ Launch Star Citizen and configure its head tracking options under `Comms, FOIP &
 - Use your PS3 camera: Remove the IR filter. Some people place a visible light filter there instead to reduce noise.
 - Use your webcam with the ArUco Paper Method: A tutorial is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). (Note: Ignore the outdated Opentrack installation steps in that thread)
 
+#### Building Opentrack with ONNX Runtime
+If you provide ONNX Runtime libraries to Opentrack when building it, it will offer Neuralnet as input option. This will allow you to use any webcam as headtracking device.
+
+1. Install [`wine` development branch](https://wiki.winehq.org/Download).
+2. Download and extract [ONNX Runtime](https://github.com/microsoft/onnxruntime/releases).
+3. Install [Opentrack](https://github.com/opentrack/opentrack/wiki/Building-on-Linux) with some extra steps when using `cmake` or `ccmake`.
+    - Set variable `SDK_WINE`.
+    - Set variable `ONNXRuntime_DIR` to absolute path to extracted ONNX Runtime folder.
+4. Follow [above instructions](#head-tracking-using-opentrack).
+5. Select `neuralnet tracker` as input.
+
+*Note:*  
+*Do not remove ONNX Runtime after you are done. Opentrack won't have Neuralnet as input if you do remove it.*
 
 ## AMD FidelityFX Super Resolution (FSR) upscaling
 In the Lutris `Runner options` tab, enable `AMD FidelityFX Super Resolution` or set the environment variable `WINE_FULLSCREEN_FSR=1`. Then, in the Star Citizen graphics settings, set the game to fullscreen and your desired resolution and it will be FSR scaled up. We recommend restarting the game after changing its resolution for better performance.
