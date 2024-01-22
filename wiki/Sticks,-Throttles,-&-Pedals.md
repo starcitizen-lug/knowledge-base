@@ -34,24 +34,14 @@ Requires a windows-only software for calibration and configuration. [Link](https
     
 Requires a windows-only software for calibration and configuration. [Link; scroll down](https://support.virpil.com/en/support/solutions)
 
-## Saitek H.O.T.A.S Rhino Pro X55/X56
-
-For X55/56 can be used the [input-remapper](https://github.com/sezanzeb/input-remapper), this tool will detect your Sitck and Throttle inmediately and you can create profiles for it at once.
-
-Basic examples profiles can be downloaded at:
-
-[Stick](https://github.com/starcitizen-lug/mappings/blob/main/input-remapper/saitek-rhino-55/StarCitizenStick.json)
-
-[Throttle](https://github.com/starcitizen-lug/mappings/blob/main/input-remapper/saitek-rhino-55/StarCitizenThrottle.json)
-
 
 ## Configuration Tips
 
 ### Mappings
 
-A collection of mappings used by our members can be found [here](https://github.com/starcitizen-lug/mappings).
+A collection of mappings contributed by our community can be found [here](https://github.com/starcitizen-lug/mappings).
 
-If you need a generic mapper for different devices consider also the use of [input-remapper](https://github.com/sezanzeb/input-remapper).
+The third party tool, [input-remapper](https://github.com/sezanzeb/input-remapper), can be used to change the behavior of input devices. Note that, while some of our Penguins have had success using this tool, we have not fully vetted its functionality or safety. Some basic profile examples contributed by our community can be found [here](https://github.com/starcitizen-lug/mappings/tree/main/input-remapper).
 
 ### Evdev Deadzones
 
