@@ -92,17 +92,23 @@
 #### Game immediately crashes after clicking 'Launch'
 - Start by checking the Wine output and/or "game.log" file
 
-- Possible cause 1: DXVK
+- Possible cause: DXVK
   - Make sure DXVK is enabled in Lutris' Runner options.
   - Some people report changing their DXVK version fixes this. Try using our [Helper](https://github.com/starcitizen-lug/lug-helper) to download an async DXVK.
-  - Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
+  - Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) and Nvidia troubleshooting section [below](#-nvidia) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
   - DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
 
-- Possible cause 2: Incorrect Vulkan ICD Loader
+- Possible cause: Incorrect Vulkan ICD Loader
   - If you have Intel integrated graphics and see `VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json` in your log, then change the Vulkan ICD Loader in Lutris to use your discrete GPU:
   ![image](https://user-images.githubusercontent.com/3657071/221420185-c1f1e346-b67f-4cd9-ba14-748668a266ed.png)
 
-- Possible cause 3: Phantom joystick
+- Possible cause: GPU drivers not working properly
+  - If, in your "game.log", you see only llvmpipe listed as the working video adapter, your gpu drivers may not be functioning properly.
+ 
+- Possible cause: Out of date flatpak libraries/packages
+  - If you are using flatpak and have not run `flatpak update` recently, this should be done regularly to keep everything up to date.
+
+- Possible cause: Phantom joystick
   - Many keyboards and mice can also have a "joystick" part in Linux, which Wine can detect. Unfortunately, Wine may be confused about it, as they are not real joysticks. In this case, the game could crash. Try running the Wine joystick control panel "wine control" (in Lutris: right click -> Joystick configuration) and disable your keyboard and/or mice.
   - This will not affect how your keyboard and mice work in the game.
 
