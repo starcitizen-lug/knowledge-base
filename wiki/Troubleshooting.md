@@ -103,7 +103,7 @@
   ![image](https://user-images.githubusercontent.com/3657071/221420185-c1f1e346-b67f-4cd9-ba14-748668a266ed.png)
 
 - Possible cause: GPU drivers not working properly
-  - If, in your "game.log", you see only llvmpipe listed as the working video adapter, your gpu drivers may not be functioning properly.
+  - If, in your "game.log", you see only `llvmpipe` listed as the working video adapter, your gpu drivers may not be functioning properly.
  
 - Possible cause: Out of date flatpak libraries/packages
   - If you are using flatpak and have not run `flatpak update` recently, this should be done regularly to keep everything up to date.
