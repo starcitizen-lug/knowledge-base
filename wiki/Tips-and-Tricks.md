@@ -18,7 +18,7 @@ We do not recommend 👎 most gaming-focused distributions as many of our Pengui
 
 Other distributions we suggest avoiding 👎 due to frequent package incompatibilities, old dependencies, and update issues are: Manjarno, Ubuntu LTS, Mint (based on Ubuntu LTS), Debian Stable, and openSUSE Leap.
 
-## NixOS tweaks
+## Configuration differences required for NixOS
 To set `vm.max_map_count` and `fs.file-max` set
 
 ```nix
@@ -137,7 +137,7 @@ _json config method:_
 * Delete the following directory:
 `$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat`
 
-_NixOS method:_
+_Configuration for NixOS users only:_
 
 * Add `"127.0.0.1 modules-cdn.eac-prod.on.epicgames.com"` to [`networking.extraHosts`](https://search.nixos.org/options?channel=unstable&show=networking.extraHosts&from=0&size=50&sort=relevance&type=packages&query=networking.extraHosts)
 
