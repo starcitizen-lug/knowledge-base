@@ -19,7 +19,7 @@ We do not recommend 👎 most gaming-focused distributions as many of our Pengui
 Other distributions we suggest avoiding 👎 due to frequent package incompatibilities, old dependencies, and update issues are: Manjarno, Ubuntu LTS, Mint (based on Ubuntu LTS), Debian Stable, and openSUSE Leap.
 
 ## Configuration differences required for NixOS
-To set `vm.max_map_count` and `fs.file-max` set
+To set `vm.max_map_count` and `fs.file-max`, add the following to your NixOS config:
 
 ```nix
 # ... your NixOS Config ...
