@@ -3,12 +3,12 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 
 The following distributions make our 👍 list and generally work well with Star Citizen:
 - Arch
-- EndeavourOS
+- EndeavourOS (Arch-based)
 - Fedora
 - openSUSE Tumbleweed
-- Gentoo
 - Debian Testing
 - Ubuntu *(only the latest non-LTS release)*
+- Gentoo
 
 We do not recommend 👎 LTS distros. *LTS releases and out of date distros are likely to cause many headaches.* LTS ≠ stable. LTS just means old packages locked to a specific major version which only receive security updates. This is great for servers but terrible for gaming where new features and fixes are important. #LTSbadjustdontplskthx  
 
