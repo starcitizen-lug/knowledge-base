@@ -142,6 +142,9 @@
 #### Game crashes when going to Lorville / ArcCorp or crashes often when launching
 - Make sure you followed the guide to install Wine's dependencies and set your vm.max_map_count as described in the installation section.
 
+#### Game crashes on Alt+Tab
+- In game settings change display to windowed borderless
+
 ***
 
 
