@@ -95,6 +95,13 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
 ## Easy Anti-Cheat Workaround
 #### Automatic Configuration
 
+_Using an Environment Variable_
+
+* Set the following environment variable `Right click the game->Configure->System Options->Environment variables`:
+  ```
+  EOS_USE_ANTICHEATCLIENTNULL=1
+  ```
+
 _Using a GloriousEggroll runner_
 
 GE runners since **Wine-GE-Proton7-41** include an EAC workaround by default. It will be enabled automatically for new installs. To enable it for existing installs:
