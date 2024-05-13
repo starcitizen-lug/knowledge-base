@@ -20,7 +20,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 #### Game Updates
 > (Apr 11, 2024) **2.0 Launcher (Beta) error 2000 "error_os_requirements_text"**
 > - Launcher 2.0 beta fails to download the game
->   - To fix: switch to a wine 9.4+ runner
+>   - To fix: switch to a wine 9.4+ or proton GE 9-5+ runner
 > - Launcher 2.0 beta is unable to verify files, use install button instead
 
 > (Jan 27, 2023) **Fresh installs fail to create needed directories**
@@ -32,6 +32,10 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 
 #### General News
+> (May 4, 2024) **Game Crash on launch from main menu**
+> - Linux kernel 6.8.9 can result in a crash relating to out of memory with popup "Assertion failed!"
+>   - To fix: revert to kernel 6.8.8 or enable ReBar if your hardware supports it
+
 > (Jan 15, 2024) **Installer Error Code 256**
 > - Lutris version [5.15 had a critical bug](https://github.com/lutris/lutris/releases/tag/v0.5.16)  preventing successful installations of games
 >   - To fix: update to latest Lutris 5.17
