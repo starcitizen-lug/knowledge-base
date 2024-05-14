@@ -33,7 +33,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 #### General News
 > (May 4, 2024) **Game Crash on launch from main menu**
-> - Linux kernel 6.8.9 can result in a crash relating to out of memory with popup "Assertion failed!"
+> - Linux kernel 6.8.9 can result in a crash when launching from main menu
 >   - To fix: revert to kernel 6.8.8 or enable ReBar if your hardware supports it
 
 > (Jan 15, 2024) **Installer Error Code 256**
@@ -58,7 +58,7 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > - Bright flickering lights at edges of ingame RTT display panels
 >   - To fix: Add environment variable `radv_zero_vram=true`
 > - Game may present a black screen
->   - To fix: Add environment variable `dual_color_blend_by_location="true"`
+>   - To fix: Add environment variable `dual_color_blend_by_location=true`
 >   - Alternatively copy `/usr/share/drirc.d/00-radv-defaults.conf` to `~/.drirc`
 >   - Add the following to `~/.drirc`:
 > ```
