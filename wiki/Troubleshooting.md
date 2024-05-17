@@ -91,6 +91,8 @@
 
 #### Game immediately crashes after clicking 'Launch'
 - Start by checking the Wine output and/or "game.log" file
+  
+- See [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for information on recent stability issues
 
 - Possible cause: DXVK
   - Make sure DXVK is enabled in Lutris' Runner options.
@@ -193,6 +195,14 @@
 - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
 - If this doesn't work, you will need to switch to Xorg instead of Wayland.
 
+#### Mouse/Cursor restricted to a region smaller than the display, or clicks offset from cursor
+- Create a user.cfg file in the LIVE, PTU, EPTU, TECH-PREVIEW directory
+ ```
+ Con_Restricted = 0
+ #set to your display resolution
+ r_width = 3440
+ r_height = 1440
+ ```
 
 #### Empty launcher
 - Log out log back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
@@ -226,9 +236,9 @@
 
 
 #### Black/transparent window after clicking 'Launch'
+- Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 - Make sure DXVK is enabled in Lutris' Runner options.
 - Try changing to a different DXVK version in the Lutris settings.  Alternate DXVKs can be quickly installed using our [LUG Helper](https://github.com/starcitizen-lug/lug-helper).
-- Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 - DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
 
 
@@ -272,10 +282,10 @@
 
 
 
-## ♥ AMD
+## ❤️ AMD
 
-#### Everything just works
-- Congrats on choosing AMD
+#### Current known issues
+- See the AMD section of our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
 
 ***
 
