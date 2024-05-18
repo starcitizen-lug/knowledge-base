@@ -33,8 +33,8 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 #### General News
 > (May 4, 2024) **Game Crash on launch from main menu**
-> - Linux kernel 6.8.9 can result in a crash when launching from main menu
->   - To fix: revert to kernel 6.8.8 or enable ReBar if your hardware supports it
+> - Linux kernel 6.8.9 can result in a crash when launching from main menu, may be accompanied by a popup including text "Assertion failed!"
+>   - To fix: revert to kernel 6.8.8, update to 6.9+, or enable ReBar if your hardware supports it
 
 > (Jan 15, 2024) **Installer Error Code 256**
 > - Lutris version [5.15 had a critical bug](https://github.com/lutris/lutris/releases/tag/v0.5.16)  preventing successful installations of games
