@@ -25,9 +25,9 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 
 > (Jan 27, 2023) **Fresh installs fail to create needed directories**
 > - This has been resolved in the latest version of our [Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) for new installs.
-> - For existing or manual installs, run the following command to create the necessary directory structure for both the LIVE and PTU environments. Adjust the wine prefix path if installing to a non-default location:  
+> - For existing or manual installs, run the following command to create the necessary directory structure for LIVE, PTU, and other environments. Adjust the wine prefix path if installing to a non-default location:  
 > ```
-> mkdir -p "/home/$USER/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/"{LIVE,PTU,EPTU,TECH-PREVIEW}
+> mkdir -p "/home/$USER/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/"{LIVE,PTU,HOTFIX,EPTU,TECH-PREVIEW}
 > ```
 
 
