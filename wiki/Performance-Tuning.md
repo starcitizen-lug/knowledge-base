@@ -58,7 +58,7 @@ Zram stores swap in RAM using on-the-fly compression which can improve game perf
 
 See the [Arch Wiki](https://wiki.archlinux.org/title/Zram#Using_zram-generator) for configuration instructions that should work for most distros.
 
-If you prefer not to use zram, a swap file will need to be [configured](https://wiki.archlinux.org/title/Swap#Swap_file). We recommend configuring at least a combined 40GB RAM + swap:
+If you prefer not to use zram, a swap file will need to be [configured](https://wiki.archlinux.org/title/Swap#Swap_file). Btrfs users please follow the [Btrfs instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). We recommend configuring at least a combined 40GB RAM + swap:
 - For 16GB RAM: 24GB swap
 - For 32GB RAM: 8GB swap
 
