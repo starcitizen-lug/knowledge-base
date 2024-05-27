@@ -61,7 +61,9 @@ If you use the Picom or Compton compositor, it may cause a laggy experience desp
 
 ## Steam Deck
 
-We recommend a 16gb swap file for the Steam Deck. Create it under `/home` instead of `/` to protect it from being wiped out by SteamOS updates.
+- We recommend a 32gb+ swap file for the Steam Deck. Create it under `/home` instead of `/` to protect it from being wiped out by SteamOS updates.
+- max allocation of ram to vram
+- install lutris in desktop mode
 
 ## Changing CPU scaling behavior via the Linux kernel and System Management BIOS
 
