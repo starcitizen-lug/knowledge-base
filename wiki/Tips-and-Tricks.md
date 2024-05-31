@@ -13,10 +13,9 @@ The following distributions make our 👍 list and generally work well with Star
 We do not recommend 👎 LTS distros. *LTS releases and out of date distros are likely to cause many headaches.* LTS ≠ stable. LTS just means old packages locked to a specific major version which only receive security updates. This is great for servers but terrible for gaming where new features and fixes are important. #LTSbadjustdontplskthx  
 
 We do not recommend 👎 most gaming-focused distributions as many of our Penguins have had issues installing the required dependencies to make Star Citizen run. They generally have only an individual or a very small team backing them and, at least where Star Citizen is concerned, do not live up to the promise.  
-- We especially suggest avoiding PopOS and Drauger OS due to irresolvable compatibility issues with the required 32bit packages in their repos.
-- Nobara generally works fine, except it packages the git release of Lutris and some other packages by default which can be unstable and potentially crashy. Some of our Penguins have also experienced issues upgrading to new major releases.
+- We especially suggest avoiding Pop!_OS and Drauger OS due to irresolvable compatibility issues
 
-Other distributions we suggest avoiding 👎 due to frequent package incompatibilities, old dependencies, and update issues are: Manjarno, Ubuntu LTS, Mint (based on Ubuntu LTS), Debian Stable, and openSUSE Leap.
+Other distributions we suggest avoiding 👎 due to frequent package incompatibilities, old dependencies, and update issues are: Manjaro, Ubuntu LTS, Mint (based on Ubuntu LTS), Debian Stable, and openSUSE Leap.
 
 ## Configuration differences required for NixOS
 To set `vm.max_map_count` and `fs.file-max`, add the following to your NixOS config:
