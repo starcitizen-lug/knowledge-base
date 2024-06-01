@@ -246,6 +246,11 @@
 - In Lutris, configure Star Citizen (right-click->Configure->Game options) and add `"--use-gl=osmesa"` to the Arguments field.
 - If launching manually: `wine "RSI Launcher.exe" "--use-gl=osmesa"`
 
+
+#### Crash or black screen while using Vulkan beta renderer
+- Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) recommendations for your graphics card
+- Revert to DX11: Delete the AppData Local Star Citizen directory inside the wine prefix `drive_c/users/$USER/AppData/Local/Star Citizen/`
+
 ***
 
 
