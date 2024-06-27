@@ -84,9 +84,10 @@
 
 #### Code 3 crash with error: *Star Citizen process exited abnormally (code: 3) : Command failed*
 - You are likely missing 32bit drivers. See [32bit Drivers](#-32bit-drivers) below for more information
-- Additionally, explicitly set the Vulkan ICD loader in Lutris to either `Nvidia Proprietary` or `AMD RADV Open Source`
-  - Right click the game -> Configure -> System options -> Vulkan ICD loader
-- If you are using the Flatpak Lutris, you may need to resync it with your system after installing the 32bit drivers. Run: `flatpak update`
+- Additionally, explicitly set the DXVK device name
+  - identify device name using command `vulkaninfo --summary | grep deviceName`
+  - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
+- If using the Flatpak Lutris, you may need to resync it with your system after installing the 32bit drivers. Run: `flatpak update`
 
 
 #### Game immediately crashes after clicking 'Launch'
@@ -100,9 +101,10 @@
   - Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) and Nvidia troubleshooting section [below](#-nvidia) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
   - DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
 
-- Possible cause: Incorrect Vulkan ICD Loader
-  - If you have Intel integrated graphics and see `VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json` in your log, then change the Vulkan ICD Loader in Lutris to use your discrete GPU:
-  ![image](https://user-images.githubusercontent.com/3657071/221420185-c1f1e346-b67f-4cd9-ba14-748668a266ed.png)
+- Possible cause: Incorrect Vulkan device
+  - If you have Intel integrated graphics and see `VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json` in your log, then change the Vulkan device in Lutris to use your discrete GPU:
+    - identify device name using command `vulkaninfo --summary | grep deviceName`
+    - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere` 
 
 - Possible cause: GPU drivers not working properly
   - If, in your "game.log", you see only `llvmpipe` listed as the working video adapter, your gpu drivers may not be functioning properly.
@@ -222,8 +224,10 @@
 #### DirectX error message
 - Error may read "Star Citizen requires DirectX feature level of 11.1 as a minimum which is not supported at present on this machine"  
   ![image](https://user-images.githubusercontent.com/3657071/224719841-ba1e831b-4ace-4f14-b423-3e49528154c6.png)
-- Check that the `Vulkan ICD loader` is not set to an integrated gpu (ie, Intel)
-   - Right click the game -> Configure -> System options -> Vulkan ICD loader
+- Check that the `Vulkan device` is not set to an integrated gpu (ie, Intel)
+  - identify device name using command `vulkaninfo --summary | grep deviceName`
+  - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
+  - verify by setting environment variable `DXVK_HUD=1` and observing the device name in the upper left of the screen
 - Also make sure your GPU drivers (Mesa/nvidia) are up to date and DXVK is enabled/updated.
 
 
@@ -271,7 +275,9 @@
 
 #### Game fails to start after clicking Launch Game on laptops with Nvidia GPU + intel graphics
 - Errors may include `DXVAVDA fatal error: could not LoadLibrary: msvproc.dll` or `Major opcode of failed request:  156 (NV-GLX)`
-- Try removing all optimus/prime env vars for render offload and set the Vulkan ICD Loader to the Nvidia GPU.
+- Try removing all optimus/prime env vars for render offload and set the Vulkan device to the Nvidia GPU.
+  - identify device name using command `vulkaninfo --summary | grep deviceName`
+  - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
 
 #### Severe frame drops
 - Some Penguins are seeing VRAM exhaustion problems on nvidia cards. It appears to be driver related and does not seem to affect AMD cards.
