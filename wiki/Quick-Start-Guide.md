@@ -13,7 +13,7 @@ New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-di
 4. Run the RSI launcher from Lutris and finish installing the game; do not change the default install path in the RSI Launcher settings.
 5. In the LUG Helper, select `Manage Lutris Runners`, and install the latest runner from GloriousEggroll (or ask us on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins) which runner is currently recommended).
 6. In the LUG Helper, select `Manage DXVK Versions`. Install the latest standard dxvk.
-7. **KDE+Wayland users:** See this [required workaround](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#mousecursor-issues-and-view-snapping-in-interaction-mode) to **resolve mouse cursor and view snapping issues**. Other Desktop Environments may be unaffected.
+7. **Wayland users:** See [required workarounds](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#mousecursor-issues-and-view-snapping-in-interaction-mode) to **resolve mouse cursor and view snapping issues when holding F key**
 8. Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for important updates. Especially, Nvidia gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 9. Run the launcher again and start the game. See you in the 'verse!
 
