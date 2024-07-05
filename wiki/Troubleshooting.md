@@ -195,7 +195,7 @@
 - If you're using a version of gamescope newer than **3.11.51**, an additional Gamescope setting is required. Set `Relative Mouse Mode` to on
 - Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
 - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
-- If this doesn't work, you will need to switch to Xorg instead of Wayland.
+- If this doesn't work, you will need to switch to Xorg instead of Wayland or build xwayland with this [patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied.
 
 #### Mouse/Cursor restricted to a region smaller than the display, or clicks offset from cursor
 - Create a user.cfg file in the LIVE, PTU, EPTU, TECH-PREVIEW directory
