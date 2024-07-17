@@ -56,15 +56,6 @@ This wiki is a collection of information on how to run Star Citizen on Linux, as
 > (Apr 29, 2024) **Vulkan Beta**
 > - Bright flickering lights at edges of ingame RTT display panels
 >   - To fix: Add environment variable `radv_zero_vram=true`
-> - Game may present a black screen
->   - To fix: Add environment variable `dual_color_blend_by_location=true`
->   - Alternatively copy `/usr/share/drirc.d/00-radv-defaults.conf` to `~/.drirc`
->   - Add the following to `~/.drirc`:
-> ```
-> <application name="Star Citizen" executable="StarCitizen.exe" >
->      <option name="dual_color_blend_by_location" value="true" />
-> </application>
-> ```
 
 
 #### Nvidia News
