@@ -15,7 +15,7 @@ sudo sysctl -w vm.max_map_count=16777216 => To set it temporarily
 
 **To set vm.max_map_count permanently**
 
-_Distributions using systemd: Manjaro / Antergos / Arch / Arch-based (probably) / Ubuntu (and probably derivatives) / Fedora_
+_Distributions using sysctl.d: Manjaro / Antergos / Arch / Arch-based (probably) / Ubuntu (and probably derivatives) / Fedora_
 
 * Create a new drop-in config file: `/etc/sysctl.d/20-starcitizen-max_map_count.conf`
 * Add the following line to the file: `vm.max_map_count = 16777216`
@@ -29,7 +29,7 @@ _Distributions that use sysctl.conf_
 
 **To set your system's hard open file descriptors limit**
 
-_Distributions using systemd: Manjaro / Antergos / Arch / Arch-based (probably) / Ubuntu (and probably derivatives) / Fedora_
+_Distributions using sysctl.d: Manjaro / Antergos / Arch / Arch-based (probably) / Ubuntu (and probably derivatives) / Fedora_
 
 * Create a new drop-in config file: `/etc/systemd/systemd.conf.d/20-starcitizen-filelimit.conf`
 * Add the following line to the file: `DefaultLimitNOFILE=524288`
