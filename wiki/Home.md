@@ -64,6 +64,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > - Game fails to launch with vulkan renderer enabled
 >   - Use latest wine-GE 8-26+
 >   - Add environment variable `WINE_HIDE_NVIDIA_GPU=1`
+> - There is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents DLSS from working on linux. See [instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#dlssdeep-learning-super-sampling--vulkan) to patch libcuda to enable DLSS
 
 > (Oct 9, 2023) **Crash when taking shield damage in-game**
 > - There is a shield rendering bug that causes the game to crash. It seems to affect 1000 series cards.
