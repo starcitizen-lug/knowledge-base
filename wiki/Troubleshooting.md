@@ -286,6 +286,13 @@
    - If you still have issues or are running applications like OBS, you may also have to limit the vram the game sees to free up some vram for other applications:
      `dxgi.maxDeviceMemory = 6144`
 
+#### DLSS(Deep Learning Super Sampling) / Vulkan
+- There is a [memory allocation issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795), where it attempts to allocate in a specific area already occupied by the game.
+   - A possible solution would be patching LibCUDA file increasing this area.
+      - Copy the 64-bit `libcuda.so`(usually `/usr/lib` or run `whereis libcuda.so`) to any directory and run the command `echo -ne $(od -An -tx1 -v libcuda.so | tr -d '\n' | sed -e 's/00 00 00 f8 ff 00 00 00/00 00 00 f8 ff ff 00 00/g' -e 's/ /\\x/g') > libcuda.patched.so` to generate the patched version(`libcuda.patched.so`).
+      - Use the environment variable `LD_PRELOAD` to load the patched version, for example: `LD_PRELOAD=/path/to/the/libcuda.patched.so:$LD_PRELOAD`
+      - Don't forget to enable DXVK-NVAPI.
+
 
 ***
 
