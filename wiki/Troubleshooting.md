@@ -56,6 +56,10 @@
 - If you have an old install, try importing that into Lutris.
 
 
+#### Lutris error: *"Runtime Error('No path can be generated for DXVK because no version information is available.')"*
+- If you've just installed Lutris, be sure to launch it once, separately from the Star Citizen install process, to fully populate its runtime and caches.
+
+
 #### RSI Launcher doesn't auto-update
 - GE runners seem to prevent auto-updates. Open configuration to the runner tab and add a DLL override to set powershell.exe to disabled
 - Alternatively, [download](https://robertsspaceindustries.com/download) the latest launcher and install it by selecting `Run EXE inside Wine prefix` in Lutris:  
