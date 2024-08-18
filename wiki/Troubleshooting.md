@@ -295,7 +295,7 @@
    - A possible solution would be patching LibCUDA file increasing this area.
       - Run this command line to patch a existing 64-bit `libcuda.so` and output the patched library in the shell's current directory for use with the game, will work in extended POSIX shells like bash and zsh, dash(**pure POSIX(printf)**) and fish(**not POSIX(${})**) won't work,
          ```sh
-         CUDALIB="$(ldconfig -p | grep -om1 "86-64.*libcuda.so.*")" printf "$(od -An -tx1 -v "${CUDALIB##* }" | tr -d '\n' | sed -e 's/00 00 00 f8 ff 00 00 00/00 00 00 f8 ff ff 00 00/g' -e 's/ /\\x/g')" > libcuda.patched.so
+         CUDALIB="$(ldconfig -p | grep -m1 "86-64.*libcuda.so")"; printf "$(od -An -tx1 -v "${CUDALIB##* }" | tr -d '\n' | sed -e 's/00 00 00 f8 ff 00 00 00/00 00 00 f8 ff ff 00 00/g' -e 's/ /\\x/g')" > libcuda.patched.so
          ```
       - Use the environment variable `LD_PRELOAD` to load the patched version, for example: `LD_PRELOAD=/path/to/the/libcuda.patched.so:$LD_PRELOAD`
       - Don't forget to enable DXVK-NVAPI.
