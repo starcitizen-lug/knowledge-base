@@ -42,13 +42,6 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > - If you are on a rolling release distro and using Gamescope, you may receive this error due to a bug in Gamescope v3.12.7. See [this Github issue](https://github.com/ValveSoftware/gamescope/issues/984) for more info.
 >   - To fix: Install the git release of Gamescope or downgrade to 3.12.5 until the fix is released to stable.
 
-> (Oct 24, 2023) **Installer Error Code 256**
-> - Set "Prefer system libraries" to enabled in global lutris options
-> - Inspect install log for failed winetricks downloads or sha256 mismatch and note the URL of the files being downloaded and its destination in winetricks' cache
-> - Download each file manually to its destination in winetricks' cache
-> - Use winetricks to ensure that the prefix is set to Win10 mode
-> - Proceed with lug-helper installer
-
 
 #### AMD News
 > (Apr 29, 2024) **Vulkan Beta**
