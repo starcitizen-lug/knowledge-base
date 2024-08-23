@@ -28,13 +28,6 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 >   - To fix: switch to a wine 9.4+ or proton GE 9-5+ runner
 > - Launcher 2.0 beta is unable to verify files, use install button instead
 
-> (Jan 27, 2023) **Fresh installs fail to create needed directories**
-> - This has been resolved in the latest version of our [Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) for new installs.
-> - For existing or manual installs, run the following command to create the necessary directory structure for LIVE, PTU, and other environments. Adjust the wine prefix path if installing to a non-default location:  
-> ```
-> mkdir -p "/home/$USER/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/"{LIVE,PTU,HOTFIX,EPTU,TECH-PREVIEW}
-> ```
-
 
 #### General News
 > (May 4, 2024) **Game Crash on launch from main menu**
