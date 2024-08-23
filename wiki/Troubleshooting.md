@@ -50,6 +50,14 @@
 - If using a rolling release or bleeding edge distro, try toggling `Prefer system libraries` in Lutris to `On`.
 
 
+#### Installer Error Code 256
+- Set `Prefer system libraries` to `On` in global lutris options.
+- Inspect install log for failed winetricks downloads or sha256 mismatch, note the URL of the files being downloaded and its destination in winetricks' cache.
+- Download each file manually to its destination in winetricks' cache.
+- Use winetricks to ensure that the prefix is set to Win10 mode.
+- Proceed with lug-helper installer.
+
+
 #### Lutris error: *Command exited with code 512*
 - We suspect this is a Lutris bug and fixes seem inconsistent.
 - Try going to Lutris Preferences -> Sources, and toggle either `Lutris` or `Local` and then toggle it back again.
