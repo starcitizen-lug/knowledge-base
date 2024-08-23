@@ -33,6 +33,10 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 
 #### General News
+> (August 23, 2024) **Vulkan Beta: Limited performance with KDE on Wayland**
+> - As of writing running Star Citizen's vulkan renderer on kde wayland will result in your [gpu utilisation being limited to less than 75%](https://bugs.kde.org/show_bug.cgi?id=492051), causing low framerates
+>   - To fix: either use Gamescope, switch to another desktop, or run KDE's x11 session
+
 > (May 4, 2024) **Game Crash on launch from main menu**
 > - Linux kernel 6.8.9 can result in a crash when launching from main menu, may be accompanied by a popup including text "Assertion failed!"
 >   - To fix: revert to kernel 6.8.8, update to 6.9+, or enable ReBar if your hardware supports it
