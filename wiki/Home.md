@@ -19,6 +19,10 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 ## News
 
 #### Game Updates
+> (August 23, 2024) **Vulkan Beta: Limited performance with KDE on Wayland**
+> - Vulkan renderer on kde wayland may result in your [gpu utilisation being limited to less than 75%](https://bugs.kde.org/show_bug.cgi?id=492051), causing low framerates
+>   - To fix: either use Gamescope, switch to another desktop, or run KDE's x11 session
+
 > (Apr 11, 2024) **2.0 Launcher (Beta) error 2000 "error_os_requirements_text"**
 > - Launcher 2.0 beta fails to download the game
 >   - To fix: switch to a wine 9.4+ or proton GE 9-5+ runner
@@ -33,10 +37,6 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 
 #### General News
-> (August 23, 2024) **Vulkan Beta: Limited performance with KDE on Wayland**
-> - As of writing running Star Citizen's vulkan renderer on kde wayland will result in your [gpu utilisation being limited to less than 75%](https://bugs.kde.org/show_bug.cgi?id=492051), causing low framerates
->   - To fix: either use Gamescope, switch to another desktop, or run KDE's x11 session
-
 > (May 4, 2024) **Game Crash on launch from main menu**
 > - Linux kernel 6.8.9 can result in a crash when launching from main menu, may be accompanied by a popup including text "Assertion failed!"
 >   - To fix: revert to kernel 6.8.8, update to 6.9+, or enable ReBar if your hardware supports it
