@@ -17,7 +17,7 @@ sudo sysctl -w vm.max_map_count=16777216 => To set it temporarily
 
 _Distributions using sysctl.d: Manjaro / Antergos / Arch / Arch-based (probably) / Ubuntu (and probably derivatives) / Fedora_
 
-* Create a new drop-in config file: `/etc/sysctl.d/20-starcitizen-max_map_count.conf`
+* Create a new drop-in config file: `/etc/sysctl.d/99-starcitizen-max_map_count.conf`
 * Add the following line to the file: `vm.max_map_count = 16777216`
 * To reload it, run `sudo sysctl --system`
 
@@ -31,7 +31,7 @@ _Distributions that use sysctl.conf_
 
 _Distributions using systemd: Manjaro / Antergos / Arch / Arch-based (probably) / Ubuntu (and probably derivatives) / Fedora_
 
-* Create a new drop-in config file: `/etc/systemd/systemd.conf.d/20-starcitizen-filelimit.conf`
+* Create a new drop-in config file: `/etc/systemd/systemd.conf.d/99-starcitizen-filelimit.conf`
 * Add the following line to the file: `DefaultLimitNOFILE=524288`
 * To reload it, run `sudo systemctl daemon-reexec`
 
