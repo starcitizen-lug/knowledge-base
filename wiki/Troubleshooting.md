@@ -257,7 +257,7 @@
 - DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
 
 
-#### Launcher white screen / error DCompositionCreateDevice
+#### RSI Launcher white screen / error DCompositionCreateDevice
 - In Lutris, configure Star Citizen (right-click->Configure->Game options) and add `"--use-gl=osmesa"` to the Arguments field.
 - If launching manually: `wine "RSI Launcher.exe" "--use-gl=osmesa"`
 
@@ -265,6 +265,12 @@
 #### Crash or black screen while using Vulkan beta renderer
 - Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) recommendations for your graphics card
 - Revert to DX11: Delete the AppData Local Star Citizen directory inside the wine prefix `drive_c/users/$USER/AppData/Local/Star Citizen/`
+ 
+
+#### RSI Launcher fails to launch from lutris with CLI mode enabled
+- Error message may be similar to `/usr/bin/gnome-terminal.real: symbol lookup error: /lib/x86_64-linux-gnu/libatk-bridge-2.0.so.0: undefined symbol: atk_component_scroll_to`
+- Disable the lutris runtime in lutris global preferences to work around this error
+
 
 ***
 
