@@ -19,14 +19,15 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 ## News
 
 #### Game Updates
+> (August 24, 2024) **Launcher 2.0 Migration**
+> - Requires Wine Staging 9.4+ or Proton GE 9-5+ runner
+> - Requires CLI mode to be enabled in Lutris: Right click the game -> Configure -> System options -> CLI mode
+> - Launcher 2.0 is unable to verify files, use the install button instead for now. We expect this to be resolved in the next version of Lutris
+> - May require a manual install. See [our wiki](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#rsi-launcher-doesnt-auto-update) for instructions
+
 > (August 23, 2024) **Vulkan Beta: Limited performance with KDE on Wayland**
 > - Vulkan renderer on kde wayland may result in your [gpu utilisation being limited to less than 75%](https://bugs.kde.org/show_bug.cgi?id=492051), causing low framerates
 >   - To fix: either use Gamescope, switch to another desktop, or run KDE's x11 session
-
-> (Apr 11, 2024) **2.0 Launcher (Beta) error 2000 "error_os_requirements_text"**
-> - Launcher 2.0 beta fails to download the game
->   - To fix: switch to a wine 9.4+ or proton GE 9-5+ runner
-> - Launcher 2.0 beta is unable to verify files, use install button instead
 
 
 #### General News
