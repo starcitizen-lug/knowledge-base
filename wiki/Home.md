@@ -21,6 +21,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 #### Game Updates
 > (August 24, 2024) **Launcher 2.0 Migration**
 > - Requires Wine Staging 9.4+ or Proton GE 9-5+ runner
+>   - Wine Staging can be easily installed from the Kron4ek runner source in the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
 > - Requires CLI mode to be enabled in Lutris after installation
 >   - Right click the game -> Configure -> System options -> CLI mode
 > - Launcher 2.0 is unable to verify files, use the install button instead for now. We expect this to be resolved in the next version of Lutris
