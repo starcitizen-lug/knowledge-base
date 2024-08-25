@@ -19,7 +19,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 ## News
 
 #### Game Updates
-> (August 24, 2024) **Launcher 2.0 Migration**
+> (Aug 24, 2024) **Launcher 2.0 Migration**
 > - Requires Wine Staging 9.4+ or Proton GE 9-5+ runner
 >   - Wine Staging can be easily installed from the Kron4ek runner source in the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
 > - Requires CLI mode to be enabled in Lutris after installation
@@ -27,12 +27,26 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > - Launcher 2.0 is unable to verify files, use the install button instead for now. We expect this to be resolved in the next version of Lutris
 > - May require a manual install. See [our wiki](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#rsi-launcher-doesnt-auto-update) for instructions
 
-> (August 23, 2024) **Vulkan Beta: Limited performance with KDE on Wayland**
+> (Aug 23, 2024) **Vulkan Beta: Limited performance with KDE on Wayland**
 > - Vulkan renderer on kde wayland may result in your [gpu utilisation being limited to less than 75%](https://bugs.kde.org/show_bug.cgi?id=492051), causing low framerates
 >   - To fix: either use Gamescope, switch to another desktop, or run KDE's x11 session
 
 
 #### General News
+> (Aug 25, 2024) **Lutris Proton/Protonfixes Migration**
+> - Right click the game, select Configure, and then adjust settings as follows:
+> - In System options, add the following environment variables:
+>   - `EOS_USE_ANTICHEATCLIENTNULL: 1`
+>   - `GAMEID: umu-starcitizen`
+>   - `STORE: none`
+>   - `PROTONPATH: GE-Proton`
+> - Other environment variables can be updated/removed if desired by comparing against our current [install json](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/lutris-starcitizen.json)
+> - In System options, add the following to "Command prefix":
+>   - `GAMEID=umu-starcitizen STORE=none`
+> - In System options, CLI mode can be disabled
+> - In Runner options, set Wine version to `GE-Proton (Latest)`
+> - In Runner options, disable Use system winetricks
+
 > (May 4, 2024) **Game Crash on launch from main menu**
 > - Linux kernel 6.8.9 can result in a crash when launching from main menu, may be accompanied by a popup including text "Assertion failed!"
 >   - To fix: revert to kernel 6.8.8, update to 6.9+, or enable ReBar if your hardware supports it
