@@ -297,7 +297,7 @@
 
 #### Severe frame drops
 - Some Penguins are seeing VRAM exhaustion problems on nvidia cards. It appears to be driver related and does not seem to affect AMD cards.
-- Workarounds that some Penguins have had some success with:
+- A workaround that some Penguins have had some success with:
    - Create a new `dxvk.conf` file and add `d3d11.cachedDynamicResources = "a"` to it, then either export `DXVK_CONFIG_FILE=path/to/dxvk.conf` or, if using Lutris, add `DXVK_CONFIG_FILE` as a new environment variable in the game's settings and set it to the file path.
    - If you still have issues or are running applications like OBS, you may also have to limit the vram the game sees to free up some vram for other applications:
      `dxgi.maxDeviceMemory = 6144`
