@@ -1,4 +1,4 @@
-## Head tracking hardware
+## Head Tracking Hardware
 
 #### Hardware our Penguins have had success with
 - Delanclip with Opentrack works very well
@@ -18,7 +18,7 @@
 - Tobii does not support Linux. Its opentrack support uses the Windows only SDK.
 
 
-## Opentrack configuration
+## Opentrack Configuration
 Opentrack versions 2023.1.0 and later contain the fixes needed to work with Star Citizen. After installing it, use the following configuration:
 
 1. Select `Wine` in the Output dropdown
