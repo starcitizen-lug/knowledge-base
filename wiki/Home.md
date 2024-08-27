@@ -40,12 +40,12 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 >   - `GAMEID: umu-starcitizen`
 >   - `STORE: none`
 >   - `PROTONPATH: GE-Proton`
-> - Other environment variables can be updated/removed if desired by comparing against our current [install json](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/lutris-starcitizen.json)
+> - Other environment variables can be updated/removed if desired by comparing against those set for a new install in our [install json](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/lutris-starcitizen.json)
 > - In System options, add the following to "Command prefix":
 >   - `GAMEID=umu-starcitizen STORE=none`
-> - In System options, CLI mode can be disabled
+> - In System options, disable `CLI mode`
 > - In Runner options, set Wine version to `GE-Proton (Latest)`
-> - In Runner options, disable Use system winetricks
+> - In Runner options, disable `Use system winetricks`
 
 > (May 4, 2024) **Game Crash on launch from main menu**
 > - Linux kernel 6.8.9 can result in a crash when launching from main menu, may be accompanied by a popup including text "Assertion failed!"
