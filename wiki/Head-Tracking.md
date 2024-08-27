@@ -34,7 +34,7 @@ Launch Star Citizen and configure its head tracking options under `Comms, FOIP &
 *May not work with Flatpak Lutris*  
 *If compiling from source, make sure `SDK_WINE` is set*
 
-#### Building Opentrack with ONNX Runtime
+## Building Opentrack with ONNX Runtime
 If you provide ONNX Runtime libraries to Opentrack when building it, it will offer Neuralnet as input option. This will allow you to use any webcam as head tracking device.
 
 1. Install [`wine` development branch](https://wiki.winehq.org/Download).
