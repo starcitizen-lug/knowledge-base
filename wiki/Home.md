@@ -15,6 +15,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 * [Performance Tuning](Performance-Tuning)
 * [Tips and Tricks](Tips-and-Tricks)
 * [Sticks, Throttles, & Pedals](Sticks,-Throttles,-&-Pedals)
+* [Head Tracking](Head-Tracking)
 
 ## News
 
