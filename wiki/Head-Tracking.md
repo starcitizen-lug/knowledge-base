@@ -12,7 +12,7 @@
 - Use your webcam with the ArUco Paper Method: A tutorial is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). (Note: Ignore the outdated Opentrack installation steps in that thread)
 
 #### TrackIR
-- 
+- TBA
 
 #### Unsupported hardware
 - Tobii does not support Linux. Its opentrack support uses the Windows only SDK.
