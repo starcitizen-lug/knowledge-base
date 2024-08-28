@@ -197,15 +197,18 @@
 
 ## 🤪 Unexpected Behavior (sometimes also crashes)
 
-#### Mouse/Cursor issues and view snapping in interaction mode
-- The 3.18 update caused mouse and view snapping issues for most Penguins using Wayland + KDE. As a workaround, we recommend installing Gamescope, using Xorg, or switching to an alternate desktop environment.
+#### Mouse/Cursor warp issues and view snapping in interaction mode
+- The 3.18 update caused mouse and view snapping issues for most Penguins using Wayland + some desktop environments, especially KDE. The simplest workaround is to use Xorg or switch to an alternate desktop environment. For example, most Gnome users don't seem to experience this issue.
+  - For some users, switching their runner to Proton Wine >=9 is sufficient to resolve the issue.
+  - Alternatively, build xwayland with this [patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied.
+  - If using KDE, you will also need to install Gamescope and use the `--force-grab-cursor` option.
 - **Note for Nvidia users:** Gamescope may not work on your hardware. See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
-- A possible fix to get Gamescope working on Nvidia: `Right click the game->Configure->System options->Game execution->Environment variables` then find or create `__GL_THREADED_OPTIMIZATIONS` in the left column and change/set it to `0` in the right column.
+  - A possible fix to get Gamescope working on Nvidia: `Right click the game->Configure->System options->Game execution->Environment variables` then find or create `__GL_THREADED_OPTIMIZATIONS` in the left column and change/set it to `0` in the right column.
 - After installing Gamescope, enable it in Lutris: `Right click the game->Configure->System options->Gamescope->Enable Gamescope`. Then, set `Output Resolution` to your monitor's native resolution, ie `1920x1080`.
 - If you're using a version of gamescope newer than **3.11.51**, an additional Gamescope setting is required. Set `Relative Mouse Mode` to on
 - Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
 - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
-- If this doesn't work, you will need to switch to Xorg instead of Wayland or build xwayland with this [patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied.
+- If this doesn't work, you will need to switch to Xorg instead of Wayland.
 
 
 #### Mouse/Cursor restricted to a region smaller than the display, or clicks offset from cursor
