@@ -30,9 +30,9 @@ Launch Star Citizen and configure its head tracking options under `Comms, FOIP &
 1. Set `Head Tracking - General - Source` to `TrackIR`
 2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`
 
-*Notes:*  
-*May not work with Flatpak Lutris*  
-*If compiling from source, make sure `SDK_WINE` is set*
+> [!note]
+> May not work with Flatpak Lutris  
+> If compiling from source, make sure `SDK_WINE` is set
 
 ## Building Opentrack with ONNX Runtime
 If you provide ONNX Runtime libraries to Opentrack when building it, it will offer Neuralnet as input option. This will allow you to use any webcam as head tracking device.
@@ -44,6 +44,5 @@ If you provide ONNX Runtime libraries to Opentrack when building it, it will off
     - Set variable `ONNXRuntime_DIR` to absolute path to extracted ONNX Runtime folder.
 4. Follow [above instructions](#head-tracking-using-opentrack).
 5. Select `neuralnet tracker` as input.
-
-*Note:*  
-*Do not remove ONNX Runtime after you are done. Opentrack won't have Neuralnet as input if you do remove it.*
+> [!note]
+> Do not remove ONNX Runtime after you are done. Opentrack won't have Neuralnet as input if you do remove it.
