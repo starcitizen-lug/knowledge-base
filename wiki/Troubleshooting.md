@@ -207,6 +207,7 @@
 - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
 - If this doesn't work, you will need to switch to Xorg instead of Wayland or build xwayland with this [patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied.
 
+
 #### Mouse/Cursor restricted to a region smaller than the display, or clicks offset from cursor
 - Create a user.cfg file in the LIVE, PTU, EPTU, TECH-PREVIEW directory
  ```
@@ -215,6 +216,7 @@
  r_width = 3440
  r_height = 1440
  ```
+
 
 #### Empty launcher
 - Log out log back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
@@ -229,6 +231,12 @@
 #### No sound in game
 - Depending on your distribution, you may need to set `Prefer System Libraries` in Lutris to `ON`.
 - If you have sound in the launcher but not in the game, launch the game and go to your audio settings, then enable "Play sound while game is in background".
+
+
+#### Required Vulkan Extensions are missing error / poor performance compared to windows / error code 3
+- Check if you have amdvlk installed by running `vulkaninfo --summary`. The vulkaninfo utility is part of the package `vulkan-tools` on most distros. You can also check your package manager.
+- If your system is using amdvlk, uninstall that package and replace it with `vulkan-radeon`.
+- For additional help with this, ask in our [Discord](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins) tech support channel.
 
 
 #### DirectX error message
