@@ -9,8 +9,8 @@
 - Android: Our Penguins tend to like the [SmoothTrack app by John Goering](https://play.google.com/store/apps/details?id=com.epaga.smoothtrack&gl=US). It costs $10 US.
 
 #### Webcam
-- You can build [Opentrack with the ONNX Runtime](#building-opentrack-with-onnx-runtime) to add a neuralnet tracker that enables head tracking with any webcam.
 - A tutorial for the the ArUco Paper Method is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). (Note: Ignore the outdated Opentrack installation steps in that thread)
+- Some Penguins have had success building [Opentrack with the ONNX Runtime](#building-opentrack-with-onnx-runtime) to add a neuralnet tracker that enables head tracking with any webcam.
 
 #### Unsupported hardware
 - Tobii does not support Linux. Its opentrack support uses the Windows only SDK.
