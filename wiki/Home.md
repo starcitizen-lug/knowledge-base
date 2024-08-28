@@ -35,6 +35,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 #### General News
 > (Aug 25, 2024) **Lutris Proton/Protonfixes Migration**
+> - Install Lutris v0.5.17 or later
 > - Right click the game, select Configure, and then adjust settings as follows:
 > - In System options, add the following environment variables:
 >   - `EOS_USE_ANTICHEATCLIENTNULL: 1`
@@ -42,7 +43,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 >   - `STORE: none`
 >   - `PROTONPATH: GE-Proton`
 > - Other environment variables can be updated/removed if desired by comparing against those set for a new install in our [install json](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/lutris-starcitizen.json)
-> - In System options, add the following to "Command prefix":
+> - If using Lutris v0.5.17, in System options, add the following to "Command prefix":
 >   - `GAMEID=umu-starcitizen STORE=none`
 > - In System options, disable `CLI mode`
 > - In Runner options, set Wine version to `GE-Proton (Latest)`
