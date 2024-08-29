@@ -27,7 +27,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > - Probably requires the latest git release of winetricks for the powershell patches
 > - If using Wine Staging, CLI mode must be enabled in Lutris
 >   - Right click the game -> Configure -> System options -> CLI mode
-> - Launcher 2.0 is unable to verify files, use the install button instead for now. We expect this to be resolved in the next version of Lutris
+> - Launcher 2.0 is unable to verify files. Use the install button instead for now
 > - The 2.0 Launcher may need to be installed manually. See [our wiki](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#rsi-launcher-doesnt-auto-update) for instructions
 
 > [!important]
