@@ -149,6 +149,10 @@
 - Make sure the `SDL_VIDEODRIVER` environment variable is **NOT** set globally to `wayland` on your system.
 
 
+#### Game crashes after switching to Vulkan
+- If you can't relaunch the game to switch it back to DX11, you can manually delete the file located at `{wine prefix}/drive_c/users/{user}/AppData/Local/Star Citizen/sc-alpha-{version}/GraphicsSettings/GraphicsSettings.json`
+
+
 #### After playing for a while, game/lutris/wine crash, no errors
   - If there are no errors in your game logs, check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](Performance-Tuning#swap).
 
