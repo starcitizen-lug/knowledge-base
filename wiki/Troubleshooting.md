@@ -330,7 +330,7 @@
 
 
 
-## ❤️ AMD
+## 💖 AMD
 
 #### Current known issues
 - See the AMD section of our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
