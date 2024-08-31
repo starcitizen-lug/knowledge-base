@@ -40,6 +40,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 ### General News
 > [!tip]
 > (Aug 25, 2024) **Lutris Proton/Protonfixes Migration**
+> - If you wish to try the new Proton integration in Lutris, you can follow the steps below
 > - Install Lutris v0.5.17 or later
 > - Right click the game, select Configure, and then adjust settings as follows:
 > - In System options, add the following environment variables:
