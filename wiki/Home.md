@@ -43,7 +43,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > - If you wish to use the new Proton integration in Lutris, see below for umu Proton migration steps
 > - Note that [umu](https://github.com/Open-Wine-Components/umu-launcher/releases) has not yet seen a stable release
 > - We currently recommend using either your `system wine` or `wine-staging`, which can be installed using [our Helper](https://github.com/starcitizen-lug/lug-helper)
-> - If switching to one of these from a GE runner, CLI mode must be enabled in Lutris
+> - If switching to your system wine or wine-staging from a GE runner, CLI mode must be enabled in Lutris
 >   - Right click the game -> Configure -> System options -> CLI mode
 
 > [!tip]
