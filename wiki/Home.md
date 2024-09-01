@@ -38,9 +38,14 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 
 ### General News
+> [!note]
+> (Sept 1, 2024) **`GE Proton (Latest)` is the new umu proton**
+> - If you wish to use the new Proton integration in Lutris, see below for umu Proton migration steps
+> - Note that [umu](https://github.com/Open-Wine-Components/umu-launcher/releases) has not yet seen a stable release
+> - We currently recommend using either your `system wine` or `wine-staging`, which can be installed using [our Helper](https://github.com/starcitizen-lug/lug-helper)
+
 > [!tip]
-> (Aug 25, 2024) **Lutris Proton/Protonfixes Migration**
-> - If you wish to try the new Proton integration in Lutris, you can follow the steps below
+> (Aug 25, 2024) **Lutris umu Proton/Protonfixes Migration**
 > - Install Lutris v0.5.17 or later
 > - Right click the game, select Configure, and then adjust settings as follows:
 > - In System options, add the following environment variables:
