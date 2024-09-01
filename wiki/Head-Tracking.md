@@ -22,9 +22,14 @@ Opentrack versions 2023.1.0 and later contain the fixes needed to work with Star
 
 1. Select `Wine` in the Output dropdown
 2. Click the `Configure` button next to it
-3. Under `Wine variant`, select the `Wine` radio button and then choose the Wine version or Lutris Runner you're using with Star Citizen
+3. Under `Wine variant`, select the `Wine` radio button and then choose the Wine version or Lutris Runner you're using with Star Citizen.  
+   Note that "GE-Proton (Latest)" is the umu Proton runner. Opentrack does not currently work with umu.
 4. Click `Browse Prefix` and select your Star Citizen Wine prefix (Lutris Default: ~/Games/star-citizen)
 5. Next to `Protocol`, make sure `Both` is selected
+
+> [!important]
+> `GE Proton (Latest)` is the new umu Proton runner. Opentrack does not currently work with umu.  
+> You will need to use either your `system wine` or `wine-staging`, which can be installed from [our Helper](https://github.com/starcitizen-lug/lug-helper).
 
 Launch Star Citizen and configure its head tracking options under `Comms, FOIP & Head Tracking`
 1. Set `Head Tracking - General - Source` to `TrackIR`
