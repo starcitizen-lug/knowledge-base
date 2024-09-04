@@ -23,10 +23,11 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > [!tip]
 > (Aug 24, 2024) **Launcher 2.0 Migration**
 > - There are still some isses with the 2.0 launcher. The old launcher will continue to work while those issues get sorted out. If you want to try the 2.0 launcher anyway, you can use the steps below
-> - Requires Wine Staging 9.4+ or Proton GE 9-5+ runner
->   - Wine Staging can be easily installed from the Kron4ek runner source in the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
-> - Probably requires the latest git release of winetricks for the powershell patches
-> - If using Wine Staging, CLI mode must be enabled in Lutris
+> - Requires standard Wine 9.5+ or Proton GE 9-5+ runner
+>   - Recent Wine versions can be easily installed from the Kron4ek runner source in the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
+> - Requires the latest git release of winetricks for the powershell patches
+>   - Run `WINEPREFIX={your prefix} winetricks powershell` to install it
+> - If using standard Wine, CLI mode must be enabled in Lutris
 >   - Right click the game -> Configure -> System options -> CLI mode
 > - Launcher 2.0 is unable to verify files. Use the install button instead for now
 > - The 2.0 Launcher may need to be installed manually. See [our wiki](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#rsi-launcher-doesnt-auto-update) for instructions
