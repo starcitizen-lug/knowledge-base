@@ -10,15 +10,14 @@ New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-di
 1. Download our [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) (distro packages listed [here](https://github.com/starcitizen-lug/lug-helper#installation)).
 2. Launch the LUG Helper and select your preferred installation method: `Install Star Citizen with Lutris/Wine`.
 3. Allow the Preflight Check to fix any issues it finds before proceeding!
-4. Select an install location on an SSD where you have space for the entire game, approximately 110GB (we do not recommend an HDD).
-5. If using the Wine (non-Lutris) install method, unselect `Run RSI Launcher` when the installer finishes. Instead, follow the LUG Helper's instructions to launch the game.
-6. In the RSI Launcher, log in and click install to finish installing the game.  
- **Do not change the default install path in the RSI Launcher settings!**
-7. Lutris will use umu/Proton by default. Optionally switch to your System Wine version instead:  
-  `Right click the game -> Configure -> Runner options -> Wine version`
-8. **Wayland users:** See [required workarounds](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#mousecursor-issues-and-view-snapping-in-interaction-mode) to resolve mouse cursor and view snapping issues.
-9. Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for important updates. Especially, Nvidia gpu driver issues and necessary workarounds.
-10. Run the launcher and start the game. See you in the 'verse!
+4. Select an install location on an SSD where you have space for the entire game, approximately 110GB (we do not recommend an HDD).  
+ **Do not change the default windows install path in the RSI Launcher Setup!**  
+   Leave it set to `C:\Program Files\Roberts Space Industries\RSI Launcher`
+5. If using the Wine (non-Lutris) install method, deselect `Run RSI Launcher` when the setup finishes. Instead, follow the LUG Helper's instructions to launch the game.
+6. In the RSI Launcher, log in and click install to finish installing the game.
+7. **Wayland users:** See [required workarounds](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#mousecursor-warp-issues-and-view-snapping-in-interaction-mode) to resolve mouse cursor and view snapping issues.
+8. Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for important updates. Especially, Nvidia gpu driver issues and necessary workarounds.
+9. Run the launcher and start the game. See you in the 'verse!
 
 
 > [!tip]
