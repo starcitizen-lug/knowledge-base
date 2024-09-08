@@ -27,7 +27,7 @@ boot.kernel.sysctl = {
   "fs.file-max" = 524288;
 };
 ```
-EAC configuration can be found [below](#manual-configuration).
+EAC configuration can be found below
 
 
 ## AMD FidelityFX Super Resolution (FSR) upscaling
@@ -64,55 +64,9 @@ _Using an Environment Variable_
   EOS_USE_ANTICHEATCLIENTNULL=1
   ```
 
-_Using a GloriousEggroll runner_
-
-GE runners since **Wine-GE-Proton7-41** include an EAC workaround by default. It will be enabled automatically for new installs. To enable it for existing installs:
-* Set the following environment variable `Right click the game->Configure->System Options->Environment variables`:
-  ```
-  SteamGameId=starcitizen
-  ```
-* Add the following pre-launch command in Lutris `Right click the game->Configure->System Options->Pre-launch script`. Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a script file that incorporates this.
-  ```sh
-  /usr/bin/sh -c 'if [ -d \"$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat\" ]; then rm -rf \"$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat\"; fi'
-  ```
-
-_/etc/hosts method:_
-
-This applies the workaround globally at the system level by modifying /etc/hosts
-* Launch the [LUG Helper](https://github.com/starcitizen-lug/lug-helper) and select `Deploy Easy Anti-cheat Workaround`
-_json config method:_
-
-If you prefer not to apply the workaround globally, a json file can be modified each time the game starts. Launcher updates/verifies will revert this change. Close and re-launch the game to re-apply it.
-* In Lutris, navigate to `Right click the game->Configure->System Options->Pre-launch script`. Make sure `Show advanced options` is checked.
-* Add the following. Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sample script file that incorporates this and other pre-launch tweaks.
-  ```sh
-  /usr/bin/sh -c "sed -i 's|\"productid\":.*|\"productid\": \"linux-eac-workaround\",|' \"$WINEPREFIX/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/EasyAntiCheat/Settings.json\""
-  ```
-* Enable `Wait for pre-launch script completion`
-* Additional pre-launch script commands can be run using semicolons: `/usr/bin/sh -c "command1; command2; etc"`
-
-#### Manual Configuration
-
-_/etc/hosts method:_
-
-* Add the following line to your `/etc/hosts` file:
-`127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround`
-* Delete the following directory:
-`$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat`
-
-_json config method:_
-
-* Edit `$WINEPREFIX/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/EasyAntiCheat/Settings.json` and modify the value of `productid`, `sandboxid`, `clientid`, or `deploymentid` to any invalid string, ie `linux-eac-workaround`.
-* Delete the following directory:
-`$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat`
-
-_Configuration for NixOS users only:_
-
-* Add `"127.0.0.1 modules-cdn.eac-prod.on.epicgames.com"` to [`networking.extraHosts`](https://search.nixos.org/options?channel=unstable&show=networking.extraHosts&from=0&size=50&sort=relevance&type=packages&query=networking.extraHosts)
-
 
 ## Lutris Pre-launch and Post-exit Scripts
-Below are sample pre-launch and post-exit scripts that incorporate the mouse acceleration and EAC workarounds described above.  
+Below are sample pre-launch and post-exit scripts that incorporate the mouse acceleration workarounds described above.
 To use them, create `sc-prelaunch.sh` and `sc-postexit.sh` in your wine prefix, uncomment the appropriate mouse acceleration lines based on your desktop environment, then configure Lutris to use the scripts:
 - `Right click the game->Configure->System options` and set `Pre-launch script` to `/path/to/wine/prefix/sc-pre-launch.sh`
 - `Right click the game->Configure->System options` and set `Post-exit script` to `/path/to/wine/prefix/sc-post-exit.sh`
@@ -133,27 +87,6 @@ _sc-prelaunch.sh_
 #kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" true
 
 ## End Mouse Acceleration
-
-## EAC Workaround
-EACDIR="$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat"
-GAMEDIR="$WINEPREFIX/drive_c/Program Files/Roberts Space Industries/StarCitizen"
-
-## Remove EAC cache
-## This is a necessary component of any EAC workaround method
-if [ -d "$EACDIR" ]; then
-    rm -rf "$EACDIR"
-fi
-
-## Mangle EAC settings.json
-## This section is not needed if using a newer GE runner
-for SCENV in LIVE PTU EPTU; do
-  SETTINGS="$GAMEDIR/$SCENV/EasyAntiCheat/Settings.json"
-  if [ -f "$SETTINGS" ]; then
-    sed -i 's|\"productid\":.*|\"productid\": \"linux-eac-workaround\",|' "$SETTINGS"
-  fi
-done
-
-## End EAC Workaround
 ```
 
 _sc-postexit.sh_
@@ -172,8 +105,3 @@ _sc-postexit.sh_
 
 ## End Mouse Acceleration
 ```
-
-
-## Suggestions for a good gaming experience
-https://robertsspaceindustries.com/spectrum/community/LUG/forum/149/thread/information-how-to-get-a-good-experience-with-star
-> Join the org to access Spectrum links: https://robertsspaceindustries.com/orgs/LUG
