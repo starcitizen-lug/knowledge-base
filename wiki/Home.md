@@ -39,12 +39,17 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 
 ### General News
+> [!warning]
+> (Sept 10, 2024) **Wine-staging crashes PTU**
+> - We recommend using standard Wine instead of Wine-staging
+> - Recent Wine versions can be easily installed from the Kron4ek runner source in the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
+
 > [!note]
 > (Sept 1, 2024) **`GE Proton (Latest)` is the new umu proton**
 > - If you wish to use the new Proton integration in Lutris, see below for umu Proton migration steps
 > - Note that [umu](https://github.com/Open-Wine-Components/umu-launcher/releases) has not yet seen a stable release
-> - We currently recommend using either your `system wine` or `wine-staging`, which can be installed using [our Helper](https://github.com/starcitizen-lug/lug-helper)
-> - If switching to your system wine or wine-staging from a GE runner, CLI mode must be enabled in Lutris
+> - We currently recommend using either your `system Wine` or a standard Wine installed using [our Helper](https://github.com/starcitizen-lug/lug-helper)
+> - If switching to standard Wine from a GE runner, CLI mode must be enabled in Lutris
 >   - Right click the game -> Configure -> System options -> CLI mode
 
 > [!tip]
