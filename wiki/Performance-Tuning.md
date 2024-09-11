@@ -41,9 +41,9 @@ An fsync-enabled Kernel can help improve smoothness while shaders are being comp
 
 We currently recommend a combined 40GB RAM + swap to avoid Out Of Memory crashes while playing Star Citizen. Systems with less than 40GB RAM will need additional swap or zram configured.
 
-Zram stores swap in RAM using on-the-fly compression which can improve game performance when memory utilization gets high.
+Zram stores swap in RAM using on-the-fly compression which can improve game performance when memory utilization gets high. In our experience, this tends to provide better performance in Star Citizen than zswap.
 - For systems with 16GB RAM, we recommend all 16GB configured for zram with at least an 8GB swap file.
-- For systems with 32GB RAM, zram can be used in place of a swap file by configuring all 32GB for zram.
+- For systems with 32GB RAM, we recommend configuring all 32GB for zram with at least a couple extra GB in a swap file.
 
 See the [Arch Wiki](https://wiki.archlinux.org/title/Zram#Using_zram-generator) for configuration instructions that should work for most distros.
 
@@ -51,7 +51,8 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 - For 16GB RAM: 24GB swap
 - For 32GB RAM: 8GB swap
 
-More swap should be configured if you intend to run background applications while playing the game.
+> [!tip]
+> More swap should be configured if you intend to run background applications while playing the game.
 
 ## Picom/Compton Compositors
 
