@@ -17,7 +17,7 @@ We do not recommend 👎 most gaming-focused distributions as many of our Pengui
 
 Other distributions we suggest avoiding 👎 due to frequent package incompatibilities, old dependencies, and update issues are: Manjaro, Ubuntu LTS, Mint (based on Ubuntu LTS), Debian Stable, and openSUSE Leap.
 
-If you're new to Linux, we recommend avoiding immutable distros such as Bazzite and Nix for now; they come with a much steeper learning curve.
+If you're new to Linux, we recommend avoiding immutable distros such as Bazzite, Nix, Silverblue, Universal Blue, etc for now; they come with a steeper learning curve and are better suited to those with more experience.
 
 ## Configuration differences required for NixOS
 To set `vm.max_map_count` and `fs.file-max`, add the following to your NixOS config:
