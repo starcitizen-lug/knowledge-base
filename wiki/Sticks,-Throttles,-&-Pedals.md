@@ -2,7 +2,8 @@
 
 In general, you can expect any hardware to work on linux but third-party software tied to the device can be an issue. In some cases, a VM may be required for configuring the device.
 
-**Troubleshooting**: See the section [at the end of this page](#troubleshooting) for specific issues and workarounds.
+**Troubleshooting**:  
+See the section [at the end of this page](#troubleshooting) for specific issues and workarounds.
 
 ## Recommendations
 
@@ -136,15 +137,18 @@ There are two possible workarounds for this:
 1) The following Python script creates a virtual device from the real device, adding a few more capabilities to make Star Citizen not discard it as an invalid device:
 https://github.com/beniwtv/evdev-spoof-device
 
-> Note: Consider making a pull request for your device (see quirks section), if there are quirks needed for your device to function.
+> [!note]
+> Consider making a pull request for your device (see quirks section), if there are quirks needed for your device to function.
 
 2) Another solution is to create a Kernel udev rule to change the classification of your device. 
 
     * Create a file `/etc/udev/rules.d/90-pedals-workaround.rules`.
     * Add this to the file, changing your vendor and model IDs (can be found by using `lsusb`):
+      ```
+      ACTION=="add|change", KERNEL=="event[0-9]*", ENV{ID_VENDOR_ID}=="044f", ENV{ID_MODEL_ID}=="b679", ENV{ID_INPUT_ACCELEROMETER}="", ENV{ID_INPUT_JOYSTICK}="1", TAG+="uaccess"
+      ```
 
-> ACTION=="add|change", KERNEL=="event[0-9]*", ENV{ID_VENDOR_ID}=="044f", ENV{ID_MODEL_ID}=="b679", ENV{ID_INPUT_ACCELEROMETER}="", ENV{ID_INPUT_JOYSTICK}="1", TAG+="uaccess"
-
+> [!note]
 > Also consider having the quirk added to systemd by following https://github.com/systemd/systemd/blob/main/hwdb.d/60-input-id.hwdb.
 
 ### Thrustmaster T-16000
