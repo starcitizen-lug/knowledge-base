@@ -119,7 +119,8 @@ ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
 - If you are using Lutris, make sure "Autoconfigure joypads" is turned off in the game settings for Lutris
     - Right click the game -> Configure -> Runner options -> Autoconfigure joypads
 - Try setting your joysticks to "dinput" instead of "xinput" in Lutris
-    - Click the arrow next to the wine glass button -> Wine Control Panel -> Game Controllers
+    - Select the game then click the arrow next to the wine glass button -> Wine Control Panel -> Game Controllers
+      ![Screenshot from 2024-09-13 19-45-26](https://github.com/user-attachments/assets/dc2fd609-4c12-49a1-8ce6-e2825dc61a72)
     - If your joysticks are showing up as "Connected(xinput)", select them and click "Override" to set them to dinput.
 - Joysticks can be configured manually in the wine joystick control panel
     - Click the arrow next to the wine glass button -> Wine Control Panel -> Game Controllers
