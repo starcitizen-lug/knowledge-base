@@ -40,7 +40,7 @@ _Distributions that use /etc/security/limits.conf_
 * Add the following line to /etc/security/limits.conf: `* hard nofile 524288`
 
 
-## Installing
+## Wine Installation
 
 1. Install and configure the necessary prerequisites
 2. Create your wine prefix: `WINEPREFIX=~/path/you/want/to/starcitizen winecfg`
@@ -56,6 +56,18 @@ mkdir -p "/path/to/prefix/drive_c/Program Files/Roberts Space Industries/StarCit
 
 If you have trouble installing recent Wine versions on a Debian-based distro due to missing faudio, see [this link](https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html).
 
+
+## Proton Installation
+
+1. Install Open Wine Components [umu-launcher](https://github.com/Open-Wine-Components/umu-launcher/releases/latest)
+2. Download and run the RSI Launcher installer
+```
+GAMEID="umu-starcitizen" umu-run "~/Downloads/RSI Launcher-Setup-2.0.3.exe"
+```
+3. Run the RSI Launcher
+```
+GAMEID="umu-starcitizen" umu-run "~/Games/umu/umu-starcitizen/drive_c/Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe"
+```
 
 ## EAC Workaround
 
