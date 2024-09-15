@@ -1,9 +1,9 @@
 ## Prerequisites
 New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 
-1. Install wine following the instructions for your distro on the [WineHQ website](https://wiki.winehq.org/Category:Distributions). **If your distro provides an up to date version of wine** (ie. Arch), you may install from its repos instead. See the [WineHQ Main Page](https://www.winehq.org/) for current versions.
-2. Install winetricks v20220411 or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
-3. Install dxvk-2.1 [or newer](https://github.com/doitsujin/dxvk) and configure it for your distribution
+1. Install wine following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. **If your distro provides an up to date version of wine** (ie. Arch), you may install from its repos instead. 
+2. Install winetricks 20240105-next or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
+3. Install dxvk-2.4 [or newer](https://github.com/doitsujin/dxvk) and configure it for your distribution
 4. Set `vm.max_map_count` on your system to at least `16777216`
 5. Set the Hard open file descriptors limit on your system to at least `524288`
 
