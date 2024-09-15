@@ -61,7 +61,7 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
 
 _Using an Environment Variable_
 
-* Set the following environment variable `Right click the game->Configure->System Options->Environment variables`:
+* Set the following environment variable in Lutris `Right click the game->Configure->System Options->Environment variables`:
   ```
   EOS_USE_ANTICHEATCLIENTNULL=1
   ```
