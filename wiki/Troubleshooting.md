@@ -331,6 +331,7 @@
         ```
       - Use the environment variable `LD_PRELOAD` to load the patched version:  
        `LD_PRELOAD=/path/to/the/libcuda.patched.so:$LD_PRELOAD`
+      - Remove the `WINE_HIDE_NVIDIA_GPU` env variable if it is set in Lutris or your launch script.
       - Don't forget to enable DXVK-NVAPI.
 
 
