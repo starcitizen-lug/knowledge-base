@@ -92,9 +92,9 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 ### Nvidia News
 > [!warning]
-> (Apr 29, 2024) **Vulkan Beta: Game fails to launch**
-> - If using Proton, switch to the latest wine-GE 8-26+ runner and add the environment variable `WINE_HIDE_NVIDIA_GPU=1`
-> - If using standard Wine, there is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents DLSS from working on linux. See [instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#dlssdeep-learning-super-sampling--vulkan) to patch libcuda to enable DLSS
+> (Apr 29, 2024) **Vulkan Beta: Game fails to launch** There is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents vulkan and DLSS from working on linux.
+> - If using Proton or wine-GE runner, add the environment variable `WINE_HIDE_NVIDIA_GPU=1` to enable vulkan
+> - If using Proton, wine-GE, or standard Wine, see [instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#dlssdeep-learning-super-sampling--vulkan) to patch libcuda to enable both vulkan and DLSS
 
 > [!caution]
 > (Oct 9, 2023) **Crash when taking shield damage in-game**
