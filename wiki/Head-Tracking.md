@@ -9,7 +9,7 @@
 - Android: Our Penguins tend to like the [SmoothTrack app by John Goering](https://play.google.com/store/apps/details?id=com.epaga.smoothtrack&gl=US). It costs $10 US.
 
 #### Webcam
-- A tutorial for the the ArUco Paper Method is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). (Note: Ignore the outdated Opentrack installation steps in that thread)
+- A tutorial for the the ArUco Paper Method is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). **NOTE:** Ignore the outdated Opentrack installation steps in that thread! See updated instructions below.
 - Some Penguins have had success building [Opentrack with the ONNX Runtime](#building-opentrack-with-onnx-runtime) to add a neuralnet tracker that enables head tracking with any webcam.
 
 #### Unsupported hardware
@@ -47,7 +47,7 @@ If you provide ONNX Runtime libraries to Opentrack when building it, it will off
 3. Install [Opentrack](https://github.com/opentrack/opentrack/wiki/Building-on-Linux) with some extra steps when using `cmake` or `ccmake`.
     - Set variable `SDK_WINE`.
     - Set variable `ONNXRuntime_DIR` to absolute path to extracted ONNX Runtime folder.
-4. Follow [above instructions](#head-tracking-using-opentrack).
+4. Follow the configuration instructions [above](#opentrack-configuration).
 5. Select `neuralnet tracker` as input.
 > [!note]
 > Do not remove ONNX Runtime after you are done. Opentrack won't have Neuralnet as input if you do remove it.
