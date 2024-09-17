@@ -44,9 +44,10 @@ If you provide ONNX Runtime libraries to Opentrack when building it, it will off
 
 1. Install [`wine` development branch](https://wiki.winehq.org/Download).
 2. Download and extract [ONNX Runtime](https://github.com/microsoft/onnxruntime/releases).
-3. Install [Opentrack](https://github.com/opentrack/opentrack/wiki/Building-on-Linux) with some extra steps when using `cmake` or `ccmake`.
+3. Follow [Opentrack's instructions](https://github.com/opentrack/opentrack/wiki/Building-on-Linux) with some extra steps when using `cmake` or `ccmake`.
     - Set variable `SDK_WINE`.
     - Set variable `ONNXRuntime_DIR` to absolute path to extracted ONNX Runtime folder.
+    - If you're having trouble, some videos are provided by [bekopharm](https://linux.simpit.dev/systems/opentrack/)
 4. Follow the configuration instructions [above](#opentrack-configuration).
 5. Select `neuralnet tracker` as input.
 > [!note]
