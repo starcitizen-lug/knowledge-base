@@ -332,9 +332,9 @@
 - There is a [memory allocation issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795), where it attempts to allocate in a specific area already occupied by the game.
    - A possible solution would be patching LibCUDA file increasing this area.
       - Locate your 64-bit `libcuda.so` (usually `/usr/lib` or run `whereis libcuda.so`).
-      - To generate `libcuda.patched.so`, replace `/path/to/libcuda.so` with your library's location then run:  
+      - To generate `libcuda.patched.so`, replace both placeholder `/path/to/` lines below then run:  
         ```
-        echo -ne $(od -An -tx1 -v /path/to/libcuda.so | tr -d '\n' | sed -e 's/00 00 00 f8 ff 00 00 00/00 00 00 f8 ff ff 00 00/g' -e 's/ /\\x/g') > libcuda.patched.so
+        echo -ne $(od -An -tx1 -v /path/to/libcuda.so | tr -d '\n' | sed -e 's/00 00 00 f8 ff 00 00 00/00 00 00 f8 ff ff 00 00/g' -e 's/ /\\x/g') > /desired/path/to/libcuda.patched.so
         ```
       - Use the environment variable `LD_PRELOAD` to load the patched version:  
        `LD_PRELOAD=/path/to/the/libcuda.patched.so:$LD_PRELOAD`
