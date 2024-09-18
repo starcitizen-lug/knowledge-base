@@ -14,7 +14,7 @@
 
 #### Unsupported hardware
 - Tobii does not support Linux. Its opentrack support uses the Windows only SDK.
-- TrackIR support is complicated. Linuxtrack may support it but not under wine/proton. We recommend Delanclip instead.
+- TrackIR 5 does not support Opentrack, nor does it work with Linuxtrack under Wine/Proton. We recommend Delanclip instead.
 
 
 ## Opentrack Configuration
