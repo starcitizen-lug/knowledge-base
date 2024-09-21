@@ -39,6 +39,9 @@ Launch Star Citizen and configure its head tracking options under `Comms, FOIP &
 1. Set `Head Tracking - General - Source` to `TrackIR`
 2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`  
 
+You may now start tracking in Opentrack.
+(The order of launching the game and starting tracking does not matter but we advise launching the game first and then starting tracking in Opentrack.)
+
 > [!note]
 > - May not work with Flatpak Lutris
 > - If compiling from source, make sure `SDK_WINE` is set
