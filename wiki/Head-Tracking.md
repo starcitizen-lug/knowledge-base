@@ -29,7 +29,7 @@ Opentrack versions 2023.1.0 and later contain the fixes needed to work with Star
 1. Select `Wine` in the Output dropdown
 2. Click the `Configure` button next to it
 3. Under `Wine variant`, select...
-  - ...the `Wine` option IF using Wine Runners. Then choose the Wine version or Lutris Wine Runner you're using with Star Citizen.
+  - ... the `Wine` option IF using Wine Runners. Then choose the Wine version or Lutris Wine Runner you're using with Star Citizen.
   - ... the `Proton` and `UMU enabled Launchers` options IF using Proton Runners AND using our custom Opentrack version. Then choose the Proton version you have selected in Lutris.
 4. Click `Browse Prefix` and select your Star Citizen prefix (Lutris Default: `~/Games/star-citizen`)
 5. Confirm that the `ESYNC` and `FSYNC` settings match the ones in Lutris. (Any decently modern Runner should take advantage of both.)
