@@ -40,7 +40,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 ### General News
 > [!warning]
-> (Sept 10, 2024) **Wine-staging crashes PTU**
+> (Sept 21, 2024) **Wine-staging causes launcher to hang when downloading base pack, may cause game crashes**
 > - We recommend using standard Wine instead of Wine-staging
 > - Recent Wine versions can be easily installed from the Kron4ek runner source in the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
 
