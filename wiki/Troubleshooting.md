@@ -341,6 +341,10 @@
       - Remove the `WINE_HIDE_NVIDIA_GPU` env variable if it is set in Lutris or your launch script.
       - Don't forget to enable DXVK-NVAPI.
 
+#### Gamescope not working
+- See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
+- A possible fix to get Gamescope working on Nvidia: `Right click the game->Configure->System options->Game execution->Environment variables` then find or create `__GL_THREADED_OPTIMIZATIONS` in the left column and change/set it to `0` in the right column.
+
 
 ***
 
