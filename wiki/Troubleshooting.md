@@ -91,7 +91,7 @@
 #### RSI Launcher v1.6.2+ JavaScript error
 - For more information, see [CIG's announcement in Spectrum](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/upcoming-launcher-update-for-linux-users/5693728)
 - Solution 1:
-   - In `System options`, make sure Advanced options is on then enable `CLI mode`
+   - In the game's Lutris `System options`, make sure Advanced options is on then enable `CLI mode`
 - Solution 2:
   - If this does not fix the problem, revert the above changes and install the latest GloriousEggroll runner, available in our [Helper](https://github.com/starcitizen-lug/lug-helper)
 
