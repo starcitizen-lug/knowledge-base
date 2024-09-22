@@ -32,6 +32,12 @@
 
 #### Launcher hangs during installation
 - In Lutris, try setting `Prefer system libraries` to `On` globally before installation. After installation, this can be reset and configured only for Star Citizen if desired.
+- Make sure you are not trying to install to an NTFS-formatted drive.
+
+
+#### Download hangs, followed by Install Failure error
+- As mentioned in our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide), be sure you are not changing the default install path in the RSI Launcher settings. If you wish to install the game elsewhere, put the entire wine prefix there instead.
+
 
 #### Install button does nothing
 - ⚠️ Launch Lutris in debug mode (`lutris -d`) and look for a `KeyError: 'contentstatsid'` error.
@@ -54,10 +60,6 @@
 - Proceed with lug-helper installer.
 
 
-#### Download hangs, followed by Install Failure error
-- As mentioned in our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide), be sure you are not changing the default install path in the RSI Launcher settings. If you wish to install the game elsewhere, put the entire wine prefix there instead.
-
-
 #### Error: *utf-8 codec can't decode byte 0x_ in position ___: invalid continuation byte*
 - Re-check your EAC workaround. Our [Helper](https://github.com/starcitizen-lug/lug-helper) can check it for you, or see the [manual instructions](Tips-and-Tricks#easy-anti-cheat-workaround) on our wiki.
 
@@ -77,9 +79,8 @@
   ![Screenshot from 2023-05-11 10-33-19](https://github.com/starcitizen-lug/knowledge-base/assets/3657071/d146e9cc-e0a2-4327-acfb-ba5538ddefe4)
 
 
-
 #### Installing Star Citizen on an NTFS-formatted drive
-- See: https://github.com/ValveSoftware/Proton/wiki/Using-a-NTFS-disk-with-Linux-and-Windows
+- Don't; it probably won't work and will likely only corrupt your game files.
 
 ***
 
