@@ -9,7 +9,7 @@ New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-di
 ## Installation Steps
 1. Download our [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) (distro packages listed [here](https://github.com/starcitizen-lug/lug-helper#installation)).
 2. Launch the LUG Helper and run the `Pre-flight Check` to optimize your system settings.
-3. In the LUG Helper, select `Install Star Citizen` and install the launcher to an SSD where you have space for the entire game, approximately 110GB (we do not recommend an HDD).
+3. In the LUG Helper, select `Install Star Citizen` and install the launcher to an SSD where you have space for the entire game, approximately 110GB (we do not recommend an HDD or NTFS).
 4. Run the RSI launcher from Lutris and finish installing the game; do not change the default install path in the RSI Launcher settings.
 5. In the LUG Helper, select `Manage Lutris Runners`, and install the latest runner from GloriousEggroll (or ask us on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins) which runner is currently recommended).
 6. In the LUG Helper, select `Manage DXVK Versions`. Install the latest standard dxvk.
