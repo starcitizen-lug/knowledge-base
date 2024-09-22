@@ -19,28 +19,24 @@
 
 ## Opentrack Configuration
 > [!important]
-> `GE Proton (Latest)` is the new umu Proton runner. The official Opentrack builds do not currently work with umu, as they only have limited support for Proton. We have since reactivated the [opentrack-StarCitizen Repo](https://github.com/Priton-CE/opentrack-StarCitizen) with extended support.
-> 
-> - For `wine-GE-Proton8-26` (or earlier), `system wine`, or `wine-staging` you may use the official Opentrack builds (or our custom one but that wont have any relevant improvements).
-> - For any `GE-Proton` or `Proton` Runner you need to build our custom Opentrack Repo. (See [build instructions](https://github.com/Priton-CE/opentrack-StarCitizen?tab=readme-ov-file#building-from-source).)
+> `GE Proton (Latest)` is the new umu Proton runner and the official Opentrack builds do not currently work with umu. We have reactivated the [opentrack-StarCitizen Repo](https://github.com/Priton-CE/opentrack-StarCitizen) to provide this support.
+> - For `system wine`, `wine-staging`, or `wine-GE-Proton8-x`, use an official Opentrack build version 2023.1.0 or later.
+> - For any `GE-Proton` or `Proton` Runner, follow the [build instructions](https://github.com/Priton-CE/opentrack-StarCitizen?tab=readme-ov-file#building-from-source) on our opentrack-StarCitizen Repo.
 
-Opentrack versions 2023.1.0 and later contain the fixes needed to work with Star Citizen. After installing it, use the following configuration:
+After installing Opentrack according to the above note, use the following configuration:
 
 1. Select `Wine` in the Output dropdown
 2. Click the `Configure` button next to it
-3. Under `Wine variant`, select...
-  - ... the `Wine` option IF using Wine Runners. Then choose the Wine version or Lutris Wine Runner you're using with Star Citizen.
-  - ... the `Proton` and `UMU enabled Launchers` options IF using Proton Runners AND using our custom Opentrack version. Then choose the Proton version you have selected in Lutris.
+3. Under `Wine variant`, select one of the following:
+    1. `Wine` if using a Wine Runner as mentioned in the note above. Then, choose the Wine version or Lutris Wine Runner you're using with Star Citizen.
+    2. `Proton` and then `UMU enabled Launchers` if using a Proton Runner with our custom opentrack-StarCitizen. Then, choose the Proton version you have selected in Lutris.
 4. Click `Browse Prefix` and select your Star Citizen prefix (Lutris Default: `~/Games/star-citizen`)
-5. Confirm that the `ESYNC` and `FSYNC` settings match the ones in Lutris. (Any decently modern Runner should take advantage of both.)
+5. Confirm that the `ESYNC` and `FSYNC` settings match your settings in Lutris.
 6. Next to `Protocol`, make sure `Both` is selected
 
-Launch Star Citizen and configure its head tracking options under `Comms, FOIP & Head Tracking`
+Launch Star Citizen before clicking start in Opentrack. Configure Star Citizen's head tracking options under `Comms, FOIP & Head Tracking`
 1. Set `Head Tracking - General - Source` to `TrackIR`
 2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`  
-
-You may now start tracking in Opentrack.
-(The order of launching the game and starting tracking does not matter but we advise launching the game first and then starting tracking in Opentrack.)
 
 > [!note]
 > - May not work with Flatpak Lutris
