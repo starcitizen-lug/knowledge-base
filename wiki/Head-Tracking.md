@@ -34,7 +34,8 @@ After installing Opentrack according to the above note, use the following config
 5. Confirm that the `ESYNC` and `FSYNC` settings match your settings in Lutris.
 6. Next to `Protocol`, make sure `Both` is selected
 
-Launch Star Citizen before clicking start in Opentrack. Configure Star Citizen's head tracking options under `Comms, FOIP & Head Tracking`
+Launch Star Citizen before clicking start in Opentrack.  
+Configure Star Citizen's head tracking options under `Comms, FOIP & Head Tracking`:
 1. Set `Head Tracking - General - Source` to `TrackIR`
 2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`  
 
