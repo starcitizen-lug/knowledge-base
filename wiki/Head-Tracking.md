@@ -19,7 +19,7 @@
 
 ## Opentrack Configuration
 > [!important]
-> `GE Proton (Latest)` is the new umu Proton runner and the official Opentrack builds do not currently work with umu. We have reactivated the [opentrack-StarCitizen Repo](https://github.com/Priton-CE/opentrack-StarCitizen) to provide this support.
+> `GE Proton (Latest)` is the new umu Proton runner. The official Opentrack builds do not currently work with umu. We have reactivated the [opentrack-StarCitizen Repo](https://github.com/Priton-CE/opentrack-StarCitizen) to provide this support.
 > - For `system wine`, `wine-staging`, or `wine-GE-Proton8-x`, use an official Opentrack build version 2023.1.0 or later.
 > - For any `GE-Proton` or `Proton` Runner, follow the [build instructions](https://github.com/Priton-CE/opentrack-StarCitizen?tab=readme-ov-file#building-from-source) on our opentrack-StarCitizen Repo.
 
