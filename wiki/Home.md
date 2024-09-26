@@ -62,8 +62,9 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 >   - `STORE: none`
 >   - `PROTONPATH: GE-Proton`
 > - Other environment variables can be updated/removed if desired by comparing against those set for a new install in our [install json](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/lutris-starcitizen.json)
-> - If using Lutris v0.5.17, in System options, add the following to "Command prefix":
+> - If using Lutris v0.5.17, in System options, add the following to "Command prefix" to work around a bug:
 >   - `GAMEID=umu-starcitizen STORE=none`
+> - If using Lutris v0.5.17, install feral gamemode from your distro's repos and enable it in Lutris to work around a bug
 > - In System options, disable `CLI mode`
 > - In Runner options, set Wine version to `GE-Proton (Latest)`
 > - In Runner options, disable `Use system winetricks`
