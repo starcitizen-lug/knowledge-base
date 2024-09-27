@@ -62,7 +62,7 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 1. Install Open Wine Components [umu-launcher](https://github.com/Open-Wine-Components/umu-launcher/releases/latest)
 2. Download and run the RSI Launcher installer
 ```
-GAMEID="umu-starcitizen" umu-run "~/Downloads/RSI Launcher-Setup-2.0.3.exe"
+GAMEID="umu-starcitizen" umu-run "~/Downloads/RSI Launcher-Setup-2.0.5.exe"
 ```
 3. Run the RSI Launcher
 ```
