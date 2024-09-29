@@ -329,6 +329,11 @@
    - If you still have issues or are running applications like OBS, you may also have to limit the vram the game sees to free up some vram for other applications:
      `dxgi.maxDeviceMemory = 6144`
 
+#### Vulkan Beta: Game fails to launch
+- There is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents vulkan and DLSS from working on linux.
+- If using a Wine runner, add the environment variable `WINE_HIDE_NVIDIA_GPU=1` to enable vulkan
+- If using a Wine runner, see [instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#dlssdeep-learning-super-sampling--vulkan) to patch libcuda to enable both vulkan and DLSS 
+ 
 #### DLSS(Deep Learning Super Sampling) / Vulkan
 - There is a [memory allocation issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795), where it attempts to allocate in a specific area already occupied by the game.
    - A possible solution would be patching LibCUDA file increasing this area.
@@ -356,6 +361,9 @@
 
 #### Current known issues
 - See the AMD section of our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
+
+#### Vulkan Beta: Bright flickering lights at edges of in-game display panels
+- To fix: Add environment variable `radv_zero_vram=true`
 
 ***
 
