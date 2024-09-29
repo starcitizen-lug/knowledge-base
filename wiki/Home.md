@@ -54,6 +54,8 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > (Aug 25, 2024) **Lutris umu Proton/Protonfixes Migration**
 > - Install Lutris v0.5.17 or later
 > - Right click the game, select Configure, and then adjust settings as follows:
+> - In Runner options, remove the following DLL override:
+>   - `powershell.exe: disabled` 
 > - In System options, add the following environment variables:
 >   - `EOS_USE_ANTICHEATCLIENTNULL: 1`
 >   - `GAMEID: umu-starcitizen`
