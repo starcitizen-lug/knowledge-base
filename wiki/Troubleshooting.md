@@ -5,16 +5,19 @@
 
 1. Make sure our [LUG Helper](https://github.com/starcitizen-lug/lug-helper)'s Preflight Check passes all checks
 2. Make sure all prerequisites from the [Quick Start Guide](Quick-Start-Guide) are satisfied on your system
-3. Kill all wine processes and re-launch a fresh instance of the game. Adjust your prefix path and run:  
+3. Kill all wine processes and re-launch a fresh instance of the game
+   - In Lutris, select the game, click the arrow beside the wine button, choose `Open Bash terminal` and run `wineserver -k`
+     ![Screenshot From 2024-09-30 12-03-57](https://github.com/user-attachments/assets/dd131abb-3adb-4876-a6e6-2c0226884a71)
+   - If not using Lutris, run the following in your terminal, adjusting your prefix path as needed:  
    `WINEPREFIX=$HOME/Games/star-citizen wineserver -k`
-4. Check Lutris logs by clicking the arrow beside the play button:  
+5. Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
+6. Check Lutris logs by clicking the arrow beside the play button:  
   ![Screenshot from 2023-04-15 14-09-40](https://user-images.githubusercontent.com/3657071/232246219-8d713782-2d22-474c-a350-921e4af430af.png)
-5. Run Lutris in debug mode to see more verbose logging.  
+7. Run Lutris in debug mode to see more verbose logging  
    Native: `lutris -d` Flatpak: `flatpak run net.lutris.Lutris -d`
-6. If CLI mode is turned on, there will be additional useful output in your terminal window
-7. Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
-8. Look for your issue in the list of common issues below
-9. Ask for help on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)
+8. If CLI mode is turned on, there will be additional useful output in your terminal window
+9. Look for your issue/log output in the list of common issues below
+10. Ask for help on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)
 
 
 ### Contents
