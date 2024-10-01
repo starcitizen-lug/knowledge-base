@@ -26,7 +26,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 >   - Recent Wine versions can be easily installed from the Kron4ek runner source in the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
 > - In Lutris, right click the game->Configure->Runner options, remove the following DLL override:
 >   - `powershell.exe: disabled`
-> - If using standard Wine, requires the latest git release of winetricks for the powershell patches. Update your prefix path in the following commands and run:
+> - If using standard Wine, the latest git release of winetricks is required for the powershell patches. Update your prefix path in the following commands and run:
 >   - Run `sudo winetricks --self-update` to update winetricks
 >   - Run `WINEPREFIX=$HOME/Games/star-citizen winetricks powershell` to install powershell
 > - If using standard Wine, CLI mode must be enabled in Lutris
