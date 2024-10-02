@@ -10,14 +10,15 @@
      ![Screenshot From 2024-09-30 12-03-57](https://github.com/user-attachments/assets/dd131abb-3adb-4876-a6e6-2c0226884a71)
    - If not using Lutris, run the following in your terminal, adjusting your prefix path as needed:  
    `WINEPREFIX=$HOME/Games/star-citizen wineserver -k`
-5. Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
-6. Check Lutris logs by clicking the arrow beside the play button:  
-  ![Screenshot from 2023-04-15 14-09-40](https://user-images.githubusercontent.com/3657071/232246219-8d713782-2d22-474c-a350-921e4af430af.png)
-7. Run Lutris in debug mode to see more verbose logging  
-   Native: `lutris -d` Flatpak: `flatpak run net.lutris.Lutris -d`
-8. If CLI mode is turned on, there will be additional useful output in your terminal window
-9. Look for your issue/log output in the list of common issues below
-10. Ask for help on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)
+4. Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
+5. Gather logs
+   1. Check Lutris logs by clicking the arrow beside the play button:  
+     ![Screenshot from 2023-04-15 14-09-40](https://user-images.githubusercontent.com/3657071/232246219-8d713782-2d22-474c-a350-921e4af430af.png)
+   2. Run Lutris in debug mode to see more verbose logging  
+      Native: `lutris -d` Flatpak: `flatpak run net.lutris.Lutris -d`
+   3. If CLI mode is turned on, there will be additional useful output in your terminal window
+6. Look for your issue/log output in the list of common issues below
+7. Ask for help on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)
 
 
 ### Contents
