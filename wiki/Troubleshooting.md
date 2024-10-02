@@ -5,11 +5,20 @@
 
 1. Make sure our [LUG Helper](https://github.com/starcitizen-lug/lug-helper)'s Preflight Check passes all checks
 2. Make sure all prerequisites from the [Quick Start Guide](Quick-Start-Guide) are satisfied on your system
-3. Check Lutris logs by clicking the arrow beside the play button:  
-  ![Screenshot from 2023-04-15 14-09-40](https://user-images.githubusercontent.com/3657071/232246219-8d713782-2d22-474c-a350-921e4af430af.png)
-4. Run Lutris in debug mode to see more verbose logging. Native: `lutris -d` Flatpak: `flatpak run net.lutris.Lutris -d`
-5. Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) and the list of common issues below
-6. Ask for help on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)
+3. Kill all wine processes and re-launch a fresh instance of the game
+   - In Lutris, select the game, click the arrow beside the wine button, choose `Open Bash terminal` and run `wineserver -k`
+     ![Screenshot From 2024-09-30 12-03-57](https://github.com/user-attachments/assets/dd131abb-3adb-4876-a6e6-2c0226884a71)
+   - If not using Lutris, run the following in your terminal, adjusting your prefix path as needed:  
+   `WINEPREFIX=$HOME/Games/star-citizen wineserver -k`
+4. Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
+5. Gather logs
+   1. Check Lutris logs by clicking the arrow beside the play button:  
+     ![Screenshot from 2023-04-15 14-09-40](https://user-images.githubusercontent.com/3657071/232246219-8d713782-2d22-474c-a350-921e4af430af.png)
+   2. Run Lutris in debug mode to see more verbose logging  
+      Native: `lutris -d` Flatpak: `flatpak run net.lutris.Lutris -d`
+   3. If CLI mode is turned on, there will be additional useful output in your terminal window
+6. Look for your issue/log output in the list of common issues below
+7. Ask for help on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)
 
 
 ### Contents
@@ -32,6 +41,12 @@
 
 #### Launcher hangs during installation
 - In Lutris, try setting `Prefer system libraries` to `On` globally before installation. After installation, this can be reset and configured only for Star Citizen if desired.
+- Make sure you are not trying to install to an NTFS-formatted drive.
+
+
+#### Download hangs, followed by Install Failure error
+- As mentioned in our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide), be sure you are not changing the default install path in the RSI Launcher settings. If you wish to install the game elsewhere, put the entire wine prefix there instead.
+
 
 #### Install button does nothing
 - ⚠️ Launch Lutris in debug mode (`lutris -d`) and look for a `KeyError: 'contentstatsid'` error.
@@ -54,10 +69,6 @@
 - Proceed with lug-helper installer.
 
 
-#### Download hangs, followed by Install Failure error
-- As mentioned in our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide), be sure you are not changing the default install path in the RSI Launcher settings. If you wish to install the game elsewhere, put the entire wine prefix there instead.
-
-
 #### Error: *utf-8 codec can't decode byte 0x_ in position ___: invalid continuation byte*
 - Re-check your EAC workaround. Our [Helper](https://github.com/starcitizen-lug/lug-helper) can check it for you, or see the [manual instructions](Tips-and-Tricks#easy-anti-cheat-workaround) on our wiki.
 
@@ -77,9 +88,8 @@
   ![Screenshot from 2023-05-11 10-33-19](https://github.com/starcitizen-lug/knowledge-base/assets/3657071/d146e9cc-e0a2-4327-acfb-ba5538ddefe4)
 
 
-
 #### Installing Star Citizen on an NTFS-formatted drive
-- See: https://github.com/ValveSoftware/Proton/wiki/Using-a-NTFS-disk-with-Linux-and-Windows
+- Don't; it probably won't work and will likely only corrupt your game files.
 
 ***
 
@@ -91,7 +101,7 @@
 #### RSI Launcher v1.6.2+ JavaScript error
 - For more information, see [CIG's announcement in Spectrum](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/upcoming-launcher-update-for-linux-users/5693728)
 - Solution 1:
-   - In `System options`, make sure Advanced options is on then enable `CLI mode`
+   - In the game's Lutris `System options`, make sure Advanced options is on then enable `CLI mode`
 - Solution 2:
   - If this does not fix the problem, revert the above changes and install the latest GloriousEggroll runner, available in our [Helper](https://github.com/starcitizen-lug/lug-helper)
 
@@ -328,6 +338,11 @@
    - If you still have issues or are running applications like OBS, you may also have to limit the vram the game sees to free up some vram for other applications:
      `dxgi.maxDeviceMemory = 6144`
 
+#### Vulkan Beta: Game fails to launch
+- There is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents vulkan and DLSS from working on linux.
+- If using Wine-GE, add the environment variable `WINE_HIDE_NVIDIA_GPU=1` to enable vulkan
+- If using Wine or Wine-GE, see [instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#dlssdeep-learning-super-sampling--vulkan) to patch libcuda to enable both vulkan and DLSS 
+ 
 #### DLSS(Deep Learning Super Sampling) / Vulkan
 - There is a [memory allocation issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795), where it attempts to allocate in a specific area already occupied by the game.
    - A possible solution would be patching LibCUDA file increasing this area.
@@ -341,6 +356,10 @@
       - Remove the `WINE_HIDE_NVIDIA_GPU` env variable if it is set in Lutris or your launch script.
       - Don't forget to enable DXVK-NVAPI.
 
+#### Gamescope not working
+- See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
+- A possible fix to get Gamescope working on Nvidia: `Right click the game->Configure->System options->Game execution->Environment variables` then find or create `__GL_THREADED_OPTIMIZATIONS` in the left column and change/set it to `0` in the right column.
+
 
 ***
 
@@ -351,6 +370,9 @@
 
 #### Current known issues
 - See the AMD section of our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
+
+#### Vulkan Beta: Bright flickering lights at edges of in-game display panels
+- To fix: Add environment variable `radv_zero_vram=true`
 
 ***
 

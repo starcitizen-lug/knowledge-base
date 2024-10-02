@@ -21,15 +21,16 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 ### Game Updates
 > [!tip]
-> (Aug 24, 2024) **Launcher 2.0 Migration**
-> - There are still some isses with the 2.0 launcher. The old launcher will continue to work while those issues get sorted out. If you want to try the 2.0 launcher anyway, you can use the steps below
+> (Sept 27, 2024) **Launcher 2.0 Migration**
 > - Requires standard Wine 9.4+ or Proton GE 9-13+ runner
 >   - Recent Wine versions can be easily installed from the Kron4ek runner source in the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
-> - If using standard Wine, requires the latest git release of winetricks for the powershell patches
->   - Run `WINEPREFIX={your prefix} winetricks powershell` to install it
+> - In Lutris, right click the game->Configure->Runner options, remove the following DLL override:
+>   - `powershell.exe: disabled`
+> - If using standard Wine, the latest git release of winetricks is required for the powershell patches. Update your prefix path in the following commands and run:
+>   - Run `sudo winetricks --self-update` to update winetricks
+>   - Run `WINEPREFIX=$HOME/Games/star-citizen winetricks powershell` to install powershell
 > - If using standard Wine, CLI mode must be enabled in Lutris
->   - Right click the game -> Configure -> System options -> CLI mode
-> - Launcher 2.0 is unable to verify files. Use the install button instead for now
+>   - Right click the game -> Configure -> System options -> Toggle on advanced options -> CLI mode
 > - The 2.0 Launcher may need to be installed manually. See [our wiki](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#rsi-launcher-doesnt-auto-update) for instructions
 
 > [!important]
@@ -40,7 +41,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 ### General News
 > [!warning]
-> (Sept 10, 2024) **Wine-staging crashes PTU**
+> (Sept 21, 2024) **Wine-staging causes launcher to hang when downloading base pack, may cause game crashes**
 > - We recommend using standard Wine instead of Wine-staging
 > - Recent Wine versions can be easily installed from the Kron4ek runner source in the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
 
@@ -50,23 +51,23 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > - Note that [umu](https://github.com/Open-Wine-Components/umu-launcher/releases) has not yet seen a stable release
 > - We currently recommend using either your `system Wine` or a standard Wine installed using [our Helper](https://github.com/starcitizen-lug/lug-helper)
 > - If switching to standard Wine from a GE runner, CLI mode must be enabled in Lutris
->   - Right click the game -> Configure -> System options -> CLI mode
+>   - Right click the game -> Configure -> System options -> Toggle on advanced options -> CLI mode
 
 > [!tip]
 > (Aug 25, 2024) **Lutris umu Proton/Protonfixes Migration**
 > - Install Lutris v0.5.17 or later
 > - Right click the game, select Configure, and then adjust settings as follows:
+> - In Runner options, set Wine version to `GE-Proton (Latest)`
+> - In Runner options, remove the following DLL override:
+>   - `powershell.exe: disabled`
 > - In System options, add the following environment variables:
->   - `EOS_USE_ANTICHEATCLIENTNULL: 1`
 >   - `GAMEID: umu-starcitizen`
->   - `STORE: none`
 >   - `PROTONPATH: GE-Proton`
 > - Other environment variables can be updated/removed if desired by comparing against those set for a new install in our [install json](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/lutris-starcitizen.json)
-> - If using Lutris v0.5.17, in System options, add the following to "Command prefix":
->   - `GAMEID=umu-starcitizen STORE=none`
-> - In System options, disable `CLI mode`
-> - In Runner options, set Wine version to `GE-Proton (Latest)`
-> - In Runner options, disable `Use system winetricks`
+> - If using Lutris v0.5.17, in System options, toggle on advanced options and then add the following to "Command prefix" to work around a bug:
+>   - `GAMEID=umu-starcitizen PROTONPATH=GE-Proton`
+> - If using Lutris v0.5.17, install gamemode from your distro's package manager and enable it in Lutris to work around a bug
+> - In System options, toggle on advanced options and then disable `CLI mode`
 
 > [!warning]
 > (May 4, 2024) **Game Crash on launch from main menu**
@@ -94,8 +95,8 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > [!warning]
 > (Apr 29, 2024) **Vulkan Beta: Game fails to launch**
 > - There is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents vulkan and DLSS from working on linux.
-> - If using Proton or wine-GE runner, add the environment variable `WINE_HIDE_NVIDIA_GPU=1` to enable vulkan
-> - If using Proton, wine-GE, or standard Wine, see [instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#dlssdeep-learning-super-sampling--vulkan) to patch libcuda to enable both vulkan and DLSS
+> - If using Wine-GE, add the environment variable `WINE_HIDE_NVIDIA_GPU=1` to enable vulkan
+> - If using Wine or Wine-GE, see [instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#dlssdeep-learning-super-sampling--vulkan) to patch libcuda to enable both vulkan and DLSS
 
 > [!caution]
 > (Oct 9, 2023) **Crash when taking shield damage in-game**

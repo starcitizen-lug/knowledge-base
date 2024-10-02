@@ -19,7 +19,7 @@
 
 ## Opentrack Configuration
 > [!important]
-> `GE Proton (Latest)` is the new umu Proton runner and the official Opentrack builds do not currently work with umu. We have reactivated the [opentrack-StarCitizen repo](https://github.com/Priton-CE/opentrack-StarCitizen) to provide this support.
+> `GE Proton (Latest)` is the new umu Proton runner. The official Opentrack builds do not currently work with umu. We have reactivated the [opentrack-StarCitizen repo](https://github.com/Priton-CE/opentrack-StarCitizen) to provide this support.
 > UPDATE: As of 03.10.2024 relevant changes have been merged with the official [Opentrack Master branch](https://github.com/opentrack/opentrack/tree/master). You may use Opentrack Master instead tho be aware that it may be less stable than opentrack-StarCitizen until the next stable and official release of Opentrack.
 > - For `system wine`, `wine-staging`, or `wine-GE-Proton8-x`, use an official Opentrack build version 2023.1.0 or later.
 > - For any `GE-Proton` or `Proton` Runner, follow the [build instructions](https://github.com/Priton-CE/opentrack-StarCitizen?tab=readme-ov-file#building-from-source) on our opentrack-StarCitizen repo, follow the [build instructions](https://github.com/opentrack/opentrack/wiki/Building-on-Linux) for Opentrack Master, or use the [Opentrack Master Git AUR package](https://aur.archlinux.org/packages/opentrack-git).
@@ -35,7 +35,8 @@ After installing Opentrack according to the above note, use the following config
 5. Confirm that the `ESYNC` and `FSYNC` settings match your settings in Lutris.
 6. Next to `Protocol`, make sure `Both` is selected
 
-Launch Star Citizen before clicking start in Opentrack. Configure Star Citizen's head tracking options under `Comms, FOIP & Head Tracking`
+Launch Star Citizen before clicking start in Opentrack.  
+Configure Star Citizen's head tracking options under `Comms, FOIP & Head Tracking`:
 1. Set `Head Tracking - General - Source` to `TrackIR`
 2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`  
 
@@ -43,9 +44,16 @@ Launch Star Citizen before clicking start in Opentrack. Configure Star Citizen's
 > - May not work with Flatpak Lutris
 > - If compiling from source, make sure `SDK_WINE` is set
 > - If compiling our custom Opentrack from source, make sure you are on the `wine-extended-proton` branch before building
+
+
 ## Building Opentrack with ONNX Runtime
 If you provide ONNX Runtime libraries to Opentrack when building it, it will offer Neuralnet as input option. This will allow you to use any webcam as head tracking device.
 
+Arch-based distros:
+1. Install `onnxruntime` from the Arch repos.
+2. Build and install [https://aur.archlinux.org/packages/opentrack](https://aur.archlinux.org/packages/opentrack) from the AUR. The PKGBUILD is already pre-configured to use the onnx runtime.
+
+Other distros:
 1. Install [`wine` development branch](https://wiki.winehq.org/Download).
 2. Download and extract [ONNX Runtime](https://github.com/microsoft/onnxruntime/releases).
 3. Follow [Opentrack's instructions](https://github.com/opentrack/opentrack/wiki/Building-on-Linux) with some extra steps when using `cmake` or `ccmake`.
