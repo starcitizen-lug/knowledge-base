@@ -20,6 +20,19 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 ## News
 
 ### Game Updates
+> [!important]
+> (Oct 2, 2024) **PTU EAC Instructions**
+> 
+> CIG has enabled EAC enforcement on the PTU. We have an experimental fix that we need tested on many different systems.  
+> The following instructions assume the default install location. Adjust paths as necessary:
+> 1. Move the "Roberts Space Industries" directory to your prefix root:  
+>    `mv "$HOME/Games/star-citizen/drive_c/Program Files/Roberts Space Industries" $HOME/Games/star-citizen/`
+> 2. In Lutris, update the RSI Launcher.exe to the new location:  
+>    `Right click the game -> Configure -> Game options -> Executable`
+> 3. In Lutris, delete the EAC environment variable `EOS_USE_ANTICHEATCLIENTNULL`  
+>    `Right click the game -> Configure -> System options -> Environment variables`
+> 4. Run the RSI Launcher and, in its settings, change the Game Location to the new path
+
 > [!tip]
 > (Sept 27, 2024) **Launcher 2.0 Migration**
 > - Requires standard Wine 9.4+ or Proton GE 9-13+ runner
