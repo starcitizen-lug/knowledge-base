@@ -19,8 +19,8 @@ Other distributions we suggest avoiding 👎 due to frequent package incompatibi
 
 If you're new to Linux, we recommend avoiding immutable distros such as Bazzite, Nix, Silverblue, Universal Blue, etc for now; they come with a steeper learning curve and are better suited to those with more experience.
 
-## Configuration differences required for NixOS
-To set `vm.max_map_count` and `fs.file-max`, add the following to your NixOS config:
+## NixOS
+On NixOS, to set `vm.max_map_count` and `fs.file-max`, add the following to your NixOS config:
 
 ```nix
 # ... your NixOS Config ...
@@ -29,7 +29,6 @@ boot.kernel.sysctl = {
   "fs.file-max" = 524288;
 };
 ```
-EAC configuration can be found below
 
 
 ## AMD FidelityFX Super Resolution (FSR) upscaling
