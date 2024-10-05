@@ -55,15 +55,12 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
 `/usr/bin/sh -c 'kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" false'`
 
 
-## Easy Anti-Cheat Workaround
-#### Automatic Configuration
+## Easy Anti-Cheat
 
-_Using an Environment Variable_
-
-* Set the following environment variable in Lutris `Right click the game->Configure->System Options->Environment variables`:
-  ```
-  EOS_USE_ANTICHEATCLIENTNULL=1
-  ```
+- Remove the environment variable `EOS_USE_ANTICHEATCLIENTNULL=1`
+- in the RSI Launcher navigate to Settings > Games > Game Location. Then update the RSI Library location to be in its absolute path from `Z:\`. example:
+    
+    `Z:\home\{user}\Games\star-citizen\drive_c\Program Files\Roberts Space Industries`  
 
 
 ## Lutris Pre-launch and Post-exit Scripts
