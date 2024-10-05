@@ -58,7 +58,7 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
 ## Easy Anti-Cheat
 1. In the RSI Launcher, navigate to `Settings -> Games -> Game Location`
    ![image](https://github.com/user-attachments/assets/95312ca4-78eb-4c0d-8be3-a1d246ee8a8e)
-2. Change the RSI Library location to be its absolute path on your linux filesystem from `Z:\`  
+2. Change the RSI Library location to be its absolute path on your linux filesystem from `Z:\`. **No symlinks!**
    - If you installed the game to the default location, change it to the following. Don't forget to adjust your username:  
      `Z:\home\{user}\Games\star-citizen\drive_c\Program Files\Roberts Space Industries`
    - If you installed the game elsewhere, `Z:\` is mapped to your filesystem's root. Any path or mountpoint you type in must be referenced from the `Z:\` root.
@@ -66,6 +66,9 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
    `Right click the game -> Configure -> System options -> Environment variables`
 > [!important]
 > Your wine prefix under Z:\ will be hidden from the file picker, so you will have to manually type or paste the full path.
+
+> [!important]
+> EAC will not like symlinks of any directory along your install path.
 
 
 ## Lutris Pre-launch and Post-exit Scripts
