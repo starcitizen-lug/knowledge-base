@@ -251,7 +251,7 @@
 
 
 #### Anticheat encountered an error (possible code 30033, 30034)
-- Please follow [our EAC migration instructions](Tips-and-Tricks#easy-anti-cheat)
+- Please follow [our EAC migration instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#easy-anti-cheat)
 - Check your process list for any lingering wine processes. Reboot if necessary.
 - You may have to delete the EAC directory in youre prefix's `AppData/Roaming` directory.
 - You may also have to delete the EAC directory in the Star Citizen `LIVE` directory, followed by verifying files in the launcher.
