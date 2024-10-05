@@ -69,10 +69,6 @@
 - Proceed with lug-helper installer.
 
 
-#### Error: *utf-8 codec can't decode byte 0x_ in position ___: invalid continuation byte*
-- Re-check your EAC workaround. Our [Helper](https://github.com/starcitizen-lug/lug-helper) can check it for you, or see the [manual instructions](Tips-and-Tricks#easy-anti-cheat-workaround) on our wiki.
-
-
 #### Lutris error: *Command exited with code 512*
 - We suspect this is a Lutris bug and fixes seem inconsistent.
 - Try going to Lutris Preferences -> Sources, and toggle either `Lutris` or `Local` and then toggle it back again.
@@ -255,7 +251,7 @@
 
 
 #### Anticheat encountered an error (possible code 30033)
-- Follow the instructions to make sure the [EAC Workaround](Tips-and-Tricks#easy-anti-cheat-workaround) is applied.
+- Follow the instructions to make sure the [EAC Workaround](Tips-and-Tricks#easy-anti-cheat) is applied.
 - Check your process list for any lingering wine processes. Reboot if necessary.
 - You may have to delete the EAC directory in youre prefix's `AppData/Roaming` directory.
 - You may also have to delete the EAC directory in the Star Citizen `LIVE` directory, followed by verifying files in the launcher.
