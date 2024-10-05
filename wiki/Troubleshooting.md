@@ -250,8 +250,8 @@
 - If you have sound in the launcher but not in the game, launch the game and go to your audio settings, then enable "Play sound while game is in background".
 
 
-#### Anticheat encountered an error (possible code 30033)
-- Follow the instructions to make sure the [EAC Workaround](Tips-and-Tricks#easy-anti-cheat) is applied.
+#### Anticheat encountered an error (possible code 30033, 30034)
+- Please follow [our EAC migration instructions](Tips-and-Tricks#easy-anti-cheat)
 - Check your process list for any lingering wine processes. Reboot if necessary.
 - You may have to delete the EAC directory in youre prefix's `AppData/Roaming` directory.
 - You may also have to delete the EAC directory in the Star Citizen `LIVE` directory, followed by verifying files in the launcher.
