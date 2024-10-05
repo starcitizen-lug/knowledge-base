@@ -66,6 +66,8 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
    ![Screenshot From 2024-10-04 23-20-21](https://github.com/user-attachments/assets/01e31cb8-7cdc-468f-b2a1-658ba173de53)
 3. In Lutris, delete the EAC environment variable `EOS_USE_ANTICHEATCLIENTNULL`  
    `Right click the game -> Configure -> System options -> Environment variables`
+4. Do not use an umu/Proton runner. For now, protonfixes will override the above env var.
+
 > [!note]
 > Your wine prefix under Z:\ will be hidden from the file picker, so you will have to manually type or paste the full path.
 
