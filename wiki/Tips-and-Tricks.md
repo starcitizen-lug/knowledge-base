@@ -77,6 +77,7 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
 > [!important]
 > EAC will not like symlinks of any directory along your install path.
 
+A video of the above steps can be found [here](https://www.youtube.com/watch?v=GqyXKT5-kRA).
 
 ## Lutris Pre-launch and Post-exit Scripts
 Below are sample pre-launch and post-exit scripts that incorporate the mouse acceleration workarounds described above.
