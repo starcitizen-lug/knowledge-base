@@ -59,9 +59,9 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
 1. In the RSI Launcher, navigate to `Settings -> Games -> Game Location`
    ![image](https://github.com/user-attachments/assets/95312ca4-78eb-4c0d-8be3-a1d246ee8a8e)
 2. Change the RSI Library location to be its absolute path on your linux filesystem from `Z:\`  
-   - If you installed the game to the default location, change it to the following. Don't forget to adjust your username:
-   - `Z:\home\{user}\Games\star-citizen\drive_c\Program Files\Roberts Space Industries`
-   - If you installed the game elsewhere, `Z:\` is mapped to your filesystem's root. Any path or mountpoint you type in must be referenced from the `Z:\` root
+   - If you installed the game to the default location, change it to the following. Don't forget to adjust your username:  
+     `Z:\home\{user}\Games\star-citizen\drive_c\Program Files\Roberts Space Industries`
+   - If you installed the game elsewhere, `Z:\` is mapped to your filesystem's root. Any path or mountpoint you type in must be referenced from the `Z:\` root.
 3. In Lutris, delete the EAC environment variable `EOS_USE_ANTICHEATCLIENTNULL`  
    `Right click the game -> Configure -> System options -> Environment variables`
 > [!important]
