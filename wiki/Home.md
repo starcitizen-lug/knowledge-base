@@ -20,6 +20,12 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 ## News
 
 ### Game Updates
+> [!important]
+> (Oct 4, 2024) **Easy Anticheat Enforcement**
+> 
+> - CIG has enabled EAC enforcement on the PTU. We have an experimental fix that also works on LIVE and it needs testing.
+> - Please follow [our migration instructions](Tips-and-Tricks#easy-anti-cheat) and report back on our Discord's #Development channel.
+
 > [!tip]
 > (Sept 27, 2024) **Launcher 2.0 Migration**
 > - Requires standard Wine 9.4+ or Proton GE 9-13+ runner
