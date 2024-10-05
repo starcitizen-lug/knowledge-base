@@ -69,6 +69,6 @@ GAMEID="umu-starcitizen" umu-run "~/Downloads/RSI Launcher-Setup-2.0.5.exe"
 GAMEID="umu-starcitizen" PROTONPATH="GE-Proton" umu-run "~/Games/umu/umu-starcitizen/drive_c/Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe"
 ```
 
-## EAC Workaround
+## Easy Anti-Cheat
 
-See the Manual Configuration instructions on our EAC wiki page [here](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#easy-anti-cheat-workaround).
+See the Manual Configuration instructions on our EAC wiki page [here](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#easy-anti-cheat).
