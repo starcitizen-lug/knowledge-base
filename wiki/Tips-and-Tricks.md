@@ -56,11 +56,16 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
 
 
 ## Easy Anti-Cheat
-
-- Remove the environment variable `EOS_USE_ANTICHEATCLIENTNULL=1`
-- in the RSI Launcher navigate to Settings > Games > Game Location. Then update the RSI Library location to be in its absolute path from `Z:\`. example:
-    
-    `Z:\home\{user}\Games\star-citizen\drive_c\Program Files\Roberts Space Industries`  
+1. In the RSI Launcher, navigate to `Settings -> Games -> Game Location`
+   ![image](https://github.com/user-attachments/assets/95312ca4-78eb-4c0d-8be3-a1d246ee8a8e)
+2. Update the RSI Library location to be its absolute path on your linux filesystem from `Z:\`  
+   - If you installed the game to the default location, change it to the following. Don't forget to adjust your username:
+   - `Z:\home\{user}\Games\star-citizen\drive_c\Program Files\Roberts Space Industries`
+   - If you installed the game elsewhere, `Z:\` is mapped to your filesystem's root. Any path or mountpoint you type in must be referenced from the `Z:\` root
+3. In Lutris, delete the EAC environment variable `EOS_USE_ANTICHEATCLIENTNULL`  
+   `Right click the game -> Configure -> System options -> Environment variables`
+> [!important]
+> Your wine prefix under Z:\ will be hidden from the file picker, so you will have to manually type or paste the full path.
 
 
 ## Lutris Pre-launch and Post-exit Scripts
