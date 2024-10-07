@@ -67,7 +67,7 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
 3. Remove all previous EAC workarounds
     1. In Lutris right click the game -> Configure -> System options -> Environment variables
     2. Delete the EAC environment variables `EOS_USE_ANTICHEATCLIENTNULL=1` and `SteamGameId=starcitizen`
-    3. If you have any other EAC workarounds in place, for example the old hosts workaround, remove them as well.
+    3. If you have any other EAC workarounds in place, remove them as well. This may include undoing modifications to `/etc/hosts` or deleting `%AppData%\EasyAntiCheat`.
 4. Do not use a Proton runner. For now, protonfixes will override the above env var.
 
 > [!note]
