@@ -100,7 +100,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 ### Nvidia News
 > [!warning]
 > (Oct 9, 2024) **Black screen**
-> - Wine 9.18 introduced a regresstion for Nvidia in how it handles Vulkan
+> - Wine 9.18 introduced a regression for Nvidia in how it handles Vulkan
 > - Downgrade to 9.17 or apply the [patch](https://bugs.winehq.org/attachment.cgi?id=77218) until it is fixed
 
 > [!warning]
