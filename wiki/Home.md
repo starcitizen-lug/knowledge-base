@@ -99,6 +99,11 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 ### Nvidia News
 > [!warning]
+> (Oct 9, 2024) **Black screen**
+> - Wine 9.18 introduced a regresstion for Nvidia in how it handles Vulkan
+> - Downgrade to 9.17 or apply the [patch](https://bugs.winehq.org/attachment.cgi?id=77218) until it is fixed
+
+> [!warning]
 > (Apr 29, 2024) **Vulkan Beta: Game fails to launch**
 > - There is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents vulkan and DLSS from working on linux.
 > - If using Wine-GE, add the environment variable `WINE_HIDE_NVIDIA_GPU=1` to enable vulkan
