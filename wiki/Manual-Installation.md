@@ -3,7 +3,6 @@ New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-di
 
 1. Install wine following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. **If your distro provides an up to date version of wine** (ie. Arch), you may install from its repos instead. 
 2. Install winetricks 20240105-next or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
-3. Install dxvk-2.4 [or newer](https://github.com/doitsujin/dxvk) and configure it for your distribution
 4. Set `vm.max_map_count` on your system to at least `16777216`
 5. Set the Hard open file descriptors limit on your system to at least `524288`
 
@@ -43,16 +42,11 @@ _Distributions that use /etc/security/limits.conf_
 ## Wine Installation
 
 1. Install and configure the necessary prerequisites
-2. Create your wine prefix: `WINEPREFIX=~/path/you/want/to/starcitizen winecfg`
-3. In the window that pops up, select **Windows 10** as Windows version and click OK
-4. Run: `winetricks corefonts dxvk vcrun2017 win10`
-5. Download and run the RSI installer
-6. You may need to create directory paths if the RSI installer is unable to do so:
-```
-mkdir -p "/path/to/prefix/drive_c/Program Files/Roberts Space Industries/StarCitizen/"{LIVE,PTU,EPTU,TECH-PREVIEW}
-```
-7. ONLY if you have black textures ingame, copy **d3dcompiler_47.dll** from the launcher directory to the games bin64/ directory, replacing the game's version.
-8. To use a custom wine runner, start the game/installer with `WINE=/path/to/runner/bin/wine`
+2. Create and configure your wine prefix:  
+   `WINEPREFIX=$HOME/Games/star-citizen winetricks -q arial tahoma dxvk powershell win11`
+3. Download and run the RSI installer:  
+   `WINEPREFIX=$HOME/Games/star-citizen wine "~/Downloads/RSI Launcher-Setup-2.0.5.exe"`
+4. An example launch script is provided on our [LUG Helper's Repo](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/sc-launch.sh)
 
 If you have trouble installing recent Wine versions on a Debian-based distro due to missing faudio, see [this link](https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html).
 
@@ -60,14 +54,12 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 ## Proton Installation
 
 1. Install Open Wine Components [umu-launcher](https://github.com/Open-Wine-Components/umu-launcher/releases/latest)
-2. Download and run the RSI Launcher installer
-```
-GAMEID="umu-starcitizen" umu-run "~/Downloads/RSI Launcher-Setup-2.0.5.exe"
-```
-3. Run the RSI Launcher
-```
-GAMEID="umu-starcitizen" PROTONPATH="GE-Proton" umu-run "~/Games/umu/umu-starcitizen/drive_c/Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe"
-```
+2. Download and run the RSI Launcher installer:  
+   `GAMEID="umu-starcitizen" umu-run "~/Downloads/RSI Launcher-Setup-2.0.5.exe"`
+3. Run the RSI Launcher:  
+   ```
+   GAMEID="umu-starcitizen" PROTONPATH="GE-Proton" umu-run "~/Games/umu/umu-starcitizen/drive_c/Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe"
+   ```
 
 ## Easy Anti-Cheat
 
