@@ -55,6 +55,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > (Sept 1, 2024) **`GE Proton (Latest)` is the new umu proton**
 > - If you wish to use the new Proton integration in Lutris, see below for umu Proton migration steps
 > - Note that [umu](https://github.com/Open-Wine-Components/umu-launcher/releases) has not yet seen a stable release
+> - umu does not yet run on ubuntu due to [AppArmor](https://github.com/Open-Wine-Components/umu-launcher/issues/210)
 > - We currently recommend using either your `system Wine` or a standard Wine installed using [our Helper](https://github.com/starcitizen-lug/lug-helper)
 > - If switching to standard Wine from a GE runner, CLI mode must be enabled in Lutris
 >   - Right click the game -> Configure -> System options -> Toggle on advanced options -> CLI mode
