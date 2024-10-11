@@ -10,7 +10,7 @@ New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-di
 3. Allow the Preflight Check to fix any issues it finds before proceeding!
 4. Select an install location on an SSD where you have space for the entire game, approximately 110GB (we do not recommend an HDD).
 5. Run the RSI Launcher, log in, and click install to finish installing the game.
-6. If using Lutris v0.5.17, you must add `GAMEID=umu-starcitizen` into `Right click the game->Configure->System options->Command prefix`. You must also install `gamemode` using your system's package manager. You will need to remove the command prefix when Lutris v0.5.18 is released!
+6. If using Lutris v0.5.17, you must add `GAMEID=umu-starcitizen PROTONPATH=GE-Proton` into `Right click the game->Configure->System options->Command prefix`. You must also install `gamemode` using your system's package manager. You will need to remove the command prefix when Lutris v0.5.18 is released!
 7. Wayland users: See [required workarounds](Troubleshooting#mousecursor-warp-issues-and-view-snapping-in-interaction-mode) to resolve mouse cursor and view snapping issues.
 8. Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for important updates. Especially, Nvidia gpu driver issues and necessary workarounds.
 9. Launch the game. See you in the 'verse!
