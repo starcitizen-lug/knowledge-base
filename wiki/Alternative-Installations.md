@@ -53,6 +53,19 @@ _Distributions that use /etc/security/limits.conf_
 If you have trouble installing recent Wine versions on a Debian-based distro due to missing faudio, see [this link](https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html).
 
 
+### Heroic Games Launcher
+1. Download latest [Star Citizen installer](https://robertsspaceindustries.com/download).
+2. Install [Heroic Games Launcher](https://heroicgameslauncher.com/downloads).
+3. Launch Heroic, browse to `Wine Manager>Proton-GE` and install `Proton-GE-Latest`.
+4. Return to the Library page, and click Add Game.
+5. Set Title to `Star Citizen`.
+6. Click `Show Wine Settings` and ensure Wine Version is set to `Proton-GE-Latest`.
+7. Click `Run Installer First` and select the Star Citizen install file.
+8. Once install is complete, set `Select Executable` to the `RSI Launcher.exe` and click Finish.
+9. Open the game settings in Heroic, change to Advanced tab and under Environment Variables add `GAMEID=umu-starcitizen`.
+10. Run the RSI Launcher, log in, and click install to finish installing the game.
+11. Launch the game. See you in the 'verse!
+
 > [!warning]
 > We cannot guarantee that the alternative installation methods listed below will work or perform well.
 > 
