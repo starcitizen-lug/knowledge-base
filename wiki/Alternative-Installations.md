@@ -1,10 +1,12 @@
 ## Prerequisites
-New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
+> [!tip]
+> New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 
 1. Install wine following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. **If your distro provides an up to date version of wine** (ie. Arch), you may install from its repos instead. 
 2. Install winetricks 20240105-next or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
 4. Set `vm.max_map_count` on your system to at least `16777216`
 5. Set the Hard open file descriptors limit on your system to at least `524288`
+6. See the Manual Easy Anti-Cheat Configuration instructions [here](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#easy-anti-cheat).
 
 **To check and set vm.max_map_count temporarily**
 ```
@@ -39,7 +41,7 @@ _Distributions that use /etc/security/limits.conf_
 * Add the following line to /etc/security/limits.conf: `* hard nofile 524288`
 
 
-## Wine Installation
+### Manual Wine Installation
 
 1. Install and configure the necessary prerequisites
 2. Create and configure your wine prefix:  
@@ -51,7 +53,15 @@ _Distributions that use /etc/security/limits.conf_
 If you have trouble installing recent Wine versions on a Debian-based distro due to missing faudio, see [this link](https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html).
 
 
-## Proton Installation
+> [!warning]
+> We cannot guarantee that the alternative installation methods listed below will work or perform well.
+> 
+> The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
+>
+> If you proceed with an alternative installation method below, please be aware that not many members of our community use these methods. We may not be able to provide support for these installations if something isn't working right.
+
+
+### Proton Installation
 
 1. Install Open Wine Components [umu-launcher](https://github.com/Open-Wine-Components/umu-launcher/releases/latest)
 2. Download and run the RSI Launcher installer:  
@@ -60,7 +70,3 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
    ```
    GAMEID="umu-starcitizen" PROTONPATH="GE-Proton" umu-run "~/Games/umu/umu-starcitizen/drive_c/Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe"
    ```
-
-## Easy Anti-Cheat
-
-See the Manual Configuration instructions on our EAC wiki page [here](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#easy-anti-cheat).

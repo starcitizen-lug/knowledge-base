@@ -10,7 +10,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 ## Contents
 * [Quick-Start Guide](Quick-Start-Guide)
-* [Manual Installation](Manual-Installation)
+* [Alternative Installations](Alternative-Installations)
 * [Troubleshooting](Troubleshooting)
 * [Performance Tuning](Performance-Tuning)
 * [Tips and Tricks](Tips-and-Tricks)
