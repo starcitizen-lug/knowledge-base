@@ -1,5 +1,6 @@
 ## Prerequisites
-New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
+> [!tip]
+> New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 
 1. Install wine following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. **If your distro provides an up to date version of wine** (ie. Arch), you may install from its repos instead. 
 2. Install winetricks 20240105-next or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
@@ -50,6 +51,14 @@ _Distributions that use /etc/security/limits.conf_
 4. An example launch script is provided on our [LUG Helper's Repo](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/sc-launch.sh)
 
 If you have trouble installing recent Wine versions on a Debian-based distro due to missing faudio, see [this link](https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html).
+
+
+> [!warning]
+> We cannot guarantee that the alternative installation methods listed below will work or perform well.
+> 
+> The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
+>
+> If you proceed with an alternative installation method below, please be aware that not many members of our community use these methods. We may not be able to provide support for these installations if something isn't working right.
 
 
 ### Proton Installation
