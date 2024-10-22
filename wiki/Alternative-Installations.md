@@ -53,7 +53,7 @@ _Distributions that use /etc/security/limits.conf_
 If you have trouble installing recent Wine versions on a Debian-based distro due to missing faudio, see [this link](https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html).
 
 
-> [!warning]
+> [!caution]
 > We cannot guarantee that the alternative installation methods listed below will work or perform well.
 > 
 > The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
