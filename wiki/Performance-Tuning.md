@@ -6,13 +6,11 @@ https://github.com/starcitizen-lug/lug-helper
 ## Nvidia Cache
 
 By default Nvidia has a combined cache for all games. As the cache fills up from other games, Star Citizen's shaders may get deleted leading to poor FPS. We recommend giving SC its own persistent cache by adding the following environment variables:
-
 ```
 __GL_SHADER_DISK_CACHE=true
-__GL_SHADER_DISK_CACHE_PATH="/path/you/want/for/your/cache"  (example: /home/myuser/.cache/sccache)
+__GL_SHADER_DISK_CACHE_PATH="/path/you/want/for/your/cache"  (example: /home/games/star-citizen/nvidiacache)
 __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=true
 ```
-
 If you use Lutris, these environment variables can be added here:
 
 `Right click the game->Configure->System options->Environment variables`
@@ -21,12 +19,14 @@ If you use Lutris, these environment variables can be added here:
 
 ## Mesa (AMD/Intel) Shader Cache
 
-Mesa has an option for a similar shader cache that Nvidia does, to enable it add the following environmental variables similar to how the Nvidia ones are added.
-
+Mesa can be given its own persistent shader cache by adding the following environmental variables:
 ```
-MESA_SHADER_CACHE_DIR="/path/you/want/for/your/cache"
+MESA_SHADER_CACHE_DIR="/path/you/want/for/your/cache"  (example: /home/games/star-citizen/amdcache)
 MESA_SHADER_CACHE_MAX_SIZE=10G
 ```
+If you use Lutris, these environment variables can be added here:
+
+`Right click the game->Configure->System options->Environment variables`
 
 ## Game Settings
 
