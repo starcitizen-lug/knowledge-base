@@ -19,6 +19,15 @@ If you use Lutris, these environment variables can be added here:
 
 ![](https://matrix-client.matrix.org/_matrix/media/r0/download/xndr.de/AwspONZSbLKcXCCkBojwyIYT)
 
+## Mesa (AMD/Intel) Shader Cache
+
+Mesa has an option for a similar shader cache that Nvidia does, to enable it add the following environmental variables similar to how the Nvidia ones are added.
+
+```
+MESA_SHADER_CACHE_DIR="/path/you/want/for/your/cache"
+MESA_SHADER_CACHE_MAX_SIZE=10G
+```
+
 ## Game Settings
 
 The following game settings can help improve framerates:
