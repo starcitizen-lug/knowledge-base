@@ -17,6 +17,7 @@
    2. Run Lutris in debug mode to see more verbose logging  
       Native: `lutris -d` Flatpak: `flatpak run net.lutris.Lutris -d`
    3. If CLI mode is turned on, there will be additional useful output in your terminal window
+   4. If you're not using Lutris, inspect wine's output in your terminal
 6. Look for your issue/log output in the list of common issues below
 7. Ask for help on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)
 
