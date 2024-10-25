@@ -160,8 +160,13 @@
 - Make sure the `SDL_VIDEODRIVER` environment variable is **NOT** set globally to `wayland` on your system.
 
 
-#### Game crashes after switching to Vulkan
-- If you can't relaunch the game to switch it back to DX11, you can manually delete the file located at `{wine prefix}/drive_c/users/{user}/AppData/Local/Star Citizen/sc-alpha-{version}/GraphicsSettings/GraphicsSettings.json`
+#### Crash or black screen while using Vulkan beta renderer
+- Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) recommendations for your graphics card
+- Create a user.cfg file in the `{LIVE,PTU,TECH-PREVIEW}` directory and set `r.graphicsRenderer = 0`
+ ```
+ Con_Restricted = 0
+ r.graphicsRenderer = 0
+ ```
 
 
 #### After playing for a while, game/lutris/wine crash, no errors
@@ -292,15 +297,6 @@
 #### RSI Launcher white screen / error DCompositionCreateDevice
 - In Lutris, configure Star Citizen (right-click->Configure->Game options) and add `"--use-gl=osmesa"` to the Arguments field.
 - If launching manually: `wine "RSI Launcher.exe" "--use-gl=osmesa"`
-
-
-#### Crash or black screen while using Vulkan beta renderer
-- Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) recommendations for your graphics card
-- Create a user.cfg file in the `{LIVE,PTU,TECH-PREVIEW}` directory and set `r.graphicsRenderer = 0`
- ```
- Con_Restricted = 0
- r.graphicsRenderer = 0
- ```
  
 
 #### RSI Launcher fails to launch from lutris with CLI mode enabled
