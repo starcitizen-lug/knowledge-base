@@ -22,6 +22,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 ### Game Updates
 > [!warning]
 > (Oct 20, 2024) **Vulkan crashes in 3.24.1/3.24.2**
+> - Black screen, crash
 > - Possible error similar to: `Fatal Error: Acquire Next Image Failed`
 > - If you experience this, we recommend remaining on DX11 for now
 
