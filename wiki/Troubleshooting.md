@@ -296,7 +296,11 @@
 
 #### Crash or black screen while using Vulkan beta renderer
 - Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) recommendations for your graphics card
-- Revert to DX11: Delete the AppData Local Star Citizen directory inside the wine prefix `drive_c/users/$USER/AppData/Local/Star Citizen/`
+- Create a user.cfg file in the `{LIVE,PTU,TECH-PREVIEW}` directory and set `r.graphicsRenderer = 0`
+ ```
+ Con_Restricted = 0
+ r.graphicsRenderer = 0
+ ```
  
 
 #### RSI Launcher fails to launch from lutris with CLI mode enabled
