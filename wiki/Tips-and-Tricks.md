@@ -70,7 +70,6 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
     3. Remove EAC line from `/etc/hosts` file: `127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround`
     4. Delete `%AppData%\EasyAntiCheat` from your wine prefix directory.
     5. If you have any other EAC workarounds in place, remove them as well.
-4. Do not use a Proton runner. For now, protonfixes will override the above env var.
 
 > [!note]
 > Your wine prefix under Z:\ will be hidden from the file picker, so you will have to manually type or paste the full path.
