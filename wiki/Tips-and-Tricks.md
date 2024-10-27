@@ -55,6 +55,34 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
 `/usr/bin/sh -c 'kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" false'`
 
 
+## RSI Launcher 2.0
+- Requires standard Wine 9.4+ or Proton GE 9-13+ runner
+  - Recent Wine versions can be easily installed from the Kron4ek runner source in the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
+- In Lutris, right click the game->Configure->Runner options, remove the following DLL override:
+  - `powershell.exe: disabled`
+- If using standard Wine, the latest git release of winetricks is required for the powershell patches. Update your prefix path in the following commands and run:
+  - Run `sudo winetricks --self-update` to update winetricks
+  - Run `WINEPREFIX=$HOME/Games/star-citizen winetricks powershell` to install powershell
+- If using standard Wine, CLI mode must be enabled in Lutris
+  - Right click the game -> Configure -> System options -> Toggle on advanced options -> CLI mode
+- The 2.0 Launcher may need to be installed manually. See [our wiki](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#rsi-launcher-doesnt-auto-update) for instructions
+
+
+## Proton
+- Install Lutris v0.5.17 or later
+- Right click the game, select Configure, and then adjust settings as follows:
+- In Runner options, set Wine version to `GE-Proton (Latest)`
+- In Runner options, remove the following DLL override:
+  - `powershell.exe: disabled`
+- In System options, add the following environment variables:
+  - `GAMEID: umu-starcitizen`
+  - `PROTONPATH: GE-Proton`
+- Other environment variables can be updated/removed if desired by comparing against those set for a new install in our [install json](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/lutris-starcitizen.json)
+- If using Lutris v0.5.17, in System options, toggle on advanced options and then add the following to "Command prefix" to work around a bug:
+  - `GAMEID=umu-starcitizen PROTONPATH=GE-Proton`
+- If using Lutris v0.5.17, install gamemode from your distro's package manager and enable it in Lutris to work around a bug
+
+
 ## Easy Anti-Cheat
 1. In the RSI Launcher, navigate to `Settings -> Games -> Game Location`
    ![Screenshot From 2024-10-04 23-22-13](https://github.com/user-attachments/assets/01496e30-92cc-4120-ba58-45ec11363f10)
@@ -81,6 +109,7 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
 > EAC will not like symlinks of any directory along your install path.
 
 A video of the above steps can be found [here](https://www.youtube.com/watch?v=GqyXKT5-kRA).
+
 
 ## Lutris Pre-launch and Post-exit Scripts
 Below are sample pre-launch and post-exit scripts that incorporate the mouse acceleration workarounds described above.
