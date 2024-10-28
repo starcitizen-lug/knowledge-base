@@ -169,6 +169,12 @@
  ```
 
 
+#### Failed to decompress file/corrupted block detected error
+- Some Penguins have had this error with filesystems such as btrfs or xfs.
+- On btrfs, disabling CoW by running `chattr +C` on the game's LIVE dir and redownloading a fresh data.p4k may fix it.
+- Switching to ext4 also seems to resolve it.
+
+
 #### After playing for a while, game/lutris/wine crash, no errors
   - If there are no errors in your game logs, check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](Performance-Tuning#swap).
 
