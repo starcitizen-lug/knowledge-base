@@ -143,7 +143,6 @@
 ![Star Citizen launcher](https://media.discordapp.net/attachments/608349808956276737/927652866389340310/Screenshot_from_2022-01-03_14-56-37.png)
 - Additionally, make sure the wine prefix is not installed on an NTFS formatted partition.
 
-
 #### Game crashes with "STATUS_CRYENGINE_FATAL_ERROR" in game.log
 - Some penguins have had success changing the Windows compatibility from Win10 to Win8.1 in the Wine configuration. Select Star Citizen in Lutris, then click the Wine button at the bottom and select `Wine configuration`:  
 ![](https://matrix-client.matrix.org/_matrix/media/r0/download/matrix.org/zKGOXxMOsktqYKqevqeSvYSw)  
@@ -155,10 +154,8 @@
 #### Game crashes with " 00adntdll:FILE_GetNtStatus Converting errno 12 to STATUS_UNSUCCESSFUL "
 - Make sure you have set your vm.max_map_count as described in the installation section.
 
-
 #### Game crashes with "Failed to initialize dependencies" error
 - Make sure the `SDL_VIDEODRIVER` environment variable is **NOT** set globally to `wayland` on your system.
-
 
 #### Crash or black screen while using Vulkan beta renderer
 - Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) recommendations for your graphics card
@@ -168,16 +165,17 @@
  r.graphicsRenderer = 0
  ```
 
+#### Game Crash on launch from main menu
+- Linux kernel 6.8.9 can result in a crash when launching from main menu, may be accompanied by a popup including text "Assertion failed!"
+- To fix: revert to kernel 6.8.8, update to 6.9+, or enable ReBar if your hardware supports it
 
 #### Failed to decompress file/corrupted block detected error
 - Some Penguins have had this error with filesystems such as btrfs or xfs.
 - On btrfs, disabling CoW by running `chattr +C` on the game's LIVE dir and redownloading a fresh data.p4k may fix it.
 - Switching to ext4 also seems to resolve it.
 
-
 #### After playing for a while, game/lutris/wine crash, no errors
   - If there are no errors in your game logs, check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](Performance-Tuning#swap).
-
 
 #### Game crashes when going to Lorville / ArcCorp or crashes often when launching
 - Make sure you followed the guide to install Wine's dependencies and set your vm.max_map_count as described in the installation section.
