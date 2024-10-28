@@ -20,6 +20,10 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 ## News
 
 ### Game Updates
+> [!note]
+> (Oct 28, 2024) **You're trying to run the game on an unsupported Windows OS**
+> - Just click OK.
+
 > [!warning]
 > (Oct 25, 2024) **Vulkan crashes in 3.24.1/3.24.2**
 > - Black screen, crash
@@ -49,16 +53,8 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > - We recommend using standard Wine instead of Wine-staging
 > - Recent Wine versions can be easily installed from the Kron4ek runner source in the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
 
-> [!warning]
-> (May 4, 2024) **Game Crash on launch from main menu**
-> - Linux kernel 6.8.9 can result in a crash when launching from main menu, may be accompanied by a popup including text "Assertion failed!"
->   - To fix: revert to kernel 6.8.8, update to 6.9+, or enable ReBar if your hardware supports it
-
 
 ### AMD News
-> [!note]
-> (Apr 29, 2024) **Vulkan Beta: Bright flickering lights at edges of in-game display panels**
-> - To fix: Add environment variable `radv_zero_vram=true`
 
 
 ### Nvidia News
@@ -78,9 +74,3 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > (Oct 9, 2023) **Crash when taking shield damage in-game**
 > - There is a shield rendering bug that causes the game to crash. It seems to affect 1000 series cards.
 > - There is currently no known workaround other than switching cards. We recommend AMD.
-
-
-### Easy Anti-Cheat
-> [!note]
-> (Feb 12, 2022) **Easy Anti-Cheat is live.**
-> - CIG is aware of the problem but there is still no ETA. There are currently no consequences that we are aware of for using the workaround, but CIG has suggested that eventually people will be kicked for tripping EAC. The workaround is automatically configured for new installs through Lutris.
