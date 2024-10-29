@@ -170,9 +170,10 @@
 - To fix: revert to kernel 6.8.8, update to 6.9+, or enable ReBar if your hardware supports it
 
 #### Failed to decompress file/corrupted block detected error
-- Some Penguins have had this error with filesystems such as btrfs or xfs.
-- On btrfs, disabling CoW by running `chattr +C` on the game's LIVE dir and redownloading a fresh data.p4k may fix it.
-- Switching to ext4 also seems to resolve it.
+- Some Penguins have had this error when using BTRFS.
+- Disable CoW on the game's LIVE dir with `chattr +C ./LIVE`, then redownload or copy in a fresh data.p4k.
+- Alternatively, try mounting with the `compress` option instead of `compress-force`.
+- If that doesn't work, switching to ext4 is an option.
 
 #### After playing for a while, game/lutris/wine crash, no errors
   - If there are no errors in your game logs, check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](Performance-Tuning#swap).
