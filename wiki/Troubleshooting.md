@@ -225,7 +225,8 @@
 
 #### Mouse/Cursor warp issues and view snapping in interaction mode
 - The 3.18 update caused mouse and view snapping issues for most Penguins using Wayland + some desktop environments, especially KDE. The simplest workaround is to use Xorg or switch to an alternate desktop environment. For example, most Gnome users don't seem to experience this issue.
-  - For some users, switching their runner to Proton Wine >=9 is sufficient to resolve the issue.
+  - Wine version >=9.20 helps mitigate this for some.
+  - kwin >=6.2.2 helps mitigate this for some.
   - Alternatively, build xwayland with this [patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied.
   - If using KDE and patching xwayland, you will also need to install Gamescope and use the `--force-grab-cursor` option.
 - **Note for Nvidia users:** Gamescope may not work on your hardware. See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
