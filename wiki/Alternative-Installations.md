@@ -72,6 +72,81 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
    ```
 
 
+### Proton Steam Installation
+
+1. Set up your machine
+
+   * As root, add a file `/etc/sysctl.d/99-game-vm.conf` with contents
+
+             vm.max_map_count = 16777216
+             fs.file-max = 524288
+
+     Then `sudo sysctl -f /etc/sysctl.d/99-game-vm.conf`
+
+   * Edit `/etc/security/limits.d` to contain the lines
+
+             me soft nofile 524288
+             me hard nofile 524288
+
+     where `me` is your username
+
+   * Log out and back in
+
+1. Purchase, download, run the Launcher Installer
+
+   * Register with RSI, buy a Star Citizen package
+   * Download `RSI Launcher-Setup-2.0.6.exe` or your version
+   * Install `protonup` from your distro package manager,
+     or`pip install protonup`
+   * run `protonup`: I have GE Proton 9.16
+   * Start Steam, go to Game Library, + Add a Game (bottom left)
+   * Add `RSI Launcher-Setup-2.0.6.exe` or your version
+   * Right-click library tab:
+     * Add `--no-sandbox` to Shortcut
+     * Ensure `GE Proton 9.16` or later in Compatibility
+   * Click to run Launcher Setup, wait for setup to finish
+
+1. Set up and run the Launcher
+
+   * In your `~/.steam` directory, do `find . -name
+     '*Roberts*' -print` to find where Steam put the game
+   * [optional] Symlink this directory to `~/sc` for convenience
+   * `cd` to this directory, and say
+
+             echo `pwd`
+             echo "Z:`pwd | tr '/' '\\'`"
+
+     The first line is the absolute Path to Star Citizen [PSC],
+     the second is the absolute Wine Path to Star Citizen
+     [WPSC]
+   * `mkdir -p [PSC]/StarCitizen/LIVE`
+   * In Steam + Add a Game and add [PSC]/RSI Launcher/RSI Launcher.exe
+   * Right-click library tab:
+     * Rename to Star Citizen
+     * Add `--no-sandbox` to Shortcut
+     * Ensure `GE Proton 9.16` or later in Compatibility
+   * Run the Star Citizen Launcher
+
+1. Install Star Citizen
+
+   * Go to RSI menu in the Launcher (upper left) >> Settings >> Games.
+     Change RSI Library Location to [WPSC]
+   * Go to RSI >> Settings >> Application. Click Enable Close
+     To Quit
+   * Click Install Game. Wait for it to eventually
+     hang. Close the window to exit the installer
+   * Run the Launcher again and click Install Game
+     again. This time the installation will eventually complete
+     after several hundred GB
+
+1. Play Star Citizen
+
+   * Click Launch Game in the Launcher. The game will try to start
+   * For me, it crashed with a watchdog timer error. See
+     [PSC]/StarCitizen/LIVE/Game.log
+   * Run it again. You should be playing now
+
+
 ### Heroic Games Launcher
 > [!important]
 > If using flatpak apps, ensure the install location is whitelisted using Flatseal or similar methods.
