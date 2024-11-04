@@ -53,14 +53,6 @@ _Distributions that use /etc/security/limits.conf_
 If you have trouble installing recent Wine versions on a Debian-based distro due to missing faudio, see [this link](https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html).
 
 
-> [!caution]
-> We cannot guarantee that the alternative installation methods listed below will work or perform well.
-> 
-> The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
->
-> If you proceed with an alternative installation method below, please be aware that not many members of our community use these methods. We may not be able to provide support for these installations if something isn't working right.
-
-
 ### Proton Installation
 
 1. Install Open Wine Components [umu-launcher](https://github.com/Open-Wine-Components/umu-launcher/releases/latest)
@@ -73,6 +65,13 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 
 
 ### Heroic Games Launcher
+> [!caution]
+> We cannot guarantee that the alternative installation methods on this page will work or perform well.
+> 
+> The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
+>
+> If you proceed with an alternative installation method, please be aware that not many members of our community use these methods. We may not be able to provide support for these installations if something isn't working right.
+
 > [!important]
 > If using flatpak apps, ensure the install location is whitelisted using Flatseal or similar methods.
 > 
