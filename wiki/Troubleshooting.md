@@ -47,7 +47,7 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 ## 💾 Install & Update Problems
 
 #### General troubleshooting steps
-- Refer to [First things to try](#-first-things-to-try) above.
+- Refer to [First things to try](#first-things-to-try) above.
 - In Lutris, try setting `Prefer system libraries` to `On` globally before installation. After installation, this can be reset and configured only for Star Citizen if desired.
 - Make sure you are not trying to install to an NTFS-formatted drive.
 - Be sure you haven't changed the default install path in the RSI Launcher settings. If you wish to install the game elsewhere, put the entire wine prefix there instead.
