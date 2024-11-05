@@ -2,6 +2,9 @@
 > [!tip]
 > New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 
+> [!tip]
+> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool can perform these steps for you automatically! See our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide) for instructions.
+
 1. Install Wine **v9.4** or newer following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. If your distro provides an up to date version of wine (ie. Arch), you may install from its repos instead. 
 2. Install winetricks 20240105-next or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
 4. Set `vm.max_map_count` on your system to at least `16777216`
@@ -42,12 +45,14 @@ _Distributions that use /etc/security/limits.conf_
 
 
 ### Manual Wine Installation
+> [!tip]
+> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool now contains an option for a non-Lutris install and can perform these steps for you automatically! See our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide) for instructions.
 
 1. Install and configure the necessary prerequisites
 2. Create and configure your wine prefix:  
    `WINEPREFIX=$HOME/Games/star-citizen winetricks -q arial tahoma dxvk powershell win11`
 3. Download and run the RSI installer:  
-   `WINEPREFIX=$HOME/Games/star-citizen wine "~/Downloads/RSI Launcher-Setup-2.0.5.exe"`
+   `WINEPREFIX=$HOME/Games/star-citizen wine "~/Downloads/RSI Launcher-Setup-2.0.6.exe"`
 4. An example launch script is provided on our [LUG Helper's Repo](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/sc-launch.sh)
 
 If you have trouble installing recent Wine versions on a Debian-based distro due to missing faudio, see [this link](https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html).
@@ -88,3 +93,9 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 9. Once install is complete, set `Select Executable` to the `RSI Launcher.exe` and click Finish.
 10. Open the game settings in Heroic, change to Advanced tab and under Environment Variables add `GAMEID=umu-starcitizen`.
 11. Run the RSI Launcher, log in, and click install to finish installing the game.
+
+### Steam
+> [!warning]
+> We do not recommend installing Star Citizen within Steam. While it can be done, it creates several issues that we feel are not worth the effort to try to work around. For example, it limits configurability options and does not invoke needed protonfixes by default.
+> 
+> We believe you will have a much better experience following our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide). If you want to use Steam's proton backend without using Lutris, you may use umu-launcher by following the [Proton Installation](#proton-installation) instructions above.
