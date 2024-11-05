@@ -3,26 +3,32 @@
 
 ## Troubleshooting Steps
 
-1. Make sure our [LUG Helper](https://github.com/starcitizen-lug/lug-helper)'s Preflight Check passes all checks
-2. Make sure all prerequisites from the [Quick Start Guide](Quick-Start-Guide) are satisfied on your system
-3. Kill all wine processes and re-launch a fresh instance of the game
+#### First things to try
+1. Make sure our [LUG Helper](https://github.com/starcitizen-lug/lug-helper)'s Preflight Check passes all checks.
+2. Make sure all prerequisites from the [Quick Start Guide](Quick-Start-Guide) are satisfied on your system.
+3. Kill all wine processes and re-launch a fresh instance of the game:
    - In Lutris, select the game, click the arrow beside the wine button, choose `Open Bash terminal` and run `wineserver -k`
      ![Screenshot From 2024-09-30 12-03-57](https://github.com/user-attachments/assets/dd131abb-3adb-4876-a6e6-2c0226884a71)
    - If not using Lutris, run the following in your terminal, adjusting your prefix path as needed:  
    `WINEPREFIX=$HOME/Games/star-citizen wineserver -k`
-4. Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
-5. Gather logs
-   1. Check Lutris logs by clicking the arrow beside the play button:  
-     ![Screenshot from 2023-04-15 14-09-40](https://user-images.githubusercontent.com/3657071/232246219-8d713782-2d22-474c-a350-921e4af430af.png)
-   2. Run Lutris in debug mode to see more verbose logging  
-      Native: `lutris -d` Flatpak: `flatpak run net.lutris.Lutris -d`
-   3. If CLI mode is turned on, there will be additional useful output in your terminal window
-   4. If you're not using Lutris, inspect wine's output in your terminal
-6. Look for your issue/log output in the list of common issues below
-7. Ask for help on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)
+4. Update your version of Wine and/or Lutris to the latest available version.
+5. Try a differen Wine version or Lutris runner. If using wine-staging, try standard wine. Conversely, you could try wine-staging if using standard wine.
+6. Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
+7. Look for your issue/error in the categories on this page. Refer to the steps directly below to gather logs.
+
+#### Gathering logs
+1. Check Lutris logs by clicking the arrow beside the play button:  
+  ![Screenshot from 2023-04-15 14-09-40](https://user-images.githubusercontent.com/3657071/232246219-8d713782-2d22-474c-a350-921e4af430af.png)
+2. Run Lutris in debug mode to see more verbose logging  :
+   Native: `lutris -d` Flatpak: `flatpak run net.lutris.Lutris -d`
+3. If CLI mode is turned on, there will be additional useful output in your terminal window.
+4. If you're not using Lutris, inspect wine's output in your terminal.
+
+#### Community Help
+If this page doesn't help resolve your issue, you may ask for help on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)
 
 
-### Contents
+## Contents
 💾 [Install & Update Problems](#-install--update-problems)  
 💥 [Crashes](#-crashes)  
 🧊 [Freezes](#-freezes)  
@@ -40,30 +46,19 @@
 
 ## 💾 Install & Update Problems
 
-#### Launcher hangs during installation
+#### General troubleshooting steps
+- Refer to [First things to try](#-first-things-to-try) above.
 - In Lutris, try setting `Prefer system libraries` to `On` globally before installation. After installation, this can be reset and configured only for Star Citizen if desired.
 - Make sure you are not trying to install to an NTFS-formatted drive.
-
-
-#### Download hangs, followed by Install Failure error
-- As mentioned in our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide), be sure you are not changing the default install path in the RSI Launcher settings. If you wish to install the game elsewhere, put the entire wine prefix there instead.
-
-
-#### Install button does nothing
-- ⚠️ Launch Lutris in debug mode (`lutris -d`) and look for a `KeyError: 'contentstatsid'` error.
-- If the error is present, check your Lutris version. This is fixed in v0.5.11. https://lutris.net/downloads
-
-
-#### Warning: Downloading [exe file] failed
-- If you get download failed errors during installation for components such as `arial32.exe`, try toggling `Prefer system libraries` in Lutris to `On`.
+- Be sure you haven't changed the default install path in the RSI Launcher settings. If you wish to install the game elsewhere, put the entire wine prefix there instead.
 
 
 #### Library version errors during installation
 - If using a rolling release or bleeding edge distro, try toggling `Prefer system libraries` in Lutris to `On`.
 
 
-#### Installer Error Code 256
-- Set `Prefer system libraries` to `On` in global lutris options.
+#### Installer Error Code 256 / Downloading [exe file] failed (ie arial32.exe)
+- Try setting `Prefer system libraries` to `On` in global lutris options.
 - Inspect install log for failed winetricks downloads or sha256 mismatch, note the URL of the files being downloaded and its destination in winetricks' cache.
 - Download each file manually to its destination in winetricks' cache.
 - Use winetricks to ensure that the prefix is set to Win10 mode.
@@ -96,11 +91,8 @@
 ## 💥 Crashes
 
 #### RSI Launcher v1.6.2+ JavaScript error
-- For more information, see [CIG's announcement in Spectrum](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/upcoming-launcher-update-for-linux-users/5693728)
-- Solution 1:
-   - In the game's Lutris `System options`, make sure Advanced options is on then enable `CLI mode`
-- Solution 2:
-  - If this does not fix the problem, revert the above changes and install the latest GloriousEggroll runner, available in our [Helper](https://github.com/starcitizen-lug/lug-helper)
+- In the game's Lutris `System options`, make sure Advanced options is on then enable `CLI mode`
+- Alternatively, select a Proton runner in Lutris' runner options tab, ie `GE-Proton (Latest)` and follow our [proton setup instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#proton)
 
 
 #### Code 3 crash with error: *Star Citizen process exited abnormally (code: 3) : Command failed*
@@ -120,7 +112,6 @@
   - Make sure DXVK is enabled in Lutris' Runner options.
   - Some people report changing their DXVK version fixes this. Try using our [Helper](https://github.com/starcitizen-lug/lug-helper) to download an async DXVK.
   - Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) and Nvidia troubleshooting section [below](#-nvidia) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
-  - DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
 
 - Possible cause: Incorrect Vulkan device
   - If you have Intel integrated graphics and see `VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json` in your log, then change the Vulkan device in Lutris to use your discrete GPU:
@@ -137,25 +128,30 @@
   - Many keyboards and mice can also have a "joystick" part in Linux, which Wine can detect. Unfortunately, Wine may be confused about it, as they are not real joysticks. In this case, the game could crash. Try running the Wine joystick control panel "wine control" (in Lutris: right click -> Joystick configuration) and disable your keyboard and/or mice.
   - This will not affect how your keyboard and mice work in the game.
 
+- Possible cause: Linux kernel 6.8.9
+   - Linux kernel 6.8.9 can result in a crash when launching from main menu, may be accompanied by a popup including text "Assertion failed!"
+   - To fix: revert to kernel 6.8.8, update to 6.9+, or enable ReBar if your hardware supports it
+
 
 #### Game crashes after clicking 'Verify'
 - Make sure Star Citizen is installed on drive "C:\" Check the "Library Folder" option in the launcher settings:  
 ![Star Citizen launcher](https://media.discordapp.net/attachments/608349808956276737/927652866389340310/Screenshot_from_2022-01-03_14-56-37.png)
 - Additionally, make sure the wine prefix is not installed on an NTFS formatted partition.
 
+
 #### Game crashes with "STATUS_CRYENGINE_FATAL_ERROR" in game.log
 - Some penguins have had success changing the Windows compatibility from Win10 to Win8.1 in the Wine configuration. Select Star Citizen in Lutris, then click the Wine button at the bottom and select `Wine configuration`:  
 ![](https://matrix-client.matrix.org/_matrix/media/r0/download/matrix.org/zKGOXxMOsktqYKqevqeSvYSw)  
 - In the Wine configuration, under the `Applications` tab, change `Windows version` to `Windows 8.1`
 
-#### Game crashes with "create_view: Assertion `!((UINT_PTR)base & page_mask)' failed."
+
+#### Game crashes with "create_view: Assertion `!((UINT_PTR)base & page_mask)' failed" / "00adntdll:FILE_GetNtStatus Converting errno 12 to STATUS_UNSUCCESSFUL"
 - Make sure you have set your vm.max_map_count as described in the installation section.
 
-#### Game crashes with " 00adntdll:FILE_GetNtStatus Converting errno 12 to STATUS_UNSUCCESSFUL "
-- Make sure you have set your vm.max_map_count as described in the installation section.
 
 #### Game crashes with "Failed to initialize dependencies" error
 - Make sure the `SDL_VIDEODRIVER` environment variable is **NOT** set globally to `wayland` on your system.
+
 
 #### Crash or black screen while using Vulkan beta renderer
 - Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) recommendations for your graphics card
@@ -165,9 +161,6 @@
  r.graphicsRenderer = 0
  ```
 
-#### Game Crash on launch from main menu
-- Linux kernel 6.8.9 can result in a crash when launching from main menu, may be accompanied by a popup including text "Assertion failed!"
-- To fix: revert to kernel 6.8.8, update to 6.9+, or enable ReBar if your hardware supports it
 
 #### Failed to decompress file/corrupted block detected error
 - Some Penguins have had this error when using BTRFS. We suspect a regression of some kind.
@@ -177,14 +170,10 @@
 - Alternatively, try mounting with the `compress` option instead of `compress-force`.
 - If that doesn't work, switching to ext4 is an option.
 
+
 #### After playing for a while, game/lutris/wine crash, no errors
   - If there are no errors in your game logs, check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](Performance-Tuning#swap).
 
-#### Game crashes when going to Lorville / ArcCorp or crashes often when launching
-- Make sure you followed the guide to install Wine's dependencies and set your vm.max_map_count as described in the installation section.
-
-#### Game crashes on Alt+Tab
-- In game settings change display to windowed borderless
 
 ***
 
@@ -197,12 +186,11 @@
 - Make sure DXVK is enabled in Lutris' Runner options.
 - Try changing to a different DXVK version in the Lutris settings.  Alternate DXVKs can be quickly installed using our [LUG Helper](https://github.com/starcitizen-lug/lug-helper).
 - Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
-- DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
 
 
 #### Launcher freezes within a few seconds of opening
-- Try using a different runner. Ask on Spectrum or in our social channels which runner is currently recommended.
-- Alternatively, you can try changing "Prefer system libraries" to ON, although this may have other side effects.
+- Try using a different wine runner.
+- Alternatively, you can try changing "Prefer system libraries" to ON:
   - Right click the game -> Configure -> System options -> Prefer system libraries
 
 
@@ -213,9 +201,7 @@
 
 #### Launcher hangs / stops responding / crashes with an "ASAR" error
 - Some people report the launcher hanging in combination with the Lutris runtime. If you are on Lutris, try toggling "Disable Lutris runtime" under "System options" of the Lutris game options.
-- If you do need to disable the Lutris runtime, the Lutris guys would like to have a log file to debug the issue. You can run lutris -d from the terminal after enabling Wine debugging as per this image:  
-![Enable Wine debugging](https://robertsspaceindustries.com/imager/Xeh-bNe8P9_WE60v7iLpmeXXLzI=/fit-in/400x400/https://cdn.discordapp.com/attachments/540589766811451392/558481590687236096/Peek_2019-03-22_05-43.gif)
-- And send a log to @beniwtv on Spectrum or send it to Lutris developers in the Lutris Discord.
+
 
 ***
 
@@ -299,7 +285,6 @@
 - Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 - Make sure DXVK is enabled in Lutris' Runner options.
 - Try changing to a different DXVK version in the Lutris settings.  Alternate DXVKs can be quickly installed using our [LUG Helper](https://github.com/starcitizen-lug/lug-helper).
-- DXVK installation instructions are available on our wiki [here](Performance-Tuning#dxvk-async).
 
 
 #### RSI Launcher white screen / error DCompositionCreateDevice
@@ -441,12 +426,3 @@
 
 #### Gentoo 💪
 - We defer to your expertise
-
-
-
-## ❔ Other Issues
-
-#### Workarounds For In-Game Bugs and Annoyances
-- https://robertsspaceindustries.com/spectrum/community/LUG/forum/149/thread/known-workarounds-for-game-bugs-and-annoyances
-
-⚠️ Join the org to access Spectrum links: https://robertsspaceindustries.com/orgs/LUG
