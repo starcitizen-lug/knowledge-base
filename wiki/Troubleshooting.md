@@ -79,6 +79,8 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - [Download](https://robertsspaceindustries.com/download) the latest launcher and install it by selecting `Run EXE inside Wine prefix` in Lutris:  
   ![Screenshot from 2023-05-11 10-33-19](https://github.com/starcitizen-lug/knowledge-base/assets/3657071/d146e9cc-e0a2-4327-acfb-ba5538ddefe4)
 
+#### RSI Launcher error: *Could not fix permissions on directory*
+- Please follow our [step-by-step guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#rsi-launcher-20) for the 2.0 RSI Launcher
 
 #### Installing Star Citizen on an NTFS-formatted drive
 - Don't; it probably won't work and will likely only corrupt your game files.
