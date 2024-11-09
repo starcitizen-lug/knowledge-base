@@ -7,10 +7,12 @@
 #### Use your Phone
 - iPhone: Our Penguins tend to prefer the [Head Tracker app by John Yu](https://apps.apple.com/us/app/head-tracker/id1527710071). It works on iPhone X or later using the FaceID IR sensors and, therefore, works well in low light. It has a trial period to test it out. It costs $2 US.
 - Android (Does not work on 14+): Our Penguins tend to like the [SmoothTrack app by John Goering](https://play.google.com/store/apps/details?id=com.epaga.smoothtrack&gl=US). It costs $10 US.
+- Your phone can typically function as a webcam without any third party apps when connected to your computer. See the webcam section below.
 
 #### Webcam
 - A tutorial for the the ArUco Paper Method is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). **NOTE:** Ignore the outdated Opentrack installation steps in that thread! See updated instructions below.
 - Some Penguins have had success building [Opentrack with the ONNX Runtime](#building-opentrack-with-onnx-runtime) to add a neuralnet tracker that enables head tracking with any webcam.
+- FOIP may be a bit finnicky and your camera may not appear in the list in-game, but has been known to work if you toggle it on and off a few times.
 
 #### Unsupported hardware
 - Tobii does not support Linux. Its opentrack support uses the Windows only SDK.
