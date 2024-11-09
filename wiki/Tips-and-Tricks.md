@@ -84,6 +84,16 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
 
 
 ## Easy Anti-Cheat
+> [!note]
+> Your wine prefix under Z:\ will be hidden from the file picker, so you will have to manually type or paste the full path.
+
+> [!warning]
+> Windows paths use back slashes `\` instead of forward slashes `/`
+
+> [!important]
+> EAC will not like symlinks of any directory along your install path.
+
+A video of these steps can be found [here](https://www.youtube.com/watch?v=GqyXKT5-kRA).
 1. In the RSI Launcher, navigate to `Settings -> Games -> Game Location`
    ![Screenshot From 2024-10-04 23-22-13](https://github.com/user-attachments/assets/01496e30-92cc-4120-ba58-45ec11363f10)
 2. Change the RSI Library location to be its absolute path on your linux filesystem from `Z:\`. **No symlinks!**
@@ -98,17 +108,6 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
     3. Remove EAC line from `/etc/hosts` file: `127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround`
     4. Delete `%AppData%\EasyAntiCheat` from your wine prefix directory.
     5. If you have any other EAC workarounds in place, remove them as well.
-
-> [!note]
-> Your wine prefix under Z:\ will be hidden from the file picker, so you will have to manually type or paste the full path.
-
-> [!warning]
-> Windows paths use back slashes `\` instead of forward slashes `/`
-
-> [!important]
-> EAC will not like symlinks of any directory along your install path.
-
-A video of the above steps can be found [here](https://www.youtube.com/watch?v=GqyXKT5-kRA).
 
 
 ## Lutris Pre-launch and Post-exit Scripts
