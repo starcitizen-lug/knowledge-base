@@ -27,6 +27,10 @@ The Gladiator series can be calibrated without needing to use any special softwa
 
 They store their configuration on-board but the [configuration software](https://www.vkbcontrollers.com/pages/downloads) is only native to Windows. You can run the software in a virtual machine (VirtualBox, GNOME Boxes, etc) and pass the USB device to the windows environment to configure it that way.
 
+> [!note]
+> for VKB devices running older firmware with a © symbol present, upgrading firmware is recommended as the game can have difficulties detecting devices with this symbol.
+> You can check this using `lsusb` or `evdev-joystick --list`.
+
 ## VKB Gunfighter
 
 Requires a windows-only software for calibration and configuration. [Link](https://www.vkbcontrollers.com/pages/downloads)
