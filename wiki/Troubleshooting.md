@@ -299,6 +299,12 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - Disable the lutris runtime in lutris global preferences to work around this error
 
 
+#### Non-US keyboard keys not working
+- Make sure you're using the latest version of Wine or your Wine runner is up to date.
+- Set your keymap to the appropriate language.
+- If the above don't fix it, you can try setting the `LANG=` environment variable. For example, `LANG=de_DE`
+
+
 ***
 
 
