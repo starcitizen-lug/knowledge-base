@@ -21,6 +21,16 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 [Australia, New Zealand](https://vkb-sim.com.au/)  
 [India (AUS distribution)](https://vkb-sim.in/)  
 
+## VKB Devices
+
+> [!tip]
+> Wine 9.22+ has enabled HIDRAW for VKB devices. This removes the 79 button limit and may provide better device support.  
+> To enable hidraw access to your VKB devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
+> ```
+> # Set the "uaccess" tag for raw HID access for VKB Devices in wine
+> KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
+> ```
+
 ## VKB Gladiator
 
 The Gladiator series can be calibrated without needing to use any special software.
@@ -35,9 +45,17 @@ They store their configuration on-board but the [configuration software](https:/
 
 Requires a windows-only software for calibration and configuration. [Link](https://www.vkbcontrollers.com/pages/downloads)
 
-## Virpil 
+## Virpil Devices
     
 Requires a windows-only software for calibration and configuration. [Link; scroll down](https://support.virpil.com/en/support/solutions)
+
+> [!tip]
+> Wine 9.22+ has enabled HIDRAW for Virpil devices. This removes the 79 button limit and may provide better device support.  
+> To enable hidraw access to your Virpil devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
+> ```
+> # Set the "uaccess" tag for raw HID access for Virpil Devices in wine
+> KERNEL=="hidraw*", ATTRS{idVendor}=="3344", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
+> ```
 
 
 ## Configuration Tips
@@ -48,19 +66,6 @@ A collection of mappings contributed by our community can be found [here](https:
 
 The third party tool, [input-remapper](https://github.com/sezanzeb/input-remapper), can be used to change the behavior of input devices. Note that, while some of our Penguins have had success using this tool, we have not fully vetted its functionality or safety. Some basic profile examples contributed by our community can be found [here](https://github.com/starcitizen-lug/mappings/tree/main/input-remapper).
 
-### HIDRAW Access
-
-Wine is moving to enable HIDRAW by default for many joystick devices.  However, the current default udev rules for many distributions don't enable raw HID access by default.  To enable hidraw access to your VKB and/or Virpil devices, create a rules file in `/etc/udev/rules.d` named something like `40-lug-joystick-uaccess.rules`, and add the following:
-
-```text
-# Set the "uaccess" tag for raw HID access for joysticks in wine
-
-# VKB Devices
-KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
-
-# VIRPIL Devices
-KERNEL=="hidraw*", ATTRS{idVendor}=="3344", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
-```
 
 ### Evdev Deadzones
 
@@ -134,6 +139,7 @@ ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
 # Troubleshooting
 
 ### Some of your joysticks disappear / aren't recognized in the game
+- If you are using wine 9.22+ with a VKB or Virpil device, you may need to enable HIDRAW access. See [VKB Devices](#vkb-devices) or [Virpil Devices](#virpil-devices) above for instructions.
 - If you are using Lutris, make sure "Autoconfigure joypads" is turned off in the game settings for Lutris
     - Right click the game -> Configure -> Runner options -> Autoconfigure joypads
 - Try setting your joysticks to "dinput" instead of "xinput" in Lutris
