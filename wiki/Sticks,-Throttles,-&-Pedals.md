@@ -30,7 +30,7 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 > KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
 > ```
 > 
-> After adding the udev rule, the event joystick device may still show in the wine joystick control panel. Disable those so that only the raw hid device is presented to SC. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Sim (C) Alex Oz` in the name, and click the Disable button.
+> After adding the udev rule, unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Sim (C) Alex Oz` in the name, and click the Disable button.
 
 ## VKB Gladiator
 
@@ -57,7 +57,7 @@ Requires a windows-only software for calibration and configuration. [Link; scrol
 > KERNEL=="hidraw*", ATTRS{idVendor}=="3344", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
 > ```
 >
-> After adding the udev rule, the event joystick device may still show in the wine joystick control panel. Disable those so that only the raw hid device is presented to SC. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Virpil Controls` in the name, and click the Disable button.
+> After adding the udev rule, unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Virpil Controls` in the name, and click the Disable button.
 
 
 ## Configuration Tips
