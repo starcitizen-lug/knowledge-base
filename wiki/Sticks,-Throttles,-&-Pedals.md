@@ -30,6 +30,8 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 > # Set the "uaccess" tag for raw HID access for VKB Devices in wine
 > KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
 > ```
+> 
+> After adding the udev rule, the event joystick device may show in the wine joystick control panel, so you will want to disable those so that only the raw hid device is presented to SC.  For VKB devices, they should have `Sim (C) Alex Oz` in the name.
 
 ## VKB Gladiator
 
@@ -56,6 +58,8 @@ Requires a windows-only software for calibration and configuration. [Link; scrol
 > # Set the "uaccess" tag for raw HID access for Virpil Devices in wine
 > KERNEL=="hidraw*", ATTRS{idVendor}=="3344", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
 > ```
+> 
+> After adding the udev rule, the event joystick device may show in the wine joystick control panel, so you will want to disable those so that only the raw hid device is presented to SC.  For Virpil devices, they should have `Virpil Controls` in the name.
 
 
 ## Configuration Tips
