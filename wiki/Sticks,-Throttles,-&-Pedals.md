@@ -48,6 +48,20 @@ A collection of mappings contributed by our community can be found [here](https:
 
 The third party tool, [input-remapper](https://github.com/sezanzeb/input-remapper), can be used to change the behavior of input devices. Note that, while some of our Penguins have had success using this tool, we have not fully vetted its functionality or safety. Some basic profile examples contributed by our community can be found [here](https://github.com/starcitizen-lug/mappings/tree/main/input-remapper).
 
+### HIDRAW Access
+
+Wine is moving to enable HIDRAW by default for many joystick devices.  However, the current default udev rules for many distributions don't enable raw HID access by default.  To enable hidraw access to your VKB and/or Virpil devices, create a rules file in `/etc/udev/rules.d` named something like `40-lug-joystick-uaccess.rules`, and add the following:
+
+```text
+# Set the "uaccess" tag for raw HID access for joysticks in wine
+
+# VKB Devices
+KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
+
+# VIRPIL Devices
+KERNEL=="hidraw*", ATTRS{idVendor}=="3344", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
+```
+
 ### Evdev Deadzones
 
 On Linux, evdev adds deadzones to every axis for each controller you plug into your system.  This is good for inexpensive controllers that don't have any form of internal calibration or programming.  However, with higher end programmable sticks like those from VKB and Virpil, evdev's deadzone adds to the programmed deadzone for those devices.  This can also impact throttle devices, where you can get a "hitch" at 50% throttle when it passes through the middle of the axis.
