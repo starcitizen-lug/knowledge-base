@@ -69,18 +69,15 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
 
 
 ## Proton
-- Install Lutris v0.5.17 or later
+- Install Lutris v0.5.18 or later
 - Right click the game, select Configure, and then adjust settings as follows:
-- In Runner options, set Wine version to `GE-Proton (Latest)`
+- In Runner options, set Wine version to `GE-Proton`
 - In Runner options, remove the following DLL override:
   - `powershell.exe: disabled`
 - In System options, add the following environment variables:
   - `GAMEID: umu-starcitizen`
   - `PROTONPATH: GE-Proton`
 - Other environment variables can be updated/removed if desired by comparing against those set for a new install in our [install json](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/lutris-starcitizen.json)
-- If using Lutris v0.5.17, in System options, toggle on advanced options and then add the following to "Command prefix" to work around a bug:
-  - `GAMEID=umu-starcitizen PROTONPATH=GE-Proton`
-- If using Lutris v0.5.17, install gamemode from your distro's package manager and enable it in Lutris to work around a bug
 
 
 ## Easy Anti-Cheat
