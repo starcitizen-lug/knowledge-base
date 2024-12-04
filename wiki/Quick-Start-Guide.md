@@ -4,7 +4,7 @@
 
 1. Install Wine **v9.4** or newer following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. If your distribution provides an up to date version of wine (ie. Arch), you may install from its repositories instead.
 2. Install any version of winetricks from your distribution's repositories. Links, if needed, are on the winetricks [github](https://github.com/Winetricks/winetricks#installing). This pulls in some needed dependencies.
-3. If you want to use Lutris, install [Lutris **v0.5.17**](https://lutris.net/downloads/) or newer and launch it once before installing Star Citizen to trigger its automatic winetricks dependency download. **Note**: We do not recommend running git builds of Lutris. If using an immutable distro (ie. Bazzite, Nix, Silverblue), we recommend flatpak Lutris.
+3. If you want to use Lutris, install [Lutris **v0.5.18**](https://lutris.net/downloads/) or newer and launch it once before installing Star Citizen to trigger its automatic winetricks dependency download. **Note**: We do not recommend running git builds of Lutris. If using an immutable distro (ie. Bazzite, Nix, Silverblue), we recommend flatpak Lutris.
 
 ## Installation Steps
 1. Download our [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) (Select the `.tar.gz`. Distro packages are listed [here](https://github.com/starcitizen-lug/lug-helper#installation)).
@@ -12,8 +12,7 @@
 3. Allow the Preflight Check to fix any issues it finds before proceeding!
 4. Select an install location on a linux-formatted SSD where you have space for the entire game, approximately 110GB (we do not recommend an HDD or NTFS).
 5. Run the RSI Launcher, log in, and click install to finish installing the game.
-6. If using Lutris v0.5.17, you must add `GAMEID=umu-starcitizen PROTONPATH=GE-Proton` into `Right click the game->Configure->System options->Command prefix`. You must also install `gamemode` using your system's package manager. You will need to remove the command prefix when Lutris v0.5.18 is released!
-7. Launch the game. See you in the 'verse!
+6. Launch the game. See you in the 'verse!
 
 > [!important]
 > - Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for necessary workarounds, Nvidia gpu driver problems, and other important issues.
