@@ -4,7 +4,7 @@
 
 1. Install Wine **v9.4** or newer following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. If your distribution provides an up to date version of wine (ie. Arch), you may install from its repositories instead.
 2. Install any version of winetricks from your distribution's repositories. Links, if needed, are on the winetricks [github](https://github.com/Winetricks/winetricks#installing). This pulls in some needed dependencies.
-3. If you want to use Lutris, install [Lutris **v0.5.18**](https://lutris.net/downloads/) or newer and launch it once before installing Star Citizen to trigger its automatic winetricks dependency download. **Note**: We do not recommend running git builds of Lutris. If using an immutable distro (ie. Bazzite, Nix, Silverblue), we recommend flatpak Lutris.
+3. Lutris is optional. If you want to use it, install [Lutris **v0.5.18**](https://lutris.net/downloads/) or newer and launch it once before installing Star Citizen to trigger its automatic winetricks dependency download. **Note**: We do not recommend running git builds of Lutris. If using an immutable distro (ie. Bazzite, Nix, Silverblue), we recommend flatpak Lutris.
 
 ## Installation Steps
 1. Download our [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) (Select the `.tar.gz`. Distro packages are listed [here](https://github.com/starcitizen-lug/lug-helper#installation)).
