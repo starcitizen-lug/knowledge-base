@@ -11,8 +11,9 @@
 2. Launch the LUG Helper and select your preferred installation method. We recommend the non-Lutris `Install Star Citizen with Wine`.
 3. Allow the Preflight Check to fix any issues it finds before proceeding!
 4. Select an install location on a linux-formatted SSD where you have space for the entire game, approximately 110GB (we do not recommend an HDD or NTFS).
-5. Run the RSI Launcher, log in, and click install to finish installing the game.
-6. Launch the game. See you in the 'verse!
+5. If using Lutris, change the runner to `UMU-Latest` in the game's runner configuration tab.
+6. Run the RSI Launcher, log in, and click install to finish installing the game.
+7. Launch the game. See you in the 'verse!
 
 > [!important]
 > - Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for necessary workarounds, Nvidia gpu driver problems, and other important issues.
