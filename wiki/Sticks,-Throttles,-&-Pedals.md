@@ -32,15 +32,15 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 > 
 > After adding the udev rule, unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Sim (C) Alex Oz` in the name, and click the Disable button.
 
+> [!important]
+> For VKB devices running older firmware with a © symbol present, upgrading firmware is recommended as the game can have difficulties detecting devices with this symbol.
+> You can check this using `lsusb` or `evdev-joystick --list`.
+
 ## VKB Gladiator
 
 The Gladiator series can be calibrated without needing to use any special software.
 
 They store their configuration on-board but the [configuration software](https://www.vkbcontrollers.com/pages/downloads) is only native to Windows. You can run the software in a virtual machine (VirtualBox, GNOME Boxes, etc) and pass the USB device to the windows environment to configure it that way.
-
-> [!note]
-> for VKB devices running older firmware with a © symbol present, upgrading firmware is recommended as the game can have difficulties detecting devices with this symbol.
-> You can check this using `lsusb` or `evdev-joystick --list`.
 
 ## VKB Gunfighter
 
