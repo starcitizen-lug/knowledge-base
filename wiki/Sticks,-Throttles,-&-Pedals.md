@@ -36,13 +36,13 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 > For VKB devices running older firmware with a © symbol present, upgrading firmware is recommended as the game can have difficulties detecting devices with this symbol.
 > You can check this using `lsusb` or `evdev-joystick --list`.
 
-## VKB Gladiator
+### VKB Gladiator
 
 The Gladiator series can be calibrated without needing to use any special software.
 
 They store their configuration on-board but the [configuration software](https://www.vkbcontrollers.com/pages/downloads) is only native to Windows. You can run the software in a virtual machine (VirtualBox, GNOME Boxes, etc) and pass the USB device to the windows environment to configure it that way.
 
-## VKB Gunfighter
+### VKB Gunfighter
 
 Requires a windows-only software for calibration and configuration. [Link](https://www.vkbcontrollers.com/pages/downloads)
 
