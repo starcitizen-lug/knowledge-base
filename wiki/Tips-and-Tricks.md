@@ -99,7 +99,7 @@ A video of these steps can be found [here](https://www.youtube.com/watch?v=GqyXK
    - If you installed the game elsewhere, `Z:\` is mapped to your filesystem's root. Any path or mountpoint you type in must be referenced from the `Z:\` root.
 
    ![Screenshot From 2024-10-04 23-20-21](https://github.com/user-attachments/assets/01e31cb8-7cdc-468f-b2a1-658ba173de53)
-3. Remove all previous EAC workarounds
+3. Remove all EAC workarounds
     1. Lutris: remove the EAC environment variables `EOS_USE_ANTICHEATCLIENTNULL=1` and `SteamGameId=starcitizen`
     2. Non-Lutris: use a text editor to open `sc-launch.sh` and remove `export EOS_USE_ANTICHEATCLIENTNULL=1`
     3. Remove EAC line from `/etc/hosts` file: `127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround`
