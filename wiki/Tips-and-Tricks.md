@@ -149,7 +149,5 @@ _sc-postexit.sh_
 
 
 ## Updating DXVK within a wine prefix
-1. Update winetricks:  
-   `sudo winetricks --self-update`
-3. Re-install dxvk (change wine prefix to match your install location):  
-   `WINEPREFIX=$HOME/Games/star-citizen winetricks dxvk`
+To re-install dxvk, run the following in your terminal. Change the wine prefix path to match your install location:  
+   `WINEPREFIX=$HOME/Games/star-citizen winetricks --force dxvk`
