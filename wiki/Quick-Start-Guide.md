@@ -2,7 +2,8 @@
 > [!tip]
 > New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 
-1. Install Wine **v9.4** or newer following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. If your distribution provides an up to date version of wine (ie. Arch), you may install from its repositories instead.
+1. Install Wine **v9.4** or newer from your distro's repos. If wine is not available from your distro's repos, you may follow the instructions on the [winehq website](https://gitlab.winehq.org/wine/wine/-/wikis/Download).
+    - Fedora users, run `dnf install wine`. Do not install using the graphical installer or from winehq; they provide a wow64 build which will not work with Star Citizen.
 2. Install any version of winetricks from your distribution's repositories. Links, if needed, are on the winetricks [github](https://github.com/Winetricks/winetricks#installing). This pulls in some needed dependencies.
 3. Lutris is optional. If you want to use it, install [Lutris **v0.5.18**](https://lutris.net/downloads/) or newer and launch it once before installing Star Citizen to trigger its automatic winetricks dependency download. **Note**: We do not recommend running git builds of Lutris. If using an immutable distro (ie. Bazzite, Nix, Silverblue), we recommend flatpak Lutris.
 
