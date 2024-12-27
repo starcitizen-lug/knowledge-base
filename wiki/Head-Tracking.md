@@ -74,7 +74,7 @@ Tobii Game Hub can send tracking data to Opentrack in a Windows VM by passing th
 > - Eye tracking with Opentrack can only be used for head movement and not for targeting.
 
 ### VM Setup
-You will need a VM that supports passing through USB devices from the host. An existing VM can be used but you will need to modify the instructions below to support your virtualization software.  The instructions below will use a similar setup to the setup of [Winapps](https://github.com/winapps-org/winapps) using [dockur/windows](https://github.com/dockur/windows) to simplify the process of installing Windows with a QEMU backend.
+You will need a VM that supports passing through USB devices from the host. An existing VM can be used but you will need to modify the instructions below to support your virtualization software.  The instructions below will use a similar setup to [Winapps](https://github.com/winapps-org/winapps) using [dockur/windows](https://github.com/dockur/windows) to simplify the process of installing Windows with a QEMU backend.
 
 Using Tiny11/Tiny10 for the Windows installation is reccomended as it has less CPU usage and lower disk space requirements.
 
@@ -119,7 +119,7 @@ Now you should be able to access your VM from the following URL:
 3. Modify the opentrack Output setting to use "UDP over network" and enter the docker internal IP address of your host. If the IP address below does not work then do a nslookup on host.docker.internal from your Windows VM to find the correct IP address.
 4. Click on Start to send tracking data to your Linux host via UDP.
 
-<p align="center"><img src="./images/opentrack-windows.jpg" width=600 alt="opentrack Windows config"></p>
+<img src="https://github.com/user-attachments/assets/1d44f05e-72e0-4d5a-872a-3ec42b2fea7f" width=550 alt="opentrack Windows config">
 
 ### Opentrack configuration (Linux Host)
 1. [Follow the instructions above](#opentrack-configuration) to set up opentrack with support for wine
@@ -128,7 +128,7 @@ Now you should be able to access your VM from the following URL:
 4. Update your Filter and Mapping configuration to match your Windows VM
 5. You now should be able to launch Star Citizen and enable tracking
 
-<p align="center"><img src="./images/opentrack-linux.jpg" width=600 alt="opentrack Linux config"></p>
+<img src="https://github.com/user-attachments/assets/95af9a1a-0833-4322-b4f0-c859a8cbdd55" width=600 alt="opentrack Linux config">
 
 ### Automatically start tracking on Windows VM boot
 You can configure windows to autostart Tobii Game Hub and opentrack so that you can just run docker compose up to enable tracking with one command.
@@ -137,4 +137,4 @@ You can configure windows to autostart Tobii Game Hub and opentrack so that you 
 2. Create a shortcut to opentrack with the target "C:\Program Files (x86)\opentrack\opentrack.exe"
 3. Setup opentrack to start tracking on launch by adding an entry under Options > Game detection with the value of "opentrack.exe". Make sure to select the "Start profiles from game executable names in this list" checkbox
 
-<p align="center"><img src="./images/opentrack-linux-autostart.jpg" width=600 alt="opentrack Linux autostart"></p>
+<img src="https://github.com/user-attachments/assets/07c4d95c-d12e-410a-b741-97f24c909a72" width=550 alt="opentrack Linux autostart">
