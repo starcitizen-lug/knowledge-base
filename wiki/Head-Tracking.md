@@ -70,7 +70,8 @@ Other distros:
 Tobii Game Hub can send tracking data to Opentrack in a Windows VM by passing through the Tobii usb device from your linux host. Tracking can be forwarded to Opentrack on your host allowing you to use your Tobii Eye Tracker 5 with Star Citizen on Linux.
 
 > [!important]
-> You will need spare CPU cores and RAM (4GB by default) to run the Windows VM at the same time as the game. Tested on a 3950X the CPU impact is negligable but you may experience issues on slower hardware.
+> - You will need spare CPU cores and RAM (4GB by default) to run the Windows VM at the same time as the game. Tested on a 3950X the CPU impact is negligable but you may experience issues on slower hardware.
+> - Eye tracking with Opentrack can only be used for head movement and not for targeting.
 
 ### VM Setup
 You will need a VM that supports passing through USB devices from the host. An existing VM can be used but you will need to modify the instructions below to support your virtualization software.  The instructions below will use a similar setup to the setup of [Winapps](https://github.com/winapps-org/winapps) using [dockur/windows](https://github.com/dockur/windows) to simplify the process of installing Windows with a QEMU backend.
