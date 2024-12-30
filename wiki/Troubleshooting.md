@@ -216,6 +216,7 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - Mouse and view snapping issues for most Penguins using Wayland + KDE and other desktop environments. The simplest workaround is to use Xorg or switch to an alternate desktop environment. Most Gnome users don't seem to experience this issue
   - Wine version >=9.20 helps mitigate this for some
   - kwin >=6.2.2 helps mitigate this for some
+  - [Proton](https://github.com/starcitizen-lug/knowledge-base/wiki/Alternative-Installations#proton-installation) helps mitigate this for some
   - Gamescope helps mitigate this for some
     - **Note for Nvidia users:** Gamescope may not work on your hardware. See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526). A possible fix to get Gamescope working on Nvidia is to set environment variable `__GL_THREADED_OPTIMIZATIONS=0`
     - Install and enable gamescope. set these options to for your display resolution `-W 2560 -H 1440 --force-grab-cursor`
