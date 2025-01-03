@@ -209,17 +209,17 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 ## 🤪 Unexpected Behavior (sometimes also crashes)
 
 #### Mouse/Cursor warp issues and view snapping in interaction mode
-- Mouse and view snapping issues for most Penguins using Wayland + KDE and other desktop environments. The simplest workaround is to use Xorg or switch to an alternate desktop environment. Most Gnome users don't seem to experience this issue
+- The simplest workaround is to use Xorg instead of Wayland. Other potential mitigations are:
   - Wine version >=9.20 helps mitigate this for some
   - kwin >=6.2.2 helps mitigate this for some
   - [Proton](https://github.com/starcitizen-lug/knowledge-base/wiki/Alternative-Installations#proton-installation) helps mitigate this for some
-  - Gamescope helps mitigate this for some
-    - **Note for Nvidia users:** Gamescope may not work on your hardware. See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526). A possible fix to get Gamescope working on Nvidia is to set environment variable `__GL_THREADED_OPTIMIZATIONS=0`
-    - Install and enable gamescope. set these options to for your display resolution `-W 2560 -H 1440 --force-grab-cursor`
+  - Switching to an alternate desktop environment may help; most Gnome users don't seem to experience this issue
+  - Gamescope may help mitigate this
+    - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix below](#gamescope-not-working)
+    - Install and enable gamescope. Set these options for your display resolution `-W 2560 -H 1440 --force-grab-cursor`
     - Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
     - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
-  - Alternatively, build xwayland with this [patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied. If using KDE and patching xwayland, you will also need to install Gamescope and use the `--force-grab-cursor` option
-- If this doesn't work, you will need to switch to Xorg instead of Wayland.
+  - You may try building xwayland with [this patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied. If using KDE and patching xwayland, you will also need to install Gamescope and use the `--force-grab-cursor` option
 
 
 #### Mouse/Cursor restricted to a region smaller than the display, or clicks offset from cursor
@@ -352,7 +352,9 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 #### Gamescope not working
 - See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
-- A possible fix to get Gamescope working on Nvidia: `Right click the game->Configure->System options->Game execution->Environment variables` then find or create `__GL_THREADED_OPTIMIZATIONS` in the left column and change/set it to `0` in the right column.
+- A possible fix is to set the environment variable `__GL_THREADED_OPTIMIZATIONS=0`
+   - Lutris: `Right click the game->Configure->System options->Game execution->Environment variables` then find or create `__GL_THREADED_OPTIMIZATIONS` in the left column and change/set it to `0` in the right column.
+   - Non-Lutris: Edit the `sc-launch.sh` script installed by the Helper in your prefix (ie, `~/Games/star-citize/sc-launch.sh`) and add `export __GL_THREADED_OPTIMIZATIONS=0` to the environment variables.
 
 
 ***
