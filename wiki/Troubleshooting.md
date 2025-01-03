@@ -151,10 +151,6 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - Make sure you have set your vm.max_map_count as described in the installation section.
 
 
-#### Game crashes with "Failed to initialize dependencies" error
-- Make sure the `SDL_VIDEODRIVER` environment variable is **NOT** set globally to `wayland` on your system.
-
-
 #### Crash or black screen while using Vulkan beta renderer
 - Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) recommendations for your graphics card
 - Create a user.cfg file in the `{LIVE,PTU,TECH-PREVIEW}` directory and set `r.graphicsRenderer = 0`
@@ -275,7 +271,8 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 
 #### Failed to initialize dependencies error
-- Make sure the `SDL_VIDEODRIVER` environment variable is **NOT** set globally to `wayland` on your system. This causes incompatibilities with many games. If it is, simply unset it.
+- Make sure the `SDL_VIDEODRIVER` environment variable is **NOT** set globally to `wayland` on your system: `env | grep SDL_VIDEODRIVER`
+- If it is set, remove it from whichever environment config(s) is setting it.
 
 
 #### Black or flickering window, possible crash with errors 15006 or 30007
