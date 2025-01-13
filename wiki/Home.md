@@ -39,7 +39,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > (Oct 4, 2024) **Easy Anticheat Enforcement**
 > 
 > - CIG has enabled EAC enforcement on the PTU. We have an experimental fix that also works on LIVE and it needs testing.
-> - Please follow [our migration instructions](Tips-and-Tricks#easy-anti-cheat) and report back on our Discord's #Development channel.
+> - Please follow [our migration instructions](Tips-and-Tricks#easy-anti-cheat) and report back on our Discord's #tech-support channel.
 
 
 ### General News
@@ -57,7 +57,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > (Apr 29, 2024) **Vulkan Beta: Game fails to launch**
 > - There is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents vulkan and DLSS from working on linux.
 > - If using Wine-GE, add the environment variable `WINE_HIDE_NVIDIA_GPU=1` to enable vulkan
-> - If using Wine or Wine-GE, see [instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#dlssdeep-learning-super-sampling--vulkan) to patch libcuda to enable both vulkan and DLSSa
+> - If using Wine or Wine-GE, see [instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#dlssdeep-learning-super-sampling--vulkan) to patch libcuda to enable both vulkan and DLSS
 > - GE and UMU-Latest [Proton](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#proton) enable both vulkan and DLSS.
 
 > [!caution]
