@@ -155,7 +155,6 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) recommendations for your graphics card
 - Create a user.cfg file in the `{LIVE,PTU,TECH-PREVIEW}` directory and set `r.graphicsRenderer = 0`
  ```
- Con_Restricted = 0
  r.graphicsRenderer = 0
  ```
 
@@ -225,7 +224,6 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 #### Mouse/Cursor restricted to a region smaller than the display, or clicks offset from cursor
 - Create a user.cfg file in the LIVE, PTU, EPTU, TECH-PREVIEW directory
  ```
- Con_Restricted = 0
  #set to your display resolution
  r_width = 3440
  r_height = 1440
