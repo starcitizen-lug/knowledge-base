@@ -28,7 +28,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > (Oct 25, 2024) **Vulkan crashes in 3.24 and 4.0**
 > - Black screen, crash
 > - Possible error similar to: `Fatal Error: Acquire Next Image Failed`
-> - If you experience this, we recommend remaining on DX11 for now
+> - If you experience this, [we recommend using DX11 for now](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#crash-or-black-screen-while-using-vulkan-beta-renderer)
 
 > [!warning]
 > (Oct 25, 2024) **Launcher installation hangs at Updating Game Content**
