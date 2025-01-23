@@ -71,8 +71,8 @@ The yaw potentiometer on these sticks tends to fail after a time. It may be poss
 
 ### Mappings
 
-A collection of mappings contributed by our community can be found [here](https://github.com/starcitizen-lug/mappings).
-Mappings for Saitek / Logitech x56 HOTAS are maintained individually by @PaladinTitus [here](https://github.com/PaladinTitus/SC_X56).
+A collection of mappings contributed by our community can be found [here](https://github.com/starcitizen-lug/mappings).  
+Mappings for Saitek / Logitech x56 HOTAS are maintained individually by @PaladinTitus [here](https://github.com/PaladinTitus/SC_X56).  
 
 The third party tool, [input-remapper](https://github.com/sezanzeb/input-remapper), can be used to change the behavior of input devices. Note that, while some of our Penguins have had success using this tool, we have not fully vetted its functionality or safety. Some basic profile examples contributed by our community can be found [here](https://github.com/starcitizen-lug/mappings/tree/main/input-remapper).
 
