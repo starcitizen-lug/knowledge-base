@@ -94,10 +94,10 @@ A video of these steps can be found [here](https://www.youtube.com/watch?v=GqyXK
 1. In the RSI Launcher, navigate to `Settings -> Games -> Game Location`
    ![Screenshot From 2024-10-04 23-22-13](https://github.com/user-attachments/assets/01496e30-92cc-4120-ba58-45ec11363f10)
 2. Change the RSI Library location to be its absolute path on your linux filesystem from `Z:\`. **No symlinks!**
-   - If you installed the game to the default location, change it to the following. Don't forget to adjust your username:  
-     `Z:\home\{user}\Games\star-citizen\drive_c\Program Files\Roberts Space Industries`
-   - If using an immutable distro such as bazzite/ublue change it to the following. Don't forget to adjust your username:
-     `Z:\var\home\${USER}\Games\star-citizen\drive_c\Program Files\Roberts Space Industries`  
+   - If you installed the game to the default location, change it to the result of this command. Execute the following in a bash shell:
+     ```
+       echo "Z:$(realpath "$HOME/Games/star-citizen/drive_c/Program Files/Roberts Space Industries")" | sed -e 's/\//\\/g'
+     ```
    - If you installed the game elsewhere, `Z:\` is mapped to your filesystem's root. Any path or mountpoint you type in must be referenced from the `Z:\` root.
 
    ![Screenshot From 2024-10-04 23-20-21](https://github.com/user-attachments/assets/01e31cb8-7cdc-468f-b2a1-658ba173de53)
