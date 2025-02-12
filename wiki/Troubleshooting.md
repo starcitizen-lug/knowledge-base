@@ -336,8 +336,9 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - Some Penguins are seeing VRAM exhaustion problems on nvidia cards. It appears to be driver related and does not seem to affect AMD cards.
 - A workaround that some Penguins have had some success with:
    - Create a new `dxvk.conf` file and add `d3d11.cachedDynamicResources = "a"` to it, then either export `DXVK_CONFIG_FILE=path/to/dxvk.conf` or, if using Lutris, add `DXVK_CONFIG_FILE` as a new environment variable in the game's settings and set it to the file path.
-   - If you still have issues or are running applications like OBS, you may also have to limit the vram the game sees to free up some vram for other applications:
-     `dxgi.maxDeviceMemory = 6144`
+   - If you still have issues or are running applications like OBS, you may also have to limit the vram the game sees to free up some vram for other applications. For example:
+      - Card with 8GB vram: `dxgi.maxDeviceMemory = 6144`
+      - Card with 6GB vram: `dxgi.maxDeviceMemory = 4096`
 
 #### Vulkan Beta: Game fails to launch
 - There is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents vulkan and DLSS from working on linux.
