@@ -29,12 +29,13 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 > # Set the "uaccess" tag for raw HID access for VKB Devices in wine
 > KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
 > ```
-> 
+
+> [!important]
 > After adding the udev rule, unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Sim (C) Alex Oz` in the name, and click the Disable button.
 
 > [!important]
-> For VKB devices running older firmware with a © symbol present, upgrading firmware is recommended as the game can have difficulties detecting devices with this symbol.
-> You can check this using `lsusb` or `evdev-joystick --list`.
+> HIDRAW is recommended for VKB devices running older firmware with a © symbol in the name, or consider upgrading your firmware
+> You can check the device name using `lsusb` or `evdev-joystick --list`.
 
 ### VKB Gladiator
 
@@ -56,7 +57,8 @@ Requires a windows-only software for calibration and configuration. [Link; scrol
 > # Set the "uaccess" tag for raw HID access for Virpil Devices in wine
 > KERNEL=="hidraw*", ATTRS{idVendor}=="3344", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
 > ```
->
+
+> [!important]
 > After adding the udev rule, unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Virpil Controls` in the name, and click the Disable button.
 
 ## Thrustmaster T-16000
@@ -68,6 +70,35 @@ The yaw potentiometer on these sticks tends to fail after a time. It may be poss
 
 
 ## Configuration Tips
+
+### Find Device Info
+Use `udevadm` to retrieve the Vendor ID, Model Name, and Model ID that the device reports to the system.
+```bash
+udevadm info -n /dev/input/by-id/usb-your-joystick-name | grep -E 'ID_VENDOR_ID|ID_MODEL_ID|ID_MODEL'
+```
+Example:
+```bash
+$ udevadm info -n /dev/input/by-id/usb-VKB-Sim_©_Alex_Oz_2021_VKBsim_Space_Gunfighter-event-joystick | grep -E 'ID_VENDOR_ID|ID_MODEL_ID|ID_MODEL'
+E: ID_VENDOR_ID=231d
+E: ID_MODEL=VKBsim_Space_Gunfighter
+E: ID_MODEL_ENC=\x20VKBsim\x20Space\x20Gunfighter\x20
+E: ID_MODEL_ID=0126
+```
+
+### HIDRAW
+Removes the 79 button limit and may provide better device support
+- Create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
+ ```
+ # Set the "uaccess" tag for raw HID access for Virpil Devices in wine
+ KERNEL=="hidraw*", ATTRS{idVendor}=="<Your Vendor ID>", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
+ ```
+Example:
+ ```
+ # Set the "uaccess" tag for raw HID access for VKB Devices in wine
+ KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
+ ```
+> [!important]
+> After adding the udev rule, unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that **do not** match the results of the [udevadm](#find-device-info) and click disable
 
 ### Mappings
 
@@ -83,30 +114,14 @@ On Linux, evdev adds deadzones to every axis for each controller you plug into y
 
 To eliminate this problem, you want to create a udev rule that removes the evdev deadzone from your devices when they're plugged in.
 
-First, install `evdev-joystick`. This utility is provided by different packages depending on your distribution.  
+1. Install `evdev-joystick`. This utility is provided by different packages depending on your distribution.  
 See the list below for your distribution:
-* Arch - `linuxconsole`
-* Debian/Ubuntu - `joystick`
-* Fedora - `linuxconsoletools`
+    - Arch - `linuxconsole`
+    - Debian/Ubuntu - `joystick`
+    - Fedora - `linuxconsoletools`
 
-Then, you will need the Vendor ID, Model Name, and Model ID that the device reports to the system.  
-You can get this information with `udevadm`
-
-```bash
-udevadm info -n /dev/input/by-id/usb-your-joystick-name | grep -E 'ID_VENDOR_ID|ID_MODEL_ID|ID_MODEL'
-```
-
-Example:
-```bash
-$ udevadm info -n /dev/input/by-id/usb-VKB-Sim_©_Alex_Oz_2021_VKBsim_Space_Gunfighter-event-joystick | grep -E 'ID_VENDOR_ID|ID_MODEL_ID|ID_MODEL'
-E: ID_VENDOR_ID=231d
-E: ID_MODEL=VKBsim_Space_Gunfighter
-E: ID_MODEL_ENC=\x20VKBsim\x20Space\x20Gunfighter\x20
-E: ID_MODEL_ID=0126
-```
-
-With this information for each device you have that you want to eliminate the evdev deadzone for, create a udev rules file in  
-`/etc/udev/rules.d/` and plug in the information into the following template:
+2. Create a udev rules file in  
+`/etc/udev/rules.d/` and plug [your device info](#find-device-info) into the following template:
 
 ```
 # Custom Joystick Udev Rules
@@ -174,20 +189,18 @@ If your pedals aren't being recognized by Star Citizen but work on Linux, it may
 
 There are two possible workarounds for this:
 
-1) The following Python script creates a virtual device from the real device, adding a few more capabilities to make Star Citizen not discard it as an invalid device:
+- The following Python script creates a virtual device from the real device, adding a few more capabilities to make Star Citizen not discard it as an invalid device:
 https://github.com/beniwtv/evdev-spoof-device
 
-> [!note]
-> Consider making a pull request for your device (see quirks section), if there are quirks needed for your device to function.
+- Another solution is to create a Kernel udev rule to change the classification of your device. 
 
-2) Another solution is to create a Kernel udev rule to change the classification of your device. 
-
-    * Create a file `/etc/udev/rules.d/90-pedals-workaround.rules`.
-    * Add this to the file, changing your vendor and model IDs (can be found by using `lsusb`):
+    - Create a file `/etc/udev/rules.d/90-pedals-workaround.rules` and plug [your device info](#find-device-info) into the following template:
       ```
-      ACTION=="add|change", KERNEL=="event[0-9]*", ENV{ID_VENDOR_ID}=="044f", ENV{ID_MODEL_ID}=="b679", ENV{ID_INPUT_ACCELEROMETER}="", ENV{ID_INPUT_JOYSTICK}="1", TAG+="uaccess"
+      ACTION=="add|change", KERNEL=="event[0-9]*", ENV{ID_VENDOR_ID}=="<Your Vendor ID>", ENV{ID_MODEL_ID}=="<Your Model ID>", ENV{ID_INPUT_ACCELEROMETER}="", ENV{ID_INPUT_JOYSTICK}="1", TAG+="uaccess"
       ```
-
+      
 > [!note]
-> Also consider having the quirk added to systemd by following https://github.com/systemd/systemd/blob/main/hwdb.d/60-input-id.hwdb.
+> Consider contributing your rules to the LUG knowlege-base if your device needs any rules to function properly
+> 
+> Also consider having the rule added to [systemd](https://github.com/systemd/systemd/blob/main/hwdb.d/60-input-id.hwdb).
 
