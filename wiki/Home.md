@@ -43,6 +43,12 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 
 ### General News
+
+> [!warning]
+> (Feb 7, 2025) **Game fails to launch with Wine 10.1**
+> - Game [fails to launch](https://bugs.winehq.org/show_bug.cgi?id=57830) on Wine 10.1
+> - Use the LUG Helper tool's "manage runners" options to select any edition of Wine 10.0 from the listed sources
+
 > [!note]
 > (Nov 30, 2024) **Joysticks not detected on Wine 9.22**
 > 
