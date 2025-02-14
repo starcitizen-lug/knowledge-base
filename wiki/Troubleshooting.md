@@ -7,22 +7,22 @@
 1. Make sure our [LUG Helper](https://github.com/starcitizen-lug/lug-helper)'s Preflight Check passes all checks.
 2. Make sure all prerequisites from the [Quick Start Guide](Quick-Start-Guide) are satisfied on your system.
 3. Kill all wine processes and re-launch a fresh instance of the game:
-   - In Lutris, select the game, click the arrow beside the wine button, choose `Open Bash terminal` and run `wineserver -k`
+   - If not using Lutris, then navigate to `~/Games/star-citizen` and run the following in your terminal `./sc-launch.sh shell` then `wineserver -k`
+   - If using Lutris, select the game, click the arrow beside the wine button, choose `Open Bash terminal` and run `wineserver -k`
      ![Screenshot From 2024-09-30 12-03-57](https://github.com/user-attachments/assets/dd131abb-3adb-4876-a6e6-2c0226884a71)
-   - If not using Lutris, run the following in your terminal, adjusting your prefix path as needed:  
-   `WINEPREFIX=$HOME/Games/star-citizen wineserver -k`
-4. Update your version of Wine and/or Lutris to the latest available version.
-5. Try a differen Wine version or Lutris runner. If using wine-staging, try standard wine. Conversely, you could try wine-staging if using standard wine.
-6. Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
+4. Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
+5. Use the lug helper to get the latest wine runner. Be sure to check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for recommendations
+6. Try a different wine version. If using wine-staging, try standard wine. Try wine-staging if using standard wine.
 7. Look for your issue/error in the categories on this page. Refer to the steps directly below to gather logs.
 
 #### Gathering logs
-1. Check Lutris logs by clicking the arrow beside the play button:  
+- If not using Lutris, inspect wine's output in `sc-launch.log` in your `~Games/star-citizen` directory
+- If using Lutris, check logs by clicking the arrow beside the play button:  
   ![Screenshot from 2023-04-15 14-09-40](https://user-images.githubusercontent.com/3657071/232246219-8d713782-2d22-474c-a350-921e4af430af.png)
-2. Run Lutris in debug mode to see more verbose logging  :
+  - Run Lutris in debug mode to see more verbose logging  :
    Native: `lutris -d` Flatpak: `flatpak run net.lutris.Lutris -d`
-3. If CLI mode is turned on, there will be additional useful output in your terminal window.
-4. If you're not using Lutris, inspect wine's output in your terminal.
+  - If CLI mode is turned on, there will be additional useful output in your terminal window.
+
 
 #### Community Help
 If this page doesn't help resolve your issue, you may ask for help on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)
