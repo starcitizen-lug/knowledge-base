@@ -93,8 +93,9 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 ## 💥 Crashes
 
 #### RSI Launcher v1.6.2+ JavaScript error
-- In the game's Lutris `System options`, make sure Advanced options is on then enable `CLI mode`
-- Alternatively, select a Proton runner in Lutris' runner options tab, ie `GE-Proton (Latest)` and follow our [proton setup instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#proton)
+- The LUG Helper's [wine installation](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide#installation-steps) method is recommended and avoids this error
+- In the game's Lutris `System options`, make sure Advanced options is toggled on then in the `text-based games` section enable `CLI mode`
+- Alternatively, select a Proton runner in Lutris' runner options tab, i.e. `ge-proton` and follow our [proton setup instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#proton)
 
 
 #### Code 3 crash with error: *Star Citizen process exited abnormally (code: 3) : Command failed*
