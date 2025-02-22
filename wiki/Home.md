@@ -45,14 +45,14 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 ### General News
 
 > [!warning]
-> (Feb 7, 2025) **Game fails to launch with Wine 10.1**
-> - Game [fails to launch](https://bugs.winehq.org/show_bug.cgi?id=57830) on Wine 10.1
+> (Feb 7, 2025) **Game fails to launch with Wine 10.1 and newer**
+> - Game [fails to launch](https://bugs.winehq.org/show_bug.cgi?id=57830) on Wine 10.1+
 > - Use the LUG Helper tool's "manage runners" options to select any edition of Wine 10.0 from the listed sources
 
 > [!note]
-> (Nov 30, 2024) **Joysticks not detected on Wine 9.22**
+> (Nov 30, 2024) **Joysticks not detected on Wine 9.22 and newer**
 > 
-> - Wine 9.22 has enabled HIDRAW by default for VKB and Virpil devices.
+> - Wine 9.22+ has enabled HIDRAW by default for VKB and Virpil devices.
 > - If your joystick/throttle is no longer being detected by the game, follow [our instructions](Sticks,-Throttles,-&-Pedals#some-of-your-joysticks-disappear--arent-recognized-in-the-game) to enable hidraw access.
 
 ### AMD News
@@ -62,9 +62,6 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > [!warning]
 > (Apr 29, 2024) **Vulkan Beta: Game fails to launch**
 > - There is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents vulkan and DLSS from working on linux.
-> - If using Wine-GE, add the environment variable `WINE_HIDE_NVIDIA_GPU=1` to enable vulkan
-> - If using Wine or Wine-GE, see [instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#dlssdeep-learning-super-sampling--vulkan) to patch libcuda to enable both vulkan and DLSS
-> - GE and UMU-Latest [Proton](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#proton) enable both vulkan and DLSS.
 
 > [!caution]
 > (Oct 9, 2023) **Crash when taking shield damage in-game**
