@@ -60,9 +60,9 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
   - Recent Wine versions can be easily installed from the Kron4ek runner source in the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
 - In Lutris, right click the game->Configure->Runner options, remove the following DLL override:
   - `powershell.exe: disabled`
-- If using standard Wine, the latest git release of winetricks is required for the powershell patches. Update your prefix path in the following commands and run:
-  - Run `sudo winetricks --self-update` to update winetricks
-  - Run `WINEPREFIX=$HOME/Games/star-citizen winetricks powershell` to install powershell
+- If using standard Wine, winetricks **20250102** or newer is required to install powershell
+  1. navigate to your game prefix directory `~/Games/star-citizen`
+  2. run the following in your terminal `./sc-launch.sh shell` then `winetricks powershell`
 - If using standard Wine, CLI mode must be enabled in Lutris
   - Right click the game -> Configure -> System options -> Toggle on advanced options -> CLI mode
 - The 2.0 Launcher may need to be installed manually. See [our wiki](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#rsi-launcher-doesnt-auto-update) for instructions
@@ -151,5 +151,6 @@ _sc-postexit.sh_
 
 
 ## Updating DXVK within a wine prefix
-To re-install dxvk, run the following in your terminal. Change the wine prefix path to match your install location:  
-   `WINEPREFIX=$HOME/Games/star-citizen winetricks --force dxvk`
+To re-install or update DXVK
+  - Navigate to your game prefix directory `~/Games/star-citizen`
+  - Run the following in your terminal `./sc-launch.sh shell` then `winetricks --force dxvk`
