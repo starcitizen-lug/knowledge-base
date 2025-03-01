@@ -21,6 +21,10 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 ### Game Updates
 > [!note]
+> (March 1, 2025) **30K errors**
+> - 4.0.2 tends to give a 30K the first time you try to join a server. The solution is to return to the menu and try again
+
+> [!note]
 > (Oct 28, 2024) **You're trying to run the game on an unsupported Windows OS**
 > - Just click OK.
 
