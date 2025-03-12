@@ -210,14 +210,12 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 #### Mouse/Cursor warp issues and view snapping in interaction mode
 - The simplest workaround is to choose Xorg at your login screen instead of Wayland session. Other potential mitigations are:
-  - Wine version >=9.20 helps mitigate this for some
-  - kwin >=6.2.2 helps mitigate this for some
-  - [Proton](https://github.com/starcitizen-lug/knowledge-base/wiki/Alternative-Installations#proton-installation) helps mitigate this for some
   - Software cursor helps mitigate this for some. Create a user.cfg file in the LIVE, PTU, EPTU, TECH-PREVIEW directory
     ```
       #use software cursor
       pl_pit.forceSoftwareCursor = 1
     ```
+  - [Proton](https://github.com/starcitizen-lug/knowledge-base/wiki/Alternative-Installations#proton-installation) helps mitigate this for some
   - Gamescope helps mitigate this for some
     - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix below](#gamescope-not-working)
     - Install and enable gamescope. Set these options for your display resolution `-W 2560 -H 1440 --force-grab-cursor`
@@ -226,7 +224,6 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
   - Wine wayland helps mitigate this for some
     - Add environment variable `DISPLAY=` to unset it to empty
     - Add RSI Launcher.exe argument ` --in-process-gpu`
-    - Maximize RSI Launcher window with F11 key
   - Switching to an alternate desktop environment may help; most Gnome users don't seem to experience this issue
   - You may try building xwayland with [this patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied. If using KDE and patching xwayland, you will also need to install Gamescope and use the `--force-grab-cursor` option
 
