@@ -90,6 +90,9 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
 > [!important]
 > EAC will not like symlinks of any directory along your install path. Verify your absolute path if using an immutable distro such as bazzite/ublue
 
+> [!important]
+> Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for any wine changes
+
 A video of these steps can be found [here](https://www.youtube.com/watch?v=GqyXKT5-kRA).
 1. In the RSI Launcher, navigate to `Settings -> Games -> Game Location`
    ![Screenshot From 2024-10-04 23-22-13](https://github.com/user-attachments/assets/01496e30-92cc-4120-ba58-45ec11363f10)
