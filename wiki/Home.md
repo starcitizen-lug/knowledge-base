@@ -50,8 +50,9 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 > [!warning]
 > (Feb 7, 2025) **Game fails to launch with Wine 10.1 and newer**
-> - Game [fails to launch](https://bugs.winehq.org/show_bug.cgi?id=57830) on Wine 10.1+
-> - Use the LUG Helper tool's "manage runners" options to select RawFox 10.3-stg or Kron4ek 10.3 staging-tkg or newer
+> - Game [fails to launch](https://bugs.winehq.org/show_bug.cgi?id=57830) on Wine 10.1+ — Use the LUG Helper's "manage runners" options to pick a different runner
+>   - 10.0 non-staging
+>   - RawFox 10.3-stg or Kron4ek 10.3 staging-tkg or newer
 
 > [!note]
 > (Nov 30, 2024) **Joysticks not detected on Wine 9.22 and newer**
