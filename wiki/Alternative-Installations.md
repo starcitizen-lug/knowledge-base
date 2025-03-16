@@ -67,6 +67,7 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
    ```
    GAMEID="umu-starcitizen" PROTONPATH="GE-Proton" umu-run "~/Games/umu/umu-starcitizen/drive_c/Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe"
    ```
+### Alternate Launchers
 
 > [!caution]
 > We cannot guarantee that the alternative installation methods on this page will work or perform well.
@@ -75,13 +76,12 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 >
 > If you proceed with an alternative installation method, please be aware that not many members of our community use these methods. We may not be able to provide support for these installations if something isn't working right.
 
-### Heroic Games Launcher
-
 > [!important]
 > If using flatpak apps, ensure the install location is whitelisted using Flatseal or similar methods.
 > 
 > The Star Citizen launcher does not support temp paths via xdg-portals.
-> 
+
+#### Heroic Games Launcher
 1. Download latest [Star Citizen installer](https://robertsspaceindustries.com/download).
 2. Install [Heroic Games Launcher](https://heroicgameslauncher.com/downloads).
 3. Launch Heroic, browse to `Wine Manager>Proton-GE` and install `Proton-GE-Latest`.
@@ -91,21 +91,31 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 7. Click `Run Installer First` and select the Star Citizen install file.
 8. Once install is complete, set `Select Executable` to the `RSI Launcher.exe` and click Finish.
 9. Open the game settings in Heroic, change to Advanced tab and under Environment Variables add `GAMEID=umu-starcitizen`.
-10. Run the RSI Launcher, log in, and click install to finish installing the game.
+10. Run the RSI Launcher, log in, and click install to finish installing the game
 
-### Lutris
-> [!important]
-> If using flatpak apps, ensure the install location is whitelisted using Flatseal or similar methods.
-> 
-> The Star Citizen launcher does not support temp paths via xdg-portals.
-> 
-
+#### Lutris
 1. Launch the LUG Helper and select the installation method `Install Star Citizen with Lutris`
 2. Allow the Preflight Check to fix any issues it finds before proceeding!
 3. Select an install location on a linux-formatted SSD where you have space for the entire game, approximately 110GB (we do not recommend an HDD or NTFS)
 4. Run the RSI Launcher, log in, and click install to finish installing the game
 
-### Steam
+#### Bottles
+1. Create a new gaming bottle
+2. Use the "Install Programs..." Star Citizen option
+3. Run Star citizen, log in, and click install to finish installing the game
+
+#### Faugus Launcher
+1. Download latest [Star Citizen installer](https://robertsspaceindustries.com/download)
+2. Press the "New" button
+3. Set title to "Star Citizen"
+4. Set the Path value to the RSI Installer file you downloaded
+5. Set the prefix to your preferred location e.g. `~/Games/star-citizen`
+6. Set the Protonfix value to `umu-starcitizen` on the Tools tab
+7. Press the "Play" button to run the installer, then exit
+8. Right click the game and set the "path" value to the RSI Launcher executable in the wine prefix
+9. Press the "Play" button to run the RSI Launcher, log in, and click install tto finish installing the game
+
+#### Steam
 > [!warning]
 > We do not recommend installing Star Citizen within Steam. While it can be done, it creates several issues that we feel are not worth the effort to try to work around. For example, it limits configurability options and does not invoke needed protonfixes by default.
 > 
