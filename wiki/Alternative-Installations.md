@@ -44,9 +44,9 @@ _Distributions that use /etc/security/limits.conf_
 * Add the following line to /etc/security/limits.conf: `* hard nofile 524288`
 
 
-### Manual Wine Installation
+### Wine Installation
 > [!tip]
-> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool now contains an option for a non-Lutris install and can perform these steps for you automatically! See our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide) for instructions.
+> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool now contains an option for a wine install and can perform these steps for you automatically! See our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide) for instructions.
 
 1. Install and configure the necessary prerequisites
 2. Create and configure your wine prefix:  
@@ -68,14 +68,14 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
    GAMEID="umu-starcitizen" PROTONPATH="GE-Proton" umu-run "~/Games/umu/umu-starcitizen/drive_c/Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe"
    ```
 
-
-### Heroic Games Launcher
 > [!caution]
 > We cannot guarantee that the alternative installation methods on this page will work or perform well.
 > 
 > The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
 >
 > If you proceed with an alternative installation method, please be aware that not many members of our community use these methods. We may not be able to provide support for these installations if something isn't working right.
+
+### Heroic Games Launcher
 
 > [!important]
 > If using flatpak apps, ensure the install location is whitelisted using Flatseal or similar methods.
@@ -92,6 +92,18 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 8. Once install is complete, set `Select Executable` to the `RSI Launcher.exe` and click Finish.
 9. Open the game settings in Heroic, change to Advanced tab and under Environment Variables add `GAMEID=umu-starcitizen`.
 10. Run the RSI Launcher, log in, and click install to finish installing the game.
+
+### Lutris
+> [!important]
+> If using flatpak apps, ensure the install location is whitelisted using Flatseal or similar methods.
+> 
+> The Star Citizen launcher does not support temp paths via xdg-portals.
+> 
+
+1. Launch the LUG Helper and select the installation method `Install Star Citizen with Lutris`
+2. Allow the Preflight Check to fix any issues it finds before proceeding!
+3. Select an install location on a linux-formatted SSD where you have space for the entire game, approximately 110GB (we do not recommend an HDD or NTFS)
+4. Run the RSI Launcher, log in, and click install to finish installing the game
 
 ### Steam
 > [!warning]
