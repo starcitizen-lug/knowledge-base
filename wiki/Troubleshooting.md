@@ -301,8 +301,11 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 
 #### Non-US keyboard keys not working
-- Make sure you're using the latest version of Wine or your Wine runner is up to date.
-- Set your keymap to the appropriate language.
+- Use the LUG Helper to select a recent Staging Wine and then select your keyboard language
+  - in a terminal run `./sc-launch.sh shell` then `winecfg`
+  - Select your lanuage from the list and turn on scancode detection
+    ![staging_input_menu](https://github.com/user-attachments/assets/a525f310-3a2a-49b1-bb6e-c07875e15608)
+
 - If the above don't fix it, you can try setting the `LANG=` environment variable. For example, `LANG=de_DE`
 
 
