@@ -3,13 +3,13 @@
 > New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 
 > [!tip]
-> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool can perform these steps for you automatically! See our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide) for instructions.
+> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool can perform these steps for you automatically! See our [Quick Start Guide](Quick-Start-Guide) for instructions.
 
 1. Install Wine **v9.4** or newer following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. If your distro provides an up to date version of wine (ie. Arch), you may install from its repos instead. 
 2. Install winetricks 20240105-next or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
 4. Set `vm.max_map_count` on your system to at least `16777216`
 5. Set the Hard open file descriptors limit on your system to at least `524288`
-6. See the Manual Easy Anti-Cheat Configuration instructions [here](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#easy-anti-cheat).
+6. See the Manual Easy Anti-Cheat Configuration instructions [here](Tips-and-Tricks#easy-anti-cheat).
 
 **To check and set vm.max_map_count temporarily**
 ```
@@ -46,7 +46,7 @@ _Distributions that use /etc/security/limits.conf_
 
 ### Wine Installation
 > [!tip]
-> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool now contains an option for a wine install and can perform these steps for you automatically! See our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide) for instructions.
+> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool now contains an option for a wine install and can perform these steps for you automatically! See our [Quick Start Guide](Quick-Start-Guide) for instructions.
 
 1. Install and configure the necessary prerequisites
 2. Create and configure your wine prefix:  
@@ -72,7 +72,7 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 > [!caution]
 > We cannot guarantee that the alternative installation methods on this page will work or perform well.
 > 
-> The recommended installation method is to follow our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide).
+> The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
 >
 > If you proceed with an alternative installation method, please be aware that not many members of our community use these methods. We may not be able to provide support for these installations if something isn't working right.
 
@@ -94,9 +94,9 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 10. Run the RSI Launcher, log in, and click install to finish installing the game
 
 #### Lutris
-1. Launch the LUG Helper and select the installation method `Install Star Citizen with Lutris`
-2. Allow the Preflight Check to fix any issues it finds before proceeding!
-3. Select an install location on a linux-formatted SSD where you have space for the entire game, approximately 110GB (we do not recommend an HDD or NTFS)
+1. Set the default wine runner to GE-Proton in Lutris global preferences
+2. Launch the LUG Helper and select the installation method `Install Star Citizen with Lutris`
+3. Allow the Preflight Check to fix any issues it finds before proceeding!
 4. Run the RSI Launcher, log in, and click install to finish installing the game
 
 #### Bottles
@@ -119,4 +119,4 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 > [!warning]
 > We do not recommend installing Star Citizen within Steam. While it can be done, it creates several issues that we feel are not worth the effort to try to work around. For example, it limits configurability options and does not invoke needed protonfixes by default.
 > 
-> We believe you will have a much better experience following our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide). If you want to use Steam's proton backend without using Lutris, you may use umu-launcher by following the [Proton Installation](#proton-installation) instructions above.
+> We believe you will have a much better experience following our [Quick Start Guide](Quick-Start-Guide). If you want to use Steam's proton backend without using Lutris, you may use umu-launcher by following the [Proton Installation](#proton-installation) instructions above.
