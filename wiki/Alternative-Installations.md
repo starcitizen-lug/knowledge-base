@@ -72,7 +72,7 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 > [!caution]
 > We cannot guarantee that the alternative installation methods on this page will work or perform well.
 > 
-> The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
+> The recommended installation method is to follow our [Quick Start Guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide).
 >
 > If you proceed with an alternative installation method, please be aware that not many members of our community use these methods. We may not be able to provide support for these installations if something isn't working right.
 
