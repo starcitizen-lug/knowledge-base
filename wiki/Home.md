@@ -22,22 +22,17 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 ### Game Updates
 > [!note]
 > (March 1, 2025) **30K errors**
-> - 4.0.2 tends to give a 30K the first time you try to join a server. The solution is to return to the menu and try again
+> - 30K the first time you try to join a server. The solution is to return to the menu and try again
 
 > [!note]
 > (Oct 28, 2024) **You're trying to run the game on an unsupported Windows OS**
 > - Just click OK.
 
 > [!warning]
-> (Oct 25, 2024) **Vulkan crashes in 3.24 and 4.0**
+> (Oct 25, 2024) **Vulkan crashes**
 > - Black screen, crash
-> - Possible error similar to: `Fatal Error: Acquire Next Image Failed`
+> - Possible error similar to: `Fatal Error: Acquire Next Image Failed` or `Main thread considered to be deadlocked`
 > - If you experience this, [we recommend using DX11 for now](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#crash-or-black-screen-while-using-vulkan-beta-renderer)
-
-> [!warning]
-> (Oct 25, 2024) **Launcher installation hangs at Updating Game Content**
-> - The 2.0 Launcher seems to sometimes hang during this phase of the install process
-> - Completely quit the launcher, ensuring no lingering wine processes remain, then verify files
 
 > [!important]
 > (Oct 4, 2024) **Easy Anticheat Enforcement**
@@ -51,7 +46,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > [!warning]
 > (Feb 7, 2025) **Game fails to launch with Wine 10.1 and newer**
 > - Game [fails to launch](https://bugs.winehq.org/show_bug.cgi?id=57830) on Wine 10.1+ — Use the LUG Helper's "manage runners" options to pick a different runner
->   - 10.0 non-staging
+>   - Any Wine 10.0
 >   - RawFox 10.3-stg or Kron4ek 10.3 staging-tkg or newer
 
 > [!note]
