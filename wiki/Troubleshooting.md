@@ -53,6 +53,11 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - Be sure you haven't changed the default install path in the RSI Launcher settings. If you wish to install the game elsewhere, put the entire wine prefix there instead.
 
 
+#### Launcher installation hangs at Updating Game Content
+- The Launcher sometimes hangs during this phase of the install process
+- Completely quit the launcher, ensuring no lingering wine processes remain, then verify files
+
+
 #### Library version errors during installation
 - If using a rolling release or bleeding edge distro, try toggling `Prefer system libraries` in Lutris to `On`.
 
