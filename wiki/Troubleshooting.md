@@ -214,12 +214,13 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 ## 🤪 Unexpected Behavior (sometimes also crashes)
 
 #### Mouse/Cursor warp issues and view snapping in interaction mode
-- The simplest workaround is to choose Xorg at your login screen instead of Wayland session. Other potential mitigations are:
-  - Software cursor helps mitigate this for some. Create a user.cfg file in the LIVE, PTU, EPTU, TECH-PREVIEW directory
-    ```
-      #use software cursor
-      pl_pit.forceSoftwareCursor = 1
-    ```
+- Switch to the game's software cursor. Create a user.cfg file in the LIVE, PTU, EPTU, TECH-PREVIEW directory with the following contents:
+ ```
+   #use software cursor
+   pl_pit.forceSoftwareCursor = 1
+ ```
+- Alternatively, you may choose Xorg at your login screen instead of Wayland session. 
+- Other potential workarounds:
   - [Proton](https://github.com/starcitizen-lug/knowledge-base/wiki/Alternative-Installations#proton-installation) helps mitigate this for some
   - Gamescope helps mitigate this for some
     - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix below](#gamescope-not-working)
