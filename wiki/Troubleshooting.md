@@ -339,12 +339,14 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
   - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
 
 #### Severe frame drops
-- Some Penguins are seeing VRAM exhaustion problems on nvidia cards. It appears to be driver related and does not seem to affect AMD cards.
-- A workaround that some Penguins have had some success with:
-   - Create a new `dxvk.conf` file and add `d3d11.cachedDynamicResources = "a"` to it, then either export `DXVK_CONFIG_FILE=path/to/dxvk.conf` or, if using Lutris, add `DXVK_CONFIG_FILE` as a new environment variable in the game's settings and set it to the file path.
-   - If you still have issues or are running applications like OBS, you may also have to limit the vram the game sees to free up some vram for other applications. For example:
-      - Card with 8GB vram: `dxgi.maxDeviceMemory = 6144`
-      - Card with 6GB vram: `dxgi.maxDeviceMemory = 4096`
+- Some Penguins are seeing VRAM exhaustion problems on nvidia cards
+- Use an environment variable **OR** a config file to override the max device memory. Refer to [DXVK config](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf) for examples
+  - Add a new `DXVK_CONFIG` environment variable
+    - Card with 8GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 6144;cachedDynamicResources = a;"`
+    - Card with 6GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 4096;cachedDynamicResources = a;"`
+  - Create a new `dxvk.conf` file then either `export DXVK_CONFIG_FILE=path/to/dxvk.conf` or, if using Lutris, add `DXVK_CONFIG_FILE` as a new environment variable in the game's settings and set it to the file path.
+    - Card with 8GB vram: `dxgi.maxDeviceMemory = 6144` and `d3d11.cachedDynamicResources = "a"`
+    - Card with 6GB vram: `dxgi.maxDeviceMemory = 4096` and `d3d11.cachedDynamicResources = "a"`
 
 #### Vulkan Beta: Game fails to launch
 - There is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents vulkan and DLSS from working on linux.
