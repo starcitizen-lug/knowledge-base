@@ -2,7 +2,7 @@
 > [!tip]
 > New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 >
-> If using an immutable distro (Bazzite, Silverblue), we recommend a flatpak [game launcher](Alternative-Installations)
+> If using an immutable distro (Bazzite, Silverblue), we recommend a flatpak [game launcher](Alternative-Installations#alternate-launchers)
 
 1. Install Wine **v9.4** or newer from your distro's repos. If wine is not available from your distro's repos, you may follow the instructions on the [winehq website](https://gitlab.winehq.org/wine/wine/-/wikis/Download).
     - Fedora users, run `dnf install wine`. Do not install using the graphical installer or from winehq; they provide a wow64 build which will not work with Star Citizen
