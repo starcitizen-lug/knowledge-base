@@ -152,6 +152,24 @@ _sc-postexit.sh_
 ## End Mouse Acceleration
 ```
 
+## Add a Wine runner
+To add a custom wine runner
+  - Extract the archive to your runners folder. Restart your game launcher after adding a runner
+    - Heroic: `~/.config/heroic/tools/wine/`
+    - Heroic flatpak: `~/.var/app/com.heroicgameslauncher.hgl/config/heroic/tools/wine/`
+    - Lutris: `~/.local/share/lutris/runners/wine/`
+    - Lutris flatpak: `/.var/app/net.lutris.Lutris/data/lutris/runners/wine/`
+    - Wine: `~/Games/star-citizen/runners`
+  - Edit sc-launch.sh to use the runner or select the runner in your game launcher's configuration
+    ```
+     ################################################################
+     # Configure the wine binaries to be used
+     #
+     # To use a custom wine runner, set the path to its bin directory
+     # export wine_path="/path/to/custom/runner/bin"
+     ################################################################
+     export wine_path="/home/you-username-goes-here/Games/star-citizen/runners/wine-tkg-ntsync-git-10.3.r0.g3364df08cb6-327-x86_64/bin"
+    ```
 
 ## Updating DXVK within a wine prefix
 To re-install or update DXVK
