@@ -154,7 +154,7 @@ _sc-postexit.sh_
 
 ## Add a Wine runner
 To add a custom wine runner
-  - Extract the archive to your runners folder. Restart your game launcher after adding a runner
+  - Extract the archive to your runners folder. Restart your game launcher after adding a runner and toggle on [CLI mode](Troubleshooting#rsi-launcher-v162-javascript-error)
     - Heroic: `~/.config/heroic/tools/wine/`
     - Heroic flatpak: `~/.var/app/com.heroicgameslauncher.hgl/config/heroic/tools/wine/`
     - Lutris: `~/.local/share/lutris/runners/wine/`
