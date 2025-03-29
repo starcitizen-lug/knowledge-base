@@ -5,7 +5,7 @@
 > [!tip]
 > Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool can perform these steps for you automatically! See our [Quick Start Guide](Quick-Start-Guide) for instructions.
 
-1. Install Wine **v9.4** or newer following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. If your distro provides an up to date version of wine (ie. Arch), you may install from its repos instead. 
+1. Install Wine **v9.4** or newer following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. If your distro provides an up to date version of wine (ie. Arch), you may install from its repos instead.
 2. Install winetricks 20240105-next or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
 4. Set `vm.max_map_count` on your system to at least `16777216`
 5. Set the Hard open file descriptors limit on your system to at least `524288`
@@ -49,9 +49,9 @@ _Distributions that use /etc/security/limits.conf_
 > Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool now contains an option for a wine install and can perform these steps for you automatically! See our [Quick Start Guide](Quick-Start-Guide) for instructions.
 
 1. Install and configure the necessary prerequisites
-2. Create and configure your wine prefix:  
+2. Create and configure your wine prefix:
    `WINEPREFIX=$HOME/Games/star-citizen winetricks -q arial tahoma dxvk powershell win11`
-3. Download and run the RSI installer:  
+3. Download and run the RSI installer:
    `WINEPREFIX=$HOME/Games/star-citizen wine "~/Downloads/RSI Launcher-Setup-2.0.6.exe"`
 4. An example launch script is provided on our [LUG Helper's Repo](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/sc-launch.sh)
 
@@ -61,24 +61,24 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 ### Proton Installation
 
 1. Install Open Wine Components [umu-launcher](https://github.com/Open-Wine-Components/umu-launcher/releases/latest)
-2. Download and run the RSI Launcher installer:  
+2. Download and run the RSI Launcher installer:
    `GAMEID="umu-starcitizen" umu-run "~/Downloads/RSI Launcher-Setup-2.0.5.exe"`
-3. Run the RSI Launcher:  
+3. Run the RSI Launcher:
    ```
-   GAMEID="umu-starcitizen" PROTONPATH="GE-Proton" umu-run "~/Games/umu/umu-starcitizen/drive_c/Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe"
+   GAMEID="umu-starcitizen" PROTONPATH="GE-Latest" umu-run "~/Games/umu/umu-starcitizen/drive_c/Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe"
    ```
 ### Alternate Launchers
 
 > [!caution]
 > We cannot guarantee that the alternative installation methods on this page will work or perform well.
-> 
+>
 > The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
 >
 > If you proceed with an alternative installation method, please be aware that not many members of our community use these methods. We may not be able to provide support for these installations if something isn't working right.
 
 > [!important]
 > If using flatpak apps, ensure the install location is whitelisted using Flatseal or similar methods.
-> 
+>
 > The Star Citizen launcher does not support temp paths via xdg-portals.
 
 #### Heroic Games Launcher
