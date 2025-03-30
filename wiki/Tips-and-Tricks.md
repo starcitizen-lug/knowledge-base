@@ -65,7 +65,16 @@ Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sampl
   2. run the following in your terminal `./sc-launch.sh shell` then `winetricks powershell`
 - If using standard Wine, CLI mode must be enabled in Lutris
   - Right click the game -> Configure -> System options -> Toggle on advanced options -> CLI mode
-- The 2.0 Launcher may need to be installed manually. See [our wiki](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#rsi-launcher-doesnt-auto-update) for instructions
+- The 2.0 Launcher may need to be installed manually. See [below](#rsi-launcher-manual-update) for instructions
+
+
+## RSI Launcher Manual Update
+- Download the [latest](https://robertsspaceindustries.com/download) RSI Launcher installer
+- Wine:
+  - Open a terminal and run `~/Games/star-citizen/sc-launch.sh shell`
+  - Then run `wine ~/path/to/your/installer`. Complete the install and **EXIT**
+- Lutris: Use the "run EXE inside wine prefix" option and select the RSI Launcher installer. Complete the install and **EXIT**
+  ![Screenshot from 2023-05-11 10-33-19](https://github.com/starcitizen-lug/knowledge-base/assets/3657071/d146e9cc-e0a2-4327-acfb-ba5538ddefe4)
 
 
 ## Proton
