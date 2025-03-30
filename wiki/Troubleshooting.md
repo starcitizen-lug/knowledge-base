@@ -80,9 +80,12 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - If you've just installed Lutris, be sure to launch it once, separately from the Star Citizen install process, to fully populate its runtime and caches.
 
 
+#### RSI Launcher executable is missing
+- Automatic update sometimes fails or is interrupted
+- Follow manual update [instructions](Tips-and-Tricks#rsi-launcher-manual-update)
+
 #### RSI Launcher doesn't auto-update
-- [Download](https://robertsspaceindustries.com/download) the latest launcher and install it by selecting `Run EXE inside Wine prefix` in Lutris:  
-  ![Screenshot from 2023-05-11 10-33-19](https://github.com/starcitizen-lug/knowledge-base/assets/3657071/d146e9cc-e0a2-4327-acfb-ba5538ddefe4)
+- Follow manual update [instructions](Tips-and-Tricks#rsi-launcher-manual-update)
 
 #### RSI Launcher error: *Could not fix permissions on directory*
 - Please follow our [step-by-step guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#rsi-launcher-20) for the 2.0 RSI Launcher
