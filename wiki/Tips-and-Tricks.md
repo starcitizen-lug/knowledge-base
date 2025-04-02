@@ -121,7 +121,7 @@ A video of these steps can be found [here](https://www.youtube.com/watch?v=GqyXK
 
 
 ## Lutris Pre-launch and Post-exit Scripts
-Below are sample pre-launch and post-exit scripts that incorporate the mouse acceleration workarounds described above.
+Below are sample pre-launch and post-exit scripts that incorporate the mouse acceleration settings [described above](#automatically-disablere-enable-mouse-acceleration).
 To use them, create `sc-prelaunch.sh` and `sc-postexit.sh` in your wine prefix, uncomment the appropriate mouse acceleration lines based on your desktop environment, then configure Lutris to use the scripts:
 - `Right click the game->Configure->System options` and set `Pre-launch script` to `/path/to/wine/prefix/sc-pre-launch.sh`
 - `Right click the game->Configure->System options` and set `Post-exit script` to `/path/to/wine/prefix/sc-post-exit.sh`
