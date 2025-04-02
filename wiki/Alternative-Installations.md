@@ -94,7 +94,7 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 10. Run the RSI Launcher, log in, and click install to finish installing the game
 
 #### Lutris
-1. Set the default wine runner to GE-Proton in Lutris global preferences
+1. Set the default wine runner to GE-Proton in global preferences
 2. Launch the LUG Helper and select the installation method `Install Star Citizen with Lutris`
 3. Allow the Preflight Check to fix any issues it finds before proceeding!
 4. Run the RSI Launcher, log in, and click install to finish installing the game
@@ -119,4 +119,4 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 > [!warning]
 > We do not recommend installing Star Citizen within Steam. While it can be done, it creates several issues that we feel are not worth the effort to try to work around. For example, it limits configurability options and does not invoke needed protonfixes by default.
 > 
-> We believe you will have a much better experience following our [Quick Start Guide](Quick-Start-Guide). If you want to use Steam's proton backend without using Lutris, you may use umu-launcher by following the [Proton Installation](#proton-installation) instructions above.
+> We believe you will have a much better experience following our [Quick Start Guide](Quick-Start-Guide). If you want to use Steam's proton, you may use umu-launcher by following the [Proton Installation](#proton-installation) instructions above.

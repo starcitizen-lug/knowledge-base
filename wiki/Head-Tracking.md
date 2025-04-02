@@ -30,19 +30,23 @@ After installing Opentrack according to the above note, use the following config
 1. Select `Wine` in the Output dropdown
 2. Click the `Configure` button next to it
 3. Under `Wine variant`, select one of the following:
-    1. `Wine` if using a Wine Runner as mentioned in the note above. Then, choose the Wine version or Lutris Wine Runner you're using with Star Citizen.
-    2. `Proton` and then `UMU enabled Launchers` if using a Proton Runner with our custom opentrack-StarCitizen. Then, choose the Proton version you have selected in Lutris.
-4. Click `Browse Prefix` and select your Star Citizen prefix (Lutris Default: `~/Games/star-citizen`)
-5. Confirm that the `ESYNC` and `FSYNC` settings match your settings in Lutris.
+    - Wine `Custom path to Wine executable`
+      - Click `Browse Wine path` and select the `wine` executable inside the `bin` folder of your runner
+      - Click `Browse Prefix` and select your Star Citizen prefix (e.g. `~/Games/star-citizen`)
+    - Proton
+      - Match your game's proton version
+      - Pick `Steam Play` select number 1 (any number other than zero)
+      - Pick `UMU enabled Launchers` and select your prefix
+5. Confirm that the `ESYNC` and `FSYNC` settings match your settings
 6. Next to `Protocol`, make sure `Both` is selected
 
-Launch Star Citizen before clicking start in Opentrack.  
+Launch Star Citizen before clicking start in Opentrack.
 Configure Star Citizen's head tracking options under `Comms, FOIP & Head Tracking`:
 1. Set `Head Tracking - General - Source` to `TrackIR`
-2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`  
+2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`
 
 > [!note]
-> - May not work with Flatpak Lutris
+> - May not work with Game Launchers in Flatpak
 > - If compiling from source, make sure `SDK_WINE` is set
 > - If compiling our custom Opentrack from source, make sure you are on the `wine-extended-proton` branch before building
 
@@ -79,7 +83,7 @@ You will need a VM that supports passing through USB devices from the host. An e
 Using Tiny11/Tiny10 for the Windows installation is reccomended as it has less CPU usage and lower disk space requirements.
 
 #### How to set up a new Windows VM:
-You can follow the same instructions provided by Winapps here - [Creating a Windows VM in Docker](https://github.com/winapps-org/winapps/blob/main/docs/docker.md#docker) 
+You can follow the same instructions provided by Winapps here - [Creating a Windows VM in Docker](https://github.com/winapps-org/winapps/blob/main/docs/docker.md#docker)
 
 #### Add USB device passthrough for Tobii:
 After your Windows is installed in your VM edit your docker compose.yml file to pass through the Tobii usb device by adding the following to the relevent sections:
