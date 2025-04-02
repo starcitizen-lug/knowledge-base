@@ -88,7 +88,7 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - Follow manual update [instructions](Tips-and-Tricks#rsi-launcher-manual-update)
 
 #### RSI Launcher error: *Could not fix permissions on directory*
-- Please follow our [step-by-step guide](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#rsi-launcher-20) for the 2.0 RSI Launcher
+- Please follow our [step-by-step guide](Tips-and-Tricks#rsi-launcher-20) for the 2.0 RSI Launcher
 
 #### Installing Star Citizen on an NTFS-formatted drive
 - Don't; it probably won't work and will likely only corrupt your game files.
@@ -101,9 +101,9 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 ## 💥 Crashes
 
 #### RSI Launcher v1.6.2+ JavaScript error
-- The LUG Helper's [wine installation](https://github.com/starcitizen-lug/knowledge-base/wiki/Quick-Start-Guide#installation-steps) method is recommended and avoids this error
+- The LUG Helper's [wine installation](Quick-Start-Guide#installation-steps) method is recommended and avoids this error
 - In the game's Lutris `System options`, make sure Advanced options is toggled on then in the `text-based games` section enable `CLI mode`
-- Alternatively, select a Proton runner in Lutris' runner options tab, i.e. `ge-proton` and follow our [proton setup instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#proton)
+- Alternatively, select a Proton runner in Lutris' runner options tab, i.e. `ge-proton` and follow our [proton setup instructions](Tips-and-Tricks#proton)
 
 
 #### Code 3 crash with error: *Star Citizen process exited abnormally (code: 3) : Command failed*
@@ -116,7 +116,7 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 #### Game immediately crashes after clicking 'Launch'
 - Start by checking the Wine output and/or "game.log" file
-  
+
 - See [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for information on recent stability issues
 
 - Possible cause: DXVK
@@ -127,11 +127,11 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - Possible cause: Incorrect Vulkan device
   - If you have Intel integrated graphics and see `VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json` in your log, then change the Vulkan device in Lutris to use your discrete GPU:
     - identify device name using command `vulkaninfo --summary | grep deviceName`
-    - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere` 
+    - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
 
 - Possible cause: GPU drivers not working properly
   - If, in your "game.log", you see only `llvmpipe` listed as the working video adapter, your gpu drivers may not be functioning properly.
- 
+
 - Possible cause: Out of date flatpak libraries/packages
   - If you are using flatpak and have not run `flatpak update` recently, this should be done regularly to keep everything up to date.
 
@@ -145,14 +145,14 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 
 #### Game crashes after clicking 'Verify'
-- Make sure Star Citizen is installed on drive "C:\" Check the "Library Folder" option in the launcher settings:  
+- Make sure Star Citizen is installed on drive "C:\" Check the "Library Folder" option in the launcher settings:
 ![Star Citizen launcher](https://media.discordapp.net/attachments/608349808956276737/927652866389340310/Screenshot_from_2022-01-03_14-56-37.png)
 - Additionally, make sure the wine prefix is not installed on an NTFS formatted partition.
 
 
 #### Game crashes with "STATUS_CRYENGINE_FATAL_ERROR" in game.log
 - Some penguins have had success changing the Windows compatibility from Win10 to Win8.1 in the Wine configuration. Select Star Citizen in Lutris, then click the Wine button at the bottom and select `Wine configuration`:  
-![](https://matrix-client.matrix.org/_matrix/media/r0/download/matrix.org/zKGOXxMOsktqYKqevqeSvYSw)  
+![](https://matrix-client.matrix.org/_matrix/media/r0/download/matrix.org/zKGOXxMOsktqYKqevqeSvYSw)
 - In the Wine configuration, under the `Applications` tab, change `Windows version` to `Windows 8.1`
 
 
@@ -262,7 +262,7 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 
 #### Anticheat encountered an error (possible code 30033, 30034)
-- Please follow [our EAC migration instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#easy-anti-cheat)
+- Please follow [our EAC migration instructions](Tips-and-Tricks#easy-anti-cheat)
 - Check your process list for any lingering wine processes. Reboot if necessary.
 - You may have to delete the EAC directory in youre prefix's `AppData/Roaming` directory.
 - You may also have to delete the EAC directory in the Star Citizen `LIVE` directory, followed by verifying files in the launcher.
@@ -354,18 +354,19 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 #### Vulkan Beta: Game fails to launch
 - There is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents vulkan and DLSS from working on linux.
 - If using Wine-GE, add the environment variable `WINE_HIDE_NVIDIA_GPU=1` to enable vulkan
-- If using Wine or Wine-GE, see [instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#dlssdeep-learning-super-sampling--vulkan) to patch libcuda to enable both vulkan and DLSS 
+- If using Wine or Wine-GE, see [instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#dlssdeep-learning-super-sampling--vulkan) to patch libcuda to enable both vulkan and DLSS
  
 #### DLSS(Deep Learning Super Sampling) / Vulkan
 - There is a [memory allocation issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795), where it attempts to allocate in a specific area already occupied by the game.
    - A possible solution would be patching LibCUDA file increasing this area.
       - Locate your 64-bit `libcuda.so` (usually `/usr/lib` or run `whereis libcuda.so`).
-      - To generate `libcuda.patched.so`, replace both placeholder `/path/to/` lines below then run:  
+      - To generate `libcuda.patched.so`, replace both placeholder `/path/to/` lines below then run:
         ```
         echo -ne $(od -An -tx1 -v /path/to/libcuda.so | tr -d '\n' | sed -e 's/00 00 00 f8 ff 00 00 00/00 00 00 f8 ff ff 00 00/g' -e 's/ /\\x/g') > /desired/path/to/libcuda.patched.so
         ```
-      - Use the environment variable `LD_PRELOAD` to load the patched version:  
+      - Use the environment variable `LD_PRELOAD` to load the patched version:
        `LD_PRELOAD=/path/to/the/libcuda.patched.so:$LD_PRELOAD`
+      - navigate inside your wine prefix to `drive_c/windows/system32` then copy any dll to `cryptbase.dll`, `devobj.dll`, and `drvstore.dll`
       - Remove the `WINE_HIDE_NVIDIA_GPU` env variable if it is set in Lutris or your launch script.
       - Don't forget to enable DXVK-NVAPI.
 
