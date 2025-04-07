@@ -80,6 +80,21 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - If you've just installed Lutris, be sure to launch it once, separately from the Star Citizen install process, to fully populate its runtime and caches.
 
 
+#### Wine install fails to create .desktop files
+- Manually create a file `~/.local/share/applications/RSI Launcher.desktop` with the following contents. Edit paths based on your install:
+  ```
+  [Desktop Entry]
+  Name=RSI Launcher
+  Exec="/home/{user}/Games/StarCitizen/sc-launch.sh"
+  Type=Application
+  StartupNotify=true
+  Comment=RSI Launcher
+  Path=/home/{user}/Games/StarCitizen/dosdevices/c:/Program\sFiles/Roberts\sSpace\sIndustries/RSI\sLauncher
+  Icon=rsi-launcher.png
+  StartupWMClass=rsi launcher.exe
+  ```
+
+
 #### RSI Launcher executable is missing
 - Automatic update sometimes fails or is interrupted
 - Follow manual update [instructions](Tips-and-Tricks#rsi-launcher-manual-update)
