@@ -81,7 +81,8 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 
 #### Wine install fails to create .desktop files
-- Manually create a file `~/.local/share/applications/RSI Launcher.desktop` with the following contents. Edit paths based on your install:
+- Manually create a file `~/.local/share/applications/RSI Launcher.desktop` based on the following template.
+- Edit paths based on your install, then update the cache by running `update-desktop-database ~/.local/share/applications`
   ```
   [Desktop Entry]
   Name=RSI Launcher
