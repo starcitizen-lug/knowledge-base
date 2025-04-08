@@ -81,6 +81,29 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 >
 > The Star Citizen launcher does not support temp paths via xdg-portals.
 
+#### Bottles
+1. Create a new gaming bottle
+2. Use the "Install Programs..." Star Citizen option
+3. Run Star citizen, log in, and click install to finish installing the game
+
+#### Faugus Launcher
+1. Download latest [Star Citizen installer](https://robertsspaceindustries.com/download)
+2. Press the "New" button
+3. Set title to "Star Citizen"
+4. Set the Path value to the RSI Installer file you downloaded
+5. Set the prefix to your preferred location e.g. `~/Games/star-citizen`
+6. Set the Protonfix value to `umu-starcitizen` on the Tools tab
+7. Press the "Play" button to run the installer, then exit
+8. Right click the game and set the "path" value to the RSI Launcher executable in the wine prefix
+9. Press the "Play" button to run the RSI Launcher, log in, and click install tto finish installing the game
+
+#### Flatpak
+Flatpak repository or [latest release](https://github.com/mactan-sc/rsilauncher/releases/latest)  
+For documentation and issues refer to https://github.com/mactan-sc/rsilauncher
+1. `flatpak remote-add --user --if-not-exists RSILauncher https://mactan-sc.github.io/rsilauncher/RSILauncher.flatpakrepo`
+2. `flatpak install -y --user --noninteractive RSILauncher io.github.mactan_sc.RSILauncher`
+3. `flatpak run io.github.mactan_sc.RSILauncher`
+
 #### Heroic Games Launcher
 1. Download latest [Star Citizen installer](https://robertsspaceindustries.com/download).
 2. Install [Heroic Games Launcher](https://heroicgameslauncher.com/downloads).
@@ -98,22 +121,6 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 2. Launch the LUG Helper and select the installation method `Install Star Citizen with Lutris`
 3. Allow the Preflight Check to fix any issues it finds before proceeding!
 4. Run the RSI Launcher, log in, and click install to finish installing the game
-
-#### Bottles
-1. Create a new gaming bottle
-2. Use the "Install Programs..." Star Citizen option
-3. Run Star citizen, log in, and click install to finish installing the game
-
-#### Faugus Launcher
-1. Download latest [Star Citizen installer](https://robertsspaceindustries.com/download)
-2. Press the "New" button
-3. Set title to "Star Citizen"
-4. Set the Path value to the RSI Installer file you downloaded
-5. Set the prefix to your preferred location e.g. `~/Games/star-citizen`
-6. Set the Protonfix value to `umu-starcitizen` on the Tools tab
-7. Press the "Play" button to run the installer, then exit
-8. Right click the game and set the "path" value to the RSI Launcher executable in the wine prefix
-9. Press the "Play" button to run the RSI Launcher, log in, and click install tto finish installing the game
 
 #### Steam
 > [!warning]
