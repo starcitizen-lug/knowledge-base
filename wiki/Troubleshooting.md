@@ -187,7 +187,9 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 #### Failed to decompress file/corrupted block detected error
 - Some Penguins have had this error when using BTRFS. We suspect a regression of some kind.
 - Easiest: Just ignore the error and continue playing. It doesn't crash until you click the button.
-- Or fix it: Disable CoW on the game's LIVE dir with `chattr +C ./LIVE`, then redownload or copy in a fresh data.p4k.
+- Or fix it: Disable CoW on the game's StarCitizen dir
+  1. Navigate to the Game folder `star-citizen/drive_c/Program Files/Roberts Space Industries`
+  2. Use a terminal to run the command ```chattr +C ./StarCitizen```, then redownload or copy in a fresh data.p4k.
 - Less easy Fix: Disable CoW only on the data.p4k file. This can only be done on an empty file.
 - Alternatively, try mounting with the `compress` option instead of `compress-force`.
 - If that doesn't work, switching to ext4 is an option.
