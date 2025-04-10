@@ -99,10 +99,19 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 
 #### Flatpak
 Flatpak repository or [latest release](https://github.com/mactan-sc/rsilauncher/releases/latest)  
-For documentation and issues refer to https://github.com/mactan-sc/rsilauncher
-1. `flatpak remote-add --user --if-not-exists RSILauncher https://mactan-sc.github.io/rsilauncher/RSILauncher.flatpakrepo`
-2. `flatpak install -y --user --noninteractive RSILauncher io.github.mactan_sc.RSILauncher`
-3. `flatpak run io.github.mactan_sc.RSILauncher`
+For documentation and issues refer to https://github.com/mactan-sc/rsilauncher  
+1.  Add the repo
+```
+flatpak remote-add --user --if-not-exists RSILauncher https://mactan-sc.github.io/rsilauncher/RSILauncher.flatpakrepo
+```
+2.  install the rsi launcher flatpak
+```  
+flatpak install -y --user --noninteractive RSILauncher io.github.mactan_sc.RSILauncher
+```
+3.  run the rsi launcher flatpak
+```
+flatpak run io.github.mactan_sc.RSILauncher
+```
 
 #### Heroic Games Launcher
 1. Download latest [Star Citizen installer](https://robertsspaceindustries.com/download).
