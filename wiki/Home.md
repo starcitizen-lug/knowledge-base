@@ -44,10 +44,9 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 ### General News
 
 > [!warning]
-> (Feb 7, 2025) **Game fails to launch with Wine 10.1 and newer**
-> - Game [fails to launch](https://bugs.winehq.org/show_bug.cgi?id=57830) on Wine 10.1+ — Use the LUG Helper's "manage runners" options to pick a different runner
->   - Any Wine 10.0
->   - RawFox 10.3-stg or Kron4ek 10.3 staging-tkg or newer
+> (April 17, 2025) **Game fails to launch with Wine 10.1 and newer**
+> - Wine 10.x made changes that break Easy Anti-Cheat when the [Z: path workaround](Tips-and-Tricks#easy-anti-cheat) is applied.
+> - Until EAC updates itself, either re-add the `EOS_USE_ANTICHEATCLIENTNULL=1` environment variable or switch to a Wine 9.22 runner using the Helper.
 
 > [!note]
 > (Nov 30, 2024) **Joysticks not detected on Wine 9.22 and newer**
