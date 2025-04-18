@@ -328,11 +328,11 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 
 #### Non-US keyboard keys not working
-- Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) and use the LUG Helper "manage runners" options to select a recent staging wine
+- Set the `LANG=` environment variable. For example, `LANG=de_DE`
+- Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) and use the LUG Helper "manage runners" options to select a recent **staging** wine
 - In a terminal run `./sc-launch.sh shell` then `winecfg`
 - Select your language from the list and enable scancode auto-detection
     ![staging_input_menu](https://github.com/user-attachments/assets/a525f310-3a2a-49b1-bb6e-c07875e15608)
-- If the above doesn't fix it, you can try setting the `LANG=` environment variable. For example, `LANG=de_DE`
 
 
 ***
