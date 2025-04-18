@@ -16,7 +16,9 @@
 7. Look for your issue/error in the categories on this page. Refer to the steps directly below to gather logs.
 
 #### Gathering logs
-- If not using Lutris, inspect wine's output in `sc-launch.log` in your `~Games/star-citizen` directory
+- Wine log: `~/Games/star-citizen/sc-launch.log`
+- Launcher log: `~/Games/star-citizen/drive_c/users/$USER/AppData/Roaming/rsilauncher/logs/log.log`
+- Game log: `~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/Game.log`
 - If using Lutris, check logs by clicking the arrow beside the play button:  
   ![Screenshot from 2023-04-15 14-09-40](https://user-images.githubusercontent.com/3657071/232246219-8d713782-2d22-474c-a350-921e4af430af.png)
   - Run Lutris in debug mode to see more verbose logging  :
@@ -56,28 +58,6 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 #### Launcher installation hangs at Updating Game Content
 - The Launcher sometimes hangs during this phase of the install process
 - Completely quit the launcher, ensuring no lingering wine processes remain, then verify files
-
-
-#### Library version errors during installation
-- If using a rolling release or bleeding edge distro, try toggling `Prefer system libraries` in Lutris to `On`.
-
-
-#### Installer Error Code 256 / Downloading [exe file] failed (ie arial32.exe)
-- Try setting `Prefer system libraries` to `On` in global lutris options.
-- Inspect install log for failed winetricks downloads or sha256 mismatch, note the URL of the files being downloaded and its destination in winetricks' cache.
-- Download each file manually to its destination in winetricks' cache.
-- Use winetricks to ensure that the prefix is set to Win10 mode.
-- Proceed with lug-helper installer.
-
-
-#### Lutris error: *Command exited with code 512*
-- We suspect this is a Lutris bug and fixes seem inconsistent.
-- Try going to Lutris Preferences -> Sources, and toggle either `Lutris` or `Local` and then toggle it back again.
-- If you have an old install, try importing that into Lutris.
-
-
-#### Lutris error: *"Runtime Error('No path can be generated for DXVK because no version information is available.')"*
-- If you've just installed Lutris, be sure to launch it once, separately from the Star Citizen install process, to fully populate its runtime and caches.
 
 
 #### Wine install fails to create .desktop files
@@ -166,12 +146,6 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - Additionally, make sure the wine prefix is not installed on an NTFS formatted partition.
 
 
-#### Game crashes with "STATUS_CRYENGINE_FATAL_ERROR" in game.log
-- Some penguins have had success changing the Windows compatibility from Win10 to Win8.1 in the Wine configuration. Select Star Citizen in Lutris, then click the Wine button at the bottom and select `Wine configuration`:  
-![](https://matrix-client.matrix.org/_matrix/media/r0/download/matrix.org/zKGOXxMOsktqYKqevqeSvYSw)
-- In the Wine configuration, under the `Applications` tab, change `Windows version` to `Windows 8.1`
-
-
 #### Game crashes with "create_view: Assertion `!((UINT_PTR)base & page_mask)' failed" / "00adntdll:FILE_GetNtStatus Converting errno 12 to STATUS_UNSUCCESSFUL"
 - Make sure you have set your vm.max_map_count as described in the installation section.
 
@@ -196,7 +170,7 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 
 #### After playing for a while, game/lutris/wine crash, no errors
-  - If there are no errors in your game logs, check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](Performance-Tuning#swap).
+  - If there are no errors in your game logs, check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](Performance-Tuning#zram--swap).
 
 
 ***
@@ -216,11 +190,6 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - Try using a different wine runner.
 - Alternatively, you can try changing "Prefer system libraries" to ON:
   - Right click the game -> Configure -> System options -> Prefer system libraries
-
-
-#### Launch Game stuck at "launching..."
-- ⚠️ Launch Lutris in debug mode (`lutris -d`) and look for a `KeyError: 'contentstatsid'` error.
-- If the error is present, check your Lutris version. This is fixed in v0.5.11. https://lutris.net/downloads
 
 
 #### Launcher hangs / stops responding / crashes with an "ASAR" error
@@ -424,6 +393,29 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 #### In Lutris, right clicking on Star Citizen and selecting "Configure" does not bring up the configuration
 - Completely close Lutris with `kill lutris`, delete everything inside the Lutris cache directory `~/.cache/lutris`, and relaunch Lutris.
+
+
+#### Library version errors during installation
+- If using a rolling release or bleeding edge distro, try toggling `Prefer system libraries` in Lutris to `On`.
+
+
+#### Installer Error Code 256 / Downloading [exe file] failed (ie arial32.exe)
+- Try setting `Prefer system libraries` to `On` in global lutris options.
+- Inspect install log for failed winetricks downloads or sha256 mismatch, note the URL of the files being downloaded and its destination in winetricks' cache.
+- Download each file manually to its destination in winetricks' cache.
+- Use winetricks to ensure that the prefix is set to Win10 mode.
+- Proceed with lug-helper installer.
+
+
+#### Lutris error: *Command exited with code 512*
+- We suspect this is a Lutris bug and fixes seem inconsistent.
+- Try going to Lutris Preferences -> Sources, and toggle either `Lutris` or `Local` and then toggle it back again.
+- If you have an old install, try importing that into Lutris.
+
+
+#### Lutris error: *"Runtime Error('No path can be generated for DXVK because no version information is available.')"*
+- If you've just installed Lutris, be sure to launch it once, separately from the Star Citizen install process, to fully populate its runtime and caches.
+
 
 ***
 
