@@ -46,7 +46,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > [!warning]
 > (April 17, 2025) **Game fails to launch with Wine 10.1 and newer**
 > - Wine 10.x made changes that break Easy Anti-Cheat when the [Z: path workaround](Tips-and-Tricks#easy-anti-cheat) is applied.
-> - Until EAC updates itself, either re-add the `EOS_USE_ANTICHEATCLIENTNULL=1` environment variable or switch to a Wine 9.22 runner using the Helper.
+> - Using the Helper switch to any 9.22 runner or Raw wine 10.3 or newer
 
 > [!note]
 > (Nov 30, 2024) **Joysticks not detected on Wine 9.22 and newer**
