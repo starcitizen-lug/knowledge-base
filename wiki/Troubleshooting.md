@@ -351,9 +351,13 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
         ```
         echo -ne $(od -An -tx1 -v /path/to/libcuda.so | tr -d '\n' | sed -e 's/00 00 00 f8 ff 00 00 00/00 00 00 f8 ff ff 00 00/g' -e 's/ /\\x/g') > /desired/path/to/libcuda.patched.so
         ```
-      - Use the environment variable `LD_PRELOAD` to load the patched version:
-       `LD_PRELOAD=/path/to/the/libcuda.patched.so:$LD_PRELOAD`
-      - navigate inside your wine prefix to `drive_c/windows/system32` then copy any dll to `cryptbase.dll`, `devobj.dll`, and `drvstore.dll`
+      - Use the environment variable `LD_LIBRARY_PATH` to load the patched version:
+        ```
+        LD_LIBRARY_PATH=/path/to/the/libcuda.patched.so
+        ```
+      - Satisfy game check for the existence of these dlls when trying to initialize
+        - navigate inside your wine prefix to `drive_c/windows/system32`
+        - Copy any existing dll to these three names: `cryptbase.dll`, `devobj.dll`, and `drvstore.dll`
       - Remove the `WINE_HIDE_NVIDIA_GPU` env variable if it is set in Lutris or your launch script.
       - Don't forget to enable DXVK-NVAPI.
 
