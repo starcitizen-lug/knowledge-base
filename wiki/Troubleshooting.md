@@ -353,7 +353,7 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
         ```
       - Use the environment variable `LD_LIBRARY_PATH` to load the patched version:
         ```
-        LD_LIBRARY_PATH=/path/to/the/libcuda.patched.so
+        LD_LIBRARY_PATH=/path/to/the/libcuda.patched.so:$LD_LIBRARY_PATH
         ```
       - Satisfy game check for the existence of these dlls when trying to initialize
         - navigate inside your wine prefix to `drive_c/windows/system32`
