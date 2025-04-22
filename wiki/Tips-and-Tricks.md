@@ -90,6 +90,18 @@ boot.kernel.sysctl = {
   ![Screenshot from 2023-05-11 10-33-19](https://github.com/starcitizen-lug/knowledge-base/assets/3657071/d146e9cc-e0a2-4327-acfb-ba5538ddefe4)
 
 
+## Console Variables
+- r_displayinfo [ 1, 2, 3, 0 ]
+  - show fps and other details
+- r_displaysessioninfo [ 1, 0 ] 
+  - show session info QR code for reporting
+- r_displayframegraph [ 1, 0 ]
+  - show chart of frame time
+  - MT (main thread)
+  - RT (render thread)
+- pl_pit.forceSoftwareCursor [ 1, 0 ]
+  - force software cursor 
+
 ## Proton
 - Install Lutris v0.5.18 or later
 - Right click the game, select Configure, and then adjust settings as follows:
