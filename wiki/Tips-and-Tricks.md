@@ -19,6 +19,43 @@ Other distributions we suggest avoiding 👎 due to frequent package incompatibi
 
 If you're new to Linux, we recommend avoiding immutable distros such as Bazzite, Nix, Silverblue, Universal Blue, etc for now; they come with a steeper learning curve and are better suited to those with more experience.
 
+
+## Recommended Runners
+- Wine 9.4 or newer from your package manager
+- [RawFox](https://github.com/starcitizen-lug/raw-wine/releases)
+  - Managed by the LUG Helper
+  - 10.3+ patched to accomodate PTU's easy anti-cheat enforcement
+- [Kron4ek](https://github.com/Kron4ek/Wine-Builds/releases)
+  - Managed by the LUG Helper
+  - Prebuilt releases from the [TKG](https://github.com/Frogging-Family/wine-tkg-git) build system
+  - TKG runners 10.3+ patched to accomodate PTU's easy anti-cheat enforcement
+
+
+## Add a Wine runner
+To add a custom wine runner
+  - Extract the archive to your runners folder. Restart your game launcher after adding a runner and toggle on [CLI mode](Troubleshooting#rsi-launcher-v162-javascript-error)
+    - Heroic: `~/.config/heroic/tools/wine/`
+    - Heroic flatpak: `~/.var/app/com.heroicgameslauncher.hgl/config/heroic/tools/wine/`
+    - Lutris: `~/.local/share/lutris/runners/wine/`
+    - Lutris flatpak: `/.var/app/net.lutris.Lutris/data/lutris/runners/wine/`
+    - Wine: `~/Games/star-citizen/runners`
+  - Edit sc-launch.sh to use the runner or select the runner in your game launcher's configuration
+    ```
+     ################################################################
+     # Configure the wine binaries to be used
+     #
+     # To use a custom wine runner, set the path to its bin directory
+     # export wine_path="/path/to/custom/runner/bin"
+     ################################################################
+     export wine_path="/home/you-username-goes-here/Games/star-citizen/runners/wine-tkg-ntsync-git-10.3.r0.g3364df08cb6-327-x86_64/bin"
+    ```
+
+
+## Updating DXVK within a wine prefix
+To re-install or update DXVK
+  - Navigate to your game prefix directory `~/Games/star-citizen`
+  - Run the following in your terminal `./sc-launch.sh shell` then `winetricks --force dxvk`
+
 ## NixOS
 On NixOS, to set `vm.max_map_count` and `fs.file-max`, add the following to your NixOS config:
 
@@ -29,30 +66,6 @@ boot.kernel.sysctl = {
   "fs.file-max" = 524288;
 };
 ```
-
-
-## AMD FidelityFX Super Resolution (FSR) upscaling
-In the Lutris `Runner options` tab, enable `AMD FidelityFX Super Resolution` or set the environment variable `WINE_FULLSCREEN_FSR=1`. Then, in the Star Citizen graphics settings, set the game to fullscreen and your desired resolution and it will be FSR scaled up. We recommend restarting the game after changing its resolution for better performance.
-
-
-## Automatically Disable/Re-Enable Mouse Acceleration
-Lutris can automatically toggle on/off a flat mouse acceleration profile with the following configuration.
-
-Configure the game within Lutris and go to `System options`. Make sure `Show advanced options` is checked.  
-Add the following to the `Pre-launch script` and `Post-exit script` fields.  
-Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sample script file that incorporates this and other pre-launch tweaks.
-
-**Gnome**
-
-`/usr/bin/sh -c "gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat"`
-
-`/usr/bin/sh -c "gsettings set org.gnome.desktop.peripherals.mouse accel-profile default"`
-
-**KDE**
-
-`/usr/bin/sh -c 'kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" true'`
-
-`/usr/bin/sh -c 'kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" false'`
 
 
 ## RSI Launcher 2.0
@@ -120,6 +133,32 @@ A video of these steps can be found [here](https://www.youtube.com/watch?v=GqyXK
     4. If you have any other EAC workarounds in place, remove them as well.
 
 
+## AMD FidelityFX Super Resolution (FSR) upscaling
+Use the in-game CIG TSR, AMD FSR, or NVIDIA DLSS options, external tools are not recommended
+
+In the Lutris `Runner options` tab, enable `AMD FidelityFX Super Resolution` or set the environment variable `WINE_FULLSCREEN_FSR=1`. Then, in the Star Citizen graphics settings, set the game to fullscreen and your desired resolution and it will be FSR scaled up. We recommend restarting the game after changing its resolution for better performance.
+
+
+## Automatically Disable/Re-Enable Mouse Acceleration
+Lutris can automatically toggle on/off a flat mouse acceleration profile with the following configuration.
+
+Configure the game within Lutris and go to `System options`. Make sure `Show advanced options` is checked.  
+Add the following to the `Pre-launch script` and `Post-exit script` fields.  
+Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sample script file that incorporates this and other pre-launch tweaks.
+
+**Gnome**
+
+`/usr/bin/sh -c "gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat"`
+
+`/usr/bin/sh -c "gsettings set org.gnome.desktop.peripherals.mouse accel-profile default"`
+
+**KDE**
+
+`/usr/bin/sh -c 'kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" true'`
+
+`/usr/bin/sh -c 'kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" false'`
+
+
 ## Lutris Pre-launch and Post-exit Scripts
 Below are sample pre-launch and post-exit scripts that incorporate the mouse acceleration settings [described above](#automatically-disablere-enable-mouse-acceleration).
 To use them, create `sc-prelaunch.sh` and `sc-postexit.sh` in your wine prefix, uncomment the appropriate mouse acceleration lines based on your desktop environment, then configure Lutris to use the scripts:
@@ -160,27 +199,3 @@ _sc-postexit.sh_
 
 ## End Mouse Acceleration
 ```
-
-## Add a Wine runner
-To add a custom wine runner
-  - Extract the archive to your runners folder. Restart your game launcher after adding a runner and toggle on [CLI mode](Troubleshooting#rsi-launcher-v162-javascript-error)
-    - Heroic: `~/.config/heroic/tools/wine/`
-    - Heroic flatpak: `~/.var/app/com.heroicgameslauncher.hgl/config/heroic/tools/wine/`
-    - Lutris: `~/.local/share/lutris/runners/wine/`
-    - Lutris flatpak: `/.var/app/net.lutris.Lutris/data/lutris/runners/wine/`
-    - Wine: `~/Games/star-citizen/runners`
-  - Edit sc-launch.sh to use the runner or select the runner in your game launcher's configuration
-    ```
-     ################################################################
-     # Configure the wine binaries to be used
-     #
-     # To use a custom wine runner, set the path to its bin directory
-     # export wine_path="/path/to/custom/runner/bin"
-     ################################################################
-     export wine_path="/home/you-username-goes-here/Games/star-citizen/runners/wine-tkg-ntsync-git-10.3.r0.g3364df08cb6-327-x86_64/bin"
-    ```
-
-## Updating DXVK within a wine prefix
-To re-install or update DXVK
-  - Navigate to your game prefix directory `~/Games/star-citizen`
-  - Run the following in your terminal `./sc-launch.sh shell` then `winetricks --force dxvk`
