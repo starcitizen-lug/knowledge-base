@@ -52,9 +52,7 @@ To add a custom wine runner
 
 
 ## Updating DXVK within a wine prefix
-To re-install or update DXVK
-  - Navigate to your game prefix directory `~/Games/star-citizen`
-  - Run the following in your terminal `./sc-launch.sh shell` then `winetricks --force dxvk`
+Use the LUG Helper tool's `Update DXVK` button
 
 ## NixOS
 On NixOS, to set `vm.max_map_count` and `fs.file-max`, add the following to your NixOS config:
@@ -75,7 +73,7 @@ boot.kernel.sysctl = {
   - `powershell.exe: disabled`
 - If using standard Wine, winetricks **20250102** or newer is required to install powershell
   1. navigate to your game prefix directory `~/Games/star-citizen`
-  2. run the following in your terminal `./sc-launch.sh shell` then `winetricks powershell`
+  2. Use the LUG Helper's Maintence menu `Install Powershell` button
 - If using standard Wine, CLI mode must be enabled in Lutris
   - Right click the game -> Configure -> System options -> Toggle on advanced options -> CLI mode
 - The 2.0 Launcher may need to be installed manually. See [below](#rsi-launcher-manual-update) for instructions
