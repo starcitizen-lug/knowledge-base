@@ -166,7 +166,7 @@ ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
 ### Accessing Wine Game Controllers Settings
 - If using Lutris, Select the game then click the arrow next to the wine glass button -> Wine Control Panel -> Game Controllers  
   ![Screenshot from 2024-09-13 19-45-26](https://github.com/user-attachments/assets/dc2fd609-4c12-49a1-8ce6-e2825dc61a72)
-- If using our Helper's non-Lutris install, get a wine shell by running the launch script with `./sc-launch.sh shell`, then run `wine control joy.cpl`
+- Use the LUG Helper's Maintenance menu `Open Wine controller configuration` button
 - For other install methods, run `WINEPREFIX=/path/to/your/prefix wine control joy.cpl`
 
 ### Some of your joysticks disappear / aren't recognized in the game
