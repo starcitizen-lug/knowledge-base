@@ -29,7 +29,13 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
   - Managed by the LUG Helper
   - Prebuilt releases from the [TKG](https://github.com/Frogging-Family/wine-tkg-git) build system
   - TKG runners 10.3+ patched to accomodate PTU's easy anti-cheat enforcement
-
+- [Mactan](https://github.com/mactan-sc/mactan-sc-wine/releases)
+  - Managed by the LUG Helper
+  - Prebuilt releases from the [TKG](https://github.com/Frogging-Family/wine-tkg-git) build system
+  - TKG builds with LUG community patches
+    - Runners 10.3+ patched to accomodate PTU's easy anti-cheat enforcement
+    - Workaround to avoid repeated 30k when loading into the PU
+    - NTSync
 
 ## Add a Wine runner
 To add a custom wine runner
