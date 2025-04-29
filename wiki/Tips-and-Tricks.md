@@ -7,13 +7,22 @@ The following distributions make our 👍 list and generally work well with Star
 - Fedora
 - openSUSE Tumbleweed
 - Debian Testing
-- Ubuntu *(only the latest non-LTS release)*
+- Ubuntu (*only the latest non-LTS release*)
 - Gentoo
+
+
+The following distributions make our 👎 list and generally pose additional challenges:
+- Debian Stable
+- Ubuntu LTS
+- Mint (based on Ubuntu LTS)
+- Pop!_OS (based on Ubuntu LTS)
+- Drauger OS
+- openSUSE Leap
+- Manjaro
 
 We do not recommend 👎 LTS distros. *LTS releases and out of date distros are likely to cause many headaches.* LTS ≠ stable. LTS just means old packages locked to a specific major version which only receive security updates. This is great for servers but terrible for gaming where new features and fixes are important. #LTSbadjustdontplskthx  
 
-We do not recommend 👎 most gaming-focused distributions as many of our Penguins have had issues installing the required dependencies to make Star Citizen run. They generally have only an individual or a very small team backing them and, at least where Star Citizen is concerned, do not live up to the promise.  
-- We especially suggest avoiding Pop!_OS and Drauger OS due to irresolvable compatibility issues
+We do not recommend 👎 most gaming-focused distributions as many of our Penguins have had issues installing the required dependencies to make Star Citizen run. They generally have only an individual or a very small team backing them and, at least where Star Citizen is concerned, do not live up to the promise.  We especially suggest avoiding Pop!_OS and Drauger OS due to irresolvable compatibility issues
 
 Other distributions we suggest avoiding 👎 due to frequent package incompatibilities, old dependencies, and update issues are: Manjaro, Ubuntu LTS, Mint (based on Ubuntu LTS), Debian Stable, and openSUSE Leap.
 
@@ -21,7 +30,7 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
 
 
 ## Recommended Runners
-- Wine 9.4 or newer from your package manager
+- Wine 9.4 to 10.0 from your package manager
 - [RawFox](https://github.com/starcitizen-lug/raw-wine/releases)
   - Managed by the LUG Helper
   - 10.3+ patched to accomodate PTU's easy anti-cheat enforcement
