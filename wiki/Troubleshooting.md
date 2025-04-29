@@ -19,11 +19,8 @@
 - Wine log: `~/Games/star-citizen/sc-launch.log`
 - Launcher log: `~/Games/star-citizen/drive_c/users/$USER/AppData/Roaming/rsilauncher/logs/log.log`
 - Game log: `~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/Game.log`
-- If using Lutris, check logs by clicking the arrow beside the play button:  
-  ![Screenshot from 2023-04-15 14-09-40](https://user-images.githubusercontent.com/3657071/232246219-8d713782-2d22-474c-a350-921e4af430af.png)
-  - Run Lutris in debug mode to see more verbose logging  :
-   Native: `lutris -d` Flatpak: `flatpak run net.lutris.Lutris -d`
-  - If CLI mode is turned on, there will be additional useful output in your terminal window.
+- Native Lutris `lutris -d > ~/lutrislog.log`
+- Flatpak Lutris `flatpak run net.lutris.Lutris -d > ~/lutrislog.log`
 
 
 #### Community Help
