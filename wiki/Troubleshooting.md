@@ -214,7 +214,7 @@ Other potential workarounds:
   - Install and enable gamescope. Set these options for your display resolution `-W 2560 -H 1440 --force-grab-cursor`
   - Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
   - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
-  
+
 - Switching to an alternate desktop environment may help; most Gnome users don't seem to experience this issue
 - You may try building xwayland with [this patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied. If using KDE and patching xwayland, you will also need to install Gamescope and use the `--force-grab-cursor` option
 
@@ -335,11 +335,6 @@ Other potential workarounds:
     - Card with  8GB vram: `dxgi.maxDeviceMemory = 6144` and `d3d11.cachedDynamicResources = "a"`
     - Card with  6GB vram: `dxgi.maxDeviceMemory = 4096` and `d3d11.cachedDynamicResources = "a"`
 
-#### Vulkan Beta: Game fails to launch
-- There is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents vulkan and DLSS from working on linux.
-- If using Wine-GE, add the environment variable `WINE_HIDE_NVIDIA_GPU=1` to enable vulkan
-- If using Wine or Wine-GE, see [instructions](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#dlssdeep-learning-super-sampling--vulkan) to patch libcuda to enable both vulkan and DLSS
- 
 #### DLSS(Deep Learning Super Sampling) / Vulkan
 - There is a [memory allocation issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795), where it attempts to allocate in a specific area already occupied by the game.
    - A possible solution would be patching LibCUDA file increasing this area.
