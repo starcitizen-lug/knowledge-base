@@ -198,24 +198,25 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 ## 🤪 Unexpected Behavior (sometimes also crashes)
 
 #### Mouse/Cursor warp issues and view snapping in interaction mode
-- Switch to the game's software cursor. Create a user.cfg file in the LIVE, PTU, EPTU, TECH-PREVIEW directory with the following contents:
+Switch to the game's software cursor. Create a user.cfg file in the LIVE, PTU, EPTU, TECH-PREVIEW directory with the following contents:
  ```
    #use software cursor
    pl_pit.forceSoftwareCursor = 1
  ```
-- Alternatively, you may choose Xorg at your login screen instead of Wayland session. 
-- Other potential workarounds:
-  - [Proton](https://github.com/starcitizen-lug/knowledge-base/wiki/Alternative-Installations#proton-installation) helps mitigate this for some
-  - Gamescope helps mitigate this for some
-    - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix below](#gamescope-not-working)
-    - Install and enable gamescope. Set these options for your display resolution `-W 2560 -H 1440 --force-grab-cursor`
-    - Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
-    - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
-  - Wine wayland helps mitigate this for some
-    - Add environment variable `DISPLAY=` to unset it to empty
-    - Add RSI Launcher.exe argument ` --in-process-gpu`
-  - Switching to an alternate desktop environment may help; most Gnome users don't seem to experience this issue
-  - You may try building xwayland with [this patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied. If using KDE and patching xwayland, you will also need to install Gamescope and use the `--force-grab-cursor` option
+Alternatively, you may choose Xorg at your login screen instead of Wayland session. 
+Other potential workarounds:
+- Non-staging Wine Wayland helps mitigate this for some
+  - Add environment variable `DISPLAY=` to unset it to empty
+  - Add RSI Launcher.exe argument ` --in-process-gpu`
+- [Proton](https://github.com/starcitizen-lug/knowledge-base/wiki/Alternative-Installations#proton-installation) helps mitigate this for some
+- Gamescope helps mitigate this for some
+  - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix below](#gamescope-not-working)
+  - Install and enable gamescope. Set these options for your display resolution `-W 2560 -H 1440 --force-grab-cursor`
+  - Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
+  - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
+  
+- Switching to an alternate desktop environment may help; most Gnome users don't seem to experience this issue
+- You may try building xwayland with [this patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied. If using KDE and patching xwayland, you will also need to install Gamescope and use the `--force-grab-cursor` option
 
 
 #### Mouse/Cursor restricted to a region smaller than the display, or clicks offset from cursor
