@@ -1,5 +1,5 @@
 ## LUG Helper
-We have a helper script which can help you manage and optimize Star Citizen on Linux. It can check/set recommended settings such as vm.max_map_count and the system's open file descriptors limit, manage Lutris runners and DXVK versions, delete your Star Citizen USER directory while preserving keybinds, and delete shaders or dxvk cache for troubleshooting purposes. It can be downloaded from:
+We have a helper script which can help you manage and optimize Star Citizen on Linux. It can check/set recommended settings such as vm.max_map_count and the system's open file descriptors limit, manage Lutris runners and DXVK versions, and launch wine prefix configuration tools. It can be downloaded from:
 
 https://github.com/starcitizen-lug/lug-helper
 
@@ -11,11 +11,6 @@ __GL_SHADER_DISK_CACHE=true
 __GL_SHADER_DISK_CACHE_PATH="/path/you/want/for/your/cache"  (example: /home/games/star-citizen/nvidiacache)
 __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=true
 ```
-If you use Lutris, these environment variables can be added here:
-
-`Right click the game->Configure->System options->Environment variables`
-
-![](https://matrix-client.matrix.org/_matrix/media/r0/download/xndr.de/AwspONZSbLKcXCCkBojwyIYT)
 
 ## Mesa (AMD/Intel) Shader Cache
 
@@ -24,9 +19,6 @@ Mesa can be given its own persistent shader cache by adding the following enviro
 MESA_SHADER_CACHE_DIR="/path/you/want/for/your/cache"  (example: /home/games/star-citizen/amdcache)
 MESA_SHADER_CACHE_MAX_SIZE=10G
 ```
-If you use Lutris, these environment variables can be added here:
-
-`Right click the game->Configure->System options->Environment variables`
 
 ## Game Settings
 
@@ -40,11 +32,9 @@ The following game settings can help improve framerates:
 
 ## Feral GameMode
 
-Gamemode can help improve performance by applying OS-level performance tweaks as the game is launched. Search for `gamemode` in your Distro's repos. Once installed, Lutris has a toggle for `Enable Feral GameMode` under `System options`. It defaults to ON if it detects gamemode is installed.
+Gamemode can help improve performance by applying OS-level performance tweaks as the game is launched. Search for `gamemode` in your Distro's repos. Refer to the Gamemode [repository](https://github.com/FeralInteractive/gamemode) for configuration instructions
 
-## Fsync
-
-An fsync-enabled Kernel can help improve smoothness while shaders are being compiled in the game. Enable fsync in Lutris under Runner Options.
+Use the LUG Helper maintenance menu to edit your launch script and add `gamemoderun` to the beginning of your launch command.
 
 ## Zram & Swap
 
@@ -68,15 +58,12 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 
 ## Picom/Compton Compositors
 
-If you use the Picom or Compton compositor, it may cause a laggy experience despite having high framerates. We recommend disabling the compositor. In Lutris:
-1. `Right click the game->Configure->System options`. Turn on the option to `Disable desktop effects`.
-2. If this doesn't work, it may be due to a [bug in Lutris](https://github.com/lutris/agora/issues/35). You can use the `Pre-launch` and `Post-exit` script fields in the `System options` tab to run a script that kills picom/compton and then restarts it.
+If you use the Picom or Compton compositor, it may cause a laggy experience despite having high framerates. We recommend disabling the compositor.
 
 ## Steam Deck
 
 - We recommend a 32gb+ swap file for the Steam Deck. Create it under `/home` instead of `/` to protect it from being wiped out by SteamOS updates.
 - max allocation of ram to vram
-- install lutris in desktop mode
 
 ## Changing CPU scaling behavior via the Linux kernel and System Management BIOS
 
@@ -110,16 +97,8 @@ If changing the kernel scheduler between `Performance` and the various demand-ba
     You can see the threads highlighted in the image below:  
     <img src="https://user-images.githubusercontent.com/39007301/220380665-5378ccc5-474e-4db2-8a4a-e893bb4ab347.png" width=60% height=60%>  
 
-    As an example, the CPU shown below would end up with the arguments  
+    Run the game with the modified environment variable. As an example, the CPU shown below would end up with the arguments  
     ```
     WINE_CPU_TOPOLOGY=16:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
     ```
     ![image](https://user-images.githubusercontent.com/39007301/220382182-3525c3e8-4466-4489-8e85-7c1319ac3a1b.png)
-
-3. Run the game with the modified environment variable. If using Lutris, add the modified environment variable as shown in the image below:
-    `Right click the game->Configure->System options->Environment variables`
-
-    ![220531210-be82dc26-696f-4748-83ce-7161c362fe0b](https://user-images.githubusercontent.com/3657071/225932793-2f46c08b-47f1-4087-8f13-4e5cfd976837.png)
-
-
-    
