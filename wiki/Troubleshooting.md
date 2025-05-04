@@ -149,7 +149,7 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 #### Crash or black screen while using Vulkan beta renderer
 - Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) recommendations for your graphics card
-- Delete shaders in the RSI Launcher > Settings > Games > {LIVE,PTU} > Delete  Local Settings > Shaders folder
+- Go back to DX11 by using the Delete Shaders option in the RSI Launcher > Settings > Games > {LIVE,PTU} > Delete  Local Settings > Shaders folder
 
 
 #### Failed to decompress file/corrupted block detected error
