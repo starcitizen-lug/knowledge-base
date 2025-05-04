@@ -50,10 +50,14 @@ _Distributions that use /etc/security/limits.conf_
 
 1. Install and configure the necessary prerequisites
 2. Create and configure your wine prefix:
-   `WINEPREFIX=$HOME/Games/star-citizen winetricks -q arial tahoma dxvk powershell win11`
-3. Download and run the RSI installer:
-   `WINEPREFIX=$HOME/Games/star-citizen wine "~/Downloads/RSI Launcher-Setup-2.0.6.exe"`
-4. An example launch script is provided on our [LUG Helper's Repo](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/sc-launch.sh)
+   ```
+   WINEPREFIX=$HOME/Games/star-citizen winetricks -q arial tahoma dxvk powershell win11
+   ```
+4. Download and run the RSI installer:
+   ```
+   WINEPREFIX=$HOME/Games/star-citizen WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" wine "~/Downloads/RSI Launcher-Setup-2.3.1.exe" /S
+   ```
+6. An example launch script is provided on our [LUG Helper's Repo](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/sc-launch.sh)
 
 If you have trouble installing recent Wine versions on a Debian-based distro due to missing faudio, see [this link](https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html).
 
@@ -62,8 +66,10 @@ If you have trouble installing recent Wine versions on a Debian-based distro due
 
 1. Install Open Wine Components [umu-launcher](https://github.com/Open-Wine-Components/umu-launcher/releases/latest)
 2. Download and run the RSI Launcher installer:
-   `GAMEID="umu-starcitizen" umu-run "~/Downloads/RSI Launcher-Setup-2.0.5.exe"`
-3. Run the RSI Launcher:
+   ```
+   GAMEID="umu-starcitizen" WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" umu-run "~/Downloads/RSI Launcher-Setup-2.3.1.exe" /S
+   ```
+4. Run the RSI Launcher:
    ```
    GAMEID="umu-starcitizen" PROTONPATH="GE-Latest" umu-run "~/Games/umu/umu-starcitizen/drive_c/Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe"
    ```
