@@ -106,6 +106,10 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
   - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
 - If using the Flatpak Lutris, you may need to resync it with your system after installing the 32bit drivers. Run: `flatpak update`
 
+#### Code 19000 crash with error: *Account login failed. Please verify your login credentials and try again. Error was encountered during the authentication phase.*
+- Before anything else try logging out/in to the launcher and restarting
+- This error can also happen if you are trying to launch/login during a patch release
+- If you have disabled IPv6, try enabling it
 
 #### Game immediately crashes after clicking 'Launch'
 - Start by checking the Wine output and/or "game.log" file
