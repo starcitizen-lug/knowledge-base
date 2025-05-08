@@ -242,6 +242,11 @@ Other potential workarounds:
 - Depending on your distribution, you may need to set `Prefer System Libraries` in Lutris to `ON`.
 - If you have sound in the launcher but not in the game, launch the game and go to your audio settings, then enable "Play sound while game is in background".
 
+#### Account login failed (possible code 19000)
+This is a generic error code representing any issue with logging in to CIG servers
+- Expected when attempting launch/login during a patch release
+- Kill the launcher and restart it and try again
+- Ensure that IPv6 is not disabled
 
 #### Anticheat encountered an error (possible code 30033, 30034)
 - Please follow [our EAC migration instructions](Tips-and-Tricks#easy-anti-cheat)
