@@ -72,6 +72,9 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
   StartupWMClass=rsi launcher.exe
   ```
 
+#### RSI Launcher Error Code 2000
+- Follow [Launcher Tips](Tips-and-Tricks#rsi-launcher-20) instructions
+
 
 #### RSI Launcher executable is missing
 - Automatic update sometimes fails or is interrupted
