@@ -158,6 +158,32 @@ A video of these steps can be found [here](https://www.youtube.com/watch?v=GqyXK
     4. If you have any other EAC workarounds in place, remove them as well.
 
 
+## Wayland
+- Experimental Wine Wayland (Non-staging Wine 9.22 or newer)
+  - Add environment variable `DISPLAY=` to unset it to empty
+  - Add RSI Launcher.exe argument ` --in-process-gpu`
+- Experimental Proton Wayland (GE-Proton10-1 or newer)
+  - Add environment variable `PROTON_ENABLE_WAYLAND=1`
+  - Add RSI Launcher.exe argument ` --in-process-gpu`
+ 
+## HDR (High Dynamic Range)
+CIG's vulkan doesn't have HDR yet
+
+Requires experimental native [Wayland](Tips-and-Tricks#Wayland) or [Gamescope](Tips-and-Tricks#Gamescope)
+
+To enable HDR in native Wayland:
+
+Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_manager_v1` then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and add environment variable `ENABLE_HDR_WSI=1`
+- Wine
+  - Add environment variable  `DXVK_HDR=1`
+- Proton (GE-Proton10-1 or newer)
+  - Add environment variable `PROTON_ENABLE_HDR=1`
+
+
+## Gamescope
+- Enable HDR with flag `--hdr-enabled`
+
+
 ## AMD FidelityFX Super Resolution (FSR) upscaling
 Use the in-game CIG TSR, AMD FSR, or NVIDIA DLSS options, external tools are not recommended
 
