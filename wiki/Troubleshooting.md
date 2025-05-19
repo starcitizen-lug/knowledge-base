@@ -229,6 +229,7 @@ Other potential workarounds:
  r_width = 3440
  r_height = 1440
  ```
+- Hyprland users: Try using the in-game fullscreen option instead of the Hyprland equivalent.
 
 
 #### Empty launcher
