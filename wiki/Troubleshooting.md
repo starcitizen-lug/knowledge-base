@@ -237,9 +237,8 @@ Other potential workarounds:
 
 
 #### Visual glitches or semi-transparent lines, poor performance, possibly random crashes
-- DXVK is likely disabled in Lutris's Runner options. Make sure it is enabled.
-- Your game shader cache may need to be cleared. Our [Helper](https://github.com/starcitizen-lug/lug-helper) can quickly clear your game shaders.
-![](https://media.discordapp.net/attachments/608349808956276737/1070664567425871960/SC_Lines.jpg)
+- DXVK may be broken or disabled. Reinstall it using the LUG Helper DXVK and maintenance menus
+- Your game shader cache may need to be cleared. Use the Delete Shaders option in the RSI Launcher > Settings > Games > {LIVE,PTU} > Delete Local Settings > Shaders folder
 
 
 #### No sound in game
