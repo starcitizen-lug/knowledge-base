@@ -68,6 +68,19 @@ The yaw potentiometer on these sticks tends to fail after a time. It may be poss
 - Disassemble the potentiometer to try to [clean and repair it](https://www.reddit.com/r/hotas/comments/7ec712/comment/dq58sy8/?context=3)
 - A bit of soldering to [replace the potentiometer](https://www.reddit.com/r/hotas/comments/cronns/comment/ex8oo4b/?context=3)
 
+## Thrustmaster SOL-R
+Manual Calibration is as follows;
+1. Start with base unplugged.
+2.  Push the upper trigger and press the left button (35) on grip then plug to USB port into the base and calibration will start. The ring LED around thumb-stick will blink slowly when calibration process is active.
+3. Let the thumb-stick and the twist rest to center position and push the scroll-wheel below the thumb stick to set the center position, the LED around thumb-stick will blink faster.
+4. Reach the maximum & minimum of both thumb-stick axis without applying too much force.
+5. Reach the maximum position on left and right side of twist without applying too much force on both end.
+6. Push again the scroll-wheel to validate the calibration, LED stop to blink to indicate the calibration process is complete. To exit the calibration mode unplug /replug the USB cable.
+
+Change LEDs with a simple python script
+
+https://github.com/gort818/solr-led/blob/main/solr-led.py
+
 
 ## Configuration Tips
 
