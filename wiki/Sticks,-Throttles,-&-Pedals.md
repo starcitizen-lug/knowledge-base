@@ -177,22 +177,14 @@ ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
 # Troubleshooting
 
 ### Accessing Wine Game Controllers Settings
-- If using Lutris, Select the game then click the arrow next to the wine glass button -> Wine Control Panel -> Game Controllers  
-  ![Screenshot from 2024-09-13 19-45-26](https://github.com/user-attachments/assets/dc2fd609-4c12-49a1-8ce6-e2825dc61a72)
 - Use the LUG Helper's Maintenance menu `Open Wine controller configuration` button
-- For other install methods, run `WINEPREFIX=/path/to/your/prefix wine control joy.cpl`
+- For other install methods refer to the tool's menu options or run `WINEPREFIX=/path/to/your/prefix wine control joy.cpl`
 
 ### Some of your joysticks disappear / aren't recognized in the game
 - If you are using wine 9.22+ with a VKB or Virpil device, you may need to enable HIDRAW access. See [VKB Devices](#vkb-devices) or [Virpil Devices](#virpil-devices) above for instructions.
-- If you are using Lutris, make sure "Autoconfigure joypads" is turned off in the game settings for Lutris
-    - Right click the game -> Configure -> Runner options -> Autoconfigure joypads
-- Try setting your joysticks to "dinput" instead of "xinput" in Wine's
+- Try setting your joysticks to "dinput" instead of "xinput" in Wine control panel
     - Follow the [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings) instructions above.
     - If your joysticks are showing up as "Connected(xinput)", select them and click "Override" to set them to dinput.
-- Joysticks can be configured manually in the wine joystick control panel
-    - Click the arrow next to the wine glass button -> Wine Control Panel -> Game Controllers
-- Try disabling the Lutris Runtime
-    - Right click the game -> Configure -> System options -> Disable Lutris Runtime
 
 ### Some of your joystick axis aren't recognized / don't map
 - Check that the game has not set the deadzone for this axis to 100%
