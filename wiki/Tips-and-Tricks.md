@@ -83,14 +83,11 @@ boot.kernel.sysctl = {
 
 ## RSI Launcher 2.0
 - Requires standard Wine 9.4+ or Proton GE 9-13+ runner
-  - Recent Wine versions can be easily installed from the Kron4ek runner source in the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
-- In Lutris, right click the game->Configure->Runner options, remove the following DLL override:
-  - `powershell.exe: disabled`
+  - Recent Wine versions can be easily installed using the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
+- Remove any `powershell.exe` dll override
 - If using standard Wine, winetricks **20250102** or newer is required to install powershell
   1. navigate to your game prefix directory `~/Games/star-citizen`
   2. Use the LUG Helper's Maintence menu `Install Powershell` button
-- If using standard Wine, CLI mode must be enabled in Lutris
-  - Right click the game -> Configure -> System options -> Toggle on advanced options -> CLI mode
 - The 2.0 Launcher may need to be installed manually. See [below](#rsi-launcher-manual-update) for instructions
 
 
@@ -99,8 +96,6 @@ boot.kernel.sysctl = {
 - Wine:
   - Open a terminal and run `~/Games/star-citizen/sc-launch.sh shell`
   - Then run `wine ~/path/to/your/installer`. Complete the install and **EXIT**
-- Lutris: Use the "run EXE inside wine prefix" option and select the RSI Launcher installer. Complete the install and **EXIT**
-  ![Screenshot from 2023-05-11 10-33-19](https://github.com/starcitizen-lug/knowledge-base/assets/3657071/d146e9cc-e0a2-4327-acfb-ba5538ddefe4)
 
 
 ## Console Variables
@@ -116,15 +111,10 @@ boot.kernel.sysctl = {
   - force software cursor 
 
 ## Proton
-- Install Lutris v0.5.18 or later
-- Right click the game, select Configure, and then adjust settings as follows:
-- In Runner options, set Wine version to `GE-Proton`
-- In Runner options, remove the following DLL override:
-  - `powershell.exe: disabled`
-- In System options, add the following environment variables:
+- Remove any `powershell.exe` dll override
+- Add environment variables:
   - `GAMEID: umu-starcitizen`
   - `PROTONPATH: GE-Proton`
-- Other environment variables can be updated/removed if desired by comparing against those set for a new install in our [install json](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/lutris-starcitizen.json)
 
 
 ## Easy Anti-Cheat
@@ -153,9 +143,8 @@ A video of these steps can be found [here](https://www.youtube.com/watch?v=GqyXK
    ![Screenshot From 2024-10-04 23-20-21](https://github.com/user-attachments/assets/01e31cb8-7cdc-468f-b2a1-658ba173de53)
 3. Remove all EAC workarounds
     1. Remove EAC line from `/etc/hosts` file: `127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround`
-    2. Lutris: remove the EAC environment variables `EOS_USE_ANTICHEATCLIENTNULL=1` and `SteamGameId=starcitizen`
-    3. Non-Lutris: use a text editor to open `sc-launch.sh` and remove `export EOS_USE_ANTICHEATCLIENTNULL=1`
-    4. If you have any other EAC workarounds in place, remove them as well.
+    2. Remove EAC environment variables `EOS_USE_ANTICHEATCLIENTNULL=1` and `SteamGameId=starcitizen`
+    3. If you have any other EAC workarounds in place, remove them as well.
 
 
 ## Wayland
@@ -187,7 +176,7 @@ Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_man
 ## AMD FidelityFX Super Resolution (FSR) upscaling
 Use the in-game CIG TSR, AMD FSR, or NVIDIA DLSS options, external tools are not recommended
 
-In the Lutris `Runner options` tab, enable `AMD FidelityFX Super Resolution` or set the environment variable `WINE_FULLSCREEN_FSR=1`. Then, in the Star Citizen graphics settings, set the game to fullscreen and your desired resolution and it will be FSR scaled up. We recommend restarting the game after changing its resolution for better performance.
+Set environment variable `WINE_FULLSCREEN_FSR=1`. Then, in the Star Citizen graphics settings, set the game to fullscreen and your desired resolution and it will be FSR scaled up. We recommend restarting the game after changing its resolution for better performance.
 
 
 ## Automatically Disable/Re-Enable Mouse Acceleration

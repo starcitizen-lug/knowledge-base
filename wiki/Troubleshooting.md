@@ -47,7 +47,6 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 #### General troubleshooting steps
 - Refer to [First things to try](#first-things-to-try) above.
-- In Lutris, try setting `Prefer system libraries` to `On` globally before installation. After installation, this can be reset and configured only for Star Citizen if desired.
 - Make sure you are not trying to install to an NTFS-formatted drive.
 - Be sure you haven't changed the default install path in the RSI Launcher settings. If you wish to install the game elsewhere, put the entire wine prefix there instead.
 
@@ -96,18 +95,14 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 ## 💥 Crashes
 
-#### RSI Launcher v1.6.2+ JavaScript error
-- The LUG Helper's [wine installation](Quick-Start-Guide#installation-steps) method is recommended and avoids this error
-- In the game's Lutris `System options`, make sure Advanced options is toggled on then in the `text-based games` section enable `CLI mode`
-- Alternatively, select a Proton runner in Lutris' runner options tab, i.e. `ge-proton` and follow our [proton setup instructions](Tips-and-Tricks#proton)
-
 
 #### Code 3 crash with error: *Star Citizen process exited abnormally (code: 3) : Command failed*
-- You are likely missing 32bit drivers. See [32bit Drivers](#-32bit-drivers) below for more information
+- EAC bootstrapper failed to start up
+- You may be missing 32bit drivers. See [32bit Drivers](#-32bit-drivers) below for more information
 - Additionally, explicitly set the DXVK device name
   - identify device name using command `vulkaninfo --summary | grep deviceName`
   - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
-- If using the Flatpak Lutris, you may need to resync it with your system after installing the 32bit drivers. Run: `flatpak update`
+- If using a flatpak launcher, you may need to resync it with your system. Run: `flatpak update`
 
 
 #### Game immediately crashes after clicking 'Launch'
@@ -116,12 +111,12 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - See [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for information on recent stability issues
 
 - Possible cause: DXVK
-  - Make sure DXVK is enabled in Lutris' Runner options.
+  - Make sure DXVK is installed and enabled
   - Some people report changing their DXVK version fixes this. Try using our [Helper](https://github.com/starcitizen-lug/lug-helper) to download an async DXVK.
   - Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) and Nvidia troubleshooting section [below](#-nvidia) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 
 - Possible cause: Incorrect Vulkan device
-  - If you have Intel integrated graphics and see `VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json` in your log, then change the Vulkan device in Lutris to use your discrete GPU:
+  - If you have Intel integrated graphics and see `VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json` in your log, then change the Vulkan device to use your discrete GPU:
     - identify device name using command `vulkaninfo --summary | grep deviceName`
     - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
 
@@ -132,12 +127,7 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
   - If you are using flatpak and have not run `flatpak update` recently, this should be done regularly to keep everything up to date.
 
 - Possible cause: Phantom joystick
-  - Many keyboards and mice can also have a "joystick" part in Linux, which Wine can detect. Unfortunately, Wine may be confused about it, as they are not real joysticks. In this case, the game could crash. Try running the Wine joystick control panel "wine control" (in Lutris: right click -> Joystick configuration) and disable your keyboard and/or mice.
-  - This will not affect how your keyboard and mice work in the game.
-
-- Possible cause: Linux kernel 6.8.9
-   - Linux kernel 6.8.9 can result in a crash when launching from main menu, may be accompanied by a popup including text "Assertion failed!"
-   - To fix: revert to kernel 6.8.8, update to 6.9+, or enable ReBar if your hardware supports it
+  - Many keyboards and mice can also have a "joystick" part in Linux, which Wine can detect. Unfortunately, Wine may be confused about it, as they are not real joysticks. In this case, the game could crash. Use the LUG Helper's maintenance menu to run the wine control panel and disable your keyboard and/or mice.
 
 
 #### Game crashes after clicking 'Verify'
@@ -166,8 +156,8 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - If that doesn't work, switching to ext4 is an option.
 
 
-#### After playing for a while, game/lutris/wine crash, no errors
-  - If there are no errors in your game logs, check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](Performance-Tuning#zram--swap).
+#### After playing for a while, crash with no errors
+  - If there are no errors in your [game logs](#gathering-logs), check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](Performance-Tuning#zram--swap).
 
 
 ***
@@ -178,24 +168,15 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 ## 🧊 Freezes
 
 #### Game hangs at splash screen or black/transparent window after clicking 'Launch'
-- Make sure DXVK is enabled in Lutris' Runner options.
-- Try changing to a different DXVK version in the Lutris settings.  Alternate DXVKs can be quickly installed using our [LUG Helper](https://github.com/starcitizen-lug/lug-helper).
+- Make sure DXVK is installed. Use the [LUG Helper](https://github.com/starcitizen-lug/lug-helper) to install it
 - Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 
 
 #### Launcher freezes within a few seconds of opening
-- Try using a different wine runner.
-- Alternatively, you can try changing "Prefer system libraries" to ON:
-  - Right click the game -> Configure -> System options -> Prefer system libraries
-
-
-#### Launcher hangs / stops responding / crashes with an "ASAR" error
-- Some people report the launcher hanging in combination with the Lutris runtime. If you are on Lutris, try toggling "Disable Lutris runtime" under "System options" of the Lutris game options.
+- Try using a different wine runner
 
 
 ***
-
-
 
 
 ## 🤪 Unexpected Behavior (sometimes also crashes)
@@ -206,7 +187,7 @@ Switch to the game's software cursor. Create a user.cfg file in the LIVE, PTU, E
    #use software cursor
    pl_pit.forceSoftwareCursor = 1
  ```
-Alternatively, you may choose Xorg at your login screen instead of Wayland session. 
+Alternatively, you may choose Xorg at your login screen instead of Wayland session.
 Other potential workarounds:
 - Non-staging Wine Wayland helps mitigate this for some
   - Add environment variable `DISPLAY=` to unset it to empty
@@ -216,7 +197,6 @@ Other potential workarounds:
   - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix below](#gamescope-not-working)
   - Install and enable gamescope. Set these options for your display resolution `-W 2560 -H 1440 --force-grab-cursor`
   - Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
-  - Depending on your system, `Prefer System Libraries` may need to be enabled or disabled in Lutris
 
 - Switching to an alternate desktop environment may help; most Gnome users don't seem to experience this issue
 - You may try building xwayland with [this patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied. If using KDE and patching xwayland, you will also need to install Gamescope and use the `--force-grab-cursor` option
@@ -240,10 +220,6 @@ Other potential workarounds:
 - DXVK may be broken or disabled. Reinstall it using the LUG Helper DXVK and maintenance menus
 - Your game shader cache may need to be cleared. Use the Delete Shaders option in the RSI Launcher > Settings > Games > {LIVE,PTU} > Delete Local Settings > Shaders folder
 
-
-#### No sound in game
-- Depending on your distribution, you may need to set `Prefer System Libraries` in Lutris to `ON`.
-- If you have sound in the launcher but not in the game, launch the game and go to your audio settings, then enable "Play sound while game is in background".
 
 #### Account login failed (possible code 19000)
 This is a generic error code representing any issue with logging in to CIG servers
@@ -285,18 +261,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 #### Black/transparent window after clicking 'Launch'
 - Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
-- Make sure DXVK is enabled in Lutris' Runner options.
-- Try changing to a different DXVK version in the Lutris settings.  Alternate DXVKs can be quickly installed using our [LUG Helper](https://github.com/starcitizen-lug/lug-helper).
-
-
-#### RSI Launcher white screen / error DCompositionCreateDevice
-- In Lutris, configure Star Citizen (right-click->Configure->Game options) and add `"--use-gl=osmesa"` to the Arguments field.
-- If launching manually: `wine "RSI Launcher.exe" "--use-gl=osmesa"`
- 
-
-#### RSI Launcher fails to launch from lutris with CLI mode enabled
-- Error message may be similar to `/usr/bin/gnome-terminal.real: symbol lookup error: /lib/x86_64-linux-gnu/libatk-bridge-2.0.so.0: undefined symbol: atk_component_scroll_to`
-- Disable the lutris runtime in lutris global preferences to work around this error
+- Make sure DXVK is installed and enabled.
 
 
 #### Non-US keyboard keys not working
@@ -322,7 +287,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 - There is currently no known workaround other than switching cards. We recommend AMD.
 
 #### Popup saying your Nvidia graphics driver is out of date
-- Ignore or Disable DXVK NVAPI in Lutris.
+- Ignore or Disable DXVK NVAPI
   - Right click the game -> Configure -> Runner options -> Enable DXVK-NVAPI/DLSS (set to off)
 
 #### Game fails to start after clicking Launch Game on laptops with Nvidia GPU + intel graphics
@@ -338,7 +303,7 @@ This is a generic error code representing any issue with logging in to CIG serve
     - Card with 10GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 8192;cachedDynamicResources = a;"`
     - Card with  8GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 6144;cachedDynamicResources = a;"`
     - Card with  6GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 4096;cachedDynamicResources = a;"`
-  - Create a new `dxvk.conf` file then either `export DXVK_CONFIG_FILE=path/to/dxvk.conf` or, if using Lutris, add `DXVK_CONFIG_FILE` as a new environment variable in the game's settings and set it to the file path.
+  - Create a new `dxvk.conf` file then add environment variable `export DXVK_CONFIG_FILE=path/to/dxvk.conf`
     - Card with 10GB vram: `dxgi.maxDeviceMemory = 8192` and `d3d11.cachedDynamicResources = "a"`
     - Card with  8GB vram: `dxgi.maxDeviceMemory = 6144` and `d3d11.cachedDynamicResources = "a"`
     - Card with  6GB vram: `dxgi.maxDeviceMemory = 4096` and `d3d11.cachedDynamicResources = "a"`
@@ -358,14 +323,12 @@ This is a generic error code representing any issue with logging in to CIG serve
       - Satisfy game check for the existence of these dlls when trying to initialize
         - navigate inside your wine prefix to `drive_c/windows/system32`
         - Copy any existing dll to these three names: `cryptbase.dll`, `devobj.dll`, and `drvstore.dll`
-      - Remove the `WINE_HIDE_NVIDIA_GPU` env variable if it is set in Lutris or your launch script.
+      - Remove environment variable `WINE_HIDE_NVIDIA_GPU`
       - Don't forget to enable DXVK-NVAPI.
 
 #### Gamescope not working
 - See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
 - A possible fix is to set the environment variable `__GL_THREADED_OPTIMIZATIONS=0`
-   - Lutris: `Right click the game->Configure->System options->Game execution->Environment variables` then find or create `__GL_THREADED_OPTIMIZATIONS` in the left column and change/set it to `0` in the right column.
-   - Non-Lutris: Edit the `sc-launch.sh` script installed by the Helper in your prefix (ie, `~/Games/star-citize/sc-launch.sh`) and add `export __GL_THREADED_OPTIMIZATIONS=0` to the environment variables.
 
 
 ***
@@ -395,8 +358,21 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 ## 🦦 Lutris Issues
 
+#### Lutris General troubleshooting steps
+- In Lutris, try setting `Prefer system libraries` to `On` globally before installation. After installation, this can be reset and configured only for Star Citizen if desired.
+
 #### In Lutris, right clicking on Star Citizen and selecting "Configure" does not bring up the configuration
 - Completely close Lutris with `kill lutris`, delete everything inside the Lutris cache directory `~/.cache/lutris`, and relaunch Lutris.
+
+
+#### Launcher hangs / stops responding / crashes with an "ASAR" error
+- Some people report the launcher hanging in combination with the Lutris runtime. If you are on Lutris, try toggling "Disable Lutris runtime" under "System options" of the Lutris game options.
+
+
+#### RSI Launcher v1.6.2+ JavaScript error
+- The LUG Helper's [wine installation](Quick-Start-Guide#installation-steps) method is recommended and avoids this error
+- In the game's Lutris `System options`, make sure Advanced options is toggled on then in the `text-based games` section enable `CLI mode`
+- Alternatively, select a Proton runner in Lutris' runner options tab, i.e. `ge-proton` and follow our [proton setup instructions](Tips-and-Tricks#proton)
 
 
 #### Library version errors during installation
@@ -419,6 +395,21 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 #### Lutris error: *"Runtime Error('No path can be generated for DXVK because no version information is available.')"*
 - If you've just installed Lutris, be sure to launch it once, separately from the Star Citizen install process, to fully populate its runtime and caches.
+
+
+#### RSI Launcher white screen / error DCompositionCreateDevice
+- In Lutris, configure Star Citizen (right-click->Configure->Game options) and add `"--use-gl=osmesa"` to the Arguments field.
+- If launching manually: `wine "RSI Launcher.exe" "--use-gl=osmesa"`
+
+
+#### RSI Launcher fails to launch from lutris with CLI mode enabled
+- Error message may be similar to `/usr/bin/gnome-terminal.real: symbol lookup error: /lib/x86_64-linux-gnu/libatk-bridge-2.0.so.0: undefined symbol: atk_component_scroll_to`
+- Disable the lutris runtime in lutris global preferences to work around this error
+
+
+#### No sound in game
+- Depending on your distribution, you may need to set `Prefer System Libraries` in Lutris to `ON`.
+- If you have sound in the launcher but not in the game, launch the game and go to your audio settings, then enable "Play sound while game is in background".
 
 
 ***

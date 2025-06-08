@@ -1,5 +1,5 @@
 ## LUG Helper
-We have a helper script which can help you manage and optimize Star Citizen on Linux. It can check/set recommended settings such as vm.max_map_count and the system's open file descriptors limit, manage Lutris runners and DXVK versions, and launch wine prefix configuration tools. It can be downloaded from:
+We have a helper script which can help you manage and optimize Star Citizen on Linux. It can check/set recommended settings such as vm.max_map_count and the system's open file descriptors limit, manage runners and launch wine prefix configuration tools. It can be downloaded from:
 
 https://github.com/starcitizen-lug/lug-helper
 
@@ -45,8 +45,8 @@ Zram stores swap in RAM using on-the-fly compression which can improve game perf
 - For systems with 32GB RAM, we recommend configuring all 32GB for zram with at least a couple extra GB in a swap file.
 
 > [!tip]
-> When using zram, zswap needs to be [disabled](https://wiki.archlinux.org/title/Zswap#Toggling_zswap).  
-> See the Arch Wiki for [zram setup](https://wiki.archlinux.org/title/Zram#Using_zram-generator) instructions that should work for most distros.  
+> When using zram, zswap needs to be [disabled](https://wiki.archlinux.org/title/Zswap#Toggling_zswap).
+> See the Arch Wiki for [zram setup](https://wiki.archlinux.org/title/Zram#Using_zram-generator) instructions that should work for most distros.
 > Also see the Arch Wiki for [swap file creation](https://wiki.archlinux.org/title/Swap#Swap_file_creation) instructions.
 
 If you prefer not to use zram, a swap file will need to be [configured](https://wiki.archlinux.org/title/Swap#Swap_file). Btrfs users please follow the [Btrfs instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). We recommend configuring at least a combined 40GB RAM + swap:
