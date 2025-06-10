@@ -88,6 +88,17 @@ flatpak install -y --user --noninteractive RSILauncher io.github.mactan_sc.RSILa
 flatpak run io.github.mactan_sc.RSILauncher
 ```
 
+## Nix Installation
+Flake: nix-citizen - https://github.com/LovingMelody/nix-citizen
+
+nix-citizen is available for Nix users to install. Please see the repository for instructions. This flake provides a module to configure your NixOS config for running Star Citizen. Packages for both standard wine and proton methods are available. To try without adding anything to your configuration, you can use the following command:
+
+```bash
+nix run github:LovingMelody/nix-citizen#star-citizen
+```
+
+If you prefer not to use nix, the [Flatpak method](#flatpak-installation) would be recommended.
+
 ## Alternate Launchers
 
 > [!warning]

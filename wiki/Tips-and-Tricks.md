@@ -80,6 +80,7 @@ boot.kernel.sysctl = {
 };
 ```
 
+Custom wine runners will not work out of the box if the system wine install does not work ( `wineWow64Packages.stableFull` recommended) try `wine-astral` from [nix-citizen](https://github.com/LovingMelody/nix-citizen) or one of the [Alternative Installation](Alternative-Installations#nix) methods.
 
 ## RSI Launcher 2.0
 - Requires standard Wine 9.4+ or Proton GE 9-13+ runner
