@@ -309,22 +309,24 @@ This is a generic error code representing any issue with logging in to CIG serve
     - Card with  6GB vram: `dxgi.maxDeviceMemory = 4096` and `d3d11.cachedDynamicResources = "a"`
 
 #### DLSS(Deep Learning Super Sampling) / Vulkan
-- There is a [memory allocation issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795), where it attempts to allocate in a specific area already occupied by the game.
-   - A possible solution would be patching LibCUDA file increasing this area.
-      - Locate your 64-bit `libcuda.so` (usually `/usr/lib` or run `whereis libcuda.so`).
-      - To generate `libcuda.patched.so`, replace both placeholder `/path/to/` lines below then run:
-        ```
-        echo -ne $(od -An -tx1 -v /path/to/libcuda.so | tr -d '\n' | sed -e 's/00 00 00 f8 ff 00 00 00/00 00 00 f8 ff ff 00 00/g' -e 's/ /\\x/g') > /desired/path/to/libcuda.patched.so
-        ```
-      - Use the environment variable `LD_LIBRARY_PATH` to load the patched version:
-        ```
-        LD_LIBRARY_PATH=/path/to/the/libcuda.patched.so:$LD_LIBRARY_PATH
-        ```
-      - Satisfy game check for the existence of these dlls when trying to initialize
-        - navigate inside your wine prefix to `drive_c/windows/system32`
-        - Copy any existing dll to these three names: `cryptbase.dll`, `devobj.dll`, and `drvstore.dll`
-      - Remove environment variable `WINE_HIDE_NVIDIA_GPU`
-      - Don't forget to enable DXVK-NVAPI.
+There is a [memory allocation issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795), where it attempts to allocate in a specific area already occupied by the game. 
+
+A possible solution would be patching LibCUDA file increasing this area.
+  - Use winetricks `20250102-next` or newer to install `dxvk` and `dxvk-nvapi`
+  - Locate your 64-bit `libcuda.so` (usually `/usr/lib` or run `whereis libcuda.so`).
+  - To generate `libcuda.patched.so`, replace both placeholder `/path/to/` lines below then run:
+    ```
+    echo -ne $(od -An -tx1 -v /path/to/libcuda.so | tr -d '\n' | sed -e 's/00 00 00 f8 ff 00 00 00/00 00 00 f8 ff ff 00 00/g' -e 's/ /\\x/g') > /desired/path/to/libcuda.patched.so
+    ```
+  - Set both environment variables `LD_LIBRARY_PATH` and `LD_PRELOAD` to load the patched version:
+    ```
+    LD_LIBRARY_PATH=/path/to/the/libcuda.patched.so:$LD_LIBRARY_PATH
+    LD_PRELOAD=/path/to/the/libcuda.patched.so:$LD_PRELOAD
+    ```
+  - Satisfy game check for the existence of these dlls when trying to initialize
+    - navigate inside your wine prefix to `drive_c/windows/system32`
+    - Copy any existing dll to these three names: `cryptbase.dll`, `devobj.dll`, and `drvstore.dll`
+  - Remove environment variable `WINE_HIDE_NVIDIA_GPU`
 
 #### Gamescope not working
 - See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
