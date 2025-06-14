@@ -142,3 +142,10 @@ flatpak run io.github.mactan_sc.RSILauncher
 > We do not recommend installing Star Citizen within Steam. While it can be done, it creates several issues that we feel are not worth the effort to try to work around. For example, it limits configurability options and does not invoke needed protonfixes by default.
 > 
 > We believe you will have a much better experience following our [Quick Start Guide](Quick-Start-Guide). If you want to use Steam's proton, you may use umu-launcher by following the [Proton Installation](#proton-installation) instructions above.
+
+#### Nix
+[nix-citizen](https://github.com/LovingMelody/nix-citizen) is available for nix users full instructions provided there. If you do not wish to use this package the [Flatpak](#flatpak) would be recommended. The following command can be used to try the package without adding to your configuration
+
+```bash
+nix run github:LovingMelody/nix-citizen#star-citizen
+```
