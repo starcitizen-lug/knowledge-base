@@ -300,10 +300,12 @@ This is a generic error code representing any issue with logging in to CIG serve
 - Some Penguins are seeing VRAM exhaustion problems on nvidia cards
 - Use an environment variable **OR** a config file to override the max device memory. Refer to [DXVK config](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf) for examples
   - Add a new `DXVK_CONFIG` environment variable
+    - Card with 12GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 9216;cachedDynamicResources = a;"`
     - Card with 10GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 8192;cachedDynamicResources = a;"`
     - Card with  8GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 6144;cachedDynamicResources = a;"`
     - Card with  6GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 4096;cachedDynamicResources = a;"`
   - Create a new `dxvk.conf` file then add environment variable `export DXVK_CONFIG_FILE=path/to/dxvk.conf`
+    - Card with 12GB vram: `dxgi.maxDeviceMemory = 9216` and `d3d11.cachedDynamicResources = "a"`
     - Card with 10GB vram: `dxgi.maxDeviceMemory = 8192` and `d3d11.cachedDynamicResources = "a"`
     - Card with  8GB vram: `dxgi.maxDeviceMemory = 6144` and `d3d11.cachedDynamicResources = "a"`
     - Card with  6GB vram: `dxgi.maxDeviceMemory = 4096` and `d3d11.cachedDynamicResources = "a"`
