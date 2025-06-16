@@ -53,13 +53,11 @@ _Distributions that use /etc/security/limits.conf_
    ```
    WINEPREFIX=$HOME/Games/star-citizen winetricks -q arial tahoma dxvk powershell win11
    ```
-4. Download and run the RSI installer:
+3. Download and run the RSI installer:
    ```
    WINEPREFIX=$HOME/Games/star-citizen WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" wine "~/Downloads/RSI Launcher-Setup-2.3.1.exe" /S
    ```
-6. An example launch script is provided on our [LUG Helper's Repo](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/sc-launch.sh)
-
-If you have trouble installing recent Wine versions on a Debian-based distro due to missing faudio, see [this link](https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html).
+4. An example launch script is provided on our [LUG Helper's Repo](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/sc-launch.sh)
 
 
 ### Proton Installation
