@@ -312,11 +312,12 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 #### DLSS(Deep Learning Super Sampling) / Vulkan
 There is a [memory allocation issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795), where it attempts to allocate in a specific area already occupied by the game. 
+Use non-staging wine OR patch libcuda to workaround the issue:
 
 A possible solution would be patching LibCUDA file increasing this area.
   - Use winetricks `20250102-next` or newer to install `dxvk` and `dxvk-nvapi`
   - Locate your 64-bit `libcuda.so` (usually `/usr/lib` or run `whereis libcuda.so`).
-  - To generate `libcuda.patched.so`, replace both placeholder `/path/to/` lines below then run:
+  - Use a bash shell to generate a patched `libcuda.patched.so`, replace both placeholder `/path/to/` lines below with a location in your game directory then run:
     ```
     echo -ne $(od -An -tx1 -v /path/to/libcuda.so | tr -d '\n' | sed -e 's/00 00 00 f8 ff 00 00 00/00 00 00 f8 ff ff 00 00/g' -e 's/ /\\x/g') > /desired/path/to/libcuda.patched.so
     ```
@@ -325,7 +326,7 @@ A possible solution would be patching LibCUDA file increasing this area.
     LD_LIBRARY_PATH=/path/to/the/libcuda.patched.so:$LD_LIBRARY_PATH
     LD_PRELOAD=/path/to/the/libcuda.patched.so:$LD_PRELOAD
     ```
-  - Satisfy game check for the existence of these dlls when trying to initialize
+  - The game checks for the existence of these dlls when trying to initialize. Create them if they dont exist by copying any other dll in the directory and renaming
     - navigate inside your wine prefix to `drive_c/windows/system32`
     - Copy any existing dll to these three names: `cryptbase.dll`, `devobj.dll`, and `drvstore.dll`
   - Remove environment variable `WINE_HIDE_NVIDIA_GPU`
