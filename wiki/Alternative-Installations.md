@@ -131,9 +131,8 @@ flatpak run io.github.mactan_sc.RSILauncher
 
 #### Lutris
 1. Set the default wine runner to GE-Proton in global preferences
-2. Launch the LUG Helper and select the installation method `Install Star Citizen with Lutris`
-3. Allow the Preflight Check to fix any issues it finds before proceeding!
-4. Run the RSI Launcher, log in, and click install to finish installing the game
+2. Install Star Citizen from [Lutris](https://lutris.net/games/star-citizen/)
+3. Run the RSI Launcher, log in, and click install to finish installing the game
 
 #### Steam
 > [!warning]
