@@ -388,7 +388,6 @@ A possible solution would be patching LibCUDA file increasing this area.
 - Inspect install log for failed winetricks downloads or sha256 mismatch, note the URL of the files being downloaded and its destination in winetricks' cache.
 - Download each file manually to its destination in winetricks' cache.
 - Use winetricks to ensure that the prefix is set to Win10 mode.
-- Proceed with lug-helper installer.
 
 
 #### Lutris error: *Command exited with code 512*
