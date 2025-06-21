@@ -6,14 +6,12 @@
 #### First things to try
 1. Make sure our [LUG Helper](https://github.com/starcitizen-lug/lug-helper)'s Preflight Check passes all checks.
 2. Make sure all prerequisites from the [Quick Start Guide](Quick-Start-Guide) are satisfied on your system.
-3. Kill all wine processes and re-launch a fresh instance of the game:
-   - If not using Lutris, then navigate to `~/Games/star-citizen` and run the following in your terminal `./sc-launch.sh shell` then `wineserver -k`
-   - If using Lutris, select the game, click the arrow beside the wine button, choose `Open Bash terminal` and run `wineserver -k`
-     ![Screenshot From 2024-09-30 12-03-57](https://github.com/user-attachments/assets/dd131abb-3adb-4876-a6e6-2c0226884a71)
-4. Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
-5. Use the lug helper to get the latest wine runner. Be sure to check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for recommendations
-6. Try a different wine version. If using wine-staging, try standard wine. Try wine-staging if using standard wine.
-7. Look for your issue/error in the categories on this page. Refer to the steps directly below to gather logs.
+3. Kill all wine processes and re-launch a fresh instance of the game.
+   Navigate to `~/Games/star-citizen` and run the following in your terminal `./sc-launch.sh shell` then `wineserver -k`
+5. Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
+6. Use the lug helper to get the latest wine runner. Be sure to check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for recommendations
+7. Try a different wine version. If using wine-staging, try standard wine. Try wine-staging if using standard wine.
+8. Look for your issue/error in the categories on this page. Refer to the steps directly below to gather logs.
 
 #### Gathering logs
 - Wine log: `~/Games/star-citizen/sc-launch.log`
@@ -365,6 +363,7 @@ A possible solution would be patching LibCUDA file increasing this area.
 
 #### Lutris General troubleshooting steps
 - In Lutris, try setting `Prefer system libraries` to `On` globally before installation. After installation, this can be reset and configured only for Star Citizen if desired.
+- Kill all wine processes and re-launch a fresh instance of the game. Select the game, click the arrow beside the wine button, choose `Open Bash terminal` and run `wineserver -k` and then restart
 
 #### In Lutris, right clicking on Star Citizen and selecting "Configure" does not bring up the configuration
 - Completely close Lutris with `kill lutris`, delete everything inside the Lutris cache directory `~/.cache/lutris`, and relaunch Lutris.
