@@ -110,7 +110,6 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 - Possible cause: DXVK
   - Make sure DXVK is installed and enabled
-  - Some people report changing their DXVK version fixes this. Try using our [Helper](https://github.com/starcitizen-lug/lug-helper) to download an async DXVK.
   - Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) and Nvidia troubleshooting section [below](#-nvidia) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 
 - Possible cause: Incorrect Vulkan device
