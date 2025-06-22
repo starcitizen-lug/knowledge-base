@@ -110,6 +110,25 @@ boot.kernel.sysctl = {
 - pl_pit.forceSoftwareCursor [ 1, 0 ]
   - force software cursor 
 
+
+## USER.cfg
+```
+# set to your display resolution
+# r_width = 1920
+# r_height = 1080
+
+# 0 = DX11, 1 = Vulkan
+# r_graphicsRenderer = 0
+
+# r_displayinfo = 1
+
+# sys_MaxFPS = 120
+# sysmaxidleFPS = 120
+
+# r_VSync = 0
+```
+
+
 ## Proton
 - Remove any `powershell.exe` dll override
 - Add environment variables:
