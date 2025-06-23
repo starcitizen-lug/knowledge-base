@@ -32,7 +32,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > (Oct 25, 2024) **Vulkan crashes**
 > - Black screen, crash
 > - Possible error similar to: `Fatal Error: Acquire Next Image Failed` or `Main thread considered to be deadlocked`
-> - If you experience this, [we recommend using DX11 for now](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#crash-or-black-screen-while-using-vulkan-beta-renderer)
+> - If you experience this, [we recommend using DX11 for now](Troubleshooting#crash-or-black-screen-while-using-vulkan-beta-renderer)
 
 > [!important]
 > (Oct 4, 2024) **Easy Anticheat Enforcement**
@@ -46,7 +46,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > [!warning]
 > (April 17, 2025) **Game fails to launch with Wine 10.1 and newer**
 > - Wine 10.x made changes that break Easy Anti-Cheat when the [Z: path workaround](Tips-and-Tricks#easy-anti-cheat) is applied.
-> - Using the Helper switch to any 9.22 runner or Raw wine 10.3 or newer
+> - Use the Helper to switch to a [recommended](Tips-and-Tricks#recommended-runners) wine runner
 
 > [!note]
 > (Nov 30, 2024) **Joysticks not detected on Wine 9.22 and newer**
