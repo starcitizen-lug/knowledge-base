@@ -117,8 +117,11 @@ boot.kernel.sysctl = {
 # r_width = 1920
 # r_height = 1080
 
+# set borderless
+# r_WindowMode = 2
+
 # 0 = DX11, 1 = Vulkan
-# r_graphicsRenderer = 0
+# r.graphicsRenderer = 0
 
 # r_displayinfo = 1
 
