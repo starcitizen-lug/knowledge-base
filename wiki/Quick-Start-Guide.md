@@ -13,7 +13,7 @@
 
 ## Installation Steps
 1. Download our [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) (Select the `.tar.gz`. Distro packages are listed [here](https://github.com/starcitizen-lug/lug-helper#installation))
-2. Launch the LUG Helper and select the installation method `Install Star Citizen with Wine`
+2. Launch the LUG Helper and `Install Star Citizen`
 3. Allow the Preflight Check to fix any issues it finds before proceeding!
 4. After the install completes then run the RSI Launcher, log in, and click Install to finish installing the game
 5. Launch the game. See you in the 'verse!
