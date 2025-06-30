@@ -73,12 +73,10 @@ _Distributions that use /etc/security/limits.conf_
    ```
 ### Alternate Launchers
 
-> [!caution]
-> We cannot guarantee that the alternative installation methods on this page will work or perform well.
+> [!warning]
+> We cannot guarantee that the alternative installation methods on this page will work or perform well. Our community may not be able to provide support for these installations if something isn't working right.
 >
 > The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
->
-> If you proceed with an alternative installation method, please be aware that not many members of our community use these methods. We may not be able to provide support for these installations if something isn't working right.
 
 > [!important]
 > If using flatpak apps, ensure the install location is whitelisted using Flatseal or similar methods.
@@ -135,7 +133,7 @@ flatpak run io.github.mactan_sc.RSILauncher
 3. Run the RSI Launcher, log in, and click install to finish installing the game
 
 #### Steam
-> [!warning]
+> [!caution]
 > We do not recommend installing Star Citizen within Steam. While it can be done, it creates several issues that we feel are not worth the effort to try to work around. For example, it limits configurability options and does not invoke needed protonfixes by default.
 > 
 > We believe you will have a much better experience following our [Quick Start Guide](Quick-Start-Guide). If you want to use Steam's proton, you may use umu-launcher by following the [Proton Installation](#proton-installation) instructions above.
