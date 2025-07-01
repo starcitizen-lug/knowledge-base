@@ -97,7 +97,7 @@ nix-citizen is available for Nix users to install. Please see the repository for
 nix run github:LovingMelody/nix-citizen#star-citizen
 ```
 
-If you prefer not to use nix, the [Flatpak method](#flatpak-installation) would be recommended.
+If you prefer not to use nix-citizen, the [Flatpak method](#flatpak-installation) would be recommended.
 
 ## Alternate Launchers
 
