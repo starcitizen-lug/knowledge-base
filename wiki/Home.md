@@ -21,10 +21,6 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 ### Game Updates
 > [!note]
-> (March 1, 2025) **30K errors**
-> - 30K the first time you try to join a server. The solution is to return to the menu and try again
-
-> [!note]
 > (Oct 28, 2024) **You're trying to run the game on an unsupported Windows OS**
 > - Just click OK.
 
@@ -35,10 +31,9 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > - If you experience this, [we recommend using DX11 for now](Troubleshooting#crash-or-black-screen-while-using-vulkan-beta-renderer)
 
 > [!important]
-> (Oct 4, 2024) **Easy Anticheat Enforcement**
+> (Oct 4, 2024) **Easy Anticheat Enforcement Enabled on the PTU**
 > 
-> - CIG has enabled EAC enforcement on the PTU. We have an experimental fix that also works on LIVE and it needs testing.
-> - Please follow [our migration instructions](Tips-and-Tricks#easy-anti-cheat) and report back on our Discord's #tech-support channel.
+> - Follow the instructions [here](Tips-and-Tricks#easy-anti-cheat).
 
 
 ### General News
