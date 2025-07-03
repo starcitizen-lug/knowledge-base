@@ -179,6 +179,8 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 ## 🤪 Unexpected Behavior (sometimes also crashes)
 
 #### Mouse/Cursor warp issues and view snapping in interaction mode
+*This issue can also manifest as some main menu buttons not working due to the cursor actually being offset*
+
 Switch to the game's software cursor. Create a user.cfg file in the LIVE, PTU, EPTU, TECH-PREVIEW directory with the following contents:
  ```
    #use software cursor
