@@ -306,10 +306,15 @@ This is a generic error code representing any issue with logging in to CIG serve
     - Card with  4GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 2048;cachedDynamicResources = a;"`
 
 #### DLSS(Deep Learning Super Sampling) / Vulkan
-There is a [memory allocation issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795), where it attempts to allocate in a specific area already occupied by the game. 
-Use non-staging wine OR patch libcuda to workaround the issue:
+There is a [memory allocation issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) for **staging** wine where it attempts to allocate in a specific area already occupied by the game. 
+Use non-staging wine OR patch libcuda to workaround the issue on **staging**
 
-A possible solution would be patching LibCUDA file increasing this area.
+
+The game checks for the existence of these dlls when trying to initialize DLSS. Create them if they dont exist by copying any other dll in the directory and renaming:
+  - navigate inside your wine prefix to `drive_c/windows/system32`
+  - Copy any existing dll to these three names: `cryptbase.dll`, `devobj.dll`, and `drvstore.dll`
+
+A possible solution for **staging** would be patching LibCUDA file increasing this area.
   - Use winetricks `20250102-next` or newer to install `dxvk` and `dxvk-nvapi`
   - Locate your 64-bit `libcuda.so` (usually `/usr/lib` or run `whereis libcuda.so`).
   - Use a bash shell to generate a patched `libcuda.patched.so`, replace both placeholder `/path/to/` lines below with a location in your game directory then run:
@@ -321,10 +326,6 @@ A possible solution would be patching LibCUDA file increasing this area.
     LD_LIBRARY_PATH=/path/to/the/libcuda.patched.so:$LD_LIBRARY_PATH
     LD_PRELOAD=/path/to/the/libcuda.patched.so:$LD_PRELOAD
     ```
-  - The game checks for the existence of these dlls when trying to initialize. Create them if they dont exist by copying any other dll in the directory and renaming
-    - navigate inside your wine prefix to `drive_c/windows/system32`
-    - Copy any existing dll to these three names: `cryptbase.dll`, `devobj.dll`, and `drvstore.dll`
-  - Remove environment variable `WINE_HIDE_NVIDIA_GPU`
 
 #### Gamescope not working
 - See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
