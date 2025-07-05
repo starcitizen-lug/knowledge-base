@@ -247,6 +247,7 @@ This is a generic error code representing any issue with logging in to CIG serve
   - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
   - verify by setting environment variable `DXVK_HUD=1` and observing the device name in the upper left of the screen
 - Also make sure your GPU drivers (Mesa/nvidia) are up to date and DXVK is enabled/updated.
+  - Use the LUG Helper to update dxvk
 
 
 #### Failed to initialize dependencies error
@@ -260,7 +261,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 #### Black/transparent window after clicking 'Launch'
 - Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
-- Make sure DXVK is installed and enabled.
+- Make sure DXVK is installed and enabled
 
 
 #### Non-US keyboard keys not working
@@ -286,8 +287,8 @@ This is a generic error code representing any issue with logging in to CIG serve
 - There is currently no known workaround other than switching cards. We recommend AMD.
 
 #### Popup saying your Nvidia graphics driver is out of date
-- Ignore or Disable DXVK NVAPI
-  - Right click the game -> Configure -> Runner options -> Enable DXVK-NVAPI/DLSS (set to off)
+Typically caused by dxvk being broken or not installed
+- Use the LUG Helper to update dxvk
 
 #### Game fails to start after clicking Launch Game on laptops with Nvidia GPU + intel graphics
 - Errors may include `DXVAVDA fatal error: could not LoadLibrary: msvproc.dll` or `Major opcode of failed request:  156 (NV-GLX)`
