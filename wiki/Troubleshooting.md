@@ -315,7 +315,7 @@ The game checks for the existence of these dlls when trying to initialize DLSS. 
   - Copy any existing dll to these three names: `cryptbase.dll`, `devobj.dll`, and `drvstore.dll`
 
 A possible solution for **staging** would be patching LibCUDA file increasing this area.
-  - Use winetricks `20250102-next` or newer to install `dxvk` and `dxvk-nvapi`
+  - Use winetricks `20250102-next` or newer to install `dxvk` and `dxvk_nvapi`
   - Locate your 64-bit `libcuda.so` (usually `/usr/lib` or run `whereis libcuda.so`).
   - Use a bash shell to generate a patched `libcuda.patched.so`, replace both placeholder `/path/to/` lines below with a location in your game directory then run:
     ```
