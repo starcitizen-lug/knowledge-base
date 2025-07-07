@@ -144,6 +144,12 @@ If you prefer not to use nix-citizen, the [Flatpak method](#flatpak-installation
 8. Right click the game and set the "path" value to the RSI Launcher executable in the wine prefix
 9. Press the "Play" button to run the RSI Launcher, log in, and click install tto finish installing the game
 
+### NVIDIA Optimized Launcher
+1. Follow the LUG-Helper intructions to install Star Citizen with wine
+2. Place this script inside your Star Citizen Wine prefix directory [sc-launch-DLSS.sh](https://raw.githubusercontent.com/Vogelhaufen/priv-backup-pc/refs/heads/main/sc-launch/sc-launch-DLSS.sh), typically $HOME/Games/star-citizen 
+3. Open a terminal and make the script executable: `chmod +x sc-launch-DLSS.sh`
+4. Start the game: `sh sc-launch-DLSS.sh`
+   
 ### Steam
 > [!caution]
 > We do not recommend installing Star Citizen within Steam. While it can be done, it creates several issues that we feel are not worth the effort to try to work around. For example, it limits configurability options and does not invoke needed protonfixes by default.
