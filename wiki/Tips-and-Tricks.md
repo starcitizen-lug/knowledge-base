@@ -154,7 +154,7 @@ Custom wine runners will not work out of the box if the system wine install does
 > Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for any wine changes
 
 > [!important]
-> Use latest Mactan wine from the LUG Helper tool **OR** complete the steps below:
+> Use latest Mactan wine from the LUG Helper tool and step 3 **OR** complete all the steps below:
 
 A video of these steps can be found [here](https://www.youtube.com/watch?v=GqyXKT5-kRA).
 1. In the RSI Launcher, navigate to `Settings -> Games -> Game Location`
