@@ -141,33 +141,14 @@ Custom wine runners will not work out of the box if the system wine install does
 
 
 ## Easy Anti-Cheat
-> [!note]
-> Your wine prefix under Z:\ will be hidden from the file picker, so you will have to manually type or paste the full path.
-
-> [!warning]
-> Windows paths use back slashes `\` instead of forward slashes `/`
-
 > [!important]
 > EAC will not like symlinks of any directory along your install path. Verify your absolute path if using an immutable distro such as bazzite/ublue
 
 > [!important]
 > Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for any wine changes
 
-> [!important]
-> Use latest Mactan wine from the LUG Helper tool and step 3 **OR** complete all the steps below:
-
-A video of these steps can be found [here](https://www.youtube.com/watch?v=GqyXKT5-kRA).
-1. In the RSI Launcher, navigate to `Settings -> Games -> Game Location`
-   ![Screenshot From 2024-10-04 23-22-13](https://github.com/user-attachments/assets/01496e30-92cc-4120-ba58-45ec11363f10)
-2. Change the RSI Library location to be its absolute path on your linux filesystem from `Z:\`. **No symlinks!**
-   - If you installed the game to the default location, change it to the result of this command. Execute the following in a bash shell:
-     ```
-       echo "Z:$(realpath "$HOME/Games/star-citizen/drive_c/Program Files/Roberts Space Industries")" | sed -e 's/\//\\/g'
-     ```
-   - If you installed the game elsewhere, `Z:\` is mapped to your filesystem's root. Any path or mountpoint you type in must be referenced from the `Z:\` root.
-
-   ![Screenshot From 2024-10-04 23-20-21](https://github.com/user-attachments/assets/01e31cb8-7cdc-468f-b2a1-658ba173de53)
-3. Remove all EAC workarounds
+1. Using the [LUG Helper](https://github.com/starcitizen-lug/lug-helper), install the Mactan runner. 
+2. Remove all EAC workarounds
     1. Remove EAC line from `/etc/hosts` file: `127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround`
     2. Remove EAC environment variables `EOS_USE_ANTICHEATCLIENTNULL=1` and `SteamGameId=starcitizen`
     3. If you have any other EAC workarounds in place, remove them as well.
