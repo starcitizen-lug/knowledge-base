@@ -33,7 +33,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > [!important]
 > (Oct 4, 2024) **Easy Anticheat Enforcement Enabled on the PTU**
 > 
-> - Use the LUG Helper to select the latest mactan runner **OR** Follow the instructions [here](Tips-and-Tricks#easy-anti-cheat).
+> - Use the LUG Helper to select the latest mactan runner and complete step 3 of the instructions [here](Tips-and-Tricks#easy-anti-cheat).
 
 
 ### General News
