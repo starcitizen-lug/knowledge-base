@@ -33,14 +33,15 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > [!important]
 > (Oct 4, 2024) **Easy Anticheat Enforcement Enabled on the PTU**
 > 
-> - Use the LUG Helper to select the latest mactan runner and complete step 3 of the instructions [here](Tips-and-Tricks#easy-anti-cheat).
+> - Follow the instructions [here](Tips-and-Tricks#easy-anti-cheat).
 
 
 ### General News
 
 > [!warning]
 > (April 17, 2025) **Game fails to launch with Wine 10.1 and newer**
-> - Wine 10.x made changes that break Easy Anti-Cheat when the [Z: path workaround](Tips-and-Tricks#easy-anti-cheat) is applied.
+> - Possible error values Code 210 and #1
+> - Wine 10.x made changes that break Easy Anti-Cheat
 > - Use the Helper to switch to a [recommended](Tips-and-Tricks#recommended-runners) wine runner
 
 > [!note]
