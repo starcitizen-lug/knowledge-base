@@ -185,7 +185,7 @@ Download the Lug-Helper 4.0 package from https://github.com/starcitizen-lug/lug-
 Extract the zipped directory and open it in your file browser. 
 
 - Step 3 
-Run lug-helper.sh, you can do this by clicking on it and telling it to run as a program. Or by navigating opening the location in a terminal and typing `./lug-helper.sh`
+Run lug-helper.sh, you can do this by clicking on it and telling it to run as a program. Or by navigating to/opening the location in a terminal and typing `./lug-helper.sh` 
 
 - Step 4 Ignore if you have already installed the game and go to 4a. 
 If a fresh install run the `preflight check` and resolve any issues that come up. We will be using `wine` for the duration of this guide. 
