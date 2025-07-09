@@ -33,16 +33,16 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
 - Wine 9.4 to 10.0 from your package manager
 - [RawFox](https://github.com/starcitizen-lug/raw-wine/releases)
   - Managed by the LUG Helper
-  - 10.3+ patched to accomodate PTU's easy anti-cheat enforcement
+  - 10.3+ patched to accomodate easy anti-cheat
 - [Kron4ek](https://github.com/Kron4ek/Wine-Builds/releases)
   - Managed by the LUG Helper
   - Prebuilt releases from the [TKG](https://github.com/Frogging-Family/wine-tkg-git) build system
-  - TKG runners 10.3+ patched to accomodate PTU's easy anti-cheat enforcement
+  - TKG runners 10.3+ patched to accomodate easy anti-cheat
 - [Mactan](https://github.com/mactan-sc/mactan-sc-wine/releases)
   - Managed by the LUG Helper
   - Prebuilt releases from the [TKG](https://github.com/Frogging-Family/wine-tkg-git) build system
   - TKG builds with LUG community patches
-    - Runners 10.3+ patched to accomodate PTU's easy anti-cheat enforcement
+    - Runners 10.3+ patched accomodate easy anti-cheat
     - Workaround to avoid repeated 30k when loading into the PU
     - NTSync
 
@@ -142,15 +142,13 @@ Custom wine runners will not work out of the box if the system wine install does
 
 ## Easy Anti-Cheat
 > [!important]
-> EAC will not like symlinks of any directory along your install path. Verify your absolute path if using an immutable distro such as bazzite/ublue
-
-> [!important]
 > Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for any wine changes
 
-1. Using the [LUG Helper](https://github.com/starcitizen-lug/lug-helper), install the Mactan runner. 
-2. Remove all EAC workarounds
+1. Use RSI Launcher 2.5.1 or newer
+2. Using the [LUG Helper](https://github.com/starcitizen-lug/lug-helper), install a [recommended runner](#recommended-runners). 
+3. Remove all EAC workarounds. If any of the following exist remove them
     1. Remove EAC line from `/etc/hosts` file: `127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround`
-    2. Remove EAC environment variables `EOS_USE_ANTICHEATCLIENTNULL=1` and `SteamGameId=starcitizen`
+    2. Use the LUG Helper Maintenance menu to edit the launch script - Remove EAC environment variables `EOS_USE_ANTICHEATCLIENTNULL=1` and `SteamGameId=starcitizen`
     3. If you have any other EAC workarounds in place, remove them as well.
 
 
