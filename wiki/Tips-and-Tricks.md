@@ -148,7 +148,7 @@ Custom wine runners will not work out of the box if the system wine install does
 2. Using the [LUG Helper](https://github.com/starcitizen-lug/lug-helper), install a [recommended runner](#recommended-runners). 
 3. Remove all EAC workarounds. If any of the following exist remove them
     1. Remove EAC line from `/etc/hosts` file: `127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround`
-    2. Use the LUG Helper Maintenance menu to edit the launch script - Remove EAC environment variables `EOS_USE_ANTICHEATCLIENTNULL=1` and `SteamGameId=starcitizen`
+    2. Use the LUG Helper Maintenance menu to edit the launch script - Remove EAC environment variable `EOS_USE_ANTICHEATCLIENTNULL=1`
     3. If you have any other EAC workarounds in place, remove them as well.
 
 
