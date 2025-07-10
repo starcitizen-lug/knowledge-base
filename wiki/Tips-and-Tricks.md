@@ -95,7 +95,7 @@ Custom wine runners will not work out of the box if the system wine install does
 - Download the [latest](https://robertsspaceindustries.com/download) RSI Launcher installer
 - Wine:
   - Open a terminal and run `~/Games/star-citizen/sc-launch.sh shell`
-  - Then run `wine ~/path/to/your/installer`. Complete the install and **EXIT**
+  - Then run `WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" wine ~/path/to/your/installer /S`. Complete the install and **EXIT**
 
 
 ## Console Variables
