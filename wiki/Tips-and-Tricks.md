@@ -185,7 +185,7 @@ Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_man
 3. Run lug-helper.sh, you can do this by clicking on it and telling it to run as a program. Or by navigating to/opening the location in a terminal and typing `./lug-helper.sh` 
 
 4. The Launcher will automatically conduct a `preflight check` Note any issues it brings up and correct them.
-For install a `wine` installation as that is the preferred method 
+For install a select `wine` installation as that is the preferred method 
 After preflight click `install star citizen` and follow the prompts
 
 6. After install Click `manage wine runners` in the `lug-helper.sh` script and install any one from the list, they are verified compatible however `mactan` runners are preferred. 
