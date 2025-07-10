@@ -178,36 +178,27 @@ Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_man
 
 ## Quick Start Enhanced 
 
-- Step 1 
-Download the Lug-Helper 4.0 package from https://github.com/starcitizen-lug/lug-helper/releases
+1. Download the Lug-Helper 4.0 package from https://github.com/starcitizen-lug/lug-helper/releases
 
-- Step 2 
-Extract the zipped directory and open it in your file browser. 
+2. Extract the zipped directory and open it in your file browser. 
 
-- Step 3 
-Run lug-helper.sh, you can do this by clicking on it and telling it to run as a program. Or by navigating to/opening the location in a terminal and typing `./lug-helper.sh` 
+3. Run lug-helper.sh, you can do this by clicking on it and telling it to run as a program. Or by navigating to/opening the location in a terminal and typing `./lug-helper.sh` 
 
-- Step 4 Ignore if you have already installed the game and go to 4a. 
-If a fresh install run the `preflight check` and resolve any issues that come up. We will be using `wine` for the duration of this guide. 
+4. The Launcher will automatically conduct a `preflight check` Note any issues it brings up and correct them.
+For install a `wine` installation as that is the preferred method 
 After preflight click `install star citizen` and follow the prompts
 
-- Step 4a 
-If you have already installed Star Citizen 
-Click `manage wine runners` in the script and install any one from the list, they are verified compatible however `mactan` runners are preferred. 
+6. After install Click `manage wine runners` in the `lug-helper.sh` script and install any one from the list, they are verified compatible however `mactan` runners are preferred. 
 
-- Step 5
-In the `lug-helper.sh` script click `maintenance and troubleshooting` then click `edit launch script` and hit OK 
+7. In the `lug-helper.sh` script click `maintenance and troubleshooting` then click `edit launch script` and hit OK 
 
-- Step 7 
-Locate the line with the following 
+8. Locate the line with the following 
 `export EOS_USE_ANTICHEATCLIENTNULL` 
 Delete this line. 
 
-- Step 8 
-launch Star Citizen and verify your files. 
-Additionally update the launcher to version `2.5.1`
-- Step 9 
-If you have no other issues preventing login then you should be able to launch the game normally in both LIVE and PTU. 
+9. launch Star Citizen and allow the launcher to update to version `2.5.1`
+
+10. If you have no other issues preventing login then you should be able to launch the game normally in both LIVE and PTU. 
 
 
 ## AMD FidelityFX Super Resolution (FSR) upscaling
