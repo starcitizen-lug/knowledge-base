@@ -31,19 +31,20 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
 
 ## Recommended Runners
 - Wine 9.4 to 10.0 from your package manager
-- [RawFox](https://github.com/starcitizen-lug/raw-wine/releases)
-  - Managed by the LUG Helper
-  - v10.3+ are patched to accomodate easy anti-cheat
 - [Kron4ek](https://github.com/Kron4ek/Wine-Builds/releases)
   - Managed by the LUG Helper
-  - These are prebuilt releases from the [TKG](https://github.com/Frogging-Family/wine-tkg-git) build system
-  - v10.3+ are patched to accomodate easy anti-cheat
+  - Select a runner with "tkg" in its name
+  - TKG v10.3+ runners are patched to accomodate easy anti-cheat
 - [Mactan](https://github.com/mactan-sc/mactan-sc-wine/releases)
   - Managed by the LUG Helper
   - TKG builds with LUG community patches
     - Runners 10.3+ are patched accomodate easy anti-cheat
     - Includes workaround to avoid repeated 30k when loading into the PU
     - Includes NTSync
+- [RawFox](https://github.com/starcitizen-lug/raw-wine/releases)
+  - Managed by the LUG Helper
+  - v10.3+ are patched to accomodate easy anti-cheat
+
 
 ## Add a Wine runner
 To add a custom wine runner
