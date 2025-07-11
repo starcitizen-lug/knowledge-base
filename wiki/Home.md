@@ -20,6 +20,12 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 ## News
 
 ### Game Updates
+
+> [!important]
+> (July 11, 2025) **Easy Anticheat Enforcement has been Enabled on LIVE**
+> 
+> - Follow the instructions [here](Tips-and-Tricks#easy-anti-cheat).
+
 > [!note]
 > (Oct 28, 2024) **You're trying to run the game on an unsupported Windows OS**
 > - Just click OK.
@@ -30,19 +36,8 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > - Possible error similar to: `Fatal Error: Acquire Next Image Failed` or `Main thread considered to be deadlocked`
 > - If you experience this, [we recommend using DX11 for now](Troubleshooting#crash-or-black-screen-while-using-vulkan-beta-renderer)
 
-> [!important]
-> (Oct 4, 2024) **Easy Anticheat Enforcement Enabled on the PTU**
-> 
-> - Follow the instructions [here](Tips-and-Tricks#easy-anti-cheat).
-
 
 ### General News
-
-> [!warning]
-> (April 17, 2025) **Game fails to launch with Wine 10.1 and newer**
-> - Possible error values Code 210 and #1
-> - Wine 10.x made changes that break Easy Anti-Cheat
-> - Use the Helper to switch to a [recommended](Tips-and-Tricks#recommended-runners) wine runner
 
 > [!note]
 > (Nov 30, 2024) **Joysticks not detected on Wine 9.22 and newer**
@@ -54,6 +49,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 
 ### Nvidia News
+
 > [!warning]
 > (Apr 29, 2024) **Vulkan Beta: Game fails to launch**
 > - There is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents vulkan and DLSS from working on linux.
