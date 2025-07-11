@@ -33,18 +33,17 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
 - Wine 9.4 to 10.0 from your package manager
 - [RawFox](https://github.com/starcitizen-lug/raw-wine/releases)
   - Managed by the LUG Helper
-  - 10.3+ patched to accomodate easy anti-cheat
+  - v10.3+ are patched to accomodate easy anti-cheat
 - [Kron4ek](https://github.com/Kron4ek/Wine-Builds/releases)
   - Managed by the LUG Helper
-  - Prebuilt releases from the [TKG](https://github.com/Frogging-Family/wine-tkg-git) build system
-  - TKG runners 10.3+ patched to accomodate easy anti-cheat
+  - These are prebuilt releases from the [TKG](https://github.com/Frogging-Family/wine-tkg-git) build system
+  - v10.3+ are patched to accomodate easy anti-cheat
 - [Mactan](https://github.com/mactan-sc/mactan-sc-wine/releases)
   - Managed by the LUG Helper
-  - Prebuilt releases from the [TKG](https://github.com/Frogging-Family/wine-tkg-git) build system
   - TKG builds with LUG community patches
-    - Runners 10.3+ patched accomodate easy anti-cheat
-    - Workaround to avoid repeated 30k when loading into the PU
-    - NTSync
+    - Runners 10.3+ are patched accomodate easy anti-cheat
+    - Includes workaround to avoid repeated 30k when loading into the PU
+    - Includes NTSync
 
 ## Add a Wine runner
 To add a custom wine runner
