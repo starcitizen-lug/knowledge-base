@@ -312,7 +312,7 @@ Typically caused by dxvk being broken or not installed
 
 
 #### DLSS (Deep Learning Super Sampling)
-1. Use a standard (non-staging) Wine runner. There is a memory allocation issue with wine-staging and Easy Anti-Cheat makes this prohibitively difficult to overcome.
+1. Use a standard (non-staging) Wine runner. There is a memory allocation issue with libcuda + wine-staging and Easy Anti-Cheat makes this prohibitively difficult to overcome.
 2. Use winetricks `20250102-next` or newer to install `dxvk` and `dxvk_nvapi`. Replace the WINEPREFIX path with your game location and run:
    1. `WINEPREFIX=/home/{user}/Games/StarCitizen winetricks -f dxvk dxvk_nvapi`
 3. Enable NVAPI with the following environment variable. This can added to `sc-launch.sh` for Wine installs via the Helper by selecting the edit the launch script option in its Maintenance menu.
