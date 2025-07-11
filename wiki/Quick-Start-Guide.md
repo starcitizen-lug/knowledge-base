@@ -14,9 +14,9 @@
 > If using an immutable distro (ie. Bazzite, Silverblue), we recommend the [flatpak installation](Alternative-Installations#flatpak-installation).
 
 1. Download our [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) (Select the `.tar.gz`. Distro packages are listed [here](https://github.com/starcitizen-lug/lug-helper#installation))
-2. Launch the LUG Helper and `Install Star Citizen`
+2. [Launch](Tips-and-Tricks#how-to-run-the-lug-helper) the LUG Helper and select `Install Star Citizen`
 3. Allow the Preflight Check to fix any issues it finds before proceeding!
-4. After the install completes then run the RSI Launcher, log in, and click Install to finish installing the game
+4. After the install completes, run the RSI Launcher, log in, and click Install to finish installing the game
 5. Launch the game. See you in the 'verse!
 
 ## After Installation
