@@ -181,7 +181,7 @@ Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_man
 - Enable HDR with flag `--hdr-enabled`
 
 
-## How to Run the LUG Helper Script
+## How to Run the LUG Helper
 1. Download the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) .tar.gz archive
 2. Extract the .tar.gz archive
 3. To run `lug-helper.sh` from a terminal (recommended):
