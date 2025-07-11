@@ -312,7 +312,7 @@ Typically caused by dxvk being broken or not installed
 
 
 #### DLSS (Deep Learning Super Sampling)
-1. Use a standard (non-staging) Wine runner. If you wish to use a staging wine build, you must [patch libcuda]()
+1. Use a standard (non-staging) Wine runner. If you wish to use a staging wine build, you must [patch libcuda](#patching-libcuda-for-dlss)
 2. Use winetricks `20250102-next` or newer to install `dxvk` and `dxvk_nvapi`. Replace the WINEPREFIX path with your game location and run:
    1. `WINEPREFIX=/home/{user}/Games/StarCitizen winetricks -f dxvk dxvk_nvapi`
 4. Copy nvngx dlls provided by your nvidia driver into your wine prefix's `system32` folder:
