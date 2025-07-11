@@ -64,7 +64,7 @@ To add a custom wine runner
      export wine_path="/home/you-username-goes-here/Games/star-citizen/runners/wine-tkg-ntsync-git-10.3.r0.g3364df08cb6-327-x86_64/bin"
     ```
 
-## Updating DXVK within a wine prefix
+## Updating DXVK Within a Wine Prefix
 Use the LUG Helper tool's `Update DXVK` button
 
 ## NixOS
@@ -181,18 +181,16 @@ Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_man
 - Enable HDR with flag `--hdr-enabled`
 
 
-## Quick Start Enhanced 
-
+## How to Run the LUG Helper Script
 1. Download the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) .tar.gz archive
-2. Extract the .tar.gz archive and open it in your file browser
-3. Run `lug-helper.sh`, you can do this by clicking on it and telling it to run as a program. Or by navigating to/opening the location in a terminal and typing `./lug-helper.sh` 
-4. Select `Install Star Citizen` Allow the Preflight Check to fix any issues it finds before continuing!
-5. After install click `manage wine runners` in the `lug-helper.sh` script and install a [recommended](Tips-and-Tricks#recommended-runners) wine runner
-6. Remove the EAC null client variable
-   - Using the `lug-helper.sh` script click `maintenance and troubleshooting` then click `edit launch script` and hit OK 
-   - Locate and remove the line containing `export EOS_USE_ANTICHEATCLIENTNULL` 
-7. Run the RSI Launcher and verify that it has auto-updated to version `2.5.1` or newer
-8. Download and launch the game. See you in the 'verse!
+2. Extract the .tar.gz archive
+3. To run `lug-helper.sh` from a terminal (recommended):
+    1. Open your terminal and use `cd /path/to/extracted/archive` to navigate to the location
+    2. List files with the `ls` command
+    3. Once you are in the directory containing the `lug-helper.sh` script, run it by typing `./lug-helper.sh`
+4. Alternatively, to run `lug-helper.sh` from your file manager:
+    1. Navigate to the extracted archive location
+    2. Right click on `lug-helper.sh` and select Run as a Program
 
 
 ## AMD FidelityFX Super Resolution (FSR) upscaling
