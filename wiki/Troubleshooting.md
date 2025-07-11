@@ -310,27 +310,37 @@ Typically caused by dxvk being broken or not installed
     - Card with  6GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 4096;cachedDynamicResources = a;"`
     - Card with  4GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 2048;cachedDynamicResources = a;"`
 
-#### DLSS(Deep Learning Super Sampling) / Vulkan
-There is a [memory allocation issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) for **staging** wine where it attempts to allocate in a specific area already occupied by the game. 
-Use non-staging wine OR patch libcuda to workaround the issue on **staging**
+
+#### DLSS (Deep Learning Super Sampling)
+1. Use a standard (non-staging) Wine runner. If you wish to use a staging wine build, you must [patch libcuda]()
+2. Use winetricks `20250102-next` or newer to install `dxvk` and `dxvk_nvapi`. Replace the WINEPREFIX path with your game location and run:
+   1. `WINEPREFIX=/home/{user}/Games/StarCitizen winetricks -f dxvk dxvk_nvapi`
+4. Copy nvngx dlls provided by your nvidia driver into your wine prefix's `system32` folder:
+   1. Locate the following dlls in `/usr/lib/nvidia/wine/` or `/usr/lib64/nvidia/wine`: `_nvngx.dll`, `nvngx.dll`, and `nvngx_dlssg.dll`
+   2. Copy all three to your wine prefix's `system32` folder. On a default install, that will be `/home/{user}/Games/StarCitizen/drive_c/windows/system32`
+5. Create the fake DLLS that the game requires to exist:
+   1. Navigate inside your wine prefix to the system32 directory. On a default install, that will be `/home/{user}/Games/StarCitizen/drive_c/windows/system32`
+   2. Duplicate any existing dll 3 times, for example `acledit.dll`, and rename the copies to these three filenames: `cryptbase.dll`, `devobj.dll`, and `drvstore.dll`
 
 
-The game checks for the existence of these dlls when trying to initialize DLSS. Create them if they dont exist by copying any other dll in the directory and renaming:
-  - navigate inside your wine prefix to `drive_c/windows/system32`
-  - Copy any existing dll to these three names: `cryptbase.dll`, `devobj.dll`, and `drvstore.dll`
-
-A possible solution for **staging** would be patching LibCUDA file increasing this area.
-  - Use winetricks `20250102-next` or newer to install `dxvk` and `dxvk_nvapi`
-  - Locate your 64-bit `libcuda.so` (usually `/usr/lib` or run `whereis libcuda.so`).
-  - Use a bash shell to generate a patched `libcuda.patched.so`, replace both placeholder `/path/to/` lines below with a location in your game directory then run:
-    ```
-    echo -ne $(od -An -tx1 -v /path/to/libcuda.so | tr -d '\n' | sed -e 's/00 00 00 f8 ff 00 00 00/00 00 00 f8 ff ff 00 00/g' -e 's/ /\\x/g') > /desired/path/to/libcuda.patched.so
-    ```
-  - Set both environment variables `LD_LIBRARY_PATH` and `LD_PRELOAD` to load the patched version:
+#### Patching LibCUDA for DLSS
+There is a [memory allocation issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) for **staging** wine runners where it attempts to allocate in a specific area already occupied by the game. To fix this, patch the LibCUDA file to increase this area. *This is only required if you want to use wine-staging instead of standard wine!*
+  1. Generate a patched `libcuda.patched.so`,
+      1. Locate your 64-bit `libcuda.so` (usually `/usr/lib` or run `whereis libcuda.so`)
+      2. Replace both placeholder `/path/to/` lines below with a location in your game directory then run:
+      ```sh
+      echo -ne $(od -An -tx1 -v /path/to/libcuda.so | tr -d '\n' | sed -e 's/00 00 00 f8 ff 00 00 00/00 00 00 f8 ff ff 00 00/g' -e 's/ /\\x/g') > /path/to/output/libcuda.patched.so
+      ```
+      3. Alternatively, you may try this one-liner to generate the patched libcuda into your current working directory:
+      ```sh
+      CUDALIB="$(ldconfig -p | grep -m1 "86-64.*libcuda.so")"; printf "$(od -An -tx1 -v "${CUDALIB##* }" | tr -d '\n' | sed -e 's/00 00 00 f8 ff 00 00 00/00 00 00 f8 ff ff 00 00/g' -e 's/ /\\x/g')" > libcuda.patched.so
+      ```
+  2. Set both environment variables `LD_LIBRARY_PATH` and `LD_PRELOAD` to load the patched version. These can added to `sc-launch.sh` for Wine installs via the Helper by selecting the edit the launch script option in its Maintenance menu.
     ```
     LD_LIBRARY_PATH=/path/to/the/libcuda.patched.so:$LD_LIBRARY_PATH
     LD_PRELOAD=/path/to/the/libcuda.patched.so:$LD_PRELOAD
     ```
+
 
 #### Gamescope not working
 - See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
