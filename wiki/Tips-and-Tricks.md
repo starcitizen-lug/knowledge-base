@@ -31,16 +31,16 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
 
 ## Recommended Runners
 - Wine 9.4 to 10.0 from your package manager
-- [Kron4ek](https://github.com/Kron4ek/Wine-Builds/releases)
-  - Managed by the LUG Helper
-  - Select a runner with "tkg" in its name
-  - TKG v10.3+ runners are patched to accomodate easy anti-cheat
 - [Mactan](https://github.com/mactan-sc/mactan-sc-wine/releases)
   - Managed by the LUG Helper
   - TKG builds with LUG community patches
     - Runners 10.3+ are patched accomodate easy anti-cheat
     - Includes workaround to avoid repeated 30k when loading into the PU
     - Includes NTSync
+- [Kron4ek](https://github.com/Kron4ek/Wine-Builds/releases)
+  - Managed by the LUG Helper
+  - Select a runner with "tkg" in its name
+  - TKG v10.3+ runners are patched to accomodate easy anti-cheat
 - [RawFox](https://github.com/starcitizen-lug/raw-wine/releases)
   - Managed by the LUG Helper
   - v10.3+ are patched to accomodate easy anti-cheat
@@ -147,7 +147,7 @@ Custom wine runners will not work out of the box if the system wine install does
 > Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for any wine changes
 
 1. Use RSI Launcher 2.5.1 or newer
-2. Using the [LUG Helper](https://github.com/starcitizen-lug/lug-helper), install a [recommended runner](#recommended-runners). 
+2. Using the [LUG Helper](https://github.com/starcitizen-lug/lug-helper), switch to a runner from the [recommended list](#recommended-runners). 
 3. Remove all EAC workarounds:
     1. Use the LUG Helper Maintenance menu option to "Update launch script" to remove the previous environment variable workaround.  
        <img height="300" alt="image" src="https://github.com/user-attachments/assets/e0925912-1c89-4eb2-9dae-5dbd3fe9806e" />  
