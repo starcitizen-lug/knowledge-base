@@ -320,7 +320,9 @@ Typically caused by dxvk being broken or not installed
 4. Copy nvngx dlls provided by your nvidia driver into your wine prefix's `system32` folder:
    1. Locate the following dlls in `/usr/lib/nvidia/wine/` or `/usr/lib64/nvidia/wine`: `_nvngx.dll`, `nvngx.dll`, and `nvngx_dlssg.dll`
    2. Copy all three to your wine prefix's `system32` folder. On a default install, that will be `/home/{user}/Games/StarCitizen/drive_c/windows/system32`
-5. Create the fake DLLS that the game requires to exist:
+5. Define the nvngx dlls in your prefix's registry:
+   1. `WINEPREFIX=/home/{user}/Games/StarCitizen wine reg add "HKLM\\Software\\NVIDIA Corporation\\Global\\NGXCore" /v "FullPath" /t REG_SZ /d "C:\\Windows\\System32" /f`
+6. Create the fake DLLS that the game requires to exist:
    1. Navigate inside your wine prefix to the system32 directory. On a default install, that will be `/home/{user}/Games/StarCitizen/drive_c/windows/system32`
    2. Duplicate any existing dll 3 times, for example `acledit.dll`, and rename the copies to these three filenames: `cryptbase.dll`, `devobj.dll`, and `drvstore.dll`
 
