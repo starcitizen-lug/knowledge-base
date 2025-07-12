@@ -47,12 +47,10 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 ### AMD News
 
+> none
+
 
 ### Nvidia News
-
-> [!warning]
-> (Apr 29, 2024) **Vulkan Beta: Game fails to launch**
-> - There is an [issue with LibCUDA](https://github.com/jp7677/dxvk-nvapi/issues/174#issuecomment-2227462795) that prevents vulkan and DLSS from working on linux.
 
 > [!caution]
 > (Oct 9, 2023) **Crash when taking shield damage in-game**
