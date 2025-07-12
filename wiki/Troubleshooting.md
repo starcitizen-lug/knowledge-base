@@ -252,6 +252,7 @@ This is a generic error code representing any issue with logging in to CIG serve
   - verify by setting environment variable `DXVK_HUD=1` and observing the device name in the upper left of the screen
 - Also make sure your GPU drivers (Mesa/nvidia) are up to date and DXVK is enabled/updated.
   - Use the LUG Helper to update dxvk
+- Try switching to a non-staging wine runner from our [recommended runners](Tips-and-Tricks#recommended-runners) list
 
 
 #### Failed to initialize dependencies error
