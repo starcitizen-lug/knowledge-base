@@ -24,7 +24,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > [!important]
 > (July 11, 2025) **Easy Anticheat Enforcement has been Enabled on LIVE**
 > 
-> - Follow the instructions [here](Tips-and-Tricks#easy-anti-cheat).
+> - We're ready! Follow the instructions [here](Tips-and-Tricks#easy-anti-cheat) to fix your existing install. New installs via the Helper handle it automagically.
 
 > [!note]
 > (Oct 28, 2024) **You're trying to run the game on an unsupported Windows OS**
