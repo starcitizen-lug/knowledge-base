@@ -54,7 +54,7 @@ To add a custom wine runner
     - Lutris: `~/.local/share/lutris/runners/wine/`
     - Lutris flatpak: `/.var/app/net.lutris.Lutris/data/lutris/runners/wine/`
     - Wine: `~/Games/star-citizen/runners`
-  - Edit sc-launch.sh to use the runner or select the runner in your game launcher's configuration
+  - Use the LUG Helper maintenance menu to edit sc-launch.sh to use the runner
     ```
      ################################################################
      # Configure the wine binaries to be used
