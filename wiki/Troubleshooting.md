@@ -255,7 +255,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 - Try switching to a non-staging wine runner from our [recommended runners](Tips-and-Tricks#recommended-runners) list
 - Try downgrading to an older DXVK version
   1. Navigate to your `star-citizen` game folder
-  2. In a terminal run `./sc-launch shell`
+  2. In a terminal run `./sc-launch.sh shell`
   3. Run `winetricks dxvk2061` to downgrade it
   4. Then `exit`
 
