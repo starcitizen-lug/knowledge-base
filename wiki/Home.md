@@ -20,6 +20,12 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 ## News
 
 ### Game Updates
+> [!important]
+> (July 19, 2025) **Workaround for crashing on boot [4.2.1-live.9970231] **
+> Install Wine Runner "raw-wine-10.12" from RawFox through LUG-Helper
+> Download "fix.reg" from https://github.com/starcitizen-lug/raw-wine/releases/tag/10.12
+> Open a Terminal and Type in "WINEPREFIX:"/path/to/your/star/citizen/install" wine regedit.exe"
+> In "Registry Editor" click on "Registry" -> "Import Registry File..." and import the Downloaded "fix.reg" file.
 
 > [!important]
 > (July 11, 2025) **Easy Anticheat Enforcement has been Enabled on LIVE**
