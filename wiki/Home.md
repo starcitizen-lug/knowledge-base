@@ -39,6 +39,14 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 ### General News
 
+
+> [!note]
+> (Jul 10, 2024) **Star Citizen requires DirectX feature level of 11.1 as a minimum**
+> 
+> - Wine staging + Latest DXVK can cause issues for nvidia users
+> - Switch to a non-staging wine **OR** downgrade DXVK following [these instructions](Troubleshooting#directx-error-message)
+
+
 > [!note]
 > (Nov 30, 2024) **Joysticks not detected on Wine 9.22 and newer**
 > 
@@ -51,6 +59,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 
 ### Nvidia News
+
 
 > [!caution]
 > (Oct 9, 2023) **Crash when taking shield damage in-game**
