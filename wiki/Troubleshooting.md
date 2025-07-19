@@ -253,6 +253,11 @@ This is a generic error code representing any issue with logging in to CIG serve
 - Also make sure your GPU drivers (Mesa/nvidia) are up to date and DXVK is enabled/updated.
   - Use the LUG Helper to update dxvk
 - Try switching to a non-staging wine runner from our [recommended runners](Tips-and-Tricks#recommended-runners) list
+- Try downgrading to an older DXVK version
+  1. Navigate to your `star-citizen` game folder
+  2. In a terminal run `./sc-launch shell`
+  3. Run `winetricks dxvk2061` to downgrade it
+  4. Then `exit`
 
 
 #### Failed to initialize dependencies error
