@@ -157,11 +157,10 @@ Custom wine runners will not work out of the box if the system wine install does
 
 1. Use RSI Launcher 2.5.1 or newer
 2. Using the [LUG Helper](https://github.com/starcitizen-lug/lug-helper), switch to rawfox [raw-wine-10.12](https://github.com/starcitizen-lug/raw-wine/releases/tag/10.12)
-   - Download the fix.reg file in the raw-wine-10.12 link to your `put/your/path/to/star-citizen` game directory
-   - Navigate to your `star-citizen` directory and in a terminal run `./sc-launch shell`
-   - Run `wine regedit fix.reg`
-   - Type `exit`
-   - Run the game
+   - Edit the wine prefix registry: 
+     - Navigate to your `star-citizen` directory and in a terminal run `./sc-launch shell`
+     - Run `wine reg add 'HKCU\Software\Wine\AppDefaults\StarCitizen.exe' /v HideWineExports /d "Y" /f /reg:64`
+     - Type `exit`
 5. Remove all EAC workarounds:
     1. Use the LUG Helper Maintenance menu option to "Update launch script" to remove the previous environment variable workaround.  
        <img height="300" alt="image" src="https://github.com/user-attachments/assets/e0925912-1c89-4eb2-9dae-5dbd3fe9806e" />  
