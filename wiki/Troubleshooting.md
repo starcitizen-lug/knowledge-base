@@ -86,6 +86,10 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 #### Installing Star Citizen on an NTFS-formatted drive
 - Don't; it probably won't work and will likely only corrupt your game files.
 
+#### Popup warning 64-bit Windows is required
+- Ensure that you are using a [Recommended](Tips-and-Tricks#recommended-distros) 64 bit linux distro
+- Override environment variable WINEARCH=64
+
 ***
 
 
