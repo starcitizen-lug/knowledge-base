@@ -30,7 +30,7 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
 
 
 ## Recommended Runners
-- Wine 9.4 to 10.0 from your package manager
+- Wine 9.4 to 10.0 from your package manager or any runner source
 - [Mactan](https://github.com/mactan-sc/mactan-sc-wine/releases)
   - Managed by the LUG Helper
   - TKG builds with LUG community patches
@@ -43,7 +43,7 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
   - TKG v10.3+ runners are patched to accomodate easy anti-cheat
 - [RawFox](https://github.com/starcitizen-lug/raw-wine/releases)
   - Managed by the LUG Helper
-  - v10.3+ are patched to accomodate easy anti-cheat
+  - recommend v10.0 as of 7-25 its unpatched and works with the C:\ path and enabled EAC
 
 
 ## Add a Wine runner
