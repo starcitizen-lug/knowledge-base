@@ -158,7 +158,7 @@ Custom wine runners will not work out of the box if the system wine install does
 1. Use RSI Launcher 2.5.1 or newer
 2. Using the [LUG Helper](https://github.com/starcitizen-lug/lug-helper), switch to rawfox [raw-wine-10.12](https://github.com/starcitizen-lug/raw-wine/releases/tag/10.12)
    - Edit the wine prefix registry: 
-     - Navigate to your `star-citizen` directory and in a terminal run `./sc-launch.sh shell`
+     - Navigate to your `star-citizen` directory by default this is `$HOME/Games/star-citizen` Use a terminal terminal run `./sc-launch.sh shell`
      - Run
        ```
        wine reg add 'HKCU\Software\Wine\AppDefaults\StarCitizen.exe' /v HideWineExports /d "Y" /f /reg:64
