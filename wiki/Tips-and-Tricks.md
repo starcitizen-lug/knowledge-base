@@ -68,6 +68,15 @@ To add a custom wine runner
 ## Updating DXVK Within a Wine Prefix
 Use the LUG Helper tool's `Update DXVK` button
 
+To downgrade dxvk
+1. Navigate to your `star-citizen` game folder
+2. In a terminal run `./sc-launch.sh shell`
+3. Run `winetricks`
+4. Click "Select the default wineprefix" (verify that the file path in the title bar is your star-citizen game)
+5. Click "Install a Windows DLL or component"
+6. Select an older dxvk such as dxvk 2.6.1 or older and click OK
+
+
 ## NixOS
 On NixOS, to set `vm.max_map_count` and `fs.file-max`, add the following to your NixOS config:
 
