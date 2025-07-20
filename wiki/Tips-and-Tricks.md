@@ -157,17 +157,17 @@ Custom wine runners will not work out of the box if the system wine install does
 
 1. Use RSI Launcher 2.5.1 or newer
 2. Use the [LUG Helper](https://github.com/starcitizen-lug/lug-helper) to switch to a rawfox 10.12 or mactan 10.12 runner
-   - Edit the wine prefix registry: 
-     - Navigate to your `star-citizen` directory by default this is `$HOME/Games/star-citizen` Use a terminal to run
-       ```
-       ./sc-launch.sh shell
-       ```
-     - Then edit the registry with this command
-       ```
-       wine reg add 'HKCU\Software\Wine\AppDefaults\StarCitizen.exe' /v HideWineExports /d "Y" /f /reg:64
-       ```
-     - Type `exit`
-5. Remove all EAC workarounds:
+3. Add a registry key to your prefix. The above runners use this to hide functions from the RSI Launcher that the latest hotfix broke:
+     1. Navigate to your `star-citizen` game directory. By default this is `$HOME/Games/star-citizen`. Use a terminal to run:  
+        ```
+        ./sc-launch.sh shell
+        ```
+     2. Then paste this command:  
+        ```
+        wine reg add 'HKCU\Software\Wine\AppDefaults\StarCitizen.exe' /v HideWineExports /d "Y" /f /reg:64
+        ```
+     3. Type `exit` to exit the wine shell
+4. Remove all EAC workarounds:
     1. Use the LUG Helper Maintenance menu option to "Update launch script" to remove the previous environment variable workaround.  
        <img height="300" alt="image" src="https://github.com/user-attachments/assets/e0925912-1c89-4eb2-9dae-5dbd3fe9806e" />  
        Alternatively, select "Edit launch script" and manually remove the EAC environment variable: `EOS_USE_ANTICHEATCLIENTNULL=1`  
