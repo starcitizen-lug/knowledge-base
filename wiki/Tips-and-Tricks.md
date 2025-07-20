@@ -169,7 +169,7 @@ Custom wine runners will not work out of the box if the system wine install does
         wine reg add 'HKCU\Software\Wine\AppDefaults\StarCitizen.exe' /v HideWineExports /d "Y" /f /reg:64
         ```
      3. Type `exit` to exit the wine shell
-4. Remove all EAC workarounds:
+4. Remove all old EAC workarounds if you have them:
     1. Use the LUG Helper Maintenance menu option to "Update launch script" to remove the previous environment variable workaround.  
        <img height="300" alt="image" src="https://github.com/user-attachments/assets/e0925912-1c89-4eb2-9dae-5dbd3fe9806e" />  
        Alternatively, select "Edit launch script" and manually remove the EAC environment variable: `EOS_USE_ANTICHEATCLIENTNULL=1`  
