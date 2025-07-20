@@ -331,6 +331,15 @@ Typically caused by dxvk being broken or not installed
    export DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE_RENDER_PRESET_SELECTION="render_preset_latest"
    export DXVK_NVAPI_DRS_NGX_DLSS_RR_OVERRIDE_RENDER_PRESET_SELECTION="render_preset_latest"
    ```
+5. To confirm DLSSv4 is working, enable the debug overlay env var and look for it to say `Render Preset: K` or `DLSSv3 v310.x+`
+   ```
+   export DXVK_NVAPI_SET_NGX_DEBUG_OPTIONS="DLSSIndicator=1024,DLSSGIndicator=2"
+   ```
+6. Disable the debug overlay when done by changing the above env var to:
+   ```
+   export DXVK_NVAPI_SET_NGX_DEBUG_OPTIONS="DLSSIndicator=1,DLSSGIndicator=1"
+   ```
+7. Note that nvidia driver v575 may be unstable. v570 is recommended for stability.
 
 
 #### Gamescope not working
