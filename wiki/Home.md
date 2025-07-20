@@ -23,7 +23,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > [!warning]
 > (July 19, 2025) **Latest Hotfix Breaks RSI Launcher**
 > - We've identified an off-by-one bug in the latest hotfix that overwrites a critical part of memory, causing the launcher to freeze/fail. We've made CIG aware of the issue.
-> - While we wait for their fix, our [EAC](Tips-and-Tricks#easy-anti-cheat) instructions have been updated with the appropriate workaround.
+> - To fix this issue, use the latest [Helper](https://github.com/starcitizen-lug/lug-helper/releases/tag/v4.2) to install a LUG-Wine runner.
 
 > [!important]
 > (July 11, 2025) **Easy Anticheat Enforcement has been Enabled on LIVE**
