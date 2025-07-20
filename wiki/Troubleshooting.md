@@ -318,7 +318,7 @@ Typically caused by dxvk being broken or not installed
 
 
 #### DLSS (Deep Learning Super Sampling)
-1. Use the latest [Helper](https://github.com/starcitizen-lug/lug-helper/releases) to install a standard (non-staging) LUG-Wine runner. There is a memory allocation issue with libcuda + wine-staging and Easy Anti-Cheat makes this prohibitively difficult to overcome.
+1. Use the latest [Helper](https://github.com/starcitizen-lug/lug-helper/releases) to install a standard (non-staging) LUG-Wine runner. (For wine-staging: there is a memory allocation issue with libcuda + wine-staging and Easy Anti-Cheat makes this prohibitively difficult to overcome)
 2. Install winetricks `20250102-next` or newer. System winetricks can be updated with `sudo winetricks --self-update`
 3. Install `dxvk` >=2.6.2 and `dxvk_nvapi` >=0.9 into your wine prefix. Replace the WINEPREFIX path with your game location and run:
    1. `WINEPREFIX=/home/{user}/Games/StarCitizen winetricks -f dxvk dxvk_nvapi`
