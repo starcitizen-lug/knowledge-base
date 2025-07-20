@@ -66,7 +66,7 @@ To add a custom wine runner
 ## Updating DXVK Within a Wine Prefix
 Use the LUG Helper tool's `Update DXVK` button
 
-To downgrade dxvk
+**To downgrade dxvk to a previous version:**
 1. Navigate to your `star-citizen` game folder
 2. In a terminal run `./sc-launch.sh shell`
 3. Run `winetricks`
