@@ -318,19 +318,19 @@ Typically caused by dxvk being broken or not installed
 
 
 #### DLSS (Deep Learning Super Sampling)
-1. Use a standard (non-staging) Wine runner. There is a memory allocation issue with libcuda + wine-staging and Easy Anti-Cheat makes this prohibitively difficult to overcome.
-2. Use winetricks `20250102-next` or newer to install `dxvk` and `dxvk_nvapi`. Replace the WINEPREFIX path with your game location and run:
+1. Use the latest [Helper](https://github.com/starcitizen-lug/lug-helper/releases) to install a standard (non-staging) LUG-Wine runner. There is a memory allocation issue with libcuda + wine-staging and Easy Anti-Cheat makes this prohibitively difficult to overcome.
+2. Install winetricks `20250102-next` or newer. System winetricks can be updated with `sudo winetricks --self-update`
+3. Install `dxvk` >=2.6.2 and `dxvk_nvapi` >=0.9 into your wine prefix. Replace the WINEPREFIX path with your game location and run:
    1. `WINEPREFIX=/home/{user}/Games/StarCitizen winetricks -f dxvk dxvk_nvapi`
-3. Enable NVAPI with the following environment variable. This can added to `sc-launch.sh` for Wine installs via the Helper by selecting the edit the launch script option in its Maintenance menu.
-   1. `DXVK_ENABLE_NVAPI=1`
-4. Copy nvngx dlls provided by your nvidia driver into your wine prefix's `system32` folder:
-   1. Locate the following dlls in `/usr/lib/nvidia/wine/` or `/usr/lib64/nvidia/wine`: `_nvngx.dll`, `nvngx.dll`, and `nvngx_dlssg.dll`
-   2. Copy all three to your wine prefix's `system32` folder. On a default install, that will be `/home/{user}/Games/StarCitizen/drive_c/windows/system32`
-5. Define the nvngx dlls in your prefix's registry:
-   1. `WINEPREFIX=/home/{user}/Games/StarCitizen wine reg add "HKLM\\Software\\NVIDIA Corporation\\Global\\NGXCore" /v "FullPath" /t REG_SZ /d "C:\\Windows\\System32" /f`
-6. Create the fake DLLS that the game requires to exist:
-   1. Navigate inside your wine prefix to the system32 directory. On a default install, that will be `/home/{user}/Games/StarCitizen/drive_c/windows/system32`
-   2. Duplicate any existing dll 3 times, for example `acledit.dll`, and rename the copies to these three filenames: `cryptbase.dll`, `devobj.dll`, and `drvstore.dll`
+4. To enable DLSS 4, add the following environment variables. In the Helper's Maintenance menu, select the `Edit launch script` option
+   ```
+   export PROTON_ENABLE_NGX_UPDATER="1" 
+   export DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE="on"
+   export DXVK_NVAPI_DRS_NGX_DLSS_RR_OVERRIDE="on"
+   export DXVK_NVAPI_DRS_NGX_DLSS_FG_OVERRIDE="on"
+   export DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE_RENDER_PRESET_SELECTION="render_preset_latest"
+   export DXVK_NVAPI_DRS_NGX_DLSS_RR_OVERRIDE_RENDER_PRESET_SELECTION="render_preset_latest"
+   ```
 
 
 #### Gamescope not working
