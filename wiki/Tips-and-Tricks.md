@@ -158,11 +158,13 @@ Custom wine runners will not work out of the box if the system wine install does
 1. Use RSI Launcher 2.5.1 or newer
 2. Use the [LUG Helper](https://github.com/starcitizen-lug/lug-helper) to switch to a rawfox 10.12 or mactan 10.12 runner
 3. Add a registry key to your prefix. The above runners use this to hide functions from the RSI Launcher that the latest hotfix broke:
-     1. Navigate to your `star-citizen` game directory. By default this is `$HOME/Games/star-citizen`. Use a terminal to run:  
+     1. If you installed the game via the Helper's native wine method, navigate to your `star-citizen` game directory (by default this is `$HOME/Games/star-citizen`) and use a terminal to run:  
         ```
         ./sc-launch.sh shell
         ```
-     2. Then paste this command:  
+        
+        Lutris Users: If you use a third party launcher (ie Lutris), you'll need to prepend `WINEPREFIX=/path/to/prefix` to the below command to run it in the correct prefix.
+     2. Then paste and run this command:  
         ```
         wine reg add 'HKCU\Software\Wine\AppDefaults\StarCitizen.exe' /v HideWineExports /d "Y" /f /reg:64
         ```
