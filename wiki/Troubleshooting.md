@@ -276,10 +276,10 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 
 #### Non-US keyboard keys not working
-- Set the `LANG=` environment variable. For example, `LANG=de_DE`
-- Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) and use the LUG Helper "manage runners" options to select a recent **staging** wine
-- Use the LUG Helper Maintenance menu `Open Wine prefix configuration` button to run winecfg
-- Select your language from the list and enable scancode auto-detection
+1. Set the `LANG=` environment variable. For example, `LANG=de_DE`
+2. Use the LUG Helper to select a **staging** wine. Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for wine info 
+3. Use the LUG Helper Maintenance menu `Open Wine prefix configuration` button to run winecfg
+4. Select your language from the list and enable scancode auto-detection
     ![staging_input_menu](https://github.com/user-attachments/assets/a525f310-3a2a-49b1-bb6e-c07875e15608)
 
 
