@@ -44,25 +44,6 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
   - recommend v10.0 as of 7-25 its unpatched and works with the C:\ path and enabled EAC
 
 
-## How to Run the LUG Helper
-1. Download the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) .tar.gz archive
-2. Extract the .tar.gz archive
-3. To run `lug-helper.sh` from a terminal (recommended):
-    1. Open your terminal and use `cd /path/to/extracted/archive` to navigate to the location
-    2. List files with the `ls` command
-    3. Once you are in the directory containing the `lug-helper.sh` script, run it by typing `./lug-helper.sh`
-4. Alternatively, to run `lug-helper.sh` from your file manager:
-    1. Navigate to the extracted archive location
-    2. Right click on `lug-helper.sh` and select Run as a Program
-
-
-## How to edit the launch script
-1. Run the [LUG Helper](#how-to-run-the-lug-helper) and select the Maintenance and Troubleshooting menu
-2. Choose the option to `Edit launch script`  
-   <img height="350" alt="image" src="https://github.com/user-attachments/assets/6f30b732-3406-4c59-b23b-32bbccacc5ae" />
-3. Alternatively, locate the `sc-launch.sh` file in your Wine prefix directory (by default, `~/Games/star-citizen/sc-launch.sh`) and open it for editing.
-
-
 ## How to add a Wine runner
 - Select the option to "Manage Wine runners" in the LUG Helper and it will handle it for you.
 - Alternatively, to manually add a custom wine runner:
@@ -83,6 +64,26 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
      export wine_path="/home/you-username-goes-here/Games/star-citizen/runners/wine-tkg-ntsync-git-10.3.r0.g3364df08cb6-327-x86_64/bin"
     ```
 
+
+## How to Run the LUG Helper
+1. Download the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) .tar.gz archive
+2. Extract the .tar.gz archive
+3. To run `lug-helper.sh` from a terminal (recommended):
+    1. Open your terminal and use `cd /path/to/extracted/archive` to navigate to the location
+    2. List files with the `ls` command
+    3. Once you are in the directory containing the `lug-helper.sh` script, run it by typing `./lug-helper.sh`
+4. Alternatively, to run `lug-helper.sh` from your file manager:
+    1. Navigate to the extracted archive location
+    2. Right click on `lug-helper.sh` and select Run as a Program
+
+
+## How to edit the launch script
+1. Run the [LUG Helper](#how-to-run-the-lug-helper) and select the Maintenance and Troubleshooting menu
+2. Choose the option to `Edit launch script`  
+   <img height="350" alt="image" src="https://github.com/user-attachments/assets/6f30b732-3406-4c59-b23b-32bbccacc5ae" />
+3. Alternatively, locate the `sc-launch.sh` file in your Wine prefix directory (by default, `~/Games/star-citizen/sc-launch.sh`) and open it for editing.
+
+
 ## Updating DXVK Within a Wine Prefix
 Use the LUG Helper tool's `Update DXVK` button
 
@@ -93,8 +94,6 @@ Use the LUG Helper tool's `Update DXVK` button
 4. Click "Select the default wineprefix" (verify that the file path in the title bar is your star-citizen game)
 5. Click "Install a Windows DLL or component"
 6. Select an older dxvk such as dxvk 2.6.1 or older and click OK
-
-
 
 
 
