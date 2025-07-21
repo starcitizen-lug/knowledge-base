@@ -22,7 +22,7 @@
 ## After Installation
 
 > [!important]
-> - Set your [keyboard layout](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#non-us-keyboard-keys-not-working) to resolve issues with certain buttons ` [, ], and ~ `
+> - For non-US keyboards, set your [keyboard layout](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#non-us-keyboard-keys-not-working) to resolve issues with certain buttons ` [, ], and ~ `
 > - Wayland users: See [required workarounds](Troubleshooting#mousecursor-warp-issues-and-view-snapping-in-interaction-mode) to resolve mouse cursor and view snapping issues.
 > - Nvidia users: See [troubleshooting guide](Troubleshooting#severe-frame-drops) to resolve severe frame drop issues.
 > - Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for necessary workarounds, Nvidia gpu driver problems, and other important issues.
