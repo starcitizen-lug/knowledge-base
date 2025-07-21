@@ -319,11 +319,13 @@ Typically caused by dxvk being broken or not installed
 
 
 #### DLSS (Deep Learning Super Sampling)
-1. Use the latest [Helper](https://github.com/starcitizen-lug/lug-helper/releases) to install a standard (non-staging) LUG-Wine runner. (For wine-staging: there is a memory allocation issue with libcuda + wine-staging and Easy Anti-Cheat makes this prohibitively difficult to overcome)
+1. Use the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases) to install a standard (non-staging) LUG-Wine runner. (For wine-staging: there is a memory allocation issue with libcuda + wine-staging and Easy Anti-Cheat makes this prohibitively difficult to overcome)
 2. Install winetricks `20250102-next` or newer. System winetricks can be updated with `sudo winetricks --self-update`
-3. Install `dxvk` >=2.6.2 and `dxvk_nvapi` >=0.9 into your wine prefix. Replace the WINEPREFIX path with your game location and run:
-   1. `WINEPREFIX=/home/{user}/Games/StarCitizen winetricks -f dxvk dxvk_nvapi`
-4. To enable DLSS 4, add the following environment variables. In the Helper's Maintenance menu, select the `Edit launch script` option
+3. Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) for your prefix using the `sc-launch.sh` script.
+4. Install `dxvk` >=2.6.2 and `dxvk_nvapi` >=0.9 into your wine prefix with the following command:
+   1. `winetricks -f dxvk dxvk_nvapi`
+   2. Note: If you do not use the Helper's Wine maintenance shell, you'll need to prepend `WINEPREFIX=/path/to/starcitizen/prefix` to the above command!
+5. To enable DLSS 4, add the following environment variables. In the Helper's Maintenance menu, select the `Edit launch script` option
    ```
    export PROTON_ENABLE_NGX_UPDATER="1" 
    export DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE="on"
@@ -332,15 +334,15 @@ Typically caused by dxvk being broken or not installed
    export DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE_RENDER_PRESET_SELECTION="render_preset_latest"
    export DXVK_NVAPI_DRS_NGX_DLSS_RR_OVERRIDE_RENDER_PRESET_SELECTION="render_preset_latest"
    ```
-5. To confirm DLSSv4 is working, enable the debug overlay env var and look for it to say `Render Preset: K` or `DLSSv3 v310.x+`
+6. To confirm DLSSv4 is working, enable the debug overlay env var and look for it to say `Render Preset: K` or `DLSSv3 v310.x+`
    ```
    export DXVK_NVAPI_SET_NGX_DEBUG_OPTIONS="DLSSIndicator=1024,DLSSGIndicator=2"
    ```
-6. Disable the debug overlay when done by changing the above env var to:
+7. Disable the debug overlay when done by changing the above env var to:
    ```
    export DXVK_NVAPI_SET_NGX_DEBUG_OPTIONS="DLSSIndicator=1,DLSSGIndicator=1"
    ```
-7. Note that nvidia driver v575 may be unstable. v570 is recommended for stability.
+8. Note that nvidia driver v575 may be unstable. v570 is recommended for stability.
 
 
 #### Gamescope not working
