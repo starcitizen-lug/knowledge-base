@@ -57,7 +57,7 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
 
 
 ## How to edit the launch script
-1. Run the [LUG Helper]() and select the Maintenance and Troubleshooting menu
+1. Run the [LUG Helper](#how-to-run-the-lug-helper) and select the Maintenance and Troubleshooting menu
 2. Choose the option to `Edit launch script`  
    <img height="350" alt="image" src="https://github.com/user-attachments/assets/6f30b732-3406-4c59-b23b-32bbccacc5ae" />
 3. Alternatively, locate the `sc-launch.sh` file in your Wine prefix directory (by default, `~/Games/star-citizen/sc-launch.sh`) and open it for editing.
@@ -111,14 +111,6 @@ boot.kernel.sysctl = {
 
 Custom wine runners will not work out of the box if the system wine install does not work ( `wineWow64Packages.stableFull` recommended) try `wine-astral` from [nix-citizen](https://github.com/LovingMelody/nix-citizen) or one of the [Alternative Installation](Alternative-Installations##nix-installation) methods.
 
-## RSI Launcher 2.0
-- Requires standard Wine 9.4+ or Proton GE 9-13+ runner
-  - Recent Wine versions can be easily installed using the [LUG Helper](https://github.com/starcitizen-lug/lug-helper)
-- Remove any `powershell.exe` dll override
-- If using standard Wine, winetricks **20250102** or newer is required to install powershell
-  1. navigate to your game prefix directory `~/Games/star-citizen`
-  2. Use the LUG Helper's Maintence menu `Install Powershell` button
-- The 2.0 Launcher may need to be installed manually. See [below](#rsi-launcher-manual-update) for instructions
 
 
 ## RSI Launcher Manual Update
