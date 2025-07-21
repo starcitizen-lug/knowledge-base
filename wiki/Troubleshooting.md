@@ -324,7 +324,7 @@ Typically caused by dxvk being broken or not installed
 3. Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) for your prefix using the `sc-launch.sh` script.
 4. Install `dxvk` >=2.6.2 and `dxvk_nvapi` >=0.9 into your wine prefix with the following command:
    1. `winetricks -f dxvk dxvk_nvapi`
-   2. Note: If you do not use the Helper's Wine maintenance shell, you'll need to prepend `WINEPREFIX=/path/to/starcitizen/prefix` to the above command!
+   2. Note: If you do not use the Helper's Wine maintenance shell, you'll need to prepend `WINEPREFIX=/path/to/star-citizen/prefix` to the above command!
 5. To enable DLSS 4, add the following environment variables. In the Helper's Maintenance menu, select the `Edit launch script` option
    ```
    export PROTON_ENABLE_NGX_UPDATER="1" 
