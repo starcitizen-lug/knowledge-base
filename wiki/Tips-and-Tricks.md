@@ -95,8 +95,7 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
 Use the [LUG Helper](#how-to-run-the-lug-helper) tool's `Update DXVK` button
 
 **To downgrade dxvk to a previous version:**
-1. Navigate to your `star-citizen` game folder
-2. In a terminal run `./sc-launch.sh shell`
+1. Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) for your prefix using the `sc-launch.sh` script.
 3. Run `winetricks`
 4. Click "Select the default wineprefix" (verify that the file path in the title bar is your star-citizen game)
 5. Click "Install a Windows DLL or component"
