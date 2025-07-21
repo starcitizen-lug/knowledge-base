@@ -84,6 +84,13 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
 3. Alternatively, locate the `sc-launch.sh` file in your Wine prefix directory (by default, `~/Games/star-citizen/sc-launch.sh`) and open it for editing.
 
 
+## How to get a Wine maintenance shell using the launch script
+1. In a terminal, navigate to your Star Citizen wine prefix directory. By default, this is `~/Games/star-citizen`
+2. Verify that `sc-launch.sh` exists.
+3. Run `./sc-launch.sh shell` to enter a prepared shell environment for your prefix. All Wine prefix environment variables will be set for you.
+4. Type `exit` when done.
+
+
 ## Updating DXVK Within a Wine Prefix
 Use the [LUG Helper](#how-to-run-the-lug-helper) tool's `Update DXVK` button
 
