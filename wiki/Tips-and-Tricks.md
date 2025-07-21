@@ -212,12 +212,6 @@ Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_man
 - Enable HDR with flag `--hdr-enabled`
 
 
-## AMD FidelityFX Super Resolution (FSR) upscaling
-Use the in-game CIG TSR, AMD FSR, or NVIDIA DLSS options, external tools are not recommended
-
-Set environment variable `WINE_FULLSCREEN_FSR=1`. Then, in the Star Citizen graphics settings, set the game to fullscreen and your desired resolution and it will be FSR scaled up. We recommend restarting the game after changing its resolution for better performance.
-
-
 ## Automatically Disable/Re-Enable Mouse Acceleration
 Lutris can automatically toggle on/off a flat mouse acceleration profile with the following configuration.
 
