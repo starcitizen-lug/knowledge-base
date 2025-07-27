@@ -30,6 +30,16 @@ The following game settings can help improve framerates:
 - Set `Motion Blur` to `Off`
 - Set `Sharpening` to `100`
 
+## ESync/FSync/NTSync
+- Which will work best depends on your specific hardware. You may experiment with the following:
+- If these environment variables are set, Wine will automatically choose the best option between esync or fsync:
+  ```
+  export WINEESYNC=1
+  export WINEFSYNC=1
+  ```
+- NTSync requires kernel 6.14+ and a [patched wine runner](https://github.com/starcitizen-lug/lug-wine). No env vars are needed.
+
+
 ## Feral GameMode
 
 Gamemode can help improve performance by applying OS-level performance tweaks as the game is launched. Search for `gamemode` in your Distro's repos. Refer to the Gamemode [repository](https://github.com/FeralInteractive/gamemode) for configuration instructions
