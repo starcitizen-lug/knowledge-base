@@ -147,6 +147,9 @@ Custom wine runners will not work out of the box if the system wine install does
 # r_width = 1920
 # r_height = 1080
 
+#use software cursor
+pl_pit.forceSoftwareCursor = 1
+
 # set borderless
 # r_WindowMode = 2
 
