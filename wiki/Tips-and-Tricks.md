@@ -212,6 +212,11 @@ Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_man
 
 
 ## Gamescope
+- Use the LUG Helper to [edit your launch script](#how-to-edit-the-launch-script)
+- Prepend your gamescope arguments to the launch line at the bottom of the launch script. For example:
+  ```
+  gamescope --hdr-enabled -W 2560 -H 1440 --force-grab-cursor "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" > "$launch_log" 2>&1
+  ```
 - Enable HDR with flag `--hdr-enabled`
 
 
