@@ -276,6 +276,11 @@ This is a generic error code representing any issue with logging in to CIG serve
 - Make sure DXVK is installed and enabled
 
 
+#### Launcher crashes/hangs after entering login info when running Niri WM and/or xwayland-satellite
+- See [upstream issue report](https://github.com/Supreeeme/xwayland-satellite/issues/189)
+- Workarounds: Use xwayland-run, [gamescope](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#gamescope), an alternative to xwayland-satellite, or an alternative compositor.
+
+
 #### Non-US keyboard keys not working
 1. Use the Lug Helper maintenance menu to edit the launch script to set the `export LANG=` environment variable. For example:
     ```
