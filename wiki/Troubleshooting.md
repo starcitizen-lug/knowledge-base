@@ -277,11 +277,19 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 
 #### Non-US keyboard keys not working
-1. Use the Lug Helper maintenance menu to edit the launch script to set the `LANG=` environment variable. For example, `LANG=de_DE`
-2. Use the LUG Helper to select a **staging** wine. Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for wine info 
-3. Use the LUG Helper Maintenance menu `Open Wine prefix configuration` button to run winecfg
-4. Select your language from the list and enable scancode auto-detection
-    ![staging_input_menu](https://github.com/user-attachments/assets/a525f310-3a2a-49b1-bb6e-c07875e15608)
+1. Use the Lug Helper maintenance menu to edit the launch script to set the `export LANG=` environment variable. For example:
+    ```
+    ################################################################
+    # Configure the environment
+    # Add additional environment variables here as needed
+    ################################################################
+    export LANG=de_DE
+    ```
+3. Use the LUG Helper's `Manage Runners` option to select a wine with **staging** in the name. Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for wine info 
+4. Use the LUG Helper Maintenance menu `Open Wine prefix configuration` button to run winecfg
+5. Select your language from the list and enable scancode auto-detection
+   <img width="1458" height="484" alt="staging input menu" src="https://github.com/user-attachments/assets/94908f79-682d-42ac-89fc-4564f09c3b7c" />
+
 
 
 ***
