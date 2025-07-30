@@ -288,8 +288,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 3. Use the LUG Helper's `Manage Runners` option to select a wine with **staging** in the name. Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for wine info 
 4. Use the LUG Helper Maintenance menu `Open Wine prefix configuration` button to run winecfg
 5. Select your language from the list and enable scancode auto-detection
-   <img width="1458" height="484" alt="staging input menu" src="https://github.com/user-attachments/assets/94908f79-682d-42ac-89fc-4564f09c3b7c" />
-
+ ![staging_input_menu](https://github.com/user-attachments/assets/94908f79-682d-42ac-89fc-4564f09c3b7c)
 
 
 ***
