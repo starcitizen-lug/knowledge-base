@@ -190,10 +190,15 @@ pl_pit.forceSoftwareCursor = 1
 
 
 ## Wine Wayland
-- Experimental Wine Wayland (Non-staging Wine 9.22 or newer)
-  - Add environment variable `DISPLAY=` to unset it to empty
+
+> [!note]
+> RSI Launcher buttons may be offset, resize the window or use tab/shift+tab controls for the launcher
+
+- Experimental Wine Wayland
+  - Use a Wine without **staging** in the name
+  - Add environment variable `export DISPLAY=` to unset it to empty
   - Add RSI Launcher.exe argument ` --in-process-gpu`
-- Experimental Proton Wayland (GE-Proton10-1 or newer)
+- Experimental Proton Wayland
   - Add environment variable `PROTON_ENABLE_WAYLAND=1`
   - Add RSI Launcher.exe argument ` --in-process-gpu`
  
