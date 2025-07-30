@@ -189,7 +189,7 @@ pl_pit.forceSoftwareCursor = 1
     5. If you have any other EAC workarounds in place, remove them as well.
 
 
-## Wayland
+## Wine Wayland
 - Experimental Wine Wayland (Non-staging Wine 9.22 or newer)
   - Add environment variable `DISPLAY=` to unset it to empty
   - Add RSI Launcher.exe argument ` --in-process-gpu`
