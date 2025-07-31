@@ -49,6 +49,11 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 - Be sure you haven't changed the default install path in the RSI Launcher settings. If you wish to install the game elsewhere, put the entire wine prefix there instead.
 
 
+#### Wine prefix creation failed
+- LUG Helper install log shows error similar to `warning: WINE is /path/to/.../bin/wine, which is neither on the path nor an executable file`
+- To fix, make sure the mount point is not marked `noexec`
+
+
 #### Launcher installation hangs at Updating Game Content
 - The Launcher sometimes hangs during this phase of the install process
 - Completely quit the launcher, ensuring no lingering wine processes remain, then verify files
