@@ -75,6 +75,7 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
 4. Alternatively, to run `lug-helper.sh` from your file manager:
     1. Navigate to the extracted archive location
     2. Right click on `lug-helper.sh` and select Run as a Program
+5. If you don't see a GUI when running the Helper and want the optional GUI, install Zenity from your package manager
 
 
 ## How to edit the launch script
