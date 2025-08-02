@@ -126,7 +126,7 @@ Custom wine runners will not work out of the box if the system wine install does
 2. Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) for your prefix using the `sc-launch.sh` script.
 3. Then run the following command:
     ```
-    WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" wine ~/path/to/your/installer /S
+    WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" wine "~/Downloads/RSI Launcher-Setup-2.6.0.exe" /S
     ```
 
 
