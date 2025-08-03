@@ -1,3 +1,8 @@
+---
+title: "Tips and Tricks"
+nav_order: 5
+---
+
 ## Recommended Distros
 We strongly recommend choosing a distro that has up-to-date packages and a solid maintenance reputation.  
 
@@ -77,7 +82,7 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
     1. Navigate to the extracted archive location
     2. Right click on `lug-helper.sh` and select Run as a Program
 
-> [!tip]
+{: .highlight }
 > The Helper uses Zenity for its optional GUI. If you don't see the GUI and want it, install Zenity from your package manager.
 
 
@@ -176,8 +181,8 @@ pl_pit.forceSoftwareCursor = 1
 
 
 ## Easy Anti-Cheat
-> [!important]
-> Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for any wine changes
+{: .important-title }
+> Check the [latest news](../#general-news) for any wine changes
 
 1. Use RSI Launcher 2.5.1 or newer
 2. Use the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper) to switch to a LUG-Wine runner
@@ -195,7 +200,7 @@ pl_pit.forceSoftwareCursor = 1
 
 ## Wine Wayland
 
-> [!note]
+{: .highlight }
 > RSI Launcher buttons may be offset, resize the window or use tab/shift+tab controls for the launcher
 
 - Experimental Wine Wayland

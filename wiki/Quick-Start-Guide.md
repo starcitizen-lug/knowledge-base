@@ -1,5 +1,10 @@
+---
+title: "Quick-Start Guide"
+nav_order: 2
+---
+
 ## Prerequisites
-> [!tip]
+{: .highlight }
 > New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 
 1. Install Wine **v9.4** or newer from your distro's repos. If wine is not available from your distro's repos, you may follow the instructions on the [winehq website](https://gitlab.winehq.org/wine/wine/-/wikis/Download).
@@ -9,7 +14,7 @@
     - We do not recommend an HDD or NTFS format
 
 ## Installation Steps
-> [!tip]
+{: .highlight }
 > If using an immutable distro (ie. Bazzite, Silverblue), we recommend the [flatpak installation](Alternative-Installations#flatpak-installation).
 
 1. Download our [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) (Select the `.tar.gz`. Distro packages are listed [here](https://github.com/starcitizen-lug/lug-helper#installation))
@@ -21,11 +26,11 @@
 
 ## After Installation
 
-> [!important]
-> - For non-US keyboards, set your [keyboard layout](https://github.com/starcitizen-lug/knowledge-base/wiki/Troubleshooting#non-us-keyboard-keys-not-working) to resolve issues with certain buttons ` [, ], and ~ `
+{: .important-title }
+> - For non-US keyboards, set your [keyboard layout](Troubleshooting#non-us-keyboard-keys-not-working) to resolve issues with certain buttons ` [, ], and ~ `
 > - Wayland users: See [required workarounds](Troubleshooting#mousecursor-warp-issues-and-view-snapping-in-interaction-mode) to resolve mouse cursor and view snapping issues.
 > - Nvidia users: See [troubleshooting guide](Troubleshooting#severe-frame-drops) to resolve severe frame drop issues.
-> - Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for necessary workarounds, Nvidia gpu driver problems, and other important issues.
+> - Check our [latest news](../#news) for necessary workarounds, Nvidia gpu driver problems, and other important issues.
 
-> [!note]
-> - Questions or Problems? Check our [Troubleshooting Guide](Troubleshooting) or ask for help in one of our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)!
+{: .highlight }
+> - Questions or Problems? Check our [Troubleshooting Guide](Troubleshooting) or ask for help in one of our [social channels](/knowledge-base)!

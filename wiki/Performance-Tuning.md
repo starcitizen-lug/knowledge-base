@@ -1,3 +1,8 @@
+---
+title: "Performance Tuning"
+nav_order: 4
+---
+
 ## LUG Helper
 We have a helper script which can help you manage and optimize Star Citizen on Linux. It can check/set recommended settings such as vm.max_map_count and the system's open file descriptors limit, manage runners and launch wine prefix configuration tools. It can be downloaded from:
 
@@ -54,7 +59,7 @@ Zram stores swap in RAM using on-the-fly compression which can improve game perf
 - For systems with 16GB RAM, we recommend all 16GB configured for zram with at least an 8GB swap file.
 - For systems with 32GB RAM, we recommend configuring all 32GB for zram with at least a couple extra GB in a swap file.
 
-> [!tip]
+{: .highlight }
 > When using zram, zswap needs to be [disabled](https://wiki.archlinux.org/title/Zswap#Toggling_zswap).
 > See the Arch Wiki for [zram setup](https://wiki.archlinux.org/title/Zram#Using_zram-generator) instructions that should work for most distros.
 > Also see the Arch Wiki for [swap file creation](https://wiki.archlinux.org/title/Swap#Swap_file_creation) instructions.
@@ -63,7 +68,7 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 - For 16GB RAM: 24GB swap
 - For 32GB RAM: 8GB swap
 
-> [!important]
+{: .important-title }
 > More swap should be configured if you intend to run background applications while playing the game.
 
 ## Picom/Compton Compositors

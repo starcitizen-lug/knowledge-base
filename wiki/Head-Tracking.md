@@ -1,3 +1,8 @@
+---
+title: "Head Tracking"
+nav_order: 7
+---
+
 ## Head Tracking Hardware
 
 #### Hardware our Penguins have had success with
@@ -20,7 +25,7 @@
 
 
 ## Opentrack Configuration
-> [!important]
+{: .important-title }
 > `GE Proton (Latest)` is the new umu Proton runner. The official Opentrack builds do not currently work with umu. We have reactivated the [opentrack-StarCitizen repo](https://github.com/Priton-CE/opentrack-StarCitizen) to provide this support. Our changes have been merged with the official [Opentrack Master branch](https://github.com/opentrack/opentrack/tree/master). Note that git builds of Opentrack may be less stable than our opentrack-StarCitizen until the next stable release of Opentrack.
 > - For `system wine`, `wine-staging`, or `wine-GE-Proton8-x`, use an official Opentrack build version 2023.1.0 or later.
 > - For any `GE-Proton` or `Proton` Runner, follow the [build instructions on our opentrack-StarCitizen repo](https://github.com/Priton-CE/opentrack-StarCitizen?tab=readme-ov-file#building-from-source). Alternatively, follow the [build instructions for Opentrack Master](https://github.com/opentrack/opentrack/wiki/Building-on-Linux) or use the [Opentrack-git AUR package](https://aur.archlinux.org/packages/opentrack-git). When running opentrack, include environment variable `PROTON_VERB="runinprefix"`
@@ -46,7 +51,7 @@ Configure Star Citizen's head tracking options under `Comms, FOIP & Head Trackin
 1. Set `Head Tracking - General - Source` to `TrackIR`
 2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`
 
-> [!note]
+{: .highlight }
 > - May not work with Game Launchers in Flatpak
 > - If compiling from source, make sure `SDK_WINE` is set
 > - If compiling our custom Opentrack from source, make sure you are on the `wine-extended-proton` branch before building
@@ -68,13 +73,13 @@ Other distros:
     - If you're having trouble, some videos are provided by [bekopharm](https://linux.simpit.dev/systems/opentrack/)
 4. Follow the configuration instructions [above](#opentrack-configuration).
 5. Select `neuralnet tracker` as input.
-> [!note]
+{: .highlight }
 > Do not remove ONNX Runtime after you are done. Opentrack won't have Neuralnet as input if you do remove it.
 
 ## Tobii Eye Tracker 5 VM Passthrough
 Tobii Game Hub can send tracking data to Opentrack in a Windows VM by passing through the Tobii usb device from your linux host. Tracking can be forwarded to Opentrack on your host allowing you to use your Tobii Eye Tracker 5 with Star Citizen on Linux.
 
-> [!important]
+{: .important-title }
 > - You will need spare CPU cores and RAM (4GB by default) to run the Windows VM at the same time as the game. Tested on a 3950X the CPU impact is negligable but you may experience issues on slower hardware.
 > - Eye tracking with Opentrack can only be used for head movement and not for targeting.
 

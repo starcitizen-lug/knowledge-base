@@ -1,0 +1,18 @@
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        console.log("theme select");
+        const savedTheme = jtd.getTheme();
+        if (!savedTheme) {
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            jtd.setTheme(prefersDark ? "dark" : "light");
+        } else {
+            jtd.setTheme(savedTheme);
+        }
+
+        document.getElementById("theme-toggle").addEventListener("click", () => {
+            const newTheme = jtd.getTheme() === "dark" ? "light" : "dark";
+            jtd.setTheme(newTheme);
+            localStorage.setItem("jtd-theme", newTheme);
+        });
+    });
+</script>

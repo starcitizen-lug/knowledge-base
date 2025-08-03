@@ -1,5 +1,10 @@
+---
+title: "Troubleshooting"
+nav_order: 3
+---
+
 ## ⚠ Recent news/issues
-- Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
+- Check our [latest news](../#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
 
 ## Troubleshooting Steps
 
@@ -8,8 +13,8 @@
 2. Make sure all prerequisites from the [Quick Start Guide](Quick-Start-Guide) are satisfied on your system.
 3. Kill all wine processes and re-launch a fresh instance of the game.
    Navigate to `~/Games/star-citizen` and run the following in your terminal `./sc-launch.sh shell` then `wineserver -k`
-5. Look for your issue in the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
-6. Use the lug helper to get the latest wine runner. Be sure to check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for recommendations
+5. Look for your issue in the [latest news](../#news)
+6. Use the lug helper to get the latest wine runner. Be sure to check the [latest news](../#general-news) for recommendations
 7. Try a different wine version. If using wine-staging, try standard wine. Try wine-staging if using standard wine.
 8. Look for your issue/error in the categories on this page. Refer to the steps directly below to gather logs.
 
@@ -22,7 +27,7 @@
 
 
 #### Community Help
-If this page doesn't help resolve your issue, you may ask for help on our [social channels](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins)
+If this page doesn't help resolve your issue, you may ask for help on our [social channels](/knowledge-base)
 
 
 ## Contents
@@ -119,11 +124,11 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 #### Game immediately crashes after clicking 'Launch'
 - Start by checking the Wine output and/or "game.log" file
 
-- See [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for information on recent stability issues
+- See [latest news](../#general-news) for information on recent stability issues
 
 - Possible cause: DXVK
   - Make sure DXVK is installed and enabled
-  - Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) and Nvidia troubleshooting section [below](#-nvidia) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
+  - Nvidia users, check our [latest news](../#news) and Nvidia troubleshooting section [below](#-nvidia) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 
 - Possible cause: Incorrect Vulkan device
   - If you have Intel integrated graphics and see `VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json` in your log, then change the Vulkan device to use your discrete GPU:
@@ -152,7 +157,7 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 #### Crash or black screen while using Vulkan beta renderer
 - Possible error similar to: `Fatal Error: Acquire Next Image Failed` or `Main thread considered to be deadlocked`
-- Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for recommendations for your graphics card
+- Check the [latest news](../#news) for recommendations for your graphics card
 - Go back to DX11 by using the Delete Shaders option in the RSI Launcher > Settings > Games > {LIVE,PTU} > Delete  Local Settings > Shaders folder
 
 
@@ -180,7 +185,7 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 #### Game hangs at splash screen or black/transparent window after clicking 'Launch'
 - Make sure DXVK is installed. Use the [LUG Helper](https://github.com/starcitizen-lug/lug-helper) to install it
-- Nvidia users, check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
+- Nvidia users, check our [latest news](../#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 
 
 #### Launcher freezes within a few seconds of opening
@@ -205,7 +210,7 @@ Other potential workarounds:
 - Non-staging Wine Wayland helps mitigate this for some, but note that it's still experimental and YMMV
   - Add environment variable `DISPLAY=` to unset it to empty
   - Add RSI Launcher.exe argument ` --in-process-gpu`
-- [Proton](https://github.com/starcitizen-lug/knowledge-base/wiki/Alternative-Installations#proton-installation) helps mitigate this for some
+- [Proton](Alternative-Installations#proton-installation) helps mitigate this for some
 - Gamescope helps mitigate this for some
   - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix below](#gamescope-not-working)
   - Install and enable gamescope. Set these options for your display resolution `-W 2560 -H 1440 --force-grab-cursor`
@@ -260,7 +265,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 #### Required Vulkan Extensions are missing error / poor performance compared to windows / error code 3
 - Check if you have amdvlk installed by running `vulkaninfo --summary`. The vulkaninfo utility is part of the package `vulkan-tools` on most distros. You can also check your package manager.
 - If your system is using amdvlk, uninstall that package and replace it with `vulkan-radeon`.
-- For additional help with this, ask in our [Discord](https://github.com/starcitizen-lug/knowledge-base/wiki#welcome-space-penguins) tech support channel.
+- For additional help with this, ask in our [Discord](/knowledge-base) tech support channel.
 
 
 #### DirectX error message
@@ -287,13 +292,13 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 
 #### Black/transparent window after clicking 'Launch'
-- Check our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
+- Check our [latest news](../#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 - Make sure DXVK is installed and enabled
 
 
 #### Launcher crashes/hangs after entering login info when running Niri WM and/or xwayland-satellite
 - See [upstream issue report](https://github.com/Supreeeme/xwayland-satellite/issues/189)
-- Workarounds: Use xwayland-run, [gamescope](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#gamescope), an alternative to xwayland-satellite, or an alternative compositor.
+- Workarounds: Use xwayland-run, [gamescope](Tips-and-Tricks#gamescope), an alternative to xwayland-satellite, or an alternative compositor.
 
 
 #### Non-US keyboard keys not working
@@ -305,7 +310,7 @@ This is a generic error code representing any issue with logging in to CIG serve
     ################################################################
     export LANG=de_DE
     ```
-3. Use the LUG Helper's `Manage Runners` option to select a wine with **staging** in the name. Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for wine info 
+3. Use the LUG Helper's `Manage Runners` option to select a wine with **staging** in the name. Check the [latest news](../#general-news) for wine info 
 4. Use the LUG Helper Maintenance menu `Open Wine prefix configuration` button to run winecfg
 5. Select your language from the list and enable scancode auto-detection
  ![staging_input_menu](https://github.com/user-attachments/assets/94908f79-682d-42ac-89fc-4564f09c3b7c)
@@ -319,7 +324,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 ## 💚 Nvidia
 
 #### Current known issues
-- See the Nvidia section of our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news) for the ways in which Nvidia is being special today.
+- See the Nvidia section of our [latest news](../#news) for the ways in which Nvidia is being special today.
 
 #### Crash when taking shield damage in-game
 - There is a shield rendering bug that causes the game to crash. It seems to affect 1000 series cards.
@@ -386,7 +391,7 @@ Typically caused by dxvk being broken or not installed
 ## 💖 AMD
 
 #### Current known issues
-- See the AMD section of our [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#news)
+- See the AMD section of our [latest news](../#news)
 
 #### Vulkan Beta: Bright flickering lights at edges of in-game display panels
 - To fix: Add environment variable `radv_zero_vram=true`
