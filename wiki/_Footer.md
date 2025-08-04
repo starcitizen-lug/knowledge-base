@@ -1,1 +1,0 @@
-[Star Citizen Linux Users Group](https://robertsspaceindustries.com/orgs/LUG)
