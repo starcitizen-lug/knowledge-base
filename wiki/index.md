@@ -32,7 +32,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > - Switch to a non-staging wine **OR** downgrade DXVK following [these instructions](Troubleshooting#directx-error-message)
 
 
-{: .note-title }
+{: .note }
 > (Nov 30, 2024) **Joysticks not detected on Wine 9.22 and newer**
 > 
 > - Wine 9.22+ has enabled HIDRAW by default for VKB and Virpil devices.
