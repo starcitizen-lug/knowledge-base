@@ -69,6 +69,7 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 - For 32GB RAM: 8GB swap
 
 {: .important-title }
+>
 > More swap should be configured if you intend to run background applications while playing the game.
 
 ## Picom/Compton Compositors

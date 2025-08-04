@@ -183,6 +183,7 @@ pl_pit.forceSoftwareCursor = 1
 ## Easy Anti-Cheat
 
 {: .important-title }
+>
 > Check the [latest news](../#general-news) for any wine changes
 
 1. Use RSI Launcher 2.5.1 or newer
@@ -190,7 +191,7 @@ pl_pit.forceSoftwareCursor = 1
 3. Ensure there are no symlinks or special characters in the path to your Wine prefix
 4. Remove all old EAC workarounds if you have them:
     1. Use the LUG Helper Maintenance menu option to "Update launch script" to remove the previous environment variable workaround.  
-       <img height="300" alt="image" src="https://github.com/user-attachments/assets/e0925912-1c89-4eb2-9dae-5dbd3fe9806e" />  
+       ![Update launch script](https://github.com/user-attachments/assets/e0925912-1c89-4eb2-9dae-5dbd3fe9806e){: style="max-height: 300px;" }
        Alternatively, select "Edit launch script" and manually remove the EAC environment variable: `EOS_USE_ANTICHEATCLIENTNULL=1`  
     2. If using Lutris or another third party launcher, remove the above EAC environment variable from its settings.
     3. In the RSI Launcher, navigate to `Settings -> Games -> LIVE -> Game Location`. If you previously manually applied the Z:\ path workaround, restore the game location to its default C:\ path:  
