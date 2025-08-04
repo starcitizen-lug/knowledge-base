@@ -1,7 +1,7 @@
 # wiki/_config.yml
 
-title: knowledge-base
-description: This wiki is a collection of information on how to run Star Citizen on Linux, as well as our tips and tricks!
+title: Star Citizen LUG Wiki
+description: The Star Citizen Linux Users Group Wiki. Everything you need to know to run Star Citizen on Linux!
 baseurl: ""
 permalink: /:path/
 
