@@ -1,18 +1,33 @@
+.site-header {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.site-title {
+  display: inline-block;
+  line-height: 1;
+}
+
 .site-logo {
   background-image: url("/assets/images/lug_logo_finished_by_polymachairoplacida.png");
-  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 120px;
-  height: 60px;
+  background-size: contain;
 
-  @media (max-width: 768px) {
-    width: 100px;
-    height: 50px;
+  height: 200px;      /* max logo height on desktop */
+  width: auto;
+  max-width: 100%;    /* prevent overflow on small screens */
+}
+
+/* Responsive scaling */
+@media (max-width: 768px) {
+  .site-logo {
+    height: 120px;
   }
+}
 
-  @media (max-width: 480px) {
-    width: 80px;
-    height: 40px;
+@media (max-width: 480px) {
+  .site-logo {
+    height: 80px;
   }
 }
