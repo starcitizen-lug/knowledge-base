@@ -2,7 +2,7 @@
     document.addEventListener("DOMContentLoaded", () => {
         console.log("theme select");
         const savedTheme = jtd.getTheme();
-        if (!savedTheme) {
+        if (!savedTheme || savedTheme === "default") {
             const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
             jtd.setTheme(prefersDark ? "dark" : "light");
         } else {
@@ -10,13 +10,9 @@
         }
 
         window.matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener('change', event => {
-        if (event.matches) {
-            jtd.setTheme('dark');
-        } else {
-            jtd.setTheme('light');
-        }
-        });
+            .addEventListener('change', event => {
+                jtd.setTheme(event.matches ? 'dark' : 'light');
+            });
 
         const themeToggle = document.getElementById("theme-toggle");
 
