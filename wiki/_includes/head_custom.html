@@ -18,10 +18,11 @@
         }
         });
 
-        document.getElementById("theme-toggle").addEventListener("click", () => {
+        const themeToggle = document.getElementById("theme-toggle");
+
+        jtd.addEvent(themeToggle, "click", () => {
             const newTheme = jtd.getTheme() === "dark" ? "light" : "dark";
             jtd.setTheme(newTheme);
-            localStorage.setItem("jtd-theme", newTheme);
         });
     });
 </script>
