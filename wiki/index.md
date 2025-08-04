@@ -45,7 +45,7 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 
 ### Nvidia News
 
-{: .warning }
+{: .caution-title }
 > (Oct 9, 2023) **Crash when taking shield damage in-game**
 > - There is a shield rendering bug that causes the game to crash. It seems to affect 1000 series cards.
 > - There is currently no known workaround other than switching cards. We recommend AMD.
