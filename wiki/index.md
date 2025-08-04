@@ -32,8 +32,9 @@ We welcome contributions. Feel free to fork this repo and submit a PR.
 > - Switch to a non-staging wine **OR** downgrade DXVK following [these instructions](Troubleshooting#directx-error-message)
 
 
-{: .note }
-> (Nov 30, 2024) **Joysticks not detected on Wine 9.22 and newer**
+{: .note-title }
+> (Nov 30, 2024)
+> **Joysticks not detected on Wine 9.22 and newer**
 > 
 > - Wine 9.22+ has enabled HIDRAW by default for VKB and Virpil devices.
 > - If your joystick/throttle is no longer being detected by the game, follow [our instructions](Sticks,-Throttles,-&-Pedals#some-of-your-joysticks-disappear--arent-recognized-in-the-game) to enable hidraw access.
