@@ -4,8 +4,10 @@ nav_order: 2
 ---
 
 ## Prerequisites
-{: .highlight }
-> New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
+{: .tip-title }
+> New to Linux?
+>
+> See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 
 1. Install Wine **v9.4** or newer from your distro's repos. If wine is not available from your distro's repos, you may follow the instructions on the [winehq website](https://gitlab.winehq.org/wine/wine/-/wikis/Download).
 2. Install winetricks **20250102** or newer from your distro's repos. Links, if needed, are on the winetricks [github](https://github.com/Winetricks/winetricks#installing)
@@ -14,7 +16,7 @@ nav_order: 2
     - We do not recommend an HDD or NTFS format
 
 ## Installation Steps
-{: .highlight }
+{: .tip }
 > If using an immutable distro (ie. Bazzite, Silverblue), we recommend the [flatpak installation](Alternative-Installations#flatpak-installation).
 
 1. Download our [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) (Select the `.tar.gz`. Distro packages are listed [here](https://github.com/starcitizen-lug/lug-helper#installation))
@@ -26,11 +28,13 @@ nav_order: 2
 
 ## After Installation
 
-{: .important-title }
+{: .important }
 > - For non-US keyboards, set your [keyboard layout](Troubleshooting#non-us-keyboard-keys-not-working) to resolve issues with certain buttons ` [, ], and ~ `
 > - Wayland users: See [required workarounds](Troubleshooting#mousecursor-warp-issues-and-view-snapping-in-interaction-mode) to resolve mouse cursor and view snapping issues.
 > - Nvidia users: See [troubleshooting guide](Troubleshooting#severe-frame-drops) to resolve severe frame drop issues.
 > - Check our [latest news](../#news) for necessary workarounds, Nvidia gpu driver problems, and other important issues.
 
-{: .highlight }
-> - Questions or Problems? Check our [Troubleshooting Guide](Troubleshooting) or ask for help in one of our [social channels](/knowledge-base)!
+{: .note-title }
+> - Questions or Problems?
+> 
+> - Check our [Troubleshooting Guide](Troubleshooting) or ask for help in one of our [social channels](/knowledge-base)!
