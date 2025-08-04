@@ -1,6 +1,9 @@
 .site-header {
+  position: relative;       /* or static if fixed not needed */
   height: auto !important;
+  min-height: 200px;
   overflow: visible !important;
+  z-index: 10;
 }
 
 .site-title {
@@ -14,20 +17,31 @@
   background-position: center;
   background-size: contain;
 
-  height: 200px;      /* max logo height on desktop */
+  height: 200px;
   width: auto;
-  max-width: 100%;    /* prevent overflow on small screens */
+  max-width: 100%;
 }
 
-/* Responsive scaling */
 @media (max-width: 768px) {
+  .site-header {
+    min-height: 120px;
+  }
   .site-logo {
     height: 120px;
+  }
+  body {
+    padding-top: 120px;
   }
 }
 
 @media (max-width: 480px) {
+  .site-header {
+    min-height: 80px;
+  }
   .site-logo {
     height: 80px;
+  }
+  body {
+    padding-top: 80px;
   }
 }
