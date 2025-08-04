@@ -1,7 +1,7 @@
 # wiki/_config.yml
 
 title: Star Citizen LUG Wiki
-logo: "assets/lug_logo_finished_by_polymachairoplacida.png"
+logo: "./assets/lug_logo_finished_by_polymachairoplacida.png"
 description: The Star Citizen Linux Users Group Wiki. Everything you need to know to run Star Citizen on Linux!
 baseurl: ""
 permalink: /:path/
