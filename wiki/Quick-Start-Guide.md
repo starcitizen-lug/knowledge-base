@@ -35,6 +35,6 @@ nav_order: 2
 > - Check our [latest news](../#news) for necessary workarounds, Nvidia gpu driver problems, and other important issues.
 
 {: .note-title }
-> - Questions or Problems?
+> Questions or Problems?
 > 
 > - Check our [Troubleshooting Guide](Troubleshooting) or ask for help in one of our [social channels](/knowledge-base)!
