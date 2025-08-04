@@ -8,6 +8,10 @@ permalink: /:path/
 
 remote_theme: just-the-docs/just-the-docs
 
+just_the_docs:
+  custom_css:
+    - custom
+
 search_enabled: true
 search:
   heading_level: 2
