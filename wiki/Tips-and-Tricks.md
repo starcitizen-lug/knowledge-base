@@ -180,7 +180,8 @@ pl_pit.forceSoftwareCursor = 1
 
 1. Use RSI Launcher 2.5.1 or newer
 2. Use the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper) to switch to a LUG-Wine runner
-3. Remove all old EAC workarounds if you have them:
+3. Ensure there are no symlinks or special characters in the path to your Wine prefix
+4. Remove all old EAC workarounds if you have them:
     1. Use the LUG Helper Maintenance menu option to "Update launch script" to remove the previous environment variable workaround.  
        <img height="300" alt="image" src="https://github.com/user-attachments/assets/e0925912-1c89-4eb2-9dae-5dbd3fe9806e" />  
        Alternatively, select "Edit launch script" and manually remove the EAC environment variable: `EOS_USE_ANTICHEATCLIENTNULL=1`  
