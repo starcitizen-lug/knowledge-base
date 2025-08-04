@@ -4,6 +4,7 @@ nav_order: 3
 ---
 
 ## Prerequisites
+
 {: .highlight }
 > New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 
@@ -50,6 +51,7 @@ _Distributions that use /etc/security/limits.conf_
 
 
 ## Wine Installation
+
 {: .highlight }
 > Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool now contains an option for a wine install and can perform these steps for you automatically! See our [Quick Start Guide](Quick-Start-Guide) for instructions.
 
@@ -150,6 +152,7 @@ If you prefer not to use nix-citizen, the [Flatpak method](#flatpak-installation
 9. Press the "Play" button to run the RSI Launcher, log in, and click install tto finish installing the game
 
 ### Steam
+
 {: .warning }
 > We do not recommend installing Star Citizen within Steam. While it can be done, it creates several issues that we feel are not worth the effort to try to work around. For example, it limits configurability options and does not invoke needed protonfixes by default.
 > 

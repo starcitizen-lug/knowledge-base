@@ -181,6 +181,7 @@ pl_pit.forceSoftwareCursor = 1
 
 
 ## Easy Anti-Cheat
+
 {: .important-title }
 > Check the [latest news](../#general-news) for any wine changes
 
