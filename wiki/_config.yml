@@ -45,3 +45,6 @@ callouts:
   caution:
     title: Caution
     color: red
+  ephemera:
+    title: Ephemera
+    color: grey-lt
