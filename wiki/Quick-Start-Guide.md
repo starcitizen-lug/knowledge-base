@@ -4,6 +4,7 @@ nav_order: 2
 ---
 
 ## Prerequisites
+
 {: .tip-title }
 > New to Linux?
 >
@@ -16,7 +17,8 @@ nav_order: 2
     - We do not recommend an HDD or NTFS format
 
 ## Installation Steps
-{: .ephemera }
+
+{: .tip }
 > If using an immutable distro (ie. Bazzite, Silverblue), we recommend the [flatpak installation](Alternative-Installations#flatpak-installation).
 
 1. Download our [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) (Select the `.tar.gz`. Distro packages are listed [here](https://github.com/starcitizen-lug/lug-helper#installation))
