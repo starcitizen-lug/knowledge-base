@@ -9,7 +9,7 @@ nav_order: 3
   </summary>
   {: .text-delta }
 - TOC
-{:toc levels="2..2"}
+{:toc levels="2"}
 </details>
 
 
