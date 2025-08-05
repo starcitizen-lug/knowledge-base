@@ -99,10 +99,10 @@ If changing the kernel scheduler between `Performance` and the various demand-ba
 - Amd Threadripper
 ### Steps
 1. Verify you have a CPU with multiple dies by running `lstopo`. If the results appear similar to the first image below, you can proceed:  
-    ![image](https://user-images.githubusercontent.com/39007301/220378862-d4b9bbd7-15b3-4e1e-b77d-6b19f0908ba8.png)  
-    
+    ![CPU Topology](https://user-images.githubusercontent.com/39007301/220378862-d4b9bbd7-15b3-4e1e-b77d-6b19f0908ba8.png){: style="display: block;max-height: 300px;" }
+
     If, on the other hand, your CPU is like this image where the dies are not shown, this will not improve your performace:  
-    <img src="https://user-images.githubusercontent.com/39007301/220378475-160e9091-3b2c-407b-acff-d606892d21c5.png" width=60% height=60%>  
+    ![CPU Topology](https://user-images.githubusercontent.com/39007301/220378475-160e9091-3b2c-407b-acff-d606892d21c5.png){: style="display: block" }
 
 2. Modify the following environment variable to match your system:  
     ```
@@ -111,10 +111,10 @@ If changing the kernel scheduler between `Performance` and the various demand-ba
     The `Number_of_threads` is the number of threads you want to run Star Citizen with.  
     The `List_of_thread_indexes` can be determined by looking at the `lstopo` output.  
     You can see the threads highlighted in the image below:  
-    <img src="https://user-images.githubusercontent.com/39007301/220380665-5378ccc5-474e-4db2-8a4a-e893bb4ab347.png" width=60% height=60%>  
+    ![CPU Topology](https://user-images.githubusercontent.com/39007301/220380665-5378ccc5-474e-4db2-8a4a-e893bb4ab347.png){: style="display: block;max-height: 300px;" }
 
     Run the game with the modified environment variable. As an example, the CPU shown below would end up with the arguments  
     ```
     WINE_CPU_TOPOLOGY=16:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
     ```
-    ![image](https://user-images.githubusercontent.com/39007301/220382182-3525c3e8-4466-4489-8e85-7c1319ac3a1b.png)
+    ![CPU Topology](https://user-images.githubusercontent.com/39007301/220382182-3525c3e8-4466-4489-8e85-7c1319ac3a1b.png)
