@@ -3,16 +3,6 @@ title: "Troubleshooting"
 nav_order: 3
 ---
 
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-- TOC
-{:toc levels="2"}
-</details>
-
-
 ## ⚠ Recent news/issues
 - Check our [latest news](../#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
 
