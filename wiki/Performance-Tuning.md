@@ -102,7 +102,7 @@ If changing the kernel scheduler between `Performance` and the various demand-ba
     ![CPU Topology](https://user-images.githubusercontent.com/39007301/220378862-d4b9bbd7-15b3-4e1e-b77d-6b19f0908ba8.png){: style="display: block;max-height: 300px;" }
 
     If, on the other hand, your CPU is like this image where the dies are not shown, this will not improve your performace:  
-    ![CPU Topology](https://user-images.githubusercontent.com/39007301/220378475-160e9091-3b2c-407b-acff-d606892d21c5.png){: style="display: block" }
+    ![CPU Topology](https://user-images.githubusercontent.com/39007301/220378475-160e9091-3b2c-407b-acff-d606892d21c5.png){: style="display: block;max-height: 300px;" }
 
 2. Modify the following environment variable to match your system:  
     ```

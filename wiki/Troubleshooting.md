@@ -3,6 +3,8 @@ title: "Troubleshooting"
 nav_order: 3
 ---
 
+{:toc}
+
 ## ⚠ Recent news/issues
 - Check our [latest news](../#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
 
@@ -43,7 +45,6 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 ❔ [Other Issues](#-other-issues)  
 
 ***
-
 
 
 ## 💾 Install & Update Problems
