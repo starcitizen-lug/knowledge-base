@@ -113,7 +113,7 @@ If you prefer not to use nix-citizen, the [Flatpak method](#flatpak-installation
 >
 > The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
 
-{: .important-title }
+{: .important }
 >
 > If using flatpak apps, ensure the install location is whitelisted using Flatseal or similar methods.
 >

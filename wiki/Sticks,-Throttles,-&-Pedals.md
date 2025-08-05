@@ -36,10 +36,14 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 > ```
 
 {: .important-title }
-> After adding the udev rule, unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Sim (C) Alex Oz` in the name, and click the Disable button.
+> After adding the udev rule
+>
+> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Sim (C) Alex Oz` in the name, and click the Disable button.
 
 {: .important-title }
-> HIDRAW is recommended for VKB devices running older firmware with a © symbol in the name, or consider upgrading your firmware
+> Hidraw
+>
+> Hidraw is recommended for VKB devices running older firmware with a © symbol in the name, or consider upgrading your firmware
 > You can check the device name using `lsusb` or `evdev-joystick --list`.
 
 ### VKB Gladiator
@@ -53,7 +57,7 @@ They store their configuration on-board but the [configuration software](https:/
 Requires a windows-only software for calibration and configuration. [Link](https://www.vkbcontrollers.com/pages/downloads)
 
 ## Virpil Devices
-    
+
 Requires a windows-only software for calibration and configuration. [Link; scroll down](https://support.virpil.com/en/support/solutions)
 
 {: .highlight }
@@ -64,7 +68,9 @@ Requires a windows-only software for calibration and configuration. [Link; scrol
 > ```
 
 {: .important-title }
-> After adding the udev rule, unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Virpil Controls` in the name, and click the Disable button.
+> After adding the udev rule
+>
+> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Virpil Controls` in the name, and click the Disable button.
 
 ## Thrustmaster T-16000
 

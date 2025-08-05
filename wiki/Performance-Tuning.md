@@ -68,7 +68,7 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 - For 16GB RAM: 24GB swap
 - For 32GB RAM: 8GB swap
 
-{: .important-title }
+{: .important }
 >
 > More swap should be configured if you intend to run background applications while playing the game.
 
