@@ -30,8 +30,10 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 
 {: .highlight }
 > Wine 9.22+ has enabled HIDRAW for VKB devices. This removes the 79 button limit and may provide better device support. To enable hidraw access to your VKB devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
->   # Set the "uaccess" tag for raw HID access for VKB Devices in wine
->   KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
+```
+   # Set the "uaccess" tag for raw HID access for VKB Devices in wine
+   KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
+```
 
 
 {: .important-title }
