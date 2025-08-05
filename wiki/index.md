@@ -8,10 +8,9 @@ nav_order: 1
 This wiki is a collection of information on how to run Star Citizen on Linux, as well as our tips and tricks!
 We welcome contributions. Feel free to fork this repo and submit a PR.
 
-🐧 Join us! <a href="https://robertsspaceindustries.com/orgs/LUG">https://robertsspaceindustries.com/orgs/LUG</a>
-
-🗨 Discord: <a href="https://discord.gg/meCFYPj">https://discord.gg/meCFYPj</a>
-😎 Matrix space: <a href="https://matrix.to/#/#SCLUG:matrix.org">https://matrix.to/#/#SCLUG:matrix.org</a>
+🐧 Join us! <a href="https://robertsspaceindustries.com/orgs/LUG">https://robertsspaceindustries.com/orgs/LUG</a>  
+🗨 Discord: <a href="https://discord.gg/meCFYPj">https://discord.gg/meCFYPj</a>  
+😎 Matrix space: <a href="https://matrix.to/#/#SCLUG:matrix.org">https://matrix.to/#/#SCLUG:matrix.org</a>  
 
 ## News
 

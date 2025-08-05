@@ -146,7 +146,7 @@ If this page doesn't help resolve your issue, you may ask for help on our [socia
 
 #### Game crashes after clicking 'Verify'
 - Make sure Star Citizen is installed on drive "C:\" Check the "Library Folder" option in the launcher settings:
-![Star Citizen launcher](https://media.discordapp.net/attachments/608349808956276737/927652866389340310/Screenshot_from_2022-01-03_14-56-37.png)
+![Star Citizen launcher](https://github.com/user-attachments/assets/0ac1ed3a-4c3c-43b9-b93a-a4865e63f784)
 - Additionally, make sure the wine prefix is not installed on an NTFS formatted partition.oh keep in mind might be interesting to see what the model produces
 
 

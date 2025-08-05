@@ -1,7 +1,6 @@
 ---
 title: "Sticks, Throttles, & Pedals"
 description: "In general, you can expect any hardware to work on linux but third-party software tied to the device can be an issue. In some cases, a VM may be required for configuring the device."
-image: "/assets/images/lug_logo_finished_by_polymachairoplacida.png"
 nav_order: 6
 ---
 
