@@ -16,6 +16,7 @@ The following distributions make our 👎 list and generally pose additional cha
 - Ubuntu LTS
 - Mint (based on Ubuntu LTS)
 - Pop!_OS (based on Ubuntu LTS)
+- Zorin (based on Ubuntu LTS)
 - Drauger OS
 - openSUSE Leap
 - Manjaro
