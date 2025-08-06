@@ -1,16 +1,2 @@
 <link rel="stylesheet" href="/assets/css/just-the-docs-dark.css">
 <link rel="stylesheet" href="/assets/css/just-the-docs-light.css" media="(prefers-color-scheme: light)">
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        window.matchMedia('(prefers-color-scheme: dark)')
-            .addEventListener('change', event => {
-                jtd.setTheme(event.matches ? 'dark' : 'light');
-            });
-
-        const themeToggle = document.getElementById("theme-toggle");
-        jtd.addEvent(themeToggle, "click", () => {
-            const newTheme = jtd.getTheme() === "dark" ? "light" : "dark";
-            jtd.setTheme(newTheme);
-        });
-    });
-</script>
