@@ -5,7 +5,7 @@ nav_order: 3
 
 ## Prerequisites
 
-{: .highlight }
+{: .highlight-title }
 > New to Linux?
 >
 > See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
