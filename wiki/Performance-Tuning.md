@@ -6,7 +6,7 @@ nav_order: 4
 ## LUG Helper
 We have a helper script which can help you manage and optimize Star Citizen on Linux. It can check/set recommended settings such as vm.max_map_count and the system's open file descriptors limit, manage runners and launch wine prefix configuration tools. It can be downloaded from:
 
-https://github.com/starcitizen-lug/lug-helper
+<a href="https://github.com/starcitizen-lug/lug-helper">https://github.com/starcitizen-lug/lug-helper</a>
 
 ## Nvidia Cache
 

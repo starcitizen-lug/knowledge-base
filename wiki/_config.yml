@@ -27,7 +27,7 @@ aux_links:
     - "https://github.com/starcitizen-lug/knowledge-base"
 
 nav_external_links:
-  - title: 🐧 Join our Star Citizen Org!
+  - title: 🐧 Join our Org!
     url: https://robertsspaceindustries.com/orgs/LUG
     hide_icon: false # set to true to hide the external link icon - defaults to false
     opens_in_new_tab: true # set to true to open this link in a new tab - defaults to false
