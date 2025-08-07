@@ -23,10 +23,22 @@ color_scheme: dark
 nav_sort: case_insensitive
 
 aux_links:
-  "Join our Star Citizen Org! 🐧":
-    - "https://robertsspaceindustries.com/orgs/LUG"
-  "Contribute to this wiki 📚":
+  "📚 Contribute to this wiki":
     - "https://github.com/starcitizen-lug/knowledge-base"
+
+nav_external_links:
+  - title: 🐧 Join our Star Citizen Org!
+    url: https://robertsspaceindustries.com/orgs/LUG
+    hide_icon: false # set to true to hide the external link icon - defaults to false
+    opens_in_new_tab: true # set to true to open this link in a new tab - defaults to false
+  - title: 🗨 Discord
+    url: https://discord.gg/meCFYPj
+    hide_icon: false # set to true to hide the external link icon - defaults to false
+    opens_in_new_tab: true # set to true to open this link in a new tab - defaults to false
+  - title: 😎 Matrix space
+    url: https://matrix.to/#/#SCLUG:matrix.org
+    hide_icon: false # set to true to hide the external link icon - defaults to false
+    opens_in_new_tab: true # set to true to open this link in a new tab - defaults to false
 
 include:
   - "*.md"
