@@ -1,0 +1,18 @@
+@import "./support/support.scss";
+
+li.nav-list-item.external {
+  &:first-of-type::before {
+    content: "";
+    display: block;
+    border-top: 1px solid #ccc;
+    margin: 0.5rem 0rem;
+
+    @media (prefers-color-scheme: dark) {
+      border-top: 1px solid $grey-dk-200;
+    }
+
+    @media (prefers-color-scheme: light) {
+      border-top: 1px solid $grey-lt-100;
+    }
+  }
+}

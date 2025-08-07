@@ -8,6 +8,10 @@ permalink: /:path
 
 remote_theme: just-the-docs/just-the-docs
 
+just_the_docs:
+  custom_css:
+    - assets/css/custom.css
+
 search_enabled: true
 search:
   heading_level: 2
@@ -47,6 +51,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-github-metadata
+  - jekyll-include-cache
 
 callouts:
   note:
