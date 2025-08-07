@@ -22,6 +22,12 @@ color_scheme: dark
 
 nav_sort: case_insensitive
 
+aux_links:
+  "Join our Star Citizen Org":
+    - "https://robertsspaceindustries.com/orgs/LUG"
+  "Contribute to this wiki":
+    - "https://github.com/starcitizen-lug/knowledge-base"
+
 include:
   - "*.md"
 
