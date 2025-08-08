@@ -225,6 +225,16 @@ Other potential workarounds:
 - Hyprland users: Try using the in-game fullscreen option instead of the Hyprland equivalent.
 
 
+#### Mouse cursor escaping the game window
+- Toggling the game console with the tilde (`~`) key/the key left of the number `1` usually recaptures the mouse.
+- You may also try adding a registry key to your Wine prefix:
+   - Use the `sc-launch.sh` launch script to open a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run the following command:
+     ```
+     wine reg add 'HKEY_CURRENT_USER\Software\Wine\X11 Driver' /t REG_SZ /v UseTakeFocus /d N /f
+     ```
+     Note: If using a third party launcher instead of the native Wine install, you'll need to prepend `WINEPREFIX=/path/to/prefix` before the above command.
+
+
 #### Empty launcher
 - Log out log back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
 
