@@ -16,3 +16,39 @@ li.nav-list-item.external {
     }
   }
 }
+
+// Just the Docs breakpoints (min-width)
+$breakpoints: (
+  xs: 20rem,    // 320px
+  sm: 31.25rem, // 500px
+  md: 46.25rem, // 740px
+  lg: 70rem,    // 1120px
+  xl: 87.5rem   // 1400px
+);
+
+// Heights for .site-header at breakpoints (in rem)
+$header-heights: (
+  default: 2rem,    // below xs
+  xs: 6rem,
+  sm: 10rem,
+  md: 14.5rem,
+  lg: 16rem,
+  xl: 18rem
+);
+
+.site-header {
+  height: map-get($header-heights, default);
+  max-height: map-get($header-heights, default);
+  overflow: hidden;
+}
+
+@each $breakpoint, $min-width in $breakpoints {
+  $height: map-get($header-heights, $breakpoint);
+
+  @media (min-width: #{$min-width}) {
+    .site-header {
+      height: $height;
+      max-height: $height;
+    }
+  }
+}
