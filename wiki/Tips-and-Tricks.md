@@ -184,7 +184,7 @@ pl_pit.forceSoftwareCursor = 1
 
 {: .important-title }
 >
-> Check the [latest news](../#general-news) for any wine changes
+> Check the [latest news](/#general-news) for any wine changes
 
 1. Use RSI Launcher 2.5.1 or newer
 2. Use the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper) to switch to a LUG-Wine runner

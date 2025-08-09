@@ -1,6 +1,6 @@
 ---
 title: "💾 Install & Update Problems"
-nav_order: 3
+parent: "Troubleshooting"
 ---
 
 #### General troubleshooting steps
