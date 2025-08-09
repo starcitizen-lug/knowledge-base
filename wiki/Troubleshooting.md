@@ -3,10 +3,21 @@ title: "Troubleshooting"
 nav_order: 3
 ---
 
-## ⚠ Recent news/issues
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+***
+
+## ⚠️ Recent news/issues
 - Check our [latest news](../#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
 
-## Troubleshooting Steps
+## 🛠️ Troubleshooting Steps
 
 #### First things to try
 1. Make sure our [LUG Helper](https://github.com/starcitizen-lug/lug-helper)'s Preflight Check passes all checks.
@@ -28,21 +39,6 @@ nav_order: 3
 
 #### Community Help
 If this page doesn't help resolve your issue, you may ask for help on our [social channels](/knowledge-base)
-
-
-## Contents
-💾 [Install & Update Problems](#-install--update-problems)  
-💥 [Crashes](#-crashes)  
-🧊 [Freezes](#-freezes)  
-🤪 [Unexpected Behavior (sometimes also crashes)](#-unexpected-behavior-sometimes-also-crashes)  
-💚 [Nvidia](#-nvidia)  
-❤️ [AMD](#-amd)  
-🕹️ [Controller Issues](#-controller-issues)  
-🦦 [Lutris Issues](#-lutris-issues)  
-👾 [32bit Drivers](#-32bit-drivers)  
-❔ [Other Issues](#-other-issues)  
-
-***
 
 
 ## 💾 Install & Update Problems
