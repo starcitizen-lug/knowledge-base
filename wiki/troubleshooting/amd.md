@@ -1,6 +1,7 @@
 ---
 title: "💖 AMD"
 parent: "Troubleshooting"
+nav_order: 4
 ---
 
 

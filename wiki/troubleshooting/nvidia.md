@@ -1,6 +1,7 @@
 ---
 title: "💚 Nvidia"
 parent: "Troubleshooting"
+nav_order: 4
 ---
 
 

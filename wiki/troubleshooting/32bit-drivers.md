@@ -1,6 +1,7 @@
 ---
 title: "👾 32bit Drivers"
 parent: "Troubleshooting"
+nav_order: 6
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 title: "🦦 Lutris Issues"
 parent: "Troubleshooting"
+nav_order: 5
 ---
 
 

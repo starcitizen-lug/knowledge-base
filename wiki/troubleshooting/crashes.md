@@ -1,6 +1,7 @@
 ---
 title: "💥 Crashes"
 parent: "Troubleshooting"
+nav_order: 2
 ---
 
 
