@@ -23,7 +23,7 @@ just_the_docs:
 
 search_enabled: true
 search:
-  heading_level: 2
+  heading_level: 4
   previews: 3
   preview_words_before: 5
   preview_words_after: 10
