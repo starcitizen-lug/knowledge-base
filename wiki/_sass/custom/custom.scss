@@ -17,16 +17,7 @@ li.nav-list-item.external {
   }
 }
 
-// Just the Docs breakpoints (min-width)
-$breakpoints: (
-  xs: 20rem,    // 320px
-  sm: 31.25rem, // 500px
-  md: 46.25rem, // 740px
-  lg: 70rem,    // 1120px
-  xl: 87.5rem   // 1400px
-);
-
-// Heights for .site-header at breakpoints (in rem)
+// Heights for .site-header at media-queries (in rem)
 $header-heights: (
   default: 2rem,    // below xs
   xs: 6rem,
@@ -42,7 +33,7 @@ $header-heights: (
   overflow: hidden;
 }
 
-@each $breakpoint, $min-width in $breakpoints {
+@each $breakpoint, $min-width in $media-queries {
   $height: map-get($header-heights, $breakpoint);
 
   @media (min-width: #{$min-width}) {
