@@ -82,7 +82,7 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
 
 
 ## How to edit the launch script
-1. Run the [LUG Helper](#how-to-run-the-lug-helper) and select the Maintenance and Troubleshooting menu
+1. Run the [LUG Helper](#how-to-run-the-lug-helper) and select the `Maintenance and Troubleshooting` menu
 2. Choose the option to `Edit launch script`  
    <img height="350" alt="image" src="https://github.com/user-attachments/assets/6f30b732-3406-4c59-b23b-32bbccacc5ae" />
 3. Alternatively, locate the `sc-launch.sh` file in your Wine prefix directory (by default, `~/Games/star-citizen/sc-launch.sh`) and open it for editing.
