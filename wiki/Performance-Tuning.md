@@ -41,7 +41,7 @@ The following game settings can help improve framerates:
   export WINEESYNC=1
   export WINEFSYNC=1
   ```
-- NTSync requires kernel 6.14+ and a [patched wine runner](https://github.com/starcitizen-lug/lug-wine). No env vars are needed.
+- NTSync requires kernel 6.14+ and a [patched wine runner](https://github.com/starcitizen-lug/lug-wine) which can be easily [installed](Tips-and-Tricks#how-to-add-a-wine-runner) using the LUG Helper. No additional env vars are needed.
 
 
 ## Feral GameMode
