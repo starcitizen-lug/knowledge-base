@@ -84,7 +84,7 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
     1. Navigate to the extracted archive location
     2. Right click on `lug-helper.sh` and select Run as a Program
 
-{: .highlight }
+{: .tip }
 > The Helper uses Zenity for its optional GUI. If you don't see the GUI and want it, install Zenity from your package manager.
 
 
@@ -204,7 +204,7 @@ pl_pit.forceSoftwareCursor = 1
 
 ## Wine Wayland
 
-{: .highlight }
+{: .note }
 > RSI Launcher buttons may be offset, resize the window or use tab/shift+tab controls for the launcher
 
 - Experimental Wine Wayland
