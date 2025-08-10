@@ -2,13 +2,14 @@
 title: "Performance Tuning"
 nav_order: 4
 ---
+# Performance Tuning
 
-# LUG Helper
+## LUG Helper
 We have a helper script which can help you manage and optimize Star Citizen on Linux. It can check/set recommended settings such as vm.max_map_count and the system's open file descriptors limit, manage runners and launch wine prefix configuration tools. It can be downloaded from:
 
 <a href="https://github.com/starcitizen-lug/lug-helper">https://github.com/starcitizen-lug/lug-helper</a>
 
-# Nvidia Cache
+## Nvidia Cache
 
 By default Nvidia has a combined cache for all games. As the cache fills up from other games, Star Citizen's shaders may get deleted leading to poor FPS. We recommend giving SC its own persistent cache by adding the following environment variables:
 ```
@@ -17,7 +18,7 @@ __GL_SHADER_DISK_CACHE_PATH="/path/you/want/for/your/cache"  (example: /home/gam
 __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=true
 ```
 
-# Mesa (AMD/Intel) Shader Cache
+## Mesa (AMD/Intel) Shader Cache
 
 Mesa can be given its own persistent shader cache by adding the following environmental variables:
 ```
@@ -25,7 +26,7 @@ MESA_SHADER_CACHE_DIR="/path/you/want/for/your/cache"  (example: /home/games/sta
 MESA_SHADER_CACHE_MAX_SIZE=10G
 ```
 
-# Game Settings
+## Game Settings
 
 The following game settings can help improve framerates:
 
@@ -35,7 +36,7 @@ The following game settings can help improve framerates:
 - Set `Motion Blur` to `Off`
 - Set `Sharpening` to `100`
 
-# ESync/FSync/NTSync
+## ESync/FSync/NTSync
 - Which will work best depends on your specific hardware. You may experiment with the following:
 - If these environment variables are set, Wine will automatically choose the best option between esync or fsync:
   ```
@@ -45,13 +46,13 @@ The following game settings can help improve framerates:
 - NTSync requires kernel 6.14+ and a [patched wine runner](https://github.com/starcitizen-lug/lug-wine). No env vars are needed.
 
 
-# Feral GameMode
+## Feral GameMode
 
 Gamemode can help improve performance by applying OS-level performance tweaks as the game is launched. Search for `gamemode` in your Distro's repos. Refer to the Gamemode [repository](https://github.com/FeralInteractive/gamemode) for configuration instructions
 
 Use the LUG Helper maintenance menu to edit your launch script and add `gamemoderun` to the beginning of your launch command.
 
-# Zram & Swap
+## Zram & Swap
 
 We currently recommend a combined 40GB RAM + swap to avoid Out Of Memory crashes while playing Star Citizen. Systems with less than 40GB RAM will need additional swap or zram configured.
 
@@ -72,16 +73,16 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 >
 > More swap should be configured if you intend to run background applications while playing the game.
 
-# Picom/Compton Compositors
+## Picom/Compton Compositors
 
 If you use the Picom or Compton compositor, it may cause a laggy experience despite having high framerates. We recommend disabling the compositor.
 
-# Steam Deck
+## Steam Deck
 
 - We recommend a 32gb+ swap file for the Steam Deck. Create it under `/home` instead of `/` to protect it from being wiped out by SteamOS updates.
 - max allocation of ram to vram
 
-# Changing CPU scaling behavior via the Linux kernel and System Management BIOS
+## Changing CPU scaling behavior via the Linux kernel and System Management BIOS
 
 To achieve a more stable framerate in Star Citizen, ideally you will want a stable CPU frequency. There are [several schedulers](https://www.kernel.org/doc/Documentation/cpu-freq/governors.txt) provided by the Linux kernel. Start with the `Performance` scheduler to hint that the CPU should always run at the maximum frequency before trying the demand-based schedulers.
 
@@ -93,11 +94,11 @@ We have discovered that Dell laptops with Intel CPUs (and possibly other mobile 
 If changing the kernel scheduler between `Performance` and the various demand-based schedulers doesn't affect CPU frequency scaling for your laptop, try setting the SMBIOS thermal mode to `cool-bottom`. This mode behaves similarly to the `Conservative` kernel governor, gradually incrementing/decrementing the CPU frequency to stabilize the framerate.
 - Using the SMBIOS utility on Ubuntu, the command is `sudo smbios-thermal-ctl --set-thermal-mode=cool-bottom`
 
-# Increased performance for CPUs with multiple dies
-## Affected CPU generations:
+## Increased performance for CPUs with multiple dies
+### Affected CPU generations:
 - Amd Threadripper
 
-## Steps
+### Steps
 1. Verify you have a CPU with multiple dies by running `lstopo`. If the results appear similar to the first image below, you can proceed:  
     ![CPU Topology](https://user-images.githubusercontent.com/39007301/220378862-d4b9bbd7-15b3-4e1e-b77d-6b19f0908ba8.png){: style="display: block;max-height: 300px;" }
 
