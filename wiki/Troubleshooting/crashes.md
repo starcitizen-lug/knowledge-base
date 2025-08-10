@@ -56,7 +56,6 @@ nav_order: 2
 
 
 ## Crash or black screen while using Vulkan beta renderer
-- Possible error similar to: `Fatal Error: Acquire Next Image Failed` or `Main thread considered to be deadlocked`
 - Check the [latest news](/#news) for recommendations for your graphics card
 - Go back to DX11 by using the Delete Shaders option in the RSI Launcher > Settings > Games > {LIVE,PTU} > Delete  Local Settings > Shaders folder
 

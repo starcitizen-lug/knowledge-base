@@ -21,7 +21,8 @@ Other potential workarounds:
 - [Proton](/Alternative-Installations#proton-installation) helps mitigate this for some
 - Gamescope helps mitigate this for sonav_order: 3me
   - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix](nvidia#gamescope-not-working)
-  - Install and enable gamescope. Set these options for your display resolution `-W 2560 -H 1440 --force-grab-cursor`
+  - Install and enable gamescope. Set these options for your display resolution  
+  `-W 2560 -H 1440 --force-grab-cursor`
   - Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
 
 - Switching to an alternate desktop environment may help; most Gnome users don't seem to experience this issue
@@ -41,7 +42,7 @@ Other potential workarounds:
 #### Mouse cursor escaping the game window
 - Toggling the game console with the tilde (`~`) key/the key left of the number `1` usually recaptures the mouse.
 - You may also try adding a registry key to your Wine prefix:
-   - Use the `sc-launch.sh` launch script to open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run the following command:
+   - Use the `sc-launch.sh` launch script to open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run:
      ```
      wine reg add 'HKEY_CURRENT_USER\Software\Wine\X11 Driver' /t REG_SZ /v UseTakeFocus /d N /f
      ```
