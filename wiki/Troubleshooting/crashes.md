@@ -30,7 +30,8 @@ nav_order: 2
   - Nvidia users, check our [latest news](/#news) and Nvidia [section](nvidia) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 
 - Possible cause: Incorrect Vulkan device
-  - If you have Intel integrated graphics and see `VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json` in your log, then change the Vulkan device to use your discrete GPU:
+  - If you have Intel integrated graphics and see  
+    `VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json` in your log, then change the Vulkan device to use your discrete GPU:
     - identify device name using command `vulkaninfo --summary | grep deviceName`
     - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
 
@@ -50,8 +51,9 @@ nav_order: 2
 - Additionally, make sure the wine prefix is not installed on an NTFS formatted partition.oh keep in mind might be interesting to see what the model produces
 
 
-## Game crashes with "create_view: Assertion `!((UINT_PTR)base & page_mask)' failed" / "00adntdll:FILE_GetNtStatus Converting errno 12 to STATUS_UNSUCCESSFUL"
-- Make sure you have set your vm.max_map_count as described in the installation section.
+## Game crashes after loading into the PU
+log message may be `create_view: Assertion '!((UINT_PTR)base & page_mask)' failed" / "00adntdll:FILE_GetNtStatus Converting errno 12 to STATUS_UNSUCCESSFUL`
+- Make sure you have [set your vm.max_map_count](/Alternative-Installations#prerequisites)
 
 
 ## Crash or black screen while using Vulkan beta renderer

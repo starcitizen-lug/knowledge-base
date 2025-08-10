@@ -24,7 +24,8 @@ Typically caused by dxvk being broken or not installed
 
 #### Severe frame drops
 - Some Penguins are seeing VRAM exhaustion problems on nvidia cards
-- [Add a new](/Tips-and-Tricks#how-to-edit-the-launch-script) `DXVK_CONFIG` environment variable to override the max device memory. Refer to [DXVK config](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf) for examples
+- [Add a new](/Tips-and-Tricks#how-to-edit-the-launch-script) `DXVK_CONFIG` environment variable to override the max device memory.  
+  Refer to [DXVK config](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf) for examples
    - Card with 12GB vram
    ```
    export DXVK_CONFIG="dxgi.maxDeviceMemory = 9216;cachedDynamicResources = a;"
