@@ -70,3 +70,6 @@ callouts:
   caution:
     title: Caution
     color: red
+  highlight:
+    title: Highlight
+    color: grey-dk
