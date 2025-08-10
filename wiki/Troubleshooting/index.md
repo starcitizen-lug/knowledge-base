@@ -11,7 +11,7 @@ nav_order: 3
 ## 🛠️ Troubleshooting Steps
 
 ### First things to try
-1. Make sure our [LUG Helper](Tips-and-Tricks#how-to-run-the-lug-helper)'s Preflight Check passes all checks.
+1. Make sure our [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s Preflight Check passes all checks.
 2. Make sure all prerequisites from the [Quick Start Guide](/Quick-Start-Guide) are satisfied on your system.
 3. Make sure you are not trying to install to an NTFS-formatted drive.
 4. Be sure you haven't changed the default install path in the RSI Launcher settings. If you wish to install the game elsewhere, put the entire wine prefix there instead.
