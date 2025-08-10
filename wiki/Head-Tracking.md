@@ -3,23 +3,25 @@ title: "Head Tracking"
 nav_order: 7
 ---
 
-## Head Tracking Hardware
+# Head Tracking
 
-#### Hardware our Penguins have had success with
+## Hardware
+
+### Hardware our Penguins have had success with
 - Delanclip with Opentrack works very well and is our recommendation if you're buying new hardware.
 - PS3 camera: Remove the IR filter. Some people place a visible light filter there instead to reduce noise.
 
-#### Use your Phone
+### Use your Phone
 - iPhone: Our Penguins tend to prefer the [Head Tracker app by John Yu](https://apps.apple.com/us/app/head-tracker/id1527710071). It works on iPhone X or later using the FaceID IR sensors and, therefore, works well in low light. It has a trial period to test it out. It costs $2 US.
 - Android (Does not work on 14+): Our Penguins tend to like the [SmoothTrack app by John Goering](https://play.google.com/store/apps/details?id=com.epaga.smoothtrack&gl=US). It costs $10 US.
 - Your phone can typically function as a webcam without any third party apps when connected to your computer. See the webcam section below.
 
-#### Webcam
+### Webcam
 - A tutorial for the the ArUco Paper Method is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). **NOTE:** Ignore the outdated Opentrack installation steps in that thread! See updated instructions below.
 - Some Penguins have had success building [Opentrack with the ONNX Runtime](#building-opentrack-with-onnx-runtime) to add a neuralnet tracker that enables head tracking with any webcam.
 - FOIP may be a bit finnicky and your camera may not appear in the list in-game, but has been known to work if you toggle it on and off a few times.
 
-#### Unsupported hardware
+### Unsupported hardware
 - Tobii does not support Linux. Its opentrack support uses the Windows only SDK.
 - TrackIR 5 does not support Opentrack, nor does it work with Linuxtrack under Wine/Proton. We recommend Delanclip instead.
 
@@ -52,7 +54,7 @@ Configure Star Citizen's head tracking options under `Comms, FOIP & Head Trackin
 1. Set `Head Tracking - General - Source` to `TrackIR`
 2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`
 
-{: .highlight }
+{: .note }
 > - May not work with Game Launchers in Flatpak
 > - If compiling from source, make sure `SDK_WINE` is set
 > - If compiling our custom Opentrack from source, make sure you are on the `wine-extended-proton` branch before building
@@ -74,7 +76,8 @@ Other distros:
     - If you're having trouble, some videos are provided by [bekopharm](https://linux.simpit.dev/systems/opentrack/)
 4. Follow the configuration instructions [above](#opentrack-configuration).
 5. Select `neuralnet tracker` as input.
-{: .highlight }
+   
+{: .important }
 > Do not remove ONNX Runtime after you are done. Opentrack won't have Neuralnet as input if you do remove it.
 
 ## Tobii Eye Tracker 5 VM Passthrough
