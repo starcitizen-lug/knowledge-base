@@ -3,6 +3,8 @@ title: "Tips and Tricks"
 nav_order: 5
 ---
 
+# Tips and Tricks
+
 ## Recommended Distros
 We strongly recommend choosing a distro that has up-to-date packages and a solid maintenance reputation.  
 
@@ -53,7 +55,7 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
 ## How to add a Wine runner
 - Select the option to "Manage Wine runners" in the [LUG Helper](#how-to-run-the-lug-helper) and it will handle it for you.
 - Alternatively, to manually add a custom wine runner:
-  - Extract the archive to your runners folder. Restart your game launcher after adding a runner and toggle on [CLI mode](Troubleshooting#rsi-launcher-v162-javascript-error)
+  - Extract the archive to your runners folder. Restart your game launcher after adding a runner and toggle on [CLI mode](Troubleshooting/lutris#rsi-launcher-v162-javascript-error)
     - Heroic: `~/.config/heroic/tools/wine/`
     - Heroic flatpak: `~/.var/app/com.heroicgameslauncher.hgl/config/heroic/tools/wine/`
     - Lutris: `~/.local/share/lutris/runners/wine/`
@@ -123,7 +125,7 @@ boot.kernel.sysctl = {
 };
 ```
 
-Custom wine runners will not work out of the box if the system wine install does not work ( `wineWow64Packages.stableFull` recommended) try `wine-astral` from [nix-citizen](https://github.com/LovingMelody/nix-citizen) or one of the [Alternative Installation](Alternative-Installations##nix-installation) methods.
+Custom wine runners will not work out of the box if the system wine install does not work ( `wineWow64Packages.stableFull` recommended) try `wine-astral` from [nix-citizen](https://github.com/LovingMelody/nix-citizen) or one of the [Alternative Installation](Alternative-Installations#nix-installation) methods.
 
 
 
@@ -187,7 +189,7 @@ pl_pit.forceSoftwareCursor = 1
 > Check the [latest news](/#general-news) for any wine changes
 
 1. Use RSI Launcher 2.5.1 or newer
-2. Use the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper) to switch to a LUG-Wine runner
+2. Use the latest [LUG Helper](#how-to-add-a-wine-runner) to switch to a LUG-Wine runner
 3. Ensure there are no symlinks or special characters in the path to your Wine prefix
 4. Remove all old EAC workarounds if you have them:
     1. Use the LUG Helper Maintenance menu option to "Update launch script" to remove the previous environment variable workaround.
@@ -216,7 +218,7 @@ pl_pit.forceSoftwareCursor = 1
 ## HDR (High Dynamic Range)
 CIG's vulkan doesn't have HDR yet
 
-Requires experimental native [Wayland](Tips-and-Tricks#Wayland) or [Gamescope](Tips-and-Tricks#Gamescope)
+Requires experimental native [Wayland](Tips-and-Tricks#wine-wayland) or [Gamescope](Tips-and-Tricks#gamescope)
 
 To enable HDR in native Wayland:
 
