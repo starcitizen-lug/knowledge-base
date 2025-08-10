@@ -30,7 +30,7 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 
 ## VKB Devices
 
-{: .highlight }
+{: .tip }
 > Wine 9.22+ has enabled HIDRAW for VKB devices. This removes the 79 button limit and may provide better device support. To enable hidraw access to your VKB devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules`
 ```
 # Set the "uaccess" tag for raw HID access for VKB Devices in wine
@@ -93,7 +93,7 @@ Manual Calibration is as follows;
 
 Change LEDs with a simple python script
 
-https://github.com/gort818/solr-led/blob/main/solr-led.py
+[https://github.com/gort818/solr-led/blob/main/solr-led.py](https://github.com/gort818/solr-led/blob/main/solr-led.py)
 
 
 ## Configuration Tips
