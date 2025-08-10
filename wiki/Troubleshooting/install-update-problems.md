@@ -31,9 +31,6 @@ nav_order: 1
   StartupWMClass=rsi launcher.exe
   ```
 
-## RSI Launcher Error Code 2000
-- Follow [Launcher Tips](/Tips-and-Tricks#rsi-launcher-20) instructions
-
 
 ## RSI Launcher executable is missing
 - Automatic update sometimes fails or is interrupted
@@ -41,9 +38,6 @@ nav_order: 1
 
 ## RSI Launcher doesn't auto-update
 - Follow manual update [instructions](/Tips-and-Tricks#rsi-launcher-manual-update)
-
-## RSI Launcher error: *Could not fix permissions on directory*
-- Please follow our [step-by-step guide](/Tips-and-Tricks#rsi-launcher-20) for the 2.0 RSI Launcher
 
 ## Installing Star Citizen on an NTFS-formatted drive
 - Don't; it probably won't work and will likely only corrupt your game files.
