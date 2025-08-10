@@ -9,7 +9,7 @@ nav_order: 6
 ## Compatibility
 In general, you can expect any hardware to work on linux but third-party software tied to the device can be an issue. In some cases, a VM may be required for configuring the device.
 
-## Troubleshooting
+**Troubleshooting**  
 See the section [at the end of this page](#troubleshooting) for specific issues and workarounds.
 
 ## Recommendations
