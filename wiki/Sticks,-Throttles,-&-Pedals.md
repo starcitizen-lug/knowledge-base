@@ -63,7 +63,7 @@ Requires a windows-only software for calibration and configuration. [Link](https
 
 Requires a windows-only software for calibration and configuration. [Link; scroll down](https://support.virpil.com/en/support/solutions)
 
-{: .highlight }
+{: .tip }
 > Wine 9.22+ has enabled HIDRAW for Virpil devices. This removes the 79 button limit and may provide better device support. To enable hidraw access to your Virpil devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
 > ```
 > # Set the "uaccess" tag for raw HID access for Virpil Devices in wine
@@ -124,7 +124,7 @@ Example:
  # Set the "uaccess" tag for raw HID access for VKB Devices in wine
  KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
  ```
-{: .important-title }
+{: .important }
 > After adding the udev rule, unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that **do not** match the results of the [udevadm](#find-device-info) and click disable
 
 ### Mappings
@@ -218,7 +218,7 @@ https://github.com/beniwtv/evdev-spoof-device
       ACTION=="add|change", KERNEL=="event[0-9]*", ENV{ID_VENDOR_ID}=="<Your Vendor ID>", ENV{ID_MODEL_ID}=="<Your Model ID>", ENV{ID_INPUT_ACCELEROMETER}="", ENV{ID_INPUT_JOYSTICK}="1", TAG+="uaccess"
       ```
       
-{: .highlight }
+{: .note }
 > Consider contributing your rules to the LUG knowlege-base if your device needs any rules to function properly
 > 
 > Also consider having the rule added to [systemd](https://github.com/systemd/systemd/blob/main/hwdb.d/60-input-id.hwdb).
