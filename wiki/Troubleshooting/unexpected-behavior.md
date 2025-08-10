@@ -20,7 +20,7 @@ Other potential workarounds:
   - Add RSI Launcher.exe argument ` --in-process-gpu`
 - [Proton](/Alternative-Installations#proton-installation) helps mitigate this for some
 - Gamescope helps mitigate this for sonav_order: 3me
-  - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix below](#gamescope-not-working)
+  - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix below](nvidia#gamescope-not-working)
   - Install and enable gamescope. Set these options for your display resolution `-W 2560 -H 1440 --force-grab-cursor`
   - Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
 

@@ -27,7 +27,7 @@ nav_order: 2
 
 - Possible cause: DXVK
   - Make sure DXVK is installed and enabled
-  - Nvidia users, check our [latest news](/#news) and Nvidia troubleshooting section [below](#-nvidia) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
+  - Nvidia users, check our [latest news](/#news) and Nvidia [section](nvidia) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 
 - Possible cause: Incorrect Vulkan device
   - If you have Intel integrated graphics and see `VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json` in your log, then change the Vulkan device to use your discrete GPU:
@@ -72,7 +72,7 @@ nav_order: 2
 
 
 ## After playing for a while, crash with no errors
-  - If there are no errors in your [game logs](#gathering-logs), check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](/Performance-Tuning#zram--swap).
+  - If there are no errors in your [game logs](/Troubleshooting/#gathering-logs), check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](/Performance-Tuning#zram--swap).
 
 
 ## Game hangs at splash screen or black/transparent window after clicking 'Launch'
