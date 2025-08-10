@@ -55,7 +55,7 @@ _Distributions that use /etc/security/limits.conf_
 # Wine Installation
 
 {: .tip }
-> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool now contains an option for a wine install and can perform these steps for you automatically! See our [Quick Start Guide](Quick-Start-Guide) for instructions.
+> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool can perform these steps for you automatically! See our [Quick Start Guide](Quick-Start-Guide) for instructions.
 
 1. Install and configure the necessary prerequisites
 2. Create and configure your wine prefix:
