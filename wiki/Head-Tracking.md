@@ -112,7 +112,7 @@ docker compose --file ~/.config/winapps/compose.yaml up
 ```
 
 Now you should be able to access your VM from the following URL:
-[http://localhost:8006/](http://localhost:8006/)
+`<http://localhost:8006>`
 
 ### Tobii Setup
 1. Install the [Tobii Experience driver](https://gaming.tobii.com/getstarted/) on your Windows VM (Required)

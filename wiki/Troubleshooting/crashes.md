@@ -7,7 +7,7 @@ nav_order: 2
 
 #### Error Code 210 and #1 Crash
 - Standard Wine versions >10.1 made changes that break Easy Anti-Cheat
-- Use the Helper to switch to a [recommended](Tips-and-Tricks#recommended-runners) wine runner
+- Use the Helper to switch to a [recommended](/Tips-and-Tricks#recommended-runners) wine runner
 
 
 #### Code 3 crash with error: *Star Citizen process exited abnormally (code: 3) : Command failed*
@@ -71,7 +71,7 @@ nav_order: 2
 
 
 #### After playing for a while, crash with no errors
-  - If there are no errors in your [game logs](#gathering-logs), check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](Performance-Tuning#zram--swap).
+  - If there are no errors in your [game logs](#gathering-logs), check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](/Performance-Tuning#zram--swap).
 
 
 #### Game hangs at splash screen or black/transparent window after clicking 'Launch'

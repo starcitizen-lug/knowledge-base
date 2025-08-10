@@ -18,9 +18,9 @@ nav_order: 5
 
 
 #### RSI Launcher v1.6.2+ JavaScript error
-- The LUG Helper's [wine installation](Quick-Start-Guide#installation-steps) method is recommended and avoids this error
+- The LUG Helper's [wine installation](/Quick-Start-Guide#installation-steps) method is recommended and avoids this error
 - In the game's Lutris `System options`, make sure Advanced options is toggled on then in the `text-based games` section enable `CLI mode`
-- Alternatively, select a Proton runner in Lutris' runner options tab, i.e. `ge-proton` and follow our [proton setup instructions](Tips-and-Tricks#proton)
+- Alternatively, select a Proton runner in Lutris' runner options tab, i.e. `ge-proton` and follow our [proton setup instructions](/Tips-and-Tricks#proton)
 
 
 #### Library version errors during installation
