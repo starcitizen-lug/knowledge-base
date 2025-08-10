@@ -11,7 +11,7 @@ nav_order: 3
 ## 🛠️ Troubleshooting Steps
 
 ### First things to try
-1. Make sure our [LUG Helper](https://github.com/starcitizen-lug/lug-helper)'s Preflight Check passes all checks.
+1. Make sure our [LUG Helper](Tips-and-Tricks#how-to-run-the-lug-helper)'s Preflight Check passes all checks.
 2. Make sure all prerequisites from the [Quick Start Guide](/Quick-Start-Guide) are satisfied on your system.
 3. Kill all wine processes and re-launch a fresh instance of the game.
    Navigate to `~/Games/star-citizen` and run the following in your terminal `./sc-launch.sh shell` then `wineserver -k`
