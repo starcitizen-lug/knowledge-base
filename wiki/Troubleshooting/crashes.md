@@ -13,7 +13,7 @@ nav_order: 2
 
 ## Code 3 crash with error: *Star Citizen process exited abnormally (code: 3) : Command failed*
 - EAC bootstrapper failed to start up
-- You may be missing 32bit drivers. See [32bit Drivers](#-32bit-drivers) below for more information
+- You may be missing 32bit drivers. See [32bit Drivers](32bit-drivers) below for more information
 - Additionally, explicitly set the DXVK device name
   - identify device name using command `vulkaninfo --summary | grep deviceName`
   - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
