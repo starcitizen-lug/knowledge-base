@@ -52,8 +52,7 @@ nav_order: 2
 
 
 ## Game crashes after loading into the PU
-log message may be `create_view: Assertion '!((UINT_PTR)base & page_mask)' failed" / "00adntdll:FILE_GetNtStatus Converting errno 12 to STATUS_UNSUCCESSFUL`
-- Make sure you have [set your vm.max_map_count](/Alternative-Installations#prerequisites)
+- Make sure you have set [your vm.max_map_count](/Alternative-Installations#prerequisites) and passed all LUG Helper preflight checks
 
 
 ## Crash or black screen while using Vulkan beta renderer
