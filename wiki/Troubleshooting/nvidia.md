@@ -25,11 +25,26 @@ Typically caused by dxvk being broken or not installed
 #### Severe frame drops
 - Some Penguins are seeing VRAM exhaustion problems on nvidia cards
 - [Add a new](/Tips-and-Tricks#how-to-edit-the-launch-script) `DXVK_CONFIG` environment variable to override the max device memory. Refer to [DXVK config](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf) for examples
-   - Card with 12GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 9216;cachedDynamicResources = a;"`
-   - Card with 10GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 8192;cachedDynamicResources = a;"`
-   - Card with  8GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 6144;cachedDynamicResources = a;"`
-   - Card with  6GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 4096;cachedDynamicResources = a;"`
-   - Card with  4GB vram: `export DXVK_CONFIG="dxgi.maxDeviceMemory = 2048;cachedDynamicResources = a;"`
+   - Card with 12GB vram
+   ```
+   export DXVK_CONFIG="dxgi.maxDeviceMemory = 9216;cachedDynamicResources = a;"
+   ```
+   - Card with 10GB vram
+   ```
+   export DXVK_CONFIG="dxgi.maxDeviceMemory = 8192;cachedDynamicResources = a;"
+   ```
+   - Card with  8GB vram
+   ```
+   export DXVK_CONFIG="dxgi.maxDeviceMemory = 6144;cachedDynamicResources = a;"
+   ```
+   - Card with  6GB vram
+   ```
+   export DXVK_CONFIG="dxgi.maxDeviceMemory = 4096;cachedDynamicResources = a;"
+   ```
+   - Card with  4GB vram
+   ```
+   export DXVK_CONFIG="dxgi.maxDeviceMemory = 2048;cachedDynamicResources = a;"
+   ```
 
 
 #### DLSS (Deep Learning Super Sampling)
