@@ -4,13 +4,9 @@ parent: "Troubleshooting"
 nav_order: 1
 ---
 
-#### General troubleshooting steps
-- Refer to [First things to try](#first-things-to-try) above.
-- Make sure you are not trying to install to an NTFS-formatted drive.
-- Be sure you haven't changed the default install path in the RSI Launcher settings. If you wish to install the game elsewhere, put the entire wine prefix there instead.
+# 💾 Install & Update Problems
 
-
-#### Wine prefix creation failed
+## Wine prefix creation failed
 - LUG Helper install log shows error similar to `warning: WINE is /path/to/.../bin/wine, which is neither on the path nor an executable file`
 - To fix, make sure the mount point is not marked `noexec`
 
