@@ -2,8 +2,9 @@
 title: "Quick-Start Guide"
 nav_order: 2
 ---
+# Quick-Start Guide
 
-# Prerequisites
+## Prerequisites
 
 {: .tip-title }
 > New to Linux?
@@ -16,7 +17,7 @@ nav_order: 2
     - Must be a linux-formatted SSD
     - We do not recommend an HDD or NTFS format
 
-# Installation Steps
+## Installation Steps
 
 {: .tip }
 > If using an immutable distro (ie. Bazzite, Silverblue), we recommend the [flatpak installation](Alternative-Installations#flatpak-installation).
@@ -28,7 +29,7 @@ nav_order: 2
 5. After the install completes, run the RSI Launcher, log in, and click Install to finish installing the game. **Do not** change the default install location `C:\Program Files\Roberts Space Industries`!
 6. Launch the game. See you in the 'verse!
 
-# After Installation
+## After Installation
 
 {: .important }
 > - For non-US keyboards, set your [keyboard layout](Troubleshooting/unexpected-behavior#non-us-keyboard-keys-not-working) to resolve issues with game console and accept/reject buttons
