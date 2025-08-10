@@ -157,7 +157,7 @@ If you prefer not to use nix-citizen, the [Flatpak method](#flatpak-installation
 
 ### Steam
 
-{: .warning }
+{: .highlight }
 > We do not recommend installing Star Citizen within Steam. While it can be done, it creates several issues that we feel are not worth the effort to try to work around. For example, it limits configurability options and does not invoke needed protonfixes by default.
 > 
 > We believe you will have a much better experience following our [Quick Start Guide](Quick-Start-Guide). If you want to use Steam's proton, you may use umu-launcher by following the [Proton Installation](#proton-installation) instructions above.
