@@ -7,8 +7,9 @@ nav_order: 1
 
 <h2>Welcome, Space Penguins!</h2>
 
-This wiki is a collection of information on how to run Star Citizen on Linux, as well as our tips and tricks!
-We welcome contributions. Feel free to fork this repo and submit a PR.
+This wiki is a collection of information on how to run Star Citizen on Linux. If you're just getting started, head over to our [Quick-Start Guide](Quick-Start-Guide)!
+
+[Issue reports and pull requests](https://github.com/starcitizen-lug/knowledge-base) to help keep this wiki up to date are always appreciated!
 
 ## Join us!
 
