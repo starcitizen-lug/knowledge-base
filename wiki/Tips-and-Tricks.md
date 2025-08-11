@@ -176,13 +176,6 @@ pl_pit.forceSoftwareCursor = 1
 ```
 
 
-## Proton
-- Remove any `powershell.exe` dll override
-- Add environment variables:
-  - `GAMEID: umu-starcitizen`
-  - `PROTONPATH: GE-Proton`
-
-
 ## Easy Anti-Cheat
 
 {: .important-title }
