@@ -76,7 +76,7 @@ nav_order: 2
 
 
 ## Game hangs at splash screen or black/transparent window after clicking 'Launch'
-- Make sure DXVK is installed. Use the [LUG Helper](https://github.com/starcitizen-lug/lug-helper) to install it
+- Make sure DXVK is installed. Use the [LUG Helper](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix) to install it
 - Nvidia users, check our [latest news](/#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 
 
