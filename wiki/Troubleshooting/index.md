@@ -1,5 +1,6 @@
 ---
 title: "Troubleshooting"
+description: "A collection of solutions to errors, crashes, and other common problems running Star Citizen on Linux"
 nav_order: 3
 ---
 
