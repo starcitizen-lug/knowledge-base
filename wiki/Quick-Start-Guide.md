@@ -1,5 +1,6 @@
 ---
 title: "Quick-Start Guide"
+description: "Simple steps to install Star Citizen on Linux!"
 nav_order: 2
 ---
 # Quick-Start Guide
