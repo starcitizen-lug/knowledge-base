@@ -11,7 +11,7 @@ nav_order: 5
 - Kill all wine processes and re-launch a fresh instance of the game. Select the game, click the arrow beside the wine button, choose `Open Bash terminal` and run `wineserver -k` and then restart.
 
 {: .important }
-> Our current recommended install method is to use the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to install the game without Lutris. If this page does not help resolve your issue, we recommend reinstalling the game using the LUG Helper. Tip: Back up and restore your data.p4k file to avoid re-downloading the entire game.
+> Our current recommended install method is to use the [LUG Helper](/Quick-Start-Guide#installation-steps) to install the game without Lutris. If this page does not help resolve your issue, we recommend reinstalling the game using the LUG Helper. Tip: Back up and restore your data.p4k file to avoid re-downloading the entire game.
 
 ## In Lutris, right clicking on Star Citizen and selecting "Configure" does not bring up the configuration
 - Completely close Lutris with `kill lutris`, delete everything inside the Lutris cache directory `~/.cache/lutris`, and relaunch Lutris.
