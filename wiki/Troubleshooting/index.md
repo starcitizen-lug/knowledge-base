@@ -29,6 +29,9 @@ nav_order: 3
 - Native Lutris `lutris -d > ~/lutrislog.log`
 - Flatpak Lutris `flatpak run net.lutris.Lutris -d > ~/lutrislog.log`
 
+### Search for your issue in the Troubleshooting pages
+- Use the search box at the top of this wiki to search for your error, crash, or problem.
+- You may also look through the relevant sections of the Table of Contents below for your problem.
 
 ### Community Help
-If this page doesn't help resolve your issue, you may ask for help on our [social channels](/)
+If you can't find a solution to your issue in the Troubleshooting subpages, you may ask for help on our [social channels](/).
