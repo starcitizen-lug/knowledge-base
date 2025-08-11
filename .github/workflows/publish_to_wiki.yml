@@ -6,7 +6,7 @@ on:
     paths:
       - wiki/** # This includes all sub folders
     branches:
-      - gh-wiki # This can be changed to any branch of your preference
+      - archive-before-github-pages-conversion # This can be changed to any branch of your preference
 
 env:
   USER_TOKEN: ${{ secrets.WIKI_AUTOMATION_TOKEN }} # This is the repository secret
@@ -23,7 +23,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: gh-wiki
+          ref: archive-before-github-pages-conversion
 
 
       # 1. Create folder named `tmp_wiki`
