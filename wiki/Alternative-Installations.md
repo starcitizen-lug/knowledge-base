@@ -1,5 +1,6 @@
 ---
 title: "Alternative Installations"
+description: "Instructions for installing Star Citizen on Linux using third party launchers and other alternative options to our recommended install via the LUG Helper"
 nav_order: 3
 ---
 # Alternative Installations
