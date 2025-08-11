@@ -17,12 +17,6 @@ li.nav-list-item.external {
   }
 }
 
-body {
-  @media (prefers-color-scheme: dark) {
-    background-color:#0d1117;
-  }
-}
-
 // Heights for .site-header at media-queries (in rem)
 $header-heights: (
   default: 2rem,    // below xs
