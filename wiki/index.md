@@ -3,7 +3,7 @@ title: "Home"
 nav_order: 1
 ---
 
-<h1>The Star Citizen Linux Users Group Wiki</h1>
+<h1>Star Citizen Linux Users Group Wiki</h1>
 
 <h2>Welcome, Space Penguins!</h2>
 
