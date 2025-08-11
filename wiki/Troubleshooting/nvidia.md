@@ -4,19 +4,20 @@ parent: "Troubleshooting"
 nav_order: 4
 ---
 
+# 💚 Nvidia
 
-#### Current known issues
+## Current known issues
 - See the Nvidia section of our [latest news](/#news) for the ways in which Nvidia is being special today.
 
-#### Crash when taking shield damage in-game
+## Crash when taking shield damage in-game
 - There is a shield rendering bug that causes the game to crash. It seems to affect 1000 series cards.
 - There is currently no known workaround other than switching cards. We recommend AMD.
 
-#### Popup saying your Nvidia graphics driver is out of date
+## Popup saying your Nvidia graphics driver is out of date
 Typically caused by dxvk being broken or not installed
 - Use the LUG Helper to update dxvk
 
-#### Game fails to start after clicking Launch Game on laptops with Nvidia GPU + intel graphics
+## Game fails to start after clicking Launch Game on laptops with Nvidia GPU + intel graphics
 - Errors may include  
 `DXVAVDA fatal error: could not LoadLibrary: msvproc.dll`  
 or  
@@ -25,7 +26,7 @@ or
   - identify device name using command `vulkaninfo --summary | grep deviceName`
   - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
 
-#### Severe frame drops
+## Severe frame drops
 - Some Penguins are seeing VRAM exhaustion problems on nvidia cards
 - [Add a new](/Tips-and-Tricks#how-to-edit-the-launch-script) `DXVK_CONFIG` environment variable to override the max device memory.  
   Refer to [DXVK config](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf) for examples
@@ -51,7 +52,7 @@ or
    ```
 
 
-#### DLSS (Deep Learning Super Sampling)
+## DLSS (Deep Learning Super Sampling)
 1. Use the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases) to install a standard (non-staging) LUG-Wine runner. (For wine-staging: there is a memory allocation issue with libcuda + wine-staging and Easy Anti-Cheat makes this prohibitively difficult to overcome)
 2. Install winetricks `20250102-next` or newer. System winetricks can be updated with  
    `sudo winetricks --self-update`
@@ -79,6 +80,6 @@ or
 8. Note that nvidia driver v575 may be unstable. v570 is recommended for stability.
 
 
-#### Gamescope not working
+## Gamescope not working
 - See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
 - A possible fix is to set the environment variable `__GL_THREADED_OPTIMIZATIONS=0`
