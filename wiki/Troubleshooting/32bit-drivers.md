@@ -4,8 +4,9 @@ parent: "Troubleshooting"
 nav_order: 6
 ---
 
+# 👾 32bit Drivers
 
-#### Arch-based Distributions (Arch, EndeavourOS, Manjarno, etc)
+## Arch-based Distributions (Arch, EndeavourOS, Manjarno, etc)
 1. Enable the [multilib repo](https://wiki.archlinux.org/title/Official_repositories#Enabling_multilib)
 2. Install 32bit drivers
 - AMD
@@ -17,7 +18,7 @@ nav_order: 6
   sudo pacman -S --needed nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
   ```
 
-#### Ubuntu & Friends (Ubuntu, Mint, PopOS, etc)
+## Ubuntu & Friends (Ubuntu, Mint, PopOS, etc)
 - AMD
   ```
   sudo dpkg --add-architecture i386 && sudo apt update && sudo apt upgrade && sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386
@@ -27,10 +28,10 @@ nav_order: 6
   sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y nvidia-driver-525 libvulkan1 libvulkan1:i386
   ```
 
-#### Fedora & Derivatives (Fedora, Nobara, etc)
+## Fedora & Derivatives (Fedora, Nobara, etc)
 - TBA
 
-#### openSUSE Tumbleweed
+## openSUSE Tumbleweed
 - AMD
   ```
   sudo zypper in kernel-firmware-amdgpu libdrm_amdgpu1 libdrm_amdgpu1-32bit libdrm_radeon1 libdrm_radeon1-32bit libvulkan_radeon libvulkan_radeon-32bit libvulkan1 libvulkan1-32bit
@@ -43,5 +44,5 @@ nav_order: 6
       sudo zypper in libvulkan1 libvulkan1-32bit
       ```
 
-#### Gentoo 💪
+## Gentoo 💪
 - We defer to your expertise
