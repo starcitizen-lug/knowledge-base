@@ -35,7 +35,8 @@ Check our [latest news](/#news) for known temporary issues, workarounds, and run
 ### Search for your issue in the Troubleshooting pages
 
 {: .tip }
-> Use the search box at the top of this wiki to search for your error, crash, or problem.  
+> Use the search box at the top of this wiki to search for your error, crash, or problem.
+> 
 > You may also look through the relevant sections of the Table of Contents below for your problem.
 
 ### Community Help
