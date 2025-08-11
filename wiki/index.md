@@ -9,7 +9,7 @@ nav_order: 1
 
 This wiki is a collection of information on how to run Star Citizen on Linux. If you're just getting started, head over to our [Quick-Start Guide](Quick-Start-Guide)!
 
-[Issue reports and pull requests](https://github.com/starcitizen-lug/knowledge-base) to help keep this wiki up to date are always appreciated!
+If you find any issues or missing information, please open an [issue report or pull request](https://github.com/starcitizen-lug/knowledge-base). Thanks!
 
 ## Join us!
 
