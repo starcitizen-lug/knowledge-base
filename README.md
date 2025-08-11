@@ -1,6 +1,6 @@
 # Star Citizen Linux Users Group Knowledge Base
 
-[-> Click here to go to the wiki <-](https://starcitizen-lug.github.io)  
+[-> Click here to go to the wiki <-](https://wiki.starcitizen-lug.org)  
 For information about installing and running Star Citizen on Linux, tips, tricks, and howto's. 
 ## Contributing
 
