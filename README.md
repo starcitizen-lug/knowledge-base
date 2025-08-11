@@ -5,7 +5,7 @@ For information about installing and running Star Citizen on Linux, tips, tricks
 ## Contributing
 
 If you find anything we could improve in the wiki, feel free to open an issue!  
-To submit a pull request, fork this repo and modify the markdown files within in the wiki directory.
+**To submit a pull request, fork this repo and modify the markdown files within in the wiki directory.**
 
 ## Socials
 
