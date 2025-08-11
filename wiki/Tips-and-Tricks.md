@@ -1,5 +1,6 @@
 ---
 title: "Tips and Tricks"
+description: "Recommended distros, wine runners, LUG Helper tips, and other tricks for running Star Citizen on Linux!"
 nav_order: 5
 ---
 
