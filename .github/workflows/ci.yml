@@ -1,0 +1,26 @@
+name: CI Testing
+
+on:
+  push:
+    branches-ignore:
+      - main
+    paths-ignore:
+      - 'README.md'
+
+  pull_request:
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./wiki
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3

@@ -1,8 +1,18 @@
-## Prerequisites
-> [!tip]
-> New to Linux? See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
+---
+title: "Alternative Installations"
+description: "Instructions for installing Star Citizen on Linux using third party launchers and other alternative options to our recommended install via the LUG Helper"
+nav_order: 3
+---
+# Alternative Installations
 
-> [!tip]
+## Prerequisites
+
+{: .tip-title }
+> New to Linux?
+>
+> See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
+
+{: .tip }
 > Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool can perform these steps for you automatically! See our [Quick Start Guide](Quick-Start-Guide) for instructions.
 
 1. Install Wine **v9.4** or newer following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. If your distro provides an up to date version of wine (ie. Arch), you may install from its repos instead.
@@ -45,8 +55,9 @@ _Distributions that use /etc/security/limits.conf_
 
 
 ## Wine Installation
-> [!tip]
-> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool now contains an option for a wine install and can perform these steps for you automatically! See our [Quick Start Guide](Quick-Start-Guide) for instructions.
+
+{: .tip }
+> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool can perform these steps for you automatically! See our [Quick Start Guide](Quick-Start-Guide) for instructions.
 
 1. Install and configure the necessary prerequisites
 2. Create and configure your wine prefix:
@@ -99,14 +110,15 @@ nix run github:LovingMelody/nix-citizen#star-citizen
 
 If you prefer not to use nix-citizen, the [Flatpak method](#flatpak-installation) would be recommended.
 
-## Alternate Launchers
+## Third Party Launchers
 
-> [!warning]
-> We cannot guarantee that the alternative installation methods on this page will work or perform well. Our community may not be able to provide support for these installations if something isn't working right.
+{: .warning }
+> We cannot guarantee that these third party launchers will work with Star Citizen or perform well. Our community may not be able to provide support for these installations if something isn't working right.
 >
 > The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
 
-> [!important]
+{: .important }
+>
 > If using flatpak apps, ensure the install location is whitelisted using Flatseal or similar methods.
 >
 > The Star Citizen launcher does not support temp paths via xdg-portals.
@@ -145,7 +157,8 @@ If you prefer not to use nix-citizen, the [Flatpak method](#flatpak-installation
 9. Press the "Play" button to run the RSI Launcher, log in, and click install tto finish installing the game
 
 ### Steam
-> [!caution]
+
+{: .highlight }
 > We do not recommend installing Star Citizen within Steam. While it can be done, it creates several issues that we feel are not worth the effort to try to work around. For example, it limits configurability options and does not invoke needed protonfixes by default.
 > 
 > We believe you will have a much better experience following our [Quick Start Guide](Quick-Start-Guide). If you want to use Steam's proton, you may use umu-launcher by following the [Proton Installation](#proton-installation) instructions above.

@@ -1,3 +1,11 @@
+---
+title: "Tips and Tricks"
+description: "Recommended distros, wine runners, LUG Helper tips, and other tricks for running Star Citizen on Linux!"
+nav_order: 5
+---
+
+# Tips and Tricks
+
 ## Recommended Distros
 We strongly recommend choosing a distro that has up-to-date packages and a solid maintenance reputation.  
 
@@ -48,7 +56,7 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
 ## How to add a Wine runner
 - Select the option to "Manage Wine runners" in the [LUG Helper](#how-to-run-the-lug-helper) and it will handle it for you.
 - Alternatively, to manually add a custom wine runner:
-  - Extract the archive to your runners folder. Restart your game launcher after adding a runner and toggle on [CLI mode](Troubleshooting#rsi-launcher-v162-javascript-error)
+  - Extract the archive to your runners folder. Restart your game launcher after adding a runner and toggle on [CLI mode](Troubleshooting/lutris#rsi-launcher-v162-javascript-error)
     - Heroic: `~/.config/heroic/tools/wine/`
     - Heroic flatpak: `~/.var/app/com.heroicgameslauncher.hgl/config/heroic/tools/wine/`
     - Lutris: `~/.local/share/lutris/runners/wine/`
@@ -77,14 +85,14 @@ If you're new to Linux, we recommend avoiding immutable distros such as Bazzite,
     1. Navigate to the extracted archive location
     2. Right click on `lug-helper.sh` and select Run as a Program
 
-> [!tip]
+{: .tip }
 > The Helper uses Zenity for its optional GUI. If you don't see the GUI and want it, install Zenity from your package manager.
 
 
 ## How to edit the launch script
 1. Run the [LUG Helper](#how-to-run-the-lug-helper) and select the `Maintenance and Troubleshooting` menu
 2. Choose the option to `Edit launch script`  
-   <img height="350" alt="image" src="https://github.com/user-attachments/assets/6f30b732-3406-4c59-b23b-32bbccacc5ae" />
+   ![Edit launch script](https://github.com/user-attachments/assets/6f30b732-3406-4c59-b23b-32bbccacc5ae){: style="display: block;max-height: 350px;" }
 3. Alternatively, locate the `sc-launch.sh` file in your Wine prefix directory (by default, `~/Games/star-citizen/sc-launch.sh`) and open it for editing.
 
 
@@ -118,7 +126,7 @@ boot.kernel.sysctl = {
 };
 ```
 
-Custom wine runners will not work out of the box if the system wine install does not work ( `wineWow64Packages.stableFull` recommended) try `wine-astral` from [nix-citizen](https://github.com/LovingMelody/nix-citizen) or one of the [Alternative Installation](Alternative-Installations##nix-installation) methods.
+Custom wine runners will not work out of the box if the system wine install does not work ( `wineWow64Packages.stableFull` recommended) try `wine-astral` from [nix-citizen](https://github.com/LovingMelody/nix-citizen) or one of the [Alternative Installation](Alternative-Installations#nix-installation) methods.
 
 
 
@@ -168,34 +176,29 @@ pl_pit.forceSoftwareCursor = 1
 ```
 
 
-## Proton
-- Remove any `powershell.exe` dll override
-- Add environment variables:
-  - `GAMEID: umu-starcitizen`
-  - `PROTONPATH: GE-Proton`
-
-
 ## Easy Anti-Cheat
-> [!important]
-> Check the [latest news](https://github.com/starcitizen-lug/knowledge-base/wiki#general-news) for any wine changes
+
+{: .important-title }
+>
+> Check the [latest news](/#general-news) for any wine changes
 
 1. Use RSI Launcher 2.5.1 or newer
-2. Use the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper) to switch to a LUG-Wine runner
+2. Use the latest [LUG Helper](#how-to-add-a-wine-runner) to switch to a LUG-Wine runner
 3. Ensure there are no symlinks or special characters in the path to your Wine prefix
 4. Remove all old EAC workarounds if you have them:
-    1. Use the LUG Helper Maintenance menu option to "Update launch script" to remove the previous environment variable workaround.  
-       <img height="300" alt="image" src="https://github.com/user-attachments/assets/e0925912-1c89-4eb2-9dae-5dbd3fe9806e" />  
-       Alternatively, select "Edit launch script" and manually remove the EAC environment variable: `EOS_USE_ANTICHEATCLIENTNULL=1`  
+    1. Use the LUG Helper Maintenance menu option to "Update launch script" to remove the previous environment variable workaround.
+       ![Update launch script](https://github.com/user-attachments/assets/e0925912-1c89-4eb2-9dae-5dbd3fe9806e){: style="display: block;max-height: 300px;" }
+       Alternatively, select "Edit launch script" and manually remove the EAC environment variable: `EOS_USE_ANTICHEATCLIENTNULL=1`
     2. If using Lutris or another third party launcher, remove the above EAC environment variable from its settings.
     3. In the RSI Launcher, navigate to `Settings -> Games -> LIVE -> Game Location`. If you previously manually applied the Z:\ path workaround, restore the game location to its default C:\ path:  
-       <img height="250" alt="image" src="https://github.com/user-attachments/assets/0ac1ed3a-4c3c-43b9-b93a-a4865e63f784" />
+       ![Game path in launcher](https://github.com/user-attachments/assets/0ac1ed3a-4c3c-43b9-b93a-a4865e63f784){: style="display: block;max-height: 250px;" }
     4. Remove EAC line from `/etc/hosts` file: `127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround`
     5. If you have any other EAC workarounds in place, remove them as well.
 
 
 ## Wine Wayland
 
-> [!note]
+{: .note }
 > RSI Launcher buttons may be offset, resize the window or use tab/shift+tab controls for the launcher
 
 - Experimental Wine Wayland
@@ -209,7 +212,7 @@ pl_pit.forceSoftwareCursor = 1
 ## HDR (High Dynamic Range)
 CIG's vulkan doesn't have HDR yet
 
-Requires experimental native [Wayland](Tips-and-Tricks#Wayland) or [Gamescope](Tips-and-Tricks#Gamescope)
+Requires experimental native [Wayland](Tips-and-Tricks#wine-wayland) or [Gamescope](Tips-and-Tricks#gamescope)
 
 To enable HDR in native Wayland:
 

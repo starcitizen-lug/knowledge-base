@@ -1,8 +1,15 @@
-# Compatibility
+---
+title: "Sticks, Throttles, & Pedals"
+description: "In general, you can expect any hardware to work on linux but third-party software tied to the device can be an issue. In some cases, a VM may be required for configuring the device."
+nav_order: 6
+---
 
+# Sticks, Throttles, & Pedals
+
+## Compatibility
 In general, you can expect any hardware to work on linux but third-party software tied to the device can be an issue. In some cases, a VM may be required for configuring the device.
 
-**Troubleshooting**:  
+**Troubleshooting**  
 See the section [at the end of this page](#troubleshooting) for specific issues and workarounds.
 
 ## Recommendations
@@ -23,18 +30,23 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 
 ## VKB Devices
 
-> [!tip]
-> Wine 9.22+ has enabled HIDRAW for VKB devices. This removes the 79 button limit and may provide better device support. To enable hidraw access to your VKB devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
-> ```
-> # Set the "uaccess" tag for raw HID access for VKB Devices in wine
-> KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
-> ```
+{: .tip }
+> Wine 9.22+ has enabled HIDRAW for VKB devices. This removes the 79 button limit and may provide better device support. To enable hidraw access to your VKB devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules`
+```
+# Set the "uaccess" tag for raw HID access for VKB Devices in wine
+KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
+```
 
-> [!important]
-> After adding the udev rule, unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Sim (C) Alex Oz` in the name, and click the Disable button.
 
-> [!important]
-> HIDRAW is recommended for VKB devices running older firmware with a © symbol in the name, or consider upgrading your firmware
+{: .important-title }
+> After adding the udev rule
+>
+> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Sim (C) Alex Oz` in the name, and click the Disable button.
+
+{: .important-title }
+> Hidraw
+>
+> Hidraw is recommended for VKB devices running older firmware with a © symbol in the name, or consider upgrading your firmware
 > You can check the device name using `lsusb` or `evdev-joystick --list`.
 
 ### VKB Gladiator
@@ -48,18 +60,20 @@ They store their configuration on-board but the [configuration software](https:/
 Requires a windows-only software for calibration and configuration. [Link](https://www.vkbcontrollers.com/pages/downloads)
 
 ## Virpil Devices
-    
+
 Requires a windows-only software for calibration and configuration. [Link; scroll down](https://support.virpil.com/en/support/solutions)
 
-> [!tip]
+{: .tip }
 > Wine 9.22+ has enabled HIDRAW for Virpil devices. This removes the 79 button limit and may provide better device support. To enable hidraw access to your Virpil devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
 > ```
 > # Set the "uaccess" tag for raw HID access for Virpil Devices in wine
 > KERNEL=="hidraw*", ATTRS{idVendor}=="3344", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
 > ```
 
-> [!important]
-> After adding the udev rule, unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Virpil Controls` in the name, and click the Disable button.
+{: .important-title }
+> After adding the udev rule
+>
+> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Virpil Controls` in the name, and click the Disable button.
 
 ## Thrustmaster T-16000
 
@@ -79,7 +93,7 @@ Manual Calibration is as follows;
 
 Change LEDs with a simple python script
 
-https://github.com/gort818/solr-led/blob/main/solr-led.py
+[https://github.com/gort818/solr-led/blob/main/solr-led.py](https://github.com/gort818/solr-led/blob/main/solr-led.py)
 
 
 ## Configuration Tips
@@ -110,7 +124,7 @@ Example:
  # Set the "uaccess" tag for raw HID access for VKB Devices in wine
  KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
  ```
-> [!important]
+{: .important }
 > After adding the udev rule, unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that **do not** match the results of the [udevadm](#find-device-info) and click disable
 
 ### Mappings
@@ -174,7 +188,7 @@ ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
   RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
 ```
 
-# Troubleshooting
+## Troubleshooting
 
 ### Accessing Wine Game Controllers Settings
 - Use the LUG Helper's Maintenance menu `Open Wine controller configuration` button
@@ -204,7 +218,7 @@ https://github.com/beniwtv/evdev-spoof-device
       ACTION=="add|change", KERNEL=="event[0-9]*", ENV{ID_VENDOR_ID}=="<Your Vendor ID>", ENV{ID_MODEL_ID}=="<Your Model ID>", ENV{ID_INPUT_ACCELEROMETER}="", ENV{ID_INPUT_JOYSTICK}="1", TAG+="uaccess"
       ```
       
-> [!note]
+{: .note }
 > Consider contributing your rules to the LUG knowlege-base if your device needs any rules to function properly
 > 
 > Also consider having the rule added to [systemd](https://github.com/systemd/systemd/blob/main/hwdb.d/60-input-id.hwdb).
