@@ -25,6 +25,8 @@ nav_order: 1
   Type=Application
   Comment=RSI Launcher
   Keywords=Star Citizen;StarCitizen
+  StartupNotify=true
+  StartupWMClass=rsi launcher.exe
   Icon=rsi-launcher.png
   Exec="/home/{user}/Games/StarCitizen/sc-launch.sh"
   Path=/home/{user}/Games/StarCitizen/dosdevices/c:/Program\sFiles/Roberts\sSpace\sIndustries/RSI\sLauncher
