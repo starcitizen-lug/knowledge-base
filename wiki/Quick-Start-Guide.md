@@ -41,4 +41,4 @@ nav_order: 2
 {: .note-title }
 > Questions or Problems?
 >
-> - Check our [Troubleshooting Guide](Troubleshooting) or ask for help in one of our [social channels](/)!
+> - Check our [Troubleshooting Guide](Troubleshooting) or ask for help in one of our [social channels](/#join-us)!
