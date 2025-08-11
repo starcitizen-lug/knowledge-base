@@ -7,7 +7,9 @@ nav_order: 3
 # Troubleshooting
 
 ## ⚠️ Recent news/issues
-- Check our [latest news](/#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
+
+{: .important-title }
+Check our [latest news](/#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
 
 ## 🛠️ Troubleshooting Steps
 
