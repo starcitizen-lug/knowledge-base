@@ -1,6 +1,6 @@
 # Star Citizen Linux Users Group Knowledge Base
 
-[-> Click here to go to the wiki <-](https://mactan-sc.github.io/knowledge-base/)  
+[-> Click here to go to the wiki <-](https://starcitizen-lug.github.io)  
 For information about installing and running Star Citizen on Linux, tips, tricks, and howto's. 
 ## Contributing
 
