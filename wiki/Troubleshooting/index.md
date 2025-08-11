@@ -34,4 +34,4 @@ nav_order: 3
 - You may also look through the relevant sections of the Table of Contents below for your problem.
 
 ### Community Help
-If you can't find a solution to your issue in the Troubleshooting subpages, you may ask for help on our [social channels](/).
+If you can't find a solution to your issue in the Troubleshooting subpages, you may ask for help on our [social channels](/#join-us).
