@@ -17,18 +17,17 @@ nav_order: 1
 
 
 ## Wine install fails to create .desktop files
-- Manually create a file `~/.local/share/applications/RSI Launcher.desktop` based on the following template.
+- Manually create a file `~/.local/share/applications/RSI Launcher.desktop` based on the following template. Be sure to update the `Exec=` and `Path=` lines!
 - Edit paths based on your install, then update the cache by running `update-desktop-database ~/.local/share/applications`
   ```
   [Desktop Entry]
   Name=RSI Launcher
-  Exec="/home/{user}/Games/StarCitizen/sc-launch.sh"
   Type=Application
-  StartupNotify=true
   Comment=RSI Launcher
-  Path=/home/{user}/Games/StarCitizen/dosdevices/c:/Program\sFiles/Roberts\sSpace\sIndustries/RSI\sLauncher
+  Keywords=Star Citizen;StarCitizen
   Icon=rsi-launcher.png
-  StartupWMClass=rsi launcher.exe
+  Exec="/home/{user}/Games/StarCitizen/sc-launch.sh"
+  Path=/home/{user}/Games/StarCitizen/dosdevices/c:/Program\sFiles/Roberts\sSpace\sIndustries/RSI\sLauncher
   ```
 
 
