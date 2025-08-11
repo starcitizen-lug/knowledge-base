@@ -5,7 +5,7 @@ nav_order: 1
 
 <h1>The Star Citizen Linux Users Group Wiki</h1>
 
-# Welcome, Space Penguins!
+<h2>Welcome, Space Penguins!</h2>
 
 This wiki is a collection of information on how to run Star Citizen on Linux, as well as our tips and tricks!
 We welcome contributions. Feel free to fork this repo and submit a PR.
