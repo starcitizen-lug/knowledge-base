@@ -230,63 +230,31 @@ Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_man
 - Enable HDR with flag `--hdr-enabled`
 
 
-## Automatically Disable/Re-Enable Mouse Acceleration
-Lutris can automatically toggle on/off a flat mouse acceleration profile with the following configuration.
+## Pre-launch and Post-exit Scripts
+The [launch script](#how-to-edit-the-launch-script) installed by the LUG Helper has a commented out example for how to run pre-launch and post-exit scripts. These scripts can be used to launch utilities like antimicrox, opentrack, etc., or disable/re-enable mouse acceleration for more precise FPS handling.
 
-Configure the game within Lutris and go to `System options`. Make sure `Show advanced options` is checked.  
-Add the following to the `Pre-launch script` and `Post-exit script` fields.  
-Alternatively, see [below](#lutris-pre-launch-and-post-exit-scripts) for a sample script file that incorporates this and other pre-launch tweaks.
-
-**Gnome**
-
-`/usr/bin/sh -c "gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat"`
-
-`/usr/bin/sh -c "gsettings set org.gnome.desktop.peripherals.mouse accel-profile default"`
-
-**KDE**
-
-`/usr/bin/sh -c 'kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" true'`
-
-`/usr/bin/sh -c 'kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" false'`
-
-
-## Lutris Pre-launch and Post-exit Scripts
-Below are sample pre-launch and post-exit scripts that incorporate the mouse acceleration settings [described above](#automatically-disablere-enable-mouse-acceleration).
-To use them, create `sc-prelaunch.sh` and `sc-postexit.sh` in your wine prefix, uncomment the appropriate mouse acceleration lines based on your desktop environment, then configure Lutris to use the scripts:
-- `Right click the game->Configure->System options` and set `Pre-launch script` to `/path/to/wine/prefix/sc-pre-launch.sh`
-- `Right click the game->Configure->System options` and set `Post-exit script` to `/path/to/wine/prefix/sc-post-exit.sh`
-- Enable `Wait for pre-launch script completion`
+Some examples:
 
 _sc-prelaunch.sh_
 ```bash
 #!/bin/bash
-############################################
-## Lutris pre-launch script for Star Citizen
-############################################
-
 ## Disable Mouse Acceleration
+
 ## GNOME
-#gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
+# gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
 
 ## KDE
-#kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" true
-
-## End Mouse Acceleration
+# kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" true
 ```
 
 _sc-postexit.sh_
 ```bash
 #!/bin/bash
-###########################################
-## Lutris post-exit script for Star Citizen
-###########################################
-
 ## Reset Mouse Acceleration
+
 ## Gnome
-#gsettings set org.gnome.desktop.peripherals.mouse accel-profile default
+# gsettings set org.gnome.desktop.peripherals.mouse accel-profile default
 
 ## KDE
-#kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" false
-
-## End Mouse Acceleration
+# kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" false
 ```
