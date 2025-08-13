@@ -1,6 +1,6 @@
 ---
 title: "Head Tracking"
-description: "Hardware recommendations, opentrack configuration, and other options for Head Tracking in Star Citizen on Linux"
+description: "Head tracking hardware recommendations, opentrack configuration, and other tips for head tracking in Star Citizen on Linux."
 nav_order: 7
 ---
 
