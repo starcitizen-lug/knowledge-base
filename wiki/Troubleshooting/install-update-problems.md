@@ -1,6 +1,6 @@
 ---
 title: "💾 Install & Update Problems"
-description: "Known issues that cause install and update problems in Star Citizen on Linux and troubleshooting steps to resolve them"
+description: "Known issues that cause install and update problems in Star Citizen on Linux + troubleshooting steps to resolve them"
 parent: "Troubleshooting"
 nav_order: 1
 ---
