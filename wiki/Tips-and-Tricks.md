@@ -10,9 +10,9 @@ nav_order: 5
 We strongly recommend choosing a distro that has up-to-date packages and a solid maintenance reputation.  
 
 The following distributions make our 👍 list and generally work well with Star Citizen:
+- Fedora
 - Arch
 - EndeavourOS (Arch-based)
-- Fedora
 - openSUSE Tumbleweed
 - Debian Testing
 - Ubuntu (*only the latest non-LTS release*)
@@ -29,13 +29,11 @@ The following distributions make our 👎 list and generally pose additional cha
 - openSUSE Leap
 - Manjaro
 
-We do not recommend 👎 LTS distros. *LTS releases and out of date distros are likely to cause many headaches.* LTS ≠ stable. LTS just means old packages locked to a specific major version which only receive security updates. This is great for servers but terrible for gaming where new features and fixes are important. #LTSbadjustdontplskthx  
+We do not recommend 👎 LTS distros. *LTS releases and out of date distros will likely require extra knowledge and effort to get Star Citizen running.* Note that LTS ≠ stable in the traditional sense. LTS distros typically lock their packages to a specific major version which then only receive security updates. This is great for servers but problematic for gaming where new features and fixes are critical.
 
-We do not recommend 👎 most gaming-focused distributions as many of our Penguins have had issues installing the required dependencies to make Star Citizen run. They generally have only an individual or a very small team backing them and, at least where Star Citizen is concerned, do not live up to the promise.  We especially suggest avoiding Pop!_OS and Drauger OS due to irresolvable compatibility issues
+We do not recommend 👎 most gaming-focused distributions as many of our Penguins have had issues getting Star Citizen to run. They generally have only an individual or a very small team backing them and, at least where Star Citizen is concerned, don't offer much benefit beyond our recommended distros for most Penguins.
 
-Other distributions we suggest avoiding 👎 due to frequent package incompatibilities, old dependencies, and update issues are: Manjaro, Ubuntu LTS, Mint (based on Ubuntu LTS), Debian Stable, and openSUSE Leap.
-
-If you're new to Linux, we recommend avoiding immutable distros such as Bazzite, Nix, Silverblue, Universal Blue, etc for now; they come with a steeper learning curve and are better suited to those with more experience.
+If you're new to Linux and looking for something "plug and play", we recommend avoiding immutable distros such as Bazzite, Nix, Silverblue, Universal Blue, etc for now; they come with a steeper learning curve.
 
 
 ## Recommended Runners
