@@ -1,5 +1,6 @@
 ---
 title: "💥 Crashes"
+description: "Known issues that can cause crashes in Star Citizen on Linux + troubleshooting steps to resolve them"
 parent: "Troubleshooting"
 nav_order: 2
 ---
