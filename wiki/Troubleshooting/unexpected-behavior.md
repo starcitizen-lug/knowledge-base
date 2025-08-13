@@ -1,6 +1,6 @@
 ---
 title: "🤪 Unexpected Behavior"
-description: "Known issues that cause unexpected behavior in Star Citizen on Linux + troubleshooting steps to resolve them"
+description: "Known issues that can cause unexpected behavior in Star Citizen on Linux + troubleshooting steps to resolve them"
 parent: "Troubleshooting"
 nav_order: 3
 ---
