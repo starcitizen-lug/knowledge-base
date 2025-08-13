@@ -1,5 +1,6 @@
 ---
 title: "🦦 Lutris Issues"
+description: "Known issues and troubleshooting steps for running Star Citizen on Linux within the third party Lutris launcher"
 parent: "Troubleshooting"
 nav_order: 5
 ---
