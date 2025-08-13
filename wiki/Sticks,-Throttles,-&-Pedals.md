@@ -1,6 +1,6 @@
 ---
 title: "Sticks, Throttles, & Pedals"
-description: "Hardware compatibility, recommendations, configuration, and troubleshooting."
+description: "Peripheral compatibility and recommendations for Star Citizen on Linux, configuration tips, and troubleshooting."
 nav_order: 6
 ---
 
