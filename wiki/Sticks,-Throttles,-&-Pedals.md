@@ -77,13 +77,15 @@ Requires a windows-only software for calibration and configuration. [Link; scrol
 
 ## Thrustmaster T-16000
 
+**Potentiometer Failure**  
 The yaw potentiometer on these sticks tends to fail after a time. It may be possible to prevent or fix the issue, otherwise a new potentiometer can be soldered on.
 - Disassemble the grip and trim off some plastic to try to [fix or prevent the problem](https://www.reddit.com/r/hotas/comments/9h5va3/t16000_yaw_fixed/)
 - Disassemble the potentiometer to try to [clean and repair it](https://www.reddit.com/r/hotas/comments/7ec712/comment/dq58sy8/?context=3)
 - A bit of soldering to [replace the potentiometer](https://www.reddit.com/r/hotas/comments/cronns/comment/ex8oo4b/?context=3)
 
 ## Thrustmaster SOL-R
-Manual Calibration is as follows;
+
+**Manual Calibration**  
 1. Start with base unplugged.
 2.  Push the upper trigger and press the left button (35) on grip then plug to USB port into the base and calibration will start. The ring LED around thumb-stick will blink slowly when calibration process is active.
 3. Let the thumb-stick and the twist rest to center position and push the scroll-wheel below the thumb stick to set the center position, the LED around thumb-stick will blink faster.
@@ -199,6 +201,11 @@ ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
 - Try setting your joysticks to "dinput" instead of "xinput" in Wine control panel
     - Follow the [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings) instructions above.
     - If your joysticks are showing up as "Connected(xinput)", select them and click "Override" to set them to dinput.
+- Thrustmaster T16000 sticks may not appear in the Game Controllers list unless DLL overrides for dinput and xinput are added:
+    - Use the LUG Helper's Maintenance menu `Open Wine prefix configuration` option
+    - In the Wine configuration window, select the `Libraries` tab.
+    - Use the `New override for library` dropdown to add overrides for `dinput` and `xinput`.
+    - If there is more than one `xinput` entry, add them all.
 
 ### Some of your joystick axis aren't recognized / don't map
 - Check that the game has not set the deadzone for this axis to 100%
