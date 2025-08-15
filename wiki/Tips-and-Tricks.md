@@ -201,8 +201,11 @@ pl_pit.forceSoftwareCursor = 1
 
 - Experimental Wine Wayland
   - Use a Wine without **staging** in the name
-  - Add environment variable `export DISPLAY=` to unset it to empty
-  - Add RSI Launcher.exe argument ` --in-process-gpu`
+  - Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export DISPLAY=` to unset it to empty
+  - Add RSI Launcher.exe argument ` --in-process-gpu` example:
+    ```
+    "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" --in-process-gpu > "$launch_log" 2>&1
+    ```
 - Experimental Proton Wayland
   - Add environment variable `PROTON_ENABLE_WAYLAND=1`
   - Add RSI Launcher.exe argument ` --in-process-gpu`
