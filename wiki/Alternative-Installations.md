@@ -85,7 +85,7 @@ _Distributions that use /etc/security/limits.conf_
 
 ## Flatpak Installation
 Flatpak repository or [latest release](https://github.com/mactan-sc/rsilauncher/releases/latest)  
-For documentation and issues refer to https://github.com/mactan-sc/rsilauncher  
+For documentation and issues refer to [https://github.com/mactan-sc/rsilauncher](https://github.com/mactan-sc/rsilauncher)
 1.  Add the repo
 ```
 flatpak remote-add --user --if-not-exists RSILauncher https://mactan-sc.github.io/rsilauncher/RSILauncher.flatpakrepo
@@ -100,7 +100,7 @@ flatpak run io.github.mactan_sc.RSILauncher
 ```
 
 ## Nix Installation
-Flake: nix-citizen - https://github.com/LovingMelody/nix-citizen
+Flake: nix-citizen - [https://github.com/LovingMelody/nix-citizen](https://github.com/LovingMelody/nix-citizen)
 
 nix-citizen is available for Nix users to install. Please see the repository for instructions. This flake provides a module to configure your NixOS config for running Star Citizen. Packages for both standard wine and proton methods are available. To try without adding anything to your configuration, you can use the following command:
 
