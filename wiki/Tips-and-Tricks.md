@@ -131,7 +131,7 @@ Custom wine runners will not work out of the box if the system wine install does
 ## RSI Launcher Manual Update
 1. Download the [latest](https://robertsspaceindustries.com/download) RSI Launcher installer
 2. Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) for your prefix using the `sc-launch.sh` script.
-3. Then run the following command. Be sure to update the download path:
+3. Then, run the following command (be sure to type the correct download path):
     ```
     WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" wine "/path/to/downloaded/RSI Launcher-Setup-2.6.0.exe" /S
     ```
