@@ -85,7 +85,8 @@ _Distributions that use /etc/security/limits.conf_
 
 ## Flatpak Installation
 Flatpak repository or [latest release](https://github.com/mactan-sc/rsilauncher/releases/latest)  
-For documentation and issues refer to [https://github.com/mactan-sc/rsilauncher](https://github.com/mactan-sc/rsilauncher)
+For documentation and issues refer to [https://github.com/mactan-sc/rsilauncher](https://github.com/mactan-sc/rsilauncher)  
+Refer to [Flatpak Tips and Tricks](https://docs.flatpak.org/en/latest/tips-and-tricks.html#adding-a-custom-installation) to install to a custom storage drive location
 1.  Add the repo
 ```
 flatpak remote-add --user --if-not-exists RSILauncher https://mactan-sc.github.io/rsilauncher/RSILauncher.flatpakrepo
