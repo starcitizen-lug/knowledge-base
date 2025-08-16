@@ -4,14 +4,14 @@ description: "A collection of solutions to errors, crashes, and other common pro
 nav_order: 3
 ---
 
-# Troubleshooting
+# 🔧 Troubleshooting
 
-## ⚠️ Recent news/issues
+## Recent news/issues
 
 {: .important-title }
 Check our [latest news](/#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
 
-## 🛠️ Troubleshooting Steps
+## Troubleshooting Steps
 
 ### First things to try
 1. Make sure our [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s Preflight Check passes all checks.
