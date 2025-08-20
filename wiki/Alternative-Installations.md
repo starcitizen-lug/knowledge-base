@@ -19,7 +19,6 @@ nav_order: 3
 2. Install winetricks 20240105-next or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
 4. Set `vm.max_map_count` on your system to at least `16777216`
 5. Set the Hard open file descriptors limit on your system to at least `524288`
-6. See the Manual Easy Anti-Cheat Configuration instructions [here](Tips-and-Tricks#easy-anti-cheat).
 
 **To check and set vm.max_map_count temporarily**
 ```
@@ -143,8 +142,9 @@ If you prefer not to use nix-citizen, the [Flatpak method](#flatpak-installation
 
 ### Bottles
 1. Create a new gaming bottle
-2. Use the "Install Programs..." Star Citizen option
-3. Run Star citizen, log in, and click install to finish installing the game
+2. Change the wine runner to GE-Proton or "system wine" 10.0
+3. Use the "Install Programs..." Star Citizen option
+4. Run Star citizen, log in, and click install to finish installing the game
 
 ### Faugus Launcher
 1. Download latest [Star Citizen installer](https://robertsspaceindustries.com/download)
