@@ -88,6 +88,7 @@ For documentation and issues refer to [https://github.com/mactan-sc/rsilauncher]
 Refer to [Flatpak Tips and Tricks](https://docs.flatpak.org/en/latest/tips-and-tricks.html#adding-a-custom-installation) to install to a custom storage drive location
 1.  Add the repo
 ```
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --user --if-not-exists RSILauncher https://mactan-sc.github.io/rsilauncher/RSILauncher.flatpakrepo
 ```
 2.  install the rsi launcher flatpak
