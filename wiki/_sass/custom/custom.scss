@@ -49,5 +49,5 @@ $header-heights: (
 }
 
 blockquote[class$="-title"] > p:first-child {
-  text-transform: none;
+  text-transform: none !important;
 }
