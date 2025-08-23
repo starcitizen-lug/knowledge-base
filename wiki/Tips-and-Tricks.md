@@ -94,6 +94,12 @@ If you're new to Linux and looking for something "plug and play", we recommend a
 3. Alternatively, locate the `sc-launch.sh` file in your Wine prefix directory (by default, `~/Games/star-citizen/sc-launch.sh`) and open it for editing.
 
 
+## How to update the launch script
+1. Run the [LUG Helper](#how-to-run-the-lug-helper) and select the `Maintenance and Troubleshooting` menu
+2. Choose the option to `Update launch script`
+   ![Update launch script](https://github.com/user-attachments/assets/e0925912-1c89-4eb2-9dae-5dbd3fe9806e){: style="display: block;max-height: 300px;" }
+
+
 ## How to get a Wine maintenance shell using the launch script
 1. In a terminal, navigate to your Star Citizen wine prefix directory. By default, this is `~/Games/star-citizen`
 2. Verify that `sc-launch.sh` exists.
@@ -181,17 +187,17 @@ pl_pit.forceSoftwareCursor = 1
 > Check the [latest news](/#general-news) for any wine changes
 
 1. Use RSI Launcher 2.5.1 or newer
-2. Use the latest [LUG Helper](#how-to-add-a-wine-runner) to switch to a LUG-Wine runner
-3. Ensure there are no symlinks or special characters in the path to your Wine prefix
-4. Remove all old EAC workarounds if you have them:
-    1. Use the LUG Helper Maintenance menu option to "Update launch script" to remove the previous environment variable workaround.
-       ![Update launch script](https://github.com/user-attachments/assets/e0925912-1c89-4eb2-9dae-5dbd3fe9806e){: style="display: block;max-height: 300px;" }
-       Alternatively, select "Edit launch script" and manually remove the EAC environment variable: `EOS_USE_ANTICHEATCLIENTNULL=1`
-    2. If using Lutris or another third party launcher, remove the above EAC environment variable from its settings.
-    3. In the RSI Launcher, navigate to `Settings -> Games -> LIVE -> Game Location`. If you previously manually applied the Z:\ path workaround, restore the game location to its default C:\ path:  
-       ![Game path in launcher](https://github.com/user-attachments/assets/0ac1ed3a-4c3c-43b9-b93a-a4865e63f784){: style="display: block;max-height: 250px;" }
-    4. Remove EAC line from `/etc/hosts` file: `127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround`
-    5. If you have any other EAC workarounds in place, remove them as well.
+2. Ensure there are no symlinks or special characters in the path to your Wine prefix
+3. Use the latest [LUG Helper](#how-to-add-a-wine-runner) to switch to a LUG-Wine runner
+4. [Update your launch script](#how-to-update-the-launch-script)
+5. Remove any EAC workarounds by [editing your launch script](#how-to-edit-the-launch-script) or your game launcher settings, check for each one to see if it exists
+    - Environment variable `EOS_USE_ANTICHEATCLIENTNULL=1`
+    - Hosts entry in file named `/etc/hosts` with the value
+      ```
+      127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround
+      ```
+    - In the RSI Launcher, navigate to `Settings -> Games -> LIVE -> Game Location`. If you previously used the Z:\ path workaround, put it back to the default C:\ path  
+       ![Game path in launcher](https://github.com/user-attachments/assets/0ac1ed3a-4c3c-43b9-b93a-a4865e63f784){: style="display: block;max-height: 250px;" }  
 
 
 ## Wine Wayland
