@@ -47,3 +47,7 @@ $header-heights: (
 #site-nav a {
   white-space: nowrap;
 }
+
+blockquote[class$="-title"] > p:first-child {
+  text-transform: none;
+}
