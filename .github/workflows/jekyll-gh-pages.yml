@@ -37,6 +37,12 @@ jobs:
         with:
           source: ./wiki
           destination: ./_site
+      - name: Clean sitemap namespace
+        run: |
+          sudo chown -R $USER:$USER ./_site
+          if [ -f ./_site/sitemap.xml ]; then
+            sed -i 's/ xmlns:xsi="[^"]*" xsi:schemaLocation="[^"]*"//g' ./_site/sitemap.xml
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
