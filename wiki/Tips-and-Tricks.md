@@ -242,7 +242,7 @@ Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_man
 ## Pre-launch and Post-exit Scripts
 The [launch script](#how-to-edit-the-launch-script) installed by the LUG Helper can be modified to run pre-launch and post-exit scripts. These scripts can be used to launch utilities like antimicrox, opentrack, etc., or disable/re-enable mouse acceleration for more precise FPS handling.
 
-This can be inserted into the launch script above the "it's a trap" section. :  
+This can be inserted into the launch script above the "Launch the game" section:  
 _sc-launch.sh_
 ```bash
 ...
@@ -255,16 +255,8 @@ _sc-launch.sh_
 # Run the prelaunch script
 "$WINEPREFIX/sc-prelaunch.sh"
 
-# Replace the trap line in the section below with this example to run the post-exit script:
-# trap "update_check; \"$wine_path\"/wineserver -k; \"$WINEPREFIX\"/sc-postexit.sh" EXIT
-
-#############################################
-# It's a trap!
-#############################################
-...
-# Replace this line with the example provided above!
-trap "update_check; \"$wine_path\"/wineserver -k" EXIT
-...
+# Run the post-exit script on exit
+trap "\"$WINEPREFIX\"/sc-postexit.sh" EXIT
 ```
 
 Some example pre/post launch scripts:
