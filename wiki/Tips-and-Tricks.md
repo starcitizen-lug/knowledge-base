@@ -245,7 +245,6 @@ The [launch script](#how-to-edit-the-launch-script) installed by the LUG Helper 
 This can be inserted into the launch script above the "Launch the game" section:  
 _sc-launch.sh_
 ```bash
-...
 #############################################
 # Run optional prelaunch and postexit scripts
 #############################################
