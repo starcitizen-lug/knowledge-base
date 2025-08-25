@@ -240,9 +240,34 @@ Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_man
 
 
 ## Pre-launch and Post-exit Scripts
-The [launch script](#how-to-edit-the-launch-script) installed by the LUG Helper has a commented out example for how to run pre-launch and post-exit scripts. These scripts can be used to launch utilities like antimicrox, opentrack, etc., or disable/re-enable mouse acceleration for more precise FPS handling.
+The [launch script](#how-to-edit-the-launch-script) installed by the LUG Helper can be modified to run pre-launch and post-exit scripts. These scripts can be used to launch utilities like antimicrox, opentrack, etc., or disable/re-enable mouse acceleration for more precise FPS handling.
 
-Some examples:
+This can be inserted into the launch script above the "it's a trap" section. :  
+_sc-launch.sh_
+```bash
+...
+#############################################
+# Run optional prelaunch and postexit scripts
+#############################################
+# To use create the scripts with your desired actions in them and
+# place them in your prefix directory: sc-prelaunch.sh and sc-postexit.sh
+
+# Run the prelaunch script
+"$WINEPREFIX/sc-prelaunch.sh"
+
+# Replace the trap line in the section below with this example to run the post-exit script:
+# trap "update_check; \"$wine_path\"/wineserver -k; \"$WINEPREFIX\"/sc-postexit.sh" EXIT
+
+#############################################
+# It's a trap!
+#############################################
+...
+# Replace this line with the example provided above!
+trap "update_check; \"$wine_path\"/wineserver -k" EXIT
+...
+```
+
+Some example pre/post launch scripts:
 
 _sc-prelaunch.sh_
 ```bash
