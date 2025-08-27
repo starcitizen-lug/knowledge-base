@@ -22,7 +22,14 @@ To contribute updates/information, please open an [issue report or pull request]
 ### Game Updates
 
 {: .important-title }
-> (July 11, 2025)
+> (Aug 25, 2025)
+>
+> RSI Launcher Error Code 60101
+>
+> - [Issue Council LCH-2123](https://issue-council.robertsspaceindustries.com/projects/LAUNCHER/issues/LCH-2123) Does not prevent the game from running, the game will launch shortly! 
+
+{: .important-title }
+> (Jul 11, 2025)
 >
 > Easy Anticheat enforcement has been enabled on LIVE
 >
