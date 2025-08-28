@@ -69,7 +69,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 ## Anticheat encountered an error (possible code 30033, 30034)
 - Please follow [our EAC migration instructions](/Tips-and-Tricks#easy-anti-cheat)
 - Check your process list for any lingering wine processes. Reboot if necessary.
-- You may have to delete the EAC directory in youre prefix's `AppData/Roaming` directory.
+- You may have to delete the EAC directory in your prefix's `AppData/Roaming` directory.
 - You may also have to delete the EAC directory in the Star Citizen `LIVE` directory, followed by verifying files in the launcher.
 
 
