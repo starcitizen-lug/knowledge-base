@@ -29,6 +29,7 @@ Check our [latest news](/#news) for known temporary issues, workarounds, and run
 - Wine log: `~/Games/star-citizen/sc-launch.log`
 - Launcher log: `~/Games/star-citizen/drive_c/users/$USER/AppData/Roaming/rsilauncher/logs/log.log`
 - Game log: `~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/Game.log`
+- EAC log : `~/Games/star-citizen/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat`
 - Native Lutris `lutris -d > ~/lutrislog.log`
 - Flatpak Lutris `flatpak run net.lutris.Lutris -d > ~/lutrislog.log`
 
