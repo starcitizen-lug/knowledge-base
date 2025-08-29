@@ -14,7 +14,7 @@ nav_order: 2
 
 
 {: .tip }
-> If using an immutable distro (ie. Bazzite, Silverblue), we recommend the [flatpak installation](Alternative-Installations#flatpak-installation).
+> If using an immutable distro (ie. Bazzite, SteamOS), we recommend the [flatpak installation](Alternative-Installations#flatpak-installation).
 
 
 1. Install Wine **v9.4** or newer from your distro's repos. If wine is not available from your distro's repos, you may follow the instructions on the [winehq website](https://gitlab.winehq.org/wine/wine/-/wikis/Download).
