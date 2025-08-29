@@ -78,7 +78,10 @@ If you're new to Linux and looking for something "plug and play", we recommend a
 3. To run `lug-helper.sh` from a terminal (recommended):
     1. Open your terminal and use `cd /path/to/extracted/archive` to navigate to the location
     2. List files with the `ls` command
-    3. Once you are in the directory containing the `lug-helper.sh` script, run it by typing `./lug-helper.sh`
+    3. Once you are in the directory containing the `lug-helper.sh` script, run it by typing
+       ```
+       ./lug-helper.sh
+       ```
 4. Alternatively, to run `lug-helper.sh` from your file manager:
     1. Navigate to the extracted archive location
     2. Right click on `lug-helper.sh` and select Run as a Program
