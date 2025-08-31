@@ -194,8 +194,8 @@ pl_pit.forceSoftwareCursor = 1
 3. Use the latest [LUG Helper](#how-to-add-a-wine-runner) to switch to a LUG-Wine runner
 4. [Update your launch script](#how-to-update-the-launch-script)
 5. Remove any EAC workarounds by [editing your launch script](#how-to-edit-the-launch-script) or your game launcher settings, check for each one to see if it exists
-    - Environment variable `EOS_USE_ANTICHEATCLIENTNULL=1`
-    - Hosts entry in file named `/etc/hosts` with the value
+    - Remove Environment variable `EOS_USE_ANTICHEATCLIENTNULL=1`
+    - Remove Hosts entry in file named `/etc/hosts` with the value
       ```
       127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround
       ```
