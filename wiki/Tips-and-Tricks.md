@@ -9,15 +9,15 @@ nav_order: 5
 ## Recommended Distros
 We strongly recommend choosing a distro that has up-to-date packages and a solid maintenance reputation.  
 
-The following distributions make our 👍 list and generally work well with Star Citizen:
-- Fedora
+The following distributions make our 👍 list and generally work well with Star Citizen: 
+- ⭐ Fedora
 - Arch
-- EndeavourOS (Arch-based)
+- EndeavourOS *(Arch-based, easier installation)*
 - openSUSE Tumbleweed
+- ⭐ Bazzite *(see note below)*
+- Ubuntu *(only the latest release)*
 - Debian Testing
-- Ubuntu (*only the latest non-LTS release*)
 - Gentoo
-
 
 The following distributions make our 👎 list and generally pose additional challenges:
 - Debian Stable
@@ -33,7 +33,10 @@ We do not recommend 👎 LTS distros. *LTS releases and out of date distros will
 
 We do not recommend 👎 most gaming-focused distributions as many of our Penguins have had issues getting Star Citizen to run. They generally have only an individual or a very small team backing them and, at least where Star Citizen is concerned, don't offer much benefit beyond our recommended distros for most Penguins.
 
-If you're new to Linux and looking for something "plug and play", we recommend avoiding immutable distros such as Bazzite, Silverblue, Nix, etc for now; they come with a slightly steeper learning curve.
+{: .note-title }
+> Note on Immutable Distros (ie. Bazzite)
+> 
+> Some immutable distros such as Bazzite come pre-configured with packages that can make it easier to get up and running (nVidia drivers). While initial setup may be much simpler, they generally limit your ability to tweak and customize the way the system operates. Installing software that isn't already packaged for the OS can also be challenging. A distro like Bazzite can be a good choice for Penguins who don't need to tweak things beyond the default install, but be aware of its limitations.
 
 
 ## Recommended Runners
