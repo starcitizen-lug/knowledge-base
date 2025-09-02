@@ -17,9 +17,8 @@ nav_order: 2
 > If using an immutable distro (ie. Bazzite, SteamOS), we recommend the [flatpak installation](Alternative-Installations#flatpak-installation).
 
 
-1. Install Wine **v9.4** or newer from your distro's repos. If wine is not available from your distro's repos, you may follow the instructions on the [winehq website](https://gitlab.winehq.org/wine/wine/-/wikis/Download).
-2. Install winetricks **20250102** or newer from your distro's repos. Links, if needed, are on the winetricks [github](https://github.com/Winetricks/winetricks#installing)
-3. Select an install location where you have space for the entire game, approximately 110GB
+1. Install `cabextract` and `unzip` from your distro's repos; these are needed by Winetricks. Alternateively, install winetricks **20250102** or newer from your distro's repos. Links, if needed, are on the winetricks [github](https://github.com/Winetricks/winetricks#installing)
+2. Select an install location where you have space for the entire game, approximately 110GB
     - Must be a linux-formatted SSD
     - We do not recommend an HDD or NTFS format
 
