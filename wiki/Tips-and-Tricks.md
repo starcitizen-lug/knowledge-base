@@ -14,7 +14,7 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 - EndeavourOS *(Arch-based, easier installation)*
 - openSUSE Tumbleweed
 - ⭐ Bazzite *(see note below)*
-- Ubuntu *(only the latest release)*
+- Ubuntu *(only the [latest release](https://en.wikipedia.org/wiki/Ubuntu#Releases))*
 - Debian Testing
 - Gentoo
 
