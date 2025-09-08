@@ -131,7 +131,6 @@ Use the [LUG Helper](#how-to-run-the-lug-helper) tool's `Update DXVK` button
 6. Select an older dxvk such as dxvk 2.6.1 or older and click OK
 
 
-
 ## NixOS
 On NixOS, to set `vm.max_map_count` and `fs.file-max`, add the following to your NixOS config:
 
@@ -221,7 +220,7 @@ pl_pit.forceSoftwareCursor = 1
 - Experimental Wine Wayland
   - Use a Wine without **staging** in the name
   - Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export DISPLAY=` to unset it to empty
-  - Add RSI Launcher.exe argument ` --in-process-gpu` example:
+  - Add RSI Launcher.exe argument `--in-process-gpu` example:
     ```
     "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" --in-process-gpu > "$launch_log" 2>&1
     ```
