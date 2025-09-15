@@ -42,7 +42,7 @@ Other potential workarounds:
 
 
 ## Mouse cursor escaping the game window
-- Toggling the game console with the tilde (`~`) key/the key left of the number `1` usually recaptures the mouse.
+- Opening and closing game menu with the escape key usually recaptures the mouse
 - You may also try adding a registry key to your Wine prefix:
    - Use the `sc-launch.sh` launch script to open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run:
      ```
