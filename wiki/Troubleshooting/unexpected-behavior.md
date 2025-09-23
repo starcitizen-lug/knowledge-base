@@ -55,6 +55,10 @@ Other potential workarounds:
 - Log out log back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
 
 
+## Launch Error - Settings.json not found
+- Verify game files
+
+
 ## Visual glitches or semi-transparent lines, poor performance, possibly random crashes
 - DXVK may be broken or disabled. Reinstall it using the LUG Helper DXVK and maintenance menus
 - Your game shader cache may need to be cleared. Use the Delete Shaders option in the RSI Launcher > Settings > Games > {LIVE,PTU} > Delete Local Settings > Shaders folder
