@@ -31,7 +31,7 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 ## VKB Devices
 
 {: .tip }
-> Wine 9.22+ has enabled HIDRAW for VKB devices. This removes the 79 button limit and may provide better device support. To enable hidraw access to your VKB devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules`
+> HIDRAW removes the 79 button limit and may provide better device support. To enable hidraw access to your VKB devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules`
 ```
 # Set the "uaccess" tag for raw HID access for VKB Devices in wine
 KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
@@ -64,7 +64,7 @@ Requires a windows-only software for calibration and configuration. [Link](https
 Requires a windows-only software for calibration and configuration. [Link; scroll down](https://support.virpil.com/en/support/solutions)
 
 {: .tip }
-> Wine 9.22+ has enabled HIDRAW for Virpil devices. This removes the 79 button limit and may provide better device support. To enable hidraw access to your Virpil devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
+> HIDRAW removes the 79 button limit and may provide better device support. To enable hidraw access to your Virpil devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
 > ```
 > # Set the "uaccess" tag for raw HID access for Virpil Devices in wine
 > KERNEL=="hidraw*", ATTRS{idVendor}=="3344", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
@@ -74,6 +74,20 @@ Requires a windows-only software for calibration and configuration. [Link; scrol
 > After adding the udev rule
 >
 > Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Virpil Controls` in the name, and click the Disable button.
+
+## ThrustMaster Devices
+
+{: .tip }
+> HIDRAW removes the 79 button limit and may provide better device support. To enable hidraw access to your ThrustMaster devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
+> ```
+> # Set the "uaccess" tag for raw HID access for ThrustMaster Devices in wine
+> KERNEL=="hidraw*", ATTRS{idVendor}=="044f", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
+> ```
+
+{: .important-title }
+> After adding the udev rule
+>
+> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings)
 
 ## Thrustmaster T-16000
 
