@@ -179,7 +179,8 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 1. Create a file named `USER.cfg` in your LIVE directory
 2. Copy the text block below into it
 3. Uncomment any variables and configure as needed
-4. Save then launch the game as normal. Any changes will be automatically applied
+4. Save then launch the game as normal. Any changes will be automatically applied  
+
 ```
 # Set to your display resolution
 # r_width = 1920
