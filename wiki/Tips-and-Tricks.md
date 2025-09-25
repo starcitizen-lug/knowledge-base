@@ -216,7 +216,9 @@ pl_pit.forceSoftwareCursor = 1
       ```
     - In the RSI Launcher, navigate to `Settings -> Games -> LIVE -> Game Location`. If you previously used the Z:\ path workaround, put it back to the default C:\ path  
        ![Game path in launcher](https://github.com/user-attachments/assets/0ac1ed3a-4c3c-43b9-b93a-a4865e63f784){: style="display: block;max-height: 250px;" }  
-
+6. If none of these can solve the problem, set
+```LC_ALL=en_US.utf8```
+to [launch script](#how-to-edit-the-launch-script)
 
 ## Wine Wayland
 
