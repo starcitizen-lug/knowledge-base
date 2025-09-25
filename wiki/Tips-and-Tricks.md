@@ -175,25 +175,33 @@ Custom wine runners will not work out of the box if the system wine install does
 
 
 ## USER.cfg
+Varibles set using the in-game console must be reapplied each session. Create a USER.cfg file to apply the changes automatically each session.
+1. Create a file named `USER.cfg` in your LIVE directory
+2. Copy the text block below into it
+3. Uncomment any variables and configure as needed
+4. Save then launch the game as normal. Any changes will be automatically applied
 ```
-# set to your display resolution
+# Set to your display resolution
 # r_width = 1920
 # r_height = 1080
 
-#use software cursor
-pl_pit.forceSoftwareCursor = 1
+# Enable software cursor to workaround cursor warping
+# pl_pit.forceSoftwareCursor = 1
 
-# set borderless
+# Enable borderless windowed mode
 # r_WindowMode = 2
 
-# 0 = DX11, 1 = Vulkan
+# Force game renderer - 0 = DX11, 1 = Vulkan
 # r.graphicsRenderer = 0
 
+# Enable in-game performance HUD
 # r_displayinfo = 1
 
+# Limit frame rate
 # sys_MaxFPS = 120
 # sysmaxidleFPS = 120
 
+# Toggle vsync
 # r_VSync = 0
 ```
 
