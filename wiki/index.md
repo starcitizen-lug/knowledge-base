@@ -45,16 +45,15 @@ To contribute updates/information, please open an [issue report or pull request]
 > Star Citizen requires DirectX feature level of 11.1 as a minimum
 >
 > - Wine staging + Latest DXVK can cause issues for nvidia users
-> - Switch to a non-staging wine **OR** downgrade DXVK following [these instructions](Troubleshooting/unexpected-behavior#directx-error-message)
+> - Use the LUG Helper to switch to a non-staging wine
 
 
 {: .note-title }
 > (Nov 30, 2024)
 >
-> Joysticks not detected on Wine 9.22 and newer
+> Joysticks/throttle not detected by the game
 >
-> - Wine 9.22+ has enabled HIDRAW by default for VKB and Virpil devices.
-> - If your joystick/throttle is no longer being detected by the game, follow [our instructions](Sticks,-Throttles,-&-Pedals#some-of-your-joysticks-disappear--arent-recognized-in-the-game) to enable hidraw access.
+> - Follow [these instructions](Sticks,-Throttles,-&-Pedals#some-of-your-joysticks-disappear--arent-recognized-in-the-game) to enable HIDRAW access
 
 ### AMD News
 
@@ -63,10 +62,4 @@ To contribute updates/information, please open an [issue report or pull request]
 
 ### Nvidia News
 
-{: .caution-title }
-> (Oct 9, 2023)
->
-> Crash when taking shield damage in-game
->
-> - There is a shield rendering bug that causes the game to crash. It seems to affect 1000 series cards.
-> - There is currently no known workaround other than switching cards. We recommend AMD.
+> none
