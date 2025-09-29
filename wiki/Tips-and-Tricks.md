@@ -211,20 +211,9 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 
 {: .important-title }
 >
-> Check the [latest news](/#general-news) for any wine changes
-
-1. Use RSI Launcher 2.5.1 or newer
-2. Ensure there are no symlinks or special characters in the path to your Wine prefix
-3. Use the latest [LUG Helper](#how-to-add-a-wine-runner) to switch to a LUG-Wine runner
-4. [Update your launch script](#how-to-update-the-launch-script)
-5. Remove any EAC workarounds by [editing your launch script](#how-to-edit-the-launch-script) or your game launcher settings, check for each one to see if it exists
-    - Remove Environment variable `EOS_USE_ANTICHEATCLIENTNULL=1`
-    - Remove Hosts entry in file named `/etc/hosts` with the value
-      ```
-      127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround
-      ```
-    - In the RSI Launcher, navigate to `Settings -> Games -> LIVE -> Game Location`. If you previously used the Z:\ path workaround, put it back to the default C:\ path  
-       ![Game path in launcher](https://github.com/user-attachments/assets/0ac1ed3a-4c3c-43b9-b93a-a4865e63f784){: style="display: block;max-height: 250px;" }  
+> Check the [latest news](/#general-news) for any changes
+>
+> Refer to [Easy Anti-Cheat](Easy-Anti-Cheat) for troubleshooting steps
 
 
 ## Wine Wayland
