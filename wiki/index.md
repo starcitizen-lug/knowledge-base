@@ -34,7 +34,7 @@ To contribute updates/information, please open an [issue report or pull request]
 >
 > Easy Anticheat enforcement has been enabled on LIVE
 >
-> - We're ready! [Follow the instructions](Troubleshooting/Easy-Anti-Cheat) to fix your existing install. New installs via the Helper handle it automagically.
+> - We're ready! [Follow the instructions](Troubleshooting/easy-anti-cheat) to fix your existing install. New installs via the Helper handle it automagically.
 
 
 ### General News

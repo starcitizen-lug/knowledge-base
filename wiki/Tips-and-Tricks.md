@@ -213,7 +213,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 >
 > Check the [latest news](/#general-news) for any changes
 >
-> Refer to [Easy Anti-Cheat](Easy-Anti-Cheat) for troubleshooting steps
+> Refer to [Easy Anti-Cheat](Troubleshooting/easy-anti-cheat) for troubleshooting steps
 
 
 ## Wine Wayland
