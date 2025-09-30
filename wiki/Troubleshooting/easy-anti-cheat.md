@@ -27,8 +27,8 @@ nav_order: 7
 
 ## Error code after launching persistent universe
 - Possible error codes 70003, 70004
-- [game.log](#gathering-logs) message may contain `Remote Disconnect - Authentication timed out (1/3)`
-- [Locate your game files](#view-game-files) then delete the EAC directories and use the RSI Launcher to Verify Files  
+- [game.log](/Troubleshooting#gathering-logs) message may contain `Remote Disconnect - Authentication timed out (1/3)`
+- [Locate your game files](/Troubleshooting#view-game-files) then delete the EAC directories and use the RSI Launcher to Verify Files  
   ```
   drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/EasyAntiCheat
   ```  
