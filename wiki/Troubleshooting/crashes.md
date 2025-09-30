@@ -7,10 +7,6 @@ nav_order: 2
 
 # 💥 Crashes
 
-## Error Code 210 and #1 Crash
-- Standard Wine versions >10.1 made changes that break Easy Anti-Cheat
-- Use the Helper to switch to a [recommended](/Tips-and-Tricks#recommended-runners) wine runner
-
 
 ## Code 3 crash with error: *Star Citizen process exited abnormally (code: 3) : Command failed*
 - EAC bootstrapper failed to start up

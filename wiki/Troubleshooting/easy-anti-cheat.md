@@ -35,3 +35,9 @@ nav_order: 7
   ```
   drive_c/users/{yourusernamehere}/AppData/Roaming/EasyAntiCheat
   ```
+
+
+  ## Error after pressing Launch Game
+- Possible error codes 210 and #1
+- Vanilla Wine versions >10.1 made changes that break Easy Anti-Cheat
+- Use the Helper to switch to a [recommended](/Tips-and-Tricks#recommended-runners) wine runner
