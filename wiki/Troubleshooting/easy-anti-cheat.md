@@ -24,3 +24,14 @@ nav_order: 7
       ```
     - In the RSI Launcher, navigate to `Settings -> Games -> LIVE -> Game Location`. If you previously used the Z:\ path workaround, put it back to the default C:\ path  
        ![Game path in launcher](https://github.com/user-attachments/assets/0ac1ed3a-4c3c-43b9-b93a-a4865e63f784){: style="display: block;max-height: 250px;" }  
+
+## Error code after launching persistent universe
+- Possible error codes 70003, 70004
+- [game.log](Troubleshooting/#gathering-logs) message may contain `Remote Disconnect - Authentication timed out (1/3)`
+- [Locate your game files](Troubleshooting/#view-game-files) then delete the EAC directories and use the RSI Launcher to Verify Files  
+  ```
+  drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/EasyAntiCheat
+  ```  
+  ```
+  drive_c/users/{yourusernamehere}/AppData/Roaming/EasyAntiCheat
+  ```
