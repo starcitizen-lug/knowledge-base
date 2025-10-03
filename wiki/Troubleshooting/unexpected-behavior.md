@@ -17,7 +17,8 @@ Switch to the game's software cursor. Create a user.cfg file in the LIVE, PTU, E
  ```
 Alternatively, you may choose Xorg at your login screen instead of Wayland session.
 Other potential workarounds:
-- Non-staging Wine Wayland helps mitigate this for some, but note that it's still experimental and YMMV
+- Use LUG Wine 10.15-1 or newer with the game's borderless windowed mode
+- LUG Wine Wayland helps mitigate this for some, but note that it's still experimental and YMMV
   - Add environment variable `DISPLAY=` to unset it to empty
   - Add RSI Launcher.exe argument ` --in-process-gpu`
 - [Proton](/Alternative-Installations#proton-installation) helps mitigate this for some
