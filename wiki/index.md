@@ -36,6 +36,11 @@ To contribute updates/information, please open an [issue report or pull request]
 >
 > - We're ready! [Follow the instructions](Troubleshooting/easy-anti-cheat) to fix your existing install. New installs via the Helper handle it automagically.
 
+{: .important-title }
+> (Oct 25, 2024) Vulkan Crash/Black Screen
+> - Possible error similar to: `Fatal Error: Acquire Next Image Failed`
+> - If you experience this, [we recommend using DX11 for now](Troubleshooting/crashes#crash-or-black-screen-while-using-vulkan-beta-renderer)
+
 
 ### General News
 
