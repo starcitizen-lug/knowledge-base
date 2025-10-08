@@ -205,7 +205,9 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 # Toggle vsync
 # r_VSync = 0
 
-# Disable TSR to remove temporal ghosting and smear
+# Disable Temporal Super Resolution
+# Caution: this will also disable all anti-aliasing, cause sharp/jagged edges and add noise.
+# Only disable TSR if you prefer that look or experience issues with temporal ghosting and smear, like eye fatigue or nausea.
 # r.TSR = 0
 ```
 
