@@ -204,6 +204,9 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 
 # Toggle vsync
 # r_VSync = 0
+
+# Disable Temporal Super Resolution and all anti-aliasing
+# r.TSR = 0
 ```
 
 
