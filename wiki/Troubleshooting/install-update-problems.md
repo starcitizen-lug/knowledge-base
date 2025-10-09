@@ -8,7 +8,7 @@ nav_order: 1
 # 💾 Install & Update Problems
 
 ## Wine prefix creation failed
-- LUG Helper install log shows error similar to `warning: WINE is /path/to/.../bin/wine, which is neither on the path nor an executable file`
+- LUG Helper install log shows error similar to "_warning: WINE is /path/to/bin/wine, which is neither on the path nor an executable file_"
 - To fix, make sure the mount point is not marked `noexec`
 
 
