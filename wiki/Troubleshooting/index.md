@@ -38,11 +38,11 @@ Check our [latest news](/#news) for known temporary issues, workarounds, and run
 
 
 ### View game files
-- Default location 
+- Default location  
   `~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen`
 - Use the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to find your game files  
-  `Maintenance and Troubleshooting` > `Display Helper and Star Citizen Directories`  
-  Click on the link to your game directory
+  1. Select `Maintenance and Troubleshooting` > `Display Helper and Star Citizen Directories`  
+  2. Click on the link to your game directory
 
 ### Search for your issue in the Troubleshooting pages
 
