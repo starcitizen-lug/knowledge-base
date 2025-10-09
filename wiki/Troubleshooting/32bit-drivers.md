@@ -2,7 +2,7 @@
 title: "👾 32bit Drivers"
 description: "Instructions for installing 32bit graphics drivers for various distros to help troubleshoot issues with Star Citizen on Linux"
 parent: "Troubleshooting"
-nav_order: 6
+nav_order: 8
 ---
 
 # 👾 32bit Drivers

@@ -2,7 +2,7 @@
 title: "💚 Nvidia"
 description: "Known issues and troubleshooting steps for Nvidia users running Star Citizen on Linux"
 parent: "Troubleshooting"
-nav_order: 4
+nav_order: 6
 ---
 
 # 💚 Nvidia
