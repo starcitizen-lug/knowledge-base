@@ -37,21 +37,16 @@ To contribute updates/information, please open an [issue report or pull request]
 > - We're ready! [Follow the instructions](Troubleshooting/easy-anti-cheat) to fix your existing install. New installs via the Helper handle it automagically.
 
 {: .important-title }
-> (Oct 25, 2024) Vulkan Crash/Black Screen
+> (Oct 25, 2024)
+>
+> Vulkan Crash/Black Screen
+> 
 > - Possible error similar to: `Fatal Error: Acquire Next Image Failed`
+> - Vulkan is currently hit-or-miss
 > - If you experience this, [we recommend using DX11 for now](Troubleshooting/crashes#crash-or-black-screen-while-using-vulkan-beta-renderer)
 
 
 ### General News
-
-{: .note-title }
-> (Jul 10, 2024)
->
-> Star Citizen requires DirectX feature level of 11.1 as a minimum
->
-> - Wine staging + Latest DXVK can cause issues for nvidia users
-> - Use the LUG Helper to switch to a non-staging wine
-
 
 {: .note-title }
 > (Nov 30, 2024)
@@ -62,9 +57,9 @@ To contribute updates/information, please open an [issue report or pull request]
 
 ### AMD News
 
-> none
+> none!
 
 
 ### Nvidia News
 
-> none
+> none!
