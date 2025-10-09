@@ -2,7 +2,7 @@
 title: "🤡 Easy Anti-Cheat"
 description: "Known Easy Anti-Cheat issues + troubleshooting steps to resolve them"
 parent: "Troubleshooting"
-nav_order: 7
+nav_order: 4
 ---
 
 # 🤡 Easy Anti-Cheat
