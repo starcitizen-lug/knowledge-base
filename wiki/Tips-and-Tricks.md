@@ -126,7 +126,7 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 
 
 ## Updating DXVK Within a Wine Prefix
-Use the [LUG Helper](#how-to-run-the-lug-helper) tool's `Update DXVK` button
+Use the [LUG Helper](#how-to-run-the-lug-helper) tool's `Manage DXVK` button
 
 **To downgrade dxvk to a previous version:**
 1. Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) for your prefix using the `sc-launch.sh` script.
