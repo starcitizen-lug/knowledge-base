@@ -58,13 +58,12 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
       Wine plus experimental staging patches. Works with glibc as old as v2.31
     - lug-wine-tkg-staging-ntsync-git  
       NTSync patched Wine plus experimental staging patches. Requires linux kernel 6.14+ and glibc >=2.38
+- [RawFox](https://github.com/starcitizen-lug/raw-wine/releases)
+  - Managed by the [LUG Helper](#how-to-run-the-lug-helper)
 - [Mactan](https://github.com/mactan-sc/mactan-sc-wine/releases)
   - Managed by the [LUG Helper](#how-to-run-the-lug-helper)
   - TKG builds with LUG community patches
   - Experimental wine wayland patches
-- [RawFox](https://github.com/starcitizen-lug/raw-wine/releases)
-  - Managed by the [LUG Helper](#how-to-run-the-lug-helper)
-  - Recommend v10.0 as of 7-25 its unpatched and works with the C:\ path and enabled EAC
 
 
 ## How to add a Wine runner
