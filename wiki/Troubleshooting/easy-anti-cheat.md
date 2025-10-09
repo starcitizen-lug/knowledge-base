@@ -37,7 +37,14 @@ nav_order: 4
   ```
 
 
-  ## Error after pressing Launch Game
+## Error after pressing Launch Game
 - Possible error codes `210` and `#1`
 - Vanilla Wine versions >10.1 made changes that break Easy Anti-Cheat
 - Use the [LUG Helper](/Tips-and-Tricks#how-to-add-a-wine-runner) to switch to a [recommended](/Tips-and-Tricks#recommended-runners) wine runner
+
+
+## Failed to load the embedded resources
+- Possible game error code `60099`
+- This can occur of your system is set to certain languages'
+- To fix, use the LUG-Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add the following environment variable:
+    - `export LC_ALL=en_US.utf8`
