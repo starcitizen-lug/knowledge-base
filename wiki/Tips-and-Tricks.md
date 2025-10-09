@@ -161,15 +161,16 @@ Custom wine runners will not work out of the box if the system wine install does
 
 
 ## Console Variables
-- r_displayinfo [ 1, 2, 3, 0 ]
+Below are some useful console variables. Tap the grave/backtick/tilde key (above tab) to open the console. See our troubleshooting page for [non-US keyboards](Troubleshooting/unexpected-behavior#non-us-keyboard-keys-not-working) if you have trouble opening the console.
+- `r_displayinfo` [ 1, 2, 3, 0 ]
   - show fps and other details
-- r_displaysessioninfo [ 1, 0 ] 
+- `r_displaysessioninfo` [ 1, 0 ] 
   - show session info QR code for reporting
-- r_displayframegraph [ 1, 0 ]
+- `r_displayframegraph` [ 1, 0 ]
   - show chart of frame time
   - MT (main thread)
   - RT (render thread)
-- pl_pit.forceSoftwareCursor [ 1, 0 ]
+- `pl_pit.forceSoftwareCursor` [ 1, 0 ]
   - force software cursor 
 
 
