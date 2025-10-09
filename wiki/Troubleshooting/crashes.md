@@ -18,9 +18,9 @@ nav_order: 2
 
 
 ## Game immediately crashes after clicking 'Launch'
-- Start by checking the Wine output and/or "game.log" file
+- Start by checking the Wine output and/or "game.log" file. See [initial troubleshooting steps and gathering logs](/Troubleshooting/#troubleshooting-steps).
 
-- See [latest news](/#general-news) for information on recent stability issues
+- See [latest news](/#news) for information on recent stability issues.
 
 - Possible cause: DXVK
   - Make sure DXVK is installed and enabled
@@ -78,4 +78,4 @@ nav_order: 2
 
 
 ## Launcher freezes within a few seconds of opening
-- Try using a different wine runner
+- Try using a different [wine runner](/Tips-and-Tricks#recommended-runners)
