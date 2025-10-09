@@ -213,7 +213,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 
 {: .important-title }
 >
-> Check the [latest news](/#general-news) for any changes
+> Check the [latest news](/#news) for any changes
 >
 > Refer to the [Easy Anti-Cheat](Troubleshooting/easy-anti-cheat) page for troubleshooting steps
 
