@@ -40,4 +40,4 @@ nav_order: 4
   ## Error after pressing Launch Game
 - Possible error codes `210` and `#1`
 - Vanilla Wine versions >10.1 made changes that break Easy Anti-Cheat
-- Use the [LUG Helper](Tips-and-Tricks#how-to-add-a-wine-runner) to switch to a [recommended](/Tips-and-Tricks#recommended-runners) wine runner
+- Use the [LUG Helper](/Tips-and-Tricks#how-to-add-a-wine-runner) to switch to a [recommended](/Tips-and-Tricks#recommended-runners) wine runner
