@@ -10,6 +10,9 @@ We have a helper script which can help you manage and optimize Star Citizen on L
 
 ## Nvidia Cache
 
+{: .tip }
+> If you've installed the game via our [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper), these settings are pre-configured for you.
+
 By default Nvidia has a combined cache for all games. As the cache fills up from other games, Star Citizen's shaders may get deleted leading to poor FPS. We recommend giving SC its own persistent cache by adding the following environment variables:
 ```
 __GL_SHADER_DISK_CACHE=true
@@ -18,6 +21,9 @@ __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=true
 ```
 
 ## Mesa (AMD/Intel) Shader Cache
+
+{: .tip }
+> If you've installed the game via our [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper), these settings are pre-configured for you.
 
 Mesa can be given its own persistent shader cache by adding the following environmental variables:
 ```
@@ -42,14 +48,8 @@ The following game settings can help improve framerates:
   export WINEESYNC=1
   export WINEFSYNC=1
   ```
-- NTSync requires kernel 6.14+ and a [patched wine runner](https://github.com/starcitizen-lug/lug-wine) which can be easily [installed](Tips-and-Tricks#how-to-add-a-wine-runner) using the LUG Helper. No additional env vars are needed.
+- NTSync requires kernel 6.14+ and a [patched wine runner](https://github.com/starcitizen-lug/lug-wine) which can be easily [installed](Tips-and-Tricks#how-to-add-a-wine-runner) using the LUG Helper. No additional environment variables are needed.
 
-
-## Feral GameMode
-
-Gamemode can help improve performance by applying OS-level performance tweaks as the game is launched. Search for `gamemode` in your Distro's repos. Refer to the Gamemode [repository](https://github.com/FeralInteractive/gamemode) for configuration instructions
-
-Use the LUG Helper maintenance menu to edit your launch script and add `gamemoderun` to the beginning of your launch command.
 
 ## Zram & Swap
 
@@ -72,14 +72,18 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 >
 > More swap should be configured if you intend to run background applications while playing the game.
 
+
+## Feral GameMode
+
+Gamemode may help improve performance by applying OS-level performance tweaks as the game is launched. For most configurations, it does not seem to result in significant benefits. Search for `gamemode` in your Distro's repos. Refer to the Gamemode [repository](https://github.com/FeralInteractive/gamemode) for configuration instructions
+
+Use the LUG Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add `gamemoderun` to the beginning of your launch command.
+
+
 ## Picom/Compton Compositors
 
 If you use the Picom or Compton compositor, it may cause a laggy experience despite having high framerates. We recommend disabling the compositor.
 
-## Steam Deck
-
-- We recommend a 32gb+ swap file for the Steam Deck. Create it under `/home` instead of `/` to protect it from being wiped out by SteamOS updates.
-- max allocation of ram to vram
 
 ## Changing CPU scaling behavior via the Linux kernel and System Management BIOS
 
@@ -89,7 +93,7 @@ We have discovered that Dell laptops with Intel CPUs (and possibly other mobile 
 - In situations where one of these laptops is either thermal-limited or power-limited, the CPU and GPU will set the maximum frequency and then fall to a low frequency (ie. 800 MHz) when it hits the limit.
 - You can try to configure these settings in the BIOS or via [SMBIOS](https://www.dmtf.org/standards/smbios). On Ubuntu distributions, this utility is provided by the `smbios-utils` package.
 
-## Solution for affected laptops:
+### Solution for affected laptops:
 If changing the kernel scheduler between `Performance` and the various demand-based schedulers doesn't affect CPU frequency scaling for your laptop, try setting the SMBIOS thermal mode to `cool-bottom`. This mode behaves similarly to the `Conservative` kernel governor, gradually incrementing/decrementing the CPU frequency to stabilize the framerate.
 - Using the SMBIOS utility on Ubuntu, the command is `sudo smbios-thermal-ctl --set-thermal-mode=cool-bottom`
 
