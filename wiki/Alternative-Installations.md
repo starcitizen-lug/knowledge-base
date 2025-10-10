@@ -98,6 +98,7 @@ flatpak install -y --user --noninteractive RSILauncher io.github.mactan_sc.RSILa
 ```
 flatpak run io.github.mactan_sc.RSILauncher
 ```
+4. Refer to [documentation](https://github.com/mactan-sc/rsilauncher) for configuration tips including setting the game location
 
 ## NixOS Installation
 
