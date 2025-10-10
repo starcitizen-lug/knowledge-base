@@ -20,13 +20,14 @@ To contribute updates/information, please open an [issue report or pull request]
 ## News
 
 ### Game Updates
+
 {: .warning-title }
 > (Oct 10, 2025)
 >
 > RSI Launcher 2.9.x p4k file corruption
 >
 > - The 2.9.x RSI Launcher has been pulled due to p4k file corruption. See the spectrum [announcement](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/rsi-launcher-2-9-0-release-notes) for more information.
-> - To easily revert to RSI Launcher v2.7.1, download the latest [main branch](https://github.com/starcitizen-lug/lug-helper/archive/refs/heads/main.zip) of the LUG Helper and use the new option in the Maintenance and Troubleshooting menu to re-install the launcher.
+> - If your RSI Launcher does not automatically prompt to downgrade itselft to 2.7.1, you can easily revert using the LUG Helper. Download the latest [main branch](https://github.com/starcitizen-lug/lug-helper/archive/refs/heads/main.zip) of the LUG Helper and use the new option in the Maintenance and Troubleshooting menu to re-install the launcher.
 
 {: .important-title }
 > (Aug 25, 2025)
