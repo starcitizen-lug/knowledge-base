@@ -5,22 +5,23 @@ nav_order: 2
 ---
 # Quick-Start Guide
 
-## Prerequisites
-
 {: .tip-title }
 > New to Linux?
 >
 > See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 
-
-{: .tip }
-> If using an immutable distro (ie. Bazzite, SteamOS), we recommend the [flatpak installation](Alternative-Installations#flatpak-installation).
-
+## Prerequisites
 
 1. Install `cabextract` and `unzip` from your distro's repos; these are needed by Winetricks. Alternateively, install winetricks **20250102** or newer from your distro's repos. Links, if needed, are on the winetricks [github](https://github.com/Winetricks/winetricks#installing)
 2. Select an install location where you have space for the entire game, approximately 110GB
     - Must be a linux-formatted SSD
     - We do not recommend an HDD or NTFS format
+
+{: .tip }
+> If using an immutable distro that is unable to satisfy the Prerequisites above, we recommend the [flatpak installation](Alternative-Installations#flatpak-installation).
+>
+> For NixOS, see instructions [here](/Alternative-Installations#nixos-installation).  
+> For the Steam Deck, see instructions [here](/Alternative-Installations#steam-deck-installation)
 
 ## Installation Steps
 
