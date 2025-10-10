@@ -136,21 +136,6 @@ Use the [LUG Helper](#how-to-run-the-lug-helper) tool's `Manage DXVK` button
 6. Select an older dxvk such as dxvk 2.6.1 or older and click OK
 
 
-## NixOS
-On NixOS, to set `vm.max_map_count` and `fs.file-max`, add the following to your NixOS config:
-
-```nix
-# ... your NixOS Config ...
-boot.kernel.sysctl = {
-  "vm.max_map_count" = 16777216;
-  "fs.file-max" = 524288;
-};
-```
-
-Custom wine runners will not work out of the box if the system wine install does not work ( `wineWow64Packages.stableFull` recommended) try `wine-astral` from [nix-citizen](https://github.com/LovingMelody/nix-citizen) or one of the [Alternative Installation](Alternative-Installations#nix-installation) methods.
-
-
-
 ## RSI Launcher Manual Update
 1. Download the [latest](https://robertsspaceindustries.com/download) RSI Launcher installer
 2. Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) for your prefix using the `sc-launch.sh` script.
