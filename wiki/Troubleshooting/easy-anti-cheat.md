@@ -14,9 +14,10 @@ nav_order: 4
 
 1. Use RSI Launcher 2.5.1 or newer
 2. Ensure there are no **symlinks** or **special characters** in the path to your Wine prefix
-3. Use the latest [LUG Helper](/Tips-and-Tricks#how-to-add-a-wine-runner) to switch to a LUG-Wine runner
-4. [Update your launch script](/Tips-and-Tricks#how-to-update-the-launch-script)
-5. Remove any EAC workarounds by [editing your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) or your game launcher settings, check for each one to see if it exists
+3. Ensure you have **not** changed the default install location in the RSI Launcher `C:\Program Files\Roberts Space Industries`
+4. Use the latest [LUG Helper](/Tips-and-Tricks#how-to-add-a-wine-runner) to switch to a LUG-Wine runner
+5. [Update your launch script](/Tips-and-Tricks#how-to-update-the-launch-script)
+6. Remove any EAC workarounds by [editing your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) or your game launcher settings, check for each one to see if it exists
     - Remove Environment variable `EOS_USE_ANTICHEATCLIENTNULL=1`
     - Remove Hosts entry in file named `/etc/hosts` with the value
       ```
@@ -41,6 +42,7 @@ nav_order: 4
 - Possible error codes `210` and `#1`
 - Vanilla Wine versions >10.1 made changes that break Easy Anti-Cheat
 - Use the [LUG Helper](/Tips-and-Tricks#how-to-add-a-wine-runner) to switch to a [recommended](/Tips-and-Tricks#recommended-runners) wine runner
+- Ensure you have **not** changed the default install location in the RSI Launcher `C:\Program Files\Roberts Space Industries`
 
 
 ## Failed to load the embedded resources
