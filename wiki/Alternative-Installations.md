@@ -109,7 +109,7 @@ nix run github:LovingMelody/nix-citizen#star-citizen
 
 If you prefer not to use nix-citizen, the [Flatpak method](#flatpak-installation) is recommended.
 
-To set `vm.max_map_count` and `fs.file-max`, add the following to your NixOS config:
+If not using the module included in nix-citizen, set `vm.max_map_count` and `fs.file-max` by adding the following to your NixOS config:
 
 ```nix
 # ... your NixOS Config ...
