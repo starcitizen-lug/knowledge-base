@@ -8,28 +8,6 @@ nav_order: 4
 ## LUG Helper
 We have a helper script which can help you manage and optimize Star Citizen on Linux. It can check/set recommended settings such as vm.max_map_count and the system's open file descriptors limit, manage runners and launch wine prefix configuration tools. See [How to run the LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper) for more instructions.
 
-## Nvidia Cache
-
-{: .tip }
-> If you've installed the game via our [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper), these settings are pre-configured for you.
-
-By default Nvidia has a combined cache for all games. As the cache fills up from other games, Star Citizen's shaders may get deleted leading to poor FPS. We recommend giving SC its own persistent cache by adding the following environment variables:
-```
-__GL_SHADER_DISK_CACHE=true
-__GL_SHADER_DISK_CACHE_PATH="/path/you/want/for/your/cache"  (example: /home/games/star-citizen/nvidiacache)
-__GL_SHADER_DISK_CACHE_SKIP_CLEANUP=true
-```
-
-## Mesa (AMD/Intel) Shader Cache
-
-{: .tip }
-> If you've installed the game via our [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper), these settings are pre-configured for you.
-
-Mesa can be given its own persistent shader cache by adding the following environmental variables:
-```
-MESA_SHADER_CACHE_DIR="/path/you/want/for/your/cache"  (example: /home/games/star-citizen/amdcache)
-MESA_SHADER_CACHE_MAX_SIZE=10G
-```
 
 ## Game Settings
 
@@ -40,15 +18,6 @@ The following game settings can help improve framerates:
 - Set `Scattered Object Distance` to `Low`
 - Set `Motion Blur` to `Off`
 - Set `Sharpening` to `100`
-
-## ESync/FSync/NTSync
-- Which will work best depends on your specific hardware. You may experiment with the following:
-- If these environment variables are set, Wine will automatically choose the best option between esync or fsync:
-  ```
-  export WINEESYNC=1
-  export WINEFSYNC=1
-  ```
-- NTSync requires kernel 6.14+ and a [patched wine runner](https://github.com/starcitizen-lug/lug-wine) which can be easily [installed](Tips-and-Tricks#how-to-add-a-wine-runner) using the LUG Helper. No additional environment variables are needed.
 
 
 ## Zram & Swap
@@ -71,6 +40,43 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 {: .important }
 >
 > More swap should be configured if you intend to run background applications while playing the game.
+
+
+## ESync/FSync/NTSync
+
+- Which will work best depends on your specific hardware. You may experiment with the following:
+- If these environment variables are set, Wine will automatically choose the best option between esync or fsync. If you've installed the game via our [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper), these variables are pre-configured for you.
+:
+  ```
+  export WINEESYNC=1
+  export WINEFSYNC=1
+  ```
+- NTSync requires kernel 6.14+ and a [patched wine runner](https://github.com/starcitizen-lug/lug-wine) which can be easily [installed](Tips-and-Tricks#how-to-add-a-wine-runner) using the LUG Helper. No additional environment variables are needed.
+
+
+## Nvidia Cache
+
+{: .tip }
+> If you've installed the game via our [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper), these settings are pre-configured for you.
+
+By default Nvidia has a combined cache for all games. As the cache fills up from other games, Star Citizen's shaders may get deleted leading to poor FPS. We recommend giving SC its own persistent cache by adding the following environment variables:
+```
+__GL_SHADER_DISK_CACHE=true
+__GL_SHADER_DISK_CACHE_PATH="/path/you/want/for/your/cache"  (example: /home/games/star-citizen/nvidiacache)
+__GL_SHADER_DISK_CACHE_SKIP_CLEANUP=true
+```
+
+
+## Mesa (AMD/Intel) Shader Cache
+
+{: .tip }
+> If you've installed the game via our [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper), these settings are pre-configured for you.
+
+Mesa can be given its own persistent shader cache by adding the following environmental variables:
+```
+MESA_SHADER_CACHE_DIR="/path/you/want/for/your/cache"  (example: /home/games/star-citizen/amdcache)
+MESA_SHADER_CACHE_MAX_SIZE=10G
+```
 
 
 ## Feral GameMode
