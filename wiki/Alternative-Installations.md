@@ -99,16 +99,32 @@ flatpak install -y --user --noninteractive RSILauncher io.github.mactan_sc.RSILa
 flatpak run io.github.mactan_sc.RSILauncher
 ```
 
-## Nix Installation
-Flake: nix-citizen - [https://github.com/LovingMelody/nix-citizen](https://github.com/LovingMelody/nix-citizen)
+## NixOS Installation
 
-nix-citizen is available for Nix users to install. Please see the repository for instructions. This flake provides a module to configure your NixOS config for running Star Citizen. Packages for both standard wine and proton methods are available. To try without adding anything to your configuration, you can use the following command:
+The [nix-citizen](https://github.com/LovingMelody/nix-citizen) flake is the recommended install method. Please see the repository for instructions. This flake provides a module to configure your NixOS config for running Star Citizen. Packages for both standard wine and proton methods are available. To try without adding anything to your configuration, you can use the following command:
 
 ```bash
 nix run github:LovingMelody/nix-citizen#star-citizen
 ```
 
-If you prefer not to use nix-citizen, the [Flatpak method](#flatpak-installation) would be recommended.
+If you prefer not to use nix-citizen, the [Flatpak method](#flatpak-installation) is recommended.
+
+To set `vm.max_map_count` and `fs.file-max`, add the following to your NixOS config:
+
+```nix
+# ... your NixOS Config ...
+boot.kernel.sysctl = {
+  "vm.max_map_count" = 16777216;
+  "fs.file-max" = 524288;
+};
+```
+
+## Steam Deck Installation
+The Steam Deck is resource limited and Star Citizen performance will be poor. Some Penguins have been able to run the game with the following configuration:
+- We recommend a 32gb+ [swap file](/Performance-Tuning#zram--swap) for the Steam Deck. Create it under `/home` instead of `/` to protect it from being wiped out by SteamOS updates.
+- Configure the max allocation of ram to vram
+- Install Star Citizen using the [flatpak method](#flatpak-installation) or a flatpak [third party launcher](#third-party-launchers)
+
 
 ## Third Party Launchers
 
