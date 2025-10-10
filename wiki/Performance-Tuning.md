@@ -6,7 +6,7 @@ nav_order: 4
 # Performance Tuning
 
 ## LUG Helper
-We have a helper script which can help you manage and optimize Star Citizen on Linux. It can check/set recommended settings such as vm.max_map_count and the system's open file descriptors limit, manage runners and launch wine prefix configuration tools. See [How to run the LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper) for more instructions.
+The [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper)'s Preflight Check will do a quick check of your system for some common issues. Be sure it passes all checks.
 
 
 ## Game Settings
@@ -46,7 +46,6 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 
 - Which will work best depends on your specific hardware. You may experiment with the following:
 - If these environment variables are set, Wine will automatically choose the best option between esync or fsync. If you've installed the game via our [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper), these variables are pre-configured for you.
-:
   ```
   export WINEESYNC=1
   export WINEFSYNC=1
@@ -99,15 +98,16 @@ We have discovered that Dell laptops with Intel CPUs (and possibly other mobile 
 - In situations where one of these laptops is either thermal-limited or power-limited, the CPU and GPU will set the maximum frequency and then fall to a low frequency (ie. 800 MHz) when it hits the limit.
 - You can try to configure these settings in the BIOS or via [SMBIOS](https://www.dmtf.org/standards/smbios). On Ubuntu distributions, this utility is provided by the `smbios-utils` package.
 
-### Solution for affected laptops:
+**Solution for affected laptops:**
+
 If changing the kernel scheduler between `Performance` and the various demand-based schedulers doesn't affect CPU frequency scaling for your laptop, try setting the SMBIOS thermal mode to `cool-bottom`. This mode behaves similarly to the `Conservative` kernel governor, gradually incrementing/decrementing the CPU frequency to stabilize the framerate.
 - Using the SMBIOS utility on Ubuntu, the command is `sudo smbios-thermal-ctl --set-thermal-mode=cool-bottom`
 
 ## Increased performance for CPUs with multiple dies
-### Affected CPU generations:
+**Affected CPU generations:**
 - Amd Threadripper
 
-### Steps
+**Steps**
 1. Verify you have a CPU with multiple dies by running `lstopo`. If the results appear similar to the first image below, you can proceed:  
     ![CPU Topology](https://user-images.githubusercontent.com/39007301/220378862-d4b9bbd7-15b3-4e1e-b77d-6b19f0908ba8.png){: style="display: block;max-height: 300px;" }
 
