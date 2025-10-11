@@ -34,7 +34,7 @@ Check our [latest news](/#news) for known temporary issues, workarounds, and run
 - Game log  
   `~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/Game.log`
 - EAC log  
-  `~/Games/star-citizen/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat`
+  `~/Games/star-citizen/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat/(hash)/(hash)/anticheatlauncher.log`
 
 
 ### View game files
