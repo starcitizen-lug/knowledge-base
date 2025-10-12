@@ -27,7 +27,6 @@ To contribute updates/information, please open an [issue report or pull request]
 > RSI Launcher 2.9.0 p4k file corruption
 >
 > - Update to 2.9.2  See the spectrum [announcement](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/rsi-launcher-2-9-0-release-notes) for more information.
-> - You may have to delete and re-install your data.p4k file if you're having otherwise inexplicable issues
 > - If your RSI Launcher does not automatically prompt to update, you can quickly force it using the LUG Helper. Download the latest [main branch](https://github.com/starcitizen-lug/lug-helper/archive/refs/heads/main.zip) of the LUG Helper and use the new option in the Maintenance and Troubleshooting menu to re-install the launcher.
 
 {: .important-title }
