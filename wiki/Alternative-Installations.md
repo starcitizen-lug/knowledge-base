@@ -16,7 +16,7 @@ nav_order: 3
 > Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool can perform these steps for you automatically! See our [Quick Start Guide](Quick-Start-Guide) for instructions.
 
 1. Install Wine **v9.4** or newer following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. If your distro provides an up to date version of wine (ie. Arch), you may install from its repos instead.
-2. Install winetricks 20240105-next or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
+2. Install winetricks 20250102 or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
 4. Set `vm.max_map_count` on your system to at least `16777216`
 5. Set the Hard open file descriptors limit on your system to at least `524288`
 
@@ -58,16 +58,17 @@ _Distributions that use /etc/security/limits.conf_
 {: .tip }
 > Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool can perform these steps for you automatically! See our [Quick Start Guide](Quick-Start-Guide) for instructions.
 
-1. Install and configure the necessary prerequisites
+1. Install and configure the necessary [prerequisites](#prerequisites)
 2. Create and configure your wine prefix:
    ```
-   WINEPREFIX=$HOME/Games/star-citizen winetricks -q arial tahoma dxvk powershell win11
+   WINEPREFIX="$HOME/Games/star-citizen" winetricks -q arial tahoma dxvk powershell win11
    ```
-3. Download and run the RSI installer:
+3. Download a [recommended wine runner](/Tips-and-Tricks#recommended-runners) into `$HOME/Games/star-citizen/runners`
+4. Download and run the RSI installer (be sure to update the path to your downloaded runner):
    ```
-   WINEPREFIX=$HOME/Games/star-citizen WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" wine "~/Downloads/RSI Launcher-Setup-2.3.1.exe" /S
+   WINEPREFIX="$HOME/Games/star-citizen" WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" "$HOME"/Games/star-citizen/runners/{downloaded lug-wine runner}/bin/wine "~/Downloads/RSI Launcher-Setup-2.3.1.exe" /S
    ```
-4. An example launch script is provided on our [LUG Helper's Repo](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/sc-launch.sh)
+5. Create a launch script to run the game with a [recommended wine runner](/Tips-and-Tricks#recommended-runners). An example is provided on our [LUG Helper's Repo](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/sc-launch.sh)
 
 
 ## Proton Installation
