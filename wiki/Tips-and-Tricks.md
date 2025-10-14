@@ -245,7 +245,7 @@ Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_man
 
 ## Hide RSI Launcher Tray Icon
 - Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) and add registry key and DWORD value 1
-  `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer`
+  `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer`  
   `NoTrayItemsDisplay` = 1
 
 ## Pre-launch and Post-exit Scripts
