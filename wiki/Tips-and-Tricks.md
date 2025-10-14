@@ -241,7 +241,12 @@ Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_man
   gamescope --hdr-enabled -W 2560 -H 1440 --force-grab-cursor "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" > "$launch_log" 2>&1
   ```
 - Enable HDR with flag `--hdr-enabled`
+ 
 
+## Hide RSI Launcher Tray Icon
+- Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) and add registry key and DWORD value 1
+  `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer`
+  `NoTrayItemsDisplay` = 1
 
 ## Pre-launch and Post-exit Scripts
 The [launch script](#how-to-edit-the-launch-script) installed by the LUG Helper can be modified to run pre-launch and post-exit scripts. These scripts can be used to launch utilities like antimicrox, opentrack, etc., or disable/re-enable mouse acceleration for more precise FPS handling.
