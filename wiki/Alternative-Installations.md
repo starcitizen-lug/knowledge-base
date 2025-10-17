@@ -142,6 +142,9 @@ The Steam Deck is resource limited and Star Citizen performance will be poor. So
 > The Star Citizen launcher does not support temp paths via xdg-portals.
 
 ### Lutris
+{: .warning }
+> The most recent Lutris release, 0.5.18, no longer works with Star Citizen out of the box. You may try the steps below, but be aware that others have had issues getting the game to run properly.
+
 1. Set the default wine runner to GE-Proton in global preferences
 2. Install Star Citizen from [Lutris](https://lutris.net/games/star-citizen/)
 3. Run the RSI Launcher, log in, and click install to finish installing the game
