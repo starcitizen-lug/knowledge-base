@@ -54,7 +54,7 @@ or
 
 
 ## DLSS (Deep Learning Super Sampling)
-1. Use the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases) to install a standard (non-staging) LUG-Wine runner. (For wine-staging: there is a memory allocation issue with libcuda + wine-staging and Easy Anti-Cheat makes this prohibitively difficult to overcome)
+1. Use the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases) to install a LUG-Wine runner. (For any other wine runners, avoid wine-staging)
 2. Install winetricks `20250102-next` or newer. System winetricks can be updated with  
    `sudo winetricks --self-update`
 3. Enter a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) for your prefix using the `sc-launch.sh` script.
