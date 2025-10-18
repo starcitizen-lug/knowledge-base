@@ -35,7 +35,8 @@ nav_order: 4
   ```  
   ```
   ~/Games/star-citizen/drive_c/users/{yourusernamehere}/AppData/Roaming/EasyAntiCheat
-  ```
+  ```  
+- Ensure that you have **not** disabled development syscalls (e.g. ptrace)
 
 
 ## Error after pressing Launch Game
