@@ -101,6 +101,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 ## Failed to initialize dependencies error
 - Make sure the `SDL_VIDEODRIVER` environment variable is **NOT** set globally to `wayland` on your system: `env | grep SDL_VIDEODRIVER`
 - If it is set, remove it from whichever environment config(s) is setting it.
+- [Edit the launch script](#how-to-edit-the-launch-script) and add `unset SDL_VIDEODRIVER` to the environment variables section
 
 
 ## Black or flickering window, possible crash with errors 15006 or 30007
