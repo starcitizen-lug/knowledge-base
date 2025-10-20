@@ -42,6 +42,13 @@ nav_order: 2
   - Many keyboards and mice can also have a "joystick" part in Linux, which Wine can detect. Unfortunately, Wine may be confused about it, as they are not real joysticks. In this case, the game could crash. Use the LUG Helper's maintenance menu to run the wine control panel and disable your keyboard and/or mice.
 
 
+## Game launcher fails to start
+
+- Possible cause: Outdated glibc
+  - Log message may include `could not load ntdll.so ... version 'GLIB-C_x.xx not found'`
+  - Update to the latest release of a [non-LTS distro](/Tips-and-Tricks#recommended-distros)
+
+
 ## Game crashes after clicking 'Verify'
 - Make sure Star Citizen is installed on drive "C:\" Check the "Library Folder" option in the launcher settings:
 ![Star Citizen launcher](https://github.com/user-attachments/assets/0ac1ed3a-4c3c-43b9-b93a-a4865e63f784)
