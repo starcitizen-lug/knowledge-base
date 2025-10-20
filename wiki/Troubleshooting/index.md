@@ -18,8 +18,7 @@ Check our [latest news](/#news) for known temporary issues, workarounds, and run
 2. Make sure all prerequisites from the [Quick Start Guide](/Quick-Start-Guide) are satisfied on your system.
 3. Make sure you are not trying to install to an NTFS-formatted drive.
 4. Be sure you haven't changed the default install path in the RSI Launcher settings. If you wish to install the game elsewhere, put the entire wine prefix there instead.
-5. Kill all wine processes and re-launch a fresh instance of the game.
-   Navigate to `~/Games/star-citizen` and run the following in your terminal `./sc-launch.sh shell` then `wineserver -k`
+5. Kill all wine processes and re-launch a fresh instance of the game: Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run `wineserver -k`
 6. Look for your issue in the [latest news](/#news)
 7. Use the lug helper to get the latest wine runner. Be sure to check the [latest news](/#general-news) for recommendations
 8. Try a different wine version. If using wine-staging, try standard wine. Try wine-staging if using standard wine.
