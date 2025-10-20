@@ -2,7 +2,7 @@
 title: "💖 AMD"
 description: "Known issues and troubleshooting steps for AMD users running Star Citizen on Linux"
 parent: "Troubleshooting"
-nav_order: 5
+nav_order: 6
 ---
 
 # 💖 AMD
