@@ -27,12 +27,6 @@ This is a generic error code representing any issue with logging in to CIG serve
 - Kill the launcher and restart it and try again
 - Ensure that IPv6 is not disabled
 
-## Anticheat encountered an error (possible code 30033, 30034)
-- Please follow [our EAC migration instructions](/Tips-and-Tricks#easy-anti-cheat)
-- Check your process list for any lingering wine processes. Reboot if necessary.
-- You may have to delete the EAC directory in your prefix's `AppData/Roaming` directory.
-- You may also have to delete the EAC directory in the Star Citizen `LIVE` directory, followed by verifying files in the launcher.
-
 
 ## Required Vulkan Extensions are missing error / poor performance compared to windows / error code 3
 - Check if you have amdvlk installed by running `vulkaninfo --summary`. The vulkaninfo utility is part of the package `vulkan-tools` on most distros. You can also check your package manager.
