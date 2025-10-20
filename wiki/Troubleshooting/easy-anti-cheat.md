@@ -2,7 +2,7 @@
 title: "🤡 Easy Anti-Cheat"
 description: "Known Easy Anti-Cheat issues + troubleshooting steps to resolve them"
 parent: "Troubleshooting"
-nav_order: 4
+nav_order: 5
 ---
 
 # 🤡 Easy Anti-Cheat
@@ -37,6 +37,7 @@ nav_order: 4
   ~/Games/star-citizen/drive_c/users/{yourusernamehere}/AppData/Roaming/EasyAntiCheat
   ```  
 - Ensure that you have **not** disabled development syscalls (e.g. ptrace)
+- Use a [Wine maintenance shell](https://wiki.starcitizen-lug.org/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) to run `wineserver -k` to kill any lingering wine processes in your prefix. Reboot if necessary.
 
 
 ## Error after pressing Launch Game
