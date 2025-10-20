@@ -30,7 +30,7 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 - Ubuntu LTS
 - Mint (based on Ubuntu LTS)
 - Pop!_OS (based on Ubuntu LTS)
-- Zorin (based on very old Ubuntu LTS)
+- Zorin (based on Ubuntu LTS)
 - Drauger OS
 - openSUSE Leap
 - Manjaro
