@@ -13,7 +13,7 @@ nav_order: 2
 ## Prerequisites
 
 1. Install `cabextract` and `unzip` from your distro's repos; these are needed by Winetricks. Alternatively, install winetricks **20250102** or newer from your distro's repos. Links, if needed, are on the winetricks [github](https://github.com/Winetricks/winetricks#installing)
-2. Select an install location where you have space for the entire game, approximately 110GB
+2. Select an install location where you have space for the entire game, approximately 140GB
     - Must be a linux-formatted SSD
     - We do not recommend an HDD or NTFS format
 
