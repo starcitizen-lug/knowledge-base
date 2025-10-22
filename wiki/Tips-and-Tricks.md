@@ -50,6 +50,10 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 - [LUG-Wine](https://github.com/starcitizen-lug/lug-wine/releases)
   - Default runner in the [LUG Helper](#how-to-run-the-lug-helper)
   - TKG Builds with LUG patches specifically for Star Citizen
+    - lug-wine-tkg-git  
+      Standard Wine built for maximum compatibility. Works with glibc as old as v2.35
+    - lug-wine-tkg-staging-git  
+      Wine plus experimental staging patches. Works with glibc as old as v2.35
     - lug-wine-tkg-fsync-git  
       Standard Wine built for maximum compatibility. Works with glibc as old as v2.31
     - lug-wine-tkg-ntsync-git  
