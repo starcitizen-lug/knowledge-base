@@ -53,7 +53,11 @@ Other potential workarounds:
 
 
 ## Non-US keyboard keys not working
-1. Use the Lug Helper maintenance menu to edit the launch script to set the `export LANG=` environment variable. For example:
+1. Use the LUG Helper to [switch to a wine](/Tips-and-Tricks#how-to-add-a-wine-runner) with **staging** in the name
+2. Use the LUG Helper Maintenance menu `Open Wine prefix configuration` button to run winecfg
+3. Select your language from the list and enable scancode auto-detection
+ ![staging_input_menu](https://github.com/user-attachments/assets/94908f79-682d-42ac-89fc-4564f09c3b7c)
+4. If the above doesn't work, use the Lug Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to set the `export LANG=` environment variable. You may need to switch to a staging runner besides LUG-Wine.
     ```
     ################################################################
     # Configure the environment
@@ -61,8 +65,4 @@ Other potential workarounds:
     ################################################################
     export LANG=de_DE
     ```
-3. Use the LUG Helper's `Manage Runners` option to select a wine with **staging** in the name. Check the [latest news](/#general-news) for wine info 
-4. Use the LUG Helper Maintenance menu `Open Wine prefix configuration` button to run winecfg
-5. Select your language from the list and enable scancode auto-detection
- ![staging_input_menu](https://github.com/user-attachments/assets/94908f79-682d-42ac-89fc-4564f09c3b7c)
 
