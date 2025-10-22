@@ -141,12 +141,7 @@ Use the [LUG Helper](#how-to-run-the-lug-helper) tool's `Manage DXVK` button
 
 
 ## RSI Launcher Manual Update
-1. Download the [latest](https://robertsspaceindustries.com/download) RSI Launcher installer
-2. Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) for your prefix using the `sc-launch.sh` script.
-3. Then, run the following command (be sure to type the correct download path):
-    ```
-    WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" wine "/path/to/downloaded/RSI Launcher-Setup-2.6.0.exe" /S
-    ```
+1. Using the latest [LUG Helper](https://wiki.starcitizen-lug.org/Tips-and-Tricks#how-to-run-the-lug-helper), select `Maintenance and Troubleshooting`, then choose `Update/Re-install RSI Launcher`.
 
 
 ## Console Variables
