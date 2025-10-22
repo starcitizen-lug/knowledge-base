@@ -141,7 +141,7 @@ Use the [LUG Helper](#how-to-run-the-lug-helper) tool's `Manage DXVK` button
 
 
 ## RSI Launcher Manual Update
-1. Using the latest [LUG Helper](https://wiki.starcitizen-lug.org/Tips-and-Tricks#how-to-run-the-lug-helper), select `Maintenance and Troubleshooting`, then choose `Update/Re-install RSI Launcher`.
+1. Using the latest [LUG Helper](https://wiki.starcitizen-lug.org/Tips-and-Tricks#how-to-run-the-lug-helper), select `Maintenance and Troubleshooting` then choose `Update/Re-install RSI Launcher`.
 
 
 ## Console Variables
