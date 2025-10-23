@@ -10,8 +10,8 @@ nav_order: 4
 
 ## Empty launcher
 - Try logging out and back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
-- For Wine >=10.17, the EGL OpenGL backend has been enabled by default and may cause launcher rendering issues. The launcher may be empty or only show the background video, music may work, and buttons are invisible.
-  - Use the [LUG Helper](/Tips-and-Tricks#how-to-add-a-wine-runner) to install a LUG-Wine runner `10.17-2` or later.
+- Wine >=10.17 may cause launcher rendering issues. The launcher may be empty or only show the background video, music may work, and buttons are invisible.
+  - Use the [LUG Helper](/Tips-and-Tricks#how-to-add-a-wine-runner) to install a LUG-Wine runner `10.16` or `10.15`.
 
 
 ## Launch Error - Settings.json not found
