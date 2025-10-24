@@ -12,6 +12,7 @@ nav_order: 4
 - Try logging out and back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
 - Wine >=10.17 may cause launcher rendering issues. The launcher may be empty or only show the background video, music may work, and buttons are invisible.
   - Use the [LUG Helper](/Tips-and-Tricks#how-to-add-a-wine-runner) to install a LUG-Wine runner `10.16` or `10.15`.
+- If using the Cosmic DE beta, this is a [known issue](https://github.com/pop-os/cosmic-epoch/issues/2368). Try using the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s `Open Wine prefix configuration` option in the Maintenance menu to turn on virtual desktop mode.
 
 
 ## Launch Error - Settings.json not found
