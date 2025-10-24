@@ -18,6 +18,11 @@ nav_order: 4
 ## Launch Error - Settings.json not found
 - Verify game files
 
+## Launch Error - %AppData% returned empty string
+- Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then type `wineserver -k` to terminate all lingering Wine processes.
+- If that doesn't resolve it, try switching to a different Wine runner.
+- Check that you haven’t changed the default install path in the RSI Launcher settings.
+
 
 ## Visual glitches or semi-transparent lines, poor performance, possibly random crashes
 - DXVK may be broken or disabled. Reinstall it using the LUG Helper DXVK and maintenance menus
