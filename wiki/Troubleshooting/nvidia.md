@@ -74,7 +74,6 @@ or
    ```
    export DXVK_NVAPI_SET_NGX_DEBUG_OPTIONS="DLSSIndicator=1,DLSSGIndicator=1"
    ```
-7. Note that nvidia driver v575 may be unstable. v570 is recommended for stability.
 
 
 ## Gamescope not working
