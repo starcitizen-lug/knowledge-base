@@ -18,9 +18,7 @@ Switch to the game's software cursor. Create a user.cfg file in the LIVE, PTU, E
 Alternatively, you may choose Xorg at your login screen instead of Wayland session.
 Other potential workarounds:
 - Use LUG Wine 10.15-1 or newer with the game's borderless windowed mode
-- LUG Wine Wayland helps mitigate this for some, but note that it's still experimental and YMMV
-  - Add environment variable `DISPLAY=` to unset it to empty
-  - Add RSI Launcher.exe argument ` --in-process-gpu`
+- Experimental LUG [Wine Wayland](/Tips-and-Tricks#wine-wayland) helps mitigate this for some
 - [Proton](/Alternative-Installations#proton-installation) helps mitigate this for some
 - Gamescope helps mitigate this for sonav_order: 3me
   - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix](nvidia#gamescope-not-working)
