@@ -34,13 +34,11 @@ or
 
 | GPU VRAM (GB)    | Overriden Value (MB) |
 | ------------- | ------------- |
-| 16 | 12288 |
 | 12 | 9216 |
 | 10 | 8192 |
 | 8  | 6144 |
 | 6  | 4096 |
 | 4  | 2048 |
-| 2  | 1024 |
 
 - You may experiment with different values, but opting for the recommendation is likely to yield the best performance result with the least tinkering
 
