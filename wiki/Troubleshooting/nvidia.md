@@ -29,7 +29,7 @@ or
 
 ## Severe frame drops
 - Some Penguins are seeing VRAM exhaustion problems on Nvidia cards
-- One way to fix the problem is to [add a new set of environment variables in the Star Citizen launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) that override the maximum allowed VRAM allocation on the GPU
+- One possible help for the problem is to [add a new set of environment variables in the Star Citizen launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) that override the maximum allowed VRAM allocation on the GPU
 - Here are some recommended values:
 
 | GPU VRAM (GB)    | Overriden Value (MB) |
