@@ -45,7 +45,7 @@ or
 - You may experiment with different values, but opting for the recommendation is likely to yield the best performance result with the least tinkering
 
 > [!NOTE]
-> After making this change, Star Citizen will still use the GPU's entire amount of VRAM. Overriding the maximum allotment simply overcomes a problem with VRAM allocation on Nvidia GPUs in GNU/Linux. In other words, doing this optimizes the GPU's performance.
+> After making this change, Star Citizen will still use the GPU's entire amount of VRAM. Overriding the maximum allotment simply overcomes a problem with VRAM allocation on Nvidia GPUs with Star Citizen in GNU/Linux. In other words, doing this optimizes the GPU's performance.
 
 ### DXVK
 Refer to [DXVK config](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf) for examples.
