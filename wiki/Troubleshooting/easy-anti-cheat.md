@@ -36,8 +36,16 @@ nav_order: 5
   ```
   ~/Games/star-citizen/drive_c/users/{yourusernamehere}/AppData/Roaming/EasyAntiCheat
   ```  
-- Ensure that you have **not** disabled development syscalls (e.g. ptrace)
 - Use a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) to run `wineserver -k` to kill any lingering wine processes in your prefix. Reboot if necessary.
+- Check that your DNS can resolve the EAC domains:
+  ```
+  dig modules-cdn.eac-prod.on.epicgames.com
+  dig download-alt.easyanticheat.net
+  ```
+- Ensure that you have **not** disabled development syscalls (e.g. ptrace)
+- Check that IPv6 has not been disabled on your system
+- Contribute to this [issue council report](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-177971) if none of the above steps work
+
 
 
 ## Error after pressing Launch Game
