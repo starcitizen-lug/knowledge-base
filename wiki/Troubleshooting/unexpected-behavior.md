@@ -15,8 +15,13 @@ nav_order: 4
 - If using the Cosmic DE beta, this is a [known issue](https://github.com/pop-os/cosmic-epoch/issues/2368). Try using the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s `Open Wine prefix configuration` option in the Maintenance menu to turn on virtual desktop mode.
 
 
+## Launcher indicates You are currently offline
+- Log out and back in
+
+
 ## Launch Error - Settings.json not found
 - Verify game files
+
 
 ## Launch Error - %AppData% returned empty string
 - Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then type `wineserver -k` to terminate all lingering Wine processes.
