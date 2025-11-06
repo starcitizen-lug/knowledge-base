@@ -28,30 +28,44 @@ or
   - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
 
 ## Severe frame drops
-- Some Penguins are seeing VRAM exhaustion problems on nvidia cards
-- [Add a new](/Tips-and-Tricks#how-to-edit-the-launch-script) `DXVK_CONFIG` environment variable to override the max device memory.  
-  Refer to [DXVK config](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf) for examples
-   - Card with 12GB vram
-   ```
-   export DXVK_CONFIG="dxgi.maxDeviceMemory = 9216;cachedDynamicResources = a;"
-   ```
-   - Card with 10GB vram
-   ```
-   export DXVK_CONFIG="dxgi.maxDeviceMemory = 8192;cachedDynamicResources = a;"
-   ```
-   - Card with  8GB vram
-   ```
-   export DXVK_CONFIG="dxgi.maxDeviceMemory = 6144;cachedDynamicResources = a;"
-   ```
-   - Card with  6GB vram
-   ```
-   export DXVK_CONFIG="dxgi.maxDeviceMemory = 4096;cachedDynamicResources = a;"
-   ```
-   - Card with  4GB vram
-   ```
-   export DXVK_CONFIG="dxgi.maxDeviceMemory = 2048;cachedDynamicResources = a;"
-   ```
+- Some Penguins are seeing VRAM exhaustion problems on Nvidia cards
+- One possible help for the problem is to [add a new set of environment variables in the Star Citizen launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) that override the maximum allowed VRAM allocation on the GPU
+- Here are some recommended values:
 
+| GPU VRAM (GB)    | Overriden Value (MB) |
+| ------------- | ------------- |
+| 12 | 9216 |
+| 10 | 8192 |
+| 8  | 6144 |
+| 6  | 4096 |
+| 4  | 2048 |
+
+- You may experiment with different values, but opting for the recommendation is likely to yield the best performance result with the least tinkering
+
+### DXVK
+Refer to [DXVK config](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf) for examples.
+
+The simplest format/solution is to add this single environment variable to your launch script:
+
+```
+export DXVK_CONFIG="dxgi.maxDeviceMemory = 4096;cachedDynamicResources = a;"
+```
+Replace the sample '4096' value with the recommended overriden value shown above for the amount of VRAM that your GPU has.
+
+### Vulkan
+Use `vulkaninfo --summary` to verify that you have the `VK_LAYER_MESA_vram_report_limit` Vulkan layer available. If you do not, your particular GNU/Linux distribution might have it packaged for you to install. When you do, then you should add the following three environment variables to your launch script:
+
+```
+export VK_LOADER_LAYERS_ENABLE=VK_LAYER_MESA_vram_report_limit
+```
+```
+export VK_VRAM_REPORT_LIMIT_HEAP_SIZE=4096
+```
+Replace the sample '4096' value with the recommended overriden value shown above for the amount of VRAM that your GPU has.
+```
+export VK_VRAM_REPORT_LIMIT_DEVICE_ID=0x1002:0x73df
+```
+`ID=` takes the format `vendorID:deviceID`. Use `vulkaninfo --summary` to find out what this should be for your GPU.
 
 ## DLSS (Deep Learning Super Sampling)
 1. Use the latest [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to install a LUG-Wine runner. (For any other wine runners, avoid wine-staging)
