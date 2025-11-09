@@ -184,7 +184,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 
 # Limit frame rate
 # sys_MaxFPS = 120
-# sysmaxidleFPS = 120
+# sys_maxIdleFps = 120
 
 # Toggle vsync
 # r_VSync = 0
