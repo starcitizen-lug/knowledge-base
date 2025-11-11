@@ -51,11 +51,11 @@ This is a generic error code representing any issue with logging in to CIG serve
 - Error may read `Star Citizen requires DirectX feature level of 11.1 as a minimum which is not supported at present on this machine`  
   ![image](https://user-images.githubusercontent.com/3657071/224719841-ba1e831b-4ace-4f14-b423-3e49528154c6.png)
 - Check that the `Vulkan device` is not set to an integrated gpu (ie, Intel)
-  - identify device name using command `vulkaninfo --summary | grep deviceName`
-  - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
-  - verify by setting environment variable `DXVK_HUD=1` and observing the device name in the upper left of the screen
+  - Identify device name using command `vulkaninfo --summary | grep deviceName`
+  - Edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and set the device name environment variable: `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
+  - Verify by setting the environment variable `DXVK_HUD=1` and observing the device name in the upper left of the screen
 - Also make sure your GPU drivers (Mesa/nvidia) are up to date and DXVK is enabled/updated.
-  - Use the LUG Helper to update dxvk
+  - Use the LUG Helper to [update dxvk](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix)
   - For AMD, be sure to use the open source radeon drivers (ie. vulkan-radeon), **not** the proprietary drivers (ie. amdvlk)
 - Try switching to a non-staging wine runner from our [recommended runners](/Tips-and-Tricks#recommended-runners) list
 - Try [downgrading](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix) to an older DXVK version
@@ -74,7 +74,6 @@ This is a generic error code representing any issue with logging in to CIG serve
 ## Black/transparent window after clicking 'Launch'
 - Check our [latest news](/#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 - Make sure DXVK is installed and enabled
-
 
 ## Launcher crashes/hangs after entering login info when running Niri WM and/or xwayland-satellite
 - See [upstream issue report](https://github.com/Supreeeme/xwayland-satellite/issues/189)
