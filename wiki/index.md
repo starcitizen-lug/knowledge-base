@@ -22,7 +22,7 @@ To contribute updates/information, please open an [issue report or pull request]
 ### Game Updates
 
 {: .important-title }
-> (Nov 13, 2024)
+> (Nov 13, 2025)
 >
 > Vulkan Crash or Black Screen
 >
