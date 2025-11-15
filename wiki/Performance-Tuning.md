@@ -50,7 +50,7 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
   export WINEESYNC=1
   export WINEFSYNC=1
   ```
-- NTSync requires kernel 6.14+ and a [patched wine runner](https://github.com/starcitizen-lug/lug-wine) which can be easily [installed](Tips-and-Tricks#how-to-add-a-wine-runner) using the LUG Helper. No additional environment variables are needed.
+- NTSync requires kernel 6.14+ and a wine 10.16 or newer which can be easily [installed](Tips-and-Tricks#how-to-add-a-wine-runner) using the LUG Helper. No additional environment variables are needed.
 
 
 ## Nvidia Cache
