@@ -22,6 +22,15 @@ To contribute updates/information, please open an [issue report or pull request]
 ### Game Updates
 
 {: .important-title }
+> (Nov 13, 2024)
+>
+> Vulkan Crash or Black Screen
+>
+> - TECH-PREVIEW defaults to Vulkan and presents a black screen
+> - Vulkan is currently hit-or-miss on LIVE and PTU
+> - If you experience problems with Vulkan [we recommend using DX11 for now](Troubleshooting/crashes#crash-or-black-screen-while-using-vulkan-beta-renderer)
+
+{: .important-title }
 > (Aug 25, 2025)
 >
 > RSI Launcher Error Code 60101
@@ -35,15 +44,6 @@ To contribute updates/information, please open an [issue report or pull request]
 > Easy Anticheat enforcement has been enabled on LIVE
 >
 > - We're ready! [Follow the instructions](Troubleshooting/easy-anti-cheat) to fix your existing install. New installs via the Helper handle it automagically.
-
-{: .important-title }
-> (Oct 25, 2024)
->
-> Vulkan Crash or Black Screen
-> 
-> - Possible error similar to: `Fatal Error: Acquire Next Image Failed`
-> - Vulkan is currently hit-or-miss
-> - If you experience this, [we recommend using DX11 for now](Troubleshooting/crashes#crash-or-black-screen-while-using-vulkan-beta-renderer)
 
 
 ### General News
