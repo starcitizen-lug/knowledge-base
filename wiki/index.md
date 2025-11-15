@@ -21,14 +21,6 @@ To contribute updates/information, please open an [issue report or pull request]
 
 ### Game Updates
 
-{: .warning-title }
-> (Oct 10, 2025)
->
-> RSI Launcher 2.9.0 p4k file corruption
->
-> - Update to 2.9.2  See the spectrum [announcement](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/rsi-launcher-2-9-0-release-notes) for more information.
-> - If your RSI Launcher does not automatically prompt to update, you can quickly force it using the LUG Helper. Download the latest [main branch](https://github.com/starcitizen-lug/lug-helper/archive/refs/heads/main.zip) of the LUG Helper and use the new option in the Maintenance and Troubleshooting menu to re-install the launcher.
-
 {: .important-title }
 > (Aug 25, 2025)
 >
@@ -47,7 +39,7 @@ To contribute updates/information, please open an [issue report or pull request]
 {: .important-title }
 > (Oct 25, 2024)
 >
-> Vulkan Crash/Black Screen
+> Vulkan Crash or Black Screen
 > 
 > - Possible error similar to: `Fatal Error: Acquire Next Image Failed`
 > - Vulkan is currently hit-or-miss
