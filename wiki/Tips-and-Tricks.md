@@ -145,7 +145,7 @@ Use the [LUG Helper](#how-to-run-the-lug-helper) tool's `Manage DXVK` button
 
 
 ## Console Variables
-Below are some useful console variables. Tap the grave/backtick/tilde key (above tab) to open the console. See our troubleshooting page for [non-US keyboards](Troubleshooting/unexpected-behavior#non-us-keyboard-keys-not-working) if you have trouble opening the console.
+Below are some useful console variables. Tap the grave/backtick/tilde key (above tab) to open the console. See our troubleshooting page for [non-US keyboards](Troubleshooting/mouse-keyboard-issues#non-us-keyboard-keys-not-working) if you have trouble opening the console.
 - `r_displayinfo` [ 1, 2, 3, 0 ]
   - show fps and other details
 - `r_displaysessioninfo` [ 1, 0 ] 

@@ -35,9 +35,9 @@ nav_order: 2
 ## After Installation
 
 {: .important }
-> - For non-US keyboards, set your [keyboard layout](Troubleshooting/unexpected-behavior#non-us-keyboard-keys-not-working) to resolve issues with game console and accept/reject buttons
+> - For non-US keyboards, set your [keyboard layout](Troubleshooting/mouse-keyboard-issues#non-us-keyboard-keys-not-working) to resolve issues with game console and accept/reject buttons
 > - Set up your peripherals: See [Sticks, Throttles, & Pedals](Sticks,-Throttles,-&-Pedals)
-> - Wayland users: See [required workarounds](Troubleshooting/unexpected-behavior#mousecursor-warp-issues-and-view-snapping-in-interaction-mode) to resolve mouse cursor and view snapping issues.
+> - Wayland users: See [required workarounds](Troubleshooting/mouse-keyboard-issues#mousecursor-warp-issues-and-view-snapping-in-interaction-mode) to resolve mouse cursor and view snapping issues.
 > - Nvidia users: See [troubleshooting guide](Troubleshooting/nvidia#severe-frame-drops) to resolve severe frame drop issues.
 > - Check our [latest news](/#news) for necessary workarounds, Nvidia gpu driver problems, and other important issues.
 
