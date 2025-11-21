@@ -41,7 +41,8 @@ Other potential workarounds:
 
 
 ## Mouse cursor escaping the game window
-- Opening and closing game menu with the escape key usually recaptures the mouse
+- Setting the game to Borderless usually helps minimize the issue
+- Tapping the escape key whenever alt-tabbing out and back to the game usually recaptures the mouse
 - You may also try adding a registry key to your Wine prefix:
    - Use the `sc-launch.sh` launch script to open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run:
      ```
