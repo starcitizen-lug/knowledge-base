@@ -89,7 +89,7 @@ or
 > - Vsync may need to be disabled in the game's graphics settings.
 
 {: .tip }
-> When using Smooth Motion, the following additional environment variables may slightly improve latency if you have a compatible monitor:
+> When using Smooth Motion, the following environment variables may slightly improve latency if you have a compatible monitor:
 > ```
 > export __GL_GSYNC_ALLOWED=1
 > export __GL_MaxFramesAllowed=1
