@@ -90,7 +90,22 @@ nav_order: 2
 ## The game freezes on the splash screen 
 - The `v4l2` module for virtual camera has been identified to cause issues when a virtual device exists while the game is launched. The launcher will run perfectly, launch the game, and as the splash screen displays, it stays that way before erroring out after one or two minutes with error code `732823392`. In your [game logs](/Troubleshooting/#gathering-logs), you'll find something along the lines of `Is Timeout: Yes [...]`.
   1. Check if the module is loaded: `lsmod | grep v4l2loopback`
-  2. If it is the case, install the `v4l2loopback-utils` if they aren't already installed.
-  3. Check if a virtual device is created (You'll need SuperUser privileges): `sudo v4l2loopback-ctl list`
-  4. If a virtual device is created, remove it: `sudo v4l2loopback-ctl delete /dev/video<N>` (where *N* is usually a single digit)
-- Once there are no more virtual v4l2 loopback devices (virtual cameras), the game should be able to run properly. If you actually need the virual cameras, you may re-create them afterwards.
+  2. Check if a virtual camera exists: `v4l2-ctl --list-devices`
+  3. Now two solutions:
+    * a. Temporary unload the `v4l2loopback` module:
+      ```
+      sudo rmmod v4l2loopback
+      ```
+      Then launch the game. After exiting the game, you can reload the module with: 
+      ```
+      sudo modprobe v4l2loopback
+      ```
+      Your devices should be back without any further actions. You shouldn't need any additional package to do this.
+    * b. Delete the virtual device altogether:
+      * Install the `v4l2loopback-utils` if they aren't already installed.
+      * Remove it using the information collected at step *2.*: 
+      ```
+      sudo v4l2loopback-ctl delete /dev/video<N>
+      ```
+      (where *N* is usually a single digit)
+ Once there are no more virtual v4l2 loopback devices (virtual cameras), the game should be able to run properly. If you actually need the virual cameras, you may re-create them afterwards.
