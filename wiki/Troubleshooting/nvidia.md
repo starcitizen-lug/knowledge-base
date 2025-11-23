@@ -77,6 +77,15 @@ or
    ```
 
 
+## Nvidia Smooth Motion
+- Smooth Motion can be enabled on supported cards with an environment variable.
+- Vsync may need to be disabled in the game's graphics settings.
+- Use the LUG Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script), then add the following environment variable:
+  ```
+  export NVPRESENT_ENABLE_SMOOTH_MOTION="1"
+  ```
+
+
 ## Gamescope not working
 - See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
 - A possible fix is to set the environment variable `__GL_THREADED_OPTIMIZATIONS=0`
