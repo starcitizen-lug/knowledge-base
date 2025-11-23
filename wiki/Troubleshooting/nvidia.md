@@ -83,8 +83,10 @@ or
   ```
   export NVPRESENT_ENABLE_SMOOTH_MOTION="1"
   ```
-- Vsync may need to be disabled in the game's graphics settings.
-- Mangohud and other FPS monitoring HUDS may interfere with Smooth Motion. Disable them if you experience crashes.
+{: .caution }
+>
+> - Mangohud and other FPS monitoring HUDS may interfere with Smooth Motion. Disable them if you experience crashes.
+> - Vsync may need to be disabled in the game's graphics settings.
 
 
 ## Gamescope not working
