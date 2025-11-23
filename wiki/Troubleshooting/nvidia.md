@@ -83,9 +83,10 @@ or
   ```
   export NVPRESENT_ENABLE_SMOOTH_MOTION="1"
   ```
-{: .caution }
+
+{: .warning }
 >
-> - Mangohud and other FPS monitoring HUDS may interfere with Smooth Motion. Disable them if you experience crashes.
+> - Mangohud and other FPS monitoring HUDS may interfere with Smooth Motion and cause game crashes. You may need to disable them.
 > - Vsync may need to be disabled in the game's graphics settings.
 
 
