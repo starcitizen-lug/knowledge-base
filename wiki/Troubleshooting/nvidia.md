@@ -88,6 +88,13 @@ or
 > - Mangohud and other FPS monitoring HUDS may interfere with Smooth Motion and cause game crashes. You may need to disable them.
 > - Vsync may need to be disabled in the game's graphics settings.
 
+{: .tip }
+> When using Smooth Motion, the following additional environment variables may slightly improve latency if you have a compatible monitor:
+> ```
+> export __GL_GSYNC_ALLOWED=1
+> export __GL_MaxFramesAllowed=1
+> ```
+
 
 ## Gamescope not working
 - See this [known issue report](https://github.com/ValveSoftware/gamescope/issues/526).
