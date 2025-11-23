@@ -78,8 +78,7 @@ or
 
 
 ## Nvidia Smooth Motion
-- Smooth Motion can be enabled on supported cards with an environment variable.
-- Use the LUG Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script), then add the following environment variable:
+- To enable Smooth Motion on supported cards, use the LUG Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script), then add the following environment variable:
   ```
   export NVPRESENT_ENABLE_SMOOTH_MOTION="1"
   ```
