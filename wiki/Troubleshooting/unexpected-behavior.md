@@ -39,7 +39,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 - Expected when attempting launch/login during a patch release
 - Kill the launcher and restart it and try again
 - Ensure that IPv6 is not disabled
-
+- Check that custom firewall rules on your host or router are not blocking outbound traffic to non-HTTP(S) ports
 
 ## Required Vulkan Extensions are missing error / poor performance compared to windows / error code 3
 - Check if you have amdvlk installed by running `vulkaninfo --summary`. The vulkaninfo utility is part of the package `vulkan-tools` on most distros. You can also check your package manager.
