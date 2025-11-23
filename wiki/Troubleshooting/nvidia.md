@@ -79,11 +79,12 @@ or
 
 ## Nvidia Smooth Motion
 - Smooth Motion can be enabled on supported cards with an environment variable.
-- Vsync may need to be disabled in the game's graphics settings.
 - Use the LUG Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script), then add the following environment variable:
   ```
   export NVPRESENT_ENABLE_SMOOTH_MOTION="1"
   ```
+- Vsync may need to be disabled in the game's graphics settings.
+- Mangohud and other FPS monitoring HUDS may interfere with Smooth Motion. Disable them if you experience crashes.
 
 
 ## Gamescope not working
