@@ -157,7 +157,7 @@ The third party tool, [input-remapper](https://github.com/sezanzeb/input-remappe
 > 
 > This section does not apply if your controllers are connected as HIDRAW devices
 
-For non-hidraw devices, evdev may add extra deadzones to your controller on top of those configured by the device's firmware. Throttles specifically may experience a "hitch" in the center of their axis. You can remove these deadzones with a udev rule.
+For non-hidraw devices, evdev may add extra deadzones to your controller on top of those configured by the device's firmware. Throttles may experience a "hitch" in the center of their axis. You can remove these deadzones with a udev rule.
 
 1. Install `evdev-joystick`. This utility is provided by different packages depending on your distribution.  
 See the list below for your distribution:
@@ -166,7 +166,7 @@ See the list below for your distribution:
     - Fedora - `linuxconsoletools`
 
 2. Create a udev rules file in  
-`/etc/udev/rules.d/` and plug [your device info](#find-device-info) into the following template:
+`/etc/udev/rules.d/` and replace [your device info](#find-device-info) in the following template:
 
 ```
 # Custom Joystick Udev Rules
@@ -177,10 +177,7 @@ ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
   RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
 ```
 
-This will keep things very specific to just the devices you want to change, and not impact any other devices you use.
-
-
-Here is an example rules file for 3 VKB devices and one Virpil device:  
+**Example rules**  
 `/etc/udev/rules.d/99-evdev-joystick.rules`
 ```
 # Custom Joystick Udev Rules
