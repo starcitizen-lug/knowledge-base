@@ -153,9 +153,11 @@ The third party tool, [input-remapper](https://github.com/sezanzeb/input-remappe
 
 ### Evdev Deadzones
 
-On Linux, evdev adds deadzones to every axis for each controller you plug into your system.  This is good for inexpensive controllers that don't have any form of internal calibration or programming.  However, with higher end programmable sticks like those from VKB and Virpil, evdev's deadzone adds to the programmed deadzone for those devices.  This can also impact throttle devices, where you can get a "hitch" at 50% throttle when it passes through the middle of the axis.
+{: .tip }
+> 
+> This section does not apply if your controllers are connected as HIDRAW devices
 
-To eliminate this problem, you want to create a udev rule that removes the evdev deadzone from your devices when they're plugged in.
+For non-hidraw devices, evdev may add extra deadzones to your controller on top of those configured by the device's firmware. Throttles specifically may experience a "hitch" in the center of their axis. You can remove these deadzones with a udev rule.
 
 1. Install `evdev-joystick`. This utility is provided by different packages depending on your distribution.  
 See the list below for your distribution:
