@@ -50,6 +50,7 @@ Other potential workarounds:
      ```
      Note: If using a third party launcher instead of the native Wine install, you'll need to prepend `WINEPREFIX=/path/to/prefix` before the above command.
 - Experimental [Wine Wayland](/Tips-and-Tricks#wine-wayland) helps mitigate this for some
+- If the above doesn't work, you may try the software cursor as described [above](#mousecursor-warp-issues-and-view-snapping-in-interaction-mode)
 
 ## Non-US keyboard keys not working
 1. Use the LUG Helper to [switch to a wine](/Tips-and-Tricks#how-to-add-a-wine-runner) with **staging** in the name
