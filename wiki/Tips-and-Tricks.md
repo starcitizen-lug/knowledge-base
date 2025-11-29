@@ -209,7 +209,6 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 > RSI Launcher buttons may be offset, resize the window or use tab/shift+tab controls for the launcher
 
 - Experimental Wine Wayland
-  - Use a Wine without **staging** in the name
   - Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export DISPLAY=` to unset it to empty
   - Add RSI Launcher.exe argument `--in-process-gpu` example:
     ```
