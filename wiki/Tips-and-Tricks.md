@@ -225,7 +225,7 @@ Requires experimental native [Wayland](Tips-and-Tricks#wine-wayland) or [Gamesco
 
 To enable HDR in native Wayland:
 
-Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_manager_v1` then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and add environment variable `ENABLE_HDR_WSI=1`
+Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_manager_v1` or if you use an Nvidia gpu then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and add environment variable `ENABLE_HDR_WSI=1`
 - Wine
   - Add environment variable  `DXVK_HDR=1`
 - Proton (GE-Proton10-1 or newer)
