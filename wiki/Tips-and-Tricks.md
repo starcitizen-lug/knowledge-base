@@ -49,24 +49,16 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 ## Recommended Runners
 - [LUG-Wine](https://github.com/starcitizen-lug/lug-wine/releases)
   - Default runner in the [LUG Helper](#how-to-run-the-lug-helper)
-  - TKG Builds with LUG patches specifically for Star Citizen
+  - [TKG](https://github.com/Frogging-Family/wine-tkg-git) Builds with LUG patches specifically for Star Citizen
     - lug-wine-tkg-git  
-      Standard Wine built for maximum compatibility. Works with glibc as old as v2.35
+      Standard Wine built for maximum compatibility
     - lug-wine-tkg-staging-git  
-      Wine plus experimental staging patches. Works with glibc as old as v2.35
-    - lug-wine-tkg-fsync-git  
-      Standard Wine built for maximum compatibility. Works with glibc as old as v2.31
-    - lug-wine-tkg-ntsync-git  
-      NTSync patched Wine. Requires linux kernel 6.14+ and glibc >=2.38
-    - lug-wine-tkg-staging-fsync-git  
-      Wine plus experimental staging patches. Works with glibc as old as v2.31
-    - lug-wine-tkg-staging-ntsync-git  
-      NTSync patched Wine plus experimental staging patches. Requires linux kernel 6.14+ and glibc >=2.38
+      Wine plus experimental [staging patches](https://gitlab.winehq.org/wine/wine-staging)
 - [RawFox](https://github.com/starcitizen-lug/raw-wine/releases)
   - Managed by the [LUG Helper](#how-to-run-the-lug-helper)
 - [Mactan](https://github.com/mactan-sc/mactan-sc-wine/releases)
   - Managed by the [LUG Helper](#how-to-run-the-lug-helper)
-  - TKG builds with LUG community patches
+  - [TKG](https://github.com/Frogging-Family/wine-tkg-git) builds with LUG community patches
   - Experimental wine wayland patches
 
 
