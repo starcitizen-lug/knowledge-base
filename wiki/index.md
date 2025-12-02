@@ -26,7 +26,7 @@ To contribute updates/information, please open an [issue report or pull request]
 >
 > Vulkan Crash or Black Screen
 >
-> - TECH-PREVIEW defaults to Vulkan and presents a black screen
+> - PTU defaults to Vulkan and presents a black screen
 > - Vulkan is currently hit-or-miss on LIVE and PTU
 > - If you experience problems with Vulkan [we recommend using DX11 for now](Troubleshooting/crashes#crash-or-black-screen-while-using-vulkan-beta-renderer)
 
