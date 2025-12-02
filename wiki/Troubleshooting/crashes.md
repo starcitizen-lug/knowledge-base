@@ -61,8 +61,7 @@ nav_order: 2
 
 ## Crash or black screen while using Vulkan beta renderer
 - Check the [latest news](/#news) for recommendations for your graphics card
-- Go back to DX11 by using the Delete Shaders option in the RSI Launcher > Settings > Games > {LIVE,PTU} > Delete  Local Settings > Shaders folder
-
+- Go back to DX11 by setting it in [USER.cfg](/Tips-and-Tricks#usercfg). Create the USER.cfg file if it doesn't exist yet
 
 ## Failed to decompress file/corrupted block detected error
 - Some Penguins have had this error when using BTRFS. We suspect a regression of some kind.
