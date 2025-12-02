@@ -34,6 +34,14 @@ nav_order: 1
   ```
 
 
+## RSI Launcher error: Unable to Create Folder
+- This is a [known issue](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/rsi-launcher-2-10-0-release-notes) with the RSI Launcher
+- Manually create the LIVE directory after installing the RSI Launcher with the Helper. For a default install path, you can run:
+  ```
+  mkdir -p ~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE
+  ```
+
+
 ## RSI Launcher executable is missing
 - Automatic update sometimes fails or is interrupted
 - Follow manual update [instructions](/Tips-and-Tricks#rsi-launcher-manual-update)
