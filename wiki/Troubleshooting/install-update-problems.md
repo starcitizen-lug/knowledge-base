@@ -38,7 +38,7 @@ nav_order: 1
 - This is a [known issue](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/rsi-launcher-2-10-0-release-notes) with the RSI Launcher, possible error code 8004
 - Manually create the LIVE directory after installing the RSI Launcher with the Helper. For a default install path, you can run:
   ```
-  mkdir -p ~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE
+  mkdir -p "~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE"
   ```
 
 
