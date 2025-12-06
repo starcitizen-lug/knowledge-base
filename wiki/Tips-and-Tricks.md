@@ -121,8 +121,21 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 4. Type `exit` when done.
 
 
+## Where is my Wine prefix? Where is my LIVE/PTU directory?
+1. Run the [LUG Helper](#how-to-run-the-lug-helper) and select the `Maintenance and Troubleshooting` menu.
+2. Select the `Display Helper and Star Citizen directories` option.
+3. Click on the relevant path to open it in your file manager.
+
+{: .tip-title }
+>
+> LIVE/PTU Directory
+> 
+> Click the `Star Citizen game directory` link to access your LIVE/PTU directory. By default, this will open:
+> `~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen`
+
+
 ## Updating DXVK Within a Wine Prefix
-Use the [LUG Helper](#how-to-run-the-lug-helper) tool's `Manage DXVK` button
+Use the [LUG Helper's](#how-to-run-the-lug-helper) `Manage DXVK` button
 
 **To downgrade dxvk to a previous version:**
 1. Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) for your prefix using the `sc-launch.sh` script.
@@ -152,10 +165,11 @@ Below are some useful console variables. Tap the grave/backtick/tilde key (above
 
 ## USER.cfg
 Varibles set using the in-game console must be reapplied each session. Create a USER.cfg file to apply the changes automatically each session.
-1. Create a file named `USER.cfg` in your LIVE directory
-2. Copy the text block below into it
-3. Uncomment any variables and configure as needed
-4. Save then launch the game as normal. Any changes will be automatically applied  
+1. Use the LUG Helper to open your Star Citizen LIVE directory
+2. Create a file named `USER.cfg` in your LIVE directory
+3. Copy the text block below into it
+4. Uncomment any variables and configure as needed
+5. Save then launch the game as normal. Any changes will be automatically applied  
 
 ```
 # Set to your display resolution
