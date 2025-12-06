@@ -22,13 +22,13 @@ To contribute updates/information, please open an [issue report or pull request]
 ### Game Updates
 
 {: .important-title }
-> (Nov 13, 2025)
+> (Dec 6, 2025)
 >
-> Vulkan Crash or Black Screen
+> Vulkan issues in Star Citizen 4.5
 >
-> - PTU defaults to Vulkan and presents a black screen
-> - Vulkan is currently hit-or-miss on LIVE and PTU
-> - If you experience problems with Vulkan [we recommend using DX11 for now](Troubleshooting/crashes#crash-or-black-screen-while-using-vulkan-beta-renderer)
+> - 4.5 enables Vulkan by default.
+> - If you experience crashes, a black screen, or other issues with Vulkan, you will need to revert to DX11 for now.
+> - [Create a USER.cfg](https://wiki.starcitizen-lug.org/Tips-and-Tricks#usercfg) file and uncomment the `r.graphicsRenderer = 0` line to use DX11.
 
 {: .important-title }
 > (Aug 25, 2025)
