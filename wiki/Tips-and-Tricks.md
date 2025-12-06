@@ -165,7 +165,7 @@ Below are some useful console variables. Tap the grave/backtick/tilde key (above
 
 ## USER.cfg
 Varibles set using the in-game console must be reapplied each session. Create a USER.cfg file to apply the changes automatically each session.
-1. Use the LUG Helper to open your Star Citizen LIVE directory
+1. Use the LUG Helper to [open your Star Citizen LIVE directory](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory)
 2. Create a file named `USER.cfg` in your LIVE directory
 3. Copy the text block below into it
 4. Uncomment any variables and configure as needed
