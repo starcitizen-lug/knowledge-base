@@ -14,6 +14,13 @@ nav_order: 4
 - If using the Cosmic DE beta, this is a [known issue](https://github.com/pop-os/cosmic-epoch/issues/2368). Try using the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s `Open Wine prefix configuration` option in the Maintenance menu to turn on virtual desktop mode.
 
 
+## Launcher white or black screen
+- Edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add RSI Launcher flag `--in-process-gpu` example:
+  ```
+    "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" --in-process-gpu > "$launch_log" 2>&1
+  ```
+
+
 ## Launcher indicates You are currently offline
 - Log out and back in
 
