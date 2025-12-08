@@ -49,11 +49,6 @@ nav_order: 8
 - If you've just installed Lutris, be sure to launch it once, separately from the Star Citizen install process, to fully populate its runtime and caches.
 
 
-## RSI Launcher white screen / error DCompositionCreateDevice
-- In Lutris, configure Star Citizen (right-click->Configure->Game options) and add `"--use-gl=osmesa"` to the Arguments field.
-- If launching manually: `wine "RSI Launcher.exe" "--use-gl=osmesa"`
-
-
 ## RSI Launcher fails to launch from lutris with CLI mode enabled
 - Error message may be similar to `/usr/bin/gnome-terminal.real: symbol lookup error: /lib/x86_64-linux-gnu/libatk-bridge-2.0.so.0: undefined symbol: atk_component_scroll_to`
 - Disable the lutris runtime in lutris global preferences to work around this error
