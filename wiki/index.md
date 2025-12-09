@@ -27,9 +27,8 @@ To contribute updates/information, please open an [issue report or pull request]
 > Vulkan issues in Star Citizen 4.5
 >
 > - 4.5 enables Vulkan by default
-> - Use the [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) to switch to a lug-wine 10.20-3, 11.0-rc1, or newer
-> - If you experience crashes, a black screen, or other issues with Vulkan, then switch to DX11 for now.  
->   [Create a USER.cfg](https://wiki.starcitizen-lug.org/Tips-and-Tricks#usercfg) file and uncomment the `r.graphicsRenderer = 0` line to use DX11.
+> - If you experience crashes, black screen, or other issues with Vulkan, then switch to DX11 for now  
+>   [Create a USER.cfg](https://wiki.starcitizen-lug.org/Tips-and-Tricks#usercfg) remove the # symbol from the `r.graphicsRenderer = 0` line
 
 {: .important-title }
 > (Aug 25, 2025)
