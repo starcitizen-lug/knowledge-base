@@ -211,18 +211,15 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 
 ## Wine Wayland
 
-{: .note }
-> RSI Launcher buttons may be offset, resize the window or use tab/shift+tab controls for the launcher
+{: .warning }
+> RSI Launcher buttons may be offset, resize the window or use tab/shift+tab and enter controls for the launcher
 
 - Experimental Wine Wayland
+  - Use the [LUG Helper](#how-to-run-the-lug-helper) to select lug-wine 11.0-rc1-2 or newer
   - Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export DISPLAY=` to unset it to empty
-  - Add RSI Launcher.exe argument `--in-process-gpu` example:
-    ```
-    "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" --in-process-gpu > "$launch_log" 2>&1
-    ```
+  - If you experience a white or black launcher add this [RSI Launcher.exe argument](/Troubleshooting/unexpected-behavior#launcher-white-or-black-screen)
 - Experimental Proton Wayland
   - Add environment variable `PROTON_ENABLE_WAYLAND=1`
-  - Add RSI Launcher.exe argument ` --in-process-gpu`
  
 ## HDR (High Dynamic Range)
 CIG's vulkan doesn't have HDR yet
