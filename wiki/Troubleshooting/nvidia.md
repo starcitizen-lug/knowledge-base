@@ -80,7 +80,11 @@ or
 ## Nvidia Smooth Motion
 - To enable Smooth Motion on supported cards, use the LUG Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script), then add the following environment variable:
   ```
-  export NVPRESENT_ENABLE_SMOOTH_MOTION="1"
+  export NVPRESENT_ENABLE_SMOOTH_MOTION=1
+  ```
+- To [use Mangohud alongside Smooth Motion](https://forums.developer.nvidia.com/t/580-release-feedback-discussion/341205/329), also add the following env var:
+  ```
+  export NVPRESENT_QUEUE_FAMILY=1
   ```
 
 {: .warning }
