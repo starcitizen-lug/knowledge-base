@@ -29,6 +29,12 @@ nav_order: 4
 - Verify game files
 
 
+## RSI Launcher Error Code 60101
+- [Issue Council LCH-2123](https://issue-council.robertsspaceindustries.com/projects/LAUNCHER/issues/LCH-2123)
+- Use a [LUG Wine Runner](Tips-and-Tricks#recommended-runners) 10.13-2 or newer to prevent the popup
+- This error does not prevent the game from running, the game will launch shortly!
+
+
 ## Launch Error - %AppData% returned empty string
 - Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then type `wineserver -k` to terminate all lingering Wine processes.
 - If that doesn't resolve it, try switching to a different Wine runner.
