@@ -31,7 +31,7 @@ nav_order: 4
 
 ## RSI Launcher Error Code 60101
 - [Issue Council LCH-2123](https://issue-council.robertsspaceindustries.com/projects/LAUNCHER/issues/LCH-2123)
-- Use a [LUG Wine Runner](Tips-and-Tricks#recommended-runners) 10.13-2 or newer to prevent the popup
+- Use a [LUG Wine Runner](/Tips-and-Tricks#recommended-runners) 10.13-2 or newer to prevent the popup
 - This error does not prevent the game from running, the game will launch shortly!
 
 
