@@ -8,8 +8,8 @@ nav_order: 3
 
 ## Recent news/issues
 
-{: .important-title }
-Check our [latest news](/#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
+{: .important }
+> Check our [latest news](/#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
 
 ## Troubleshooting Steps
 
@@ -56,7 +56,7 @@ If you can't find a solution to your issue in the Troubleshooting subpages, you 
 
 ## Common Issues
 
-{: .tip }
+{: .important }
 > Refer to the [News](https://wiki.starcitizen-lug.org/#news) for recent issues and workarounds!
 
 - [RSI Launcher error: Unable to Create Folder](/Troubleshooting/install-update-problems#rsi-launcher-error-unable-to-create-folder)
