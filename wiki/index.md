@@ -30,13 +30,6 @@ To contribute updates/information, please open an [issue report or pull request]
 > - If you experience crashes, black screen, or other issues with Vulkan, then switch to DX11 for now  
 >   [Create a USER.cfg](https://wiki.starcitizen-lug.org/Tips-and-Tricks#usercfg) remove the # symbol from the `r.graphicsRenderer = 0` line
 
-{: .important-title }
-> (Aug 25, 2025)
->
-> RSI Launcher Error Code 60101
->
-> - [Issue Council LCH-2123](https://issue-council.robertsspaceindustries.com/projects/LAUNCHER/issues/LCH-2123) Use the latest [LUG Wine](Tips-and-Tricks#recommended-runners) 10.13-2 or newer to prevent the popup
-> - This error does not prevent the game from running, the game will launch shortly!
 
 {: .note-title }
 > (Jul 11, 2025)
