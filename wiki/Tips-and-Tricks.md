@@ -65,11 +65,9 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 ## How to add a Wine runner
 - Select the option to "Manage Wine runners" in the [LUG Helper](#how-to-run-the-lug-helper) and it will handle it for you.
 - Alternatively, to manually add a custom wine runner:
-  - Extract the archive to your runners folder. Restart your game launcher after adding a runner and toggle on [CLI mode](Troubleshooting/lutris#rsi-launcher-v162-javascript-error)
+  - Extract the archive to your runners folder. Restart your game launcher
     - Heroic: `~/.config/heroic/tools/wine/`
     - Heroic flatpak: `~/.var/app/com.heroicgameslauncher.hgl/config/heroic/tools/wine/`
-    - Lutris: `~/.local/share/lutris/runners/wine/`
-    - Lutris flatpak: `/.var/app/net.lutris.Lutris/data/lutris/runners/wine/`
     - Wine: `~/Games/star-citizen/runners`
   - Use the LUG Helper maintenance menu to edit sc-launch.sh to use the runner
     ```
