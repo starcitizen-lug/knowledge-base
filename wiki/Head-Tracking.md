@@ -30,8 +30,8 @@ nav_order: 7
 ## Opentrack Configuration
 
 {: .important }
-> `GE Proton (Latest)` is the new umu Proton runner. The official Opentrack builds do not currently work with umu. We have reactivated the [opentrack-StarCitizen repo](https://github.com/Priton-CE/opentrack-StarCitizen) to provide this support. Our changes have been merged with the official [Opentrack Master branch](https://github.com/opentrack/opentrack/tree/master). Note that git builds of Opentrack may be less stable than our opentrack-StarCitizen until the next stable release of Opentrack.
-> - For `system wine`, `wine-staging`, or `wine-GE-Proton8-x`, use an official Opentrack build version 2023.1.0 or later.
+> `GE Proton (Latest)` is the new umu Proton runner. The current Opentrack stable release, `2023.3.0`, does not support umu but a fix has been merged into the [Master branch](https://github.com/opentrack/opentrack/tree/master). Note that git builds may be unstable. If you experience any issues, you may build from our [opentrack-StarCitizen repo](https://github.com/Priton-CE/opentrack-StarCitizen) instead which is based on the latest stable opentrack + umu fixes.
+> - For `LUG Wine` runners, use an official Opentrack build version 2023.1.0 or later.
 > - For any `GE-Proton` or `Proton` Runner, follow the [build instructions on our opentrack-StarCitizen repo](https://github.com/Priton-CE/opentrack-StarCitizen?tab=readme-ov-file#building-from-source). Alternatively, follow the [build instructions for Opentrack Master](https://github.com/opentrack/opentrack/wiki/Building-on-Linux) or use the [Opentrack-git AUR package](https://aur.archlinux.org/packages/opentrack-git). When running opentrack, include environment variable `PROTON_VERB="runinprefix"`
 > - Some of our Penguins have reported issues with staging runners, so non-staging may be preferred.
 
