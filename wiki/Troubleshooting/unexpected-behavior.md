@@ -90,3 +90,8 @@ This is a generic error code representing any issue with logging in to CIG serve
 ## Launcher crashes/hangs after entering login info when running Niri WM and/or xwayland-satellite
 - See [upstream issue report](https://github.com/Supreeeme/xwayland-satellite/issues/189)
 - Workarounds: Use xwayland-run, [gamescope](/Tips-and-Tricks#gamescope), an alternative to xwayland-satellite, or an alternative compositor.
+
+## The launcher button to start the game is unclickable
+- Use TAB to navigate to the Launch Button
+
+
