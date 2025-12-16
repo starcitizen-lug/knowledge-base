@@ -23,7 +23,7 @@ nav_order: 7
 - FOIP may be a bit finnicky and your camera may not appear in the list in-game, but has been known to work if you toggle it on and off a few times.
 
 ### Unsupported hardware
-- Tobii does not support Linux. Its opentrack support uses the Windows only SDK.
+- Tobii does not support Linux. Its opentrack support uses the Windows only SDK. See [VM Passthrough](#tobii-eye-tracker-5-vm-passthrough) below.
 - TrackIR 5 does not support Opentrack, nor does it work with Linuxtrack under Wine/Proton. We recommend Delanclip instead.
 
 
