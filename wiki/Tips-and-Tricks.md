@@ -217,7 +217,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
   - Use the [LUG Helper](#how-to-run-the-lug-helper) to select lug-wine 11.0-rc1-2 or newer
   - Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export DISPLAY=` to unset it to empty
   - If you experience a white or black launcher add this [RSI Launcher.exe argument](/Troubleshooting/unexpected-behavior#launcher-white-or-black-screen)
-- Experimental Proton Wayland
+- Experimental Proton Wayland (for proton runners)
   - Add environment variable `PROTON_ENABLE_WAYLAND=1`
  
 ## HDR (High Dynamic Range)
