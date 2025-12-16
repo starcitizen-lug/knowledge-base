@@ -211,7 +211,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 
 {: .warning }
 > If the `Launch Game` button is unclickable, the buttons may be offset. Resize the window to reset them, or use `Tab`/`Shift+Tab` and `Enter` to interact with them.
-> Turn off any virtual keyboard these conflict with the `F` and make the inner-thought interaction menu appear to flicker
+> Turn off any virtual keyboard. These conflict with the `F` interaction key and make the inner-thought menu appear to flicker.
 
 - Experimental Wine Wayland
   - Use the [LUG Helper](#how-to-run-the-lug-helper) to select lug-wine 11.0-rc1-2 or newer
