@@ -66,4 +66,4 @@ Other potential workarounds:
     ################################################################
     export LANG=de_DE
     ```
-
+6. If nothing else works and you have an older Wine prefix, some Penguins have had success re-creating a new Prefix. You can back up your data.p4k file to avoid re-downloading the entire game.
