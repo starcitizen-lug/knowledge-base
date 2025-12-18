@@ -33,22 +33,10 @@ To contribute updates/information, please open an [issue report or pull request]
 >   [Create a USER.cfg](https://wiki.starcitizen-lug.org/Tips-and-Tricks#usercfg) remove the # symbol from the `r.graphicsRenderer = 0` line
 
 
-{: .note-title }
-> (Jul 11, 2025)
->
-> Easy Anticheat enforcement has been enabled on LIVE
->
-> - We're ready! [Follow the instructions](Troubleshooting/easy-anti-cheat) to fix your existing install. New installs via the Helper handle it automagically.
-
 
 ### General News
 
-{: .note-title }
-> (Nov 30, 2024)
->
-> Joysticks/throttle not detected by the game
->
-> - Follow [these instructions](Sticks,-Throttles,-&-Pedals#some-of-your-joysticks-disappear--arent-recognized-in-the-game) to enable HIDRAW access
+> none!
 
 ### AMD News
 
