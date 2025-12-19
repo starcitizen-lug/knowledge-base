@@ -27,10 +27,10 @@ To contribute updates/information, please open an [issue report or pull request]
 > Vulkan issues in Star Citizen 4.5
 >
 > - 4.5 enables Vulkan by default
-> - Switch to a [LUG Wine Runner](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.0-rc1-2 or later
-> - If you experience inverted colors, also enable [experimental Wine Wayland](/Tips-and-Tricks#wine-wayland)
-> - If you experience crashes, black screen, or other issues with Vulkan, then switch to DX11 for now  
->   [Create a USER.cfg](https://wiki.starcitizen-lug.org/Tips-and-Tricks#usercfg) remove the # symbol from the `r.graphicsRenderer = 0` line
+> - If you experience crashes, black screen, strange colors, or other issues with Vulkan, then [switch to DX11 for now](Troubleshooting/crashes#crash-or-black-screen-while-using-vulkan-beta-renderer)
+> - Inverted colors Vulkan workaround:
+>   - Switch to a [LUG Wine Runner](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.0-rc1-2 or later
+>   - Enable [experimental Wine Wayland](/Tips-and-Tricks#wine-wayland)
 
 
 
