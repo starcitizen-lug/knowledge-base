@@ -220,6 +220,13 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 - Experimental Proton Wayland (for proton runners)
   - Add environment variable `PROTON_ENABLE_WAYLAND=1`
  
+- Set primary monitor, Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `WAYLANDDRV_PRIMARY_MONITOR` Replace the value for your monitor DP-1, DP-2, HDMI-A-1, etc  
+    `export WAYLANDDRV_PRIMARY_MONITOR=DP-1`  
+
+- Set resolution with [USER.cfg](Tips-and-Tricks#usercfg)
+
+- Set DPI with [LUG Helper](#how-to-run-the-lug-helper) Maintenance menu > Edit wine prefix configuration
+ 
 ## HDR (High Dynamic Range)
 CIG's vulkan doesn't have HDR yet
 
