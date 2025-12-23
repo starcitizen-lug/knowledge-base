@@ -28,7 +28,7 @@ To contribute updates/information, please open an [issue report or pull request]
 >
 > - 4.5 enables Vulkan by default but some colors are inverted. CIG is aware of and is working on the problem.
 > - We recommend [switching to DX11](Troubleshooting/crashes#crash-or-black-screen-while-using-vulkan-beta-renderer) temporarily.
-> - If you need Vulkan, use the LUG Helper to switch to [Mactan's 11.0rc3-1 runner](https://wiki.starcitizen-lug.org/Tips-and-Tricks#how-to-add-a-wine-runner) temporarily. This forces Experimental Wine Wayland which may resolve the issue.
+> - If you need Vulkan, use the LUG Helper to switch to [Mactan's 11.0rc3-1 runner](/Tips-and-Tricks#how-to-add-a-wine-runner) temporarily. This forces Experimental Wine Wayland which may resolve the issue.
 
 
 
