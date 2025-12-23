@@ -61,7 +61,7 @@ nav_order: 2
 ## Crash or black screen while using Vulkan beta renderer
 - Check the [latest news](/#news) for recommendations for your graphics card
 - Go back to DX11 by setting it in the game's menu graphics settings or [USER.cfg](/Tips-and-Tricks#usercfg). Create the USER.cfg file if it doesn't exist yet
-- Vulkan Crash popup including `Assertion failed!` and `vkCreateSwapchainKHR` then [edit the launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) add environment variable  
+- For Vulkan error popups that say `Assertion failed!` or `vkCreateSwapchainKHR`, [edit the launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add the following environment variable:  
     `export MESA_VK_WSI_PRESENT_MODE=mailbox`
 
 ## Failed to decompress file/corrupted block detected error
