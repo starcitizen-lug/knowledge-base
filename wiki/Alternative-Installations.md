@@ -80,7 +80,7 @@ _Distributions that use /etc/security/limits.conf_
    ```
 4. Run the RSI Launcher:
    ```
-   GAMEID="umu-starcitizen" PROTONPATH="GE-Latest" umu-run "~/Games/umu/umu-starcitizen/drive_c/Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe"
+   GAMEID="umu-starcitizen" PROTONPATH="GE-Proton" umu-run "~/Games/umu/umu-starcitizen/drive_c/Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe"
    ```
 
 ## Flatpak Installation
