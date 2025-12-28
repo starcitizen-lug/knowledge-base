@@ -66,16 +66,6 @@ nav_order: 2
 - For vulkan black screen during full-screen effects set display height to be two more than your resolution (ex. for 1920 x 1080 set height to 1082 instead)  
   `drive_c/Program\ Files/Roberts\ Space\ Industries/StarCitizen/LIVE/user/client/0/Profiles/default/attributes.xml`
 
-## Failed to decompress file/corrupted block detected error
-- Some Penguins have had this error when using BTRFS. We suspect a regression of some kind.
-- Easiest: Just ignore the error and continue playing. It doesn't crash until you click the button.
-- Or fix it: Disable CoW on the game's StarCitizen dir
-  1. Navigate to the Game folder `star-citizen/drive_c/Program Files/Roberts Space Industries`
-  2. Use a terminal to run the command ```chattr +C ./StarCitizen```, then redownload or copy in a fresh data.p4k.
-- Less easy Fix: Disable CoW only on the data.p4k file. This can only be done on an empty file.
-- Alternatively, try mounting with the `compress` option instead of `compress-force`.
-- If that doesn't work, switching to ext4 is an option.
-
 
 ## After playing for a while, crash with no errors
   - If there are no errors in your [game logs](/Troubleshooting/#gathering-logs), check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](/Performance-Tuning#zram--swap).
