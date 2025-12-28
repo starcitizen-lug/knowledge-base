@@ -30,6 +30,13 @@ Other potential workarounds:
 - You may try building xwayland with [this patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied. If using KDE and patching xwayland, you will also need to install Gamescope and use the `--force-grab-cursor` option
 
 
+## Certain buttons are unclickable in launcher/game settings
+*this issue is due to using expirimental Wine Wayland for some of the any workarounds like Blue skin(colour inversion), or ursor warp. Specifically the back button in settings, the inversion/cruve dropwdowns in Controls, and launcher buttons if resized (apart from launch button)*
+- disable wine Wayland to correct the issue
+- if this was intentionally done for fixing another problem like Blue or Cursor Warping, one of the methods of forccing this was adding ``export DISPLAY=`` to your ``sc-launch.sh`` file, and can be removed
+- this issue should only apply to settings options, and can be worked around for the back button by using the ``esc`` key, so you should be able to disable wine wayland to correct inversion settings, and then run with this issue not really hindering you to corret the other issues wine wayland fixes
+
+
 ## Mouse/Cursor restricted to a region smaller than the display, or clicks offset from cursor
 - Create a user.cfg file in the LIVE, PTU, EPTU, TECH-PREVIEW directory
  ```
