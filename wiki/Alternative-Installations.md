@@ -66,7 +66,7 @@ _Distributions that use /etc/security/limits.conf_
 3. Download a [recommended wine runner](/Tips-and-Tricks#recommended-runners) into `$HOME/Games/star-citizen/runners`
 4. Download and run the RSI installer (be sure to update the path to your downloaded runner):
    ```
-   WINEPREFIX="$HOME/Games/star-citizen" WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" "$HOME"/Games/star-citizen/runners/{downloaded lug-wine runner}/bin/wine "~/Downloads/RSI Launcher-Setup-2.3.1.exe" /S
+   WINEPREFIX="$HOME/Games/star-citizen" WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" "$HOME"/Games/star-citizen/runners/{downloaded lug-wine runner}/bin/wine "~/Downloads/RSI Launcher-Setup-2.11.0.exe" /S
    ```
 5. Create a launch script to run the game with a [recommended wine runner](/Tips-and-Tricks#recommended-runners). An example is provided on our [LUG Helper's Repo](https://github.com/starcitizen-lug/lug-helper/blob/main/lib/sc-launch.sh)
 
