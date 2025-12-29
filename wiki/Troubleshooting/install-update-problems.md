@@ -57,5 +57,5 @@ nav_order: 1
 - Override environment variable WINEARCH=64
 
 ## openSUSE Tumbleweed: Wine prefix creation failed
-- If SELinux is enabled (default) on openSUSE Tumbleweed, the `selinux-policy-targeted-gaming` package is [required](https://en.opensuse.org/Portal:SELinux/Common_issues#Steam_Proton,_Bottles,_WINE,_Lutris,_not_working) or game installation will fail.
+- If SELinux is enabled (default) on openSUSE, the `selinux-policy-targeted-gaming` package is [required](https://en.opensuse.org/Portal:SELinux/Common_issues#Steam_Proton,_Bottles,_WINE,_Lutris,_not_working) or game installation will fail.
 - Manually install `selinux-policy-targeted-gaming` from the openSUSE repos. Alternatively, both Steam and Lutris pull in this package as a dependency.
