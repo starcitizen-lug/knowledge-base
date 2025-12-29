@@ -76,7 +76,7 @@ _Distributions that use /etc/security/limits.conf_
 1. Install Open Wine Components [umu-launcher](https://github.com/Open-Wine-Components/umu-launcher/releases/latest)
 2. Download and run the RSI Launcher installer:
    ```
-   GAMEID="umu-starcitizen" WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" umu-run "~/Downloads/RSI Launcher-Setup-2.3.1.exe" /S
+   GAMEID="umu-starcitizen" WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" umu-run "~/Downloads/RSI Launcher-Setup-2.11.0.exe" /S
    ```
 4. Run the RSI Launcher:
    ```
