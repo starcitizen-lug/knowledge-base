@@ -1,0 +1,38 @@
+services:
+  jekyll:
+    image: jekyll/jekyll:pages
+    container_name: jekyll-pages-dev
+
+    ports:
+      - "4000:4000"
+
+    volumes:
+      - .:/srv/jekyll:ro
+
+    tmpfs:
+      - /tmp
+      - /usr/local/bundle
+
+    environment:
+      JEKYLL_ENV: development
+      BUNDLE_PATH: /usr/local/bundle
+      JEKYLL_WATCH: "true"
+
+    working_dir: /srv/jekyll
+
+    command:
+      - sh
+      - -c
+      - |
+          gem install webrick --no-document
+
+          if [ -f wiki/Gemfile ]; then
+            cd wiki && bundle install && exec bundle exec jekyll serve \
+              --host 0.0.0.0 \
+              --destination /tmp/_site
+          else
+            exec jekyll serve \
+              --source /srv/jekyll/wiki \
+              --host 0.0.0.0 \
+              --destination /tmp/_site
+          fi
