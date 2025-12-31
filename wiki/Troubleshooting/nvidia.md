@@ -31,14 +31,14 @@ or
 - Some Penguins are seeing VRAM exhaustion problems on Nvidia cards. Overriding the max allowed VRAM allocation may help.
 - Use the LUG Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script).
 - **If you're using DXVK:**
-  - Add the following environment variable to your launch script. Replace `4096` with the appropriate value from the table below.
+  - Add the following environment variable to your [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script). Replace `4096` with the appropriate value from the table below.
   ```
   export DXVK_CONFIG="dxgi.maxDeviceMemory = 4096;cachedDynamicResources = a;"
   ```
 - **If you're using Vulkan:**
   - Use `vulkaninfo --summary` to verify that you have the `VK_LAYER_MESA_vram_report_limit` layer available. If you do not, look for a package in your distro's repos named `vulkan-mesa-layers` or similar.
   - Use `vulkaninfo --summary` to find the correct `vendorID:deviceID` values for your GPU.
-  - Add the following environment variables to your launch script. Replace `4096` with the appropriate value from the table below. Replace `ID=0x1002:0x73df` with the `vendorID:deviceID` values found above.
+  - Add the following environment variables to your [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script). Replace `4096` with the appropriate value from the table below. Replace `ID=0x1002:0x73df` with the `vendorID:deviceID` values found above.
   ```
   export VK_LOADER_LAYERS_ENABLE=VK_LAYER_MESA_vram_report_limit
   export VK_VRAM_REPORT_LIMIT_HEAP_SIZE=4096
