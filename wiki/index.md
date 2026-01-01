@@ -26,13 +26,13 @@ To contribute updates/information, please open an [issue report or pull request]
 >
 > Vulkan issues in Star Citizen 4.5
 >
-> - 4.5 enables Vulkan by default but some colors are inverted.  
->   
+> - 4.5 enables Vulkan by default but some colors are inverted / blue. LUG Helper >= 4.8 installs default to DX11 instead
+>
 >   CIG is aware of and is working on the problem.  
->   
 > - We recommend [switching to DX11](Troubleshooting/crashes#crash-or-black-screen-while-using-vulkan-beta-renderer) temporarily.  
 >   
-> - If you need Vulkan, use the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to switch to [Mactan](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.0rc3-1 wine. This defaults to [Experimental Wine Wayland](/Tips-and-Tricks#wine-wayland) which may resolve the issue
+> - If you need Vulkan, then use the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to switch to [Mactan](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.0rc3-1 wine and  
+>   Edit [USER.cfg](Tips-and-Tricks#usercfg) to switch to Vulkan
 
 
 ### General News
