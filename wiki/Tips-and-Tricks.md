@@ -2,6 +2,7 @@
 title: "Tips and Tricks"
 description: "Recommended distros, wine runners, LUG Helper tips, and other tricks for running Star Citizen on Linux!"
 nav_order: 5
+md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
 ---
 
 # Tips and Tricks

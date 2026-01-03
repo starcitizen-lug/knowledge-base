@@ -3,6 +3,7 @@ title: "🖱️ Mouse & Keyboard Issues"
 description: "Known issues that can cause unexpected mouse or keyboard behavior in Star Citizen on Linux + troubleshooting steps to resolve them"
 parent: "Troubleshooting"
 nav_order: 3
+md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
 ---
 
 # 🖱️ Mouse & Keyboard Issues

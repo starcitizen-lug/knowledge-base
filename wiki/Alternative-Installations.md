@@ -2,6 +2,7 @@
 title: "Alternative Installations"
 description: "Instructions for installing Star Citizen on Linux using third party launchers and other alternative options to our recommended install via the LUG Helper"
 nav_order: 3
+md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
 ---
 # Alternative Installations
 

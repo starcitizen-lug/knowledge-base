@@ -2,6 +2,7 @@
 title: "Quick-Start Guide"
 description: "Simple steps to install Star Citizen on Linux!"
 nav_order: 2
+md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
 ---
 # Quick-Start Guide
 

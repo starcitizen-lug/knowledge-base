@@ -1,6 +1,7 @@
 ---
 title: "Home"
 nav_order: 1
+md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
 ---
 
 <h1>Star Citizen Linux Users Group Wiki</h1>

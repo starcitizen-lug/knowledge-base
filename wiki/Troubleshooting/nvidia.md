@@ -3,6 +3,7 @@ title: "💚 Nvidia"
 description: "Known issues and troubleshooting steps for Nvidia users running Star Citizen on Linux"
 parent: "Troubleshooting"
 nav_order: 7
+md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
 ---
 
 # 💚 Nvidia

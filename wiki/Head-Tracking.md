@@ -2,6 +2,7 @@
 title: "Head Tracking"
 description: "Head tracking hardware recommendations, opentrack configuration, and other tips for head tracking in Star Citizen on Linux."
 nav_order: 7
+md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
 ---
 
 # Head Tracking
