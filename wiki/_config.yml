@@ -9,7 +9,7 @@ permalink: /:path
 include:
   - "*.md"
 
-remote_theme: just-the-docs/just-the-docs
+remote_theme: just-the-docs/just-the-docs@v0.10.2
 
 plugins:
   - jekyll-seo-tag
