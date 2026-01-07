@@ -90,7 +90,7 @@ MESA_SHADER_CACHE_MAX_SIZE=10G
 
 ## Feral GameMode
 
-Gamemode may help improve performance by applying OS-level performance tweaks as the game is launched. For most configurations, it does not seem to result in significant benefits. Search for `gamemode` in your Distro's repos. Refer to the Gamemode [repository](https://github.com/FeralInteractive/gamemode) for configuration instructions
+Gamemode may help improve performance by applying OS-level performance tweaks as the game is launched. For most configurations, it does not seem to result in significant benefits. Search for `gamemode` in your package manager. Refer to the Gamemode [repository](https://github.com/FeralInteractive/gamemode) for configuration instructions
 
 Use the LUG Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add `gamemoderun` to the beginning of your launch command.
 
