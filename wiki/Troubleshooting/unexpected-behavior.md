@@ -91,3 +91,6 @@ This is a generic error code representing any issue with logging in to CIG serve
 ## Launcher crashes/hangs after entering login info when running Niri WM and/or xwayland-satellite
 - See [upstream issue report](https://github.com/Supreeeme/xwayland-satellite/issues/189)
 - Workarounds: Use xwayland-run, [gamescope](/Tips-and-Tricks#gamescope), an alternative to xwayland-satellite, or an alternative compositor.
+
+## Laggy game when using Picom or Compton Compositors
+- If you use the Picom or Compton compositor, it may cause a laggy experience despite having high framerates. We recommend disabling the compositor.
