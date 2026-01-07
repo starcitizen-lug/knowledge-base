@@ -54,8 +54,11 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 
 ## ESync/FSync/NTSync
 
+{: .tip }
+> If you've installed the game via our [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper), these settings are pre-configured for you.
+
 - Which will work best depends on your specific hardware. You may experiment with the following:
-- If these environment variables are set, Wine will automatically choose the best option between esync or fsync. If you've installed the game via our [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper), these variables are pre-configured for you.
+- If these environment variables are set, Wine will automatically choose the best option between esync or fsync.
   ```
   export WINEESYNC=1
   export WINEFSYNC=1
@@ -90,22 +93,17 @@ MESA_SHADER_CACHE_MAX_SIZE=10G
 
 ## Feral GameMode
 
-Gamemode may help improve performance by applying OS-level performance tweaks as the game is launched. For most configurations, it does not seem to result in significant benefits. Search for `gamemode` in your package manager. Refer to the Gamemode [repository](https://github.com/FeralInteractive/gamemode) for configuration instructions
+For most configurations, Gamemode does not seem to result in significant performance benefits. If you wish to experiment with its capabilities, install `gamemode` from your package manager, then refer to the Gamemode [repository](https://github.com/FeralInteractive/gamemode) for configuration instructions.
 
 Use the LUG Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add `gamemoderun` to the beginning of your launch command.
 
 
-## Picom/Compton Compositors
+## CPU scaling on Laptops
 
-If you use the Picom or Compton compositor, it may cause a laggy experience despite having high framerates. We recommend disabling the compositor.
+When configuring kernel [schedulers](https://www.kernel.org/doc/Documentation/cpu-freq/governors.txt) on a mobile device, the `Performance` scheduler will hint that the CPU should always run at the maximum frequency.
 
-
-## Changing CPU scaling behavior via the Linux kernel and System Management BIOS
-
-To achieve a more stable framerate in Star Citizen, ideally you will want a stable CPU frequency. There are [several schedulers](https://www.kernel.org/doc/Documentation/cpu-freq/governors.txt) provided by the Linux kernel. Start with the `Performance` scheduler to hint that the CPU should always run at the maximum frequency before trying the demand-based schedulers.
-
-We have discovered that Dell laptops with Intel CPUs (and possibly other mobile hardware configurations) may have other factors that influence CPU frequency scaling:
-- In situations where one of these laptops is either thermal-limited or power-limited, the CPU and GPU will set the maximum frequency and then fall to a low frequency (ie. 800 MHz) when it hits the limit.
+Dell laptops with Intel CPUs may have other factors that influence CPU frequency scaling:
+- If the laptop is thermal-limited or power-limited, the CPU and GPU will fall to a lower frequency when it hits the limit.
 - You can try to configure these settings in the BIOS or via [SMBIOS](https://www.dmtf.org/standards/smbios). On Ubuntu distributions, this utility is provided by the `smbios-utils` package.
 
 **Solution for affected laptops:**
