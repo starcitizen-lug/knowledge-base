@@ -215,11 +215,13 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 > 
 > Turn off any virtual keyboard. These conflict with the `F` interaction key and make the inner-thought menu appear to flicker.
 
-- Experimental Wine Wayland
-  - Use the [LUG Helper](#how-to-run-the-lug-helper) to select lug-wine 11.0-rc1-2 or newer
+- Experimental **Wine** Wayland
+  - Use the [LUG Helper](#how-to-run-the-lug-helper) to switch to [Mactan](#how-to-add-a-wine-runner) 11.0rc3-1 wine or newer  
+ 
+  For any other wine runners:
   - Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export DISPLAY=` to unset it to empty
   - If you experience a white or black launcher add this [RSI Launcher.exe argument](/Troubleshooting/unexpected-behavior#launcher-white-or-black-screen)
-- Experimental Proton Wayland (for proton runners)
+- Experimental **Proton** Wayland (for proton runners **not** wine)
   - Add environment variable `PROTON_ENABLE_WAYLAND=1`
  
 - Set primary monitor, Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `WAYLANDDRV_PRIMARY_MONITOR` Replace the value for your monitor DP-1, DP-2, HDMI-A-1, etc  
