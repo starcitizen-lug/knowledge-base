@@ -32,7 +32,7 @@ To contribute updates/information, please open an [issue report or pull request]
 >   CIG is aware of and is working on the problem.  
 > - We recommend [switching to DX11](Troubleshooting/crashes#crash-or-black-screen-while-using-vulkan-beta-renderer) temporarily.  
 >   
-> - If you need Vulkan, then use the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to switch to [Mactan](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.0rc3-1 wine and  
+> - If you need Vulkan, then switch to [Experimental Wayland](Tips-and-Tricks#wine-wayland) and  
 >   Edit [USER.cfg](Tips-and-Tricks#usercfg) to switch to Vulkan
 
 
