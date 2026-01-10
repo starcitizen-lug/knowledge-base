@@ -16,7 +16,7 @@ The following game settings can help improve framerates:
 
 - Set `Quality` to `High`. Lower settings are not recommended as it will tax your CPU more. Set to `Very High` to offload more work from your CPU to your GPU.
 - Set `Planet Volumetric Clouds` to `Medium`
-- Set `Scattered Object Distance` to `Low`
+- Set `Object View Distance` to `Low`
 - Set `Motion Blur` to `Off`
 - Set `Sharpening` to `100`
 
