@@ -90,6 +90,8 @@ For documentation and issues refer to [https://github.com/mactan-sc/rsilauncher]
 1.  Add the repo
 ```
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+```
 flatpak remote-add --user --if-not-exists RSILauncher https://mactan-sc.github.io/rsilauncher/RSILauncher.flatpakrepo
 ```
 2.  install the rsi launcher flatpak
