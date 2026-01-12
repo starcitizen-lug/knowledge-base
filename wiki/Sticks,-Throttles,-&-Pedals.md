@@ -98,6 +98,12 @@ The yaw potentiometer on these sticks tends to fail after a time. It may be poss
 - Disassemble the potentiometer to try to [clean and repair it](https://www.reddit.com/r/hotas/comments/7ec712/comment/dq58sy8/?context=3)
 - A bit of soldering to [replace the potentiometer](https://www.reddit.com/r/hotas/comments/cronns/comment/ex8oo4b/?context=3)
 
+- Thrustmaster T16000 sticks may not appear in the Game Controllers list unless DLL overrides for dinput and xinput are added:
+    - Use the LUG Helper's Maintenance menu `Open Wine prefix configuration` option
+    - In the Wine configuration window, select the `Libraries` tab.
+    - Use the `New override for library` dropdown to add overrides for `dinput` and `xinput`.
+    - If there is more than one `xinput` entry, add them all.
+
 ## Thrustmaster SOL-R
 
 **Manual Calibration**  
@@ -215,11 +221,6 @@ ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
 - Try setting your joysticks to "dinput" instead of "xinput" in Wine control panel
     - Follow the [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings) instructions above.
     - If your joysticks are showing up as "Connected(xinput)", select them and click "Override" to set them to dinput.
-- Thrustmaster T16000 sticks may not appear in the Game Controllers list unless DLL overrides for dinput and xinput are added:
-    - Use the LUG Helper's Maintenance menu `Open Wine prefix configuration` option
-    - In the Wine configuration window, select the `Libraries` tab.
-    - Use the `New override for library` dropdown to add overrides for `dinput` and `xinput`.
-    - If there is more than one `xinput` entry, add them all.
 
 ### Some of your joystick axis aren't recognized / don't map
 - Check that the game has not set the deadzone for this axis to 100%
