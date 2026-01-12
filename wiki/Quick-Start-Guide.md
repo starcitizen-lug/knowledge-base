@@ -11,20 +11,17 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 >
 > See our [Recommended Distros](Tips-and-Tricks#recommended-distros) for a list of distros most compatible with Star Citizen.
 
-## Prerequisites
-
-1. Install `cabextract` and `unzip` using your package manager; these are needed by Winetricks. Alternatively, install winetricks **20250102** or newer from your package manager. Links, if needed, are on the winetricks [github](https://github.com/Winetricks/winetricks#installing).
-2. Decide on an install location on an SSD where you have space for the entire game, approximately 140GB. Avoid HDDs and NTFS filesystems.
-
-{: .tip }
-> If your distro does not satisfy the prerequisites, we recommend the [flatpak installation](Alternative-Installations#flatpak-installation). For NixOS, see [here](/Alternative-Installations#nixos-installation). For the Steam Deck, see [here](/Alternative-Installations#steam-deck-installation).
+{: .note-title }
+> Immutable Distros
+> 
+> For immutable distros other than Bazzite, we recommend the [flatpak installation](Alternative-Installations#flatpak-installation). For NixOS, see [here](/Alternative-Installations#nixos-installation). For the Steam Deck, see [here](/Alternative-Installations#steam-deck-installation).
 
 ## Installation Steps
 
 1. Download our [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) (Distro packages are listed [here](https://github.com/starcitizen-lug/lug-helper#installation))
 2. [Launch](Tips-and-Tricks#how-to-run-the-lug-helper) the LUG Helper and select `Install Star Citizen`.
 3. Allow the Preflight Check to fix any issues it finds before proceeding!
-4. When the Helper asks, select any linux-formatted partition to install the Wine prefix. This directory will contain the game.
+4. When the Helper asks, select a location for the Wine prefix on a Linux partition with approximately 150GB available. This directory will contain the game. Avoid HDDs and NTFS filesystems.
 5. After the install completes, run the RSI Launcher, log in, and click Install to finish installing the game. **Do not** change the default install location `C:\Program Files\Roberts Space Industries`!
 6. Launch the game. See you in the 'verse!
 
