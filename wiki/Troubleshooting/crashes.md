@@ -64,7 +64,8 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - Go back to DX11 by setting it in the game's menu graphics settings or [USER.cfg](/Tips-and-Tricks#usercfg). Create the USER.cfg file if it doesn't exist yet
 - For Vulkan error popups that say `Assertion failed!` or `vkCreateSwapchainKHR`, [edit the launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add the following environment variable:  
     `export MESA_VK_WSI_PRESENT_MODE=mailbox`
-- For vulkan black screen during full-screen effects set display height to be two more than your resolution (ex. for 1920 x 1080 set height to 1082 instead)  
+- For vulkan black screen set display height to be +/- 2 pixels (ex. for 1920 x 1080 set height to 1082 or 1078 instead)  
+  Edit [USER.cfg](/Tips-and-Tricks#usercfg) or attributes.xml  
   `drive_c/Program\ Files/Roberts\ Space\ Industries/StarCitizen/LIVE/user/client/0/Profiles/default/attributes.xml`
 
 
