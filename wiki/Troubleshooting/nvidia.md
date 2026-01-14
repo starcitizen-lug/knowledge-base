@@ -78,8 +78,8 @@ or
   
 {: .warning }
 >
-> * DLSS 4.5 will result in less performance than DLSS 4.0 (sometimes less than without DLSS enabled on certain GPUs), though it provides a greater improvement in image quality.
-> * [NVIDIA:](https://www.nvidia.com/en-us/geforce/forums/geforce-graphics-cards/5/580689/dlss-45-super-resolution-faq/) *Since RTX 20 and 30 Series don't support FP8, these cards will see a larger performance impact compared to newer hardware and those users may prefer remaining on the existing Model K (DLSS 4.0) preset for higher FPS.* ([More info](https://github.com/NVIDIA/DLSS/blob/main/doc/DLSS_Programming_Guide_Release.pdf))
+> - DLSS 4.5 will result in less performance than DLSS 4.0 (sometimes less than without DLSS enabled on certain GPUs), though it provides a greater improvement in image quality.
+> - [NVIDIA:](https://www.nvidia.com/en-us/geforce/forums/geforce-graphics-cards/5/580689/dlss-45-super-resolution-faq/) *Since RTX 20 and 30 Series don't support FP8, these cards will see a larger performance impact compared to newer hardware and those users may prefer remaining on the existing Model K (DLSS 4.0) preset for higher FPS.* ([More info](https://github.com/NVIDIA/DLSS/blob/main/doc/DLSS_Programming_Guide_Release.pdf))
 
 5. To confirm DLSS 4.x is working, enable the debug overlay env var below and look for it in-game to say `Render Preset: X` where X is the render preset letter you chose from the table above or:
    * `DLSSv3 v310.5.0` (or above) indicates DLSS 4.5
