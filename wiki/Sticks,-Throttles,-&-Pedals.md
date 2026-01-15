@@ -20,7 +20,7 @@ Virpil and VKB-sim are widely recommended for their build quality at their respe
 Virpil has distribution centers in the EU and USA.  
 [North America](https://virpil-controls.us.com/)  
 [Europe](https://virpil-controls.eu/)  
-[Russia](https://virpil.by/)  
+[Russia](https://virpil-controls.by/)  
 
 VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts through their site as replacements or upgrades.  
 [North America](https://www.vkbcontrollers.com/)  
