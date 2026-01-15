@@ -81,7 +81,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 
 ## Black or flickering window, possible crash with errors 15006 or 30007
-- Check for larger resolutions and scaling settings.  See CIG's [support article](https://support.robertsspaceindustries.com/hc/en-us/articles/360000081887-Guide-to-Graphic-Issues#large-res)
+- Check for larger resolutions and scaling settings.  See CIG's [support article](https://support.robertsspaceindustries.com/hc/en-us/articles/37500283848983-Optimizing-Graphics-Settings)
 
 
 ## Black/transparent window after clicking 'Launch'
