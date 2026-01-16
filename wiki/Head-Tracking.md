@@ -61,7 +61,7 @@ Configure Star Citizen's head tracking options under `Comms, FOIP & Head Trackin
 
 
 ## Building Opentrack with ONNX Runtime
-If you provide ONNX Runtime libraries to Opentrack when building it, it will offer Neuralnet as input option. This will allow you to use any webcam as head tracking device.
+If you provide ONNX Runtime libraries to Opentrack when building it, it will offer Neuralnet as input option. This will allow you to use any webcam as a head tracking device.
 
 Arch-based distros:
 1. Install `onnxruntime` from the Arch repos.
@@ -73,7 +73,7 @@ Other distros:
 3. Follow [Opentrack's instructions](https://github.com/opentrack/opentrack/wiki/Building-on-Linux) with some extra steps when using `cmake` or `ccmake`.
     - Set variable `SDK_WINE`.
     - Set variable `ONNXRuntime_DIR` to absolute path to extracted ONNX Runtime folder.
-    - If you're having trouble, some videos are provided by [bekopharm](https://linux.simpit.dev/systems/opentrack/)
+    - If you're having trouble, some videos are provided by [bekopharm](https://linux.simpit.dev/systems/opentrack/).
 4. Follow the configuration instructions [above](#opentrack-configuration).
 5. Select `neuralnet tracker` as input.
    
