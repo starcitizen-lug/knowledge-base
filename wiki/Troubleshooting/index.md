@@ -55,7 +55,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 If you can't find a solution to your issue in the Troubleshooting subpages, you may ask for help on our [social channels](/#join-us).
 
 
-# ❓Common Issues
+### ❓Common Issues
 
 {: .important }
 > Refer to the [News](https://wiki.starcitizen-lug.org/#news) for recent issues and workarounds!
