@@ -13,6 +13,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - Try logging out and back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
 - Wine v10.17 caused launcher rendering issues. Use the [LUG Helper](/Tips-and-Tricks#how-to-add-a-wine-runner) to install a different LUG-Wine runner version.
 - If using the Cosmic DE beta, this is a [known issue](https://github.com/pop-os/cosmic-epoch/issues/2368). Try using the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s `Open Wine prefix configuration` option in the Maintenance menu to turn on virtual desktop mode.
+- Try switching to [Experimental Wayland](/Tips-and-Tricks#wine-wayland)
 
 
 ## Launcher white or black screen
@@ -91,6 +92,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 ## Launcher crashes/hangs after entering login info when running Niri WM and/or xwayland-satellite
 - See [upstream issue report](https://github.com/Supreeeme/xwayland-satellite/issues/189)
 - Workarounds: Use xwayland-run, [gamescope](/Tips-and-Tricks#gamescope), an alternative to xwayland-satellite, or an alternative compositor.
+- Try switching to [Experimental Wayland](/Tips-and-Tricks#wine-wayland)
 
 ## Laggy game when using Picom or Compton Compositors
 - If you use the Picom or Compton compositor, it may cause a laggy experience despite having high framerates. We recommend disabling the compositor.
