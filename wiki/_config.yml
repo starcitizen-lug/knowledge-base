@@ -17,6 +17,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-github-metadata
   - jekyll-include-cache
+  - jekyll-redirect-from
 
 just_the_docs:
   custom_css:
