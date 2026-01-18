@@ -26,8 +26,8 @@ The following game settings can help improve framerates:
 We currently recommend a combined 40GB RAM + swap to avoid Out Of Memory crashes while playing Star Citizen. Systems with less than 40GB RAM will need additional swap or zram configured. Systems with >40GB RAM should be fine as long as any size swap file exists; the game likes to swap even when you have plenty of ram.
 
 Zram stores swap in RAM using on-the-fly compression which can improve game performance when memory utilization gets high. In our experience, this tends to provide better performance in Star Citizen than zswap.
-- For systems with 16GB RAM, we recommend all 16GB configured for zram with at least 8-16GB in a swap file.
-- For systems with 32GB RAM, we recommend configuring all 32GB for zram with at least 4-8GB in a swap file.
+- For systems with 16GB RAM, we recommend all 16GB configured for zram with at least 24GB in a swap file.
+- For systems with 32GB RAM, we recommend configuring all 32GB for zram with at least 8GB in a swap file.
 
 {: .tip }
 > - When using zram, zswap needs to be [disabled](https://wiki.archlinux.org/title/Zswap#Toggling_zswap).  
@@ -44,8 +44,8 @@ compression-algorithm = zstd
 ```
 
 If you prefer not to use zram, a swap file will need to be [configured](https://wiki.archlinux.org/title/Swap#Swap_file). Btrfs users please follow the [Btrfs instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). We recommend configuring at least a combined 40GB RAM + swap:
-- For 16GB RAM: 24GB swap
-- For 32GB RAM: 8GB swap
+- For 16GB RAM: At least 24GB swap
+- For 32GB RAM: At least 8GB swap
 
 {: .important }
 >
