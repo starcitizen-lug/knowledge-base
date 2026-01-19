@@ -21,7 +21,7 @@ Other potential workarounds:
 - Use LUG Wine 10.15-1 or newer with the game's borderless windowed mode
 - Experimental LUG [Wine Wayland](/Tips-and-Tricks#wine-wayland) helps mitigate this for some
 - [Proton](/Alternative-Installations#proton-installation) helps mitigate this for some
-- Gamescope helps mitigate this for sonav_order: 3me
+- Gamescope helps mitigate this for some
   - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix](nvidia#gamescope-not-working)
   - Install and enable gamescope. Set these options for your display resolution  
   `-W 2560 -H 1440 --force-grab-cursor`
