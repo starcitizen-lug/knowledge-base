@@ -74,7 +74,7 @@ Requires a windows-only software for calibration and configuration. [Link; scrol
 {: .important-title }
 > After adding the udev rule
 >
-> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Virpil Controls` in the name, and click the Disable button.
+> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the non-hidraw device(s), and click the Disable button.
 
 ## ThrustMaster Devices
 
@@ -88,9 +88,9 @@ Requires a windows-only software for calibration and configuration. [Link; scrol
 {: .important-title }
 > After adding the udev rule
 >
-> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings)
+> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select your device(s), and click the Disable button.
 
-## Thrustmaster T-16000
+### Thrustmaster T-16000
 
 **Potentiometer Failure**  
 The yaw potentiometer on these sticks tends to fail after a time. It may be possible to prevent or fix the issue, otherwise a new potentiometer can be soldered on.
@@ -104,7 +104,7 @@ The yaw potentiometer on these sticks tends to fail after a time. It may be poss
     - Use the `New override for library` dropdown to add overrides for `dinput` and `xinput`.
     - If there is more than one `xinput` entry, add them all.
 
-## Thrustmaster SOL-R
+### Thrustmaster SOL-R
 
 **Manual Calibration**  
 1. Start with base unplugged.
@@ -119,7 +119,10 @@ Change LEDs with a simple python script
 [https://github.com/gort818/solr-led/blob/main/solr-led.py](https://github.com/gort818/solr-led/blob/main/solr-led.py)
 
 
-## Configuration Tips
+## Other Devices
+
+{: .tip }
+> Wine defaults to using HIDRAW to recognize common joysticks. Follow the instructions below to obtain device info and enable HIDRAW.
 
 ### Find Device Info
 Use `udevadm` to retrieve the Vendor ID, Model Name, and Model ID that the device reports to the system.
@@ -135,22 +138,20 @@ E: ID_MODEL_ENC=\x20VKBsim\x20Space\x20Gunfighter\x20
 E: ID_MODEL_ID=0126
 ```
 
-### HIDRAW
-Wine defaults to using HIDRAW to recognize common joysticks
-- Create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
- ```
- # Set the "uaccess" tag for raw HID access for Virpil Devices in wine
- KERNEL=="hidraw*", ATTRS{idVendor}=="<Your Vendor ID>", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
- ```
-Example:
- ```
- # Set the "uaccess" tag for raw HID access for VKB Devices in wine
- KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
- ```
-{: .important }
-> After adding the udev rule, unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that **do not** match the results of the [udevadm](#find-device-info) and click disable
+### Enable HIDRAW
 
-### Mappings
+- Create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content. Replace <ID_VENDOR_ID> with the Vendor ID retrieved in the step above. For working examples, see the VKB, Virpil, or Thrustmaster sections above.
+ ```
+ # Set the "uaccess" tag for raw HID access for input devices in wine.
+ KERNEL=="hidraw*", ATTRS{idVendor}=="<ID_VENDOR_ID>", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
+ ```
+
+{: .important-title }
+> After adding the udev rule
+> 
+> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that **do not** match the results of the [Find Device Info](#find-device-info) step above, and click the Disable button.
+
+## Mappings
 
 A collection of mappings contributed by our community can be found [here](https://github.com/starcitizen-lug/mappings).  
 Mappings for Saitek / Logitech x56 HOTAS are maintained individually by @PaladinTitus [here](https://github.com/PaladinTitus/SC_X56).  
@@ -158,9 +159,9 @@ Mappings for Saitek / Logitech x56 HOTAS are maintained individually by @Paladin
 The third party tool, [input-remapper](https://github.com/sezanzeb/input-remapper), can be used to change the behavior of input devices. Note that, while some of our Penguins have had success using this tool, we have not fully vetted its functionality or safety. Some basic profile examples contributed by our community can be found [here](https://github.com/starcitizen-lug/mappings/tree/main/input-remapper).
 
 
-### Evdev Deadzones
+## Evdev Deadzones
 
-{: .tip }
+{: .warning }
 > 
 > This section does not apply if your controllers are connected as HIDRAW devices
 
@@ -239,9 +240,3 @@ https://github.com/beniwtv/evdev-spoof-device
       ```
       ACTION=="add|change", KERNEL=="event[0-9]*", ENV{ID_VENDOR_ID}=="<Your Vendor ID>", ENV{ID_MODEL_ID}=="<Your Model ID>", ENV{ID_INPUT_ACCELEROMETER}="", ENV{ID_INPUT_JOYSTICK}="1", TAG+="uaccess"
       ```
-      
-{: .note }
-> Consider contributing your rules to the LUG knowlege-base if your device needs any rules to function properly
-> 
-> Also consider having the rule added to [systemd](https://github.com/systemd/systemd/blob/main/hwdb.d/60-input-id.hwdb).
-
