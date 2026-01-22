@@ -163,7 +163,7 @@ The third party tool, [input-remapper](https://github.com/sezanzeb/input-remappe
 
 {: .warning }
 > 
-> This section does not apply if your controllers are connected as HIDRAW devices
+> This section does not apply if your controllers are connected as HIDRAW devices.
 
 For non-hidraw devices, evdev may add extra deadzones to your controller on top of those configured by the device's firmware. Throttles may experience a "hitch" in the center of their axis. You can remove these deadzones with a udev rule.
 
@@ -214,8 +214,8 @@ ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
 ## Troubleshooting
 
 ### Accessing Wine Game Controllers Settings
-- Use the LUG Helper's Maintenance menu `Open Wine controller configuration` button
-- For other install methods refer to the tool's menu options or run `WINEPREFIX=/path/to/your/prefix wine control joy.cpl`
+- Run the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper), select the `Maintenance and Troubleshooting` menu, then choose `Open Wine controller configuration`.
+- For alternative installs using third party launchers, refer to that launcher's help and/or menu options, or manually run `WINEPREFIX=/path/to/your/prefix wine control joy.cpl`
 
 ### Some of your joysticks disappear / aren't recognized in the game
 - You may need to enable HIDRAW access. See [VKB](#vkb-devices), [Virpil](#virpil-devices), or [Thrustmaster](#thrustmaster-devices) sections above for instructions
