@@ -140,7 +140,7 @@ E: ID_MODEL_ID=0126
 
 ### Enable HIDRAW
 
-- Create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content. Replace <ID_VENDOR_ID> with the Vendor ID retrieved in the step above. For working examples, see the VKB, Virpil, or Thrustmaster sections above.
+- Create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content. Replace `<ID_VENDOR_ID>` with the Vendor ID retrieved in the step above. For working examples, see the VKB, Virpil, or Thrustmaster sections above.
  ```
  # Set the "uaccess" tag for raw HID access for input devices in wine.
  KERNEL=="hidraw*", ATTRS{idVendor}=="<ID_VENDOR_ID>", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
