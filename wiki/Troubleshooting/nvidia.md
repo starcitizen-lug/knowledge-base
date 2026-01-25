@@ -59,7 +59,7 @@ or
 1. Use the latest [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to install a LUG-Wine runner. (For any other wine runners, avoid wine-staging)
 2. Use the latest [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper), select `Manage DXVK`, and install `DXVK-NVAPI`
 3. DLSS 3 will now be available in the game options
-4. To enable DLSS 4.x, add the following environment variables to your [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script). Replace the K in `RENDER_PRESET_K` with the desired render preset letter from the table below.
+4. To enable DLSS 4.0, add the following environment variables to your [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script).
 
    ```
    export PROTON_ENABLE_NGX_UPDATER="1" 
@@ -69,24 +69,24 @@ or
    export DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE_RENDER_PRESET_SELECTION="RENDER_PRESET_K"
    export DXVK_NVAPI_DRS_NGX_DLSS_RR_OVERRIDE_RENDER_PRESET_SELECTION="RENDER_PRESET_K"
    ```
-   
-  | DLSS | Render Preset | Suited for GPU Series | Performance |
-  | ---- | ------------- | ---------- | -------- |
-  | 4.0 | K | 20, 30, 40, 50 | Better than native |
-  | 4.5 | M | 40, 50 | Less than K |
-  | 4.5 | L | 40, 50 | Less than M |
-  
-{: .warning }
->
-> - DLSS 4.5 will result in less performance than DLSS 4.0 (sometimes less than without DLSS enabled on certain GPUs), though it provides a greater improvement in image quality.
-> - [NVIDIA:](https://www.nvidia.com/en-us/geforce/forums/geforce-graphics-cards/5/580689/dlss-45-super-resolution-faq/) *Since RTX 20 and 30 Series don't support FP8, these cards will see a larger performance impact compared to newer hardware and those users may prefer remaining on the existing Model K (DLSS 4.0) preset for higher FPS.* ([More info](https://github.com/NVIDIA/DLSS/blob/main/doc/DLSS_Programming_Guide_Release.pdf))
+{: .note-title }
+> DLSS 4.5
+> 
+> Using DLSS 4.5 will result in less performance than DLSS 4.0 (sometimes less than without DLSS enabled on certain GPUs), though it provides a greater improvement in image quality.
+> 
+> Enable it by using an alternative render preset:
+> - `RENDER_PRESET_M` enables DLSS 4.5 but with less performance than `RENDER_PRESET_K`
+> - `RENDER_PRESET_L` enables DLSS 4.5 with the least performance overall but best image quality.
+> 
+> It is not recommended to enable DLSS 4.5 on 20 & 30 series GPUs *"since RTX 20 and 30 Series don't support FP8, these cards will see a larger performance impact compared to newer hardware"* ([More info](https://www.nvidia.com/en-us/geforce/forums/geforce-graphics-cards/5/580689/dlss-45-super-resolution-faq/))
 
-5. To confirm DLSS 4.x is working, enable the debug overlay env var below and look for it in-game to say `Render Preset: X` where X is the render preset letter you chose from the table above or:
-   * `DLSSv3 v310.5.0` (or above) indicates DLSS 4.5
-   * `DLSSv3 v310.4.0` (or below) indicates DLSS 4.0
+5. To confirm DLSS 4.x is working, enable the debug overlay env var below:
    ```
    export DXVK_NVAPI_SET_NGX_DEBUG_OPTIONS="DLSSIndicator=1024,DLSSGIndicator=2"
    ```
+   Look for it in-game to say `Render Preset: X` where X is the render preset letter you chose or alternatively:
+   - `DLSSv3 v310.5.0` (or above) indicates DLSS 4.5
+   - `DLSSv3 v310.4.0` (or below) indicates DLSS 4.0
 6. Disable the debug overlay when done by changing the above env var to:
    ```
    export DXVK_NVAPI_SET_NGX_DEBUG_OPTIONS="DLSSIndicator=1,DLSSGIndicator=1"
