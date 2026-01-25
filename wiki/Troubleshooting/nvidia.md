@@ -72,21 +72,15 @@ or
 {: .note-title }
 > DLSS 4.5
 > 
-> Using DLSS 4.5 will result in less performance than DLSS 4.0 (sometimes less than without DLSS enabled on certain GPUs), though it provides a greater improvement in image quality.
+> Enabling DLSS 4.5 will result in less performance than DLSS 4.0 in exchange for improved image quality. [RTX 20 & 30 series GPUs](https://www.nvidia.com/en-us/geforce/forums/geforce-graphics-cards/5/580689/dlss-45-super-resolution-faq/) will see a very severe performance impact and should stick with DLSS 4.0.
 > 
-> Enable it by using an alternative render preset:
-> - `RENDER_PRESET_M` enables DLSS 4.5 but with less performance than `RENDER_PRESET_K`
-> - `RENDER_PRESET_L` enables DLSS 4.5 with the least performance overall but best image quality.
-> 
-> It is not recommended to enable DLSS 4.5 on 20 & 30 series GPUs *"since RTX 20 and 30 Series don't support FP8, these cards will see a larger performance impact compared to newer hardware"* ([More info](https://www.nvidia.com/en-us/geforce/forums/geforce-graphics-cards/5/580689/dlss-45-super-resolution-faq/))
-
-5. To confirm DLSS 4.x is working, enable the debug overlay env var below:
+> Enable DLSS 4.5 by using an alternative render preset:
+> - `RENDER_PRESET_M` for improved image quality but less performance.
+> - `RENDER_PRESET_L` for the best image quality but the least performance.
+5. To confirm DLSS 4.x is working, enable the debug overlay env var below. Look for it in-game to say `Render Preset: K/M/L`, `DLSSv3 v310.4.0` for DLSS 4.0, or `DLSSv3 v310.5.0` for DLSS 4.5.
    ```
    export DXVK_NVAPI_SET_NGX_DEBUG_OPTIONS="DLSSIndicator=1024,DLSSGIndicator=2"
    ```
-   Look for it in-game to say `Render Preset: X` where X is the render preset letter you chose or alternatively:
-   - `DLSSv3 v310.5.0` (or above) indicates DLSS 4.5
-   - `DLSSv3 v310.4.0` (or below) indicates DLSS 4.0
 6. Disable the debug overlay when done by changing the above env var to:
    ```
    export DXVK_NVAPI_SET_NGX_DEBUG_OPTIONS="DLSSIndicator=1,DLSSGIndicator=1"
