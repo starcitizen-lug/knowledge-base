@@ -34,7 +34,8 @@ Zram stores swap in RAM using on-the-fly compression which can improve game perf
 > - See the Arch Wiki for [zram setup](https://wiki.archlinux.org/title/Zram#Using_zram-generator) instructions that should work for most distros as well as [zram optimization](https://wiki.archlinux.org/title/Zram#Optimizing_swap_on_zram) steps.  
 > - Also see the Arch Wiki for [swap file creation](https://wiki.archlinux.org/title/Swap#Swap_file_creation) instructions.  
 
-The zram-generator package requires a configuration file. Many distros use zram by default, edit the existing or create your own based on this example:
+The zram-generator package must be installed and requires a configuration text file. Many distros use zram-generator by default.  
+Use a text editor to modify existing or create your own text file in `/etc/systemd` named `zram-generator.conf` copy this sample:
 ```
 ## /etc/systemd/zram-generator.conf
 
