@@ -84,9 +84,10 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 ## Black game window after clicking 'Launch'
 - Check our [latest news](/#news) for gpu driver issues or temporary workarounds.
+- If you have r_width/r_height set in a [USER.cfg](/Tips-and-Tricks#usercfg) file, try removing those lines.
+- If using a webcam, make sure V4L is installed (video 4 linux, package names may be similar to `v4l-utils`). If using V4L2 Loopback, try removing any loopback devices you have created.
 - If using DX11 instead of Vulkan, make sure DXVK is [installed and up to date](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix).
 - If using Vulkan, you may need to revert to DX11 by creating a [USER.cfg](/Tips-and-Tricks#usercfg) file.
-- If using a webcam, make sure V4L is installed (video 4 linux, package names may be similar to `v4l-utils`). If using V4L2 Loopback, try removing any loopback devices you have created.
 
 
 ## Black game window on Vulkan when flying/boosting/braking
