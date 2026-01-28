@@ -16,13 +16,6 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - Try switching to [Experimental Wayland](/Tips-and-Tricks#wine-wayland)
 
 
-## Launcher white or black screen
-- Edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add RSI Launcher flag `--in-process-gpu` example:
-  ```
-    "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" --in-process-gpu > "$launch_log" 2>&1
-  ```
-
-
 ## Launcher indicates You are currently offline
 - Log out and back in
 
@@ -55,6 +48,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 - Ensure that IPv6 is not disabled
 - Check that custom firewall rules on your host or router are not blocking outbound traffic to non-HTTP(S) ports
 
+
 ## Required Vulkan Extensions are missing error / poor performance compared to windows / error code 3
 - Check if you have amdvlk installed by running `vulkaninfo --summary`. The vulkaninfo utility is part of the package `vulkan-tools` on most distros. You can also check your package manager.
 - If your system is using amdvlk, uninstall that package and replace it with `vulkan-radeon`.
@@ -81,17 +75,29 @@ This is a generic error code representing any issue with logging in to CIG serve
 - [Edit the launch script](#how-to-edit-the-launch-script) and add `unset SDL_VIDEODRIVER` to the environment variables section
 
 
-## Black or flickering window, possible crash with errors 15006 or 30007
-- Check for larger resolutions and scaling settings.  See CIG's [support article](https://support.robertsspaceindustries.com/hc/en-us/articles/37500283848983-Optimizing-Graphics-Settings)
+## Black or white RSI Launcher window
+- Try editing the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to add the RSI Launcher flag `--in-process-gpu`. For example:
+  ```
+    "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" --in-process-gpu > "$launch_log" 2>&1
+  ```
 
 
-## Black/transparent window after clicking 'Launch'
-- Check our [latest news](/#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
-- Make sure DXVK is installed and enabled
+## Black game window after clicking 'Launch'
+- Check our [latest news](/#news) for gpu driver issues or temporary workarounds.
+- If using DX11 instead of Vulkan, make sure DXVK is [installed and up to date](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix).
+- If using Vulkan, you may need to revert to DX11 by creating a [USER.cfg](/Tips-and-Tricks#usercfg) file.
+- If using a webcam, make sure V4L is installed (video 4 linux, package names may be similar to `v4l-utils`). If using V4L2 Loopback, try removing any loopback devices you have created.
+
+
+## Black game window on Vulkan when flying/boosting/braking
+1. Set the game to fullscreen in the settings.
+2. Create a [USER.cfg](/Tips-and-Tricks#usercfg) file and set the game resolution height to be +/- 2 pixels (ex. for 1920x1080, set height to 1082 or 1078).
+
 
 ## Launcher crashes/hangs after entering login info when running Niri WM and/or xwayland-satellite
 - See [upstream issue report](https://github.com/Supreeeme/xwayland-satellite/issues/189)
 - Workarounds: Use xwayland-run, [gamescope](/Tips-and-Tricks#gamescope), an alternative to xwayland-satellite, an alternative compositor, or try switching to [Experimental Wine Wayland](/Tips-and-Tricks#wine-wayland).
+
 
 ## Laggy game when using Picom or Compton Compositors
 - If you use the Picom or Compton compositor, it may cause a laggy experience despite having high framerates. We recommend disabling the compositor.
