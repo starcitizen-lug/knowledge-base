@@ -59,24 +59,14 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - Make sure you have set [your vm.max_map_count](/Alternative-Installations#prerequisites) and passed all LUG Helper preflight checks
 
 
-## Crash or black screen while using Vulkan beta renderer
-- Check the [latest news](/#news) for recommendations for your graphics card
-- Go back to DX11 by setting it in the game's menu graphics settings or [USER.cfg](/Tips-and-Tricks#usercfg). Create the USER.cfg file if it doesn't exist yet
-- For Vulkan error popups that say `Assertion failed!` or `vkCreateSwapchainKHR`, [edit the launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add the following environment variable:  
+## Crash when using Vulkan with error: Assertion failed! or vkCreateSwapchainKHR
+- [Edit the launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add the following environment variable:  
     `export MESA_VK_WSI_PRESENT_MODE=mailbox`
-- For vulkan black screen use fullscreen and set display height to be +/- 2 pixels (ex. for 1920 x 1080 set height to 1082 or 1078 instead)  
-  Edit [USER.cfg](/Tips-and-Tricks#usercfg) or attributes.xml  
-  `drive_c/Program\ Files/Roberts\ Space\ Industries/StarCitizen/LIVE/user/client/0/Profiles/default/attributes.xml`
+- You may need to revert to DX11 by creating a [USER.cfg](/Tips-and-Tricks#usercfg) file.
 
 
 ## After playing for a while, crash with no errors
   - If there are no errors in your [game logs](/Troubleshooting/#gathering-logs), check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](/Performance-Tuning#zram--swap).
-
-
-## Game hangs at splash screen or black/transparent window after clicking 'Launch'
-- Make sure DXVK is installed. Use the [LUG Helper](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix) to install it
-- Make sure V4L2 kernel module is loaded, if using V4L2 Loopback try removing any loopback devices you have created
-- Nvidia users, check our [latest news](/#news) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 
 
 ## Launcher freezes within a few seconds of opening
