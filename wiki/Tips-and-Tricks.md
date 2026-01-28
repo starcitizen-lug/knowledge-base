@@ -171,7 +171,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 5. Save then launch the game as normal. Any changes will be automatically applied  
 
 ```
-# Set to your display resolution
+# Set to your game resolution
 # r_width = 1920
 # r_height = 1080
 
@@ -220,7 +220,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
  
   For any other wine runners:
   - Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export DISPLAY=` to unset it to empty
-  - If you experience a white or black launcher add this [RSI Launcher.exe argument](/Troubleshooting/unexpected-behavior#launcher-white-or-black-screen)
+  - If you experience a black or white RSI Launcher, add this [RSI Launcher.exe argument](/Troubleshooting/unexpected-behavior#black-or-white-rsi-launcher-window)
 - Experimental **Proton** Wayland (for proton runners **not** wine)
   - Add environment variable `PROTON_ENABLE_WAYLAND=1`
  
@@ -232,17 +232,14 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 - Set DPI with [LUG Helper](#how-to-run-the-lug-helper) Maintenance menu > Edit wine prefix configuration
  
 ## HDR (High Dynamic Range)
-CIG's vulkan doesn't have HDR yet
-
-Requires experimental native [Wayland](Tips-and-Tricks#wine-wayland) or [Gamescope](Tips-and-Tricks#gamescope)
-
-To enable HDR in native Wayland:
-
-Run `wayland-info|grep color` in a terminal, if you **do not** see `wp_color_manager_v1` or if you use an Nvidia gpu then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and add environment variable `ENABLE_HDR_WSI=1`
-- Wine
-  - Add environment variable  `DXVK_HDR=1`
-- Proton (GE-Proton10-1 or newer)
-  - Add environment variable `PROTON_ENABLE_HDR=1`
+- CIG's Vulkan implementation doesn't have HDR yet
+- Requires experimental native [Wayland](Tips-and-Tricks#wine-wayland) or [Gamescope](Tips-and-Tricks#gamescope)
+- To enable HDR in native Wayland:
+  1. Run `wayland-info | grep color` in a terminal. If you **do not** see `wp_color_manager_v1` or if you use an Nvidia gpu, then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and add the environment variable `ENABLE_HDR_WSI=1`
+  2. For Wine runners
+      - Add environment variable `DXVK_HDR=1`
+  4. For Proton runners only (GE-Proton10-1 or newer)
+      - Add environment variable `PROTON_ENABLE_HDR=1`
 
 
 ## Gamescope
