@@ -80,6 +80,14 @@ Other distros:
 {: .important }
 > Do not remove ONNX Runtime after you are done. Opentrack won't have Neuralnet as input if you do remove it.
 
+
+## VR - Virtual Reality
+- Experimental VR using **Wine**
+  - Select a [LUG Wine Runner](/Tips-and-Tricks#recommended-runners) 11.1 or newer
+  - Connect your device before starting the RSI Launcher
+  - Launch the game and enable VR in game settings
+
+
 ## Tobii Eye Tracker 5 VM Passthrough
 Tobii Game Hub can send tracking data to Opentrack in a Windows VM by passing through the Tobii usb device from your linux host. Tracking can be forwarded to Opentrack on your host allowing you to use your Tobii Eye Tracker 5 with Star Citizen on Linux.
 
