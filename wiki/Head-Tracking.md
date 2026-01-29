@@ -44,7 +44,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
       1. Select `Custom path to Wine executable` from the dropdown
       2. Click `Browse Wine path` and select the `wine` executable inside the `bin` folder of your runner. For example:  
         `~/Games/star-citizen/runners/lug-wine-tkg-git-11.0-1/bin/wine`
-      3. Click `Browse Prefix` and select your Star Citizen prefix. For example:
+      3. Click `Browse Prefix` and select your Star Citizen prefix. For example:  
         `~/Games/star-citizen`
     - Proton (GE-Proton)
       1. Match your game's proton version
