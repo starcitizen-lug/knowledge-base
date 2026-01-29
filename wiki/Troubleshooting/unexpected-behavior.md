@@ -49,12 +49,6 @@ This is a generic error code representing any issue with logging in to CIG serve
 - Check that custom firewall rules on your host or router are not blocking outbound traffic to non-HTTP(S) ports
 
 
-## Required Vulkan Extensions are missing error / poor performance compared to windows / error code 3
-- Check if you have amdvlk installed by running `vulkaninfo --summary`. The vulkaninfo utility is part of the package `vulkan-tools` on most distros. You can also check your package manager.
-- If your system is using amdvlk, uninstall that package and replace it with `vulkan-radeon`.
-- For additional help with this, ask in our [Discord](/) tech support channel.
-
-
 ## DirectX error message
 - Error may read `Star Citizen requires DirectX feature level of 11.1 as a minimum which is not supported at present on this machine`  
   ![image](https://user-images.githubusercontent.com/3657071/224719841-ba1e831b-4ace-4f14-b423-3e49528154c6.png)
