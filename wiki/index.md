@@ -29,6 +29,13 @@ To contribute updates/information, please open an [issue report or pull request]
 > 
 > - If you were using DX11, you can now safely edit your [USER.cfg](Tips-and-Tricks#usercfg) to switch back to Vulkan 🖖
 
+{: .important-title }
+> (Jan 28, 2026)
+>
+> Blackout on Vulkan when flying/boosting/braking/damaged 
+>
+> - If you experience a temporary blackout or black screen effect in-game, see the [workaround here](https://wiki.starcitizen-lug.org/Troubleshooting/unexpected-behavior#blackout-or-black-screen-on-vulkan-when-flyingboostingbrakingdamaged).
+
 
 ### General News
 
