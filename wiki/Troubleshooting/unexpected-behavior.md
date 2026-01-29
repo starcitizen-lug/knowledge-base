@@ -85,8 +85,8 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 ## Blackout or black screen on Vulkan when flying/boosting/braking/damaged
 1. Set the game to fullscreen in the settings.
-2. Create a [USER.cfg](/Tips-and-Tricks#usercfg) file and set the game resolution height to be +/- 2 pixels (ex. for 1920x1080, set height to 1082 or 1078).
-3. If that doesn't work, also edit your attributes.xml file with the same change. Use the LUG Helper to [locate your LIVE directory](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory), then navigate to and edit  
+2. Create a [USER.cfg](/Tips-and-Tricks#usercfg) file and set `r_height` to be +/- 2 pixels (ex. for 1920x1080, set `r_height` to 1082 or 1078).
+3. If that doesn't work, also edit `Height` in your attributes.xml file. Use the LUG Helper to [locate your LIVE directory](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory), then navigate to and edit  
    `.../LIVE/user/client/0/Profiles/default/attributes.xml`
 
 
