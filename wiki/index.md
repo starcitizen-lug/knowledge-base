@@ -36,12 +36,12 @@ To contribute updates/information, please open an [issue report or pull request]
 >
 > - If you experience a temporary blackout or black screen effect in-game, see the [workaround here](https://wiki.starcitizen-lug.org/Troubleshooting/unexpected-behavior#blackout-or-black-screen-on-vulkan-when-flyingboostingbrakingdamaged).
 
-{: .warning-title }
+{: .caution-title }
 > (Jan 28, 2026)
 >
 > Scroll wheel causing a crash
 >
-> - This appears to be a problem with Wine Wayland on Wine 11.1. Revert [Wine Wayland](https://wiki.starcitizen-lug.org/Tips-and-Tricks#wine-wayland) or go back to Wine 11.0
+> - This appears to be a problem with [Wine Wayland](https://bugs.winehq.org/show_bug.cgi?id=59323) on Wine 11.1. Revert [Wine Wayland](https://wiki.starcitizen-lug.org/Tips-and-Tricks#wine-wayland) or go back to Wine 11.0
 
 
 ### General News
