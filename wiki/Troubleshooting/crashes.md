@@ -59,10 +59,16 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - Make sure you have set [your vm.max_map_count](/Alternative-Installations#prerequisites) and passed all LUG Helper preflight checks
 
 
-## Crash when using Vulkan with error: Assertion failed! or vkCreateSwapchainKHR
+## Vulkan crash: Assertion failed! or vkCreateSwapchainKHR
 - [Edit the launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add the following environment variable:  
     `export MESA_VK_WSI_PRESENT_MODE=mailbox`
 - You may need to revert to DX11 by creating a [USER.cfg](/Tips-and-Tricks#usercfg) file.
+
+
+## Vulkan crash: Required Vulkan Extensions are missing/error code 3
+- Check if you have amdvlk installed by running `vulkaninfo --summary`. The vulkaninfo utility is part of the package `vulkan-tools` on most distros. You can also check your package manager.
+- If your system is using amdvlk, uninstall that package and replace it with `vulkan-radeon`.
+- Make sure you're using an up to date [Wine runner](/Tips-and-Tricks#recommended-runners). Old runners don't have the required Vulkan extensions.
 
 
 ## After playing for a while, crash with no errors
