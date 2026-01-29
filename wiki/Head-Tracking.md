@@ -34,18 +34,22 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 > - For `LUG Wine` runners, use an official Opentrack build version  opentrack 2026.1.0 or later.
 > - For any `GE-Proton` or `Proton` runner, include environment variable `PROTON_VERB="runinprefix"`.
 > - Some of our Penguins have reported issues with staging runners, so non-staging may be preferred.
+> - You may need to launch opentrack with or without the `--platform xcb` flag. Your opentrack package may include two different .desktop files for this, one labeled Wayland and one not.
 
 
 1. Select `Wine` in the Output dropdown
 2. Click the `Configure` button next to it
 3. Under `Wine variant`, select one of the following:
-    - Wine `Custom path to Wine executable`
-      - Click `Browse Wine path` and select the `wine` executable inside the `bin` folder of your runner
-      - Click `Browse Prefix` and select your Star Citizen prefix (e.g. `~/Games/star-citizen`)
-    - Proton
-      - Match your game's proton version
-      - Pick `Steam Play` select number 1 (any number other than zero)
-      - Pick `UMU enabled Launchers` and select your prefix
+    - Wine (LUG-Wine, Mactan, Rawfox, etc)
+      1. Select `Custom path to Wine executable` from the dropdown
+      2. Click `Browse Wine path` and select the `wine` executable inside the `bin` folder of your runner. For example:  
+        `~/Games/star-citizen/runners/lug-wine-tkg-git-11.0-1/bin/wine`
+      3. Click `Browse Prefix` and select your Star Citizen prefix. For example:
+        `~/Games/star-citizen`
+    - Proton (GE-Proton)
+      1. Match your game's proton version
+      2. Pick `Steam Play` select number 1 (any number other than zero)
+      3. Pick `UMU enabled Launchers` and select your prefix
 5. Confirm that the `ESYNC` and `FSYNC` settings match your settings
 6. Next to `Protocol`, make sure `Both` is selected
 
