@@ -22,18 +22,12 @@ To contribute updates/information, please open an [issue report or pull request]
 
 ### Game Updates
 
-{: .important-title }
-> (Dec 23, 2025)
+{: .note-title }
+> (Jan 28, 2026)
 >
-> Vulkan issues in Star Citizen 4.5
->
-> - 4.5 enables Vulkan by default but some colors are inverted / blue. LUG Helper >= 4.8 installs default to DX11 instead
->
->   CIG is aware of and is working on the problem.  
-> - We recommend [switching to DX11](Troubleshooting/crashes#crash-or-black-screen-while-using-vulkan-beta-renderer) temporarily.  
->   
-> - If you need Vulkan, then switch to [Experimental Wayland](Tips-and-Tricks#wine-wayland) and  
->   Edit [USER.cfg](Tips-and-Tricks#usercfg) to switch to Vulkan
+> Vulkan smurf mode has been fixed in 4.6
+> 
+> - If you were using DX11, you can now safely edit your [USER.cfg](Tips-and-Tricks#usercfg) to switch back to Vulkan 🖖
 
 
 ### General News
