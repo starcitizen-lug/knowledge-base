@@ -83,7 +83,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 - If using a webcam, make sure V4L is installed (video 4 linux, package names may be similar to `v4l-utils`). If using V4L2 Loopback, try removing any loopback devices you have created.
 
 
-## Black game window on Vulkan when flying/boosting/braking
+## Black game window on Vulkan when flying/boosting/braking/damaged
 1. Set the game to fullscreen in the settings.
 2. Create a [USER.cfg](/Tips-and-Tricks#usercfg) file and set the game resolution height to be +/- 2 pixels (ex. for 1920x1080, set height to 1082 or 1078).
 
