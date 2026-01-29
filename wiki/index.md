@@ -41,7 +41,7 @@ To contribute updates/information, please open an [issue report or pull request]
 >
 > Scroll wheel causing a crash
 >
-> - This appears to be a [problem](https://bugs.winehq.org/show_bug.cgi?id=59323) with Wine Wayland on Wine 11.1. Revert [Wine Wayland](https://wiki.starcitizen-lug.org/Tips-and-Tricks#wine-wayland) or go back to Wine 11.0
+> - This appears to be a [problem](https://bugs.winehq.org/show_bug.cgi?id=59323) with Wine Wayland 11.1. Revert [Wine Wayland](https://wiki.starcitizen-lug.org/Tips-and-Tricks#wine-wayland) or go back to Wine 11.0
 
 
 ### General News
