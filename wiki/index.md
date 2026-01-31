@@ -28,6 +28,7 @@ To contribute updates/information, please open an [issue report or pull request]
 > Vulkan smurf mode has been fixed in 4.6
 > 
 > - If you were using DX11, you can now safely edit your [USER.cfg](Tips-and-Tricks#usercfg) to switch back to Vulkan 🖖
+> - Consider undoing any workarounds including [Experimental Wine Wayland](https://wiki.starcitizen-lug.org/Tips-and-Tricks#wine-wayland) to avoid unexpected issues 
 
 {: .important-title }
 > (Jan 28, 2026)
@@ -35,13 +36,6 @@ To contribute updates/information, please open an [issue report or pull request]
 > Blackout on Vulkan when flying/boosting/braking/damaged 
 >
 > - If you experience a temporary blackout or black screen effect in-game, see the [workaround here](https://wiki.starcitizen-lug.org/Troubleshooting/unexpected-behavior#blackout-or-black-screen-on-vulkan-when-flyingboostingbrakingdamaged).
-
-{: .caution-title }
-> (Jan 28, 2026)
->
-> Scroll wheel causing a crash
->
-> - This appears to be a [problem](https://bugs.winehq.org/show_bug.cgi?id=59323) with Wine Wayland 11.1. Revert [Wine Wayland](https://wiki.starcitizen-lug.org/Tips-and-Tricks#wine-wayland) or go back to Wine 11.0
 
 
 ### General News
