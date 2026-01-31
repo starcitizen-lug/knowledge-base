@@ -167,7 +167,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 1. Use the LUG Helper to [open your Star Citizen LIVE directory](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory)
 2. Create a file named `USER.cfg` in your LIVE directory
 3. Copy the text block below into it
-4. Uncomment any variables and configure as needed
+4. Remove the `#` symbol from the lines you want to use and configure as needed
 5. Save then launch the game as normal. Any changes will be automatically applied  
 
 ```
