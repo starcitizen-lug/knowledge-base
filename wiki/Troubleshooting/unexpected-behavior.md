@@ -11,7 +11,8 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 ## Launcher empty or crash
 - Try logging out and back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
-- If using the Cosmic DE beta, this is a [known issue](https://github.com/pop-os/cosmic-epoch/issues/2368). Try using the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s `Open Wine prefix configuration` option in the Maintenance menu to turn on virtual desktop mode.
+- If using the Cosmic DE beta, this is a [known issue](https://github.com/pop-os/cosmic-epoch/issues/2368). Try using the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s  
+  `Open Wine prefix configuration` option in the Maintenance menu to turn on virtual desktop mode.
 - If using Niri see upstream [xwayland-satellite issue report](https://github.com/Supreeeme/xwayland-satellite/issues/189)
 - Workarounds: Use xwayland-run, [gamescope](/Tips-and-Tricks#gamescope), an alternative to xwayland-satellite, an alternative compositor, or try switching to [Experimental Wine Wayland](/Tips-and-Tricks#wine-wayland).
 
