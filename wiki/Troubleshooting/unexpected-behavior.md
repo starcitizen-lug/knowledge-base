@@ -9,11 +9,11 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 # 🤪 Unexpected Behavior
 
 
-## Empty launcher
+## Launcher empty or crash
 - Try logging out and back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
-- Wine v10.17 caused launcher rendering issues. Use the [LUG Helper](/Tips-and-Tricks#how-to-add-a-wine-runner) to install a different LUG-Wine runner version.
 - If using the Cosmic DE beta, this is a [known issue](https://github.com/pop-os/cosmic-epoch/issues/2368). Try using the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s `Open Wine prefix configuration` option in the Maintenance menu to turn on virtual desktop mode.
-- Try switching to [Experimental Wayland](/Tips-and-Tricks#wine-wayland)
+- If using Niri see upstream [xwayland-satellite issue report](https://github.com/Supreeeme/xwayland-satellite/issues/189)
+- Workarounds: Use xwayland-run, [gamescope](/Tips-and-Tricks#gamescope), an alternative to xwayland-satellite, an alternative compositor, or try switching to [Experimental Wine Wayland](/Tips-and-Tricks#wine-wayland).
 
 
 ## Launcher indicates You are currently offline
@@ -88,11 +88,6 @@ This is a generic error code representing any issue with logging in to CIG serve
 2. Create a [USER.cfg](/Tips-and-Tricks#usercfg) file and attempt to set `r_height`, `r_width`, or both to be +/- 2 pixels (ex. for 1920x1080, set `r_height` to 1082 or 1078).
 3. If that doesn't work, also edit `Height`/`Width` in your attributes.xml file. Use the LUG Helper to [locate your LIVE directory](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory), then navigate to and edit  
    `.../LIVE/user/client/0/Profiles/default/attributes.xml`
-
-
-## Launcher crashes/hangs after entering login info when running Niri WM and/or xwayland-satellite
-- See [upstream issue report](https://github.com/Supreeeme/xwayland-satellite/issues/189)
-- Workarounds: Use xwayland-run, [gamescope](/Tips-and-Tricks#gamescope), an alternative to xwayland-satellite, an alternative compositor, or try switching to [Experimental Wine Wayland](/Tips-and-Tricks#wine-wayland).
 
 
 ## Laggy game when using Picom or Compton Compositors
