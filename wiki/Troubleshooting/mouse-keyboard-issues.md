@@ -67,6 +67,15 @@ Other potential workarounds:
     ################################################################
     export LANG=de_DE
     ```
-6. Change to XIM input instead of IBUS in desktop keyboard settings
-7. Use game keybinds menu to rebind the actions you want to the keys you want
-8. If nothing else works and you have an older Wine prefix, some Penguins have had success re-creating a new Prefix. You can back up your data.p4k file to avoid re-downloading the entire game.
+6. Use the Lug Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to set input method to XIM instead of IBUS
+   ```
+   ################################################################
+    # Configure the environment
+    # Add additional environment variables here as needed
+    ################################################################
+   export XMODIFIERS="@im=none"
+   export GTK_IM_MODULE="xim"
+   export QT_IM_MODULE="xim"
+   ```
+8. Use game keybinds menu to rebind the actions you want to the keys you want
+9. If nothing else works and you have an older Wine prefix, some Penguins have had success re-creating a new Prefix. You can back up your data.p4k file to avoid re-downloading the entire game.
