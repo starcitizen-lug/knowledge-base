@@ -32,7 +32,8 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 ## VKB Devices
 
 {: .tip }
-> Wine defaults to using HIDRAW to recognize common joysticks. To enable hidraw access to your VKB devices, create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules`
+> Enable hidraw access to your VKB devices  
+> Create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules`
 ```
 # Set the "uaccess" tag for raw HID access for VKB Devices in wine
 KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
@@ -65,7 +66,8 @@ Requires a windows-only software for calibration and configuration. [Link](https
 Requires a windows-only software for calibration and configuration. [Link; scroll down](https://support.virpil.com/en/support/solutions)
 
 {: .tip }
-> Wine defaults to using HIDRAW to recognize common joysticks. To enable hidraw access to your Virpil devices, create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
+> Enable hidraw access to your Virpil devices  
+> Create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
 > ```
 > # Set the "uaccess" tag for raw HID access for Virpil Devices in wine
 > KERNEL=="hidraw*", ATTRS{idVendor}=="3344", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
@@ -79,7 +81,8 @@ Requires a windows-only software for calibration and configuration. [Link; scrol
 ## ThrustMaster Devices
 
 {: .tip }
-> Wine defaults to using HIDRAW to recognize common joysticks. To enable hidraw access to your ThrustMaster devices, create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
+> Enable hidraw access to your ThrustMaster devices  
+> Create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
 > ```
 > # Set the "uaccess" tag for raw HID access for ThrustMaster Devices in wine
 > KERNEL=="hidraw*", ATTRS{idVendor}=="044f", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
@@ -122,7 +125,7 @@ Change LEDs with a simple python script
 ## Other Devices
 
 {: .tip }
-> Wine defaults to using HIDRAW to recognize common joysticks. Follow the instructions below to obtain device info and enable HIDRAW.
+> Follow the instructions below to obtain device info and enable HIDRAW.
 
 ### Find Device Info
 Use `udevadm` to retrieve the Vendor ID, Model Name, and Model ID that the device reports to the system.
