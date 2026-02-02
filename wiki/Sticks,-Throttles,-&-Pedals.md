@@ -32,7 +32,7 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 ## VKB Devices
 
 {: .tip }
-> Wine defaults to using HIDRAW to recognize common joysticks. To enable hidraw access to your VKB devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules`
+> Wine defaults to using HIDRAW to recognize common joysticks. To enable hidraw access to your VKB devices, create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules`
 ```
 # Set the "uaccess" tag for raw HID access for VKB Devices in wine
 KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
@@ -65,7 +65,7 @@ Requires a windows-only software for calibration and configuration. [Link](https
 Requires a windows-only software for calibration and configuration. [Link; scroll down](https://support.virpil.com/en/support/solutions)
 
 {: .tip }
-> Wine defaults to using HIDRAW to recognize common joysticks. To enable hidraw access to your Virpil devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
+> Wine defaults to using HIDRAW to recognize common joysticks. To enable hidraw access to your Virpil devices, create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
 > ```
 > # Set the "uaccess" tag for raw HID access for Virpil Devices in wine
 > KERNEL=="hidraw*", ATTRS{idVendor}=="3344", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
@@ -79,7 +79,7 @@ Requires a windows-only software for calibration and configuration. [Link; scrol
 ## ThrustMaster Devices
 
 {: .tip }
-> Wine defaults to using HIDRAW to recognize common joysticks. To enable hidraw access to your ThrustMaster devices, create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
+> Wine defaults to using HIDRAW to recognize common joysticks. To enable hidraw access to your ThrustMaster devices, create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
 > ```
 > # Set the "uaccess" tag for raw HID access for ThrustMaster Devices in wine
 > KERNEL=="hidraw*", ATTRS{idVendor}=="044f", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
@@ -140,7 +140,7 @@ E: ID_MODEL_ID=0126
 
 ### Enable HIDRAW
 
-- Create a rules file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content.  
+- Create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content.  
   Replace `<PLACEHOLDER_REPLACE_WITH_YOUR_ID_VENDOR_ID>` with the Vendor ID retrieved in the step above. For working examples, see the VKB, Virpil, or Thrustmaster sections above.
  ```
  # Set the "uaccess" tag for raw HID access for input devices in wine.
@@ -174,7 +174,7 @@ See the list below for your distribution:
     - Debian/Ubuntu - `joystick`
     - Fedora - `linuxconsoletools`
 
-2. Create a udev rules file in  
+2. Create a udev rules text file in  
 `/etc/udev/rules.d/` and replace [your device info](#find-device-info) in the following template:
 
 ```
@@ -237,7 +237,7 @@ https://github.com/beniwtv/evdev-spoof-device
 
 - Another solution is to create a Kernel udev rule to change the classification of your device. 
 
-    - Create a file `/etc/udev/rules.d/90-pedals-workaround.rules` and plug [your device info](#find-device-info) into the following template:
+    - Create a text file `/etc/udev/rules.d/90-pedals-workaround.rules` and plug [your device info](#find-device-info) into the following template:
       ```
       ACTION=="add|change", KERNEL=="event[0-9]*", ENV{ID_VENDOR_ID}=="<Your Vendor ID>", ENV{ID_MODEL_ID}=="<Your Model ID>", ENV{ID_INPUT_ACCELEROMETER}="", ENV{ID_INPUT_JOYSTICK}="1", TAG+="uaccess"
       ```
