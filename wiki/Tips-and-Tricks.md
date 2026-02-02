@@ -196,6 +196,10 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 
 # Disable Temporal Super Resolution and all anti-aliasing
 # r.TSR = 0
+
+# Disable curved menus in VR
+# r_StereoTheaterModeCanUseCylinder = 0
+
 ```
 
 
