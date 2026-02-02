@@ -90,6 +90,7 @@ Other distros:
   - Select a [LUG Wine Runner](/Tips-and-Tricks#recommended-runners) 11.1 or newer
   - Connect your device before starting the RSI Launcher
   - Launch the game and enable VR in game settings
+  - Edit [USER.cfg](/Tips-and-Tricks#usercfg) and remove the `#` symbol from the `r_StereoTheaterModeCanUseCylinder = 0` line to prevent the curved menus from being stretched vertically
 
 
 ## Tobii Eye Tracker 5 VM Passthrough
