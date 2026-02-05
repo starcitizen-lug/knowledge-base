@@ -105,7 +105,14 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 2. Choose the option to `Edit launch script`  
    ![Edit launch script](https://github.com/user-attachments/assets/6f30b732-3406-4c59-b23b-32bbccacc5ae){: style="display: block;max-height: 350px;" }
 3. Alternatively, locate the `sc-launch.sh` file in your Wine prefix directory (by default, `~/Games/star-citizen/sc-launch.sh`) and open it for editing.
-
+```
+############################################################################
+# ENVIRONMENT VARIABLES
+############################################################################
+# Add additional environment variables to this section as needed below this line
+# Example: ###########################################################################
+export NEW_VARIABLE="value"
+```
 
 ## How to update the launch script
 1. Run the [LUG Helper](#how-to-run-the-lug-helper) and select the `Maintenance and Troubleshooting` menu
