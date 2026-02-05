@@ -12,13 +12,7 @@ The [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper)'s Preflight Check
 
 ## Game Settings
 
-The following game settings can help improve framerates:
-
-- Set `Quality` to `High`. Lower settings are not recommended as it will tax your CPU more. Set to `Very High` to offload more work from your CPU to your GPU.
-- Set `Planet Volumetric Clouds` to `Medium`
-- Set `Object View Distance` to `Low`
-- Set `Motion Blur` to `Off`
-- Set `Sharpening` to `100`
+See [CIG's Spectrum post](https://robertsspaceindustries.com/spectrum/community/SC/forum/50259/thread/star-citizen-graphics-settings/) for an explanation of each graphics setting along with what it affects in terms of performance, visuals, or hardware usage. Note: The post is long and continues into the comments.
 
 
 ## Zram & Swap
