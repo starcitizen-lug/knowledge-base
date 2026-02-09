@@ -91,6 +91,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 - Check our [latest news](/#news) for gpu driver issues or temporary workarounds.
 - If using DX11 instead of Vulkan, make sure DXVK is [installed and up to date](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix).
 - If using Vulkan, you may need to revert to DX11 by creating a [USER.cfg](/Tips-and-Tricks#usercfg) file.
+- If using lsfg-vk for frame gen, it currently does not work with Vulkan. Revert to DX11.
 - If using a webcam, make sure V4L is installed (video 4 linux, package names may be similar to `v4l-utils`). If using V4L2 Loopback, try removing any loopback devices you have created.
 
 
