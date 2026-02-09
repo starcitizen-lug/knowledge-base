@@ -25,8 +25,6 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 ### Unsupported hardware
 - Tobii does not support Linux. Its opentrack support uses the Windows only SDK. See [VM Passthrough](#tobii-eye-tracker-5-vm-passthrough) below.
-- TrackIR 5 does not support Opentrack, nor does it work with Linuxtrack under Wine/Proton. We recommend Delanclip instead.
-
 
 ## Opentrack Configuration
 
@@ -165,3 +163,26 @@ You can configure windows to autostart Tobii Game Hub and opentrack so that you 
 3. Setup opentrack to start tracking on launch by adding an entry under Options > Game detection with the value of "opentrack.exe". Make sure to select the "Start profiles from game executable names in this list" checkbox
 
     ![opentrack Linux autostart](https://github.com/user-attachments/assets/07c4d95c-d12e-410a-b741-97f24c909a72){: style="display: block;max-width: 550px;" }
+
+
+
+## TrackIR 5 via linuxtrack
+Tir5 can work by using [linuxtrack](https://gitlab.com/fwfa123/linuxtrackx-ir) - specifically a fork made and maintained by fwfa123, by extracting trackir 5 data from the official installers, in wine.
+
+### install
+1. Download the latest [release](https://gitlab.com/fwfa123/linuxtrackx-ir/-/releases) of fwfa123's linuxtrack fork
+2. ``chmod +x`` the downloaded appimage
+3. run the appimage via terminal: ``./LinuxTrack-X-IR-*.AppImage``
+4. follow the prompted steps to create a udev rule for your hardware
+5. in the ``gaming`` tab click ``install`` on the ``trackir firmware``, according to the prompts. extract from installer can be tricky depending on your system wine
+6. in the ``gaming`` tab click ``install`` on the ``MFC42 Libraries``, according to the prompts
+7. in the ``gaming`` tab click ``custom prefix`` (or optionally ``lutris`` if using lug lutris installer) and provide your star citizen wine prefix
+
+### configuration
+1. in the ``device setup`` tab you need to select ``tracking device`` to be ``TrackIR/SmartNav``. you may need to refresh to see it. if you still do not see it, your udev rule is not working.
+2. in the ``model setup`` tab select your ``model name``, likely to be ``NP track clip pro`` or ``NP track clip``. if using pro clip, specify which side of the head its mounted on.
+3. click ``save`` and then ``start`` the tracking for testing purposes
+4. in ``device setup`` you can tune the ``blob size`` and ``threshholds`` for tracking, seen in the ``camera view`` window
+5. launch sc with the tracking started. what time you ``start`` tracking doesnt matter
+6. in the ``tracking setup`` tab you can choose your sensitivity curves. note that the profile ``Default`` will not be used for a game, you will need to select ``profile name`` of ``star citizen``.
+7. ``save`` your changes
