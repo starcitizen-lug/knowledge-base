@@ -26,7 +26,8 @@ redirect_from:
 6. Look for your issue in the [latest news](/#news)
 7. Use the lug helper to get the latest wine runner. Be sure to check the [latest news](/#general-news) for recommendations
 8. Try a different wine version. If using wine-staging, try standard wine. Try wine-staging if using standard wine.
-9. Look for your issue/error in the categories on this page. Refer to the steps directly below to gather logs.
+9. Disable any system performance customizations, VPN profiles, etc that may interfere with the game.
+10. Look for your issue/error in the categories on this page. Refer to the steps directly below to gather logs.
 
 
 ### Gathering logs
