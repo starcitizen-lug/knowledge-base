@@ -91,6 +91,10 @@ Other distros:
   - Connect your device before starting the RSI Launcher
   - Launch the game and enable VR in game settings
   - Edit [USER.cfg](/Tips-and-Tricks#usercfg) and remove the `#` symbol from the `r_StereoTheaterModeCanUseCylinder = 0` line to prevent the curved menus from being stretched vertically
+  - To fix canted displays being cross-eyed edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add environment variable:  
+    ```
+    export OXR_PARALLEL_VIEWS=1
+    ```
 
 
 ## Tobii Eye Tracker 5 VM Passthrough
