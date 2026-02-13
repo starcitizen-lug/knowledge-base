@@ -230,7 +230,7 @@ ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
 ### Some of your joystick axis aren't recognized / don't map
 - Check that the game has not set the deadzone for this axis to 100%
 
-### Gamepad Issues - PS4, PS5, XBox Controller etc.
+### Gamepad Issues PS4/PS5/XBox Controller
 - For partially working gamepads unable to bind any buttons, open the [Wine Game Controllers Settings](#accessing-wine-game-controllers-settings) and, under `Advanced settings`, check `Disable hidraw`.
 - For an invisible cursor in-game when toggling Interaction Mode, enable the software cursor in a [USER.cfg](/Tips-and-Tricks#usercfg) file.
 
