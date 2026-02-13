@@ -80,6 +80,11 @@ This is a generic error code representing any issue with logging in to CIG serve
 - [Edit the launch script](#how-to-edit-the-launch-script) and add `unset SDL_VIDEODRIVER` to the environment variables section
 
 
+## Infinite loading screen after clicking 'Launch'
+- The game servers may be overloaded, especially after a new release.
+- If launching the game for the first time with a webcam plugged in, try unplugging the webcam, relaunching, then connecting it.
+
+
 ## Black or white RSI Launcher window
 - Try editing the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to add the RSI Launcher flag `--in-process-gpu`. For example:
   ```
