@@ -26,7 +26,7 @@ Zram stores swap in RAM using on-the-fly compression which can improve game perf
 {: .tip }
 > - When using zram, zswap needs to be [disabled](https://wiki.archlinux.org/title/Zswap#Toggling_zswap).
 > - See the Arch Wiki for [zram setup](https://wiki.archlinux.org/title/Zram#Using_zram-generator) instructions that should work for most distros as well as [zram optimization](https://wiki.archlinux.org/title/Zram#Optimizing_swap_on_zram) steps.
-> - See the Arch Wiki for [swap file creation](https://wiki.archlinux.org/title/Swap#Swap_file_creation) instructions.
+> - See the Arch Wiki for [swap file creation](https://wiki.archlinux.org/title/Swap#Swap_file_creation) instructions. Btrfs users, follow [these instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). Bazzite users, follow [these instructions](https://docs.bazzite.gg/Advanced/swapfile/).
 > - Verify your configuration with `zramctl` and `swapon --show`.
 
 The `zram-generator` or `systemd-zram-generator` package must be installed and requires a configuration text file. Many distros use zram-generator by default.  
