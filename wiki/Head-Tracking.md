@@ -89,7 +89,7 @@ Other distros:
 - Experimental VR using **Wine**
   - Select a [LUG Wine Runner](/Tips-and-Tricks#recommended-runners) 11.1 or newer
   - Connect your device before starting the RSI Launcher
-  - Launch the game and enable VR in game settings
+  - Start the RSI Launcher and toggle on VR in Settings > {LIVE,PTU} > VR Support
   - Edit [USER.cfg](/Tips-and-Tricks#usercfg) and remove the `#` symbol from the `r_StereoTheaterModeCanUseCylinder = 0` line to prevent the curved menus from being stretched vertically
   - To fix canted displays being cross-eyed edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add environment variable:  
     ```
