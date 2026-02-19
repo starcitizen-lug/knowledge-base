@@ -28,7 +28,7 @@ To contribute updates/information, please open an [issue report or pull request]
 > Black screens and Blackout VFX on Vulkan
 >
 > - If you experience a black screen on launch, see the [workaround here](/Troubleshooting/unexpected-behavior#black-game-window-after-clicking-launch)
-> - If you experience a temporary blackout or black screen effect in-game, see the [workaround here](/Troubleshooting/unexpected-behavior#blackout-or-black-screen-on-vulkan-when-flyingboostingbrakingdamaged).
+> - If you experience a temporary blackout or black screen effect in-game, see the [workaround here](/Troubleshooting/unexpected-behavior#blackout-or-black-screen-on-vulkan-when-flyingboostingbrakingdamaged)
 
 {: .note-title }
 > (Jan 28, 2026)
