@@ -22,20 +22,21 @@ To contribute updates/information, please open an [issue report or pull request]
 
 ### Game Updates
 
+{: .important-title }
+> (Feb 19, 2026)
+>
+> Black screens and Blackout VFX on Vulkan
+>
+> - If you experience a black screen on launch, see the [workaround here](/Troubleshooting/unexpected-behavior#black-game-window-after-clicking-launch)
+> - If you experience a temporary blackout or black screen effect in-game, see the [workaround here](/Troubleshooting/unexpected-behavior#blackout-or-black-screen-on-vulkan-when-flyingboostingbrakingdamaged).
+
 {: .note-title }
 > (Jan 28, 2026)
 >
 > Vulkan smurf mode has been fixed in 4.6
 > 
-> - If you were using DX11, you can now safely edit your [USER.cfg](Tips-and-Tricks#usercfg) to switch back to Vulkan 🖖
-> - Consider undoing any workarounds including [Experimental Wine Wayland](https://wiki.starcitizen-lug.org/Tips-and-Tricks#wine-wayland) to avoid unexpected issues 
-
-{: .important-title }
-> (Jan 28, 2026)
->
-> Blackout on Vulkan when flying/boosting/braking/damaged 
->
-> - If you experience a temporary blackout or black screen effect in-game, see the [workaround here](https://wiki.starcitizen-lug.org/Troubleshooting/unexpected-behavior#blackout-or-black-screen-on-vulkan-when-flyingboostingbrakingdamaged).
+> - If you were using DX11, you can now safely edit your [USER.cfg](/Tips-and-Tricks#usercfg) to switch back to Vulkan 🖖
+> - Consider undoing any workarounds including [Experimental Wine Wayland](/Tips-and-Tricks#wine-wayland) to avoid unexpected issues 
 
 
 ### General News
