@@ -48,23 +48,22 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 
 
 ## Recommended Runners
-- [LUG-Wine](https://github.com/starcitizen-lug/lug-wine/releases/latest)
+- [LUG Wine](https://github.com/starcitizen-lug/lug-wine/releases/latest)
   - Default runner in the [LUG Helper](#how-to-run-the-lug-helper)
   - [TKG](https://github.com/Frogging-Family/wine-tkg-git) Builds with LUG patches specifically for Star Citizen
     - `lug-wine-tkg-git`  
       Standard Wine built for maximum compatibility
     - `lug-wine-tkg-staging-git`  
       Wine plus experimental [staging patches](https://gitlab.winehq.org/wine/wine-staging)
-- [Mactan](https://github.com/mactan-sc/mactan-sc-wine/releases/latest)
-  - Managed by the [LUG Helper](#how-to-run-the-lug-helper)
-  - [TKG](https://github.com/Frogging-Family/wine-tkg-git) builds with LUG community patches
-  - Experimental wine wayland patches
+- [LUG Wine Experimental](https://github.com/starcitizen-lug/lug-wine-experimental/releases/latest)
+  - LUG Wine plus additional temporary/experimental fixes for documented issues which have yet to be properly fixed upstream.
+  - Please contribute to upstream reports/Issue Council reports if you need to use these runners! Our wiki will link to these where relevant.
 - [RawFox](https://github.com/starcitizen-lug/raw-wine/releases/latest)
   - Managed by the [LUG Helper](#how-to-run-the-lug-helper)
 
 
 ## How to add a Wine runner
-- Select the option to "Manage Wine runners" in the [LUG Helper](#how-to-run-the-lug-helper) and it will handle it for you.
+- Select the option to `Manage Wine runners` in the [LUG Helper](#how-to-run-the-lug-helper) and it will handle it for you.
 - Alternatively, to manually add a custom wine runner:
   - Extract the archive to your runners folder. Restart your game launcher
     - Heroic: `~/.config/heroic/tools/wine/`
@@ -227,7 +226,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 > Turn off any virtual keyboard. These conflict with the `F` interaction key and make the inner-thought menu appear to flicker.
 
 - Experimental **Wine** Wayland
-  - Use the [LUG Helper](#how-to-run-the-lug-helper) to switch to [Mactan](#how-to-add-a-wine-runner) 11.0rc3-1 wine or newer  
+  - Use the [LUG Helper](#how-to-run-the-lug-helper) to switch to [LUG Wine Experimental Wayland](#how-to-add-a-wine-runner).
  
   For any other wine runners:
   - Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export DISPLAY=` to unset it to empty
