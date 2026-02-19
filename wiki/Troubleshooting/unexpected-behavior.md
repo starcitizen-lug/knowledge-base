@@ -94,17 +94,18 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 ## Black game window after clicking 'Launch'
 - Check our [latest news](/#news) for gpu driver issues or temporary workarounds.
+- Contribute to [STARC-189885](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-189885), then use the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to switch to a `LUG Experimental` Wine runner.
 - If using DX11 instead of Vulkan, make sure DXVK is [installed and up to date](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix).
 - If using Vulkan, you may need to revert to DX11 by creating a [USER.cfg](/Tips-and-Tricks#usercfg) file.
-- If using lsfg-vk for frame gen, it currently does not work with Vulkan. Revert to DX11.
+- If using lsfg-vk for frame gen, use LUG Wine Experimental or revert to DX11.
 - If using gamescope, you may need to disable it or double check your configuration.
 - If using a webcam, make sure V4L is installed (video 4 linux, package names may be similar to `v4l-utils`). If using V4L2 Loopback, try removing any loopback devices you have created.
 
 
 ## Blackout or black screen on Vulkan when flying/boosting/braking/damaged
-1. Set the game to fullscreen in the settings.
-2. Create a [USER.cfg](/Tips-and-Tricks#usercfg) file and attempt to set `r_height`, `r_width`, or both to be +/- 2 pixels (ex. for 1920x1080, set `r_height` to 1082 or 1078).
-3. If that doesn't work, also edit `Height`/`Width` in your attributes.xml file. Use the LUG Helper to [locate your LIVE directory](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory), then navigate to and edit  
+- Contribute to [STARC-179339](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-179339), then use the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to switch to a `LUG Experimental` Wine runner.
+- Alternatively, set the game to fullscreen in settings, create a [USER.cfg](/Tips-and-Tricks#usercfg) file, and set `r_height`, `r_width`, or both to be +/- 2 pixels (ex. for 1920x1080, set `r_height` to 1082 or 1078).
+- If the above step doesn't work, also edit `Height`/`Width` in your attributes.xml file. Use the LUG Helper to [locate your LIVE directory](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory), then navigate to and edit  
    `.../LIVE/user/client/0/Profiles/default/attributes.xml`
 
 
