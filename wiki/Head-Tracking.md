@@ -40,7 +40,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 1. Select `Wine` in the Output dropdown
 2. Click the `Configure` button next to it
 3. Under `Wine variant`, select one of the following:
-    - Wine (LUG-Wine, Mactan, Rawfox, etc)
+    - Wine (LUG-Wine, LUG-Experimental, Rawfox, etc)
       1. Select `Custom path to Wine executable` from the dropdown
       2. Click `Browse Wine path` and select the `wine` executable inside the `bin` folder of your runner. For example:  
         `~/Games/star-citizen/runners/lug-wine-tkg-git-11.0-1/bin/wine`
