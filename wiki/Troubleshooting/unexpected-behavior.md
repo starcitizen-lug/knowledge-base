@@ -94,7 +94,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 ## Black game window after clicking 'Launch'
 - Check our [latest news](/#news) for gpu driver issues or temporary workarounds.
-- Contribute to [STARC-189885](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-189885), then use the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to switch to a `LUG Experimental` Wine runner.
+- Contribute to [STARC-197175](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-197175) (public) and [STARC-189885](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-189885) (evocati only), then use the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to switch to a `LUG Experimental` Wine runner.
 - If using DX11 instead of Vulkan, make sure DXVK is [installed and up to date](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix).
 - If using Vulkan, you may need to revert to DX11 by creating a [USER.cfg](/Tips-and-Tricks#usercfg) file.
 - If using lsfg-vk for frame gen, use LUG Wine Experimental or revert to DX11.
