@@ -87,10 +87,10 @@ Other distros:
 
 ## VR - Virtual Reality
 - Experimental VR using **Wine**
-  - Select a [LUG Wine Runner](/Tips-and-Tricks#recommended-runners) 11.1 or newer
+  - Select a [LUG Wine Experimental Runner](/Tips-and-Tricks#recommended-runners) 11.2 or newer to prevent menus and theater mode from being stretched [STARC-195061](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-195061)
+  - Set the game to the Vulkan renderer 
   - Connect your device before starting the RSI Launcher
   - Start the RSI Launcher and toggle on VR in Settings > {LIVE,PTU} > VR Support
-  - Edit [USER.cfg](/Tips-and-Tricks#usercfg) and remove the `#` symbol from the `r_StereoTheaterModeCanUseCylinder = 0` line to prevent the curved menus from being stretched vertically
   - To fix canted displays being cross-eyed edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add environment variable:  
     ```
     export OXR_PARALLEL_VIEWS=1
