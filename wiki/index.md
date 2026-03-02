@@ -53,6 +53,6 @@ To contribute updates/information, please open an [issue report or pull request]
 {: .caution-title }
 > (March 2, 2026)
 >
-> Nvidia driver version `595.59`/`595.71` crashes
+> Nvidia driver version 595.59/595.71 crashes
 >
-> If you experience game crashes on these drivers, roll back to version `591.86`
+> - If you experience game crashes on these drivers, roll back to version `591.86`
