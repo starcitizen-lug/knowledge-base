@@ -166,8 +166,8 @@ You can configure windows to autostart Tobii Game Hub and opentrack so that you 
 
 
 
-## TrackIR 5 via linuxtrack
-Tir5 can work by using [linuxtrack](https://gitlab.com/fwfa123/linuxtrackx-ir) - specifically a fork made and maintained by fwfa123, by extracting trackir 5 data from the official installers, in wine.
+## TrackIR 4/5 via linuxtrack
+Tir4/5 can work by using [linuxtrack](https://gitlab.com/fwfa123/linuxtrackx-ir) - specifically a fork made and maintained by fwfa123, by extracting trackir data from the official installers, in wine.
 
 ### install
 1. Download the latest [release](https://gitlab.com/fwfa123/linuxtrackx-ir/-/releases) of fwfa123's linuxtrack fork
