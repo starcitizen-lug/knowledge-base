@@ -61,7 +61,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 ## Vulkan crash: Assertion failed! or vkCreateSwapchainKHR
 - [Edit the launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add the following environment variable:  
-    `export MESA_VK_WSI_PRESENT_MODE=mailbox`
+    `export MESA_VK_WSI_PRESENT_MODE="mailbox"`
 - You may need to revert to DX11 by creating a [USER.cfg](/Tips-and-Tricks#usercfg) file.
 
 
