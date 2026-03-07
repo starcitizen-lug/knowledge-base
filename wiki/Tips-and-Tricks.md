@@ -181,23 +181,23 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 # r_width = 1920
 # r_height = 1080
 
-# Enable software cursor to workaround cursor warping
+# Enable software cursor to workaround cursor warping - 0 = hardware cursor, 1 = software cursor
 # pl_pit.forceSoftwareCursor = 1
 
-# Enable borderless windowed mode
+# Enable borderless windowed mode - [ 0 = windowed, 1 = borderless, 2 = fullscreen ]
 # r_WindowMode = 2
 
 # Force game renderer - 0 = DX11, 1 = Vulkan
 # r.graphicsRenderer = 0
 
-# Enable in-game performance HUD
+# Enable in-game performance HUD - [ 1, 2, 3, 0 ]
 # r_displayinfo = 1
 
 # Limit frame rate
 # sys_MaxFPS = 120
 # sys_MaxIdleFPS = 120
 
-# Toggle vsync
+# Toggle vsync - 0 = off, 1 = on
 # r_VSync = 0
 
 # Disable Temporal Super Resolution and all anti-aliasing
