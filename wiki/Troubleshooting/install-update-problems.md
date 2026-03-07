@@ -9,7 +9,8 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 # 💾 Install & Update Problems
 
 ## Wine prefix creation failed
-- LUG Helper install log shows error similar to `warning: WINE is /path/to/bin/wine, which is neither on the path nor an executable file`
+- LUG Helper install log shows error similar to:  
+  `warning: WINE is /path/to/bin/wine, which is neither on the path nor an executable file`
 - To fix, make sure the mount point is not marked `noexec`
 
 
@@ -20,7 +21,8 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 ## Wine install fails to create .desktop files
 - Manually create a file `~/.local/share/applications/RSI Launcher.desktop` based on the following template. Be sure to update the `Exec=` and `Path=` lines!
-- Edit paths based on your install, then update the cache by running `update-desktop-database ~/.local/share/applications`
+- Edit paths based on your install, then update the cache by running this command in a terminal:  
+  `update-desktop-database ~/.local/share/applications`
   ```
   [Desktop Entry]
   Name=RSI Launcher
