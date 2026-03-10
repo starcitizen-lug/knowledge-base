@@ -14,9 +14,8 @@ To contribute updates/information, please open an [issue report or pull request]
 
 ## Join us!
 
-🐧 Star Citizen Org: <a href="https://robertsspaceindustries.com/orgs/LUG">https://robertsspaceindustries.com/orgs/LUG</a>  
-🗨 Discord: <a href="https://discord.gg/meCFYPj">https://discord.gg/meCFYPj</a>  
-😎 Matrix space: <a href="https://matrix.to/#/#SCLUG:matrix.org">https://matrix.to/#/#SCLUG:matrix.org</a>  
+🐧 <a href="https://robertsspaceindustries.com/orgs/LUG">Star Citizen Org</a>  
+🗨 <a href="https://discord.gg/meCFYPj">Discord</a>  
 
 ## News
 
