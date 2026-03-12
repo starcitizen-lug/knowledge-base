@@ -194,13 +194,13 @@ You can configure windows to autostart Tobii Game Hub and opentrack so that you 
 
 Using a patched Tobii Pro driver and Opentrack, Tobii support is now mostly functional.
 - What works
- - Eye tracking
- - Head Movement (X, Y, Z)
- - Head Roll
+	- Eye tracking
+	- Head Movement (X, Y, Z)
+	- Head Roll
 
 - What doesn't quite work yet
- - Head Pitch and Yaw
- - Packages for Distros other than Arch
+	- Head Pitch and Yaw
+	- Packages for Distros other than Arch
 
 ### Install guide
 
@@ -224,6 +224,7 @@ sudo ln -sf /usr/lib/libtobii_stream_engine.so /usr/lib/libtobii_research.so
 ```
 
 ### Configuration
+
 With the Eye tracker drivers installed, you can now set up your Eye tracker.
 
 1. Open ```tobiiproeyetrackermanager```
