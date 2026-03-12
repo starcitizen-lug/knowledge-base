@@ -58,7 +58,7 @@ Other potential workarounds:
 2. Use the LUG Helper Maintenance menu `Open Wine prefix configuration` button to run winecfg
 3. In the Input tab->Keyboard Settings, select your language from the list
 4. Keyboard scancode auto-detection may have to be enabled or disabled depending on your hardware. Try both.
- ![staging_input_menu](https://github.com/user-attachments/assets/94908f79-682d-42ac-89fc-4564f09c3b7c)
+ ![staging_input_menu](https://cdn.jsdelivr.net/gh/starcitizen-lug/knowledge-base@main/wiki/assets/images/Troubleshooting/mouse-keyboard-issues/keyboard-language.webp)
 5. If the above doesn't work, use the Lug Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to set the `export LANG=` environment variable. You may need to switch to a staging runner besides LUG-Wine.
     ```
     ################################################################
