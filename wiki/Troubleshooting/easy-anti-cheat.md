@@ -25,7 +25,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
       127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround
       ```
     - In the RSI Launcher, navigate to `Settings -> Games -> LIVE -> Game Location`. If you previously used the Z:\ path workaround, put it back to the default C:\ path  
-       ![Game path in launcher](https://github.com/user-attachments/assets/0ac1ed3a-4c3c-43b9-b93a-a4865e63f784){: style="display: block;max-height: 250px;" }  
+       ![Game path in launcher](https://cdn.jsdelivr.net/gh/starcitizen-lug/knowledge-base@main/wiki/assets/images/rsilauncher-default-path.webp){: style="display: block;max-height: 250px;" }  
 
 ## Error code after launching persistent universe
 - Possible error codes `70003`, `70004`
