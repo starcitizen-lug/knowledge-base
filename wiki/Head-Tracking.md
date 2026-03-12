@@ -205,10 +205,12 @@ Using a patched Tobii Pro driver and Opentrack, Tobii support is now mostly func
 ### Install guide
 
 1. Clone the [Tobii Eye Tracker Installer repo](https://github.com/megagtrwrath/tobii_eye_tracker_linux_installer) and download the pkgs from the [Releases](https://github.com/megagtrwrath/tobii_eye_tracker_linux_installer/releases) page.
-2. Manually install the ```tobiiproeyetrackermanager tobiiusbservice``` and ```tobii_engine_linux``` packages from the Releases section
-3. CD into the cloned repository ```CD ./tobii_eye_tracker_linux_installer```
-4. Run the below set of commands to install the SystemD services and the Tobii Stream Engine
+2. Manually install the `tobiiproeyetrackermanager tobiiusbservice` and `tobii_engine_linux` packages from the Releases section
+3. cd into the cloned repository `cd ./tobii_eye_tracker_linux_installer`
+4. Run the below set of commands to install the SystemD services and the Tobii Stream Engine  
+   
 ```
+cd ./tobii_eye_tracker_linux_installer
 cp ./Services/tobii_engine.service /etc/systemd/system/tobii_engine.service
 cp ./Services/tobii_usb.service /etc/systemd/system/tobii_usb.service
 
