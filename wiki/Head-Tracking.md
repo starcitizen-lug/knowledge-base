@@ -189,3 +189,52 @@ You can configure windows to autostart Tobii Game Hub and opentrack so that you 
 3. Setup opentrack to start tracking on launch by adding an entry under Options > Game detection with the value of "opentrack.exe". Make sure to select the "Start profiles from game executable names in this list" checkbox
 
     ![opentrack Linux autostart](https://cdn.jsdelivr.net/gh/starcitizen-lug/knowledge-base@main/wiki/assets/images/Head-Tracking/opentrack-vm-autostart.webp){: style="display: block;max-width: 550px;" }
+
+## Experimental: Native Tobii Eye Tracker 4c/5 Support
+
+Using a patched Tobii Pro driver and Opentrack, Tobii support is now mostly functional.
+- What works
+ - Eye tracking
+ - Head Movement (X, Y, Z)
+ - Head Roll
+
+- What doesn't quite work yet
+ - Head Pitch and Yaw
+ - Packages for Distros other than Arch
+
+### Install guide
+
+1. Clone the [Tobii Eye Tracker Installer repo](https://github.com/megagtrwrath/tobii_eye_tracker_linux_installer) and download the pkgs from the [Releases](https://github.com/megagtrwrath/tobii_eye_tracker_linux_installer/releases) page.
+2. Manually install the ```tobiiproeyetrackermanager tobiiusbservice``` and ```tobii_engine_linux``` packages from the Releases section
+3. CD into the cloned repository ```CD ./tobii_eye_tracker_linux_installer```
+4. Run the below set of commands to install the SystemD services and the Tobii Stream Engine
+```
+cp ./Services/tobii_engine.service /etc/systemd/system/tobii_engine.service
+cp ./Services/tobii_usb.service /etc/systemd/system/tobii_usb.service
+
+systemctl enable --now tobii_engine tobii_usb
+
+tar -xzf ./stream_engine_linux_4.24.0-linux-x86_64.tar.gz
+
+sudo cp -r ./tobii-stream-engine-4.24.0/include/tobii /usr/include
+
+sudo cp -r ./tobii-stream-engine-4.24.0/lib/ /usr/lib/
+
+sudo ln -sf /usr/lib/libtobii_stream_engine.so /usr/lib/libtobii_research.so
+```
+
+### Configuration
+With the Eye tracker drivers installed, you can now set up your Eye tracker.
+
+1. Open ```tobiiproeyetrackermanager```
+2. Select your eye tracker from the list of devices
+3. Press "Calibrate" and follow the on screen directions
+
+![Tobii Eye Tracker Manager](https://cdn.jsdelivr.net/gh/starcitizen-lug/knowledge-base@main/wiki/assets/images/Head-Tracking/tobii.webp)
+
+
+### Tobii compatible Opentrack
+And now that the Eye tracker is calibrated, all that remains is installing Opentrack.
+Grab the OpenTrack-Tobii [Appimage from here](https://github.com/megagtrwrath/opentrack-appimage-ci/releases)
+
+You should now have fully working OpenTrack ready for use in the 'Verse
