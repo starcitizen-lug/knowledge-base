@@ -51,7 +51,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 ## Game crashes after clicking 'Verify'
 - Make sure Star Citizen is installed on drive "C:\" Check the "Library Folder" option in the launcher settings:
-![Star Citizen launcher](https://github.com/user-attachments/assets/0ac1ed3a-4c3c-43b9-b93a-a4865e63f784)
+![Star Citizen launcher](https://cdn.jsdelivr.net/gh/starcitizen-lug/knowledge-base@main/wiki/assets/images/rsilauncher-default-path.webp)
 - Additionally, make sure the wine prefix is not installed on an NTFS formatted partition.oh keep in mind might be interesting to see what the model produces
 
 
