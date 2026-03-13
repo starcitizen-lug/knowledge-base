@@ -24,7 +24,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - FOIP may be a bit finnicky and your camera may not appear in the list in-game, but has been known to work if you toggle it on and off a few times.
 
 ### Unsupported hardware
-- Tobii does not support Linux. Its opentrack support uses the Windows only SDK. See [VM Passthrough](#tobii-eye-tracker-5-vm-passthrough) below.
+- Tobii does not support its consumer tracker products 4c and 5 on Linux. See [Experimental native Tobii](#experimental-native-tobii-eye-tracker-4c5-support) and [VM Passthrough](#tobii-eye-tracker-5-vm-passthrough) options below
 
 ## Opentrack Configuration
 
