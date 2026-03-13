@@ -58,6 +58,7 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 - [LUG Wine Experimental](https://github.com/starcitizen-lug/lug-wine-experimental/releases/latest)
   - LUG Wine plus additional temporary/experimental fixes for documented issues which have yet to be properly fixed upstream.
   - Please contribute to upstream reports/Issue Council reports if you need to use these runners! Our wiki will link to these where relevant.
+  - See [Experimental Wayland](#wine-wayland) for important caveats and workarounds for the experimental native winewayland runner
 - [RawFox](https://github.com/starcitizen-lug/raw-wine/releases/latest)
   - Managed by the [LUG Helper](#how-to-run-the-lug-helper)
 
