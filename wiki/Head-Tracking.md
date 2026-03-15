@@ -27,7 +27,11 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - Tobii does not support its consumer tracker products 4c and 5 on Linux.  
   See [Experimental native Tobii](#experimental-native-tobii-eye-tracker-4c5-support) and [VM Passthrough](#tobii-eye-tracker-5-vm-passthrough) options below
 
-## Opentrack Configuration
+
+## Opentrack
+
+
+### Opentrack Configuration
 
 {: .important }
 > - For `LUG Wine` runners, use an official Opentrack build version  opentrack 2026.1.0 or later.
@@ -63,7 +67,12 @@ Configure Star Citizen's head tracking options under `Comms, FOIP & Head Trackin
 > - If compiling our custom Opentrack from source, make sure you are on the `wine-extended-proton` branch before building
 
 
-## Building Opentrack with ONNX Runtime
+### Opentrack Packages
+
+- Opentrack [Appimage](https://github.com/megagtrwrath/opentrack-appimage-ci/releases)
+
+
+### Building Opentrack with ONNX Runtime
 If you provide ONNX Runtime libraries to Opentrack when building it, it will offer Neuralnet as input option. This will allow you to use any webcam as a head tracking device.
 
 Arch-based distros:
@@ -99,7 +108,7 @@ Other distros:
 ## TrackIR
 TrackIR 4/5 can work by using [this fork of linuxtrack](https://gitlab.com/fwfa123/linuxtrackx-ir).
 
-### Install
+### Install TrackIR
 1. Download the latest [Appimage release](https://gitlab.com/fwfa123/linuxtrackx-ir/-/releases) of fwfa123's linuxtrack fork.
 2. Mark the appimage executable. In your file manager, right click->properties->executable as program. Or, in a terminal: `chmod +x ./LinuxTrack-X-IR-x.xx.xx-x86_64.AppImage`
 3. Run the appimage.
@@ -108,7 +117,7 @@ TrackIR 4/5 can work by using [this fork of linuxtrack](https://gitlab.com/fwfa1
 6. In the `gaming` tab, click `install` on the `MFC42 Libraries`, following the prompts.
 7. In the `gaming` tab, click `custom prefix` and provide the Star Citizen Wine prefix path created by the LUG Helper (default: `~/Games/star-citizen`).
 
-### Configuration
+### Configure TrackIR
 1. In the `device setup` tab, you need to set `tracking device` to be `TrackIR/SmartNav`. You may need to refresh to see it. If you still do not see it, your udev rule is not working.
 2. In the `model setup` tab, select your `model name`, likely to be `NP track clip pro` or `NP track clip`. If using pro clip, specify which side of the head its mounted on.
 3. Click `save` and then `start` the tracking for testing purposes.
