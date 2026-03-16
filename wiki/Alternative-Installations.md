@@ -152,9 +152,9 @@ The Steam Deck is resource limited and Star Citizen performance will be poor. So
 ### Lutris
 
 {: .warning }
-> The most recent Lutris release, 0.5.18/0.5.19, no longer works with Star Citizen out of the box and there is no sign of a new release on the horizon. You may try the steps below but, if you have any issues, we strongly recommend following our [Quick Start Guide](/Quick-Start-Guide) instead.
+> If you have any issues, we strongly recommend following our [Quick Start Guide](/Quick-Start-Guide) instead.
 
-1. Set the default wine runner to GE-Proton in global preferences
+1. Set the default runner to GE-Proton in global preferences
 2. Install Star Citizen from [Lutris](https://lutris.net/games/star-citizen/)
 3. Run the RSI Launcher, log in, and click install to finish installing the game
 
