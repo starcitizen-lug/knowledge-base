@@ -150,10 +150,6 @@ The Steam Deck is resource limited and Star Citizen performance will be poor. So
 > The Star Citizen launcher does not support temp paths via xdg-portals.
 
 ### Lutris
-
-{: .warning }
-> If you have any issues, we strongly recommend following our [Quick Start Guide](/Quick-Start-Guide) instead.
-
 1. Set the default runner to GE-Proton in global preferences
 2. Install Star Citizen from [Lutris](https://lutris.net/games/star-citizen/)
 3. Run the RSI Launcher, log in, and click install to finish installing the game
