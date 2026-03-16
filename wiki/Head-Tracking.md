@@ -64,7 +64,6 @@ Configure Star Citizen's head tracking options under `Comms, FOIP & Head Trackin
 {: .note }
 > - May not work with Game Launchers in Flatpak
 > - If compiling from source, make sure `SDK_WINE` is set
-> - If compiling our custom Opentrack from source, make sure you are on the `wine-extended-proton` branch before building
 
 
 ### Opentrack Packages
