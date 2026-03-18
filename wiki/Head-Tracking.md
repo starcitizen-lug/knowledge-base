@@ -34,7 +34,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 ### Opentrack Configuration
 
 {: .important }
-> - For `LUG Wine` runners, use an official Opentrack build version  opentrack 2026.1.0 or later.
+> - For `LUG Wine` runners, use an Opentrack build version 2026.1.0 or newer.
 > - For any `GE-Proton` or `Proton` runner, include environment variable `PROTON_VERB="runinprefix"`.
 > - Some of our Penguins have reported issues with staging runners, so non-staging may be preferred.
 > - You may need to launch opentrack with or without the `--platform xcb` flag. Your opentrack package may include two different .desktop files for this, one labeled Wayland and one not.
@@ -56,12 +56,13 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 5. Confirm that the `ESYNC` and `FSYNC` settings match your settings
 6. Next to `Protocol`, make sure `Both` is selected
 
-Launch Star Citizen and click start in Opentrack.
+Launch Star Citizen and then click start in Opentrack.
 Configure Star Citizen's head tracking options under `Comms, FOIP & Head Tracking`:
 1. Set `Head Tracking - General - Source` to `TrackIR`
 2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`
 
 {: .note }
+> - Game defaults to headtracking only being active when the character is seated
 > - May not work with Game Launchers in Flatpak
 > - If compiling from source, make sure `SDK_WINE` is set
 
