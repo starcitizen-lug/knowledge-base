@@ -31,11 +31,12 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 
 ## VKB Devices
 
-{: .tip }
-> Enable hidraw access to your VKB devices  
-> Run the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)
-> 1. Select the `Maintenance and Troubleshooting` menu, then choose `Create joystick hidraw rules`.
-> 2. Switch to a [LUG Wine](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.4 or newer
+{: .tip-title }
+> Enable hidraw access to your VKB devices
+> 
+> 1. Run the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper).
+> 2. Select the `Maintenance and Troubleshooting` menu, then choose `Create joystick hidraw rules`.
+> 3. Switch to a [LUG Wine](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.4 or newer.
 
 {: .important-title }
 > After adding the udev rule
@@ -56,9 +57,12 @@ Requires a windows-only software for calibration and configuration. [Link](https
 
 Requires a windows-only software for calibration and configuration. [Link; scroll down](https://support.virpil.com/en/support/solutions)
 
-{: .tip }
+{: .tip-title }
 > Enable hidraw access to your Virpil devices  
-> Run the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper), select the `Maintenance and Troubleshooting` menu, then choose `Create joystick hidraw rules`.
+> 
+> 1. Run the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper).
+> 2. Select the `Maintenance and Troubleshooting` menu, then choose `Create joystick hidraw rules`.
+> 3. Switch to a [LUG Wine](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.4 or newer.
 
 {: .important-title }
 > After adding the udev rule
@@ -67,9 +71,12 @@ Requires a windows-only software for calibration and configuration. [Link; scrol
 
 ## ThrustMaster Devices
 
-{: .tip }
+{: .tip-title }
 > Enable hidraw access to your ThrustMaster devices  
-> Run the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper), select the `Maintenance and Troubleshooting` menu, then choose `Create joystick hidraw rules`.
+> 
+> 1. Run the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper).
+> 2. Select the `Maintenance and Troubleshooting` menu, then choose `Create joystick hidraw rules`.
+> 3. Switch to a [LUG Wine](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.4 or newer.
 
 {: .important-title }
 > After adding the udev rule
@@ -85,7 +92,7 @@ The yaw potentiometer on these sticks tends to fail after a time. It may be poss
 - A bit of soldering to [replace the potentiometer](https://www.reddit.com/r/hotas/comments/cronns/comment/ex8oo4b/?context=3)
 
 - Thrustmaster T16000 sticks may not appear in the Game Controllers list unless DLL overrides for dinput and xinput are added:
-    - Use the LUG Helper's Maintenance menu `Open Wine prefix configuration` option
+    - Use the LUG Helper's Maintenance menu `Open Wine prefix configuration` option.
     - In the Wine configuration window, select the `Libraries` tab.
     - Use the `New override for library` dropdown to add overrides for `dinput` and `xinput`.
     - If there is more than one `xinput` entry, add them all.
