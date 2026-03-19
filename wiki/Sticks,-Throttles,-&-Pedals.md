@@ -33,7 +33,9 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 
 {: .tip }
 > Enable hidraw access to your VKB devices  
-> Run the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper), select the `Maintenance and Troubleshooting` menu, then choose `Create joystick hidraw rules`.
+> Run the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)
+> 1. Select the `Maintenance and Troubleshooting` menu, then choose `Create joystick hidraw rules`.
+> 2. Switch to a [LUG Wine](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.4 or newer
 
 {: .important-title }
 > After adding the udev rule
