@@ -30,6 +30,10 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 ## Opentrack
 
+### Installing Opentrack
+- [Arch AUR](https://aur.archlinux.org/packages/opentrack)
+- [Appimage](https://github.com/megagtrwrath/opentrack-appimage-ci/releases)
+- [Build from source](https://github.com/opentrack/opentrack/wiki/Building-on-Linux)
 
 ### Opentrack Configuration
 
@@ -65,11 +69,6 @@ Configure Star Citizen's head tracking options under `Comms, FOIP & Head Trackin
 > - Game defaults to headtracking only being active when the character is seated
 > - May not work with Game Launchers in Flatpak
 > - If compiling from source, make sure `SDK_WINE` is set
-
-
-### Opentrack Packages
-
-- Opentrack [Appimage](https://github.com/megagtrwrath/opentrack-appimage-ci/releases)
 
 
 ### Building Opentrack with ONNX Runtime
