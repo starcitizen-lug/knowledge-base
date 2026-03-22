@@ -11,9 +11,9 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 ## Launcher empty or crash
 - Try logging out and back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
-- If using the Cosmic DE beta, this is a [known issue](https://github.com/pop-os/cosmic-epoch/issues/2368).
-- If using Niri see upstream [xwayland-satellite issue report](https://github.com/Supreeeme/xwayland-satellite/issues/189) (fixed in wayland-satellite 0.8.1)
-- Workarounds:
+- Delete the rsilauncher directory in the wine prefix's Appdata  
+  `star-citizen/drive_c/users/<your username here>/AppData/Roaming/rsilauncher`
+- If using Pop!_OS Cosmic, this is a [known issue](https://github.com/pop-os/cosmic-epoch/issues/2368).
   - Try using the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s `Open Wine prefix configuration`  
     option in the Maintenance menu to turn on virtual desktop mode
   - Try xwayland-run package
@@ -23,10 +23,8 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
     ############################################################################
     xwayland-run -- "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" > "$launch_log" 2>&1
     ```
-  - Try [gamescope](/Tips-and-Tricks#gamescope), or an alternative compositor
   - Try switching to [Experimental Wine Wayland](/Tips-and-Tricks#wine-wayland)
-  - Delete the rsilauncher directory in the wine prefix's Appdata  
-    `star-citizen/drive_c/users/{your username here}/AppData/Roaming/rsilauncher`
+  - Try [gamescope](/Tips-and-Tricks#gamescope), or an alternative compositor
 
 
 ## Launcher indicates You are currently offline
