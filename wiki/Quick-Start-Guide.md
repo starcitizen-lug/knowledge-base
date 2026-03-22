@@ -14,7 +14,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 {: .note-title }
 > Immutable Distros
 > 
-> For the Steam Deck, see [here](/Alternative-Installations#steam-deck-installation). For NixOS, see [here](/Alternative-Installations#nixos-installation). For immutable distros that are **NOT** Bazzite, see [flatpak installation](Alternative-Installations#flatpak-installation). 
+> For the Steam Deck, see [here](/Alternative-Installations#steam-deck-installation). For NixOS, see [here](/Alternative-Installations#nixos-installation). For others, see [flatpak installation](Alternative-Installations#flatpak-installation). 
 
 ## Installation Steps
 
