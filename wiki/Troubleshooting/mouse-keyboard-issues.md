@@ -11,12 +11,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 ## Mouse/Cursor warp issues and view snapping in interaction mode
 *This issue can also manifest as some main menu buttons not working due to the cursor actually being offset*
 
-Switch to the game's software cursor. Create a user.cfg file in the LIVE, PTU, EPTU, TECH-PREVIEW directory with the following contents:
- ```
-   #use software cursor
-   pl_pit.forceSoftwareCursor = 1
- ```
-Alternatively, you may choose Xorg at your login screen instead of Wayland session.
+Choose Xorg at your login screen instead of Wayland session.
 Other potential workarounds:
 - Use LUG Wine 10.15-1 or newer with the game's borderless windowed mode
 - Experimental LUG [Wine Wayland](/Tips-and-Tricks#wine-wayland) helps mitigate this for some
@@ -39,6 +34,11 @@ Other potential workarounds:
  r_height = 1440
  ```
 - Hyprland users: Try using the in-game fullscreen option instead of the Hyprland equivalent.
+
+
+## Multiple cursors in game UI
+Contribute to [STARC-197300](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-197300) and [STARC-196095](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-196095)
+- Edit [USER.cfg](/Tips-and-Tricks#usercfg) to remove software cursor override
 
 
 ## Mouse cursor escaping the game window
