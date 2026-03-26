@@ -22,12 +22,12 @@ To contribute updates/information, please open an [issue report or pull request]
 ### Game Updates
 
 {: .important-title }
-> (Feb 19, 2026)
+> (Mar 25, 2026)
 >
-> Black screens and Blackout VFX on Vulkan
+> Launcher error 3221225477
 >
-> - If you experience a black screen on launch, see the [workaround here](/Troubleshooting/unexpected-behavior#black-game-window-after-clicking-launch)
-> - If you experience a temporary blackout or black screen effect in-game, see the [workaround here](/Troubleshooting/unexpected-behavior#blackout-or-black-screen-on-vulkan-when-flyingboostingbrakingdamaged)
+> - Use winetricks to install vcrun2022 in your wine prefix
+> - Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run `winetricks -q vcrun2022` then `exit`
 
 {: .note-title }
 > (Jan 28, 2026)
