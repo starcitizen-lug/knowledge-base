@@ -11,7 +11,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 ## Wine prefix creation failed
 - If the LUG Helper install log shows an error similar to:  
   `warning: WINE is /path/to/bin/wine, which is neither on the path nor an executable file`  
-  To fix, make sure the mount point is not marked `noexec`
+  To fix, `cat /proc/mounts` and make sure the mount point is not marked `noexec`. You may need to explicitly set `defaults` or `exec`.
 - If the install log shows an error similar to:  
   `SHA256 mismatch` or `no valid cabinets found`  
   To fix, delete the winetricks cache in `~/.cache/winetricks/` and try installing again
