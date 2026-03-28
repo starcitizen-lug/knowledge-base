@@ -95,7 +95,6 @@ Other distros:
 ## VR - Virtual Reality
 - Experimental VR using **Wine**
   - Use Monado for PCVR/Wired headsets (Vive, Index), WiVRn for standalone headsets (Quest)
-  - Select a [LUG Wine Experimental Runner](/Tips-and-Tricks#recommended-runners) 11.2 or newer to prevent menus and theater mode from being stretched [STARC-195061](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-195061)
   - Set the game to the Vulkan renderer 
   - Start the RSI Launcher and toggle on VR in Settings > {LIVE,PTU} > VR Support
   - Connect your device and make sure it is active before launching the game
@@ -104,6 +103,7 @@ Other distros:
     ```
     export OXR_PARALLEL_VIEWS=1
     ```
+  - Debugging: edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and change WINEDEBUG to `export WINEDEBUG=-all,+openxr` to make useful logging messages appear in Game.log
 
 
 ## TrackIR
