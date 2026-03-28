@@ -48,19 +48,6 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 > More swap should be configured if you intend to run background applications while playing the game.
 
 
-## ESync/FSync/NTSync
-
-{: .tip }
-> If you've installed the game via our [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper), these settings are pre-configured for you.
-
-- If these environment variables are set, Wine will automatically choose the best option between esync or fsync.
-  ```
-  export WINEESYNC=1
-  export WINEFSYNC=1
-  ```
-- `NTSync` requires kernel 6.14+ and a wine 10.16 or newer which can be easily [installed](Tips-and-Tricks#how-to-add-a-wine-runner) using the LUG Helper. No additional environment variables are needed.
-
-
 ## Nvidia Cache
 
 {: .tip }
