@@ -63,13 +63,14 @@ This is a generic error code representing any issue with logging in to CIG serve
 ## DirectX error message
 - Error may read `Star Citizen requires DirectX feature level of 11.1 as a minimum which is not supported at present on this machine`  
   ![image](https://cdn.jsdelivr.net/gh/starcitizen-lug/knowledge-base@main/wiki/assets/images/Troubleshooting/unexpected-behavior/dx-feature-level.webp)
-- Check that the `Vulkan device` is not set to an integrated gpu (ie, Intel)
+- If your system has an integrated gpu (ie, Intel), check that the `Vulkan device` is not set to the integrated gpu:
   - Identify device name using command `vulkaninfo --summary | grep deviceName`
   - Edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and set the device name environment variable: `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
   - Verify by setting the environment variable `DXVK_HUD=1` and observing the device name in the upper left of the screen
-- Also make sure your GPU drivers (Mesa/nvidia) are up to date and DXVK is enabled/updated.
-  - Use the LUG Helper to [update dxvk](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix)
+- Make sure your GPU drivers (Mesa/nvidia) are up to date
   - For AMD, be sure to use the open source radeon drivers (ie. vulkan-radeon), **not** the proprietary drivers (ie. amdvlk)
+- If using DX11 rendering instead of Vulkan, make sure DXVK is enabled/updated:
+  - Use the LUG Helper to [update dxvk](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix)
 - Try switching to a non-staging wine runner from our [recommended runners](/Tips-and-Tricks#recommended-runners) list
 - Try [downgrading](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix) to an older DXVK version
 
