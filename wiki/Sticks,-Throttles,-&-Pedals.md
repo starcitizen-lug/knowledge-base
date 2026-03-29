@@ -118,6 +118,15 @@ Change LEDs with a simple python script
 > Follow the instructions below to obtain device info and enable HIDRAW.
 
 ### Find Device Info
+
+Use `lsusb` to retrieve the Vendor ID and Model ID.  
+Example:
+```bash
+$ lsusb
+Bus 001 Device 011: ID 231d:0200 VKB-Sim © Alex Oz 2021  VKBsim Gladiator EVO  R  
+Bus 001 Device 012: ID 231d:0201 VKB-Sim © Alex Oz 2021  VKBsim Gladiator EVO  L
+```
+
 Use `udevadm` to retrieve the Vendor ID, Model Name, and Model ID that the device reports to the system.
 ```bash
 udevadm info -n /dev/input/by-id/usb-your-joystick-name | grep -E 'ID_VENDOR_ID|ID_MODEL_ID|ID_MODEL'
@@ -134,7 +143,7 @@ E: ID_MODEL_ID=0126
 ### Enable HIDRAW
 
 - Create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content.  
-  Replace `<PLACEHOLDER_REPLACE_WITH_YOUR_ID_VENDOR_ID>` with the Vendor ID retrieved in the step above. For working examples, see the VKB, Virpil, or Thrustmaster sections above.
+  Replace `<PLACEHOLDER_REPLACE_WITH_YOUR_ID_VENDOR_ID>` with the Vendor ID retrieved in the step above.
  ```
  # Set the "uaccess" tag for raw HID access for input devices in wine.
  KERNEL=="hidraw*", ATTRS{idVendor}=="<PLACEHOLDER_REPLACE_WITH_YOUR_ID_VENDOR_ID>", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
