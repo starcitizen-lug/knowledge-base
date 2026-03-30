@@ -243,7 +243,6 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 - Set DPI with [LUG Helper](#how-to-run-the-lug-helper) Maintenance menu > Edit wine prefix configuration
  
 ## HDR (High Dynamic Range)
-- CIG's Vulkan implementation doesn't have HDR yet
 - Requires experimental native [Wayland](Tips-and-Tricks#wine-wayland) or [Gamescope](Tips-and-Tricks#gamescope)
 - To enable HDR in native Wayland:
   1. Run `wayland-info | grep color` in a terminal. If you **do not** see `wp_color_manager_v1` or if you use an Nvidia gpu, then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and add the environment variable `ENABLE_HDR_WSI=1`
