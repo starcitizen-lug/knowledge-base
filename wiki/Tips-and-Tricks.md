@@ -266,6 +266,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
   Use `wine regedit` GUI to add registry key and DWORD value 1
   `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer`  
   `NoTrayItemsDisplay` = 1
+- Enable "close-to-quit" in RSI Launcher settings
 
 ## Pre-launch and Post-exit Scripts
 The [launch script](#how-to-edit-the-launch-script) installed by the LUG Helper can be modified to run pre-launch and post-exit scripts. These scripts can be used to launch utilities like antimicrox, opentrack, etc., or disable/re-enable mouse acceleration for more precise FPS handling.
