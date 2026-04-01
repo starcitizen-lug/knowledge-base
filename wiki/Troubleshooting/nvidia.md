@@ -79,7 +79,7 @@ or
 > - `RENDER_PRESET_M` for improved image quality but less performance.
 > - `RENDER_PRESET_L` for the best image quality but the least performance.
 
-5. To confirm DLSS 4.x is working, enable the debug overlay env var below. Look for it in-game to say `Render Preset: K/M/L`, `DLSSv3 v310.4.0` for DLSS 4.0, or `DLSSv3 v310.5.0` for DLSS 4.5.
+5. To confirm DLSS 4.x is working, enable the debug overlay env var below. Look for it in-game to say `Render Preset: K/M/L`, `DLSSv3 v310.4.0` for DLSS 4.0, or `DLSSv3 v310.5.0` or later for DLSS 4.5.
    ```
    export DXVK_NVAPI_SET_NGX_DEBUG_OPTIONS="DLSSIndicator=1024,DLSSGIndicator=2"
    ```
