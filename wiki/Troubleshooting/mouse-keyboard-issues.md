@@ -27,7 +27,7 @@ Other potential workarounds:
 
 
 ## Mouse/Cursor restricted to a region smaller than the display, or clicks offset from cursor
-- Create a user.cfg file in the LIVE, PTU, EPTU, TECH-PREVIEW directory
+- Create [USER.cfg](/Tips-and-Tricks#usercfg) in the LIVE, PTU, EPTU, TECH-PREVIEW directory
  ```
  #set to your display resolution) tech support
  r_width = 3440
