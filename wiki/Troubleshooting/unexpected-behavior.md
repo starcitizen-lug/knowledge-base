@@ -86,6 +86,10 @@ This is a generic error code representing any issue with logging in to CIG serve
 - If launching the game for the first time with a webcam plugged in, try unplugging the webcam, relaunching, then connecting it.
 
 
+## Game hangs at loading screen after clicking 'Launch'
+- If using a webcam, make sure V4L is installed (video 4 linux, package names may be similar to `v4l-utils`). If using V4L2 Loopback, try removing any loopback devices you have created.
+
+
 ## Black or white RSI Launcher window
 - Try editing the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to add the RSI Launcher flag `--in-process-gpu`. For example:
   ```
@@ -100,7 +104,6 @@ This is a generic error code representing any issue with logging in to CIG serve
 - If using Vulkan, you may need to revert to DX11 by creating a [USER.cfg](/Tips-and-Tricks#usercfg) file.
 - If using lsfg-vk for frame gen, use LUG Wine Experimental or revert to DX11.
 - If using gamescope, you may need to disable it or double check your configuration.
-- If using a webcam, make sure V4L is installed (video 4 linux, package names may be similar to `v4l-utils`). If using V4L2 Loopback, try removing any loopback devices you have created.
 
 
 ## Blackout or black screen on Vulkan when flying/boosting/braking/damaged
