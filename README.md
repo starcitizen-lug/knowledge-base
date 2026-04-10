@@ -20,6 +20,3 @@ https://robertsspaceindustries.com/orgs/LUG/
 
 💬 Also stop by our Discord:  
 https://discord.gg/meCFYPj 
-
-💬 And our Matrix space:  
-https://matrix.to/#/#SCLUG:matrix.org

@@ -160,15 +160,16 @@ The Steam Deck is resource limited and Star Citizen performance will be poor. So
 3. Launch Heroic, browse to `Wine Manager>Proton-GE` and install `Proton-GE-Latest`.
 4. Return to the Library page, and click Add Game.
 5. Set Title to `Star Citizen`.
-6. Click `Show Wine Settings` and ensure Wine Version is set to `Proton-GE-Latest`.
+9. Click `Show Wine Settings` and ensure Wine Version is set to `UMU-Proton`.
 7. Click `Run Installer First` and select the Star Citizen install file.
 8. Once install is complete, set `Select Executable` to the `drive_c` `RSI Launcher.exe` and click Finish.
-9. Open the game settings in Heroic, change to Advanced tab and under Environment Variables add `GAMEID=umu-starcitizen`.
-10. Run the RSI Launcher, log in, and click install to finish installing the game
+9. Set wine version to `Proton-GE-Latest`.
+10. Open the game settings in Heroic, change to Advanced tab and under Environment Variables add `GAMEID=umu-starcitizen`.
+11. Run the RSI Launcher, log in, and click install to finish installing the game
 
 ### Bottles
 1. Create a new gaming bottle
-2. Change the wine runner to GE-Proton or "system wine" 10.0
+2. Change the wine runner to UMU-Proton or "system wine" 10.0
 3. Use the "Install Programs..." Star Citizen option
 4. Run Star citizen, log in, and click install to finish installing the game
 
