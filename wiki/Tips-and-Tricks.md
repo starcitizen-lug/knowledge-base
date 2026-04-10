@@ -8,7 +8,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 # Tips and Tricks
 
 ## Recommended Distros
-We strongly recommend choosing a distro that has up-to-date packages and a solid maintenance reputation.  
+We strongly recommend choosing a distro that has up-to-date packages and a solid maintenance reputation. The ones listed below tend to provide the best out-of-the-box compatibility with Star Citizen, but any up to date distro can work with varying degrees of effort.
 
 - ⭐ Fedora
 - Arch
