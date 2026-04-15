@@ -17,15 +17,19 @@ See [CIG's Spectrum post](https://robertsspaceindustries.com/spectrum/community/
 
 ## Zram & Swap
 
-We currently recommend a combined 40GB RAM + swap to avoid Out Of Memory crashes while playing Star Citizen. Systems with less than 40GB RAM will need additional swap or zram configured. Systems with >40GB RAM should be fine as long as any size swap file exists; the game likes to swap even when you have plenty of ram.
+Zram stores swap in RAM using on-the-fly compression which can improve game performance when memory utilization gets high. Zswap can also be used, but is less straightforward to optimize properly so we currently only include zram instructions here.
 
-Zram stores swap in RAM using on-the-fly compression which can improve game performance when memory utilization gets high. In our experience, this tends to provide better performance in Star Citizen than zswap.
-- For systems with 16GB RAM, we recommend all 16GB configured for zram with at least 24GB in a swap file.
-- For systems with 32GB RAM, we recommend configuring all 32GB for zram with at least 8GB in a swap file.
+We recommend configuring zram and a swapfile as described below to avoid out of memory crashes and performance issues while playing Star Citizen. See the links in the tip field and example `zram-generator.conf` below for details.
+- For 16GB RAM, we recommend configuring `zram-size = ram` with at least 24GB in a swap file.
+- For 32GB RAM, we recommend configuring `zram-size = ram` with at least 8GB in a swap file.
+- For 64GB RAM, we recommend configuring `zram-size = 4GB`. Consider also setting any size swap file as a backup.
+
+{: .important }
+> - When using zram, zswap needs to be [disabled](https://wiki.archlinux.org/title/Zswap#Toggling_zswap) to take full advantage of zram.
+> - System swap configuration needs to be optimized to take full advantage of zram. Follow the [configuration example here](https://wiki.archlinux.org/title/Zram#Optimizing_swap_on_zram).
 
 {: .tip }
-> - When using zram, zswap needs to be [disabled](https://wiki.archlinux.org/title/Zswap#Toggling_zswap).
-> - See the Arch Wiki for [zram setup](https://wiki.archlinux.org/title/Zram#Using_zram-generator) instructions that should work for most distros as well as [zram optimization](https://wiki.archlinux.org/title/Zram#Optimizing_swap_on_zram) steps.
+> - See the Arch Wiki for [zram setup](https://wiki.archlinux.org/title/Zram#Using_zram-generator) instructions that should work for most distros.
 > - See the Arch Wiki for [swap file creation](https://wiki.archlinux.org/title/Swap#Swap_file_creation) instructions. Btrfs users, follow [these instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). Bazzite users, follow [these instructions](https://docs.bazzite.gg/Advanced/swapfile/).
 > - Verify your configuration with `zramctl` and `swapon --show`.
 
