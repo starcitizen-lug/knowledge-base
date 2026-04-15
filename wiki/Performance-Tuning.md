@@ -34,7 +34,7 @@ We recommend configuring zram and a swapfile as described below to avoid out of 
 > - Verify your configuration with `zramctl` and `swapon --show`.
 
 **Using zram-generator**  
-The `zram-generator` or `systemd-zram-generator` package must be installed and requires a configuration text file. Many distros use zram-generator by default. Use a text editor to modify existing or create your own text file in `/etc/systemd` named `zram-generator.conf`.  
+The `zram-generator` or `systemd-zram-generator` package must be installed and requires a configuration text file. Many distros use zram-generator by default. Use a text editor to modify the existing file or create your own file in `/etc/systemd` named `zram-generator.conf`.  
 Copy this example:
 ```
 ## /etc/systemd/zram-generator.conf
