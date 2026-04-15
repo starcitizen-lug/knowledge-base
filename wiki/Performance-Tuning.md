@@ -17,7 +17,7 @@ See [CIG's Spectrum post](https://robertsspaceindustries.com/spectrum/community/
 
 ## Zram & Swap
 
-Zram stores swap in RAM using on-the-fly compression which can improve game performance when memory utilization gets high. Zswap can also be used, but is less straightforward to optimize properly so we currently only include zram instructions here.
+Zram stores swap in RAM using on-the-fly compression which improves game performance when memory utilization gets high. Some Penguins have had success with zswap instead, but it is less straightforward to optimize properly, so we only include zram instructions here.
 
 We recommend configuring zram and a swapfile as described below to avoid out of memory crashes and performance issues while playing Star Citizen. See the links in the tip field and example `zram-generator.conf` below for details.
 - For 16GB RAM, we recommend configuring `zram-size = ram` with at least 24GB in a swap file.
@@ -33,8 +33,9 @@ We recommend configuring zram and a swapfile as described below to avoid out of 
 > - See the Arch Wiki for [swap file creation](https://wiki.archlinux.org/title/Swap#Swap_file_creation) instructions. Btrfs users, follow [these instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). Bazzite users, follow [these instructions](https://docs.bazzite.gg/Advanced/swapfile/).
 > - Verify your configuration with `zramctl` and `swapon --show`.
 
-The `zram-generator` or `systemd-zram-generator` package must be installed and requires a configuration text file. Many distros use zram-generator by default.  
-Use a text editor to modify existing or create your own text file in `/etc/systemd` named `zram-generator.conf` copy this sample:
+**Using zram-generator**  
+The `zram-generator` or `systemd-zram-generator` package must be installed and requires a configuration text file. Many distros use zram-generator by default. Use a text editor to modify existing or create your own text file in `/etc/systemd` named `zram-generator.conf`.  
+Copy this example:
 ```
 ## /etc/systemd/zram-generator.conf
 
@@ -43,9 +44,11 @@ zram-size = ram
 compression-algorithm = zstd
 ```
 
-If you prefer not to use zram, a swap file will need to be [configured](https://wiki.archlinux.org/title/Swap#Swap_file). Btrfs users please follow the [Btrfs instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). We recommend configuring at least a combined 40GB RAM + swap:
-- For 16GB RAM: At least 24GB swap
-- For 32GB RAM: At least 8GB swap
+**Swap file only**  
+If you prefer not to use zram, a swap file will need to be [configured](https://wiki.archlinux.org/title/Swap#Swap_file). Btrfs users please follow the [Btrfs instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). We recommend configuring at least a combined 40GB RAM + swap, though more may be needed depending on your system memory usage.
+- For 16GB RAM: At least 24GB swap.
+- For 32GB RAM: At least 8GB swap.
+- For 64GB RAM: Any size swap file.
 
 {: .important }
 >
