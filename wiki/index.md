@@ -21,6 +21,16 @@ To contribute updates/information, please open an [issue report or pull request]
 
 ### Game Updates
 
+{: .warning-title }
+> (Apr 20, 2026)
+>
+> Launcher out of space crash when updating/installing Star Citizen
+>
+> - Download [RSI Launcher v2.12.1](https://install.robertsspaceindustries.com/rel/2/RSI%20Launcher-Setup-2.12.1.exe)
+> - Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run `wine "~/path/to/downloaded/RSI Launcher-Setup-2.12.1.exe"` to install it.
+> - Type `exit` to close the Maintenance shell, then relaunche the game.
+> - When the RSI Launcher asks to auto update, cancel the update to remain on v2.12.1 until the issue is fixed.
+
 {: .important-title }
 > (Mar 25, 2026)
 >
@@ -28,14 +38,6 @@ To contribute updates/information, please open an [issue report or pull request]
 >
 > - Use winetricks to install vcrun2022 in your wine prefix
 > - Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run `winetricks -q vcrun2022` then `exit`
-
-{: .note-title }
-> (Jan 28, 2026)
->
-> Vulkan smurf mode has been fixed in 4.6
-> 
-> - If you were using DX11, you can now safely edit your [USER.cfg](/Tips-and-Tricks#usercfg) to switch back to Vulkan 🖖
-> - Consider undoing any workarounds including [Experimental Wine Wayland](/Tips-and-Tricks#wine-wayland) to avoid unexpected issues 
 
 
 ### General News
