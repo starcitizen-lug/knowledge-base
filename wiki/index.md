@@ -24,8 +24,8 @@ To contribute updates/information, please open an [issue report or pull request]
 {: .warning-title }
 > (Apr 20, 2026)
 >
-> Launcher out of space crash when updating/installing Star Citizen.
-> Log may show `[Pipeline] Phase compute_size timed out after 60000ms, cancelling and skipping.`
+> Launcher out of space crash when updating/installing Star Citizen.  
+> Log may show *"[Pipeline] Phase compute_size timed out after 60000ms, cancelling and skipping."*
 >
 > - Download [RSI Launcher v2.12.1](https://install.robertsspaceindustries.com/rel/2/RSI%20Launcher-Setup-2.12.1.exe)
 > - Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run `wine "~/path/to/downloaded/RSI Launcher-Setup-2.12.1.exe"` to install it.
