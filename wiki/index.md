@@ -25,10 +25,10 @@ To contribute updates/information, please open an [issue report or pull request]
 > (Apr 23, 2026)
 >
 > Launcher out of space crash when updating/installing Star Citizen.  
-> Log may show *"[Pipeline] Phase compute_size timed out after 60000ms, cancelling and skipping."*
-> This can be caused by a slow or unreliable network connection
+> Log may show *"[Pipeline] Phase compute_size timed out after 60000ms, cancelling and skipping."*  
+> This can be caused by a slow or unreliable network connection.
 >
-> 1. [Locate your Star Citizen LIVE](https://wiki.starcitizen-lug.org/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory) directory.
+> 1. [Locate your Star Citizen LIVE](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory) directory.
 > 2. Create a new empty file in your LIVE directory named `Data.p4k.part`
 > 3. If you're installing the game for the first time, also create a new empty file named `Data.p4k`
 > 4. Re-launch the game and try the update or verify again.
