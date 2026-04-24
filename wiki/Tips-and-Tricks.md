@@ -287,7 +287,7 @@ _sc-launch.sh_
 trap "\"$WINEPREFIX\"/sc-postexit.sh" EXIT
 ```
 
-Some example pre/post launch scripts:
+**Some example pre/post launch scripts:**
 
 {: .important }
 > Don't forget to mark the scripts as executable!
