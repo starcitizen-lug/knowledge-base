@@ -22,11 +22,12 @@ To contribute updates/information, please open an [issue report or pull request]
 ### Game Updates
 
 {: .warning-title }
-> (Apr 23, 2026)
+> (Apr 25, 2026)
 >
-> Launcher out of space crash when updating/installing Star Citizen.  
+> Recent issues updating/installing Star Citizen  
+> You may see an out of space launcher crash or error code 3004/3005  
 > Log may show *"[Pipeline] Phase compute_size timed out after 60000ms, cancelling and skipping."*  
-> This can be caused by a slow or unreliable network connection.
+> Sometimes caused by a slow or unreliable network connection.
 >
 > 1. [Locate your Star Citizen LIVE](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory) directory.
 > 2. Create a new empty file in your LIVE directory named `Data.p4k.part`
