@@ -27,6 +27,13 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
   - Try [gamescope](/Tips-and-Tricks#gamescope), or an alternative compositor
 
 
+## Launcher minimizes and won't re-open
+- Try to restore the window using the taskbar icon
+- If that doesn't work, [open your Wine prefix](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory), then delete the `launcher store.json` file from the RSI Launcher's Appdata directory:  
+  `{wine prefix}/drive_c/users/<your username here>/AppData/Roaming/rsilauncher/launcher store.json`
+- To avoid the problem in the future, turn on `Enable close-to-quit` in the RSI Launcher settings
+
+
 ## Launcher indicates You are currently offline
 - Log out and back in
 
