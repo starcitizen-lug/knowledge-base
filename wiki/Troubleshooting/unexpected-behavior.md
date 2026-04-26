@@ -29,7 +29,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 ## Launcher minimizes and won't re-open
 - Try to restore the window using the taskbar icon
-- If that doesn't work, [open your Wine prefix](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory), then delete the `launcher store.json` file from the RSI Launcher's Appdata directory:  
+- If that doesn't work, [open your Wine prefix](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory), then delete the `launcher store.json` file from the RSI Launcher's AppData directory:  
   `{wine prefix}/drive_c/users/<your username here>/AppData/Roaming/rsilauncher/launcher store.json`
 - To avoid the problem in the future, turn on `Enable close-to-quit` in the RSI Launcher settings
 
