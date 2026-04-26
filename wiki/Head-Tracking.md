@@ -53,6 +53,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
         `~/Games/star-citizen/runners/lug-wine-tkg-git-11.0-1/bin/wine`
       3. Click `Browse Prefix` and select your Star Citizen prefix. For example:  
         `~/Games/star-citizen`
+	  4. Make sure the grayed out prefix path in "UMU enabled Launchers" is empty or it may conflict with the Wine prefix path!
     - Proton (GE-Proton)
       1. Match your game's proton version
       2. Pick `Steam Play` select number 1 (any number other than zero)
