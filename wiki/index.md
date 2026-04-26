@@ -36,7 +36,7 @@ To contribute updates/information, please open an [issue report or pull request]
 >
 > If the above steps don't work, try rolling back to an older version of the RSI Launcher:
 > 1. Download [RSI Launcher v2.12.1](https://install.robertsspaceindustries.com/rel/2/RSI%20Launcher-Setup-2.12.1.exe)
-> 2. Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run `wine "~/path/to/downloaded/RSI Launcher-Setup-2.12.1.exe"` to install it.
+> 2. Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run `wine "example/path/to/downloaded/RSI Launcher-Setup-2.12.1.exe"` to install it. Don't forget the adjust the path.
 > 3. Type `exit` to close the Maintenance shell, then re-launch the game.
 > 4. When the RSI Launcher asks to auto update, cancel the update to remain on v2.12.1 until the issue is fixed.
 
