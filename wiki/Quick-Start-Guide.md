@@ -29,7 +29,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 {: .warning-title }
 > Important Configuration
-> - Configure zram to match [our recommendations](/Performance-Tuning#zram--swap) if you have less than 64GB ram.
+> - Configure zram to match [our recommendations](/Performance-Tuning#zram--swap).
 > - For non-US keyboard layouts, [enable compatibility](Troubleshooting/mouse-keyboard-issues#non-us-keyboard-keys-not-working) with common game keybinds.
 > - Nvidia users: See our [troubleshooting guide](Troubleshooting/nvidia#severe-frame-drops) if you experience severe frame drops.
 > - Wayland users: See [required workarounds](Troubleshooting/mouse-keyboard-issues#mousecursor-warp-issues-and-view-snapping-in-interaction-mode) to resolve window and cursor issues.
