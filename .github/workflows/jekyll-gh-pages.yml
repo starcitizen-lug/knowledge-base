@@ -30,6 +30,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Rewrite image urls
+        run: |
+          sudo chown -R $USER:$USER ./wiki
+          find ./wiki -name '*.md' -exec sed -i 's|(/assets/images/|(https://cdn.jsdelivr.net/gh/starcitizen-lug/knowledge-base@main/wiki/assets/images/|g' {} +
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
@@ -43,8 +47,6 @@ jobs:
           if [ -f ./_site/sitemap.xml ]; then
             sed -i 's/ xmlns:xsi="[^"]*" xsi:schemaLocation="[^"]*"//g' ./_site/sitemap.xml
           fi
-
-          find . -name '*.md' -exec sed -i 's|(/assets/images/|(https://cdn.jsdelivr.net/gh/starcitizen-lug/knowledge-base@main/wiki/assets/images/|g' {} +
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
