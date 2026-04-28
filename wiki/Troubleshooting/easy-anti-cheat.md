@@ -30,6 +30,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 ## Error code after launching persistent universe
 - Possible error codes `70003`, `70004`
 - [game.log](/Troubleshooting#gathering-logs) message may contain `Remote Disconnect - Authentication timed out (1/3)`
+- Inspect your [EAC log](/Troubleshooting/#gathering-logs) for details. It may be launching with the null client if it can't reach the EAC servers.
 - [Locate your game files](/Troubleshooting#view-game-files) then delete the EAC directories and use the RSI Launcher to Verify Files  
   ```
   ~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/EasyAntiCheat
