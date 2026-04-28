@@ -69,7 +69,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 ## DirectX error message
 - Error may read `Star Citizen requires DirectX feature level of 11.1 as a minimum which is not supported at present on this machine`  
-  ![image](https://cdn.jsdelivr.net/gh/starcitizen-lug/knowledge-base@main/wiki/assets/images/Troubleshooting/unexpected-behavior/dx-feature-level.webp)
+  ![image](/assets/images/Troubleshooting/unexpected-behavior/dx-feature-level.webp)
 - If your system has an integrated gpu (ie, Intel), check that the `Vulkan device` is not set to the integrated gpu:
   - Identify device name using command `vulkaninfo --summary | grep deviceName`
   - Edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and set the device name environment variable: `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`

@@ -37,12 +37,14 @@ jobs:
         with:
           source: ./wiki
           destination: ./_site
-      - name: Clean sitemap namespace
+      - name: Prepare site
         run: |
           sudo chown -R $USER:$USER ./_site
           if [ -f ./_site/sitemap.xml ]; then
             sed -i 's/ xmlns:xsi="[^"]*" xsi:schemaLocation="[^"]*"//g' ./_site/sitemap.xml
           fi
+
+          find . -name '*.md' -exec sed -i 's|(/assets/images/|(https://cdn.jsdelivr.net/gh/starcitizen-lug/knowledge-base@main/wiki/assets/images/|g' {} +
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 

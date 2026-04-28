@@ -103,7 +103,7 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 ## How to edit the launch script
 1. Run the [LUG Helper](#how-to-run-the-lug-helper) and select the `Maintenance and Troubleshooting` menu
 2. Choose the option to `Edit launch script`  
-   ![Edit launch script](https://cdn.jsdelivr.net/gh/starcitizen-lug/knowledge-base@main/wiki/assets/images/Tips-and-Tricks/edit-launch-script.webp){: style="display: block;max-height: 350px;" }
+   ![Edit launch script](/assets/images/Tips-and-Tricks/edit-launch-script.webp){: style="display: block;max-height: 350px;" }
 3. Alternatively, locate the `sc-launch.sh` file in your Wine prefix directory (by default, `~/Games/star-citizen/sc-launch.sh`) and open it for editing.
 ```
 ############################################################################
@@ -117,7 +117,7 @@ export NEW_VARIABLE="value"
 ## How to update the launch script
 1. Run the [LUG Helper](#how-to-run-the-lug-helper) and select the `Maintenance and Troubleshooting` menu
 2. Choose the option to `Update launch script`
-   ![Update launch script](https://cdn.jsdelivr.net/gh/starcitizen-lug/knowledge-base@main/wiki/assets/images/Tips-and-Tricks/update-launch-script.webp){: style="display: block;max-height: 300px;" }
+   ![Update launch script](/assets/images/Tips-and-Tricks/update-launch-script.webp){: style="display: block;max-height: 300px;" }
 
 
 ## How to get a Wine maintenance shell using the launch script
