@@ -38,7 +38,7 @@ redirect_from:
 - Game log  
   `~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/Game.log`
 - EAC log  
-  `~/Games/star-citizen/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat/{productid hash}/{deploymentid hash}/anticheatlauncher.log`
+  `~/Games/star-citizen/drive_c/users/$USER/AppData/Roaming/EasyAntiCheat/{productid hash}/{deploymentid hash}/anticheatlauncher.log`  
   You can find the hashes for `productid` and `deploymentid` in your [LIVE](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory)/EasyAntiCheat/Settings.json
 
 
