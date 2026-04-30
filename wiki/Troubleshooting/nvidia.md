@@ -59,14 +59,11 @@ or
 1. Use the latest [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to install a LUG-Wine runner. (For any other wine runners, avoid wine-staging)
 2. Use the latest [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper), select `Manage DXVK`, and install `DXVK-NVAPI`
 3. DLSS 3 will now be available in the game options
-
-{: .note-title }
-
-5. To confirm DLSS 4.x is working, enable the debug overlay env var below. Look for it in-game to say `Render Preset: K/M/L`, `DLSSv3 v310.4.0` for DLSS 4.0, or `DLSSv3 v310.5.0` for DLSS 4.5.
+4. To confirm DLSS 4.x is working, enable the debug overlay env var below. Look for it in-game to say `Render Preset: K/M/L` or `DLSSv3 v310.5.0` for DLSS 4.5.
    ```
    export DXVK_NVAPI_SET_NGX_DEBUG_OPTIONS="DLSSIndicator=1024,DLSSGIndicator=2"
    ```
-6. Disable the debug overlay when done by changing the above env var to:
+5. Disable the debug overlay when done by changing the above env var to:
    ```
    export DXVK_NVAPI_SET_NGX_DEBUG_OPTIONS="DLSSIndicator=1,DLSSGIndicator=1"
    ```
