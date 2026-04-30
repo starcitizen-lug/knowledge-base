@@ -91,7 +91,7 @@ or
 
 {: .warning }
 >
-> - Mangohud and other FPS monitoring HUDS aswell as DLSS may interfere with Smooth Motion and cause game crashes. You may need to disable them.
+> - MangoHud and other FPS monitoring overlays, as well as DLSS, may interfere with Smooth Motion and cause game crashes. You may need to disable them.
 > - Vsync may need to be disabled in the game's graphics settings.
 
 {: .tip }
