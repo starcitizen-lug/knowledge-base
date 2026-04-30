@@ -1,6 +1,6 @@
 ---
 title: "🤡 Easy Anti-Cheat"
-description: "Known Easy Anti-Cheat issues + troubleshooting steps to resolve them"
+description: "Known Easy Anti-Cheat compatibility issues and helpful troubleshooting steps to resolve them"
 parent: "Troubleshooting"
 nav_order: 5
 md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
