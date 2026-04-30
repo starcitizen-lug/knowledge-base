@@ -61,11 +61,6 @@ or
 3. DLSS 3 will now be available in the game options
 
 {: .note-title }
-> DLSS 4.5
-
-> Enable DLSS 4.5 by using an alternative render preset:
-> - `RENDER_PRESET_M` for improved image quality but less performance.
-> - `RENDER_PRESET_L` for the best image quality but the least performance.
 
 5. To confirm DLSS 4.x is working, enable the debug overlay env var below. Look for it in-game to say `Render Preset: K/M/L`, `DLSSv3 v310.4.0` for DLSS 4.0, or `DLSSv3 v310.5.0` for DLSS 4.5.
    ```
