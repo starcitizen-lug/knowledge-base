@@ -59,22 +59,10 @@ or
 1. Use the latest [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to install a LUG-Wine runner. (For any other wine runners, avoid wine-staging)
 2. Use the latest [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper), select `Manage DXVK`, and install `DXVK-NVAPI`
 3. DLSS 3 will now be available in the game options
-4. To enable DLSS 4.0, add the following environment variables to your [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script).
-
-   ```
-   export PROTON_ENABLE_NGX_UPDATER="1" 
-   export DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE="on"
-   export DXVK_NVAPI_DRS_NGX_DLSS_RR_OVERRIDE="on"
-   export DXVK_NVAPI_DRS_NGX_DLSS_FG_OVERRIDE="on"
-   export DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE_RENDER_PRESET_SELECTION="RENDER_PRESET_K"
-   export DXVK_NVAPI_DRS_NGX_DLSS_RR_OVERRIDE_RENDER_PRESET_SELECTION="RENDER_PRESET_K"
-   ```
 
 {: .note-title }
 > DLSS 4.5
-> 
-> Enabling DLSS 4.5 will result in less performance than DLSS 4.0 in exchange for improved image quality. [RTX 20 & 30 series GPUs](https://www.nvidia.com/en-us/geforce/forums/geforce-graphics-cards/5/580689/dlss-45-super-resolution-faq/) will see a very severe performance impact and should stick with DLSS 4.0.
-> 
+
 > Enable DLSS 4.5 by using an alternative render preset:
 > - `RENDER_PRESET_M` for improved image quality but less performance.
 > - `RENDER_PRESET_L` for the best image quality but the least performance.
@@ -101,7 +89,7 @@ or
 
 {: .warning }
 >
-> - Mangohud and other FPS monitoring HUDS may interfere with Smooth Motion and cause game crashes. You may need to disable them.
+> - Mangohud and other FPS monitoring HUDS aswell as DLSS may interfere with Smooth Motion and cause game crashes. You may need to disable them.
 > - Vsync may need to be disabled in the game's graphics settings.
 
 {: .tip }
