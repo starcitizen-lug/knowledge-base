@@ -17,7 +17,8 @@ See [CIG's Spectrum post](https://robertsspaceindustries.com/spectrum/community/
 
 ## Zram & Swap
 
-Zram stores swap in RAM using on-the-fly compression which improves game performance when memory utilization gets high. Some Penguins have had success with zswap instead, but it is less straightforward to optimize properly, so we only include zram instructions here.
+Zram stores swap in RAM using on-the-fly compression which improves game performance when memory utilization gets high. Some Penguins have had success with zswap instead, but it is less straightforward to optimize properly, so we only include zram instructions here.  
+When zram-size is set to `ram` zram-generator will look up the physical ram size and use that number automatically
 
 We recommend configuring zram and a swapfile as described below to avoid out of memory crashes and performance issues while playing Star Citizen. See the links in the tip field and example `zram-generator.conf` below for details.
 - For 16GB RAM, we recommend configuring `zram-size = ram` with at least 24GB in a swap file.
