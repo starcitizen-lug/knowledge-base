@@ -66,20 +66,10 @@ or
    export DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE="on"
    export DXVK_NVAPI_DRS_NGX_DLSS_RR_OVERRIDE="on"
    export DXVK_NVAPI_DRS_NGX_DLSS_FG_OVERRIDE="on"
-   export DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE_RENDER_PRESET_SELECTION="RENDER_PRESET_K"
-   export DXVK_NVAPI_DRS_NGX_DLSS_RR_OVERRIDE_RENDER_PRESET_SELECTION="RENDER_PRESET_K"
+   export DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE_RENDER_PRESET_SELECTION="render_preset_latest"
+   export DXVK_NVAPI_DRS_NGX_DLSS_RR_OVERRIDE_RENDER_PRESET_SELECTION="render_preset_latest"
    ```
-
-{: .note-title }
-> DLSS 4.5
-> 
-> Enabling DLSS 4.5 will result in less performance than DLSS 4.0 in exchange for improved image quality. [RTX 20 & 30 series GPUs](https://www.nvidia.com/en-us/geforce/forums/geforce-graphics-cards/5/580689/dlss-45-super-resolution-faq/) will see a very severe performance impact and should stick with DLSS 4.0.
-> 
-> Enable DLSS 4.5 by using an alternative render preset:
-> - `RENDER_PRESET_M` for improved image quality but less performance.
-> - `RENDER_PRESET_L` for the best image quality but the least performance.
-
-5. To confirm DLSS 4.x is working, enable the debug overlay env var below. Look for it in-game to say `Render Preset: K/M/L`, `DLSSv3 v310.4.0` for DLSS 4.0, or `DLSSv3 v310.5.0` for DLSS 4.5.
+5. To confirm DLSS 4.x is working, enable the debug overlay env var below. Look for it in-game to say `Render Preset: K/M/L` or `DLSSv3 v310.5.0` for DLSS 4.5.
    ```
    export DXVK_NVAPI_SET_NGX_DEBUG_OPTIONS="DLSSIndicator=1024,DLSSGIndicator=2"
    ```
@@ -101,7 +91,7 @@ or
 
 {: .warning }
 >
-> - Mangohud and other FPS monitoring HUDS may interfere with Smooth Motion and cause game crashes. You may need to disable them.
+> - MangoHud and other FPS monitoring overlays, as well as DLSS, may interfere with Smooth Motion and cause game crashes. You may need to disable them.
 > - Vsync may need to be disabled in the game's graphics settings.
 
 {: .tip }
