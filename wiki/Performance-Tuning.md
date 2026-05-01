@@ -99,28 +99,3 @@ Dell laptops with Intel CPUs may have other factors that influence CPU frequency
 
 If changing the kernel scheduler between `Performance` and the various demand-based schedulers doesn't affect CPU frequency scaling for your laptop, try setting the SMBIOS thermal mode to `cool-bottom`. This mode behaves similarly to the `Conservative` kernel governor, gradually incrementing/decrementing the CPU frequency to stabilize the framerate.
 - Using the SMBIOS utility on Ubuntu, the command is `sudo smbios-thermal-ctl --set-thermal-mode=cool-bottom`
-
-## Increased performance for CPUs with multiple dies
-**Affected CPU generations:**
-- Amd Threadripper
-
-**Steps**
-1. Verify you have a CPU with multiple dies by running `lstopo`. If the results appear similar to the first image below, you can proceed:  
-    ![CPU Topology](/assets/images/Performance-Tuning/lstopo1.webp){: style="display: block;max-height: 300px;" }
-
-    If, on the other hand, your CPU is like this image where the dies are not shown, this will not improve your performace:  
-    ![CPU Topology](/assets/images/Performance-Tuning/lstopo2.webp){: style="display: block;max-height: 300px;" }
-2. Modify the following environment variable to match your system:  
-    ```
-    WINE_CPU_TOPOLOGY=Number_of_Threads:List_of_threads_indexes
-    ```
-    The `Number_of_threads` is the number of threads you want to run Star Citizen with.  
-    The `List_of_thread_indexes` can be determined by looking at the `lstopo` output.  
-    You can see the threads highlighted in the image below:  
-    ![CPU Topology](/assets/images/Performance-Tuning/lstopo3.webp){: style="display: block;max-height: 300px;" }
-
-    Run the game with the modified environment variable. As an example, the CPU shown below would end up with the arguments  
-    ```
-    WINE_CPU_TOPOLOGY=16:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
-    ```
-    ![CPU Topology](/assets/images/Performance-Tuning/lstopo4.webp)
