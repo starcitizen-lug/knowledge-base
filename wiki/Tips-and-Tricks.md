@@ -241,7 +241,24 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 - Set resolution with [USER.cfg](Tips-and-Tricks#usercfg)
 
 - Set DPI with [LUG Helper](#how-to-run-the-lug-helper) Maintenance menu > Edit wine prefix configuration
- 
+
+
+## Overlays
+
+### MangoHud
+- Edit the [launch script](#how-to-edit-the-launch-script) to enable environment variable `export MANGOHUD=1`
+- Remove the `#` symbol from the start of the line
+- Refer to mangohud [documentation](https://github.com/flightlessmango/MangoHud#hud-configuration) for configuration examples and keybinds
+- Create a config file named `$HOME/.config/MangoHud/wine-StarCitizen.conf`
+![MangoHud example](/assets/images/Tips-and-Tricks/mangohud.webp){: style="display: block;max-height: 350px;" }
+
+
+### DXVK Hud
+- Edit the [launch script](#how-to-edit-the-launch-script) to enable environment variable `export DXVK_HUD=fps,compiler`
+- Remove the `#` symbol from the start of the line
+- Rever to DXVK [documentation](https://github.com/doitsujin/dxvk#hud) for configuration examples
+
+
 ## HDR (High Dynamic Range)
 - Requires experimental native [Wayland](Tips-and-Tricks#wine-wayland) or [Gamescope](Tips-and-Tricks#gamescope)
 - To enable HDR in native Wayland:
