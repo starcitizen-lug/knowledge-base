@@ -18,13 +18,13 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 1. Install Wine **v9.4** or newer following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. If your distro provides an up to date version of wine (ie. Arch), you may install from its repos instead.
 2. Install winetricks 20250102 or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
-4. Set `vm.max_map_count` on your system to at least `16777216`
+4. Set `vm.max_map_count` on your system to at least `1048576`
 5. Set the Hard open file descriptors limit on your system to at least `524288`
 
 **To check and set vm.max_map_count temporarily**
 ```
 sysctl vm.max_map_count => To check the value
-sudo sysctl -w vm.max_map_count=16777216 => To set it temporarily
+sudo sysctl -w vm.max_map_count=1048576 => To set it temporarily
 ```
 
 **To set vm.max_map_count permanently**
@@ -32,7 +32,7 @@ sudo sysctl -w vm.max_map_count=16777216 => To set it temporarily
 _Distributions using sysctl.d: Manjaro / Antergos / Arch / Arch-based (probably) / Ubuntu (and probably derivatives) / Fedora_
 
 * Create a new drop-in config file: `/etc/sysctl.d/99-starcitizen-max_map_count.conf`
-* Add the following line to the file: `vm.max_map_count = 16777216`
+* Add the following line to the file: `vm.max_map_count = 1048576`
 * To reload it, run `sudo sysctl --system`
 
 
@@ -124,7 +124,7 @@ If not using the module included in nix-citizen, set `vm.max_map_count` and `fs.
 ```nix
 # ... your NixOS Config ...
 boot.kernel.sysctl = {
-  "vm.max_map_count" = 16777216;
+  "vm.max_map_count" = 1048576;
   "fs.file-max" = 524288;
 };
 ```
