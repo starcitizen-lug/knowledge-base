@@ -104,7 +104,11 @@ Other distros:
     ```
     export OXR_PARALLEL_VIEWS=1
     ```
-  - Debugging: edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and change WINEDEBUG to `export WINEDEBUG=-all,+openxr` to make useful logging messages appear in Game.log
+  - Debugging: edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and change WINEDEBUG to `export WINEDEBUG=-all,+openxr` to make useful logging messages appear in [Game.log](/Troubleshooting)
+    ```
+    <2026-05-03T17:06:11.556Z> [OpenXR] Using Meta Quest 3 on WiVRn (Runtime:  'v26.2.3' - 0.0.0)
+    ```
+  - If headset is not automatically found, add environment variable `export XR_RUNTIME_JSON=/path/to/your/openxr/1/active_runtime.json`
 
 
 ## TrackIR
