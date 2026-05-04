@@ -98,9 +98,9 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 
 ## Black or white RSI Launcher window
-- Try editing the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to add the RSI Launcher flag `--in-process-gpu`. For example:
+- Try editing the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to add the RSI Launcher flags `--in-process-gpu --disable-gpu`. For example:
   ```
-    "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" --in-process-gpu > "$launch_log" 2>&1
+    "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" --in-process-gpu --disable-gpu > "$launch_log" 2>&1
   ```
 
 
