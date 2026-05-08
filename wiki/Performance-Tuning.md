@@ -19,12 +19,13 @@ See [CIG's Spectrum post](https://robertsspaceindustries.com/spectrum/community/
 
 Zram stores swap in RAM using on-the-fly compression which improves game performance when memory utilization gets high. Some Penguins have had success with zswap instead, but it is less straightforward to optimize properly, so we only include zram instructions here.
 
-We recommend configuring zram and a swapfile as described below to avoid out of memory crashes and performance issues while playing Star Citizen. See the links in the tip field and example `zram-generator.conf` below for details.  
-When zram-size is set to `ram` zram-generator will look up the physical ram size and use that number automatically  
+We recommend configuring zram AND a swapfile as described below to avoid out of memory crashes and performance issues while playing Star Citizen. See the links in the tip field and example `zram-generator.conf` below for details.  
 
-- For 16GB RAM, we recommend configuring `zram-size = ram` with at least 24GB in a swap file.
-- For 32GB RAM, we recommend configuring `zram-size = ram` with at least 8GB in a swap file.
+- For 16GB RAM, we recommend configuring `zram-size = ram` and at least 24GB in a swap file.
+- For 32GB RAM, we recommend configuring `zram-size = ram` and at least 8GB in a swap file.
 - For 64GB RAM, we recommend configuring `zram-size = 4GB`. Consider also setting any size swap file as a backup.
+
+When zram-size is set to `ram`, zram-generator will look up the physical ram size and use that number automatically. Increase your swap file size further if you intend to run any background applications while playing the game.
 
 {: .important }
 > - When using zram, zswap needs to be [disabled](https://wiki.archlinux.org/title/Zswap#Toggling_zswap) to take full advantage of zram.
@@ -51,10 +52,6 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 - For 16GB RAM: At least 24GB swap.
 - For 32GB RAM: At least 8GB swap.
 - For 64GB RAM: Any size swap file.
-
-{: .important }
->
-> More swap should be configured if you intend to run background applications while playing the game.
 
 
 ## Nvidia Cache
