@@ -25,7 +25,7 @@ To contribute updates/information, please open an [issue report or pull request]
 > (Apr 25, 2026)
 >
 > Recent issues updating/installing Star Citizen  
-> You may see an out of space launcher crash or error code 3004/3005  
+> RSI Launcher may crash at calculating disk space. You may see an out of space or error code 3004/3005  
 > Log may show *"[Pipeline] Phase compute_size timed out after 60000ms, cancelling and skipping."*  
 > Sometimes caused by a slow or unreliable network connection.
 >
