@@ -48,9 +48,9 @@ compression-algorithm = zstd
 ```
 
 **Swap file only**  
-If you prefer not to use zram, a swap file will need to be [configured](https://wiki.archlinux.org/title/Swap#Swap_file). Btrfs users please follow the [Btrfs instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). We recommend configuring at least a combined 40GB RAM + swap, though more may be needed depending on your system memory usage.
-- For 16GB RAM: At least 24GB swap.
-- For 32GB RAM: At least 8GB swap.
+If you prefer not to use zram, a swap file will need to be [configured](https://wiki.archlinux.org/title/Swap#Swap_file). Btrfs users please follow the [Btrfs instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). We recommend configuring at least a combined 50GB RAM + swap, though more may be needed depending on your system memory usage.
+- For 16GB RAM: At least 34GB swap.
+- For 32GB RAM: At least 18GB swap.
 - For 64GB RAM: Any size swap file.
 
 
