@@ -85,8 +85,15 @@ _Distributions that use /etc/security/limits.conf_
    ```
 
 ## Flatpak Installation
+{: .important }
+> Do not change the game path in the RSI Launcher. Instead, put the game prefix on the game location you want
+>
+> Ensure the install location is whitelisted using Flatseal or similar methods.
+>
+> The RSI Launcher does not support temp paths via xdg-portals.
+
 Flatpak repository or [latest release](https://github.com/mactan-sc/rsilauncher/releases/latest)  
-For documentation and issues refer to [https://github.com/mactan-sc/rsilauncher](https://github.com/mactan-sc/rsilauncher)  
+For configuration and settings refer to [https://github.com/mactan-sc/rsilauncher](https://github.com/mactan-sc/rsilauncher)  
 1.  Add the repo
 ```
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -143,18 +150,26 @@ The Steam Deck is resource limited and Star Citizen performance will be poor. So
 >
 > The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
 
-{: .important }
->
-> If using flatpak apps, ensure the install location is whitelisted using Flatseal or similar methods.
->
-> The Star Citizen launcher does not support temp paths via xdg-portals.
-
 ### Lutris
+{: .important }
+> Do not change the game path in the RSI Launcher. Instead, put the game prefix on the game location you want
+>
+> Ensure the install location is whitelisted using Flatseal or similar methods.
+>
+> The RSI Launcher does not support temp paths via xdg-portals.
+
 1. Set the default runner to GE-Proton in global preferences
 2. Install Star Citizen from [Lutris](https://lutris.net/games/star-citizen/)
 3. Run the RSI Launcher, log in, and click install to finish installing the game
 
 ### Heroic Games Launcher
+{: .important }
+> Do not change the game path in the RSI Launcher. Instead, put the game prefix on the game location you want
+>
+> Ensure the install location is whitelisted using Flatseal or similar methods.
+>
+> The RSI Launcher does not support temp paths via xdg-portals.
+
 1. Download latest [Star Citizen installer](https://robertsspaceindustries.com/download).
 2. Install [Heroic Games Launcher](https://heroicgameslauncher.com/downloads).
 3. Launch Heroic, browse to `Wine Manager>Proton-GE` and install `Proton-GE-Latest`.
@@ -168,12 +183,26 @@ The Steam Deck is resource limited and Star Citizen performance will be poor. So
 11. Run the RSI Launcher, log in, and click install to finish installing the game
 
 ### Bottles
+{: .important }
+> Do not change the game path in the RSI Launcher. Instead, put the game prefix on the game location you want
+>
+> Ensure the install location is whitelisted using Flatseal or similar methods.
+>
+> The RSI Launcher does not support temp paths via xdg-portals.
+
 1. Create a new gaming bottle
 2. Change the wine runner to UMU-Proton or "system wine" 10.0
 3. Use the "Install Programs..." Star Citizen option
 4. Run Star citizen, log in, and click install to finish installing the game
 
 ### Faugus Launcher
+{: .important }
+> Do not change the game path in the RSI Launcher. Instead, put the game prefix on the game location you want
+>
+> Ensure the install location is whitelisted using Flatseal or similar methods.
+>
+> The RSI Launcher does not support temp paths via xdg-portals.
+
 1. Download latest [Star Citizen installer](https://robertsspaceindustries.com/download)
 2. Press the "New" button
 3. Set title to "Star Citizen"
