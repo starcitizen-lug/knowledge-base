@@ -53,7 +53,7 @@ Contribute to [STARC-197300](https://issue-council.robertsspaceindustries.com/pr
 - Experimental [Wine Wayland](/Tips-and-Tricks#wine-wayland) helps mitigate this for some
 
 ## Non-US keyboard keys not working
-1. Use the LUG Helper to [switch to a wine](/Tips-and-Tricks#how-to-add-a-wine-runner) with **staging** in the name
+1. Use the LUG Helper to [switch to a wine](/Tips-and-Tricks#how-to-add-a-wine-runner) with **staging** in the name 11.7 or older
 2. Use the LUG Helper Maintenance menu `Open Wine prefix configuration` button to run winecfg
 3. In the Input tab->Keyboard Settings, select your language from the list
 4. Keyboard scancode auto-detection may have to be enabled or disabled depending on your hardware. Try both.
