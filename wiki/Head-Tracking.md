@@ -100,6 +100,7 @@ Other distros:
   - Start the RSI Launcher and toggle on VR in Settings > {LIVE,PTU} > VR Support
   - Connect your device and make sure it is active before launching the game
   - Launch star citizen, the game will automatically connect to your headset
+  - Turn on VR in game settings
   - To fix canted displays being cross-eyed edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add environment variable:  
     ```
     export OXR_PARALLEL_VIEWS=1
