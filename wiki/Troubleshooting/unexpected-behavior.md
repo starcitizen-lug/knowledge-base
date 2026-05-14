@@ -76,10 +76,12 @@ This is a generic error code representing any issue with logging in to CIG serve
   - Verify by setting the environment variable `DXVK_HUD=1` and observing the device name in the upper left of the screen
 - Make sure your GPU drivers (Mesa/nvidia) are up to date
   - For AMD, be sure to use the open source radeon drivers (ie. vulkan-radeon), **not** the proprietary drivers (ie. amdvlk)
+  - For Nvidia, you may need to reboot after installing driver updates to clear this error
 - If using DX11 rendering instead of Vulkan, make sure DXVK is enabled/updated:
   - Use the LUG Helper to [update dxvk](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix)
 - Try switching to a non-staging wine runner from our [recommended runners](/Tips-and-Tricks#recommended-runners) list
 - Try [downgrading](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix) to an older DXVK version
+- Take care to not mix Proton and standard Wine runners on the same prefix. They are not fully compatible and proton may break your prefix.
 
 
 ## Failed to initialize dependencies error
