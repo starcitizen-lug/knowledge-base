@@ -83,18 +83,21 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 
 
 ## How to Run the LUG Helper
-1. Download the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) .tar.gz archive
-2. Extract the .tar.gz archive
-3. To run `lug-helper.sh` from a terminal (recommended):
+If your distro is listed, install one of the [community maintained packages](https://github.com/starcitizen-lug/lug-helper#distro-packages) and run it from your app launcher.
+
+Alternatively, download the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) .tar.gz archive from git.  
+1. Download and extract the **.tar.gz** archive
+2. To run `lug-helper.sh` from your file manager:
+    1. Navigate to the extracted archive location
+    2. Right click on `lug-helper.sh` and select Run as a Program
+3. To run `lug-helper.sh` from a terminal:
     1. Open your terminal and use `cd /path/to/extracted/archive` to navigate to the location
     2. List files with the `ls` command
     3. Once you are in the directory containing the `lug-helper.sh` script, run it by typing
        ```
        ./lug-helper.sh
        ```
-4. Alternatively, to run `lug-helper.sh` from your file manager:
-    1. Navigate to the extracted archive location
-    2. Right click on `lug-helper.sh` and select Run as a Program
+
 
 {: .tip }
 > The Helper uses Zenity for its optional GUI. If you don't see the GUI and want it, install Zenity from your package manager.
