@@ -88,15 +88,11 @@ If your distro is listed, install one of the [community maintained packages](htt
 Alternatively, [download](https://github.com/starcitizen-lug/lug-helper/releases/latest) the latest LUG Helper **.tar.gz** archive from git.  
 1. Download and extract the **.tar.gz** archive
 2. To run `lug-helper.sh` from your file manager:
-    1. Navigate to the extracted archive location
-    2. Right click on `lug-helper.sh` and select Run as a Program
+    1. Navigate to the extracted lug-helper directory.
+    2. Right click on `lug-helper.sh` and select **Run as a Program**.
 3. To run `lug-helper.sh` from a terminal:
-    1. Open your terminal and use `cd /path/to/extracted/archive` to navigate to the location
-    2. List files with the `ls` command
-    3. Once you are in the directory containing the `lug-helper.sh` script, run it by typing
-       ```
-       ./lug-helper.sh
-       ```
+    1. Open your terminal and cd into the extracted lug-helper directory with `cd /path/to/extracted/lug-helper` (List files with the `ls` command).
+    3. Once you are in the directory containing `lug-helper.sh`, run it by typing `./lug-helper.sh`
 
 
 {: .tip }
