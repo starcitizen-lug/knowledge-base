@@ -90,6 +90,7 @@ Alternatively, [download](https://github.com/starcitizen-lug/lug-helper/releases
 2. To run `lug-helper.sh` from your file manager:
     1. Navigate to the extracted archive location
     2. Right click on `lug-helper.sh` and select Run as a Program
+    3. Save the setting and then double click on `lug-helper.sh` to run it
 3. To run `lug-helper.sh` from a terminal:
     1. Open your terminal and use `cd /path/to/extracted/archive` to navigate to the location
     2. List files with the `ls` command
