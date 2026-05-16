@@ -35,6 +35,7 @@ When zram-size is set to `ram`, zram-generator will look up the physical ram siz
 > - See the Arch Wiki for [zram setup](https://wiki.archlinux.org/title/Zram#Using_zram-generator) instructions that should work for most distros.
 > - See the Arch Wiki for [swap file creation](https://wiki.archlinux.org/title/Swap#Swap_file_creation) instructions. Btrfs users, follow [these instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). Bazzite users, follow [these instructions](https://docs.bazzite.gg/Advanced/swapfile/).
 > - Verify your configuration with `zramctl` and `swapon --show`.
+> - With the zstd compression algorithm, you can experiment with higher zram amounts, ie: `zram-size = ram * 1.5`
 
 **Using zram-generator**  
 The `zram-generator` or `systemd-zram-generator` package must be installed and requires a configuration text file. Many distros use zram-generator by default. Use a text editor to modify the existing file or create your own file in `/etc/systemd` named `zram-generator.conf`.  
