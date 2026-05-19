@@ -21,8 +21,8 @@ Zram stores swap in RAM using on-the-fly compression which improves game perform
 
 We recommend configuring zram AND a swapfile as described below to avoid out of memory crashes and performance issues while playing Star Citizen. _Increase your swap file size further if you intend to run any background applications while playing the game._ See the links in the tip field and example `zram-generator.conf` below for details.  
 
-- For 16GB RAM, we recommend configuring `zram-size = ram` and at least 24-34GB in a swap file.
-- For 32GB RAM, we recommend configuring `zram-size = ram` and at least 8-18GB in a swap file.
+- For 16GB RAM, we recommend configuring `zram-size = ram` and also at least 24-34GB in a swap file.
+- For 32GB RAM, we recommend configuring `zram-size = ram` and also at least 8-18GB in a swap file.
 - For 64GB RAM, we recommend configuring `zram-size = 4GB`. Consider also setting any size swap file as a backup.
 
 When zram-size is set to `ram`, zram-generator will look up the physical ram size and use that number automatically.
