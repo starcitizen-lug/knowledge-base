@@ -244,20 +244,12 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 - Set DPI with [LUG Helper](#how-to-run-the-lug-helper) Maintenance menu > Edit wine prefix configuration
 
 
-## Overlays
-
-### MangoHud
-- Edit the [launch script](#how-to-edit-the-launch-script) to enable environment variable `export MANGOHUD=1`
-- Remove the `#` symbol from the start of the line
-- Refer to mangohud [documentation](https://github.com/flightlessmango/MangoHud#hud-configuration) for configuration examples and keybinds
-- Create a config file named `$HOME/.config/MangoHud/wine-StarCitizen.conf`
-![MangoHud example](/assets/images/Tips-and-Tricks/mangohud.webp){: style="display: block;max-height: 350px;" }
-
-
-### DXVK Hud
-- Edit the [launch script](#how-to-edit-the-launch-script) to enable environment variable `export DXVK_HUD=fps,compiler`
-- Remove the `#` symbol from the start of the line
-- Rever to DXVK [documentation](https://github.com/doitsujin/dxvk#hud) for configuration examples
+## Hide RSI Launcher Tray Icon
+- Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script)
+  Use `wine regedit` GUI to add registry key and DWORD value 1
+  `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer`  
+  `NoTrayItemsDisplay` = 1
+- Enable "close-to-quit" in RSI Launcher settings
 
 
 ## HDR (High Dynamic Range)
@@ -277,14 +269,24 @@ Varibles set using the in-game console must be reapplied each session. Create a 
   gamescope --hdr-enabled -W 2560 -H 1440 --force-grab-cursor -- "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" > "$launch_log" 2>&1
   ```
 - Enable HDR with flag `--hdr-enabled`
- 
 
-## Hide RSI Launcher Tray Icon
-- Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script)
-  Use `wine regedit` GUI to add registry key and DWORD value 1
-  `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer`  
-  `NoTrayItemsDisplay` = 1
-- Enable "close-to-quit" in RSI Launcher settings
+
+## Overlays
+
+### MangoHud
+- Edit the [launch script](#how-to-edit-the-launch-script) to enable environment variable `export MANGOHUD=1`
+- Remove the `#` symbol from the start of the line
+- Refer to mangohud [documentation](https://github.com/flightlessmango/MangoHud#hud-configuration) for configuration examples and keybinds
+- Create a config file named `$HOME/.config/MangoHud/wine-StarCitizen.conf`
+![MangoHud example](/assets/images/Tips-and-Tricks/mangohud.webp){: style="display: block;max-height: 350px;" }
+
+
+### DXVK Hud
+- Edit the [launch script](#how-to-edit-the-launch-script) to enable environment variable `export DXVK_HUD=fps,compiler`
+- Remove the `#` symbol from the start of the line
+- Rever to DXVK [documentation](https://github.com/doitsujin/dxvk#hud) for configuration examples
+
+
 
 ## Pre-launch and Post-exit Scripts
 The [launch script](#how-to-edit-the-launch-script) installed by the LUG Helper can be modified to run pre-launch and post-exit scripts. These scripts can be used to launch utilities like antimicrox, opentrack, etc., or disable/re-enable mouse acceleration for more precise FPS handling.
@@ -331,3 +333,12 @@ _sc-postexit.sh_
 ## KDE
 # kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" false
 ```
+
+
+## Third Party Mods
+
+{: .warning }
+> Use these mods at your own risk. Always inspect them for safety before using them.
+
+### StarStrings
+Adds blueprint pools to contracts. After [installation](https://github.com/MrKraken/StarStrings), a [pre-launch script](/Tips-and-Tricks#pre-launch-and-post-exit-scripts) can be created to use [wget](https://tldr.inbrowser.app/pages/common/wget) to download the latest [strings file](https://raw.githubusercontent.com/MrKraken/StarStrings/refs/heads/master/Data/Localization/english/global.ini). We recommend inspecting the file before using it for safety.
