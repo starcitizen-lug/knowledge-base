@@ -253,11 +253,11 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 
 
 ## HDR (High Dynamic Range)
-- Requires experimental native [Wayland](Tips-and-Tricks#wine-wayland) or [Gamescope](Tips-and-Tricks#gamescope)
+- Requires experimental native [Wayland](/Tips-and-Tricks#wine-wayland) or [Gamescope](/Tips-and-Tricks#gamescope)
 - To enable HDR in native Wayland:
-  1. Run `wayland-info | grep color` in a terminal. If you **do not** see `wp_color_manager_v1` then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and add the environment variable `ENABLE_HDR_WSI=1`
+  1. Run `wayland-info | grep color` in a terminal. If you **do not** see `wp_color_manager_v1` then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and [add the environment variable](/Tips-and-Tricks#how-to-edit-the-launch-script) `ENABLE_HDR_WSI=1`
   2. For Wine runners
-      - Add environment variable `DXVK_HDR=1`
+      - [Add environment variable](/Tips-and-Tricks#how-to-edit-the-launch-script) `DXVK_HDR=1`
   4. For Proton runners only (GE-Proton10-1 or newer)
       - Add environment variable `PROTON_ENABLE_HDR=1`
 
@@ -268,7 +268,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
   ```
   gamescope --hdr-enabled -W 2560 -H 1440 --force-grab-cursor -- "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" > "$launch_log" 2>&1
   ```
-- Enable HDR with flag `--hdr-enabled`
+- Enable HDR with the environment variable `--hdr-enabled`
 
 
 ## Overlays
