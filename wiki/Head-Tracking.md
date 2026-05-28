@@ -24,12 +24,21 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - FOIP may be a bit finnicky and your camera may not appear in the list in-game, but has been known to work if you toggle it on and off a few times.
 
 ### Unsupported hardware
-- Tobii does not support Linux. Its opentrack support uses the Windows only SDK. See [VM Passthrough](#tobii-eye-tracker-5-vm-passthrough) below.
+- Tobii does not support its consumer tracker products 4c and 5 on Linux.  
+  See [Experimental native Tobii](#experimental-native-tobii-eye-tracker-4c5-support) and [VM Passthrough](#tobii-eye-tracker-5-vm-passthrough) options below
 
-## Opentrack Configuration
+
+## Opentrack
+
+### Installing Opentrack
+- [Arch AUR](https://aur.archlinux.org/packages/opentrack)
+- [Appimage](https://github.com/megagtrwrath/opentrack-appimage-ci/releases)
+- [Build from source](https://github.com/opentrack/opentrack/wiki/Building-on-Linux)
+
+### Opentrack Configuration
 
 {: .important }
-> - For `LUG Wine` runners, use an official Opentrack build version  opentrack 2026.1.0 or later.
+> - For `LUG Wine` runners, use an Opentrack build version 2026.1.0 or newer.
 > - For any `GE-Proton` or `Proton` runner, include environment variable `PROTON_VERB="runinprefix"`.
 > - Some of our Penguins have reported issues with staging runners, so non-staging may be preferred.
 > - You may need to launch opentrack with or without the `--platform xcb` flag. Your opentrack package may include two different .desktop files for this, one labeled Wayland and one not.
@@ -44,6 +53,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
         `~/Games/star-citizen/runners/lug-wine-tkg-git-11.0-1/bin/wine`
       3. Click `Browse Prefix` and select your Star Citizen prefix. For example:  
         `~/Games/star-citizen`
+	  4. Make sure the grayed out prefix path in "UMU enabled Launchers" is empty or it may conflict with the Wine prefix path!
     - Proton (GE-Proton)
       1. Match your game's proton version
       2. Pick `Steam Play` select number 1 (any number other than zero)
@@ -51,18 +61,18 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 5. Confirm that the `ESYNC` and `FSYNC` settings match your settings
 6. Next to `Protocol`, make sure `Both` is selected
 
-Launch Star Citizen and click start in Opentrack.
+Launch Star Citizen and then click start in Opentrack.
 Configure Star Citizen's head tracking options under `Comms, FOIP & Head Tracking`:
 1. Set `Head Tracking - General - Source` to `TrackIR`
 2. Set `Head Tracking - General - Toggle - Enabled` to `Yes`
 
 {: .note }
+> - Game defaults to headtracking only being active when the character is seated
 > - May not work with Game Launchers in Flatpak
 > - If compiling from source, make sure `SDK_WINE` is set
-> - If compiling our custom Opentrack from source, make sure you are on the `wine-extended-proton` branch before building
 
 
-## Building Opentrack with ONNX Runtime
+### Building Opentrack with ONNX Runtime
 If you provide ONNX Runtime libraries to Opentrack when building it, it will offer Neuralnet as input option. This will allow you to use any webcam as a head tracking device.
 
 Arch-based distros:
@@ -85,20 +95,27 @@ Other distros:
 
 ## VR - Virtual Reality
 - Experimental VR using **Wine**
-  - Select a [LUG Wine Experimental Runner](/Tips-and-Tricks#recommended-runners) 11.2 or newer to prevent menus and theater mode from being stretched [STARC-195061](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-195061)
+  - Use Monado for PCVR/Wired headsets (Vive, Index), WiVRn for standalone headsets (Quest)
   - Set the game to the Vulkan renderer 
-  - Connect your device before starting the RSI Launcher
   - Start the RSI Launcher and toggle on VR in Settings > {LIVE,PTU} > VR Support
+  - Connect your device and make sure it is active before launching the game
+  - Launch star citizen, the game will automatically connect to your headset
+  - Turn on VR in game settings
   - To fix canted displays being cross-eyed edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and add environment variable:  
     ```
     export OXR_PARALLEL_VIEWS=1
     ```
+  - Debugging: edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and change WINEDEBUG to `export WINEDEBUG=-all,+openxr` to make useful logging messages appear in [Game.log](/Troubleshooting)
+    ```
+    <2026-05-03T17:06:11.556Z> [OpenXR] Using Meta Quest 3 on WiVRn (Runtime:  'v26.2.3' - 0.0.0)
+    ```
+  - If headset is not automatically found, add environment variable `export XR_RUNTIME_JSON=/path/to/your/openxr/1/active_runtime.json`
 
 
 ## TrackIR
 TrackIR 4/5 can work by using [this fork of linuxtrack](https://gitlab.com/fwfa123/linuxtrackx-ir).
 
-### Install
+### Install TrackIR
 1. Download the latest [Appimage release](https://gitlab.com/fwfa123/linuxtrackx-ir/-/releases) of fwfa123's linuxtrack fork.
 2. Mark the appimage executable. In your file manager, right click->properties->executable as program. Or, in a terminal: `chmod +x ./LinuxTrack-X-IR-x.xx.xx-x86_64.AppImage`
 3. Run the appimage.
@@ -107,7 +124,7 @@ TrackIR 4/5 can work by using [this fork of linuxtrack](https://gitlab.com/fwfa1
 6. In the `gaming` tab, click `install` on the `MFC42 Libraries`, following the prompts.
 7. In the `gaming` tab, click `custom prefix` and provide the Star Citizen Wine prefix path created by the LUG Helper (default: `~/Games/star-citizen`).
 
-### Configuration
+### Configure TrackIR
 1. In the `device setup` tab, you need to set `tracking device` to be `TrackIR/SmartNav`. You may need to refresh to see it. If you still do not see it, your udev rule is not working.
 2. In the `model setup` tab, select your `model name`, likely to be `NP track clip pro` or `NP track clip`. If using pro clip, specify which side of the head its mounted on.
 3. Click `save` and then `start` the tracking for testing purposes.
@@ -170,7 +187,7 @@ Now you should be able to access your VM from the following URL:
 3. Modify the opentrack Output setting to use "UDP over network" and enter the docker internal IP address of your host. If the IP address below does not work then do a nslookup on host.docker.internal from your Windows VM to find the correct IP address.
 4. Click on Start to send tracking data to your Linux host via UDP.
 
-    ![opentrack Windows config](https://github.com/user-attachments/assets/1d44f05e-72e0-4d5a-872a-3ec42b2fea7f){: style="display: block;max-width: 550px;" }
+    ![opentrack Windows config](/assets/images/Head-Tracking/opentrack-udp-remote-address.webp){: style="display: block;max-width: 550px;" }
 
 ### Opentrack configuration (Linux Host)
 1. [Follow the instructions above](#opentrack-configuration) to set up opentrack with support for wine
@@ -179,7 +196,7 @@ Now you should be able to access your VM from the following URL:
 4. Update your Filter and Mapping configuration to match your Windows VM
 5. You now should be able to launch Star Citizen and enable tracking
 
-    ![opentrack Linux config](https://github.com/user-attachments/assets/95af9a1a-0833-4322-b4f0-c859a8cbdd55){: style="display: block;max-width: 600px;" }
+    ![opentrack Linux config](/assets/images/Head-Tracking/opentrack-udp.webp){: style="display: block;max-width: 600px;" }
 
 ### Automatically start tracking on Windows VM boot
 You can configure windows to autostart Tobii Game Hub and opentrack so that you can just run docker compose up to enable tracking with one command.
@@ -188,4 +205,56 @@ You can configure windows to autostart Tobii Game Hub and opentrack so that you 
 2. Create a shortcut to opentrack with the target "C:\Program Files (x86)\opentrack\opentrack.exe"
 3. Setup opentrack to start tracking on launch by adding an entry under Options > Game detection with the value of "opentrack.exe". Make sure to select the "Start profiles from game executable names in this list" checkbox
 
-    ![opentrack Linux autostart](https://github.com/user-attachments/assets/07c4d95c-d12e-410a-b741-97f24c909a72){: style="display: block;max-width: 550px;" }
+    ![opentrack Linux autostart](/assets/images/Head-Tracking/opentrack-vm-autostart.webp){: style="display: block;max-width: 550px;" }
+
+## Experimental: Native Tobii Eye Tracker 4c/5 Support
+
+Using a patched Tobii Pro driver and Opentrack, Tobii support is now mostly functional.
+- What works
+	- Eye tracking
+	- Head Movement (X, Y, Z)
+	- Head Roll
+
+- What doesn't quite work yet
+	- Head Pitch and Yaw
+	- Packages for Distros other than Arch
+
+### Install guide
+
+1. Clone the [Tobii Eye Tracker Installer repo](https://github.com/megagtrwrath/tobii_eye_tracker_linux_installer) and download the pkgs from the [Releases](https://github.com/megagtrwrath/tobii_eye_tracker_linux_installer/releases) page.
+2. Manually install the `tobiiproeyetrackermanager tobiiusbservice` and `tobii_engine_linux` packages from the Releases section
+3. cd into the cloned repository `cd ./tobii_eye_tracker_linux_installer`
+4. Run the below set of commands to install the SystemD services and the Tobii Stream Engine  
+   
+```
+cd ./tobii_eye_tracker_linux_installer
+cp ./Services/tobii_engine.service /etc/systemd/system/tobii_engine.service
+cp ./Services/tobii_usb.service /etc/systemd/system/tobii_usb.service
+
+systemctl enable --now tobii_engine tobii_usb
+
+tar -xzf ./stream_engine_linux_4.24.0-linux-x86_64.tar.gz
+
+sudo cp -r ./tobii-stream-engine-4.24.0/include/tobii /usr/include
+
+sudo cp -r ./tobii-stream-engine-4.24.0/lib/ /usr/lib/
+
+sudo ln -sf /usr/lib/libtobii_stream_engine.so /usr/lib/libtobii_research.so
+```
+
+### Configuration
+
+With the Eye tracker drivers installed, you can now set up your Eye tracker.
+
+1. Open ```tobiiproeyetrackermanager```
+2. Select your eye tracker from the list of devices
+3. Press "Calibrate" and follow the on screen directions
+
+![Tobii Eye Tracker Manager](/assets/images/Head-Tracking/tobii.webp)
+
+
+### Tobii compatible Opentrack
+And now that the Eye tracker is calibrated, all that remains is installing Opentrack.
+Grab the OpenTrack-Tobii [Appimage from here](https://github.com/megagtrwrath/opentrack-appimage-ci/releases)
+
+You should now have fully working OpenTrack ready for use in the 'Verse

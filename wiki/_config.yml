@@ -1,6 +1,6 @@
 # wiki/_config.yml
 
-logo: "/assets/images/lug_logo_finished_by_polymachairoplacida.png"
+logo: "https://cdn.jsdelivr.net/gh/starcitizen-lug/knowledge-base@main/wiki/assets/images/lug_logo_finished_by_polymachairoplacida.webp"
 favicon_ico: "/assets/images/pico.ico"
 title: Star Citizen LUG Wiki
 description: The Star Citizen Linux Users Group Wiki. Everything you need to know to run Star Citizen on Linux!
@@ -46,10 +46,6 @@ nav_external_links:
     opens_in_new_tab: true # set to true to open this link in a new tab - defaults to false
   - title: 🗨 Discord
     url: https://discord.gg/meCFYPj
-    hide_icon: false # set to true to hide the external link icon - defaults to false
-    opens_in_new_tab: true # set to true to open this link in a new tab - defaults to false
-  - title: 😎 Matrix space
-    url: https://matrix.to/#/#SCLUG:matrix.org
     hide_icon: false # set to true to hide the external link icon - defaults to false
     opens_in_new_tab: true # set to true to open this link in a new tab - defaults to false
 

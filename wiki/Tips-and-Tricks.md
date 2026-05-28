@@ -8,7 +8,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 # Tips and Tricks
 
 ## Recommended Distros
-We strongly recommend choosing a distro that has up-to-date packages and a solid maintenance reputation.  
+We strongly recommend choosing a distro that has up-to-date packages and a solid maintenance reputation. The ones listed below tend to provide the best out-of-the-box compatibility with Star Citizen, but any up to date distro can work with varying degrees of effort.
 
 - ⭐ Fedora
 - Arch
@@ -58,6 +58,7 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 - [LUG Wine Experimental](https://github.com/starcitizen-lug/lug-wine-experimental/releases/latest)
   - LUG Wine plus additional temporary/experimental fixes for documented issues which have yet to be properly fixed upstream.
   - Please contribute to upstream reports/Issue Council reports if you need to use these runners! Our wiki will link to these where relevant.
+  - See [Experimental Wayland](#wine-wayland) for important caveats and workarounds for the experimental native winewayland runner
 - [RawFox](https://github.com/starcitizen-lug/raw-wine/releases/latest)
   - Managed by the [LUG Helper](#how-to-run-the-lug-helper)
 
@@ -82,18 +83,19 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 
 
 ## How to Run the LUG Helper
-1. Download the latest [LUG Helper](https://github.com/starcitizen-lug/lug-helper/releases/latest) .tar.gz archive
-2. Extract the .tar.gz archive
-3. To run `lug-helper.sh` from a terminal (recommended):
-    1. Open your terminal and use `cd /path/to/extracted/archive` to navigate to the location
-    2. List files with the `ls` command
-    3. Once you are in the directory containing the `lug-helper.sh` script, run it by typing
-       ```
-       ./lug-helper.sh
-       ```
-4. Alternatively, to run `lug-helper.sh` from your file manager:
-    1. Navigate to the extracted archive location
-    2. Right click on `lug-helper.sh` and select Run as a Program
+If your distro is listed, install one of the [community maintained packages](https://github.com/starcitizen-lug/lug-helper#distro-packages) and run it from your app launcher.
+
+Alternatively, [download](https://github.com/starcitizen-lug/lug-helper/releases/latest) the latest LUG Helper **.tar.gz** archive from git.  
+1. Download and extract the **.tar.gz** archive
+2. To run `lug-helper.sh` from your file manager:
+    1. Navigate to the extracted lug-helper directory.
+    2. Right click on `lug-helper.sh` and select **Run as a Program**.
+3. To run `lug-helper.sh` from a terminal:
+    1. Open your terminal and cd into the extracted lug-helper directory:  
+       `cd /path/to/extracted/lug-helper` (List files with the `ls` command)
+    3. Once you are in the directory containing lug-helper.sh, run it by typing:  
+       `./lug-helper.sh`
+
 
 {: .tip }
 > The Helper uses Zenity for its optional GUI. If you don't see the GUI and want it, install Zenity from your package manager.
@@ -102,7 +104,7 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 ## How to edit the launch script
 1. Run the [LUG Helper](#how-to-run-the-lug-helper) and select the `Maintenance and Troubleshooting` menu
 2. Choose the option to `Edit launch script`  
-   ![Edit launch script](https://github.com/user-attachments/assets/6f30b732-3406-4c59-b23b-32bbccacc5ae){: style="display: block;max-height: 350px;" }
+   ![Edit launch script](/assets/images/Tips-and-Tricks/edit-launch-script.webp){: style="display: block;max-height: 350px;" }
 3. Alternatively, locate the `sc-launch.sh` file in your Wine prefix directory (by default, `~/Games/star-citizen/sc-launch.sh`) and open it for editing.
 ```
 ############################################################################
@@ -116,7 +118,7 @@ export NEW_VARIABLE="value"
 ## How to update the launch script
 1. Run the [LUG Helper](#how-to-run-the-lug-helper) and select the `Maintenance and Troubleshooting` menu
 2. Choose the option to `Update launch script`
-   ![Update launch script](https://github.com/user-attachments/assets/e0925912-1c89-4eb2-9dae-5dbd3fe9806e){: style="display: block;max-height: 300px;" }
+   ![Update launch script](/assets/images/Tips-and-Tricks/update-launch-script.webp){: style="display: block;max-height: 300px;" }
 
 
 ## How to get a Wine maintenance shell using the launch script
@@ -181,23 +183,23 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 # r_width = 1920
 # r_height = 1080
 
-# Enable software cursor to workaround cursor warping
+# Enable software cursor to workaround cursor warping - 0 = hardware cursor, 1 = software cursor
 # pl_pit.forceSoftwareCursor = 1
 
-# Enable borderless windowed mode
+# Enable borderless windowed mode - [ 0 = windowed, 1 = borderless, 2 = fullscreen ]
 # r_WindowMode = 2
 
 # Force game renderer - 0 = DX11, 1 = Vulkan
 # r.graphicsRenderer = 0
 
-# Enable in-game performance HUD
+# Enable in-game performance HUD - [ 1, 2, 3, 0 ]
 # r_displayinfo = 1
 
 # Limit frame rate
 # sys_MaxFPS = 120
 # sys_MaxIdleFPS = 120
 
-# Toggle vsync
+# Toggle vsync - 0 = off, 1 = on
 # r_VSync = 0
 
 # Disable Temporal Super Resolution and all anti-aliasing
@@ -240,14 +242,22 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 - Set resolution with [USER.cfg](Tips-and-Tricks#usercfg)
 
 - Set DPI with [LUG Helper](#how-to-run-the-lug-helper) Maintenance menu > Edit wine prefix configuration
- 
+
+
+## Hide RSI Launcher Tray Icon
+- Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script)
+  Use `wine regedit` GUI to add registry key and DWORD value 1
+  `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer`  
+  `NoTrayItemsDisplay` = 1
+- Enable "close-to-quit" in RSI Launcher settings
+
+
 ## HDR (High Dynamic Range)
-- CIG's Vulkan implementation doesn't have HDR yet
-- Requires experimental native [Wayland](Tips-and-Tricks#wine-wayland) or [Gamescope](Tips-and-Tricks#gamescope)
+- Requires experimental native [Wayland](/Tips-and-Tricks#wine-wayland) or [Gamescope](/Tips-and-Tricks#gamescope)
 - To enable HDR in native Wayland:
-  1. Run `wayland-info | grep color` in a terminal. If you **do not** see `wp_color_manager_v1` or if you use an Nvidia gpu, then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and add the environment variable `ENABLE_HDR_WSI=1`
+  1. Run `wayland-info | grep color` in a terminal. If you **do not** see `wp_color_manager_v1` then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and [add the environment variable](/Tips-and-Tricks#how-to-edit-the-launch-script) `ENABLE_HDR_WSI=1`
   2. For Wine runners
-      - Add environment variable `DXVK_HDR=1`
+      - [Add environment variable](/Tips-and-Tricks#how-to-edit-the-launch-script) `DXVK_HDR=1`
   4. For Proton runners only (GE-Proton10-1 or newer)
       - Add environment variable `PROTON_ENABLE_HDR=1`
 
@@ -258,14 +268,25 @@ Varibles set using the in-game console must be reapplied each session. Create a 
   ```
   gamescope --hdr-enabled -W 2560 -H 1440 --force-grab-cursor -- "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" > "$launch_log" 2>&1
   ```
-- Enable HDR with flag `--hdr-enabled`
- 
+- Enable HDR with the environment variable `--hdr-enabled`
 
-## Hide RSI Launcher Tray Icon
-- Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script)
-  Use `wine regedit` GUI to add registry key and DWORD value 1
-  `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer`  
-  `NoTrayItemsDisplay` = 1
+
+## Overlays
+
+### MangoHud
+- Edit the [launch script](#how-to-edit-the-launch-script) to enable environment variable `export MANGOHUD=1`
+- Remove the `#` symbol from the start of the line
+- Refer to mangohud [documentation](https://github.com/flightlessmango/MangoHud#hud-configuration) for configuration examples and keybinds
+- Create a config file named `$HOME/.config/MangoHud/wine-StarCitizen.conf`
+![MangoHud example](/assets/images/Tips-and-Tricks/mangohud.webp){: style="display: block;max-height: 350px;" }
+
+
+### DXVK Hud
+- Edit the [launch script](#how-to-edit-the-launch-script) to enable environment variable `export DXVK_HUD=fps,compiler`
+- Remove the `#` symbol from the start of the line
+- Rever to DXVK [documentation](https://github.com/doitsujin/dxvk#hud) for configuration examples
+
+
 
 ## Pre-launch and Post-exit Scripts
 The [launch script](#how-to-edit-the-launch-script) installed by the LUG Helper can be modified to run pre-launch and post-exit scripts. These scripts can be used to launch utilities like antimicrox, opentrack, etc., or disable/re-enable mouse acceleration for more precise FPS handling.
@@ -286,8 +307,9 @@ _sc-launch.sh_
 trap "\"$WINEPREFIX\"/sc-postexit.sh" EXIT
 ```
 
-Some example pre/post launch scripts:
-
+**Some example pre/post launch scripts:**  
+Don't forget to mark the scripts as executable!
+ 
 _sc-prelaunch.sh_
 ```bash
 #!/bin/bash
@@ -311,3 +333,12 @@ _sc-postexit.sh_
 ## KDE
 # kwriteconfig5 --file "kcminputrc" --group "Mouse" --key "XLbInptAccelProfileFlat" false
 ```
+
+
+## Third Party Mods
+
+{: .warning }
+> Use these mods at your own risk. Always inspect them for safety before using them.
+
+### StarStrings
+Adds blueprint pools to contracts. After [installation](https://github.com/MrKraken/StarStrings), a [pre-launch script](/Tips-and-Tricks#pre-launch-and-post-exit-scripts) can be created to use [wget](https://tldr.inbrowser.app/pages/common/wget) to download the latest [strings file](https://raw.githubusercontent.com/MrKraken/StarStrings/refs/heads/master/Data/Localization/english/global.ini). We recommend inspecting the file before using it for safety.

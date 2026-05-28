@@ -18,13 +18,13 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 1. Install Wine **v9.4** or newer following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. If your distro provides an up to date version of wine (ie. Arch), you may install from its repos instead.
 2. Install winetricks 20250102 or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
-4. Set `vm.max_map_count` on your system to at least `16777216`
+4. Set `vm.max_map_count` on your system to at least `1048576`
 5. Set the Hard open file descriptors limit on your system to at least `524288`
 
 **To check and set vm.max_map_count temporarily**
 ```
 sysctl vm.max_map_count => To check the value
-sudo sysctl -w vm.max_map_count=16777216 => To set it temporarily
+sudo sysctl -w vm.max_map_count=1048576 => To set it temporarily
 ```
 
 **To set vm.max_map_count permanently**
@@ -32,7 +32,7 @@ sudo sysctl -w vm.max_map_count=16777216 => To set it temporarily
 _Distributions using sysctl.d: Manjaro / Antergos / Arch / Arch-based (probably) / Ubuntu (and probably derivatives) / Fedora_
 
 * Create a new drop-in config file: `/etc/sysctl.d/99-starcitizen-max_map_count.conf`
-* Add the following line to the file: `vm.max_map_count = 16777216`
+* Add the following line to the file: `vm.max_map_count = 1048576`
 * To reload it, run `sudo sysctl --system`
 
 
@@ -85,8 +85,15 @@ _Distributions that use /etc/security/limits.conf_
    ```
 
 ## Flatpak Installation
+{: .important }
+> Do not change the game path in the RSI Launcher. Instead, put the game prefix on the game location you want
+>
+> Ensure the install location is whitelisted using Flatseal or similar methods.
+>
+> The RSI Launcher does not support temp paths via xdg-portals.
+
 Flatpak repository or [latest release](https://github.com/mactan-sc/rsilauncher/releases/latest)  
-For documentation and issues refer to [https://github.com/mactan-sc/rsilauncher](https://github.com/mactan-sc/rsilauncher)  
+For configuration and settings refer to [https://github.com/mactan-sc/rsilauncher](https://github.com/mactan-sc/rsilauncher)  
 1.  Add the repo
 ```
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -124,7 +131,7 @@ If not using the module included in nix-citizen, set `vm.max_map_count` and `fs.
 ```nix
 # ... your NixOS Config ...
 boot.kernel.sysctl = {
-  "vm.max_map_count" = 16777216;
+  "vm.max_map_count" = 1048576;
   "fs.file-max" = 524288;
 };
 ```
@@ -143,40 +150,59 @@ The Steam Deck is resource limited and Star Citizen performance will be poor. So
 >
 > The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
 
-{: .important }
->
-> If using flatpak apps, ensure the install location is whitelisted using Flatseal or similar methods.
->
-> The Star Citizen launcher does not support temp paths via xdg-portals.
-
 ### Lutris
+{: .important }
+> Do not change the game path in the RSI Launcher. Instead, put the game prefix on the game location you want
+>
+> Ensure the install location is whitelisted using Flatseal or similar methods.
+>
+> The RSI Launcher does not support temp paths via xdg-portals.
 
-{: .warning }
-> The most recent Lutris release, 0.5.18/0.5.19, no longer works with Star Citizen out of the box and there is no sign of a new release on the horizon. You may try the steps below but, if you have any issues, we strongly recommend following our [Quick Start Guide](/Quick-Start-Guide) instead.
-
-1. Set the default wine runner to GE-Proton in global preferences
+1. Set the default runner to GE-Proton in global preferences
 2. Install Star Citizen from [Lutris](https://lutris.net/games/star-citizen/)
 3. Run the RSI Launcher, log in, and click install to finish installing the game
 
 ### Heroic Games Launcher
+{: .important }
+> Do not change the game path in the RSI Launcher. Instead, put the game prefix on the game location you want
+>
+> Ensure the install location is whitelisted using Flatseal or similar methods.
+>
+> The RSI Launcher does not support temp paths via xdg-portals.
+
 1. Download latest [Star Citizen installer](https://robertsspaceindustries.com/download).
 2. Install [Heroic Games Launcher](https://heroicgameslauncher.com/downloads).
 3. Launch Heroic, browse to `Wine Manager>Proton-GE` and install `Proton-GE-Latest`.
 4. Return to the Library page, and click Add Game.
 5. Set Title to `Star Citizen`.
-6. Click `Show Wine Settings` and ensure Wine Version is set to `Proton-GE-Latest`.
+9. Click `Show Wine Settings` and ensure Wine Version is set to `UMU-Proton`.
 7. Click `Run Installer First` and select the Star Citizen install file.
-8. Once install is complete, set `Select Executable` to the `RSI Launcher.exe` and click Finish.
-9. Open the game settings in Heroic, change to Advanced tab and under Environment Variables add `GAMEID=umu-starcitizen`.
-10. Run the RSI Launcher, log in, and click install to finish installing the game
+8. Once install is complete, set `Select Executable` to the `drive_c` `RSI Launcher.exe` and click Finish.
+9. Set wine version to `Proton-GE-Latest`.
+10. Open the game settings in Heroic, change to Advanced tab and under Environment Variables add `GAMEID=umu-starcitizen`.
+11. Run the RSI Launcher, log in, and click install to finish installing the game
 
 ### Bottles
+{: .important }
+> Do not change the game path in the RSI Launcher. Instead, put the game prefix on the game location you want
+>
+> Ensure the install location is whitelisted using Flatseal or similar methods.
+>
+> The RSI Launcher does not support temp paths via xdg-portals.
+
 1. Create a new gaming bottle
-2. Change the wine runner to GE-Proton or "system wine" 10.0
+2. Change the wine runner to UMU-Proton or "system wine" 10.0
 3. Use the "Install Programs..." Star Citizen option
 4. Run Star citizen, log in, and click install to finish installing the game
 
 ### Faugus Launcher
+{: .important }
+> Do not change the game path in the RSI Launcher. Instead, put the game prefix on the game location you want
+>
+> Ensure the install location is whitelisted using Flatseal or similar methods.
+>
+> The RSI Launcher does not support temp paths via xdg-portals.
+
 1. Download latest [Star Citizen installer](https://robertsspaceindustries.com/download)
 2. Press the "New" button
 3. Set title to "Star Citizen"
@@ -184,7 +210,7 @@ The Steam Deck is resource limited and Star Citizen performance will be poor. So
 5. Set the prefix to your preferred location e.g. `~/Games/star-citizen`
 6. Set the Protonfix value to `umu-starcitizen` on the Tools tab
 7. Press the "Play" button to run the installer, then exit
-8. Right click the game and set the "path" value to the RSI Launcher executable in the wine prefix
+8. Right click the game and set the "path" value to the `drive_c` `RSI Launcher.exe` in the prefix
 9. Press the "Play" button to run the RSI Launcher, log in, and click install tto finish installing the game
 
 ### Steam

@@ -9,8 +9,12 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 # 💾 Install & Update Problems
 
 ## Wine prefix creation failed
-- LUG Helper install log shows error similar to `warning: WINE is /path/to/bin/wine, which is neither on the path nor an executable file`
-- To fix, make sure the mount point is not marked `noexec`
+- If the LUG Helper install log shows an error similar to:  
+  `warning: WINE is /path/to/bin/wine, which is neither on the path nor an executable file`  
+  To fix, `cat /proc/mounts` and make sure the mount point is not marked `noexec`. You may need to explicitly set `defaults` or `exec`.
+- If the install log shows an error similar to:  
+  `SHA256 mismatch` or `no valid cabinets found`  
+  To fix, delete the winetricks cache in `~/.cache/winetricks/` and try installing again
 
 
 ## Launcher installation hangs at Updating Game Content
@@ -18,26 +22,9 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - Completely quit the launcher, ensuring no lingering wine processes remain, then verify files
 
 
-## Wine install fails to create .desktop files
-- Manually create a file `~/.local/share/applications/RSI Launcher.desktop` based on the following template. Be sure to update the `Exec=` and `Path=` lines!
-- Edit paths based on your install, then update the cache by running `update-desktop-database ~/.local/share/applications`
-  ```
-  [Desktop Entry]
-  Name=RSI Launcher
-  Type=Application
-  Comment=RSI Launcher
-  Keywords=Star Citizen;StarCitizen
-  StartupNotify=true
-  StartupWMClass=rsi launcher.exe
-  Icon=rsi-launcher.png
-  Exec="/home/{user}/Games/StarCitizen/sc-launch.sh"
-  Path=/home/{user}/Games/StarCitizen/dosdevices/c:/Program\sFiles/Roberts\sSpace\sIndustries/RSI\sLauncher
-  ```
-
-
 ## RSI Launcher error: Unable to Create Folder
 - This is a [known issue](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/rsi-launcher-2-10-0-release-notes) with the RSI Launcher, possible error code 8004
-- Manually create the LIVE directory after installing the RSI Launcher with the Helper. For a default install path, you can run:
+- Manually create the LIVE/PTU/TECH-PREVIEW directory after installing the RSI Launcher with the Helper. For a default install path, you can run:
   ```
   mkdir -p "~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE"
   ```

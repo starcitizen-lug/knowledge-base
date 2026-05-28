@@ -14,29 +14,43 @@ To contribute updates/information, please open an [issue report or pull request]
 
 ## Join us!
 
-🐧 Star Citizen Org: <a href="https://robertsspaceindustries.com/orgs/LUG">https://robertsspaceindustries.com/orgs/LUG</a>  
-🗨 Discord: <a href="https://discord.gg/meCFYPj">https://discord.gg/meCFYPj</a>  
-😎 Matrix space: <a href="https://matrix.to/#/#SCLUG:matrix.org">https://matrix.to/#/#SCLUG:matrix.org</a>  
+🐧 <a href="https://robertsspaceindustries.com/orgs/LUG">Star Citizen Org</a>  
+🗨 <a href="https://discord.gg/meCFYPj">Discord</a>  
 
 ## News
 
 ### Game Updates
 
-{: .important-title }
-> (Feb 19, 2026)
+{: .warning-title }
+> (Apr 25, 2026)
 >
-> Black screens and Blackout VFX on Vulkan
+> Recent issues updating/installing Star Citizen  
+> RSI Launcher may crash at calculating disk space. You may see an out of space or error code 3004/3005  
+> Log may show *"[Pipeline] Phase compute_size timed out after 60000ms, cancelling and skipping."*  
+> Sometimes caused by a slow or unreliable network connection.
 >
-> - If you experience a black screen on launch, see the [workaround here](/Troubleshooting/unexpected-behavior#black-game-window-after-clicking-launch)
-> - If you experience a temporary blackout or black screen effect in-game, see the [workaround here](/Troubleshooting/unexpected-behavior#blackout-or-black-screen-on-vulkan-when-flyingboostingbrakingdamaged)
+> 1. [Locate your Star Citizen LIVE](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory) directory.
+> 2. Create a new empty file in your LIVE directory named `Data.p4k.part`
+> 3. If you're installing the game for the first time, also create a new empty file named `Data.p4k`
+> 4. Re-launch the game and try the update or verify again.
+>
+> If the above steps don't work, try rolling back to an older version of the RSI Launcher:
+> 1. Download [RSI Launcher v2.12.1](https://install.robertsspaceindustries.com/rel/2/RSI%20Launcher-Setup-2.12.1.exe)
+> 2. Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run the following to install it.  
+Don't forget the adjust the path to your download
+```
+WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" wine "example/path/to/downloaded/RSI Launcher-Setup-2.12.1.exe"
+```
+> 3. Type `exit` to close the Maintenance shell, then re-launch the game.
+> 4. When the RSI Launcher asks to auto update, cancel the update to remain on v2.12.1 until the issue is fixed.
 
-{: .note-title }
-> (Jan 28, 2026)
+{: .important-title }
+> (Mar 25, 2026)
 >
-> Vulkan smurf mode has been fixed in 4.6
-> 
-> - If you were using DX11, you can now safely edit your [USER.cfg](/Tips-and-Tricks#usercfg) to switch back to Vulkan 🖖
-> - Consider undoing any workarounds including [Experimental Wine Wayland](/Tips-and-Tricks#wine-wayland) to avoid unexpected issues 
+> Launcher error 3221225477
+>
+> - Use winetricks to install vcrun2022 in your wine prefix
+> - Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run `winetricks -q vcrun2022` then `exit`
 
 
 ### General News

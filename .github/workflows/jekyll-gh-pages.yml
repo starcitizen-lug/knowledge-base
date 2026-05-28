@@ -7,6 +7,7 @@ on:
     branches: ["main"]
     paths-ignore:
       - 'README.md'
+      - '.github/**'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -30,6 +31,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Rewrite image urls
+        run: |
+          sudo chown -R $USER:$USER ./wiki
+          find ./wiki -name '*.md' -exec sed -i 's|(/assets/images/|(https://cdn.jsdelivr.net/gh/starcitizen-lug/knowledge-base@main/wiki/assets/images/|g' {} +
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
@@ -37,7 +42,7 @@ jobs:
         with:
           source: ./wiki
           destination: ./_site
-      - name: Clean sitemap namespace
+      - name: Prepare site
         run: |
           sudo chown -R $USER:$USER ./_site
           if [ -f ./_site/sitemap.xml ]; then

@@ -11,11 +11,11 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 ## Launcher empty or crash
 - Try logging out and back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
-- If using the Cosmic DE beta, this is a [known issue](https://github.com/pop-os/cosmic-epoch/issues/2368).
-- If using Niri see upstream [xwayland-satellite issue report](https://github.com/Supreeeme/xwayland-satellite/issues/189) (fixed in wayland-satellite 0.8.1)
-- Workarounds:
-  - Try using the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s  
-    `Open Wine prefix configuration` option in the Maintenance menu to turn on virtual desktop mode
+- Delete the rsilauncher directory in the wine prefix's Appdata  
+  `star-citizen/drive_c/users/<your username here>/AppData/Roaming/rsilauncher`
+- If using Pop!_OS Cosmic, this is a [known issue](https://github.com/pop-os/cosmic-epoch/issues/2368).
+  - Try using the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s `Open Wine prefix configuration`  
+    option in the Maintenance menu to turn on virtual desktop mode
   - Try xwayland-run package
     ```
     ############################################################################
@@ -23,8 +23,15 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
     ############################################################################
     xwayland-run -- "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" > "$launch_log" 2>&1
     ```
-  - Try [gamescope](/Tips-and-Tricks#gamescope), or an alternative compositor
   - Try switching to [Experimental Wine Wayland](/Tips-and-Tricks#wine-wayland)
+  - Try [gamescope](/Tips-and-Tricks#gamescope), or an alternative compositor
+
+
+## Launcher minimizes and won't re-open
+- Try to restore the window using the taskbar icon
+- If that doesn't work, [open your Wine prefix](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory), then delete the rsilauncher directory in the wine prefix's Appdata  
+  `star-citizen/drive_c/users/<your username here>/AppData/Roaming/rsilauncher`
+- To avoid the problem in the future, turn on `Enable close-to-quit` in the RSI Launcher settings
 
 
 ## Launcher indicates You are currently offline
@@ -62,16 +69,19 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 ## DirectX error message
 - Error may read `Star Citizen requires DirectX feature level of 11.1 as a minimum which is not supported at present on this machine`  
-  ![image](https://user-images.githubusercontent.com/3657071/224719841-ba1e831b-4ace-4f14-b423-3e49528154c6.png)
-- Check that the `Vulkan device` is not set to an integrated gpu (ie, Intel)
+  ![image](/assets/images/Troubleshooting/unexpected-behavior/dx-feature-level.webp)
+- If your system has an integrated gpu (ie, Intel), check that the `Vulkan device` is not set to the integrated gpu:
   - Identify device name using command `vulkaninfo --summary | grep deviceName`
   - Edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and set the device name environment variable: `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
   - Verify by setting the environment variable `DXVK_HUD=1` and observing the device name in the upper left of the screen
-- Also make sure your GPU drivers (Mesa/nvidia) are up to date and DXVK is enabled/updated.
-  - Use the LUG Helper to [update dxvk](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix)
+- Make sure your GPU drivers (Mesa/nvidia) are up to date
   - For AMD, be sure to use the open source radeon drivers (ie. vulkan-radeon), **not** the proprietary drivers (ie. amdvlk)
+  - For Nvidia, you may need to reboot after installing driver updates to clear this error
+- If using DX11 rendering instead of Vulkan, make sure DXVK is enabled/updated:
+  - Use the LUG Helper to [update dxvk](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix)
 - Try switching to a non-staging wine runner from our [recommended runners](/Tips-and-Tricks#recommended-runners) list
 - Try [downgrading](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix) to an older DXVK version
+- Take care to not mix Proton and standard Wine runners on the same prefix. They are not fully compatible and proton may break your prefix.
 
 
 ## Failed to initialize dependencies error
@@ -85,10 +95,14 @@ This is a generic error code representing any issue with logging in to CIG serve
 - If launching the game for the first time with a webcam plugged in, try unplugging the webcam, relaunching, then connecting it.
 
 
+## Game hangs at loading screen after clicking 'Launch'
+- If using a webcam, make sure V4L is installed (video 4 linux, package names may be similar to `v4l-utils`). If using V4L2 Loopback, try removing any loopback devices you have created.
+
+
 ## Black or white RSI Launcher window
-- Try editing the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to add the RSI Launcher flag `--in-process-gpu`. For example:
+- Try editing the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to add the RSI Launcher flags `--in-process-gpu --disable-gpu`. For example:
   ```
-    "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" --in-process-gpu > "$launch_log" 2>&1
+    "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" --in-process-gpu --disable-gpu > "$launch_log" 2>&1
   ```
 
 
@@ -98,15 +112,12 @@ This is a generic error code representing any issue with logging in to CIG serve
 - If using DX11 instead of Vulkan, make sure DXVK is [installed and up to date](/Tips-and-Tricks#updating-dxvk-within-a-wine-prefix).
 - If using Vulkan, you may need to revert to DX11 by creating a [USER.cfg](/Tips-and-Tricks#usercfg) file.
 - If using lsfg-vk for frame gen, use LUG Wine Experimental or revert to DX11.
-- If using gamescope, you may need to disable it or double check your configuration.
-- If using a webcam, make sure V4L is installed (video 4 linux, package names may be similar to `v4l-utils`). If using V4L2 Loopback, try removing any loopback devices you have created.
+- If using gamescope, try `GAMESCOPE_WSI_FORCE_BYPASS=1` or disable it for now and watch [this PR](https://github.com/ValveSoftware/gamescope/pull/2183).
 
 
 ## Blackout or black screen on Vulkan when flying/boosting/braking/damaged
-- Contribute to [STARC-179339](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-179339), then use the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to switch to a `LUG Experimental` Wine runner.
-- Alternatively, set the game to fullscreen in settings, create a [USER.cfg](/Tips-and-Tricks#usercfg) file, and set `r_height`, `r_width`, or both to be +/- 2 pixels (ex. for 1920x1080, set `r_height` to 1082 or 1078).
-- If the above step doesn't work, also edit `Height`/`Width` in your attributes.xml file. Use the LUG Helper to [locate your LIVE directory](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory), then navigate to and edit  
-   `.../LIVE/user/client/0/Profiles/default/attributes.xml`
+- Contribute to [STARC-179339](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-179339), then use the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to switch to LUG Wine >= 11.5
+- If that doesn't work, try a LUG Experimental wine runner.
 
 
 ## Laggy game when using Picom or Compton Compositors

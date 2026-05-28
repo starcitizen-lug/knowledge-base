@@ -1,6 +1,6 @@
 ---
 title: "Performance Tuning"
-description: "Suggestions for improving the performance of Star Citizen on Linux"
+description: "Helpful suggestions and tuning tips for improving the performance of Star Citizen on Linux"
 nav_order: 4
 md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
 ---
@@ -17,20 +17,29 @@ See [CIG's Spectrum post](https://robertsspaceindustries.com/spectrum/community/
 
 ## Zram & Swap
 
-We currently recommend a combined 40GB RAM + swap to avoid Out Of Memory crashes while playing Star Citizen. Systems with less than 40GB RAM will need additional swap or zram configured. Systems with >40GB RAM should be fine as long as any size swap file exists; the game likes to swap even when you have plenty of ram.
+Zram stores swap in RAM using on-the-fly compression which improves game performance when memory utilization gets high. Some Penguins have had success with zswap instead, but it is less straightforward to optimize properly, so we only include zram instructions here.
 
-Zram stores swap in RAM using on-the-fly compression which can improve game performance when memory utilization gets high. In our experience, this tends to provide better performance in Star Citizen than zswap.
-- For systems with 16GB RAM, we recommend all 16GB configured for zram with at least 24GB in a swap file.
-- For systems with 32GB RAM, we recommend configuring all 32GB for zram with at least 8GB in a swap file.
+We recommend configuring zram AND a swapfile as described below to avoid out of memory crashes and performance issues while playing Star Citizen. _Increase your swap file size further if you intend to run any background applications while playing the game._ See the links in the tip field and example `zram-generator.conf` below for details.  
+
+- For 16GB RAM, we recommend configuring `zram-size = ram` and also at least 24-34GB in a swap file.
+- For 32GB RAM, we recommend configuring `zram-size = ram` and also at least 8-18GB in a swap file.
+- For 64GB RAM, we recommend configuring `zram-size = 4GB`. Consider also setting any size swap file as a backup.
+
+When zram-size is set to `ram`, zram-generator will look up the physical ram size and use that number automatically.
+
+{: .important }
+> - When using zram, zswap needs to be [disabled](https://wiki.archlinux.org/title/Zswap#Toggling_zswap) to take full advantage of zram.
+> - System swap configuration needs to be optimized to take full advantage of zram. Follow the [configuration example here](https://wiki.archlinux.org/title/Zram#Optimizing_swap_on_zram).
 
 {: .tip }
-> - When using zram, zswap needs to be [disabled](https://wiki.archlinux.org/title/Zswap#Toggling_zswap).
-> - See the Arch Wiki for [zram setup](https://wiki.archlinux.org/title/Zram#Using_zram-generator) instructions that should work for most distros as well as [zram optimization](https://wiki.archlinux.org/title/Zram#Optimizing_swap_on_zram) steps.
+> - See the Arch Wiki for [zram setup](https://wiki.archlinux.org/title/Zram#Using_zram-generator) instructions that should work for most distros.
 > - See the Arch Wiki for [swap file creation](https://wiki.archlinux.org/title/Swap#Swap_file_creation) instructions. Btrfs users, follow [these instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). Bazzite users, follow [these instructions](https://docs.bazzite.gg/Advanced/swapfile/).
 > - Verify your configuration with `zramctl` and `swapon --show`.
+> - With the zstd compression algorithm, you can experiment with higher zram amounts, ie: `zram-size = ram * 1.5`
 
-The `zram-generator` or `systemd-zram-generator` package must be installed and requires a configuration text file. Many distros use zram-generator by default.  
-Use a text editor to modify existing or create your own text file in `/etc/systemd` named `zram-generator.conf` copy this sample:
+**Using zram-generator**  
+The `zram-generator` or `systemd-zram-generator` package must be installed and requires a configuration text file. Many distros use zram-generator by default. Use a text editor to modify the existing file or create your own file in `/etc/systemd` named `zram-generator.conf`.  
+Copy this example:
 ```
 ## /etc/systemd/zram-generator.conf
 
@@ -39,26 +48,11 @@ zram-size = ram
 compression-algorithm = zstd
 ```
 
-If you prefer not to use zram, a swap file will need to be [configured](https://wiki.archlinux.org/title/Swap#Swap_file). Btrfs users please follow the [Btrfs instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). We recommend configuring at least a combined 40GB RAM + swap:
-- For 16GB RAM: At least 24GB swap
-- For 32GB RAM: At least 8GB swap
-
-{: .important }
->
-> More swap should be configured if you intend to run background applications while playing the game.
-
-
-## ESync/FSync/NTSync
-
-{: .tip }
-> If you've installed the game via our [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper), these settings are pre-configured for you.
-
-- If these environment variables are set, Wine will automatically choose the best option between esync or fsync.
-  ```
-  export WINEESYNC=1
-  export WINEFSYNC=1
-  ```
-- `NTSync` requires kernel 6.14+ and a wine 10.16 or newer which can be easily [installed](Tips-and-Tricks#how-to-add-a-wine-runner) using the LUG Helper. No additional environment variables are needed.
+**Swap file only**  
+If you prefer not to use zram, a swap file will need to be [configured](https://wiki.archlinux.org/title/Swap#Swap_file). Btrfs users please follow the [Btrfs instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). We recommend configuring at least a combined 50GB RAM + swap, though more may be needed depending on your system memory usage.
+- For 16GB RAM: At least 34GB swap.
+- For 32GB RAM: At least 18GB swap.
+- For 64GB RAM: Any size swap file.
 
 
 ## Nvidia Cache
@@ -105,28 +99,3 @@ Dell laptops with Intel CPUs may have other factors that influence CPU frequency
 
 If changing the kernel scheduler between `Performance` and the various demand-based schedulers doesn't affect CPU frequency scaling for your laptop, try setting the SMBIOS thermal mode to `cool-bottom`. This mode behaves similarly to the `Conservative` kernel governor, gradually incrementing/decrementing the CPU frequency to stabilize the framerate.
 - Using the SMBIOS utility on Ubuntu, the command is `sudo smbios-thermal-ctl --set-thermal-mode=cool-bottom`
-
-## Increased performance for CPUs with multiple dies
-**Affected CPU generations:**
-- Amd Threadripper
-
-**Steps**
-1. Verify you have a CPU with multiple dies by running `lstopo`. If the results appear similar to the first image below, you can proceed:  
-    ![CPU Topology](https://user-images.githubusercontent.com/39007301/220378862-d4b9bbd7-15b3-4e1e-b77d-6b19f0908ba8.png){: style="display: block;max-height: 300px;" }
-
-    If, on the other hand, your CPU is like this image where the dies are not shown, this will not improve your performace:  
-    ![CPU Topology](https://user-images.githubusercontent.com/39007301/220378475-160e9091-3b2c-407b-acff-d606892d21c5.png){: style="display: block;max-height: 300px;" }
-2. Modify the following environment variable to match your system:  
-    ```
-    WINE_CPU_TOPOLOGY=Number_of_Threads:List_of_threads_indexes
-    ```
-    The `Number_of_threads` is the number of threads you want to run Star Citizen with.  
-    The `List_of_thread_indexes` can be determined by looking at the `lstopo` output.  
-    You can see the threads highlighted in the image below:  
-    ![CPU Topology](https://user-images.githubusercontent.com/39007301/220380665-5378ccc5-474e-4db2-8a4a-e893bb4ab347.png){: style="display: block;max-height: 300px;" }
-
-    Run the game with the modified environment variable. As an example, the CPU shown below would end up with the arguments  
-    ```
-    WINE_CPU_TOPOLOGY=16:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
-    ```
-    ![CPU Topology](https://user-images.githubusercontent.com/39007301/220382182-3525c3e8-4466-4489-8e85-7c1319ac3a1b.png)

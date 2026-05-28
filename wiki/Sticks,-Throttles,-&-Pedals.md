@@ -31,25 +31,17 @@ VKB has distribution centers in the EU, USA, and Australia. VKB also sells parts
 
 ## VKB Devices
 
-{: .tip }
-> Enable hidraw access to your VKB devices  
-> Create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules`
-```
-# Set the "uaccess" tag for raw HID access for VKB Devices in wine
-KERNEL=="hidraw*", ATTRS{idVendor}=="231d", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
-```
-
+{: .tip-title }
+> Enable hidraw access to your VKB devices
+> 
+> 1. Run the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper).
+> 2. Select the `Maintenance and Troubleshooting` menu, then choose `Create joystick hidraw rules`.
+> 3. Switch to a [LUG Wine](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.4 or newer.
 
 {: .important-title }
 > After adding the udev rule
 >
-> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that has `Sim (C) Alex Oz` in the name, and click the Disable button.
-
-{: .important-title }
-> Hidraw
->
-> Hidraw is recommended for VKB devices running older firmware with a © symbol in the name, or consider upgrading your firmware
-> You can check the device name using `lsusb` or `evdev-joystick --list`.
+> Unplug and replug your device
 
 ### VKB Gladiator
 
@@ -65,33 +57,31 @@ Requires a windows-only software for calibration and configuration. [Link](https
 
 Requires a windows-only software for calibration and configuration. [Link; scroll down](https://support.virpil.com/en/support/solutions)
 
-{: .tip }
+{: .tip-title }
 > Enable hidraw access to your Virpil devices  
-> Create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
-> ```
-> # Set the "uaccess" tag for raw HID access for Virpil Devices in wine
-> KERNEL=="hidraw*", ATTRS{idVendor}=="3344", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
-> ```
+> 
+> 1. Run the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper).
+> 2. Select the `Maintenance and Troubleshooting` menu, then choose `Create joystick hidraw rules`.
+> 3. Switch to a [LUG Wine](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.4 or newer.
 
 {: .important-title }
 > After adding the udev rule
 >
-> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the non-hidraw device(s), and click the Disable button.
+> Unplug and replug your device
 
 ## ThrustMaster Devices
 
-{: .tip }
+{: .tip-title }
 > Enable hidraw access to your ThrustMaster devices  
-> Create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content:
-> ```
-> # Set the "uaccess" tag for raw HID access for ThrustMaster Devices in wine
-> KERNEL=="hidraw*", ATTRS{idVendor}=="044f", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"
-> ```
+> 
+> 1. Run the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper).
+> 2. Select the `Maintenance and Troubleshooting` menu, then choose `Create joystick hidraw rules`.
+> 3. Switch to a [LUG Wine](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.4 or newer.
 
 {: .important-title }
 > After adding the udev rule
 >
-> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select your device(s), and click the Disable button.
+> Unplug and replug your device
 
 ### Thrustmaster T-16000
 
@@ -102,7 +92,7 @@ The yaw potentiometer on these sticks tends to fail after a time. It may be poss
 - A bit of soldering to [replace the potentiometer](https://www.reddit.com/r/hotas/comments/cronns/comment/ex8oo4b/?context=3)
 
 - Thrustmaster T16000 sticks may not appear in the Game Controllers list unless DLL overrides for dinput and xinput are added:
-    - Use the LUG Helper's Maintenance menu `Open Wine prefix configuration` option
+    - Use the LUG Helper's Maintenance menu `Open Wine prefix configuration` option.
     - In the Wine configuration window, select the `Libraries` tab.
     - Use the `New override for library` dropdown to add overrides for `dinput` and `xinput`.
     - If there is more than one `xinput` entry, add them all.
@@ -128,6 +118,15 @@ Change LEDs with a simple python script
 > Follow the instructions below to obtain device info and enable HIDRAW.
 
 ### Find Device Info
+
+Use `lsusb` to retrieve the Vendor ID and Model ID.  
+Example:
+```bash
+$ lsusb
+Bus 001 Device 011: ID 231d:0200 VKB-Sim © Alex Oz 2021  VKBsim Gladiator EVO  R  
+Bus 001 Device 012: ID 231d:0201 VKB-Sim © Alex Oz 2021  VKBsim Gladiator EVO  L
+```
+
 Use `udevadm` to retrieve the Vendor ID, Model Name, and Model ID that the device reports to the system.
 ```bash
 udevadm info -n /dev/input/by-id/usb-your-joystick-name | grep -E 'ID_VENDOR_ID|ID_MODEL_ID|ID_MODEL'
@@ -144,7 +143,7 @@ E: ID_MODEL_ID=0126
 ### Enable HIDRAW
 
 - Create a text file in `/etc/udev/rules.d` named `40-starcitizen-joystick-uaccess.rules` with the following content.  
-  Replace `<PLACEHOLDER_REPLACE_WITH_YOUR_ID_VENDOR_ID>` with the Vendor ID retrieved in the step above. For working examples, see the VKB, Virpil, or Thrustmaster sections above.
+  Replace `<PLACEHOLDER_REPLACE_WITH_YOUR_ID_VENDOR_ID>` with the Vendor ID retrieved in the step above.
  ```
  # Set the "uaccess" tag for raw HID access for input devices in wine.
  KERNEL=="hidraw*", ATTRS{idVendor}=="<PLACEHOLDER_REPLACE_WITH_YOUR_ID_VENDOR_ID>", ATTRS{idProduct}=="*", MODE="0660", TAG+="uaccess"

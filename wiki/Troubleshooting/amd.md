@@ -1,6 +1,6 @@
 ---
 title: "💖 AMD"
-description: "Known issues and troubleshooting steps for AMD users running Star Citizen on Linux"
+description: "Known issues, workarounds, and troubleshooting steps for AMD GPU users running Star Citizen on Linux"
 parent: "Troubleshooting"
 nav_order: 6
 md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
