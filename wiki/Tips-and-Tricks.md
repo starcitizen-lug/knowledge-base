@@ -234,9 +234,9 @@ Varibles set using the in-game console must be reapplied each session. Create a 
   - Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export DISPLAY=` to unset it to empty
   - If you experience a black or white RSI Launcher, add this [RSI Launcher.exe argument](/Troubleshooting/unexpected-behavior#black-or-white-rsi-launcher-window)
 - Experimental **Proton** Wayland (for proton runners **not** wine)
-  - Add environment variable `PROTON_ENABLE_WAYLAND=1`
+  - Add environment variable `export PROTON_ENABLE_WAYLAND=1`
  
-- Set primary monitor, Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `WAYLANDDRV_PRIMARY_MONITOR` Replace the value for your monitor DP-1, DP-2, HDMI-A-1, etc  
+- Set primary monitor, Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export WAYLANDDRV_PRIMARY_MONITOR` Replace the value for your monitor DP-1, DP-2, HDMI-A-1, etc  
     `export WAYLANDDRV_PRIMARY_MONITOR=DP-1`  
 
 - Set resolution with [USER.cfg](Tips-and-Tricks#usercfg)
@@ -255,11 +255,11 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 ## HDR (High Dynamic Range)
 - Requires experimental native [Wayland](/Tips-and-Tricks#wine-wayland) or [Gamescope](/Tips-and-Tricks#gamescope)
 - To enable HDR in native Wayland:
-  1. Run `wayland-info | grep color` in a terminal. If you **do not** see `wp_color_manager_v1` then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and [add the environment variable](/Tips-and-Tricks#how-to-edit-the-launch-script) `ENABLE_HDR_WSI=1`
+  1. Run `wayland-info | grep color` in a terminal. If you **do not** see `wp_color_manager_v1` then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and [add the environment variable](/Tips-and-Tricks#how-to-edit-the-launch-script) `export ENABLE_HDR_WSI=1`
   2. For Wine runners
-      - [Add environment variable](/Tips-and-Tricks#how-to-edit-the-launch-script) `DXVK_HDR=1`
+      - [Add environment variable](/Tips-and-Tricks#how-to-edit-the-launch-script) `export DXVK_HDR=1`
   4. For Proton runners only (GE-Proton10-1 or newer)
-      - Add environment variable `PROTON_ENABLE_HDR=1`
+      - Add environment variable `export PROTON_ENABLE_HDR=1`
 
 
 ## Gamescope
@@ -268,7 +268,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
   ```
   gamescope --hdr-enabled -W 2560 -H 1440 --force-grab-cursor -- "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" > "$launch_log" 2>&1
   ```
-- Enable HDR with the environment variable `--hdr-enabled`
+- Enable HDR with the environment variable `export --hdr-enabled`
 
 
 ## Overlays
