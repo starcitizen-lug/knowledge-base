@@ -92,6 +92,7 @@ or
 {: .warning }
 >
 > - MangoHud and other FPS monitoring overlays, as well as DLSS, may interfere with Smooth Motion and cause game crashes. You may need to disable them.
+> - If using [Wine Wayland](/Tips-and-Tricks#wine-wayland), Smooth Motion has been known to cause framerate issues or random freezes.
 > - Vsync may need to be disabled in the game's graphics settings.
 
 {: .tip }
