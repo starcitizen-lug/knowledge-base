@@ -226,6 +226,8 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 > If the `Launch Game` button is unclickable in the launcher, or mouse clicks are not working in settings, the buttons may be offset. Resize the window to reset them, or use `Tab`/`Shift+Tab` and `Enter` to interact with them.
 > 
 > Turn off any virtual keyboard. These conflict with the `F` interaction key and make the inner-thought menu appear to flicker.
+>
+> [Nvidia Smooth Motion](/Troubleshooting/nvidia#nvidia-smooth-motion) has been known to cause framerate issues or random freezes with Wine Wayland and may need to be disabled.
 
 - Experimental **Wine** Wayland
   - Use the [LUG Helper](#how-to-run-the-lug-helper) to switch to [LUG Wine Experimental Wayland](#how-to-add-a-wine-runner).
