@@ -216,6 +216,6 @@ The Steam Deck is resource limited and Star Citizen performance will be poor. So
 ### Steam
 
 {: .highlight }
-> We do not recommend installing Star Citizen within Steam. While it can be done, it creates several issues that we feel are not worth the effort to try to work around. For example, it limits configurability options and does not invoke needed protonfixes by default.
+> We do not recommend installing Star Citizen within Steam. While it can be done, it creates several issues that we feel are not worth the effort to try to work around. For example, it limits configurability options, does not invoke needed protonfixes by default, and can result in EAC errors.
 > 
-> We believe you will have a much better experience following our [Quick Start Guide](Quick-Start-Guide). If you want to use Steam's proton, you may use umu-launcher by following the [Proton Installation](#proton-installation) instructions above.
+> We believe you will have a much better experience following our [Quick Start Guide](Quick-Start-Guide). If you want to use Steam's proton, you may use umu-launcher by following the [Proton Installation](#proton-installation) instructions above. If you just want to launch the game via Steam, you can try adding the launch script installed by our Helper as a non-Steam game.
