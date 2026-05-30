@@ -59,6 +59,7 @@ or
 
 ## DLSS (Deep Learning Super Sampling)
 ## Nvidia Smooth Motion
+
 {: .warning }
 >
 > - Do not use DLSS and [Smooth Motion](#nvidia-smooth-motion) at the same time. It may result in poor framerates, freezes, and severe artifacts.
@@ -87,6 +88,7 @@ or
 
 
 ## Nvidia Smooth Motion
+
 {: .warning }
 >
 > - Do not use [DLSS](#dlss-deep-learning-super-sampling) and Smooth Motion at the same time. It may result in poor framerates, freezes, and severe artifacts.
