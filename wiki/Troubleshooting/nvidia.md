@@ -58,7 +58,6 @@ or
 
 
 ## DLSS (Deep Learning Super Sampling)
-## Nvidia Smooth Motion
 
 {: .warning }
 >
