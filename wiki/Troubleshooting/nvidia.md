@@ -29,7 +29,9 @@ or
   - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
 
 ## Severe frame drops
-- Some Penguins are seeing VRAM exhaustion problems on Nvidia cards. Overriding the max allowed VRAM allocation may help.
+1. Do not use [DLSS](#dlss-deep-learning-super-sampling) and [Smooth Motion](#nvidia-smooth-motion) at the same time. It may result in poor framerates, freezes, and severe artifacts.
+2. Some Penguins are seeing VRAM exhaustion problems on Nvidia cards. Overriding the max allowed VRAM allocation may help:
+   
 - Use the LUG Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script).
 - **If you're using DXVK:**
   - Add the following environment variable to your [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script). Replace `4096` with the appropriate value from the table below.
@@ -56,6 +58,11 @@ or
 
 
 ## DLSS (Deep Learning Super Sampling)
+## Nvidia Smooth Motion
+{: .warning }
+>
+> - Do not use DLSS and [Smooth Motion](#nvidia-smooth-motion) at the same time. It may result in poor framerates, freezes, and severe artifacts.
+
 1. Use the latest [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to install a LUG-Wine runner. (For any other wine runners, avoid wine-staging)
 2. Use the latest [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper), select `Manage DXVK`, and install `DXVK-NVAPI`
 3. DLSS 3 will now be available in the game options
@@ -80,6 +87,13 @@ or
 
 
 ## Nvidia Smooth Motion
+{: .warning }
+>
+> - Do not use [DLSS](#dlss-deep-learning-super-sampling) and Smooth Motion at the same time. It may result in poor framerates, freezes, and severe artifacts.
+> - MangoHud and other FPS monitoring overlays may interfere with Smooth Motion and cause game crashes. You may need to disable them.
+> - If using [Wine Wayland](/Tips-and-Tricks#wine-wayland), Smooth Motion has been known to cause framerate issues or random freezes.
+> - Vsync may need to be disabled in the game's graphics settings.
+
 - To enable Smooth Motion on supported cards, use the LUG Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script), then add the following environment variable:
   ```
   export NVPRESENT_ENABLE_SMOOTH_MOTION=1
@@ -88,12 +102,6 @@ or
   ```
   export NVPRESENT_QUEUE_FAMILY=1
   ```
-
-{: .warning }
->
-> - MangoHud and other FPS monitoring overlays, as well as DLSS, may interfere with Smooth Motion and cause game crashes. You may need to disable them.
-> - If using [Wine Wayland](/Tips-and-Tricks#wine-wayland), Smooth Motion has been known to cause framerate issues or random freezes.
-> - Vsync may need to be disabled in the game's graphics settings.
 
 {: .tip }
 > When using Smooth Motion, the following environment variables may slightly improve latency if you have a compatible monitor:
