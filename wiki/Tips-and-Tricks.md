@@ -238,7 +238,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 - Experimental **Proton** Wayland (for proton runners **not** wine)
   - Add environment variable `PROTON_ENABLE_WAYLAND=1`
  
-- Set primary monitor, Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `WAYLANDDRV_PRIMARY_MONITOR` Replace the value for your monitor DP-1, DP-2, HDMI-A-1, etc  
+- Set primary monitor, Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export WAYLANDDRV_PRIMARY_MONITOR` Replace the value for your monitor DP-1, DP-2, HDMI-A-1, etc  
     `export WAYLANDDRV_PRIMARY_MONITOR=DP-1`  
 
 - Set resolution with [USER.cfg](Tips-and-Tricks#usercfg)
@@ -270,7 +270,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
   ```
   gamescope --hdr-enabled -W 2560 -H 1440 --force-grab-cursor -- "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" > "$launch_log" 2>&1
   ```
-- Enable HDR with the environment variable `--hdr-enabled`
+- Enable HDR with the environment variable `export --hdr-enabled`
 
 
 ## Overlays
