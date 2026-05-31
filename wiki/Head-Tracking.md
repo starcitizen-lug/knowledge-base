@@ -97,6 +97,7 @@ Other distros:
 - Experimental VR using **Wine**
   - Use Monado for PCVR/Wired headsets (Vive, Index), WiVRn for standalone headsets (Quest)
     - Flatpak release should be installed for the user instead of system for ease of setup and configuration
+  - Switch to a [LUG Wine](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.1 or newer
   - Set the game to the Vulkan renderer 
   - Start the RSI Launcher and toggle on VR in Settings > {LIVE,PTU} > VR Support
   - Connect your device and make sure it is active before launching the game
