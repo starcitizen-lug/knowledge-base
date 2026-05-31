@@ -270,7 +270,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
   ```
   gamescope --hdr-enabled -W 2560 -H 1440 --force-grab-cursor -- "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" > "$launch_log" 2>&1
   ```
-- Enable HDR with the environment variable `export --hdr-enabled`
+- Enable HDR with the argument `--hdr-enabled`
 
 
 ## Overlays
