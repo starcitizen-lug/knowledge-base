@@ -233,7 +233,11 @@ Varibles set using the in-game console must be reapplied each session. Create a 
   - Use the [LUG Helper](#how-to-run-the-lug-helper) to switch to [LUG Wine Experimental Wayland](#how-to-add-a-wine-runner).
  
   For any other wine runners:
-  - Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export DISPLAY=` to unset it to empty
+  - Edit the [launch script](#how-to-edit-the-launch-script) to modify environment variable `WINEDLLOVERRIDES` and add to the end `;winex11.drv=d`  
+    Example:  
+    ```
+    export WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe,winemenubuilder.exe=d;winex11.drv=d"
+    ```
   - If you experience a black or white RSI Launcher, add this [RSI Launcher.exe argument](/Troubleshooting/unexpected-behavior#black-or-white-rsi-launcher-window)
 - Experimental **Proton** Wayland (for proton runners **not** wine)
   - Add environment variable `PROTON_ENABLE_WAYLAND=1`
