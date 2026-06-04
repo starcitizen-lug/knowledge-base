@@ -44,13 +44,6 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
   - Many keyboards and mice can also have a "joystick" part in Linux, which Wine can detect. Unfortunately, Wine may be confused about it, as they are not real joysticks. In this case, the game could crash. Use the LUG Helper's maintenance menu to run the wine control panel and disable your keyboard and/or mice.
 
 
-## Game launcher fails to start
-
-- Possible cause: Outdated glibc
-  - Log message may include `could not load ntdll.so ... version 'GLIB-C_x.xx not found'`
-  - Update to the latest release of a [non-LTS distro](/Tips-and-Tricks#recommended-distros)
-
-
 ## Game crashes after clicking 'Verify'
 - Possible error code 6001
 - Make sure Star Citizen is installed on drive "C:\" - Check that the "Library Folder" option in the launcher settings is the default:
@@ -76,7 +69,3 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 ## After playing for a while, crash with no errors
   - If there are no errors in your [game logs](/Troubleshooting/#gathering-logs), check your system logs. It may be an Out Of Memory situation. Create a larger [swap file](/Performance-Tuning#zram--swap).
-
-
-## Launcher freezes within a few seconds of opening
-- Try using a different [wine runner](/Tips-and-Tricks#recommended-runners)

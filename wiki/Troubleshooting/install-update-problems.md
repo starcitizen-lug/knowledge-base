@@ -17,7 +17,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
   To fix, delete the winetricks cache in `~/.cache/winetricks/` and try installing again
 
 
-## Launcher installation hangs at Updating Game Content
+## RSI Launcher installation hangs at Updating Game Content
 - The Launcher sometimes hangs during this phase of the install process
 - Completely quit the launcher, ensuring no lingering wine processes remain, then verify files
 
@@ -30,19 +30,79 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
   ```
 
 
+## RSI Launcher fails to start
+- Possible cause: Outdated glibc
+  - Log message may include `could not load ntdll.so ... version 'GLIB-C_x.xx not found'`
+  - Update to the latest release of a [non-LTS distro](/Tips-and-Tricks#recommended-distros)
+
+
 ## RSI Launcher executable is missing
 - Automatic update sometimes fails or is interrupted
 - Follow manual update [instructions](/Tips-and-Tricks#rsi-launcher-manual-update)
 
+
 ## RSI Launcher doesn't auto-update
 - Follow manual update [instructions](/Tips-and-Tricks#rsi-launcher-manual-update)
+
+
+## RSI Launcher freezes within a few seconds of opening
+- Try using a different [wine runner](/Tips-and-Tricks#recommended-runners)
+
+
+## RSI Launcher Black or white window
+- Try editing the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to add the RSI Launcher flags `--in-process-gpu --disable-gpu`. For example:
+  ```
+    "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" --in-process-gpu --disable-gpu > "$launch_log" 2>&1
+  ```
+
+
+## RSI Launcher empty or crash
+- Try logging out and back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
+- Delete the rsilauncher directory in the wine prefix's Appdata  
+  `star-citizen/drive_c/users/<your username here>/AppData/Roaming/rsilauncher`
+- If using Pop!_OS Cosmic, this is a [known issue](https://github.com/pop-os/cosmic-epoch/issues/2368).
+  - Try using the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s `Open Wine prefix configuration`  
+    option in the Maintenance menu to turn on virtual desktop mode
+  - Try xwayland-run package
+    ```
+    ############################################################################
+    # Launch the game
+    ############################################################################
+    xwayland-run -- "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" > "$launch_log" 2>&1
+    ```
+  - Try switching to [Experimental Wine Wayland](/Tips-and-Tricks#wine-wayland)
+  - Try [gamescope](/Tips-and-Tricks#gamescope), or an alternative compositor
+
+
+## RSI Launcher minimizes and won't re-open
+- Try to restore the window using the taskbar icon
+- If that doesn't work, [open your Wine prefix](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory), then delete the rsilauncher directory in the wine prefix's Appdata  
+  `star-citizen/drive_c/users/<your username here>/AppData/Roaming/rsilauncher`
+- To avoid the problem in the future, turn on `Enable close-to-quit` in the RSI Launcher settings
+
+
+## RSI Launcher indicates You are currently offline
+- Log out and back in
+
+
+## Launch Error - Settings.json not found
+- Verify game files
+
+
+## RSI Launcher Error Code 60101
+- [Issue Council STARC-198177](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-198177)
+- Use a [LUG Wine Runner](/Tips-and-Tricks#recommended-runners) 10.13-2 or newer to prevent the popup
+- This error does not prevent the game from running, the game will launch shortly!
+
 
 ## Installing Star Citizen on an NTFS-formatted drive
 - Don't; it probably won't work and will likely only corrupt your game files.
 
+
 ## Popup warning 64-bit Windows is required
 - Ensure that you are using a [Recommended](/Tips-and-Tricks#recommended-distros) 64 bit linux distro
 - Override environment variable WINEARCH=64
+
 
 ## openSUSE Tumbleweed: Wine prefix creation failed
 - If SELinux is enabled (default) on openSUSE, the `selinux-policy-targeted-gaming` package is [required](https://en.opensuse.org/Portal:SELinux/Common_issues#Steam_Proton,_Bottles,_WINE,_Lutris,_not_working) or game installation will fail.

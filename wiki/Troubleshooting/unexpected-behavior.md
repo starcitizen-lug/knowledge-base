@@ -9,45 +9,6 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 # 🤪 Unexpected Behavior
 
 
-## Launcher empty or crash
-- Try logging out and back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
-- Delete the rsilauncher directory in the wine prefix's Appdata  
-  `star-citizen/drive_c/users/<your username here>/AppData/Roaming/rsilauncher`
-- If using Pop!_OS Cosmic, this is a [known issue](https://github.com/pop-os/cosmic-epoch/issues/2368).
-  - Try using the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s `Open Wine prefix configuration`  
-    option in the Maintenance menu to turn on virtual desktop mode
-  - Try xwayland-run package
-    ```
-    ############################################################################
-    # Launch the game
-    ############################################################################
-    xwayland-run -- "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" > "$launch_log" 2>&1
-    ```
-  - Try switching to [Experimental Wine Wayland](/Tips-and-Tricks#wine-wayland)
-  - Try [gamescope](/Tips-and-Tricks#gamescope), or an alternative compositor
-
-
-## Launcher minimizes and won't re-open
-- Try to restore the window using the taskbar icon
-- If that doesn't work, [open your Wine prefix](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory), then delete the rsilauncher directory in the wine prefix's Appdata  
-  `star-citizen/drive_c/users/<your username here>/AppData/Roaming/rsilauncher`
-- To avoid the problem in the future, turn on `Enable close-to-quit` in the RSI Launcher settings
-
-
-## Launcher indicates You are currently offline
-- Log out and back in
-
-
-## Launch Error - Settings.json not found
-- Verify game files
-
-
-## RSI Launcher Error Code 60101
-- [Issue Council STARC-198177](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-198177)
-- Use a [LUG Wine Runner](/Tips-and-Tricks#recommended-runners) 10.13-2 or newer to prevent the popup
-- This error does not prevent the game from running, the game will launch shortly!
-
-
 ## Launch Error - %AppData% returned empty string
 - Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then type `wineserver -k` to terminate all lingering Wine processes.
 - If that doesn't resolve it, try switching to a different Wine runner.
@@ -97,13 +58,6 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 ## Game hangs at loading screen after clicking 'Launch'
 - If using a webcam, make sure V4L is installed (video 4 linux, package names may be similar to `v4l-utils`). If using V4L2 Loopback, try removing any loopback devices you have created.
-
-
-## Black or white RSI Launcher window
-- Try editing the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to add the RSI Launcher flags `--in-process-gpu --disable-gpu`. For example:
-  ```
-    "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" --in-process-gpu --disable-gpu > "$launch_log" 2>&1
-  ```
 
 
 ## Black game window after clicking 'Launch'
