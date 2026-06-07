@@ -240,7 +240,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
     ```
   - If you experience a black or white RSI Launcher, add this [RSI Launcher.exe argument](/Troubleshooting/unexpected-behavior#black-or-white-rsi-launcher-window)
 - Experimental **Proton** Wayland (for proton runners **not** wine)
-  - Add environment variable `PROTON_ENABLE_WAYLAND=1`
+  - Add environment variable `PROTON_ENABLE_WAYLAND=1` to your umu/proton enabled launcher
  
 - Set primary monitor, Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export WAYLANDDRV_PRIMARY_MONITOR` Replace the value for your monitor DP-1, DP-2, HDMI-A-1, etc  
     `export WAYLANDDRV_PRIMARY_MONITOR=DP-1`  
@@ -265,7 +265,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
   2. For Wine runners
       - [Add environment variable](/Tips-and-Tricks#how-to-edit-the-launch-script) `export DXVK_HDR=1`
   4. For Proton runners only (GE-Proton10-1 or newer)
-      - Add environment variable `export PROTON_ENABLE_HDR=1`
+      - Add environment variable `export PROTON_ENABLE_HDR=1` to your umu/proton enabled launcher
 
 
 ## Gamescope
