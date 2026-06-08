@@ -141,6 +141,13 @@ export NEW_VARIABLE="value"
 > `~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen`
 
 
+## Move an existing install
+1. [Locate](#where-is-my-wine-prefix-where-is-my-liveptu-directory) your `star-citizen` game directory
+2. Move the entire `star-citizen` game directory to where you want it to be
+3. Use the [LUG Helper](#how-to-run-the-lug-helper) maintenance menu to target the new location
+4. Use the [LUG Helper](#how-to-run-the-lug-helper) maintenance menu [Update/Repair](#how-to-update-the-launch-script) button
+
+
 ## Updating DXVK Within a Wine Prefix
 Use the [LUG Helper's](#how-to-run-the-lug-helper) `Manage DXVK` button
 
