@@ -268,7 +268,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 ## HDR (High Dynamic Range)
 - Requires experimental native [Wayland](/Tips-and-Tricks#wine-wayland) or [Gamescope](/Tips-and-Tricks#gamescope)
 - To enable HDR in native Wayland:
-  1. Run `wayland-info | grep color` in a terminal. If you **do not** see `wp_color_manager_v1` then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and [add the environment variable](/Tips-and-Tricks#how-to-edit-the-launch-script) `export ENABLE_HDR_WSI=1`
+  1. Run `wayland-info | grep color` and verify that `wp_color_manager_v1` is listed.
   2. For Wine runners
       - [Add environment variable](/Tips-and-Tricks#how-to-edit-the-launch-script) `export DXVK_HDR=1`
   4. For Proton runners only (GE-Proton10-1 or newer)
