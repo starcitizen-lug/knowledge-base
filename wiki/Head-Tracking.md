@@ -44,7 +44,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 > - You may need to launch opentrack with or without the `--platform xcb` flag. Your opentrack package may include two different .desktop files for this, one labeled Wayland and one not.
 
 
-1. In the Output dropdown, welect `Wine`
+1. In the Output dropdown, select `Wine`
 2. Click the `Configure` button next to it (hammer)
 3. Under `Wine variant`, select one of the following:
     - Wine (LUG-Wine, LUG-Experimental, Rawfox, etc)
