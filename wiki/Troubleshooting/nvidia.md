@@ -93,7 +93,8 @@ or
 >
 > - Do not use [DLSS](#dlss-deep-learning-super-sampling) and Smooth Motion at the same time. It may result in poor framerates, freezes, and severe artifacts.
 > - MangoHud and other FPS monitoring overlays may interfere with Smooth Motion and cause game crashes. You may need to disable them.
-> - If using [Wine Wayland](/Tips-and-Tricks#wine-wayland), Smooth Motion has been known to cause framerate issues or random freezes.
+> - If using [Wine Wayland](/Tips-and-Tricks#wine-wayland), Smooth Motion has been known to cause framerate issues, random freezes, and F interaction menu issues.
+> - Smooth Motion has caused crashes in the RSI Launcher for some Penguins. You may need to disable it.
 > - Vsync may need to be disabled in the game's graphics settings.
 
 - To enable Smooth Motion on supported cards, use the LUG Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script), then add the following environment variable:
