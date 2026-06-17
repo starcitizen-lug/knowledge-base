@@ -60,6 +60,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - Try logging out and back in, or reset the launcher by pressing Ctrl+Shift+Alt+R
 - Delete the rsilauncher directory in the wine prefix's Appdata  
   `star-citizen/drive_c/users/<your username here>/AppData/Roaming/rsilauncher`
+- Try disabling Nvidia [Smooth Motion](/Troubleshooting/nvidia#nvidia-smooth-motion)
 - If using Pop!_OS Cosmic, this is a [known issue](https://github.com/pop-os/cosmic-epoch/issues/2368).
   - Try using the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s `Open Wine prefix configuration`  
     option in the Maintenance menu to turn on virtual desktop mode
