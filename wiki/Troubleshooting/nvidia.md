@@ -30,7 +30,8 @@ or
 
 ## Severe frame drops
 1. Do not use [DLSS](#dlss-deep-learning-super-sampling) and [Smooth Motion](#nvidia-smooth-motion) at the same time. It may result in poor framerates, freezes, and severe artifacts.
-2. Some Penguins are seeing VRAM exhaustion problems on Nvidia cards. Overriding the max allowed VRAM allocation may help:
+2. Smooth Motion has been known to cause frame drops when holding the F interaction menu over an ASOP terminal. See the warnings [here](#nvidia-smooth-motion).
+3. Some Penguins are seeing VRAM exhaustion problems on Nvidia cards. Overriding the max allowed VRAM allocation may help:
    
 - Use the LUG Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script).
 - **If you're using DXVK:**
