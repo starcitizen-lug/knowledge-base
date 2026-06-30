@@ -33,24 +33,6 @@ To contribute updates/information, please open an [issue report or pull request]
 > 2. Create a new empty file in your LIVE directory named `Data.p4k.part`
 > 3. If you're installing the game for the first time, also create a new empty file named `Data.p4k`
 > 4. Re-launch the game and try the update or verify again.
->
-> If the above steps don't work, try rolling back to an older version of the RSI Launcher:
-> 1. Download [RSI Launcher v2.12.1](https://install.robertsspaceindustries.com/rel/2/RSI%20Launcher-Setup-2.12.1.exe)
-> 2. Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run the following to install it.  
-Don't forget the adjust the path to your download
-```
-WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe=d" wine "example/path/to/downloaded/RSI Launcher-Setup-2.12.1.exe"
-```
-> 3. Type `exit` to close the Maintenance shell, then re-launch the game.
-> 4. When the RSI Launcher asks to auto update, cancel the update to remain on v2.12.1 until the issue is fixed.
-
-{: .important-title }
-> (Mar 25, 2026)
->
-> Launcher error 3221225477
->
-> - Use winetricks to install vcrun2022 in your wine prefix
-> - Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run `winetricks -q vcrun2022` then `exit`
 
 
 ### General News

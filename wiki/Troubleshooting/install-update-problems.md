@@ -96,6 +96,22 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - This error does not prevent the game from running, the game will launch shortly!
 
 
+## RSI Launcher Error Code 3221225477
+- Use winetricks to install `vcrun2022` in your wine prefix
+- Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run `winetricks -q vcrun2022` then `exit`
+
+
+## RSI Launcher Error Code 3004/3005/5006/5008
+- RSI Launcher may crash at calculating disk space.
+- Log may show *"[Pipeline] Phase compute_size timed out after 60000ms, cancelling and skipping."*
+- Sometimes caused by a slow or unreliable network connection.
+
+1. [Locate your Star Citizen LIVE](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory) directory.
+2. Create a new empty file in your LIVE directory named `Data.p4k.part`
+3. If you're installing the game for the first time, also create a new empty file named `Data.p4k`
+4. Re-launch the game and try the update or verify again.
+
+
 ## Installing Star Citizen on an NTFS-formatted drive
 - Don't; it probably won't work and will likely only corrupt your game files.
 
