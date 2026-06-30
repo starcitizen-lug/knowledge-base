@@ -14,6 +14,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 Workarounds to try:
 - Try LUG Wine 10.15-1 or newer AND borderless windowed mode in the game's settings
 - Experimental LUG [Wine Wayland](/Tips-and-Tricks#wine-wayland) helps mitigate this for some
+- Turn off any virtual keyboard in system settings while the game is running
 - Display scaling beyond 100% may exacerbate the issue
 - [Proton](/Alternative-Installations#proton-installation) helps mitigate this for some
 - Gamescope helps mitigate this for some
