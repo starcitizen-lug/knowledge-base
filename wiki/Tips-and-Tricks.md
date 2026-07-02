@@ -13,6 +13,7 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
 - ⭐ Fedora
 - Arch
 - EndeavourOS *(Arch-based, easier installation)*
+- CachyOS *(Arch-based, performance optimized, more gaming focused)*
 - openSUSE Tumbleweed
 - ⭐ Bazzite *(see note below)*
 - Ubuntu *(only the [latest release](https://en.wikipedia.org/wiki/Ubuntu#Releases))*
