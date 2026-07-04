@@ -29,7 +29,6 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
   mkdir -p "~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE"
   ```
 
-
 ## RSI Launcher fails to start
 - Possible cause: Outdated glibc
   - Log message may include `could not load ntdll.so ... version 'GLIB-C_x.xx not found'`
@@ -88,6 +87,12 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 ## Launch Error - Settings.json not found
 - Verify game files
+
+
+## Installer Error dotnet48 required
+- Click through the prompt, it does not stop install from continuing
+- Delete your winetricks cache directory `~/.cache/winetricks`
+- Use the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s Maintenance menu to update Powershell
 
 
 ## RSI Launcher Error Code 60101
