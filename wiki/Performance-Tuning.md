@@ -48,11 +48,20 @@ zram-size = ram
 compression-algorithm = zstd
 ```
 
-**Swap file only**  
+
+**Swap file**  
 If you prefer not to use zram, a swap file will need to be [configured](https://wiki.archlinux.org/title/Swap#Swap_file). Btrfs users please follow the [Btrfs instructions](https://wiki.archlinux.org/title/Btrfs#Swap_file). We recommend configuring at least a combined 50GB RAM + swap, though more may be needed depending on your system memory usage.
 - For 16GB RAM: At least 34GB swap.
 - For 32GB RAM: At least 18GB swap.
 - For 64GB RAM: Any size swap file.
+
+
+**Zswap**  
+[Zswap](https://wiki.archlinux.org/title/Zswap) is a kernel feature that provides a compressed RAM cache for swap pages. Pages which would otherwise be swapped out to disk are instead compressed and stored into a memory pool in RAM.  
+Update your bootloader's kernel command line with these values:  
+  `zswap.enabled=1 zswap.shrinker_enabled=0 zswap.compressor=zstd zswap.max_pool_percent=80`  
+- Requires a swap file or swap partion
+- Zswap and Zram must not be used at the same time
 
 
 ## Nvidia Cache
