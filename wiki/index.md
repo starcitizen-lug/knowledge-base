@@ -22,10 +22,10 @@ To contribute updates/information, please open an [issue report or pull request]
 ### Game Updates
 
 {: .note-title }
-> (Jul 8, 2026)
+> (Jul 16, 2026)
 >
-> 4.9 Audio issues and framerate drops
-> This appears to be an issue with Easy Anticheat. We've reached out to CIG and are currently awaiting further information
+> 4.9 Audio issues and framerate drops  
+> CIG is aware of the issue. We'll update here when we have more information.
 
 
 {: .warning-title }
