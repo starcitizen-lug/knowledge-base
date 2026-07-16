@@ -56,14 +56,6 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 - For 64GB RAM: Any size swap file.
 
 
-**Zswap**  
-[Zswap](https://wiki.archlinux.org/title/Zswap) is a kernel feature that provides a compressed RAM cache for swap pages. Pages which would otherwise be swapped out to disk are instead compressed and stored into a memory pool in RAM.  
-- Configure a swap file as described above.
-- Update your bootloader's kernel command line with these values:
-  `zswap.enabled=1 zswap.shrinker_enabled=0 zswap.compressor=zstd zswap.max_pool_percent=80`  
-- Do not use Zswap and Zram at the same time! They interfere with one another.
-
-
 ## Nvidia Cache
 
 {: .tip }
