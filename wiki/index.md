@@ -24,8 +24,8 @@ To contribute updates/information, please open an [issue report or pull request]
 {: .note-title }
 > (Jul 8, 2026)
 >
-> PTU extreme framerate drops
-> This appears to be an issue with Easy Anticheat and requires CIG to update to the latest module. We've reached out to CIG and are currently awaiting further information.
+> 4.9 Audio issues and framerate drops
+> This appears to be an issue with Easy Anticheat. We've reached out to CIG and are currently awaiting further information
 
 
 {: .warning-title }
