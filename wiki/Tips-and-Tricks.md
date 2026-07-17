@@ -130,7 +130,7 @@ export NEW_VARIABLE="value"
 
 ## Where is my Wine prefix? Where is my LIVE/PTU directory?
 1. Run the [LUG Helper](#how-to-run-the-lug-helper) and select the `Maintenance and Troubleshooting` menu.
-2. Select the `Display Helper and Star Citizen directories` option.
+2. Select the `List Helper & Star Citizen directories and files` option.
 3. Click on the relevant path to open it in your file manager.
 
 {: .tip-title }
