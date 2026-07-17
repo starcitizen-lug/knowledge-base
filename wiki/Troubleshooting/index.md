@@ -31,7 +31,7 @@ redirect_from:
 
 
 ### Gathering logs
-1. Run the [LUG Helper](/Tips-and-Tricks.md#how-to-run-the-lug-helper) and select the `Maintenance and Troubleshooting` menu.
+1. Run the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) and select the `Maintenance and Troubleshooting` menu.
 2. Select the `Show logs` option.
 3. Click on the relevant log to open it directly.
 
