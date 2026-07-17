@@ -96,6 +96,11 @@ Alternatively, [download](https://github.com/starcitizen-lug/lug-helper/releases
     3. Once you are in the directory containing lug-helper.sh, run it by typing:  
        `./lug-helper.sh`
 
+An Appimage package is available attached to the [latest release](https://github.com/starcitizen-lug/lug-helper/releases/latest). This bundles dependencies for users on immutable distros who may not be able to install them.
+
+To run the AppImage:
+- Give it the executable permission in your file manager
+- Double click it
 
 {: .tip }
 > The Helper uses Zenity for its optional GUI. If you don't see the GUI and want it, install Zenity from your package manager.
