@@ -25,7 +25,9 @@ To contribute updates/information, please open an [issue report or pull request]
 > (Jul 16, 2026)
 >
 > 4.9 Audio issues and framerate drops  
-> CIG is aware of the issue. We'll update here when we have more information.
+> CIG is aware of the issue. We'll update here when we have more information.  
+> -  Audio bug [STARC-214091](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-214091)  
+> -  Stall at Vulkan shader compilation [STARC-214252](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-214252)  
 
 
 {: .warning-title }
