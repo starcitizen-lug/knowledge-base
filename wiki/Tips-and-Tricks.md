@@ -359,4 +359,4 @@ _sc-postexit.sh_
 > Use these mods at your own risk. Always inspect them for safety before using them.
 
 ### StarStrings
-Adds blueprint pools to contracts. After [installation](https://github.com/MrKraken/StarStrings), a [pre-launch script](/Tips-and-Tricks#pre-launch-and-post-exit-scripts) can be created to use [wget](https://tldr.inbrowser.app/pages/common/wget) to download the latest [strings file](https://raw.githubusercontent.com/MrKraken/StarStrings/refs/heads/master/Data/Localization/english/global.ini). We recommend inspecting the file before using it for safety.
+Adds blueprint pools to contracts. After [installation](https://github.com/MrKraken/StarStrings), a [pre-launch script](/Tips-and-Tricks#pre-launch-and-post-exit-scripts) can be created to use [wget](https://tldr.inbrowser.app/pages/common/wget) to download the latest [strings file](https://github.com/MrKraken/StarStrings/blob/master/src/For_Players/Data/Localization/english/global.ini). We recommend inspecting the file before using it for safety.
