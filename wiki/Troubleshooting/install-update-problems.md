@@ -91,7 +91,6 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 ## Installer Error dotnet48 required
 - Click through the prompt, it does not stop install from continuing
-- Delete your winetricks cache directory `~/.cache/winetricks`
 - Use the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s Maintenance menu to update Powershell
 
 
