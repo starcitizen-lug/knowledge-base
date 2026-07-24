@@ -19,7 +19,6 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - Your phone can typically function as a webcam without any third party apps when connected to your computer. See the webcam section below.
 
 ### Webcam
-- A tutorial for the the ArUco Paper Method is written in our Org's [Spectrum Forums](https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/tutorial-opentrack-aruco-for-star-citizen-via-lutr). **NOTE:** Ignore the outdated Opentrack installation steps in that thread! See updated instructions below.
 - Some Penguins have had success building [Opentrack with the ONNX Runtime](#building-opentrack-with-onnx-runtime) to add a neuralnet tracker that enables head tracking with any webcam.
 - FOIP may be a bit finnicky and your camera may not appear in the list in-game, but has been known to work if you toggle it on and off a few times.
 
