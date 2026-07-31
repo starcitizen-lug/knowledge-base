@@ -12,6 +12,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 *This issue can also manifest as some main menu buttons not working due to the cursor actually being offset*
 
 Workarounds to try:
+- In the RSI Launcher > Settings > Notifications turn off the overlay
 - Try LUG Wine 10.15-1 or newer AND borderless windowed mode in the game's settings
 - Experimental LUG [Wine Wayland](/Tips-and-Tricks#wine-wayland) helps mitigate this for some
 - Turn off any virtual keyboard in system settings while the game is running
