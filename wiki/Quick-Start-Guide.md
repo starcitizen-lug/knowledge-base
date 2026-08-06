@@ -14,7 +14,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 {: .note-title }
 > Immutable Distros
 > 
-> For NixOS, see [here](/Alternative-Installations#nixos-installation). For SteamOS and others, the AppImage is recommended.
+> For NixOS, see [here](/Alternative-Installations#nixos-installation). For SteamOS and others, the [AppImage](/Tips-and-Tricks#how-to-run-the-lug-helper) is recommended.
 
 ## Installation Steps
 
