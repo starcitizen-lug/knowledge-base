@@ -15,7 +15,6 @@ Workarounds to try:
 - In the RSI Launcher > Settings > Notifications turn off the overlay
 - Try LUG Wine 10.15-1 or newer AND borderless windowed mode in the game's settings
 - Experimental LUG [Wine Wayland](/Tips-and-Tricks#wine-wayland) helps mitigate this for some
-- Turn off any virtual keyboard in system settings while the game is running
 - Display scaling beyond 100% may exacerbate the issue
 - [Proton](/Alternative-Installations#proton-installation) helps mitigate this for some
 - Gamescope helps mitigate this for some
@@ -53,6 +52,16 @@ Contribute to [STARC-197300](https://issue-council.robertsspaceindustries.com/pr
      ```
      Note: If using a third party launcher instead of the native Wine install, you'll need to prepend `WINEPREFIX=/path/to/prefix` before the above command.
 - Experimental [Wine Wayland](/Tips-and-Tricks#wine-wayland) helps mitigate this for some
+
+
+## Mouse acceleration issues
+- Symptoms: Mouse acting like it has extra acceleration enabled but it's inconsistent/glitchy. Your OS mouse acceleration settings don't fit it
+- In the RSI Launcher, go to Settings->Notifications and disable the on-screen Overlay
+
+
+## Some keyboard keys not working
+- Turn off any virtual keyboard in system settings while the game is running
+
 
 ## Non-US keyboard keys not working
 1. Use the LUG Helper to [switch to a wine](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.7 or **older** with **staging** in the name
