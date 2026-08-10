@@ -69,7 +69,6 @@ If you can't find a solution to your issue in the Troubleshooting subpages, you 
 {: .important }
 > Refer to the [News](https://wiki.starcitizen-lug.org/#news) for recent issues and workarounds!
 
-- [RSI Launcher error: Unable to Create Folder](/Troubleshooting/install-update-problems#rsi-launcher-error-unable-to-create-folder)
 - [Mouse/Cursor warp issues and view snapping in interaction mode](/Troubleshooting/mouse-keyboard-issues#mousecursor-warp-issues-and-view-snapping-in-interaction-mode)
 - [Mouse cursor escaping the game window](/Troubleshooting/mouse-keyboard-issues#mouse-cursor-escaping-the-game-window)
 - [Non-US keyboard keys not working](/Troubleshooting/mouse-keyboard-issues#non-us-keyboard-keys-not-working)
