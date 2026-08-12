@@ -8,6 +8,8 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 # 💾 Install & Update Problems
 
+{% include news_section.html category="install-update-problems" %}
+
 ## Wine prefix creation failed
 - If the LUG Helper install log shows an error similar to:  
   `warning: WINE is /path/to/bin/wine, which is neither on the path nor an executable file`  

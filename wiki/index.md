@@ -19,43 +19,15 @@ To contribute updates/information, please open an [issue report or pull request]
 
 ## News
 
+
 ### Game Updates
-
-{: .note-title }
-> (Jul 16, 2026)
->
-> 4.9 Audio issues and framerate drops  
-> CIG is aware of the issue. We'll update here when we have more information.
->
-> Workaround: reduce audio stutter by changing the in-game audio setting to mono instead of stereo  
->
-> -  Audio bug [STARC-214091](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-214091)  
-> -  Stall at Vulkan shader compilation [STARC-214252](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-214252)  
-
-
-{: .warning-title }
-> (Apr 25, 2026)
->
-> Recent issues updating/installing Star Citizen  
-> RSI Launcher may crash at calculating disk space. You may see an out of space or error code 3004/3005/5006/5008  
-> Log may show *"[Pipeline] Phase compute_size timed out after 60000ms, cancelling and skipping."*  
-> Sometimes caused by a slow or unreliable network connection.
->
-> 1. [Locate your Star Citizen LIVE](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory) directory.
-> 2. Create a new empty file in your LIVE directory named `Data.p4k.part`
-> 3. If you're installing the game for the first time, also create a new empty file named `Data.p4k`
-> 4. Re-launch the game and try the update or verify again.
-
+{% include news_section.html category="game-news" %}
 
 ### General News
-
-> none!
+{% include news_section.html category="general-news" %}
 
 ### AMD News
-
-> none!
-
+{% include news_section.html category="amd-news" %}
 
 ### Nvidia News
-
-> none!
+{% include news_section.html category="nvidia-news" %}

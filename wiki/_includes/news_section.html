@@ -1,0 +1,11 @@
+{%- assign active = "" | split: "" -%}
+{%- for post in site.categories[include.category] -%}
+  {%- if post.tags contains "active" -%}
+    {%- assign active = active | push: post -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- for post in active limit: include.limit | default: 5 -%}
+{{ post.content }}
+{%- else -%}
+> none!
+{%- endfor -%}

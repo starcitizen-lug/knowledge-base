@@ -1,7 +1,7 @@
 ---
 title: "Troubleshooting"
 description: "A collection of solutions to errors, crashes, and other common problems running Star Citizen on Linux"
-nav_order: 3
+nav_order: 4
 md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
 redirect_from:
   - /Troubleshooting/lutris
@@ -10,10 +10,8 @@ redirect_from:
 
 # 🔧 Troubleshooting
 
-## Recent news/issues
-
-{: .important }
-> Check our [latest news](/#news) for known temporary issues, workarounds, and runner/dxvk/driver requirements (especially Nvidia users!)
+## General News
+{% include news_section.html category="game-news" %}
 
 ## Troubleshooting Steps
 
@@ -65,9 +63,6 @@ If you can't find a solution to your issue in the Troubleshooting subpages, you 
 
 
 ### ❓Common Issues
-
-{: .important }
-> Refer to the [News](https://wiki.starcitizen-lug.org/#news) for recent issues and workarounds!
 
 - [Mouse/Cursor warp issues and view snapping in interaction mode](/Troubleshooting/mouse-keyboard-issues#mousecursor-warp-issues-and-view-snapping-in-interaction-mode)
 - [Mouse cursor escaping the game window](/Troubleshooting/mouse-keyboard-issues#mouse-cursor-escaping-the-game-window)
