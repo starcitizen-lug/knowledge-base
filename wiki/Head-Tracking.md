@@ -140,8 +140,8 @@ TrackIR 4/5 can work by using [this fork of linuxtrack](https://gitlab.com/fwfa1
 
 ### Using Native Tobii Driver
 Linux user-space runtime for Tobii Eye Tracker 5 with Star Citizen support
-1. Follow instructions on https://github.com/njmill/tobii-linux using the **dev** branch
-  - Head pose sensitivity requires tuning to your personal preference using the sliders in the dashboard
+1. Follow instructions on [https://github.com/njmill/tobii-linux](https://github.com/njmill/tobii-linux) using the **dev** branch
+   - Head pose sensitivity requires tuning to your personal preference using the sliders in the dashboard
 
 
 ### Using Tobii Pro driver
