@@ -13,7 +13,9 @@ excerpt_separator: <!--more-->
 >
 > CIG is aware of the issue. We'll update here when we have more information.
 >
-> Workaround: reduce audio stutter by changing the in-game audio setting to mono instead of stereo  
+> Framerate workaround: Switch to a LUG runner 11.14-2 or later to improve framerates.
+> 
+> Audio workaround: Reduce audio stutter by changing the in-game audio setting to mono instead of stereo  
 >
 > -  Audio bug [STARC-214091](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-214091)  
 > -  Stall at Vulkan shader compilation [STARC-214252](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-214252)  
