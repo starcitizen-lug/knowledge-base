@@ -64,12 +64,14 @@ Contribute to [STARC-197300](https://issue-council.robertsspaceindustries.com/pr
 
 
 ## Non-US keyboard keys not working
-1. Use the LUG Helper to [switch to a wine](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.7 or **older** with **staging** in the name
-2. Use the LUG Helper Maintenance menu `Open Wine prefix configuration` button to run winecfg
-3. In the Input tab->Keyboard Settings, select your language from the list
-4. Keyboard scancode auto-detection may have to be enabled or disabled depending on your hardware. Try both.
- ![staging_input_menu](/assets/images/Troubleshooting/mouse-keyboard-issues/keyboard-language.webp)
-5. If the above doesn't work, use the Lug Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to set the `export LANG=` environment variable. You may need to switch to a staging runner besides LUG-Wine.
+- Use the LUG Helper to [switch to a wine](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.16 or **newer**
+- If latest wine does not work, try using **older** staging wine
+  1. Use the LUG Helper to [switch to a wine](/Tips-and-Tricks#how-to-add-a-wine-runner) 11.7 or **older** with **staging** in the name
+  2. Use the LUG Helper Maintenance menu `Open Wine prefix configuration` button to run winecfg
+  3. In the Input tab->Keyboard Settings, select your language from the list
+  4. Keyboard scancode auto-detection may have to be enabled or disabled depending on your hardware. Try both.
+   ![staging_input_menu](/assets/images/Troubleshooting/mouse-keyboard-issues/keyboard-language.webp)
+  5. If the above doesn't work, use the Lug Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to set the `export LANG=` environment variable. You may need to switch to a staging runner besides LUG-Wine.
     ```
     ################################################################
     # Configure the environment
@@ -77,7 +79,7 @@ Contribute to [STARC-197300](https://issue-council.robertsspaceindustries.com/pr
     ################################################################
     export LANG=de_DE
     ```
-6. Use the Lug Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to set input method to XIM instead of IBUS
+  6. Use the Lug Helper to [edit your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to set input method to XIM instead of IBUS
    ```
    ################################################################
     # Configure the environment
@@ -87,5 +89,5 @@ Contribute to [STARC-197300](https://issue-council.robertsspaceindustries.com/pr
    export GTK_IM_MODULE="xim"
    export QT_IM_MODULE="xim"
    ```
-8. Use game keybinds menu to rebind the actions you want to the keys you want
-9. If nothing else works and you have an older Wine prefix, some Penguins have had success re-creating a new Prefix. You can back up your data.p4k file to avoid re-downloading the entire game.
+  7. Use game keybinds menu to rebind the actions you want to the keys you want
+  8. If nothing else works and you have an older Wine prefix, some Penguins have had success re-creating a new Prefix. You can back up your data.p4k file to avoid re-downloading the entire game.
