@@ -26,7 +26,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 - Possible cause: DXVK
   - Make sure DXVK is installed and enabled
-  - Nvidia users, check our [latest news](/#news) and Nvidia [section](nvidia) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
+  - Nvidia users, check our [latest news](/#news) and Nvidia [section](/Troubleshooting/nvidia) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 
 - Possible cause: Incorrect Vulkan device
   - If you have Intel integrated graphics and see  

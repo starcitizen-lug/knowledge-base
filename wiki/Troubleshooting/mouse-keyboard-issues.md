@@ -18,7 +18,7 @@ Workarounds to try:
 - Display scaling beyond 100% may exacerbate the issue
 - [Proton](/Alternative-Installations#proton-installation) helps mitigate this for some
 - Gamescope helps mitigate this for some
-  - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix](nvidia#gamescope-not-working)
+  - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix](/Troubleshooting/nvidia#gamescope-not-working)
   - Install and enable gamescope. Set these options for your display resolution  
   `-W 2560 -H 1440 --force-grab-cursor`
   - Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard

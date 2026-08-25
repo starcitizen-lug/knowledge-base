@@ -7,7 +7,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 # Performance Tuning
 
 ## LUG Helper
-The [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper)'s Preflight Check will do a quick check of your system for some common issues. Be sure it passes all checks.
+The [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper)'s Preflight Check will do a quick check of your system for some common issues. Be sure it passes all checks.
 
 
 ## Game Settings
@@ -59,7 +59,7 @@ If you prefer not to use zram, a swap file will need to be [configured](https://
 ## Nvidia Cache
 
 {: .tip }
-> If you've installed the game via our [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper), these settings are pre-configured for you.
+> If you've installed the game via our [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper), these settings are pre-configured for you.
 
 By default Nvidia has a combined cache for all games. As the cache fills up from other games, Star Citizen's shaders may get deleted leading to poor FPS. We recommend giving SC its own persistent cache by adding the following environment variables:
 ```
@@ -72,7 +72,7 @@ __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=true
 ## Mesa (AMD/Intel) Shader Cache
 
 {: .tip }
-> If you've installed the game via our [LUG Helper](Tips-and-Tricks.md#how-to-run-the-lug-helper), these settings are pre-configured for you.
+> If you've installed the game via our [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper), these settings are pre-configured for you.
 
 Mesa can be given its own persistent shader cache by adding the following environmental variables:
 ```

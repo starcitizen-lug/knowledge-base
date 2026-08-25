@@ -157,7 +157,7 @@ export NEW_VARIABLE="value"
 Use the [LUG Helper's](#how-to-run-the-lug-helper) `Manage DXVK` button
 
 **To downgrade dxvk to a previous version:**
-1. Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) for your prefix using the `sc-launch.sh` script.
+1. Enter a [Wine maintenance shell](#how-to-get-a-wine-maintenance-shell-using-the-launch-script) for your prefix using the `sc-launch.sh` script.
 3. Run `winetricks`
 4. Click "Select the default wineprefix" (verify that the file path in the title bar is your star-citizen game)
 5. Click "Install a Windows DLL or component"
@@ -165,7 +165,7 @@ Use the [LUG Helper's](#how-to-run-the-lug-helper) `Manage DXVK` button
 
 
 ## RSI Launcher Manual Update
-1. Using the latest [LUG Helper](https://wiki.starcitizen-lug.org/Tips-and-Tricks#how-to-run-the-lug-helper), select `Maintenance and Troubleshooting` then choose `Update/Re-install RSI Launcher`.
+1. Using the latest [LUG Helper](#how-to-run-the-lug-helper), select `Maintenance and Troubleshooting` then choose `Update/Re-install RSI Launcher`.
 
 
 ## Console Variables
@@ -184,7 +184,7 @@ Below are some useful console variables. Tap the grave/backtick/tilde key (above
 
 ## USER.cfg
 Varibles set using the in-game console must be reapplied each session. Create a USER.cfg file to apply the changes automatically each session.
-1. Use the LUG Helper to [open your Star Citizen LIVE directory](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory)
+1. Use the LUG Helper to [open your Star Citizen LIVE directory](#where-is-my-wine-prefix-where-is-my-liveptu-directory)
 2. Create a text file named `USER.cfg` in your LIVE directory
 3. Copy the text block below into it
 4. Remove the `#` symbol from the lines you want to use and configure as needed
@@ -257,13 +257,13 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 - Set primary monitor, Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export WAYLANDDRV_PRIMARY_MONITOR` Replace the value for your monitor DP-1, DP-2, HDMI-A-1, etc  
     `export WAYLANDDRV_PRIMARY_MONITOR=DP-1`  
 
-- Set resolution with [USER.cfg](Tips-and-Tricks#usercfg)
+- Set resolution with [USER.cfg](#usercfg)
 
 - Set DPI with [LUG Helper](#how-to-run-the-lug-helper) Maintenance menu > Edit wine prefix configuration
 
 
 ## Hide RSI Launcher Tray Icon
-- Enter a [Wine maintenance shell](Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script)
+- Enter a [Wine maintenance shell](#how-to-get-a-wine-maintenance-shell-using-the-launch-script)
   Use `wine regedit` GUI to add registry key and DWORD value 1
   `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer`  
   `NoTrayItemsDisplay` = 1
@@ -271,11 +271,11 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 
 
 ## HDR (High Dynamic Range)
-- Requires experimental native [Wayland](/Tips-and-Tricks#wine-wayland) or [Gamescope](/Tips-and-Tricks#gamescope)
+- Requires experimental native [Wayland](#wine-wayland) or [Gamescope](#gamescope)
 - To enable HDR in native Wayland:  
-  Run `wayland-info | grep color` in a terminal. If you **do not** see `wp_color_manager_v1` then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and [add the environment variable](/Tips-and-Tricks#how-to-edit-the-launch-script) `export ENABLE_HDR_WSI=1`
+  Run `wayland-info | grep color` in a terminal. If you **do not** see `wp_color_manager_v1` then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and [add the environment variable](#how-to-edit-the-launch-script) `export ENABLE_HDR_WSI=1`
   - For **Wine** runners
-    - [Add environment variable](/Tips-and-Tricks#how-to-edit-the-launch-script) `export DXVK_HDR=1`
+    - [Add environment variable](#how-to-edit-the-launch-script) `export DXVK_HDR=1`
   - For **Proton** runners only (GE-Proton10-1 or newer)
     - Add environment variable `export PROTON_ENABLE_HDR=1` to your umu/proton enabled launcher
 
@@ -359,4 +359,4 @@ _sc-postexit.sh_
 > Use these mods at your own risk. Always inspect them for safety before using them.
 
 ### StarStrings
-Adds blueprint pools to contracts. After [installation](https://github.com/MrKraken/StarStrings), a [pre-launch script](/Tips-and-Tricks#pre-launch-and-post-exit-scripts) can be created to use [wget](https://tldr.inbrowser.app/pages/common/wget) to download the latest [strings file](https://github.com/MrKraken/StarStrings/blob/master/src/For_Players/Data/Localization/english/global.ini). We recommend inspecting the file before using it for safety.
+Adds blueprint pools to contracts. After [installation](https://github.com/MrKraken/StarStrings), a [pre-launch script](#pre-launch-and-post-exit-scripts) can be created to use [wget](https://tldr.inbrowser.app/pages/common/wget) to download the latest [strings file](https://github.com/MrKraken/StarStrings/blob/master/src/For_Players/Data/Localization/english/global.ini). We recommend inspecting the file before using it for safety.

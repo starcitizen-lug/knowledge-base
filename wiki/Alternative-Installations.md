@@ -11,10 +11,10 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 {: .tip-title }
 > New to Linux?
 >
-> See our [Recommended Distributions](Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
+> See our [Recommended Distributions](/Tips-and-Tricks#recommended-distros) for a list of the distros most compatible with Star Citizen.
 
 {: .tip }
-> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool can perform these steps for you automatically! See our [Quick Start Guide](Quick-Start-Guide) for instructions.
+> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool can perform these steps for you automatically! See our [Quick Start Guide](/Quick-Start-Guide) for instructions.
 
 1. Install Wine **v9.4** or newer following the [instructions for your distro](https://gitlab.winehq.org/wine/wine/-/wikis/Download). See the [WineHQ Main Page](https://www.winehq.org/) for current versions. If your distro provides an up to date version of wine (ie. Arch), you may install from its repos instead.
 2. Install winetricks 20250102 or newer. Instructions are on the Winetricks [Github](https://github.com/Winetricks/winetricks/#installing)
@@ -57,7 +57,7 @@ _Distributions that use /etc/security/limits.conf_
 ## Wine Installation
 
 {: .tip }
-> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool can perform these steps for you automatically! See our [Quick Start Guide](Quick-Start-Guide) for instructions.
+> Our [LUG Helper](https://github.com/starcitizen-lug/lug-helper) tool can perform these steps for you automatically! See our [Quick Start Guide](/Quick-Start-Guide) for instructions.
 
 1. Install and configure the necessary [prerequisites](#prerequisites)
 2. Create and configure your wine prefix:
@@ -148,7 +148,7 @@ The Steam Deck is resource limited and Star Citizen performance will be poor. So
 {: .warning }
 > We cannot guarantee that these third party launchers will work with Star Citizen or perform well. Our community may not be able to provide support for these installations if something isn't working right.
 >
-> The recommended installation method is to follow our [Quick Start Guide](Quick-Start-Guide).
+> The recommended installation method is to follow our [Quick Start Guide](/Quick-Start-Guide).
 
 ### Lutris
 {: .important }
@@ -218,4 +218,4 @@ The Steam Deck is resource limited and Star Citizen performance will be poor. So
 {: .highlight }
 > We do not recommend installing Star Citizen within Steam. While it can be done, it creates several issues that we feel are not worth the effort to try to work around. For example, it limits configurability options, does not invoke needed protonfixes by default, and can result in EAC errors.
 > 
-> We believe you will have a much better experience following our [Quick Start Guide](Quick-Start-Guide). If you want to use Steam's proton, you may use umu-launcher by following the [Proton Installation](#proton-installation) instructions above.
+> We believe you will have a much better experience following our [Quick Start Guide](/Quick-Start-Guide). If you want to use Steam's proton, you may use umu-launcher by following the [Proton Installation](#proton-installation) instructions above.

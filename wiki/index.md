@@ -8,7 +8,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 <h2>Welcome, Space Penguins!</h2>
 
-This wiki is a collection of information on how to run Star Citizen on Linux. If you're just getting started, head over to our [Quick-Start Guide](Quick-Start-Guide)!
+This wiki is a collection of information on how to run Star Citizen on Linux. If you're just getting started, head over to our [Quick-Start Guide](/Quick-Start-Guide)!
 
 To contribute updates/information, please open an [issue report or pull request](https://github.com/starcitizen-lug/knowledge-base). Thanks!
 

@@ -26,13 +26,7 @@ services:
       - |
           gem install webrick --no-document
 
-          if [ -f wiki/Gemfile ]; then
-            cd wiki && bundle install && exec bundle exec jekyll serve \
-              --host 0.0.0.0 \
-              --destination /tmp/_site
-          else
-            exec jekyll serve \
-              --source /srv/jekyll/wiki \
-              --host 0.0.0.0 \
-              --destination /tmp/_site
-          fi
+          exec jekyll serve \
+            --source /srv/jekyll/wiki \
+            --host 0.0.0.0 \
+            --destination /tmp/_site
