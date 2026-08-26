@@ -7,11 +7,11 @@ excerpt_separator: <!--more-->
 ---
 
 {: .note-title }
-> (Jul 16, 2026)
+> (Aug 26, 2026)
 >
 > {{ page.title }}
 >
-> CIG is aware of the issue. We'll update here when we have more information.
+> CIG is aware of the issue and is working on a fix with the intention of rolling it out in a hotfix.
 >
 > Framerate workaround: Switch to a LUG runner 11.14-2 or later to improve framerates.
 > 
