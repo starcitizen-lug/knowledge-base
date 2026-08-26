@@ -11,7 +11,7 @@ excerpt_separator: <!--more-->
 >
 > {{ page.title }}
 >
-> CIG is aware of the issue and is working on a fix with the intention of rolling it out in a hotfix.
+> CIG is aware of the issue and is working on a fix with the intention of rolling it out in a hotfix after 4.10 goes live.
 >
 > Framerate workaround: Switch to a LUG runner 11.14-2 or later to improve framerates.
 > 
