@@ -140,7 +140,7 @@ boot.kernel.sysctl = {
 The Steam Deck is resource limited and Star Citizen performance will be poor. Some Penguins have been able to run the game with the following configuration:
 - We recommend a 32gb+ [swap file](/Performance-Tuning#zram--swap) for the Steam Deck. Create it under `/home` instead of `/` to protect it from being wiped out by SteamOS updates.
 - Configure the max allocation of ram to vram
-- Install Star Citizen using the [flatpak method](#flatpak-installation) or a flatpak [third party launcher](#third-party-launchers)
+- Install Star Citizen using the [AppImage](/Tips-and-Tricks#how-to-run-the-lug-helper) or a flatpak [third party launcher](#third-party-launchers)
 
 
 ## Third Party Launchers
