@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "4.9 Audio issues and framerate drops"
+title:  "4.9 Audio issues and frame rate drops"
 categories: game-news
-tags: "active"
+tags:
 excerpt_separator: <!--more-->
 ---
 
@@ -12,6 +12,8 @@ excerpt_separator: <!--more-->
 > {{ page.title }}
 >
 > Hotfix 8.27.2026 (12535871) contains a first attempt at a potential fix for us to test
+>
+> LIVE 8.31.2026 (12545750) audio stutter and vulkan shader compilation fixed
 >
 > Framerate workaround: Switch to a LUG runner 11.14-2 or later to improve framerates.
 > 
