@@ -1,7 +1,7 @@
 ---
 title: "Quick-Start Guide"
 description: "Simple step-by-step instructions to install the Star Citizen RSI Launcher on Linux!"
-nav_order: 2
+nav_order: 3
 md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
 ---
 # Quick-Start Guide
