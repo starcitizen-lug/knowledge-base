@@ -6,8 +6,6 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 ---
 # The Star Citizen Linux Users Group Org
 
-## About the org
-
 Greetings, Space Penguins! We're the Linux Users Group (LUG), a community that's been around since 2014, brought together by our shared love for Star Citizen and our Linux systems. Our community is made up of both wise old Penguins who've mastered the art of Linux gaming and curious newcomers just discovering its warmer waters. Wherever you are on your Linux journey, you'll feel right at home here.
 
 The LUG is more than just an org, we're a diverse and thriving community of thousands of Linux enthusiasts eager to help you make the most out of your Star Citizen experience. We offer community support, wiki resources, a Quick Start Guide with troubleshooting tips, and our custom LUG Helper tool. We aim to take the hassle out of installing and managing Star Citizen on your Linux system so you can focus on exploring the 'verse!
@@ -17,11 +15,9 @@ Join our in-game meetups every week for laid-back fun, good company, and plenty 
 {: .tip-title }
 > Join us!
 >
-> Join our org on [Spectrum](https://robertsspaceindustries.com/orgs/LUG)!
-> 
-> Join us on [Discord](https://discord.gg/meCFYPj)!
-> 
-> Join us in-game for our weekly meetups, [Saturdays at 2000 UTC](https://robertsspaceindustries.com/spectrum/community/LUG/forum/149/thread/let-s-have-an-in-game-lug-meetup-when-3-5-0-releas)! (Join the org to open Spectrum links)
+> - Join our org on [Spectrum](https://robertsspaceindustries.com/orgs/LUG)!
+> - Join us on [Discord](https://discord.gg/meCFYPj)!
+> - Join us in-game for our weekly meetups, [Saturdays at 2000 UTC](https://robertsspaceindustries.com/spectrum/community/LUG/forum/149/thread/let-s-have-an-in-game-lug-meetup-when-3-5-0-releas)! (Join the org to open Spectrum links)
 
 ## Community rules
 
