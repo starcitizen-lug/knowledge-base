@@ -1,7 +1,7 @@
 ---
 title: "Troubleshooting"
 description: "A collection of solutions to errors, crashes, and other common problems running Star Citizen on Linux"
-nav_order: 4
+nav_order: 5
 md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
 redirect_from:
   - /Troubleshooting/lutris

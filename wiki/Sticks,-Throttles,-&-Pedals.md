@@ -1,7 +1,7 @@
 ---
 title: "Sticks, Throttles, & Pedals"
 description: "Peripheral compatibility and recommendations for Star Citizen on Linux, configuration tips, and troubleshooting."
-nav_order: 7
+nav_order: 8
 md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
 ---
 

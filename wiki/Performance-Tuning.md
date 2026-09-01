@@ -1,7 +1,7 @@
 ---
 title: "Performance Tuning"
 description: "Helpful suggestions and tuning tips for improving the performance of Star Citizen on Linux"
-nav_order: 5
+nav_order: 6
 md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-lug.org/ to use the wiki!"
 ---
 # Performance Tuning
