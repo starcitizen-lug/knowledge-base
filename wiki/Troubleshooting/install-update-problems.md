@@ -112,6 +112,8 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - Log may show *"[Pipeline] Phase compute_size timed out after 60000ms, cancelling and skipping."*
 - Sometimes caused by a slow or unreliable network connection.
 
+Update to [RSI Launcher 2.17](https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/rsi-launcher-2-17-release-notes/9127037) or newer to avoid this issue
+
 1. [Locate your Star Citizen LIVE](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory) directory.
 2. Create a new empty file in your LIVE directory named `Data.p4k.part`
 3. If you're installing the game for the first time, also create a new empty file named `Data.p4k`
