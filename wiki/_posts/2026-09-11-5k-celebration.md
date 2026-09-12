@@ -2,7 +2,7 @@
 layout: post
 title:  "5,000 LUG Org Members Celebration and Giveaway!"
 categories: general-news
-tags:
+tags: active
 excerpt_separator: <!--more-->
 ---
 
