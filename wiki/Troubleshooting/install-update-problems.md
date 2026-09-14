@@ -8,6 +8,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 # 💾 Install & Update Problems
 
+## News
 {% include news_section.html category="install-update-problems" %}
 
 ## Wine prefix creation failed

@@ -16,7 +16,7 @@ excerpt_separator: <!--more-->
 > LIVE 8.31.2026 (12545750) audio stutter and vulkan shader compilation fixed
 >
 > Framerate workaround: Switch to a LUG runner 11.14-2 or later to improve framerates.
-> 
+>
 > Audio workaround: Reduce audio stutter by changing the in-game audio setting to mono instead of stereo  
 >
 > -  Audio bug [STARC-214091](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-214091)  

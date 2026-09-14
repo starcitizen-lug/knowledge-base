@@ -10,7 +10,7 @@ redirect_from:
 
 # 🔧 Troubleshooting
 
-## General News
+## News
 {% include news_section.html category="game-news" %}
 
 ## Troubleshooting Steps

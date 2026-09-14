@@ -8,13 +8,15 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 # 🖱️ Mouse & Keyboard Issues
 
+## News
+{% include news_section.html category="mouse-keyboard-issues" %}
+
 ## Mouse/Cursor warp issues and view snapping in interaction mode
 *This issue can also manifest as some main menu buttons not working due to the cursor actually being offset*
 
 Workarounds to try:
-- In the RSI Launcher > Settings > Notifications turn off the overlay
-- Try LUG Wine 10.15-1 or newer AND borderless windowed mode in the game's settings
 - Experimental LUG [Wine Wayland](/Tips-and-Tricks#wine-wayland) helps mitigate this for some
+- In the RSI Launcher > Settings > Notifications turn off the overlay
 - Display scaling beyond 100% may exacerbate the issue
 - [Proton](/Alternative-Installations#proton-installation) helps mitigate this for some
 - Gamescope helps mitigate this for some
@@ -22,7 +24,7 @@ Workarounds to try:
   - Install and enable gamescope. Set these options for your display resolution  
   `-W 2560 -H 1440 --force-grab-cursor`
   - Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
-- If available, you can choose Xorg at your login screen instead of Wayland session
+- Install and choose Xorg/x11 session at your login screen instead of Wayland session
 - Switching to an alternate desktop environment may help; most Gnome users don't seem to experience this issue as severely
 - You may try building xwayland with [this patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied. If using KDE and patching xwayland, you will also need to install Gamescope and use the `--force-grab-cursor` option
 

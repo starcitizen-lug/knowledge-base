@@ -2,7 +2,7 @@
 layout: post
 title:  "Recent issues updating/installing Star Citizen"
 categories: game-news install-update-problems
-tags: "active"
+tags:
 excerpt_separator: <!--more-->
 ---
 
