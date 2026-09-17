@@ -46,6 +46,7 @@ Contribute to [STARC-197300](https://issue-council.robertsspaceindustries.com/pr
 
 ## Mouse cursor escaping the game window
 - Setting the game to Borderless usually helps minimize the issue
+- Using workspaces or virtual desktops instead of alt-tabbing can help avoid the issue
 - Tapping the escape key whenever alt-tabbing out and back to the game usually recaptures the mouse
 - You may also try adding a registry key to your Wine prefix:
    - Use the `sc-launch.sh` launch script to open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run:
