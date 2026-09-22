@@ -84,6 +84,10 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - To avoid the problem in the future, turn on `Enable close-to-quit` in the RSI Launcher settings
 
 
+## RSI Launcher asks you to log in again every time
+- Reset the launcher by pressing Ctrl+Shift+Alt+R
+
+
 ## RSI Launcher indicates You are currently offline
 - Log out and back in
 
