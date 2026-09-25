@@ -17,31 +17,12 @@ li.nav-list-item.external {
   }
 }
 
-// Heights for .site-header at media-queries (in rem)
-$header-heights: (
-  default: 2rem,    // below xs
-  xs: 6rem,
-  sm: 10rem,
-  md: 14.5rem,
-  lg: 16rem,
-  xl: 18rem
-);
-
 .site-header {
-  height: map-get($header-heights, default);
-  max-height: map-get($header-heights, default);
+  --header-height: clamp(2rem, 24vw - 3rem, 18rem);
+
+  height: var(--header-height);
+  max-height: var(--header-height);
   overflow: hidden;
-}
-
-@each $breakpoint, $min-width in $media-queries {
-  $height: map-get($header-heights, $breakpoint);
-
-  @media (min-width: #{$min-width}) {
-    .site-header {
-      height: $height;
-      max-height: $height;
-    }
-  }
 }
 
 #site-nav a {
