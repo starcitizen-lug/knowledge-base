@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 {: .note-title }
 > (Mar 10, 2023)
 >
-> {{ page.title }}
+> **{{ page.title }}**
 >
 > Mouse cursor problems in interaction mode, kiosks, ship MFDs, UI, and more. This issue can also manifest as some main menu buttons not working due to the cursor being offset
 >
