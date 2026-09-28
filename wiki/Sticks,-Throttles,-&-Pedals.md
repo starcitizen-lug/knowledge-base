@@ -168,7 +168,9 @@ The third party tool, [input-remapper](https://github.com/sezanzeb/input-remappe
 > 
 > This section does not apply if your controllers are connected as HIDRAW devices.
 
-For non-hidraw devices, evdev may add extra deadzones to your controller on top of those configured by the device's firmware. Throttles may experience a "hitch" in the center of their axis. You can remove these deadzones with a udev rule.
+For non-hidraw devices, evdev may add extra deadzones to your controller on top of those configured by the device's firmware. Throttles may experience a "hitch" in the center of their axis. Additionally, evdev typically enables anti-jitter fuzzing by default, intended to prevent potentiometer noise from causing jitter while the controller is at rest. On high-quality joysticks and throttles this can cause the axes to not center correctly.
+
+You can remove the deadzone and fuzzing with a udev rule.
 
 1. Install `evdev-joystick`. This utility is provided by different packages depending on your distribution.  
 See the list below for your distribution:
@@ -185,8 +187,10 @@ See the list below for your distribution:
 # Sample
 ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
   ENV{ID_VENDOR_ID}=="<Vendor ID>", ENV{ID_MODEL_ID}=="<Model ID>", \
-  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
+  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0 --f 0" 
 ```
+
+On lower-end devices, you may want to omit `--f 0` (or change the 0 to a different value; you can see the default with `evtest /dev/input/by-id/your-device-id`) to keep anti-jitter fuzzing enabled.
 
 **Example rules**  
 `/etc/udev/rules.d/99-evdev-joystick.rules`
@@ -196,22 +200,22 @@ ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
 # VKB SEM
 ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
   ENV{ID_VENDOR_ID}=="231d", ENV{ID_MODEL_ID}=="2204", \
-  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
+  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0 --f 0" 
 
 # VKB Gunfighter L
 ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
   ENV{ID_VENDOR_ID}=="231d", ENV{ID_MODEL_ID}=="0127", \
-  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
+  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0 --f 0" 
 
 # VKB Gunfighter R
 ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
   ENV{ID_VENDOR_ID}=="231d", ENV{ID_MODEL_ID}=="0126", \
-  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
+  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0 --f 0" 
 
 # Virpil Rudder Pedals
 ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
   ENV{ID_VENDOR_ID}=="3344", ENV{ID_MODEL_ID}=="01f8", \
-  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0" 
+  RUN+="/usr/bin/evdev-joystick --e %E{DEVNAME} --d 0 --f 0" 
 ```
 
 ## Troubleshooting
