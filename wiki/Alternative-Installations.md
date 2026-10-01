@@ -142,6 +142,10 @@ The Steam Deck is resource limited and Star Citizen performance will be poor. So
 - Create a 32gb+ [swap file](/Performance-Tuning#zram--swap) for the Steam Deck. Create it under `/home` instead of `/` to protect it from being wiped out by SteamOS updates.
 - Configure the max allocation of ram to vram
 - Install Star Citizen using the [AppImage](/Tips-and-Tricks#how-to-run-the-lug-helper) or a flatpak [third party launcher](#third-party-launchers)
+- Global steaminput for controller in desktop mode by using
+  ```
+  xdg-open steam://forceinputappid/<steam_app_id_or_url_escaped_name_of_any_steam_shortcut
+  ```
 
 
 ## Third Party Launchers
