@@ -13,43 +13,6 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 >
 > Check the [latest news](/#news) for any changes
 
-1. Use RSI Launcher 2.5.1 or newer
-2. Ensure there are no **symlinks** or **special characters** in the path to your Wine prefix
-3. Ensure you have **not** changed the default install location in the RSI Launcher `C:\Program Files\Roberts Space Industries`
-4. Use the latest [LUG Helper](/Tips-and-Tricks#how-to-add-a-wine-runner) to switch to a LUG-Wine runner
-5. [Update your launch script](/Tips-and-Tricks#how-to-update-the-launch-script)
-6. Remove any EAC workarounds by [editing your launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) or your game launcher settings, check for each one to see if it exists
-    - Remove Environment variable `EOS_USE_ANTICHEATCLIENTNULL=1`
-    - Remove Hosts entry in file named `/etc/hosts` with the value
-      ```
-      127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround
-      ```
-    - In the RSI Launcher, navigate to `Settings -> Games -> LIVE -> Game Location`. If you previously used the Z:\ path workaround, put it back to the default C:\ path  
-       ![Game path in launcher](/assets/images/rsilauncher-default-path.webp){: style="display: block;max-height: 250px;" }  
-
-## Error code after launching persistent universe
-- Possible error codes `70003`, `70004`
-- [game.log](/Troubleshooting#gathering-logs) message may contain `Remote Disconnect - Authentication timed out (1/3)` or `HeartbeatTimeout`
-- Try changing server region
-- Inspect your [EAC log](/Troubleshooting/#gathering-logs) for details. It may be launching with the null client if it can't reach the EAC servers.
-- [Locate your game files](/Troubleshooting#view-game-files) then delete the EAC directories and use the RSI Launcher to Verify Files  
-  ```
-  ~/Games/star-citizen/drive_c/Program Files/Roberts Space Industries/StarCitizen/LIVE/EasyAntiCheat
-  ```  
-  ```
-  ~/Games/star-citizen/drive_c/users/{yourusernamehere}/AppData/Roaming/EasyAntiCheat
-  ```  
-- Use a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) to run `wineserver -k` to kill any lingering wine processes in your prefix. Reboot if necessary.
-- Check that your DNS can resolve the EAC domains:
-  ```
-  dig modules-cdn.eac-prod.on.epicgames.com
-  dig download-alt.easyanticheat.net
-  ```
-- Ensure that you have **not** disabled development syscalls (e.g. ptrace)
-- Check that IPv6 has not been disabled on your system
-- Contribute to this [issue council report](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-177971) if none of the above steps work
-
-
 
 ## Error after pressing Launch Game
 - Possible error codes `210` and `#1`
