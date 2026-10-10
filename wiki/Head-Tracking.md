@@ -139,9 +139,10 @@ TrackIR 4/5 can work by using [this fork of linuxtrack](https://gitlab.com/fwfa1
 ## Experimental: Native Tobii Eye Tracker 4c/5 Support
 
 ### Using Native Tobii Driver
-Linux user-space runtime for Tobii Eye Tracker 5 with Star Citizen support
-1. Follow instructions on [https://github.com/njmill/tobii-linux](https://github.com/njmill/tobii-linux) using the **dev** branch
-   - Head pose sensitivity requires tuning to your personal preference using the sliders in the dashboard
+
+Tobii-faithful  
+Linux runtime for the Tobii Eye Tracker 5: head tracking and gaze for games that ship with Tobii's own game integration DLL
+1. Follow instructions on [https://github.com/SciFi-Bob/tobii-faithful/releases](https://github.com/SciFi-Bob/tobii-faithful/releases)
 
 
 ### Using Tobii Pro driver
