@@ -18,7 +18,10 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 - Possible error codes `210` and `#1`
 - Vanilla Wine versions >10.1 made changes that break Easy Anti-Cheat
 - Use the [LUG Helper](/Tips-and-Tricks#how-to-add-a-wine-runner) to switch to a [recommended](/Tips-and-Tricks#recommended-runners) wine runner
-- Ensure you have **not** changed the default install location in the RSI Launcher `C:\Program Files\Roberts Space Industries`
+- Ensure you have **not** changed the default install location in the RSI Launcher  
+  ```
+  C:\Program Files\Roberts Space Industries
+  ```
 
 
 ## Failed to load the embedded resources
