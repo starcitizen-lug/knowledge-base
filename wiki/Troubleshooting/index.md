@@ -20,12 +20,14 @@ redirect_from:
 2. Make sure all prerequisites from the [Quick Start Guide](/Quick-Start-Guide) are satisfied on your system.
 3. Make sure you are not trying to install to an NTFS-formatted drive.
 4. Be sure you haven't changed the default install path in the RSI Launcher settings. If you wish to install the game elsewhere, put the entire wine prefix there instead.
-5. Kill all wine processes and re-launch a fresh instance of the game: Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run `wineserver -k`
-6. Look for your issue in the [latest news](/#news)
-7. Use the lug helper to get the latest wine runner. Be sure to check the [latest news](/#general-news) for recommendations
-8. Try a different wine version. If using wine-staging, try standard wine. Try wine-staging if using standard wine.
-9. Disable any system performance customizations, third party utilities, VPN profiles, unusual system configurations/tweaks, etc that may interfere with the game.
-10. Look for your issue/error in the categories on this page. Refer to the steps directly below to gather logs.
+5. Do not mix Wine and Proton runners in the same prefix. It will break your prefix.
+6. Kill all wine processes and re-launch a fresh instance of the game: Open a [Wine maintenance shell](/Tips-and-Tricks#how-to-get-a-wine-maintenance-shell-using-the-launch-script) then run `wineserver -k`
+7. Look for your issue in the [latest news](/#news)
+8. Use the lug helper to get the latest wine runner. Be sure to check the [latest news](/#general-news) for recommendations
+9. Try a different wine version. If using wine-staging, try standard wine. Try wine-staging if using standard wine.
+10. Disable any system performance customizations, third party utilities, VPN profiles, unusual system configurations/tweaks, etc that may interfere with the game.
+11. Look for your issue/error in the categories on this page. Refer to the steps directly below to gather logs.
+12. Do not use AI. They get it wrong more often than not. Ask for help from our [community](/Troubleshooting/#community-help) if you need it.
 
 
 ### Gathering logs
