@@ -15,8 +15,11 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 1. Use RSI Launcher 2.5.1 or newer
 2. Ensure there are no **symlinks** or **special characters** in the path to your Wine prefix
-3. Ensure you have **not** changed the default install location in the RSI Launcher `C:\Program Files\Roberts Space Industries`
-4. Use the latest [LUG Helper](/Tips-and-Tricks#how-to-add-a-wine-runner) to switch to the latest LUG-Wine runner
+3. Ensure you have **not** changed the default install location in the RSI Launcher  
+   ```
+   C:\Program Files\Roberts Space Industries
+   ```
+5. Use the latest [LUG Helper](/Tips-and-Tricks#how-to-add-a-wine-runner) to switch to the latest LUG-Wine runner
 
 ## Error code after launching persistent universe
 - Possible error codes `70003`, `70004`
