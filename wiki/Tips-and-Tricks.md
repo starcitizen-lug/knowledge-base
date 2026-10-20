@@ -280,7 +280,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 ## Global hotkeys in Wine Wayland
 When running the game in Wine Wayland, global hotkeys will not work for most third party applications. This includes push-to-talk in Mumble or head centering in Opentrack. To work around this Wayland limitation:
 - In your desktop environment's keyboard shortcuts or hotkey settings, you can bind commands if the application supports it:
-  - **Mumble**: The Arch Wiki recommends setting up shortcuts/hotkeys to trigger Mumble's [rpc commands](https://wiki.archlinux.org/title/Mumble#Push-to-talk_on_Wayland)  
+  - **Mumble**: Set up shortcuts/hotkeys to trigger Mumble's rpc commands as recommended on the [Arch Wiki](https://wiki.archlinux.org/title/Mumble#Push-to-talk_on_Wayland)  
     `mumble rpc starttalking`  
     `mumble rpc stoptalking`  
   - **Opentrack**: A PR exists to [add DBus interfaces](https://github.com/opentrack/opentrack/pull/1813) and this section will be updated when progress is made on that
