@@ -254,12 +254,12 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 - Experimental **Proton** Wayland (for proton runners **not** wine)
   - Add environment variable `PROTON_ENABLE_WAYLAND=1` to your umu/proton enabled launcher
  
-- Set primary monitor, Edit the [launch script](#how-to-edit-the-launch-script) to add environment variable `export WAYLANDDRV_PRIMARY_MONITOR` Replace the value for your monitor DP-1, DP-2, HDMI-A-1, etc  
+- If the game launches on the wrong monitor: Edit the [launch script](#how-to-edit-the-launch-script) to add the environment variable `export WAYLANDDRV_PRIMARY_MONITOR` and set the value for your primary monitor. ie. DP-1, DP-2, HDMI-A-1, etc  
     `export WAYLANDDRV_PRIMARY_MONITOR=DP-1`  
 
-- Set resolution with [USER.cfg](#usercfg)
+- To fix incorrect game window sizes, set your resolution in a [USER.cfg](#usercfg) file
 
-- Set DPI with [LUG Helper](#how-to-run-the-lug-helper) Maintenance menu > Edit wine prefix configuration
+- To fix tiny buttons and text, run the [LUG Helper](#how-to-run-the-lug-helper) and select the `Maintenance and Troubleshooting` menu, then `Open Wine prefix configuration`. Under the graphics tab, increase the screen resolution dpi
 
 
 ## Hide RSI Launcher Tray Icon
