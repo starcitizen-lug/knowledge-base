@@ -250,7 +250,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
     ```
     export WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe,winemenubuilder.exe=d;winex11.drv=d"
     ```
-  - If you experience a black or white RSI Launcher, add this [RSI Launcher.exe argument](/Troubleshooting/unexpected-behavior#black-or-white-rsi-launcher-window)
+  - If you experience a black or white RSI Launcher, add this [RSI Launcher.exe argument](/Troubleshooting/install-update-problems#rsi-launcher-black-or-white-window)
 - Experimental **Proton** Wayland (for proton runners **not** wine)
   - Add environment variable `PROTON_ENABLE_WAYLAND=1` to your umu/proton enabled launcher
  
