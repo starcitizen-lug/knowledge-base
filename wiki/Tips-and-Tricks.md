@@ -241,25 +241,32 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 >
 > [Nvidia Smooth Motion](/Troubleshooting/nvidia#nvidia-smooth-motion) has been known to cause framerate issues or random freezes with Wine Wayland and may need to be disabled.
 
-- Experimental **Wine** Wayland
+**To use Experimental _Wine_ Wayland:**
   - Use the [LUG Helper](#how-to-run-the-lug-helper) to switch to [LUG Wine Experimental Wayland](#how-to-add-a-wine-runner).
  
-  For any other wine runners:
-  - Edit the [launch script](#how-to-edit-the-launch-script) to modify environment variable `WINEDLLOVERRIDES` and add to the end `;winex11.drv=d`  
-    Example:  
-    ```
-    export WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe,winemenubuilder.exe=d;winex11.drv=d"
-    ```
-  - If you experience a black or white RSI Launcher, add this [RSI Launcher.exe argument](/Troubleshooting/install-update-problems#rsi-launcher-black-or-white-window)
-- Experimental **Proton** Wayland (for proton runners **not** wine)
+  - For any other **Wine** runners (not proton):
+    - Edit the [launch script](#how-to-edit-the-launch-script) to modify environment variable `WINEDLLOVERRIDES` and add to the end `;winex11.drv=d`  
+      Example:  
+      ```
+      export WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe,winemenubuilder.exe=d;winex11.drv=d"
+      ```
+
+**To use Experimental _Proton_ Wayland (for proton runners _not Wine_):**
   - Add environment variable `PROTON_ENABLE_WAYLAND=1` to your umu/proton enabled launcher
- 
+
+**Troubleshooting Wine Wayland:**
+- If you experience a black or white RSI Launcher, add this [RSI Launcher.exe argument](/Troubleshooting/install-update-problems#rsi-launcher-black-or-white-window)
+
 - If the game launches on the wrong monitor: Edit the [launch script](#how-to-edit-the-launch-script) to add the environment variable `export WAYLANDDRV_PRIMARY_MONITOR` and set the value for your primary monitor. ie. DP-1, DP-2, HDMI-A-1, etc  
     `export WAYLANDDRV_PRIMARY_MONITOR=DP-1`  
 
 - To fix incorrect game window sizes, set your resolution in a [USER.cfg](#usercfg) file
 
 - To fix tiny buttons and text, run the [LUG Helper](#how-to-run-the-lug-helper) and select the `Maintenance and Troubleshooting` menu, then `Open Wine prefix configuration`. Under the graphics tab, increase the screen resolution dpi
+
+- To hide the RSI Launcher's tray icon, see [# Hide RSI Launcher Tray Icon](#hide-rsi-launcher-tray-icon) below
+
+
 
 
 ## Hide RSI Launcher Tray Icon
@@ -268,6 +275,9 @@ Varibles set using the in-game console must be reapplied each session. Create a 
   `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer`  
   `NoTrayItemsDisplay` = 1
 - Enable "close-to-quit" in RSI Launcher settings
+
+
+
 
 
 ## HDR (High Dynamic Range)
