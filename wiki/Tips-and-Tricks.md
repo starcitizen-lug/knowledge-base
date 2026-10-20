@@ -266,7 +266,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 
 - To hide the RSI Launcher's tray icon, see [# Hide RSI Launcher Tray Icon](#hide-rsi-launcher-tray-icon) below
 
-
+- To work around global hotkeys not working in Wayland, ie. Mumble PTT or OpenTrack head centering, see [# Global hotkeys in Wine Wayland](#global-hotkeys-in-wine-wayland) below
 
 
 ## Hide RSI Launcher Tray Icon
@@ -277,7 +277,16 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 - Enable "close-to-quit" in RSI Launcher settings
 
 
-
+## Global hotkeys in Wine Wayland
+When running the game in Wine Wayland, global hotkeys will not work for most third party applications. This includes push-to-talk in Mumble or head centering in Opentrack. To work around this Wayland limitation:
+- In your desktop environment's keyboard shortcuts or hotkey settings, you can bind commands if the application supports it:
+  - **Mumble**: The Arch Wiki recommends setting up shortcuts/hotkeys to trigger Mumble's [rpc commands](https://wiki.archlinux.org/title/Mumble#Push-to-talk_on_Wayland)  
+    `mumble rpc starttalking`  
+    `mumble rpc stoptalking`  
+  - **Opentrack**: A PR exists to [add DBus interfaces](https://github.com/opentrack/opentrack/pull/1813) and this section will be updated when progress is made on that
+- On KDE, it's possible to allow X11 apps like Mumble and Opentrack to listen for keystrokes in a Wayland session.
+  - Go to `Settings -> Application Permissions -> Legacy X11 App Support`
+  - Under the `Listening for keystrokes/mouse buttons` sections, choose your desired setting. Note, this does reduce the security of your Wayland session by allowing X11 apps to listen to keystrokes, so there are tradeoffs to which option you choose. We recommend reading the descriptions carefully
 
 
 ## HDR (High Dynamic Range)
