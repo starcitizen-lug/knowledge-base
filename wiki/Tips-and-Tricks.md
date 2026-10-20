@@ -245,7 +245,8 @@ Varibles set using the in-game console must be reapplied each session. Create a 
   - Use the [LUG Helper](#how-to-run-the-lug-helper) to switch to [LUG Wine Experimental Wayland](#how-to-add-a-wine-runner).
  
   - For any other **Wine** runners (not proton):
-    - Edit the [launch script](#how-to-edit-the-launch-script) to modify environment variable `WINEDLLOVERRIDES` and add to the end `;winex11.drv=d`  
+    - Edit the [launch script](#how-to-edit-the-launch-script) and, at the end of the environment variable exports, add `unset DISPLAY`
+    - Alternatively, modify the existing environment variable `WINEDLLOVERRIDES` and add to the end `;winex11.drv=d`  
       Example:  
       ```
       export WINEDLLOVERRIDES="dxwebsetup.exe,dotNetFx45_Full_setup.exe,winemenubuilder.exe=d;winex11.drv=d"
