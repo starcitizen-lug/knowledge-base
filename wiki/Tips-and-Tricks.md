@@ -70,7 +70,7 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
     - Heroic: `~/.config/heroic/tools/wine/`
     - Heroic flatpak: `~/.var/app/com.heroicgameslauncher.hgl/config/heroic/tools/wine/`
     - Wine: `~/Games/star-citizen/runners`
-  - Use the LUG Helper maintenance menu to edit sc-launch.sh to use the runner
+  - Use the LUG Helper maintenance menu to [edit](#how-to-edit-the-launch-script) sc-launch.sh to use the runner
     ```
      ################################################################
      # Configure the wine binaries to be used
