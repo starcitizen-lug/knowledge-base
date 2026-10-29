@@ -28,6 +28,10 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
   - Make sure DXVK is installed and enabled
   - Nvidia users, check our [latest news](/#news) and Nvidia [section](/Troubleshooting/nvidia) for gpu driver issues, necessary workarounds, and currently recommended runner/DXVK versions.
 
+- Possible cause: HDR Layers
+  - Error message may include `error 5: min_lum can't be higher or equal to max_lum`
+  - AMD users on Mesa 25.1 or newer should uninstall [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) if present
+
 - Possible cause: Incorrect Vulkan device
   - If you have Intel integrated graphics and see  
     `VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json` in your log, then change the Vulkan device to use your discrete GPU:

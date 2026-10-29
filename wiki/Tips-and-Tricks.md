@@ -294,6 +294,7 @@ When running the game in Wine Wayland, global hotkeys will not work for most thi
 - Requires experimental native [Wayland](#wine-wayland) or [Gamescope](#gamescope)
 - To enable HDR in native Wayland:  
   Run `wayland-info | grep color` in a terminal. If you **do not** see `wp_color_manager_v1` then you will need to install [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) and [add the environment variable](#how-to-edit-the-launch-script) `export ENABLE_HDR_WSI=1`
+  AMD users: if Mesa version is 25.1 or newer then uninstall [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) if present
   - For **Wine** runners
     - [Add environment variable](#how-to-edit-the-launch-script) `export DXVK_HDR=1`
   - For **Proton** runners only (GE-Proton10-1 or newer)
