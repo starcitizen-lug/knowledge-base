@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "RSI Launcher 2.19.1 verify loop"
-categories: game-news
+categories: game-news install-update-problems
 tags: active
 excerpt_separator: <!--more-->
 ---
