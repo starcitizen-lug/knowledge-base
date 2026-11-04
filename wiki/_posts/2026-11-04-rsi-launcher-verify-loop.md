@@ -7,7 +7,7 @@ excerpt_separator: <!--more-->
 ---
 
 {: .note-title }
-> (Sept 26, 2026)
+> (Nov 4, 2026)
 >
 > **{{ page.title }}**
 >
