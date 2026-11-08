@@ -16,5 +16,7 @@ excerpt_separator: <!--more-->
 > Workaround to try:
 >
 > - Switch to Experimental LUG [Wine Wayland](/Tips-and-Tricks#wine-wayland)
+> - Turn off Notification Overlay in RSI Launcher settings
+> - Turn off virtual keyboard in your system settings
 >
 > See the [Mouse and Keyboard Issues](/Troubleshooting/mouse-keyboard-issues) section for more
