@@ -244,7 +244,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 **To use Experimental _Wine_ Wayland:**
   - Use the [LUG Helper](#how-to-run-the-lug-helper) to switch to [LUG Wine Experimental Wayland](#how-to-add-a-wine-runner).
  
-  - For any other **Wine** runners (not proton):
+  - If using any other **Wine** runner (not proton):
     - Edit the [launch script](#how-to-edit-the-launch-script) and, at the end of the environment variable exports, add
       ```
       unset DISPLAY
