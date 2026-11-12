@@ -32,3 +32,18 @@ All Penguins are welcome here and derogatory language is prohibited. 🌈
 **3. 🙈 Please avoid NSFW material, politics, other org advertising, AI**  
 We ask that you be respectful of the community and avoid sharing this kind of material.  
 Our org is for humans to help one another. AI-generated conversations will be removed.  
+
+
+## Logo
+
+![lug_logo](/assets/images/LUG Logo.svg)
+
+Our Logos are licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+Logo design by Polymachine. Ideas, Emmel. Vectorized by Vertex. Icon variant by theSane.
+
+You may use our logos to create LUG patches, tshirts, stickers, etc., provided that you follow the [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) license terms, the guidelines below, and use the logo in accordance with the spirit of our community rules. If you're uncertain whether your usage is acceptable, please ask first in one of our social channels!
+
+Usage guidelines:
+- License: [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+- Do not place our logos on or near any content, materials, or experiences in a way that conflicts with (or could be perceived as conflicting with) our community rules or values. This includes content that is misleading, offensive, or otherwise inconsistent with how the LUG should be represented.
+- Do not use our logos in or on any software, apps, services, plugins, or tools you create or distribute without prior written approval from the Org leadership team.
