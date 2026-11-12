@@ -39,11 +39,12 @@ Our org is for humans to help one another. AI-generated conversations will be re
 ![lug_logo](/assets/images/LUG Logo.svg)
 
 Our Logos are licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)  
-{: .fs-4 } Logo design by Polymachine. Ideas, Emmel. Vectorized by Vertex. Icon variant by theSane.
+{: .fs-4 }
+Logo design by Polymachine. Ideas, Emmel. Vectorized by Vertex. Icon variant by theSane.
 
 You may use our logos to create LUG patches, tshirts, stickers, etc., provided that you follow the license terms, the guidelines below, and use the logo in accordance with the spirit of our community rules.
 
-If you're uncertain whether your usage is acceptable, please ask first in one of our social channels!
+_If you're uncertain whether your usage is acceptable, please ask first in one of our social channels!_
 
 **Usage guidelines:**
 - License: [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International](https://creativecommons.org/licenses/by-nc-nd/4.0/)
