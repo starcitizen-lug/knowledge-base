@@ -52,6 +52,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 
 ## RSI Launcher Black or white window
+- This sometimes happens for the first launch after the RSI Launcher updates itself. Try quitting the RSI Launcher and restarting it
 - Try editing the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) to add the RSI Launcher flags `--in-process-gpu --disable-gpu`. For example:
   ```
     "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" --in-process-gpu --disable-gpu > "$launch_log" 2>&1
