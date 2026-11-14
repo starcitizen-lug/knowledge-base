@@ -152,7 +152,8 @@ E: ID_MODEL_ID=0126
 {: .important-title }
 > After adding the udev rule
 > 
-> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that **do not** match the results of the [Find Device Info](#find-device-info) step above, and click the Disable button.
+> Unplug and replug your device. The event joystick device may still show in the wine joystick control panel and will need to be disabled so that only the raw hid device is presented to the game. Follow the instructions in [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings), select the device(s) that **do not** match the results of the [Find Device Info](#find-device-info) step above, and click the Disable button. Also, under `Advanced settings`, make sure `Disable hidraw` is **not** checked.
+
 
 ## Mappings
 
@@ -227,7 +228,7 @@ ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", \
 ### Some of your joysticks disappear / aren't recognized in the game
 - You may need to enable HIDRAW access. See [VKB](#vkb-devices), [Virpil](#virpil-devices), or [Thrustmaster](#thrustmaster-devices) sections above for instructions
 - Try setting your joysticks to "dinput" instead of "xinput" in Wine control panel
-    - Follow the [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings) instructions above.
+    - Follow the [Accessing Wine Game Controllers Settings](#accessing-wine-game-controllers-settings) instructions above, and under `Advanced settings`, make sure `Disable hidraw` is **not** checked.
     - If your joysticks are showing up as "Connected(xinput)", select them and click "Override" to set them to dinput.
 
 ### Some of your joystick axis aren't recognized / don't map
