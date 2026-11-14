@@ -53,12 +53,15 @@ We strongly recommend choosing a distro that has up-to-date packages and a solid
   - [TKG](https://github.com/Frogging-Family/wine-tkg-git) Builds with LUG patches specifically for Star Citizen
     - `lug-wine-tkg-git`  
       Standard Wine built for maximum compatibility
+    - `lug-wine-tkg-wayland-git`  
+      Same as standard, and defaults to wine wayland  
+      See [Wayland](#wine-wayland) for important caveats and workarounds for the wine wayland runners
     - `lug-wine-tkg-staging-git`  
       Wine plus experimental [staging patches](https://gitlab.winehq.org/wine/wine-staging)
 - [LUG Wine Experimental](https://github.com/starcitizen-lug/lug-wine-experimental/releases/latest)&nbsp;{% include feed_link.html url="https://github.com/starcitizen-lug/lug-wine-experimental/releases.atom" %}
   - LUG Wine plus additional temporary/experimental fixes for documented issues which have yet to be properly fixed upstream.
   - Please contribute to upstream reports/Issue Council reports if you need to use these runners! Our wiki will link to these where relevant.
-  - See [Experimental Wayland](#wine-wayland) for important caveats and workarounds for the experimental native winewayland runner
+  - See [Wayland](#wine-wayland) for important caveats and workarounds for the experimental native winewayland runner
 - [RawFox](https://github.com/starcitizen-lug/raw-wine/releases/latest)&nbsp;{% include feed_link.html url="https://github.com/starcitizen-lug/raw-wine/releases.atom" %}
   - Managed by the [LUG Helper](#how-to-run-the-lug-helper)
 

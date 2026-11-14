@@ -71,7 +71,7 @@ This is a generic error code representing any issue with logging in to CIG serve
 
 ## Blackout or black screen on Vulkan when flying/boosting/braking/damaged
 - Contribute to [STARC-179339](https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-179339), then use the [LUG Helper](/Tips-and-Tricks#how-to-run-the-lug-helper) to switch to LUG Wine >= 11.5
-- If that doesn't work, try a LUG Experimental wine runner.
+- If that doesn't work, try a LUG [Wine Wayland](/Tips-and-Tricks#wine-wayland) runner.
 
 
 ## Laggy game when using Picom or Compton Compositors

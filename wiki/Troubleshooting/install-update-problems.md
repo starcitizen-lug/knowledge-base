@@ -74,7 +74,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
     ############################################################################
     xwayland-run -- "$wine_path"/wine "C:\Program Files\Roberts Space Industries\RSI Launcher\RSI Launcher.exe" > "$launch_log" 2>&1
     ```
-  - Try switching to [Experimental Wine Wayland](/Tips-and-Tricks#wine-wayland)
+  - Try switching to [Wine Wayland](/Tips-and-Tricks#wine-wayland)
   - Try [gamescope](/Tips-and-Tricks#gamescope), or an alternative compositor
 
 
