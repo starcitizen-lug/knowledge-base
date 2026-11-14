@@ -80,6 +80,10 @@ MESA_SHADER_CACHE_DIR="/path/you/want/for/your/cache"  (example: /home/games/sta
 MESA_SHADER_CACHE_MAX_SIZE=10G
 ```
 
+## Resizeable Bar - ReBar
+ReBar is a PCI Express feature that lets your CPU access the GPU memory buffer at once instead of in smaller chunks  
+Enabling ReBar in your UEFI BIOS settings following your manufacturer's instructions may improve frametimes
+
 
 ## Feral GameMode
 
