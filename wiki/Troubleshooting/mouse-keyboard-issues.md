@@ -62,6 +62,11 @@ Contribute to [STARC-197300](https://issue-council.robertsspaceindustries.com/pr
 - In the RSI Launcher, go to Settings->Notifications and disable the on-screen Overlay
 
 
+## Mouse scroll wheel issues
+- Symptoms: Attempting to scroll up may only scroll down
+- Try disabling High Resolution Scrolling. On Logitech devices, this can be done using the [Solaar](https://github.com/pwr-Solaar/Solaar#installation-packages) utility, available in many distros' repos.
+
+
 ## Some keyboard keys not working
 - Turn off any virtual keyboard in system settings while the game is running
 
