@@ -123,7 +123,7 @@ Update to [RSI Launcher 2.17](https://robertsspaceindustries.com/spectrum/commun
 1. [Locate your Star Citizen LIVE](/Tips-and-Tricks#where-is-my-wine-prefix-where-is-my-liveptu-directory) directory.
 2. Create a new empty file in your LIVE directory named `Data.p4k.part`
 3. If you're installing the game for the first time, also create a new empty file named `Data.p4k`
-4. Re-launch the game and try the update or verify again.
+4. Re-launch the game and try the update again.
 
 
 ## Installing Star Citizen on an NTFS-formatted drive
