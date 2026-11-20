@@ -245,7 +245,7 @@ Varibles set using the in-game console must be reapplied each session. Create a 
 > [Nvidia Smooth Motion](/Troubleshooting/nvidia#nvidia-smooth-motion) has been known to cause framerate issues or random freezes with Wine Wayland and may need to be disabled.
 
 **To use Experimental _Wine_ Wayland:**
-  - Use the [LUG Helper](#how-to-run-the-lug-helper) to switch to [LUG Wine Experimental Wayland](#how-to-add-a-wine-runner).
+  - Use the [LUG Helper](#how-to-run-the-lug-helper) to switch to [LUG Wine Wayland](#how-to-add-a-wine-runner).
  
   - If using any other **Wine** runner (not proton):
     - Edit the [launch script](#how-to-edit-the-launch-script) and, at the end of the environment variable exports, add

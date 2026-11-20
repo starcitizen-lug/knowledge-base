@@ -15,7 +15,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 *This issue can also manifest as some main menu buttons not working due to the cursor actually being offset*
 
 Workarounds to try:
-- Experimental LUG [Wine Wayland](/Tips-and-Tricks#wine-wayland) helps mitigate this for some
+- LUG [Wine Wayland](/Tips-and-Tricks#wine-wayland) helps mitigate this for some
 - In the RSI Launcher > Settings > Notifications turn off the overlay
 - Display scaling beyond 100% may exacerbate the issue
 - [Proton](/Alternative-Installations#proton-installation) helps mitigate this for some
