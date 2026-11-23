@@ -154,6 +154,7 @@ export NEW_VARIABLE="value"
 2. Move the entire `star-citizen` game directory to where you want it to be
 3. Use the [LUG Helper](#how-to-run-the-lug-helper) maintenance menu to target the new location
 4. Use the [LUG Helper](#how-to-run-the-lug-helper) maintenance menu [Update/Repair](#how-to-update-the-launch-script) button
+5. Press the Install button in the RSI Launcher, it will find your files and verify them
 
 
 ## Updating DXVK Within a Wine Prefix
