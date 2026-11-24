@@ -1,6 +1,6 @@
 services:
   jekyll:
-    image: jekyll/jekyll:pages
+    image: jekyll/builder:pages
     container_name: jekyll-pages-dev
 
     ports:
@@ -11,11 +11,9 @@ services:
 
     tmpfs:
       - /tmp
-      - /usr/local/bundle
 
     environment:
       JEKYLL_ENV: development
-      BUNDLE_PATH: /usr/local/bundle
       JEKYLL_WATCH: "true"
 
     working_dir: /srv/jekyll

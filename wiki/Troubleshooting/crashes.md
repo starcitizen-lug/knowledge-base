@@ -11,9 +11,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
 
 ## Code 3 crash with error: *Star Citizen process exited abnormally (code: 3) : Command failed*
 - EAC bootstrapper failed to start up
-- Explicitly set the DXVK device name
-  - identify device name using command `vulkaninfo --summary | grep deviceName`
-  - set device name with environment variable `DXVK_FILTER_DEVICE_NAME="your device name goes here"`
+- Explicitly set the [DXVK device name](/Troubleshooting/unexpected-behavior#game-not-selecting-discrete-gpu)
 - If using a flatpak launcher, you may need to resync it with your system. Run: `flatpak update`
 
 
@@ -33,10 +31,7 @@ md_message: "You are viewing raw source files... Go to https://wiki.starcitizen-
   - AMD users on Mesa 25.1 or newer should uninstall [VK_hdr_layer](https://github.com/Zamundaaa/VK_hdr_layer) if present
 
 - Possible cause: Incorrect Vulkan device
-  - If you have Intel integrated graphics and see  
-    `VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json` in your log, then change the Vulkan device to use your discrete GPU:
-    - identify device name using command `vulkaninfo --summary | grep deviceName`
-    - set device name with environment variable `DXVK_FILTER_DEVICE_NAME="your device name goes here"`
+  - Specify [device name]((/Troubleshooting/unexpected-behavior#game-not-selecting-discrete-gpu))
 
 - Possible cause: GPU drivers not working properly
   - If, in your "game.log", you see only `llvmpipe` listed as the working video adapter, your gpu drivers may not be functioning properly.
