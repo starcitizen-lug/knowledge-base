@@ -18,15 +18,8 @@ Workarounds to try:
 - LUG [Wine Wayland](/Tips-and-Tricks#wine-wayland) helps mitigate this for some
 - In the RSI Launcher > Settings > Notifications turn off the overlay
 - Display scaling beyond 100% may exacerbate the issue
-- [Proton](/Alternative-Installations#proton-installation) helps mitigate this for some
-- Gamescope helps mitigate this for some
-  - **Note for Nvidia users:** Gamescope may not work on your hardware. See [a possible fix](/Troubleshooting/nvidia#gamescope-not-working)
-  - Install and enable gamescope. Set these options for your display resolution  
-  `-W 2560 -H 1440 --force-grab-cursor`
-  - Other Gamescope settings that may be required depending on your system: `Window Mode` set to `Fullscreen` if it doesn't launch fullscreen, `-g` in `Custom Settings` to grab keyboard
-- Install and choose Xorg/x11 session at your login screen instead of Wayland session
 - Switching to an alternate desktop environment may help; most Gnome users don't seem to experience this issue as severely
-- You may try building xwayland with [this patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied. If using KDE and patching xwayland, you will also need to install Gamescope and use the `--force-grab-cursor` option
+- You may try building xwayland with [this patch](https://github.com/Nobara-Project/rpm-sources/blob/main/baseos/xorg-x11-server-Xwayland/xwayland-pointer-warp-fix.patch) applied. If using KDE and patching xwayland, you will also need to install [Gamescope](/Tips-and-Tricks#gamescope) and use the `--force-grab-cursor` option
 
 
 ## Mouse/Cursor restricted to a region smaller than the display, or clicks offset from cursor
