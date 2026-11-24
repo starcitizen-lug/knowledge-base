@@ -33,7 +33,7 @@ This is a generic error code representing any issue with logging in to CIG serve
   ![image](/assets/images/Troubleshooting/unexpected-behavior/dx-feature-level.webp)
 - If your system has an integrated gpu (ie, Intel), check that the `Vulkan device` is not set to the integrated gpu:
   - Identify device name using command `vulkaninfo --summary | grep deviceName`
-  - Edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and set the device name environment variable: `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
+  - Edit the [launch script](/Tips-and-Tricks#how-to-edit-the-launch-script) and set the device name environment variable: `DXVK_FILTER_DEVICE_NAME="yourdevicenamehere"`
   - Verify by setting the environment variable `DXVK_HUD=1` and observing the device name in the upper left of the screen
 - Make sure your GPU drivers (Mesa/nvidia) are up to date
   - For AMD, be sure to use the open source radeon drivers (ie. vulkan-radeon), **not** the proprietary drivers (ie. amdvlk)

@@ -26,7 +26,7 @@ or
 `Major opcode of failed request:  156 (NV-GLX)`
 - Try removing all optimus/prime env vars for render offload and set the Vulkan device to the Nvidia GPU.
   - identify device name using command `vulkaninfo --summary | grep deviceName`
-  - set device name with environment variable `DXVK_FILTER_DEVICE_NAME=yourdevicenamehere`
+  - set device name with environment variable `DXVK_FILTER_DEVICE_NAME="yourdevicenamehere"`
 
 ## Severe frame drops
 1. Do not use [DLSS](#dlss-deep-learning-super-sampling) and [Smooth Motion](#nvidia-smooth-motion) at the same time. It may result in poor framerates, freezes, and severe artifacts.
